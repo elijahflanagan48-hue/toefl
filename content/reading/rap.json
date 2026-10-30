@@ -1,0 +1,580 @@
+[
+  {
+    "id": "R-RAP-A-001",
+    "level": "A",
+    "topic": "Life sciences",
+    "title": "The Mystery of the Purr",
+    "paras": [
+      [
+        "For a long time, scientists believed that cats purred only when they were happy.",
+        "It is true that a relaxed cat often purrs while it is being petted or resting in a warm place.",
+        "However, researchers have noticed that cats also purr in very different situations."
+      ],
+      [
+        "Cats sometimes purr when they are injured, when they are giving birth, or even when they are close to death.",
+        "These observations suggest that purring is not simply a sign of pleasure.",
+        "One theory proposes that the low vibrations of a purr help bones and muscles heal.",
+        "Studies have shown that sounds at similar frequencies can make bones stronger in humans."
+      ],
+      [
+        "Another explanation focuses on communication.",
+        "Kittens begin to purr when they are only a few days old, which lets their mother know that they are safe and feeding well.",
+        "Adult cats may keep this behavior because it calms both themselves and the people around them.",
+        "Scientists still debate which explanation is correct, and it is possible that purring serves several purposes at once."
+      ]
+    ],
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "According to paragraph 1, what did scientists believe for a long time?",
+        "opts": [
+          "Cats purred to communicate with people.",
+          "Purring showed that a cat was happy.",
+          "Only young cats were able to purr.",
+          "Purring helped cats stay warm."
+        ],
+        "a": 1,
+        "ex": "Первое предложение: «scientists believed that cats purred only when they were happy». Верный вариант — перефраз этой мысли."
+      },
+      {
+        "type": "Select the Sentence",
+        "stem": "Select the sentence in paragraph 2 that gives evidence supporting the healing theory.",
+        "sel": {
+          "p": 1
+        },
+        "a": 3,
+        "ex": "Теорию о заживлении вводит третье предложение, а доказательство даёт четвёртое: исследования показали, что звуки похожей частоты укрепляют кости у людей. Ищем именно evidence, а не саму теорию."
+      },
+      {
+        "type": "Vocabulary",
+        "stem": "The word \"proposes\" in the passage is closest in meaning to",
+        "hl": {
+          "p": 1,
+          "s": 2,
+          "w": "proposes"
+        },
+        "opts": [
+          "proves",
+          "rejects",
+          "suggests",
+          "describes"
+        ],
+        "a": 2,
+        "ex": "Theory proposes — теория предполагает. Proves («доказывает») — ловушка: теория ещё не доказана, учёные спорят."
+      },
+      {
+        "type": "Reference",
+        "stem": "The word \"their\" in paragraph 3 refers to",
+        "hl": {
+          "p": 2,
+          "s": 1,
+          "w": "their"
+        },
+        "opts": [
+          "kittens",
+          "scientists",
+          "adult cats",
+          "people"
+        ],
+        "a": 0,
+        "ex": "«Kittens begin to purr …, which lets their mother know» — мать котят. Their относится к kittens."
+      },
+      {
+        "type": "Inference",
+        "stem": "What can be inferred about a cat that purrs while it is injured?",
+        "opts": [
+          "It is probably feeling pleasure.",
+          "It may be purring for a reason other than happiness.",
+          "It is trying to call its kittens.",
+          "It will soon stop purring completely."
+        ],
+        "a": 1,
+        "ex": "Абзац 2: такие наблюдения показывают, что мурлыканье — не просто знак удовольствия. Значит, раненая кошка мурлычет, скорее всего, по другой причине. Прямо это о конкретной кошке не сказано — это вывод."
+      }
+    ]
+  },
+  {
+    "id": "R-RAP-A-002",
+    "level": "A",
+    "topic": "Business and economics",
+    "title": "The Paperback Revolution",
+    "paras": [
+      [
+        "Until the 1930s, most new books in Britain were sold in hardcover.",
+        "They were well made but expensive, so many readers borrowed books from libraries instead of buying them.",
+        "Some publishers did print cheap paper editions, but these were usually poorly made and offered light entertainment rather than serious literature."
+      ],
+      [
+        "In 1935, a publisher named Allen Lane started a company called Penguin.",
+        "His idea was simple: he would print serious books with paper covers and sell them for the price of a pack of cigarettes.",
+        "Other publishers predicted that the plan would fail.",
+        "They believed that cheap books would lower the status of literature and reduce their own profits.",
+        "Instead, Penguin sold three million copies in its first year."
+      ],
+      [
+        "Penguin's success changed the book trade.",
+        "Paperbacks could be sold in railway stations, shops, and newsstands, not only in bookstores.",
+        "As a result, reading became a more common activity among working people, who could now afford to build small collections of their own.",
+        "Within a few years, other companies had copied the format, and the paperback became a normal part of everyday life."
+      ]
+    ],
+    "insert": {
+      "p": 1,
+      "slots": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "sentence": "He is said to have had the idea at a railway station, where he could find nothing good to read for his journey."
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "According to paragraph 1, why did many readers borrow books from libraries?",
+        "opts": [
+          "Libraries had more interesting books.",
+          "New books were expensive.",
+          "Hardcover books were badly made.",
+          "Bookstores were far from their homes."
+        ],
+        "a": 1,
+        "ex": "«They were well made but expensive, so many readers borrowed books». Badly made — ловушка: в тексте наоборот, well made."
+      },
+      {
+        "type": "Rhetorical Purpose",
+        "stem": "Why does the author mention \"the price of a pack of cigarettes\"?",
+        "hl": {
+          "p": 1,
+          "s": 1,
+          "w": "the price of a pack of cigarettes"
+        },
+        "opts": [
+          "To show that Lane also sold cigarettes",
+          "To explain how cheap the books were meant to be",
+          "To criticize the habits of readers at that time",
+          "To compare the quality of books and cigarettes"
+        ],
+        "a": 1,
+        "ex": "Вопрос о функции фрагмента: автор сравнивает цену книги с ценой пачки сигарет, чтобы показать, насколько дёшево Лейн собирался продавать книги."
+      },
+      {
+        "type": "Inference",
+        "stem": "What can be inferred about other publishers in 1935?",
+        "opts": [
+          "They did not expect so many people to buy cheap books.",
+          "They had already tried selling paperbacks.",
+          "They helped Lane start his company.",
+          "They lowered the price of hardcover books."
+        ],
+        "a": 0,
+        "ex": "Они предсказывали провал, а Penguin продал три миллиона экземпляров за год. Значит, они недооценили спрос на дешёвые книги."
+      },
+      {
+        "type": "Insert Text",
+        "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added. Where would the sentence best fit?",
+        "insert": true,
+        "a": 0,
+        "ex": "Вставляемое предложение рассказывает, откуда у Лейна появилась идея. Следующее предложение начинается с «His idea was simple» — оно продолжает тему идеи, поэтому вставка идёт сразу после основания компании, перед ним."
+      },
+      {
+        "type": "Negative Factual",
+        "stem": "According to paragraph 3, all of the following are true of paperbacks EXCEPT:",
+        "opts": [
+          "They were sold in railway stations.",
+          "They helped working people build collections.",
+          "They were sold only in bookstores.",
+          "They changed the book trade."
+        ],
+        "a": 2,
+        "ex": "В тексте: «not only in bookstores» — не только в книжных. Вариант «only in bookstores» противоречит тексту."
+      }
+    ]
+  },
+  {
+    "id": "R-RAP-B-001",
+    "level": "B",
+    "topic": "Physical sciences",
+    "title": "Urban Heat Islands",
+    "paras": [
+      [
+        "Cities are often several degrees warmer than the countryside around them, a phenomenon known as the urban heat island effect.",
+        "Measurements in some large cities have recorded differences of more than ten degrees between downtown streets and nearby farmland.",
+        "The difference is usually greatest at night, when rural areas cool quickly but cities continue to release heat."
+      ],
+      [
+        "Several features of urban environments contribute to this warming.",
+        "Dark surfaces such as asphalt roads and rooftops absorb a large share of the sunlight that reaches them and store it as heat.",
+        "Tall buildings trap this heat and block the winds that might otherwise carry it away.",
+        "In addition, cars, air conditioners, and factories release heat directly into the air."
+      ],
+      [
+        "The consequences go beyond discomfort.",
+        "Higher temperatures increase the demand for air conditioning, which in turn raises energy consumption and, in many places, air pollution.",
+        "During heat waves, elderly residents and people without access to cooling face serious health risks.",
+        "To address the problem, some cities are painting roofs white, expanding parks, and planting trees along streets, since vegetation cools the air through the evaporation of water from leaves."
+      ]
+    ],
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "According to paragraph 1, when is the difference in temperature between cities and rural areas greatest?",
+        "opts": [
+          "In the early morning",
+          "During heat waves",
+          "At night",
+          "In the middle of the day"
+        ],
+        "a": 2,
+        "ex": "«The difference is usually greatest at night» — ночью: село остывает быстро, а город продолжает отдавать тепло."
+      },
+      {
+        "type": "Vocabulary",
+        "stem": "The word \"trap\" in the passage is closest in meaning to",
+        "hl": {
+          "p": 1,
+          "s": 2,
+          "w": "trap"
+        },
+        "opts": [
+          "create",
+          "hold in",
+          "reflect",
+          "measure"
+        ],
+        "a": 1,
+        "ex": "Здания «trap this heat and block the winds that might otherwise carry it away» — удерживают тепло, не дают ему уйти. Trap = hold in."
+      },
+      {
+        "type": "Sentence Simplification",
+        "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+        "simp": {
+          "p": 2,
+          "s": 1
+        },
+        "opts": [
+          "Because people use more air conditioning when it is hot, energy use rises and pollution often increases.",
+          "Air conditioning makes cities hotter, which is the main cause of pollution.",
+          "Energy consumption and air pollution are the main reasons why cities are hotter.",
+          "When pollution increases, people use air conditioning more often in hot weather."
+        ],
+        "a": 0,
+        "ex": "Цепочка в оригинале: жара → больше кондиционеров → больше энергии → часто больше загрязнения. Вариант A сохраняет эту причинно-следственную цепочку. B и C переворачивают причину и следствие, D меняет порядок звеньев."
+      },
+      {
+        "type": "Rhetorical Purpose",
+        "stem": "Why does the author mention \"elderly residents\" in paragraph 3?",
+        "hl": {
+          "p": 2,
+          "s": 2,
+          "w": "elderly residents"
+        },
+        "opts": [
+          "To give an example of people for whom heat can be dangerous",
+          "To explain why cities use more air conditioning",
+          "To show that older people prefer to live in cities",
+          "To argue that cities should build more hospitals"
+        ],
+        "a": 0,
+        "ex": "Абзац говорит о последствиях жары. Пожилые жители — пример тех, для кого жара — серьёзный риск для здоровья. Это функция примера, а не отдельный аргумент."
+      },
+      {
+        "type": "Select the Sentence",
+        "stem": "Select the sentence in paragraph 3 that explains how plants reduce temperatures.",
+        "sel": {
+          "p": 2
+        },
+        "a": 3,
+        "ex": "Последнее предложение: растительность охлаждает воздух за счёт испарения воды с листьев (evaporation of water from leaves)."
+      }
+    ]
+  },
+  {
+    "id": "R-RAP-B-002",
+    "level": "B",
+    "topic": "Business and economics",
+    "title": "Why Prices End in 99",
+    "paras": [
+      [
+        "Walk into almost any store and you will see prices such as $4.99 or $19.99 rather than $5 or $20.",
+        "This practice, known as charm pricing, is so common that many shoppers no longer notice it.",
+        "Yet economists and psychologists have found that it can have a measurable effect on what people buy."
+      ],
+      [
+        "The most widely accepted explanation involves the way people read numbers.",
+        "Because we read from left to right, the first digit makes the strongest impression.",
+        "A price of $2.99 therefore feels closer to $2 than to $3, even though the difference from $3 is only one cent.",
+        "In one experiment, a clothing company found that a dress sold more often at $39 than at $34, a price that was actually lower."
+      ],
+      [
+        "Charm pricing does not work in every situation, however.",
+        "Luxury brands often avoid it because they want customers to associate their products with quality rather than bargains.",
+        "For them, a round number such as $200 sends a message of confidence and simplicity.",
+        "Retailers must therefore decide whether they want a price to look cheap or to look prestigious."
+      ]
+    ],
+    "qs": [
+      {
+        "type": "Reference",
+        "stem": "The word \"it\" in paragraph 1 refers to",
+        "hl": {
+          "p": 0,
+          "s": 1,
+          "w": "it"
+        },
+        "opts": [
+          "a store",
+          "charm pricing",
+          "a price of $5",
+          "a shopper"
+        ],
+        "a": 1,
+        "ex": "«This practice, known as charm pricing, is so common that many shoppers no longer notice it» — покупатели не замечают саму практику, то есть charm pricing."
+      },
+      {
+        "type": "Factual",
+        "stem": "According to paragraph 2, why does $2.99 seem closer to $2 than to $3?",
+        "opts": [
+          "Shoppers usually round prices down.",
+          "The first digit has the strongest effect on the reader.",
+          "Stores display the cents in small print.",
+          "People cannot calculate small differences."
+        ],
+        "a": 1,
+        "ex": "Мы читаем слева направо, и первая цифра производит самое сильное впечатление (the first digit makes the strongest impression)."
+      },
+      {
+        "type": "Rhetorical Purpose",
+        "stem": "Why does the author mention the dress that sold more often at $39 than at $34?",
+        "opts": [
+          "To show that a price ending in 9 can attract buyers even when it is higher",
+          "To explain why clothing is more expensive than other goods",
+          "To argue that companies should raise their prices",
+          "To show that shoppers always choose the lowest price"
+        ],
+        "a": 0,
+        "ex": "Пример с платьем доказывает силу «девятки»: цена $39 продавала лучше, чем более низкая $34. D прямо противоречит примеру."
+      },
+      {
+        "type": "Negative Factual",
+        "stem": "According to paragraph 3, which of the following is NOT given as a reason luxury brands avoid charm pricing?",
+        "opts": [
+          "They want their products to be linked with quality.",
+          "Round numbers suggest confidence.",
+          "Round numbers are easier for cashiers to process.",
+          "They do not want to look like bargains."
+        ],
+        "a": 2,
+        "ex": "Про удобство для кассиров в тексте ничего нет. Остальные три причины названы в абзаце 3."
+      },
+      {
+        "type": "Inference",
+        "stem": "What can be inferred about a shop that prices a watch at $500 instead of $499?",
+        "opts": [
+          "It probably wants the watch to seem high-quality.",
+          "It made a mistake when setting the price.",
+          "It expects to sell more watches than its competitors.",
+          "It is trying to attract customers looking for bargains."
+        ],
+        "a": 0,
+        "ex": "Круглая цена, по тексту, — сигнал качества и уверенности, так делают люксовые бренды. Значит, магазин, скорее всего, хочет, чтобы часы выглядели престижно."
+      }
+    ]
+  },
+  {
+    "id": "R-RAP-C-001",
+    "level": "C",
+    "topic": "Life sciences",
+    "title": "How Migrating Birds Find Their Way",
+    "paras": [
+      [
+        "Each autumn, millions of migratory birds travel thousands of kilometers to wintering grounds they may never have seen before, often flying at night and over open ocean.",
+        "How they find their way has puzzled biologists for more than a century."
+      ],
+      [
+        "Experiments have shown that birds draw on several sources of information.",
+        "Some species orient themselves by the position of the sun, compensating for its movement across the sky with an internal clock.",
+        "Others learn the patterns of stars that rotate around the North Star, a skill that young birds appear to acquire by watching the night sky before their first migration.",
+        "Yet birds kept in windowless rooms still attempt to fly in the correct seasonal direction, which suggests that celestial cues cannot be the whole story."
+      ],
+      [
+        "The most intriguing candidate is the Earth's magnetic field.",
+        "When researchers placed robins in cages surrounded by artificial magnetic fields, the birds shifted their preferred direction to match the altered field.",
+        "Remarkably, this sense appears to depend on light: the response disappeared under certain wavelengths, leading scientists to propose that birds may literally see magnetic fields through specialized molecules in their eyes.",
+        "If confirmed, this mechanism would represent one of the most unusual sensory systems known in nature."
+      ]
+    ],
+    "qs": [
+      {
+        "type": "Sentence Simplification",
+        "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+        "simp": {
+          "p": 1,
+          "s": 3
+        },
+        "opts": [
+          "Birds that cannot see the sky usually fly in the wrong direction during migration.",
+          "Celestial cues are the main reason why birds fly in the correct direction each season.",
+          "Since birds in rooms without windows still choose the right direction, they must use something besides the sun and stars.",
+          "Scientists kept birds in windowless rooms to prevent them from seeing the stars."
+        ],
+        "a": 2,
+        "ex": "Суть: птицы без доступа к небу всё равно выбирают верное направление → значит, солнце и звёзды — не единственный ориентир. A противоречит оригиналу, B переворачивает вывод, D пересказывает деталь и теряет главное."
+      },
+      {
+        "type": "Vocabulary",
+        "stem": "The word \"intriguing\" in the passage is closest in meaning to",
+        "hl": {
+          "p": 2,
+          "s": 0,
+          "w": "intriguing"
+        },
+        "opts": [
+          "fascinating",
+          "confusing",
+          "reliable",
+          "obvious"
+        ],
+        "a": 0,
+        "ex": "Intriguing — интригующий, очень интересный. Confusing — ловушка по созвучию смысла «загадочный», но слово описывает интерес, а не путаницу."
+      },
+      {
+        "type": "Inference",
+        "stem": "What can be inferred about young birds before their first migration?",
+        "opts": [
+          "They already know the position of the North Star from birth.",
+          "They need to observe the night sky to learn how to use the stars.",
+          "They cannot travel at night.",
+          "They follow older birds instead of the stars."
+        ],
+        "a": 1,
+        "ex": "Навык ориентироваться по звёздам молодые птицы, судя по всему, приобретают, наблюдая ночное небо до первой миграции. Значит, это умение не врождённое и требует наблюдения."
+      },
+      {
+        "type": "Factual",
+        "stem": "According to paragraph 3, what happened when robins were placed in artificial magnetic fields?",
+        "opts": [
+          "They stopped trying to migrate.",
+          "They changed the direction they preferred.",
+          "They became unable to see light.",
+          "They flew toward the North Star."
+        ],
+        "a": 1,
+        "ex": "«The birds shifted their preferred direction to match the altered field» — сменили предпочтительное направление вслед за изменённым полем."
+      },
+      {
+        "type": "Rhetorical Purpose",
+        "stem": "Why does the author mention that the response \"disappeared under certain wavelengths\"?",
+        "hl": {
+          "p": 2,
+          "s": 2,
+          "w": "disappeared under certain wavelengths"
+        },
+        "opts": [
+          "To show that robins dislike some colors of light",
+          "To support the idea that the magnetic sense depends on light",
+          "To explain why birds migrate at night",
+          "To suggest that the experiment was poorly designed"
+        ],
+        "a": 1,
+        "ex": "Факт с длинами волн — доказательство тезиса «this sense appears to depend on light». Вопрос о функции: деталь подкрепляет мысль о связи магнитного чувства со светом."
+      }
+    ]
+  },
+  {
+    "id": "R-RAP-C-002",
+    "level": "C",
+    "topic": "History",
+    "title": "From Tokens to Tablets",
+    "paras": [
+      [
+        "Writing is often described as a sudden invention, but in Mesopotamia it seems to have developed gradually from practical needs.",
+        "Long before the first written texts, farmers and traders used small clay tokens of different shapes to keep track of goods such as grain and livestock."
+      ],
+      [
+        "Around 3500 BCE, officials began sealing these tokens inside hollow clay containers to guarantee that a shipment had not been altered.",
+        "Because a sealed container could not be checked without breaking it, they pressed the tokens into its surface before closing it, leaving visible marks.",
+        "Eventually, administrators realized that the marks alone were sufficient.",
+        "The tokens themselves could be abandoned, and signs drawn on flat clay tablets took their place."
+      ],
+      [
+        "Over the following centuries, this system of accounting expanded.",
+        "Scribes added signs for numbers and for the names of people, and later used symbols to represent sounds as well as objects.",
+        "Only at this point could writing record language in general, including stories, laws, and letters.",
+        "The earliest writing, in other words, was not designed to preserve literature but to manage an economy."
+      ]
+    ],
+    "insert": {
+      "p": 1,
+      "slots": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "sentence": "In other words, the outside of the container now recorded exactly what was inside."
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "According to paragraph 1, what were clay tokens used for?",
+        "opts": [
+          "Decorating containers",
+          "Recording quantities of goods",
+          "Writing down stories",
+          "Paying taxes to officials"
+        ],
+        "a": 1,
+        "ex": "Жетоны использовали «to keep track of goods such as grain and livestock» — вести учёт товаров."
+      },
+      {
+        "type": "Reference",
+        "stem": "The word \"they\" in paragraph 2 refers to",
+        "hl": {
+          "p": 1,
+          "s": 1,
+          "w": "they"
+        },
+        "opts": [
+          "tokens",
+          "containers",
+          "officials",
+          "shipments"
+        ],
+        "a": 2,
+        "ex": "Кто вдавливал жетоны в поверхность сосуда? Люди — officials из предыдущего предложения. Tokens — ловушка: это ближайшее существительное во мн. ч., но жетоны сами себя не вдавливают."
+      },
+      {
+        "type": "Insert Text",
+        "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added. Where would the sentence best fit?",
+        "insert": true,
+        "a": 1,
+        "ex": "«In other words» пересказывает предыдущую мысль: на поверхности сосуда остались отпечатки жетонов — значит, снаружи было видно, что внутри. Поэтому вставка идёт сразу после предложения про отпечатки (visible marks)."
+      },
+      {
+        "type": "Negative Factual",
+        "stem": "According to paragraph 3, all of the following were added to the system EXCEPT:",
+        "opts": [
+          "signs for numbers",
+          "names of people",
+          "symbols for sounds",
+          "maps of trade routes"
+        ],
+        "a": 3,
+        "ex": "Числа, имена и знаки для звуков названы в абзаце 3. Карт торговых путей в тексте нет."
+      },
+      {
+        "type": "Rhetorical Purpose",
+        "stem": "How is the passage organized?",
+        "opts": [
+          "It compares two competing theories about the origin of writing.",
+          "It traces how writing gradually developed from an earlier practice.",
+          "It describes a problem and explains why the solution failed.",
+          "It argues that writing was invented suddenly by one culture."
+        ],
+        "a": 1,
+        "ex": "Текст идёт по этапам: жетоны → запечатанные сосуды с отпечатками → таблички → знаки для звуков. Это последовательное развитие. D противоречит первому предложению."
+      }
+    ]
+  }
+]

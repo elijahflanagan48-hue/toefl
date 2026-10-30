@@ -1,0 +1,38 @@
+[
+  {
+    "id": "R-CTW-A-001", "level": "A", "topic": "Life sciences",
+    "text": "Honeybees live in large groups called colonies. Each colony has one queen, thousands of workers, and a few hundred males. The workers do most of the jobs in the hive. Young workers clean the cells and feed the larvae, while older bees fly out to collect nectar and pollen from flowers. When a bee finds a good source of food, it returns to the hive and performs a special dance. The dance shows other bees the direction and distance to the flowers."
+  },
+  {
+    "id": "R-CTW-A-002", "level": "A", "topic": "Social sciences",
+    "text": "Many cities are planting trees along their streets. Trees make neighborhoods more pleasant, but they also have practical benefits. In summer, their shade can lower the temperature of streets and buildings by several degrees. Leaves also catch dust from the air, which helps people breathe more easily. In addition, tree roots absorb rainwater, so streets are less likely to flood after a storm. For these reasons, city planners now see trees as an important part of urban design rather than simple decoration."
+  },
+  {
+    "id": "R-CTW-A-003", "level": "A", "topic": "History",
+    "text": "The first public libraries opened in the nineteenth century. Before that time, most books were expensive, and only wealthy families could own a large collection. Public libraries changed this situation by allowing anyone to borrow books for free. Workers could study in the evenings, and children could read stories that their parents could not afford. Over time, libraries added newspapers, music, and later computers. Today, they remain important places where people of all ages can learn new skills."
+  },
+  {
+    "id": "R-CTW-B-001", "level": "B", "topic": "Life sciences",
+    "text": "Desert plants have developed several strategies for surviving long periods without rain. Some species store large amounts of water in thick stems or leaves, which allows them to continue growing during dry months. Others have very long roots that reach water deep below the surface. Many desert plants also open their pores only at night, when the air is cooler and less moisture is lost. These adaptations explain why deserts, despite their harsh conditions, support a surprising variety of plant life."
+  },
+  {
+    "id": "R-CTW-B-002", "level": "B", "topic": "Business and economics",
+    "text": "In the early twentieth century, many companies began to use assembly lines in their factories. On an assembly line, each worker performs a single task as the product moves from one station to the next. This method greatly increased the speed of production and lowered the cost of goods such as cars and household appliances. However, critics argued that repeating the same movement all day made work boring and tiring. Some managers later introduced job rotation to reduce these problems."
+  },
+  {
+    "id": "R-CTW-B-003", "level": "B", "topic": "Social sciences",
+    "text": "Sleep plays an essential role in how the brain stores new information. During the day, experiences are first recorded in a region called the hippocampus. While we sleep, the brain replays these experiences and gradually transfers them to other areas for long-term storage. Researchers have found that students who sleep after studying remember more than those who stay awake for the same period. This suggests that a good night of rest may be just as valuable as extra hours of review."
+  },
+  {
+    "id": "R-CTW-C-001", "level": "C", "topic": "Business and economics",
+    "text": "Economists have long debated why some regions grow wealthier than others despite similar natural resources. One influential explanation emphasizes the quality of institutions, such as courts, property rights, and stable rules for trade. According to this view, people invest and innovate when they are confident that the rewards of their effort will be protected. Critics, however, point out that institutions themselves are shaped by geography, history, and culture, which makes it difficult to determine which factor came first."
+  },
+  {
+    "id": "R-CTW-C-002", "level": "C", "topic": "Physical sciences",
+    "text": "Astronomers rarely observe planets outside our solar system directly, because their light is overwhelmed by the brightness of the stars they orbit. Instead, they rely on indirect methods. The most productive technique measures the slight dimming that occurs when a planet passes in front of its star. By analyzing how much light is blocked and how often the dimming repeats, scientists can estimate both the size of the planet and the length of its year. This approach has revealed thousands of distant worlds."
+  },
+  {
+    "id": "R-CTW-C-003", "level": "C", "topic": "History",
+    "text": "The spread of printed maps in sixteenth-century Europe transformed how people imagined political territory. Earlier maps often emphasized religious sites or trade routes rather than clear borders. As printing made maps cheaper and more uniform, rulers began to use them to define and defend the limits of their authority. Historians argue that the familiar image of a state as a bounded area with fixed lines is therefore partly a product of cartographic technology rather than a natural feature of politics."
+  }
+]

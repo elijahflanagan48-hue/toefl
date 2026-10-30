@@ -27,8 +27,8 @@ function chart(mocks, target) {
 
 export default async function progress() {
   const live = isLive();
-  const [mocks, works, me] = await Promise.all([src.mocks(), src.works(), src.today()]);
-  const types = [...catalog.R.types].sort((a, b) => a[1] - b[1]);
+  const [mocks, works, me, pst] = await Promise.all([src.mocks(), src.works(), src.today(), live ? src.stats('R').catch(() => null) : null]);
+  const types = live ? Object.entries(pst?.types || {}).filter(([t]) => t !== 'Complete the Words' && t !== 'ctw').map(([t, v]) => [t, v.acc, v.n]).sort((a, b) => a[1] - b[1]) : [...catalog.R.types].sort((a, b) => a[1] - b[1]);
   const st = { review: '<span class="chip warn">на проверке</span>', draft: '<span class="chip">черновик</span>' };
   const used = ['R', 'L', 'W', 'S'].filter(k => mocks.some(m => m[k] != null));
 
@@ -42,9 +42,9 @@ export default async function progress() {
         ${mocks.length ? chart(mocks, me.target) : `<div class="empty"><b>Графика пока нет</b>Он появится после первого модуля или пробника</div>`}
       </section>
       <section>
-        <div class="lbl">Reading · типы вопросов <b>${live ? '' : 'от слабых к сильным'}</b></div>
-        ${live ? `<div class="card empty"><b>Нужно больше ответов</b>Статистика по типам вопросов появится после тренировок по заданиям из банка</div>`
-        : `<div class="card pad qbars cR">${types.map(([n, a]) => `<div class="qb"><span class="qn">${n}</span><div class="bar"><i style="width:${a}%;${a < 60 ? 'background:var(--sS)' : ''}"></i></div><b>${a}%</b></div>`).join('')}</div>`}
+        <div class="lbl">Reading · типы вопросов <b>от слабых к сильным</b></div>
+        ${live && !types.length ? `<div class="card empty"><b>Нужно больше ответов</b>Статистика по типам вопросов появится после тренировок Daily Life и Academic Passage</div>`
+        : `<div class="card pad qbars cR">${types.map(([n, a]) => `<a class="qb" href="#/practice/types?type=${encodeURIComponent(n)}&mode=learn"><span class="qn">${n}</span><div class="bar"><i style="width:${a}%;${a < 60 ? 'background:var(--sS)' : ''}"></i></div><b>${a}%</b></a>`).join('')}</div>`}
       </section>
       <section>
         ${live ? '' : `<div class="lbl">Тетрадь ошибок</div>

@@ -197,6 +197,27 @@ ok(r.status === 200, 'assignment created');
 r = await call('GET', '/me/assignments', { token: S3 });
 ok(r.data.assignments.length === 1 && r.data.assignments[0].teacher_name === 'Илья', 'student sees assignment');
 
+// --- practice: learn-mode feedback, mistakes, stats, adaptive level
+r = await call('POST', '/attempts', { token: S3, json: { kind: 'practice', mode: 'learn', section: 'R', task: 'rdl' } });
+const lat = r.data.id;
+r = await call('POST', `/attempts/${lat}/responses`, { token: S3, json: { responses: [{ item_id: 'T-RDL-1', q: 0, answer: 0 }] } });
+ok(r.data.results?.[0]?.correct === 0 && r.data.results[0].key === 1 && r.data.results[0].explain === 'потому что…', 'learn mode returns key + explanation');
+r = await call('GET', '/me/mistakes?section=R', { token: S3 });
+ok(r.data.count === 2 && r.data.items[0].item_id === 'T-RDL-1', 'mistakes: latest wrong answers per question', JSON.stringify(r.data));
+await call('POST', `/attempts/${lat}/responses`, { token: S3, json: { responses: [{ item_id: 'T-RDL-1', q: 1, answer: 2 }] } });
+r = await call('GET', '/me/mistakes?section=R', { token: S3 });
+ok(r.data.count === 1, 'a correct retry removes the mistake');
+r = await call('GET', '/me/stats?section=R', { token: S3 });
+ok(r.data.types.Factual && r.data.types.Inference && r.data.tasks.rdl.n >= 4 && r.data.bank.rdl === 1, 'stats by task and question type', JSON.stringify(r.data));
+r = await call('GET', `/me/stats?section=R&user=${sid}`, { token: T });
+ok(r.status === 200, 'teacher can read student stats');
+r = await call('GET', '/items?section=R&task=rdl&level=auto', { token: S3 });
+ok(['A', 'B', 'C'].includes(r.data.level), 'adaptive level chosen: ' + r.data.level);
+r = await call('GET', '/items/T-RDL-1', { token: S3 });
+ok(r.status === 200 && !('key' in r.data.item) && r.data.item.body.qs.length === 2, 'single item without key');
+r = await call('GET', '/items?section=R&exclude=T-RDL-1,T-CTW-1', { token: S3 });
+ok(r.data.items.length === 0, 'exclude parameter');
+
 // --- CORS
 const pre = await fetch(BASE + '/me', { method: 'OPTIONS', headers: { Origin: 'https://elijahflanagan48-hue.github.io' } });
 ok(pre.status === 204 && pre.headers.get('Access-Control-Allow-Origin') === 'https://elijahflanagan48-hue.github.io', 'CORS preflight for Pages origin');

@@ -330,6 +330,48 @@ on('POST', '/teacher/assignments', async ({ req, env, user }) => {
   return { id: r.meta.last_row_id };
 });
 
+/* ------------------------------------------------------------------ practice stats */
+/** recent accuracy on a task → level for adaptive practice: <55% A, <80% B, else C (first time: B) */
+async function autoLevel(env, uid, section, task) {
+  const r = await one(env, `SELECT COUNT(*) AS n, SUM(r.correct) AS got FROM responses r JOIN attempts a ON a.id = r.attempt_id
+    JOIN items i ON i.id = r.item_id WHERE a.user_id = ? AND r.correct IS NOT NULL AND (? IS NULL OR i.section = ?) AND (? IS NULL OR i.task = ?)
+    AND r.created_at > ?`, uid, section, section, task, task, now() - 30 * 864e5);
+  if (!r.n || r.n < 5) return 'B';
+  const acc = r.got / r.n;
+  return acc < 0.55 ? 'A' : acc < 0.8 ? 'B' : 'C';
+}
+
+on('GET', '/me/stats', async ({ env, user, url }) => {
+  requireUser(user);
+  const uid = url.searchParams.get('user') ? Number(url.searchParams.get('user')) : user.id;
+  if (!(await canSeeStudent(env, user, uid))) throw notFound();
+  const section = url.searchParams.get('section') || 'R';
+  const byTask = await all(env, `SELECT i.task, COUNT(*) AS n, SUM(r.correct) AS got FROM responses r JOIN attempts a ON a.id = r.attempt_id
+    JOIN items i ON i.id = r.item_id WHERE a.user_id = ? AND i.section = ? AND r.correct IS NOT NULL GROUP BY i.task`, uid, section);
+  const byType = await all(env, `SELECT r.qtype, COUNT(*) AS n, SUM(r.correct) AS got FROM responses r JOIN attempts a ON a.id = r.attempt_id
+    WHERE a.user_id = ? AND r.section = ? AND r.correct IS NOT NULL AND r.qtype IS NOT NULL GROUP BY r.qtype`, uid, section);
+  const items = await all(env, `SELECT i.task, COUNT(DISTINCT r.item_id) AS done FROM responses r JOIN attempts a ON a.id = r.attempt_id
+    JOIN items i ON i.id = r.item_id WHERE a.user_id = ? AND i.section = ? GROUP BY i.task`, uid, section);
+  const bank = await all(env, `SELECT task, COUNT(*) AS n FROM items WHERE section = ? AND status = 'active' GROUP BY task`, section);
+  const mk = rows => Object.fromEntries(rows.map(r => [r.task ?? r.qtype, { n: r.n, got: r.got || 0, acc: r.n ? Math.round((r.got || 0) / r.n * 100) : null }]));
+  return { tasks: mk(byTask), types: mk(byType), done: Object.fromEntries(items.map(r => [r.task, r.done])), bank: Object.fromEntries(bank.map(r => [r.task, r.n])) };
+});
+
+/** mistakes to repeat: (item, question) pairs whose latest answer was wrong */
+on('GET', '/me/mistakes', async ({ env, user, url }) => {
+  requireUser(user);
+  const section = url.searchParams.get('section') || 'R', task = url.searchParams.get('task');
+  const rows = await all(env, `WITH last AS (
+      SELECT r.item_id, r.q, r.correct, r.qtype, i.task,
+        ROW_NUMBER() OVER (PARTITION BY r.item_id, r.q ORDER BY r.created_at DESC, r.id DESC) AS rn
+      FROM responses r JOIN attempts a ON a.id = r.attempt_id JOIN items i ON i.id = r.item_id
+      WHERE a.user_id = ? AND i.section = ? AND r.correct IS NOT NULL AND (? IS NULL OR i.task = ?))
+    SELECT item_id, task, q, qtype FROM last WHERE rn = 1 AND correct = 0 ORDER BY item_id, q LIMIT 300`, user.id, section, task, task);
+  const byItem = {};
+  for (const r of rows) (byItem[r.item_id] ||= { item_id: r.item_id, task: r.task, qs: [], types: [] }).qs.push(r.q), byItem[r.item_id].types.push(r.qtype);
+  return { count: rows.length, items: Object.values(byItem) };
+});
+
 /* ------------------------------------------------------------------ items */
 const publicItem = it => ({ id: it.id, section: it.section, task: it.task, level: it.level, body: parse(it.body), qtypes: parse(it.qtypes) });
 
@@ -340,9 +382,22 @@ on('GET', '/items', async ({ env, user, url }) => {
   const where = [`status = 'active'`], b = [];
   if (section) { where.push('section = ?'); b.push(section); }
   if (task) { where.push('task = ?'); b.push(task); }
-  if (level) { where.push('level = ?'); b.push(level); }
+  let lv = level;
+  if (lv === 'auto') lv = await autoLevel(env, user.id, section, task);
+  if (lv) { where.push('level = ?'); b.push(lv); }
+  const qtype = url.searchParams.get('qtype');
+  if (qtype) { where.push('qtypes LIKE ?'); b.push('%"' + qtype.replace(/[%_"]/g, '') + '"%'); }
+  const exclude = (url.searchParams.get('exclude') || '').split(',').filter(Boolean).slice(0, 50);
+  if (exclude.length) { where.push(`id NOT IN (${exclude.map(() => '?').join(',')})`); b.push(...exclude); }
   const rows = await all(env, `SELECT * FROM items WHERE ${where.join(' AND ')} ORDER BY RANDOM() LIMIT ${limit}`, ...b);
-  return { items: rows.map(publicItem) };
+  return { items: rows.map(publicItem), level: lv || null };
+});
+
+on('GET', '/items/:id', async ({ env, user, params }) => {
+  requireUser(user);
+  const it = await one(env, `SELECT * FROM items WHERE id = ? AND status != 'retired'`, params.id);
+  if (!it) throw notFound();
+  return { item: publicItem(it) };
 });
 
 /** learn mode: check one answer and reveal its key + explanation */
@@ -422,27 +477,35 @@ on('POST', '/attempts/:id/responses', async ({ req, env, user, params }) => {
   if (!list || list.length > 200) throw bad('responses');
   const keys = {};
   const stmts = [];
+  const results = [];
+  const reveal = a.mode === 'learn' || a.mode === 'mistakes';
   let graded = 0;
   for (const x of list) {
     const itemId = typeof x.item_id === 'string' ? x.item_id : '';
     const q = Number(x.q || 0), module = Number(x.module || 1) === 2 ? 2 : 1;
-    const section = TASKS[x.section] ? x.section : (a.section || '');
+    let section = TASKS[x.section] ? x.section : (a.section || '');
+    let qtype = x.qtype ?? null;
     let correct = null;
     if (itemId) {
-      if (!(itemId in keys)) { const it = await one(env, 'SELECT task, key FROM items WHERE id = ?', itemId); keys[itemId] = it ? { task: it.task, key: parse(it.key) } : null; }
+      if (!(itemId in keys)) { const it = await one(env, 'SELECT section, task, key, explain, qtypes FROM items WHERE id = ?', itemId); keys[itemId] = it ? { section: it.section, task: it.task, key: parse(it.key), explain: parse(it.explain), qtypes: parse(it.qtypes) } : null; }
       const k = keys[itemId];
-      if (k) correct = grade(k.task, k.key, q, x.answer);
+      if (k) {
+        section = k.section;
+        if (Array.isArray(k.qtypes) && k.qtypes[q]) qtype = k.qtypes[q];
+        correct = grade(k.task, k.key, q, x.answer);
+        if (reveal) results.push({ item_id: itemId, q, correct, key: Array.isArray(k.key) ? k.key[q] : k.key, explain: Array.isArray(k.explain) ? k.explain[q] : k.explain });
+      }
     }
     if (correct == null && (x.correct === 0 || x.correct === 1 || x.correct === true || x.correct === false)) correct = x.correct ? 1 : 0; // built-in demo content
     if (correct != null) graded++;
     stmts.push(db(env).prepare(`INSERT INTO responses (attempt_id, item_id, section, q, module, qtype, answer, correct, scored, ms, created_at)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       ON CONFLICT(attempt_id, section, item_id, q, module) DO UPDATE SET answer = excluded.answer, correct = excluded.correct, ms = excluded.ms`)
-      .bind(a.id, itemId, section, q, module, x.qtype ?? null, JSON.stringify(x.answer ?? null), correct, x.scored === false ? 0 : 1,
+      .bind(a.id, itemId, section, q, module, qtype, JSON.stringify(x.answer ?? null), correct, x.scored === false ? 0 : 1,
         Number.isFinite(x.ms) ? Math.round(x.ms) : null, now()));
   }
   if (stmts.length) await db(env).batch(stmts);
-  return { saved: stmts.length, graded };
+  return reveal ? { saved: stmts.length, graded, results } : { saved: stmts.length, graded };
 });
 
 /** MST: after module 1 the server decides upper/lower. Only scored module-1 responses count. */
@@ -488,7 +551,20 @@ on('GET', '/attempts/:id', async ({ env, user, params }) => {
   const a = await one(env, 'SELECT * FROM attempts WHERE id = ?', Number(params.id));
   if (!a || !(await canSeeStudent(env, user, a.user_id))) throw notFound();
   const rs = await all(env, 'SELECT item_id, section, q, module, qtype, answer, correct, scored, ms FROM responses WHERE attempt_id = ? ORDER BY id', a.id);
-  return { attempt: { ...a, route: parse(a.route), raw: parse(a.raw), bands: parse(a.bands) }, responses: rs.map(r => ({ ...r, answer: parse(r.answer) })) };
+  // after the attempt is finished (or in learn mode) the keys and explanations can be shown
+  const reveal = a.finished_at || a.mode === 'learn' || a.mode === 'mistakes';
+  const cache = {};
+  const out = [];
+  for (const r of rs) {
+    const x = { ...r, answer: parse(r.answer) };
+    if (reveal && r.item_id) {
+      if (!(r.item_id in cache)) { const it = await one(env, 'SELECT key, explain FROM items WHERE id = ?', r.item_id); cache[r.item_id] = it ? { key: parse(it.key), explain: parse(it.explain) } : null; }
+      const c = cache[r.item_id];
+      if (c) { x.key = Array.isArray(c.key) ? c.key[r.q] : c.key; x.explain = Array.isArray(c.explain) ? c.explain[r.q] : c.explain; }
+    }
+    out.push(x);
+  }
+  return { attempt: { ...a, route: parse(a.route), raw: parse(a.raw), bands: parse(a.bands) }, responses: out };
 });
 
 /* ------------------------------------------------------------------ submissions (W/S, teacher-graded) */

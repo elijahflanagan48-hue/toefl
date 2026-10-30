@@ -7,7 +7,8 @@ Listening подключается после озвучки скриптов.
 |---|---|---|
 | `app/` | Сайт (PWA): vanilla JS + Vite | GitHub Pages — https://elijahflanagan48-hue.github.io/toefl/ |
 | `api/` | Сервер: Cloudflare Worker + D1 (база) + R2 (записи речи) | https://noeon-toefl-api.grammar-noeon.workers.dev |
-| `e2e/` | Сквозной тест в браузере (Playwright) | локально |
+| `content/` | Банк заданий (JSON) + валидатор и сборка `content/build.mjs` | CI проверяет и загружает в D1 |
+| `e2e/` | Сквозные тесты в браузере (Playwright) | локально |
 
 ## Выкладка
 Всё автоматически при push в `main`:
@@ -16,6 +17,11 @@ Listening подключается после озвучки скриптов.
 
 Нужны секреты репозитория `CLOUDFLARE_API_TOKEN` (Workers Scripts, D1, R2 — Edit) и `CLOUDFLARE_ACCOUNT_ID`, а в Settings → Pages источник **GitHub Actions**.
 
+## Банк заданий
+- Задания пишутся в `content/reading/{ctw,rdl,rap}.json`. Complete the Words хранится полным текстом — пропуски строятся автоматически по правилу ETS (`app/src/lib/ctw.js`).
+- `node content/build.mjs` проверяет длины текстов, число вопросов, 4 варианта, разбор на русском, баланс правильных ответов A–D и типы вопросов, затем пишет `api/seed/reading.sql` и демо-набор `app/src/data/demo-reading.json`.
+- При push в `main` CI проверяет банк и загружает его в D1 (upsert по id; ответы учеников не трогаются).
+
 ## Первый запуск
 Первый, кто откроет сайт после выкладки, создаёт аккаунт учителя-администратора. После этого регистрация — только по кодам приглашения (Профиль учителя → «Группы и коды приглашения»).
 
@@ -23,7 +29,7 @@ Listening подключается после озвучки скриптов.
 ```
 cd api && npm install && npm run migrate:local && npm run dev     # API на :8787
 cd app && npm install && VITE_API_URL=http://127.0.0.1:8787 npm run dev
-cd api && npm test                                                 # 64 проверки API (на чистой локальной базе)
+cd api && npm test                                                 # 72 проверки API (на чистой локальной базе)
 ```
 Без `VITE_API_URL` сайт работает в демо-режиме на примерах данных.
 

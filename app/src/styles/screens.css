@@ -309,3 +309,4 @@ body.authing .app{max-width:none;padding:0;margin:0}
 .groups .row .code{font-family:var(--ffd);font-weight:700;letter-spacing:.05em;font-size:16px;color:var(--tx)}
 .nodate{color:var(--hero-tx)!important}.nodate b{display:block;font-size:24px;color:var(--gold-2)}
 .auth-brand>b{font-family:var(--ffd);font-size:19px}
+a.qb{color:inherit!important}

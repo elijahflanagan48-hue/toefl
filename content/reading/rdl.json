@@ -1,0 +1,530 @@
+[
+  {
+    "id": "R-RDL-A-001",
+    "level": "A",
+    "genre": "chat",
+    "doc": {
+      "kind": "chat",
+      "msgs": [
+        {
+          "who": "Maya",
+          "time": "4:12 PM",
+          "text": "Hey! Are you still coming to the study group tonight?"
+        },
+        {
+          "who": "Leo",
+          "time": "4:15 PM",
+          "text": "Yes, but I'll be 15 min late. My shift at the café ends at 6."
+        },
+        {
+          "who": "Maya",
+          "time": "4:16 PM",
+          "text": "No problem. We're in Room 204 this time, not the library."
+        },
+        {
+          "who": "Leo",
+          "time": "4:16 PM",
+          "text": "Got it. Should I bring anything?"
+        },
+        {
+          "who": "Maya",
+          "time": "4:17 PM",
+          "text": "Just your notes from Tuesday's lecture."
+        }
+      ]
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "Why will Leo be late?",
+        "opts": [
+          "He missed the bus.",
+          "The library is closed.",
+          "He forgot his notes.",
+          "He has to finish work first."
+        ],
+        "a": 3,
+        "ex": "Лео пишет: «My shift at the café ends at 6» — у него смена в кафе. Про автобус и закрытую библиотеку в переписке ничего нет, а заметки он только спрашивает, нужно ли брать."
+      },
+      {
+        "type": "Factual",
+        "stem": "Where will the study group meet?",
+        "opts": [
+          "In the library",
+          "At the café",
+          "In the lecture hall",
+          "In Room 204"
+        ],
+        "a": 3,
+        "ex": "«We're in Room 204 this time, not the library». Ловушка — библиотека: она упомянута, но с отрицанием not."
+      }
+    ]
+  },
+  {
+    "id": "R-RDL-A-002",
+    "level": "A",
+    "genre": "notice",
+    "doc": {
+      "kind": "notice",
+      "head": "Lost & Found — Student Center",
+      "paras": [
+        "Found on Monday: a blue water bottle with stickers, a black umbrella, and a set of keys on a red keychain.",
+        "Items can be picked up at the front desk, 9 a.m.–5 p.m., Monday to Friday. Please bring your student ID.",
+        "Items not claimed within 30 days will be donated."
+      ]
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "What is the main purpose of the notice?",
+        "opts": [
+          "To sell items that nobody wanted",
+          "To ask students to donate old items",
+          "To announce new opening hours for the Student Center",
+          "To tell students where they can collect lost items"
+        ],
+        "a": 3,
+        "ex": "Главная цель — сообщить, что найдены вещи и где их забрать. Про пожертвование сказано только как о последствии через 30 дней, это деталь, а не цель."
+      },
+      {
+        "type": "Factual",
+        "stem": "What must students bring to pick up an item?",
+        "opts": [
+          "A receipt",
+          "A photo of the item",
+          "A note from a teacher",
+          "Their student ID"
+        ],
+        "a": 3,
+        "ex": "«Please bring your student ID» — прямо сказано в объявлении."
+      }
+    ]
+  },
+  {
+    "id": "R-RDL-A-003",
+    "level": "A",
+    "genre": "schedule",
+    "doc": {
+      "kind": "table",
+      "head": "Campus Gym — Fall Hours",
+      "rows": [
+        [
+          "Mon / Wed",
+          "7:00 a.m. – 10:00 p.m."
+        ],
+        [
+          "Tue / Thu",
+          "7:00 a.m. – 10:00 p.m. (pool closed 12–2 p.m. for swim classes)"
+        ],
+        [
+          "Friday",
+          "7:00 a.m. – 8:00 p.m."
+        ],
+        [
+          "Saturday",
+          "9:00 a.m. – 6:00 p.m."
+        ],
+        [
+          "Sunday",
+          "Closed"
+        ]
+      ],
+      "foot": "Towels are no longer provided. Please bring your own."
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "A student wants to swim at 1:00 p.m. On which day can she do this?",
+        "opts": [
+          "Tuesday",
+          "Sunday",
+          "Thursday",
+          "Wednesday"
+        ],
+        "a": 3,
+        "ex": "Во вторник и четверг бассейн закрыт с 12 до 2 — значит, в 13:00 плавать нельзя. В воскресенье спортзал закрыт целиком. Остаётся среда."
+      },
+      {
+        "type": "Inference",
+        "stem": "What is suggested about towels?",
+        "opts": [
+          "Towels are only needed in the pool.",
+          "Towels can be rented at the front desk.",
+          "Students must wash the gym's towels.",
+          "The gym used to give towels to students."
+        ],
+        "a": 3,
+        "ex": "«No longer provided» — «больше не выдаются». Значит, раньше их выдавали. Это вывод из слов no longer, прямо об этом не сказано."
+      }
+    ]
+  },
+  {
+    "id": "R-RDL-B-001",
+    "level": "B",
+    "genre": "email",
+    "doc": {
+      "kind": "email",
+      "from": "Housing Office",
+      "to": "All residents of Oak Hall",
+      "subject": "Water shut-off on Thursday",
+      "paras": [
+        "Dear residents,",
+        "Plumbers will replace the main water pipe in Oak Hall on Thursday, March 12. Water will be shut off from 9 a.m. to approximately 3 p.m. Showers and sinks on all floors will be unavailable during this time.",
+        "Bottled water will be available in the lobby. Residents who need to shower may use the facilities in Pine Hall, which will not be affected.",
+        "We apologize for the inconvenience and appreciate your patience.",
+        "Housing Office"
+      ]
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "What is the main purpose of the email?",
+        "opts": [
+          "To ask residents to report a broken pipe",
+          "To invite residents to move to Pine Hall",
+          "To announce that Oak Hall will close",
+          "To inform residents about a temporary loss of water"
+        ],
+        "a": 3,
+        "ex": "Письмо сообщает, что в четверг на несколько часов отключат воду. Переезжать в Pine Hall никто не предлагает — туда можно сходить в душ."
+      },
+      {
+        "type": "Factual",
+        "stem": "According to the email, what can residents do if they need to take a shower?",
+        "opts": [
+          "Use the showers in Pine Hall",
+          "Wait until the evening",
+          "Ask the plumbers for permission",
+          "Use bottled water from the lobby"
+        ],
+        "a": 0,
+        "ex": "«Residents who need to shower may use the facilities in Pine Hall». Бутилированная вода в лобби — для питья, не для душа."
+      },
+      {
+        "type": "Vocabulary",
+        "stem": "The word \"affected\" in the email is closest in meaning to",
+        "hlw": "affected",
+        "opts": [
+          "repaired",
+          "closed",
+          "inspected",
+          "influenced"
+        ],
+        "a": 3,
+        "ex": "Pine Hall «will not be affected» — работы на него не повлияют. Affected = influenced. «Repaired» — частая ловушка: ремонт упоминается в письме, но это не синоним."
+      }
+    ]
+  },
+  {
+    "id": "R-RDL-B-002",
+    "level": "B",
+    "genre": "social",
+    "doc": {
+      "kind": "post",
+      "who": "Green Campus Club",
+      "handle": "@greencampus",
+      "paras": [
+        "Swap, don't shop! Our clothing swap is back on Saturday, 11 a.m.–3 p.m., in the Student Center ballroom.",
+        "Bring up to 5 clean items you no longer wear and leave with the same number of \"new\" ones. Leftover clothes will go to a local shelter.",
+        "Volunteers needed for setup at 10 — DM us if you can help!"
+      ]
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "What is the post mainly about?",
+        "opts": [
+          "A sale of new clothes on campus",
+          "A new club for students who like fashion",
+          "A request for donations to a shelter",
+          "An event where students exchange clothing"
+        ],
+        "a": 3,
+        "ex": "Swap = обмен: приносишь вещи и уносишь столько же других. Приют упоминается только как место, куда отдадут остатки."
+      },
+      {
+        "type": "Factual",
+        "stem": "What will happen to clothes that nobody takes?",
+        "opts": [
+          "They will be sold.",
+          "They will be returned to their owners.",
+          "They will be kept for the next swap.",
+          "They will be given to a shelter."
+        ],
+        "a": 3,
+        "ex": "«Leftover clothes will go to a local shelter». Leftover = оставшиеся."
+      },
+      {
+        "type": "Vocabulary",
+        "stem": "What does \"DM us\" mean in the post?",
+        "hlw": "DM us",
+        "opts": [
+          "Send us a private message",
+          "Come to our office",
+          "Donate money to us",
+          "Call our manager"
+        ],
+        "a": 0,
+        "ex": "DM — direct message, личное сообщение в соцсети. В Daily Life ETS проверяет неформальный и сокращённый язык."
+      }
+    ]
+  },
+  {
+    "id": "R-RDL-B-003",
+    "level": "B",
+    "genre": "receipt",
+    "doc": {
+      "kind": "receipt",
+      "head": "Campus Bookstore",
+      "meta": "Receipt #20481 · Oct 3",
+      "rows": [
+        [
+          "Intro to Psychology (used)",
+          "$42.50"
+        ],
+        [
+          "Lab notebook",
+          "$8.00"
+        ],
+        [
+          "Highlighters, 3-pack",
+          "$4.25"
+        ],
+        [
+          "Subtotal",
+          "$54.75"
+        ],
+        [
+          "Student discount (10%)",
+          "–$5.48"
+        ],
+        [
+          "Total",
+          "$49.27"
+        ]
+      ],
+      "foot": "Paid by card. Returns accepted within 14 days with receipt. Used textbooks may be returned only if unmarked."
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "How much did the items cost before the discount?",
+        "opts": [
+          "$42.50",
+          "$49.27",
+          "$54.75",
+          "$5.48"
+        ],
+        "a": 2,
+        "ex": "До скидки — Subtotal, $54.75. $49.27 — итог после скидки, $5.48 — сама скидка."
+      },
+      {
+        "type": "Inference",
+        "stem": "Why might the customer be unable to return the psychology book?",
+        "opts": [
+          "Because it was bought with a card",
+          "Because it was on sale",
+          "Because returns are never accepted",
+          "Because the customer writes in it"
+        ],
+        "a": 3,
+        "ex": "Подержанные учебники принимают «only if unmarked» — только без пометок. Если покупатель что-то в нём напишет, вернуть не получится. Это вывод из условия."
+      },
+      {
+        "type": "Factual",
+        "stem": "What is true about the purchase?",
+        "opts": [
+          "The discount applied only to the textbook.",
+          "The customer paid in cash.",
+          "A discount was taken off the whole subtotal.",
+          "The highlighters were free."
+        ],
+        "a": 2,
+        "ex": "10% от $54.75 = $5.48 — значит, скидка посчитана от всей суммы, а не от одного учебника. Оплата — картой (Paid by card)."
+      }
+    ]
+  },
+  {
+    "id": "R-RDL-C-001",
+    "level": "C",
+    "genre": "email",
+    "doc": {
+      "kind": "email",
+      "from": "Dr. Elena Moreno",
+      "to": "HIST 210 students",
+      "subject": "Change to final project requirements",
+      "paras": [
+        "Dear all,",
+        "After reviewing your proposals, I've decided to adjust the final project. Rather than submitting a 15-page individual paper, you'll work in pairs and produce a 10-page report plus a 10-minute presentation in our last session.",
+        "I realize some of you have already begun drafting, so if you strongly prefer to continue individually, email me by Friday with a brief justification — I'll approve reasonable requests.",
+        "The deadline remains unchanged.",
+        "Best,\nDr. Moreno"
+      ]
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "What is the main purpose of the email?",
+        "opts": [
+          "To explain a new format for the final project",
+          "To cancel the final presentation",
+          "To ask students to submit proposals",
+          "To announce a later deadline"
+        ],
+        "a": 0,
+        "ex": "Профессор меняет формат: работа в парах, отчёт на 10 страниц и презентация. Дедлайн, наоборот, не меняется."
+      },
+      {
+        "type": "Negative Factual",
+        "stem": "All of the following are true according to the email EXCEPT:",
+        "opts": [
+          "Students will give a presentation.",
+          "The report will be shorter than the original paper.",
+          "The deadline has been extended.",
+          "Some students have started writing already."
+        ],
+        "a": 2,
+        "ex": "«The deadline remains unchanged» — срок не продлили. Остальные три утверждения в письме есть."
+      },
+      {
+        "type": "Inference",
+        "stem": "What can be inferred about students who have already started writing?",
+        "opts": [
+          "They must start a new project.",
+          "They will receive extra credit.",
+          "They may be allowed to keep working alone.",
+          "They have to present first."
+        ],
+        "a": 2,
+        "ex": "Можно написать до пятницы с объяснением — разумные просьбы одобрят. Значит, им, скорее всего, разрешат работать в одиночку. Прямо это не обещано — отсюда «may»."
+      }
+    ]
+  },
+  {
+    "id": "R-RDL-C-002",
+    "level": "C",
+    "genre": "chat",
+    "doc": {
+      "kind": "chat",
+      "group": "Chem 101 study group",
+      "msgs": [
+        {
+          "who": "Priya",
+          "time": "9:02 AM",
+          "text": "Did anyone else get charged twice for the lab fee?"
+        },
+        {
+          "who": "Tom",
+          "time": "9:05 AM",
+          "text": "Same here. Called the bursar — apparently it's a system glitch, refunds go out automatically within 5 business days."
+        },
+        {
+          "who": "Priya",
+          "time": "9:06 AM",
+          "text": "Ugh, I need that money for rent before then."
+        },
+        {
+          "who": "Ana",
+          "time": "9:09 AM",
+          "text": "You can request an emergency advance at the financial aid office. Took me like 10 min last semester."
+        },
+        {
+          "who": "Priya",
+          "time": "9:10 AM",
+          "text": "Lifesaver, thanks!"
+        }
+      ]
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "What problem are the students discussing?",
+        "opts": [
+          "They cannot find the lab.",
+          "The financial aid office is closed.",
+          "Their rent has increased.",
+          "They paid the lab fee two times."
+        ],
+        "a": 3,
+        "ex": "«Charged twice for the lab fee» — с них дважды списали плату за лабораторию."
+      },
+      {
+        "type": "Inference",
+        "stem": "Why is Priya worried?",
+        "opts": [
+          "She may not get her refund in time to pay rent.",
+          "She does not know where the bursar's office is.",
+          "She thinks the refund will never come.",
+          "She has to pay for the lab again."
+        ],
+        "a": 0,
+        "ex": "Возврат придёт в течение 5 рабочих дней, а деньги нужны на аренду «before then» — раньше. Она не сомневается в возврате, её беспокоит срок."
+      },
+      {
+        "type": "Vocabulary",
+        "stem": "What does Priya mean when she writes \"Lifesaver\"?",
+        "hlw": "Lifesaver",
+        "opts": [
+          "Ana's idea is very helpful.",
+          "Ana should be more careful.",
+          "The situation is dangerous.",
+          "She will call for help."
+        ],
+        "a": 0,
+        "ex": "Lifesaver в разговорной речи — «ты меня спас(ла)», то есть совет очень помог. Буквальное значение («спасатель») здесь не подходит."
+      }
+    ]
+  },
+  {
+    "id": "R-RDL-C-003",
+    "level": "C",
+    "genre": "web",
+    "doc": {
+      "kind": "notice",
+      "head": "Library Quiet Floors — Updated Policy",
+      "paras": [
+        "Floors 3 and 4 are designated quiet zones. Brief, whispered conversations are acceptable on Floor 3; Floor 4 is silent at all times. Phone calls must be taken in the stairwells.",
+        "Group study rooms on Floor 2 can be reserved online up to 7 days in advance, for a maximum of 3 hours per day per group.",
+        "Reservations not claimed within 15 minutes will be released to waiting students."
+      ]
+    },
+    "qs": [
+      {
+        "type": "Factual",
+        "stem": "Where should students take phone calls?",
+        "opts": [
+          "On Floor 3",
+          "In the group study rooms",
+          "In the stairwells",
+          "On Floor 4"
+        ],
+        "a": 2,
+        "ex": "«Phone calls must be taken in the stairwells» — только на лестнице."
+      },
+      {
+        "type": "Inference",
+        "stem": "What will most likely happen if a group arrives 20 minutes late for its reserved room?",
+        "opts": [
+          "The group will have to pay a fee.",
+          "The room may be given to other students.",
+          "The group will get an extra hour.",
+          "The library will cancel all of the group's future reservations."
+        ],
+        "a": 1,
+        "ex": "Бронь, которую не заняли в течение 15 минут, «будет передана ожидающим студентам». 20 минут — больше 15, значит, комнату, скорее всего, отдадут."
+      },
+      {
+        "type": "Negative Factual",
+        "stem": "According to the policy, which of the following is NOT allowed?",
+        "opts": [
+          "Whispering on Floor 3",
+          "Reserving a room 5 days ahead",
+          "Whispering on Floor 4",
+          "Using a study room for 2 hours"
+        ],
+        "a": 2,
+        "ex": "На 4-м этаже «silent at all times» — даже шёпот нельзя. Шёпот разрешён только на 3-м. Бронь за 5 дней и на 2 часа укладывается в правила."
+      }
+    ]
+  }
+]

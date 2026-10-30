@@ -4,6 +4,9 @@
 import * as M from './mock.js';
 import { get, post, put, patch, isLive, loadMe, session } from '../lib/api.js';
 import { overallBand } from '../lib/util.js';
+// demo content is loaded only in demo mode (separate chunk)
+let demoCache = null;
+const demoBank = async () => demoCache || (demoCache = (await import('./demo-reading.json')).default);
 
 const MON = ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
 const DOW = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
@@ -117,3 +120,55 @@ export async function routeAttempt(id, section) { if (!isLive() || !id) return n
 export async function finishAttempt(id) { if (!isLive() || !id) return null; return post(`/attempts/${id}/finish`); }
 
 export { overallBand };
+
+/* ---------------- practice (item bank) ---------------- */
+const demoAttempts = {};
+
+export async function practiceItems({ section = 'R', task, level = 'auto', qtype, limit = 3, exclude = [] }) {
+  if (!isLive()) {
+    let list = (await demoBank()).filter(i => i.section === section && (!task || i.task === task) && (!qtype || i.qtypes.includes(qtype)));
+    if (exclude.length) list = list.filter(i => !exclude.includes(i.id));
+    return { items: list.slice(0, limit).map(({ key, explain, ...pub }) => pub), level: 'demo' };
+  }
+  const p = new URLSearchParams({ section, limit: String(limit) });
+  if (task) p.set('task', task); if (level) p.set('level', level); if (qtype) p.set('qtype', qtype);
+  if (exclude.length) p.set('exclude', exclude.join(','));
+  return get('/items?' + p);
+}
+export async function item(id) {
+  if (!isLive()) { const it = (await demoBank()).find(i => i.id === id); if (!it) throw new Error('not found'); const { key, explain, ...pub } = it; return pub; }
+  return (await get('/items/' + id)).item;
+}
+export async function mistakes(section = 'R', task) {
+  if (!isLive()) return { count: 0, items: [] };
+  return get('/me/mistakes?section=' + section + (task ? '&task=' + task : ''));
+}
+export async function stats(section = 'R') {
+  if (!isLive()) return null;
+  return get('/me/stats?section=' + section);
+}
+
+/** practice attempt; in demo mode graded locally against the bundled keys */
+export async function practiceStart(spec) {
+  if (!isLive()) { const id = 'demo-' + Date.now(); demoAttempts[id] = { spec, res: [] }; return { id }; }
+  return post('/attempts', { kind: 'practice', ...spec });
+}
+function demoGrade(r) {
+  const it = demoCache.find(i => i.id === r.item_id);
+  const k = it.key[r.q];
+  const correct = it.task === 'ctw' ? (String(r.answer || '').toLowerCase() === String(k).toLowerCase() ? 1 : 0) : (Number(r.answer) === k ? 1 : 0);
+  return { item_id: r.item_id, q: r.q, correct, key: k, explain: it.explain[r.q], qtype: it.qtypes[r.q] };
+}
+export async function practiceAnswer(attemptId, responses) {
+  if (String(attemptId).startsWith('demo-')) { const out = responses.map(demoGrade); demoAttempts[attemptId].res.push(...out); return { results: out }; }
+  return post(`/attempts/${attemptId}/responses`, { responses });
+}
+export async function practiceFinish(attemptId, responses) {
+  if (String(attemptId).startsWith('demo-')) {
+    const out = responses.length ? responses.map(demoGrade) : demoAttempts[attemptId].res;
+    return { responses: out.map(r => ({ ...r })) };
+  }
+  if (responses.length) await post(`/attempts/${attemptId}/responses`, { responses });
+  await post(`/attempts/${attemptId}/finish`);
+  return get(`/attempts/${attemptId}`);
+}

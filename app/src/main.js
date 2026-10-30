@@ -11,6 +11,7 @@ import progress from './views/progress.js';
 import profile from './views/profile.js';
 import { home as tHome, studentsView, reviewList, reviewItem, content } from './views/teacher.js';
 import examReading from './views/exam-reading.js';
+import practice from './views/practice.js';
 import { login, join, setup, password } from './views/auth.js';
 
 /* ---------- routes ---------- */
@@ -21,7 +22,7 @@ const ROUTES = {
   login, join, setup, password
 };
 const PUBLIC = new Set(['login', 'join', 'setup']);
-const PARAM_ROUTES = [['train/', train], ['t/review/', reviewItem]];
+const PARAM_ROUTES = [['train/', train], ['t/review/', reviewItem], ['practice/', practice]];
 
 const NAV = {
   student: [['today', 'today', 'Сегодня'], ['train', 'layers', 'Тренировка'], ['mock', 'timer', 'Пробник'], ['progress', 'trend', 'Прогресс'], ['profile', 'user', 'Профиль']],
@@ -42,7 +43,7 @@ let current = null, seq = 0;
 
 function renderNav(path) {
   const r = navRole(), items = NAV[r];
-  const active = items.find(([p]) => path === p || path.startsWith(p + '/'))?.[0] || items[0][0];
+  const active = items.find(([p]) => path === p || path.startsWith(p + '/'))?.[0] || (path.startsWith('practice') ? 'train' : items[0][0]);
   const u = isLive() ? session.user : null;
   const name = u ? u.name : r === 'teacher' ? demoTeacher.name : demoMe.full;
   const reviewCnt = r === 'teacher' && !u ? demoQueue.length : 0;
@@ -53,7 +54,7 @@ function renderNav(path) {
     <nav class="nav">${items.map(([p, i, l]) => `<a class="tab ${p === active ? 'on' : ''}" href="#/${p}">${ic(i, 21)}${l}${p === 't/review' && reviewCnt ? `<span class="cnt">${reviewCnt}</span>` : ''}</a>`).join('')}</nav>
     <div class="foot">
       ${isDemo() && hasApi() ? `<a class="railcta" href="#/login">${ic('user', 19)}<div><b>Демо-режим</b><span>войти в аккаунт</span></div></a>`
-        : r === 'student' ? `<a class="railcta" href="#/exam/reading">${ic('timer', 19)}<div><b>Демо Reading</b><span>экзаменационная оболочка</span></div></a>` : ''}
+        : r === 'student' ? `<a class="railcta" href="#/exam/reading">${ic('timer', 19)}<div><b>Модуль Reading</b><span>экзаменационная оболочка</span></div></a>` : ''}
       <div class="who"><span class="av">${(name || '?')[0]}</span><div><b>${name}</b><span>${r === 'teacher' ? 'учитель' : 'ученик'}</span></div></div>
     </div>`;
 }

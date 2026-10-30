@@ -3,7 +3,7 @@ name: API (Cloudflare Worker)
 on:
   push:
     branches: [main]
-    paths: ['api/**', '.github/workflows/api.yml']
+    paths: ['api/**', 'content/**', 'app/src/lib/ctw.js', '.github/workflows/api.yml']
   workflow_dispatch:
 
 concurrency:
@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm, cache-dependency-path: api/package-lock.json }
       - run: npm ci
+      - name: Validate content
+        run: node ../content/build.mjs
       - name: Local database
         run: npx wrangler d1 migrations apply noeon-toefl --local
       - name: Integration tests
@@ -54,6 +56,10 @@ jobs:
           npx wrangler d1 migrations apply noeon-toefl --remote 2>&1 | tee /tmp/mig.log; rc=${PIPESTATUS[0]}
           [ $rc -ne 0 ] && grep -iE "error|✘" /tmp/mig.log | head -8 | while read -r l; do echo "::error title=migrations::$l"; done
           exit $rc
+      - name: Seed content (items are upserted, student data is untouched)
+        run: |
+          node ../content/build.mjs
+          npx wrangler d1 execute noeon-toefl --remote --file seed/reading.sql 2>&1 | tail -3
       - name: Deploy
         run: npx wrangler deploy 2>&1 | tee /tmp/deploy.log; exit ${PIPESTATUS[0]}
       - name: Report deploy errors
