@@ -49,7 +49,7 @@ function renderNav(path) {
   document.getElementById('pill').innerHTML = items.map(([p, i, l]) =>
     `<a class="tab ${p === active ? 'on' : ''}" href="#/${p}" aria-label="${l}" ${p === active ? 'aria-current="page"' : ''}>${ic(i, 22)}<span class="tl">${l}</span></a>`).join('');
   document.getElementById('rail').innerHTML = `
-    <div class="brand"><span class="mk">${mark(24)}</span><div><b>NOEON TOEFL</b><span>Beyond Knowing</span></div></div>
+    <div class="brand"><span class="mk">${mark(24)}</span><b>NOEON TOEFL</b></div>
     <nav class="nav">${items.map(([p, i, l]) => `<a class="tab ${p === active ? 'on' : ''}" href="#/${p}">${ic(i, 21)}${l}${p === 't/review' && reviewCnt ? `<span class="cnt">${reviewCnt}</span>` : ''}</a>`).join('')}</nav>
     <div class="foot">
       ${isDemo() && hasApi() ? `<a class="railcta" href="#/login">${ic('user', 19)}<div><b>Демо-режим</b><span>войти в аккаунт</span></div></a>`

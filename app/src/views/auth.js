@@ -7,7 +7,7 @@ import { pref } from '../lib/store.js';
 
 const shell = (title, sub, form, foot = '') => `<div class="auth">
   <div class="auth-card">
-    <div class="auth-brand"><span class="mk">${mark(26)}</span><div><b>NOEON TOEFL</b><span>Beyond Knowing</span></div></div>
+    <div class="auth-brand"><span class="mk">${mark(26)}</span><b>NOEON TOEFL</b></div>
     <h1 class="serif">${title}</h1>${sub ? `<p class="mut">${sub}</p>` : ''}
     <form class="auth-form" novalidate>${form}<p class="auth-err" role="alert"></p></form>
     ${foot}

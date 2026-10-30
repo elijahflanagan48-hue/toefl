@@ -92,7 +92,7 @@ export default async function profile() {
       <div class="lbl">Аккаунт</div>
       ${live ? `<a class="rowlink" href="#/password">${ic('lock', 20)}Сменить пароль${ic('right', 18)}</a>` : ''}
       <button class="rowlink" data-act="logout">${ic('logout', 20)}${live ? 'Выйти' : hasApi() ? 'Войти в аккаунт' : 'Выйти'}</button>
-      <p class="fade small center">NOEON TOEFL · Beyond Knowing · v0.2</p>
+      <p class="fade small center">NOEON TOEFL · v0.2</p>
     </div></div>`,
     mount(root) {
       const d = root.querySelector('#examdate');
