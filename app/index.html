@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#16213f">
+  <title>NOEON TOEFL</title>
+  <link rel="stylesheet" href="./src/styles/tokens.css">
+  <link rel="stylesheet" href="./src/styles/base.css">
+  <link rel="stylesheet" href="./src/styles/components.css">
+  <link rel="stylesheet" href="./src/styles/screens.css">
+  <link rel="stylesheet" href="./src/styles/exam.css">
+  <script>
+    /* theme before first paint: no flash */
+    (function () {
+      var t = 'auto';
+      try { t = localStorage.getItem('nt.theme') || 'auto'; } catch (e) {}
+      var dark = t === 'dark' || (t === 'auto' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail" id="rail"></aside>
+    <main id="app" class="app"></main>
+  </div>
+  <nav class="pill" id="pill" aria-label="Разделы"></nav>
+  <div id="layer"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* NOEON TOEFL — design tokens
+   Family: NOEON Words (Madefor type, card language, day/night).
+   Own accent: ink + gold. Section colours: R blue, L teal, W amber, S coral. */
+
+@font-face{font-family:Madefor;src:url(../assets/fonts/wixt-lat.woff2)format('woff2');font-weight:100 900;font-display:swap;
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Madefor;src:url(../assets/fonts/wixt-cyr.woff2)format('woff2');font-weight:100 900;font-display:swap;
+  unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:MadeforD;src:url(../assets/fonts/wixd-lat.woff2)format('woff2');font-weight:100 900;font-display:swap;
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:MadeforD;src:url(../assets/fonts/wixd-cyr.woff2)format('woff2');font-weight:100 900;font-display:swap;
+  unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+
+:root{
+  /* surfaces & text */
+  --bg:#f3f5fa; --surf:#ffffff; --surf2:#f0f3f9; --surf3:#e8ecf5;
+  --tx:#0f1a2e; --mut:#56637f; --fade:#7d8aa5;
+  --line:#e3e8f2; --line2:#d1d9e8;
+
+  /* brand: ink + gold */
+  --pri:#16213f; --pri-2:#24325c; --on-pri:#ffffff; --pri-soft:#e7eaf3;
+  --gold:#a86f08; --gold-2:#f0b84a; --gold-soft:#fbf1dc; --on-gold:#1a1405;
+  --hero:#16213f; --hero-2:#1e2b52; --hero-tx:#f6f2e8; --hero-mut:#b4bcd2; --hero-line:rgba(255,255,255,.12);
+
+  /* sections */
+  --sR:#2f6fed; --sL:#0e9384; --sW:#c97a06; --sS:#e0503f;
+  --sR-ink:#1f56c8; --sL-ink:#0b766a; --sW-ink:#9a5d04; --sS-ink:#b8382a;
+
+  /* states */
+  --ok:#1b7a4d; --ok-soft:#e3f2e9; --bad:#c03a28; --bad-soft:#fbe8e4; --warn:#a25d00; --warn-soft:#fff1dc;
+  --focus:#2f6fed;
+
+  /* shape */
+  --r-xl:22px; --r:18px; --r-md:15px; --r-sm:12px; --r-xs:9px;
+  --sh-sm:0 1px 2px rgba(15,26,46,.05);
+  --sh:0 10px 30px rgba(15,26,46,.10),0 2px 6px rgba(15,26,46,.05);
+  --sh-lg:0 22px 50px rgba(15,26,46,.18);
+
+  /* type */
+  --ff:Madefor,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,system-ui,sans-serif;
+  --ffd:MadeforD,Madefor,-apple-system,"SF Pro Display",system-ui,sans-serif;
+  --ff-exam:Arial,"Helvetica Neue",Helvetica,sans-serif;  /* exam shell: plain, like a test screen */
+
+  /* motion (from Words) */
+  --ease:cubic-bezier(.33,1,.68,1); --spring:cubic-bezier(.34,1.56,.64,1);
+
+  /* layout */
+  --col:680px; --rail:248px;
+}
+
+:root[data-theme="dark"]{
+  --bg:#070b16; --surf:#0f1626; --surf2:#151e33; --surf3:#1c2741;
+  --tx:#e9eefb; --mut:#9aa7c3; --fade:#71809f;
+  --line:#1b2539; --line2:#29364e;
+
+  --pri:#f0b84a; --pri-2:#f6cd78; --on-pri:#1a1405; --pri-soft:#2a2414;
+  --gold:#f0b84a; --gold-2:#f0b84a; --gold-soft:#2a2414; --on-gold:#1a1405;
+  --hero:#111a33; --hero-2:#17223f; --hero-mut:#a7b0c9;
+
+  --sR:#7aa7ff; --sL:#4fd1bf; --sW:#f2b443; --sS:#ff8a7a;
+  --sR-ink:#9dbdff; --sL-ink:#74dccd; --sW-ink:#f6c86e; --sS-ink:#ffa598;
+
+  --ok:#4ed39a; --ok-soft:#0d2a20; --bad:#ef8a76; --bad-soft:#2d1512; --warn:#f6c46b; --warn-soft:#3a2a0e;
+  --focus:#7aa7ff;
+
+  --sh-sm:0 1px 2px rgba(0,0,0,.35);
+  --sh:0 14px 34px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.35);
+  --sh-lg:0 22px 50px rgba(0,0,0,.6);
+}
+
+/* section helpers: put .cR/.cL/.cW/.cS on any element to get --sc / --sc-ink */
+.cR{--sc:var(--sR);--sc-ink:var(--sR-ink)}
+.cL{--sc:var(--sL);--sc-ink:var(--sL-ink)}
+.cW{--sc:var(--sW);--sc-ink:var(--sW-ink)}
+.cS{--sc:var(--sS);--sc-ink:var(--sS-ink)}

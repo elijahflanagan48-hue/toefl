@@ -1,0 +1,16 @@
+{
+  "name": "noeon-toefl-api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local --port 8787",
+    "migrate:local": "wrangler d1 migrations apply noeon-toefl --local",
+    "migrate:remote": "wrangler d1 migrations apply noeon-toefl --remote",
+    "deploy": "wrangler deploy",
+    "test": "node test/api.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.149.0"
+  }
+}
