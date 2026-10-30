@@ -17,17 +17,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20, cache: npm, cache-dependency-path: api/package-lock.json }
+        with: { node-version: 22, cache: npm, cache-dependency-path: api/package-lock.json }
       - run: npm ci
       - name: Local database
         run: npx wrangler d1 migrations apply noeon-toefl --local
       - name: Integration tests
         run: |
           npx wrangler dev --local --port 8787 --ip 127.0.0.1 > /tmp/dev.log 2>&1 &
-          for i in $(seq 1 30); do curl -sf http://127.0.0.1:8787/health && break; sleep 2; done
-          npm test
-      - if: failure()
-        run: cat /tmp/dev.log
+          for i in $(seq 1 45); do curl -sf http://127.0.0.1:8787/health && break; sleep 2; done
+          npm test 2>&1 | tee /tmp/test.log
+          exit ${PIPESTATUS[0]}
+      - name: Report failures as annotations
+        if: failure()
+        run: |
+          node -v
+          [ -f /tmp/test.log ] && grep -E "✗|Error|passed" /tmp/test.log | head -20 | while read -r l; do echo "::error title=test::$l"; done
+          [ -f /tmp/dev.log ] && grep -iE "error|✘" /tmp/dev.log | head -10 | while read -r l; do echo "::error title=wrangler::$l"; done
+          true
 
   deploy:
     needs: test
@@ -39,11 +45,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20, cache: npm, cache-dependency-path: api/package-lock.json }
+        with: { node-version: 22, cache: npm, cache-dependency-path: api/package-lock.json }
       - run: npm ci
       - name: Audio bucket (R2)
         run: npx wrangler r2 bucket create noeon-toefl-audio || echo "bucket exists or R2 is not enabled yet"
       - name: Database migrations
-        run: npx wrangler d1 migrations apply noeon-toefl --remote
+        run: |
+          npx wrangler d1 migrations apply noeon-toefl --remote 2>&1 | tee /tmp/mig.log; rc=${PIPESTATUS[0]}
+          [ $rc -ne 0 ] && grep -iE "error|✘" /tmp/mig.log | head -8 | while read -r l; do echo "::error title=migrations::$l"; done
+          exit $rc
       - name: Deploy
-        run: npx wrangler deploy
+        run: npx wrangler deploy 2>&1 | tee /tmp/deploy.log; exit ${PIPESTATUS[0]}
+      - name: Report deploy errors
+        if: failure()
+        run: |
+          for f in /tmp/deploy.log; do [ -f $f ] && grep -iE "error|✘|code:" $f | head -10 | while read -r l; do echo "::error title=deploy::$l"; done; done
+          true
