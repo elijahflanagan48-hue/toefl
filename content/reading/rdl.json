@@ -1,530 +1,3905 @@
 [
-  {
-    "id": "R-RDL-A-001",
-    "level": "A",
-    "genre": "chat",
-    "doc": {
-      "kind": "chat",
-      "msgs": [
-        {
-          "who": "Maya",
-          "time": "4:12 PM",
-          "text": "Hey! Are you still coming to the study group tonight?"
-        },
-        {
-          "who": "Leo",
-          "time": "4:15 PM",
-          "text": "Yes, but I'll be 15 min late. My shift at the café ends at 6."
-        },
-        {
-          "who": "Maya",
-          "time": "4:16 PM",
-          "text": "No problem. We're in Room 204 this time, not the library."
-        },
-        {
-          "who": "Leo",
-          "time": "4:16 PM",
-          "text": "Got it. Should I bring anything?"
-        },
-        {
-          "who": "Maya",
-          "time": "4:17 PM",
-          "text": "Just your notes from Tuesday's lecture."
-        }
-      ]
+ {
+  "id": "R-RDL-A-001",
+  "level": "A",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Maya",
+     "time": "4:12 PM",
+     "text": "Hey! Are you still coming to the study group tonight?"
     },
-    "qs": [
-      {
-        "type": "Factual",
-        "stem": "Why will Leo be late?",
-        "opts": [
-          "He missed the bus.",
-          "The library is closed.",
-          "He forgot his notes.",
-          "He has to finish work first."
-        ],
-        "a": 3,
-        "ex": "Лео пишет: «My shift at the café ends at 6» — у него смена в кафе. Про автобус и закрытую библиотеку в переписке ничего нет, а заметки он только спрашивает, нужно ли брать."
-      },
-      {
-        "type": "Factual",
-        "stem": "Where will the study group meet?",
-        "opts": [
-          "In the library",
-          "At the café",
-          "In the lecture hall",
-          "In Room 204"
-        ],
-        "a": 3,
-        "ex": "«We're in Room 204 this time, not the library». Ловушка — библиотека: она упомянута, но с отрицанием not."
-      }
-    ]
+    {
+     "who": "Leo",
+     "time": "4:15 PM",
+     "text": "Yes, but I'll be 15 min late. My shift at the café ends at 6."
+    },
+    {
+     "who": "Maya",
+     "time": "4:16 PM",
+     "text": "No problem. We're in Room 204 this time, not the library."
+    },
+    {
+     "who": "Leo",
+     "time": "4:16 PM",
+     "text": "Got it. Should I bring anything?"
+    },
+    {
+     "who": "Maya",
+     "time": "4:17 PM",
+     "text": "Just your notes from Tuesday's lecture."
+    }
+   ]
   },
-  {
-    "id": "R-RDL-A-002",
-    "level": "A",
-    "genre": "notice",
-    "doc": {
-      "kind": "notice",
-      "head": "Lost & Found — Student Center",
-      "paras": [
-        "Found on Monday: a blue water bottle with stickers, a black umbrella, and a set of keys on a red keychain.",
-        "Items can be picked up at the front desk, 9 a.m.–5 p.m., Monday to Friday. Please bring your student ID.",
-        "Items not claimed within 30 days will be donated."
-      ]
-    },
-    "qs": [
-      {
-        "type": "Factual",
-        "stem": "What is the main purpose of the notice?",
-        "opts": [
-          "To sell items that nobody wanted",
-          "To ask students to donate old items",
-          "To announce new opening hours for the Student Center",
-          "To tell students where they can collect lost items"
-        ],
-        "a": 3,
-        "ex": "Главная цель — сообщить, что найдены вещи и где их забрать. Про пожертвование сказано только как о последствии через 30 дней, это деталь, а не цель."
-      },
-      {
-        "type": "Factual",
-        "stem": "What must students bring to pick up an item?",
-        "opts": [
-          "A receipt",
-          "A photo of the item",
-          "A note from a teacher",
-          "Their student ID"
-        ],
-        "a": 3,
-        "ex": "«Please bring your student ID» — прямо сказано в объявлении."
-      }
-    ]
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why will Leo be late?",
+    "opts": [
+     "He missed the bus.",
+     "The library is closed.",
+     "He forgot his notes.",
+     "He has to finish work first."
+    ],
+    "a": 3,
+    "ex": "Лео пишет: «My shift at the café ends at 6» — у него смена в кафе. Про автобус и закрытую библиотеку в переписке ничего нет, а заметки он только спрашивает, нужно ли брать."
+   },
+   {
+    "type": "Factual",
+    "stem": "Where will the study group meet?",
+    "opts": [
+     "In the library",
+     "At the café",
+     "In the lecture hall",
+     "In Room 204"
+    ],
+    "a": 3,
+    "ex": "«We're in Room 204 this time, not the library». Ловушка — библиотека: она упомянута, но с отрицанием not."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-002",
+  "level": "A",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "Lost & Found — Student Center",
+   "paras": [
+    "Found on Monday: a blue water bottle with stickers, a black umbrella, and a set of keys on a red keychain.",
+    "Items can be picked up at the front desk, 9 a.m.–5 p.m., Monday to Friday. Please bring your student ID.",
+    "Items not claimed within 30 days will be donated."
+   ]
   },
-  {
-    "id": "R-RDL-A-003",
-    "level": "A",
-    "genre": "schedule",
-    "doc": {
-      "kind": "table",
-      "head": "Campus Gym — Fall Hours",
-      "rows": [
-        [
-          "Mon / Wed",
-          "7:00 a.m. – 10:00 p.m."
-        ],
-        [
-          "Tue / Thu",
-          "7:00 a.m. – 10:00 p.m. (pool closed 12–2 p.m. for swim classes)"
-        ],
-        [
-          "Friday",
-          "7:00 a.m. – 8:00 p.m."
-        ],
-        [
-          "Saturday",
-          "9:00 a.m. – 6:00 p.m."
-        ],
-        [
-          "Sunday",
-          "Closed"
-        ]
-      ],
-      "foot": "Towels are no longer provided. Please bring your own."
-    },
-    "qs": [
-      {
-        "type": "Factual",
-        "stem": "A student wants to swim at 1:00 p.m. On which day can she do this?",
-        "opts": [
-          "Tuesday",
-          "Sunday",
-          "Thursday",
-          "Wednesday"
-        ],
-        "a": 3,
-        "ex": "Во вторник и четверг бассейн закрыт с 12 до 2 — значит, в 13:00 плавать нельзя. В воскресенье спортзал закрыт целиком. Остаётся среда."
-      },
-      {
-        "type": "Inference",
-        "stem": "What is suggested about towels?",
-        "opts": [
-          "Towels are only needed in the pool.",
-          "Towels can be rented at the front desk.",
-          "Students must wash the gym's towels.",
-          "The gym used to give towels to students."
-        ],
-        "a": 3,
-        "ex": "«No longer provided» — «больше не выдаются». Значит, раньше их выдавали. Это вывод из слов no longer, прямо об этом не сказано."
-      }
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is the main purpose of the notice?",
+    "opts": [
+     "To sell items that nobody wanted",
+     "To ask students to donate old items",
+     "To announce new opening hours for the Student Center",
+     "To tell students where they can collect lost items"
+    ],
+    "a": 3,
+    "ex": "Главная цель — сообщить, что найдены вещи и где их забрать. Про пожертвование сказано только как о последствии через 30 дней, это деталь, а не цель."
+   },
+   {
+    "type": "Factual",
+    "stem": "What must students bring to pick up an item?",
+    "opts": [
+     "A receipt",
+     "A photo of the item",
+     "A note from a teacher",
+     "Their student ID"
+    ],
+    "a": 3,
+    "ex": "«Please bring your student ID» — прямо сказано в объявлении."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-003",
+  "level": "A",
+  "genre": "schedule",
+  "doc": {
+   "kind": "table",
+   "head": "Campus Gym — Fall Hours",
+   "rows": [
+    [
+     "Mon / Wed",
+     "7:00 a.m. – 10:00 p.m."
+    ],
+    [
+     "Tue / Thu",
+     "7:00 a.m. – 10:00 p.m. (pool closed 12–2 p.m. for swim classes)"
+    ],
+    [
+     "Friday",
+     "7:00 a.m. – 8:00 p.m."
+    ],
+    [
+     "Saturday",
+     "9:00 a.m. – 6:00 p.m."
+    ],
+    [
+     "Sunday",
+     "Closed"
     ]
+   ],
+   "foot": "Towels are no longer provided. Please bring your own."
   },
-  {
-    "id": "R-RDL-B-001",
-    "level": "B",
-    "genre": "email",
-    "doc": {
-      "kind": "email",
-      "from": "Housing Office",
-      "to": "All residents of Oak Hall",
-      "subject": "Water shut-off on Thursday",
-      "paras": [
-        "Dear residents,",
-        "Plumbers will replace the main water pipe in Oak Hall on Thursday, March 12. Water will be shut off from 9 a.m. to approximately 3 p.m. Showers and sinks on all floors will be unavailable during this time.",
-        "Bottled water will be available in the lobby. Residents who need to shower may use the facilities in Pine Hall, which will not be affected.",
-        "We apologize for the inconvenience and appreciate your patience.",
-        "Housing Office"
-      ]
-    },
-    "qs": [
-      {
-        "type": "Factual",
-        "stem": "What is the main purpose of the email?",
-        "opts": [
-          "To ask residents to report a broken pipe",
-          "To invite residents to move to Pine Hall",
-          "To announce that Oak Hall will close",
-          "To inform residents about a temporary loss of water"
-        ],
-        "a": 3,
-        "ex": "Письмо сообщает, что в четверг на несколько часов отключат воду. Переезжать в Pine Hall никто не предлагает — туда можно сходить в душ."
-      },
-      {
-        "type": "Factual",
-        "stem": "According to the email, what can residents do if they need to take a shower?",
-        "opts": [
-          "Use the showers in Pine Hall",
-          "Wait until the evening",
-          "Ask the plumbers for permission",
-          "Use bottled water from the lobby"
-        ],
-        "a": 0,
-        "ex": "«Residents who need to shower may use the facilities in Pine Hall». Бутилированная вода в лобби — для питья, не для душа."
-      },
-      {
-        "type": "Vocabulary",
-        "stem": "The word \"affected\" in the email is closest in meaning to",
-        "hlw": "affected",
-        "opts": [
-          "repaired",
-          "closed",
-          "inspected",
-          "influenced"
-        ],
-        "a": 3,
-        "ex": "Pine Hall «will not be affected» — работы на него не повлияют. Affected = influenced. «Repaired» — частая ловушка: ремонт упоминается в письме, но это не синоним."
-      }
-    ]
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "A student wants to swim at 1:00 p.m. On which day can she do this?",
+    "opts": [
+     "Tuesday",
+     "Sunday",
+     "Thursday",
+     "Wednesday"
+    ],
+    "a": 3,
+    "ex": "Во вторник и четверг бассейн закрыт с 12 до 2 — значит, в 13:00 плавать нельзя. В воскресенье спортзал закрыт целиком. Остаётся среда."
+   },
+   {
+    "type": "Inference",
+    "stem": "What is suggested about towels?",
+    "opts": [
+     "Towels are only needed in the pool.",
+     "Towels can be rented at the front desk.",
+     "Students must wash the gym's towels.",
+     "The gym used to give towels to students."
+    ],
+    "a": 3,
+    "ex": "«No longer provided» — «больше не выдаются». Значит, раньше их выдавали. Это вывод из слов no longer, прямо об этом не сказано."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-001",
+  "level": "B",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Housing Office",
+   "to": "All residents of Oak Hall",
+   "subject": "Water shut-off on Thursday",
+   "paras": [
+    "Dear residents,",
+    "Plumbers will replace the main water pipe in Oak Hall on Thursday, March 12. Water will be shut off from 9 a.m. to approximately 3 p.m. Showers and sinks on all floors will be unavailable during this time.",
+    "Bottled water will be available in the lobby. Residents who need to shower may use the facilities in Pine Hall, which will not be affected.",
+    "We apologize for the inconvenience and appreciate your patience.",
+    "Housing Office"
+   ]
   },
-  {
-    "id": "R-RDL-B-002",
-    "level": "B",
-    "genre": "social",
-    "doc": {
-      "kind": "post",
-      "who": "Green Campus Club",
-      "handle": "@greencampus",
-      "paras": [
-        "Swap, don't shop! Our clothing swap is back on Saturday, 11 a.m.–3 p.m., in the Student Center ballroom.",
-        "Bring up to 5 clean items you no longer wear and leave with the same number of \"new\" ones. Leftover clothes will go to a local shelter.",
-        "Volunteers needed for setup at 10 — DM us if you can help!"
-      ]
-    },
-    "qs": [
-      {
-        "type": "Factual",
-        "stem": "What is the post mainly about?",
-        "opts": [
-          "A sale of new clothes on campus",
-          "A new club for students who like fashion",
-          "A request for donations to a shelter",
-          "An event where students exchange clothing"
-        ],
-        "a": 3,
-        "ex": "Swap = обмен: приносишь вещи и уносишь столько же других. Приют упоминается только как место, куда отдадут остатки."
-      },
-      {
-        "type": "Factual",
-        "stem": "What will happen to clothes that nobody takes?",
-        "opts": [
-          "They will be sold.",
-          "They will be returned to their owners.",
-          "They will be kept for the next swap.",
-          "They will be given to a shelter."
-        ],
-        "a": 3,
-        "ex": "«Leftover clothes will go to a local shelter». Leftover = оставшиеся."
-      },
-      {
-        "type": "Vocabulary",
-        "stem": "What does \"DM us\" mean in the post?",
-        "hlw": "DM us",
-        "opts": [
-          "Send us a private message",
-          "Come to our office",
-          "Donate money to us",
-          "Call our manager"
-        ],
-        "a": 0,
-        "ex": "DM — direct message, личное сообщение в соцсети. В Daily Life ETS проверяет неформальный и сокращённый язык."
-      }
-    ]
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is the main purpose of the email?",
+    "opts": [
+     "To ask residents to report a broken pipe",
+     "To invite residents to move to Pine Hall",
+     "To announce that Oak Hall will close",
+     "To inform residents about a temporary loss of water"
+    ],
+    "a": 3,
+    "ex": "Письмо сообщает, что в четверг на несколько часов отключат воду. Переезжать в Pine Hall никто не предлагает — туда можно сходить в душ."
+   },
+   {
+    "type": "Factual",
+    "stem": "According to the email, what can residents do if they need to take a shower?",
+    "opts": [
+     "Use the showers in Pine Hall",
+     "Wait until the evening",
+     "Ask the plumbers for permission",
+     "Use bottled water from the lobby"
+    ],
+    "a": 0,
+    "ex": "«Residents who need to shower may use the facilities in Pine Hall». Бутилированная вода в лобби — для питья, не для душа."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"affected\" in the email is closest in meaning to",
+    "hlw": "affected",
+    "opts": [
+     "repaired",
+     "closed",
+     "inspected",
+     "influenced"
+    ],
+    "a": 3,
+    "ex": "Pine Hall «will not be affected» — работы на него не повлияют. Affected = influenced. «Repaired» — частая ловушка: ремонт упоминается в письме, но это не синоним."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-002",
+  "level": "B",
+  "genre": "social",
+  "doc": {
+   "kind": "post",
+   "who": "Green Campus Club",
+   "handle": "@greencampus",
+   "paras": [
+    "Swap, don't shop! Our clothing swap is back on Saturday, 11 a.m.–3 p.m., in the Student Center ballroom.",
+    "Bring up to 5 clean items you no longer wear and leave with the same number of \"new\" ones. Leftover clothes will go to a local shelter.",
+    "Volunteers needed for setup at 10 — DM us if you can help!"
+   ]
   },
-  {
-    "id": "R-RDL-B-003",
-    "level": "B",
-    "genre": "receipt",
-    "doc": {
-      "kind": "receipt",
-      "head": "Campus Bookstore",
-      "meta": "Receipt #20481 · Oct 3",
-      "rows": [
-        [
-          "Intro to Psychology (used)",
-          "$42.50"
-        ],
-        [
-          "Lab notebook",
-          "$8.00"
-        ],
-        [
-          "Highlighters, 3-pack",
-          "$4.25"
-        ],
-        [
-          "Subtotal",
-          "$54.75"
-        ],
-        [
-          "Student discount (10%)",
-          "–$5.48"
-        ],
-        [
-          "Total",
-          "$49.27"
-        ]
-      ],
-      "foot": "Paid by card. Returns accepted within 14 days with receipt. Used textbooks may be returned only if unmarked."
-    },
-    "qs": [
-      {
-        "type": "Factual",
-        "stem": "How much did the items cost before the discount?",
-        "opts": [
-          "$42.50",
-          "$49.27",
-          "$54.75",
-          "$5.48"
-        ],
-        "a": 2,
-        "ex": "До скидки — Subtotal, $54.75. $49.27 — итог после скидки, $5.48 — сама скидка."
-      },
-      {
-        "type": "Inference",
-        "stem": "Why might the customer be unable to return the psychology book?",
-        "opts": [
-          "Because it was bought with a card",
-          "Because it was on sale",
-          "Because returns are never accepted",
-          "Because the customer writes in it"
-        ],
-        "a": 3,
-        "ex": "Подержанные учебники принимают «only if unmarked» — только без пометок. Если покупатель что-то в нём напишет, вернуть не получится. Это вывод из условия."
-      },
-      {
-        "type": "Factual",
-        "stem": "What is true about the purchase?",
-        "opts": [
-          "The discount applied only to the textbook.",
-          "The customer paid in cash.",
-          "A discount was taken off the whole subtotal.",
-          "The highlighters were free."
-        ],
-        "a": 2,
-        "ex": "10% от $54.75 = $5.48 — значит, скидка посчитана от всей суммы, а не от одного учебника. Оплата — картой (Paid by card)."
-      }
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is the post mainly about?",
+    "opts": [
+     "A sale of new clothes on campus",
+     "A new club for students who like fashion",
+     "A request for donations to a shelter",
+     "An event where students exchange clothing"
+    ],
+    "a": 3,
+    "ex": "Swap = обмен: приносишь вещи и уносишь столько же других. Приют упоминается только как место, куда отдадут остатки."
+   },
+   {
+    "type": "Factual",
+    "stem": "What will happen to clothes that nobody takes?",
+    "opts": [
+     "They will be sold.",
+     "They will be returned to their owners.",
+     "They will be kept for the next swap.",
+     "They will be given to a shelter."
+    ],
+    "a": 3,
+    "ex": "«Leftover clothes will go to a local shelter». Leftover = оставшиеся."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"DM us\" mean in the post?",
+    "hlw": "DM us",
+    "opts": [
+     "Send us a private message",
+     "Come to our office",
+     "Donate money to us",
+     "Call our manager"
+    ],
+    "a": 0,
+    "ex": "DM — direct message, личное сообщение в соцсети. В Daily Life ETS проверяет неформальный и сокращённый язык."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-003",
+  "level": "B",
+  "genre": "receipt",
+  "doc": {
+   "kind": "receipt",
+   "head": "Campus Bookstore",
+   "meta": "Receipt #20481 · Oct 3",
+   "rows": [
+    [
+     "Intro to Psychology (used)",
+     "$42.50"
+    ],
+    [
+     "Lab notebook",
+     "$8.00"
+    ],
+    [
+     "Highlighters, 3-pack",
+     "$4.25"
+    ],
+    [
+     "Subtotal",
+     "$54.75"
+    ],
+    [
+     "Student discount (10%)",
+     "–$5.48"
+    ],
+    [
+     "Total",
+     "$49.27"
     ]
+   ],
+   "foot": "Paid by card. Returns accepted within 14 days with receipt. Used textbooks may be returned only if unmarked."
   },
-  {
-    "id": "R-RDL-C-001",
-    "level": "C",
-    "genre": "email",
-    "doc": {
-      "kind": "email",
-      "from": "Dr. Elena Moreno",
-      "to": "HIST 210 students",
-      "subject": "Change to final project requirements",
-      "paras": [
-        "Dear all,",
-        "After reviewing your proposals, I've decided to adjust the final project. Rather than submitting a 15-page individual paper, you'll work in pairs and produce a 10-page report plus a 10-minute presentation in our last session.",
-        "I realize some of you have already begun drafting, so if you strongly prefer to continue individually, email me by Friday with a brief justification — I'll approve reasonable requests.",
-        "The deadline remains unchanged.",
-        "Best,\nDr. Moreno"
-      ]
-    },
-    "qs": [
-      {
-        "type": "Factual",
-        "stem": "What is the main purpose of the email?",
-        "opts": [
-          "To explain a new format for the final project",
-          "To cancel the final presentation",
-          "To ask students to submit proposals",
-          "To announce a later deadline"
-        ],
-        "a": 0,
-        "ex": "Профессор меняет формат: работа в парах, отчёт на 10 страниц и презентация. Дедлайн, наоборот, не меняется."
-      },
-      {
-        "type": "Negative Factual",
-        "stem": "All of the following are true according to the email EXCEPT:",
-        "opts": [
-          "Students will give a presentation.",
-          "The report will be shorter than the original paper.",
-          "The deadline has been extended.",
-          "Some students have started writing already."
-        ],
-        "a": 2,
-        "ex": "«The deadline remains unchanged» — срок не продлили. Остальные три утверждения в письме есть."
-      },
-      {
-        "type": "Inference",
-        "stem": "What can be inferred about students who have already started writing?",
-        "opts": [
-          "They must start a new project.",
-          "They will receive extra credit.",
-          "They may be allowed to keep working alone.",
-          "They have to present first."
-        ],
-        "a": 2,
-        "ex": "Можно написать до пятницы с объяснением — разумные просьбы одобрят. Значит, им, скорее всего, разрешат работать в одиночку. Прямо это не обещано — отсюда «may»."
-      }
-    ]
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much did the items cost before the discount?",
+    "opts": [
+     "$42.50",
+     "$49.27",
+     "$54.75",
+     "$5.48"
+    ],
+    "a": 2,
+    "ex": "До скидки — Subtotal, $54.75. $49.27 — итог после скидки, $5.48 — сама скидка."
+   },
+   {
+    "type": "Inference",
+    "stem": "Why might the customer be unable to return the psychology book?",
+    "opts": [
+     "Because it was bought with a card",
+     "Because it was on sale",
+     "Because returns are never accepted",
+     "Because the customer writes in it"
+    ],
+    "a": 3,
+    "ex": "Подержанные учебники принимают «only if unmarked» — только без пометок. Если покупатель что-то в нём напишет, вернуть не получится. Это вывод из условия."
+   },
+   {
+    "type": "Factual",
+    "stem": "What is true about the purchase?",
+    "opts": [
+     "The discount applied only to the textbook.",
+     "The customer paid in cash.",
+     "A discount was taken off the whole subtotal.",
+     "The highlighters were free."
+    ],
+    "a": 2,
+    "ex": "10% от $54.75 = $5.48 — значит, скидка посчитана от всей суммы, а не от одного учебника. Оплата — картой (Paid by card)."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-001",
+  "level": "C",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Dr. Elena Moreno",
+   "to": "HIST 210 students",
+   "subject": "Change to final project requirements",
+   "paras": [
+    "Dear all,",
+    "After reviewing your proposals, I've decided to adjust the final project. Rather than submitting a 15-page individual paper, you'll work in pairs and produce a 10-page report plus a 10-minute presentation in our last session.",
+    "I realize some of you have already begun drafting, so if you strongly prefer to continue individually, email me by Friday with a brief justification — I'll approve reasonable requests.",
+    "The deadline remains unchanged.",
+    "Best,\nDr. Moreno"
+   ]
   },
-  {
-    "id": "R-RDL-C-002",
-    "level": "C",
-    "genre": "chat",
-    "doc": {
-      "kind": "chat",
-      "group": "Chem 101 study group",
-      "msgs": [
-        {
-          "who": "Priya",
-          "time": "9:02 AM",
-          "text": "Did anyone else get charged twice for the lab fee?"
-        },
-        {
-          "who": "Tom",
-          "time": "9:05 AM",
-          "text": "Same here. Called the bursar — apparently it's a system glitch, refunds go out automatically within 5 business days."
-        },
-        {
-          "who": "Priya",
-          "time": "9:06 AM",
-          "text": "Ugh, I need that money for rent before then."
-        },
-        {
-          "who": "Ana",
-          "time": "9:09 AM",
-          "text": "You can request an emergency advance at the financial aid office. Took me like 10 min last semester."
-        },
-        {
-          "who": "Priya",
-          "time": "9:10 AM",
-          "text": "Lifesaver, thanks!"
-        }
-      ]
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is the main purpose of the email?",
+    "opts": [
+     "To explain a new format for the final project",
+     "To cancel the final presentation",
+     "To ask students to submit proposals",
+     "To announce a later deadline"
+    ],
+    "a": 0,
+    "ex": "Профессор меняет формат: работа в парах, отчёт на 10 страниц и презентация. Дедлайн, наоборот, не меняется."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "All of the following are true according to the email EXCEPT:",
+    "opts": [
+     "Students will give a presentation.",
+     "The report will be shorter than the original paper.",
+     "The deadline has been extended.",
+     "Some students have started writing already."
+    ],
+    "a": 2,
+    "ex": "«The deadline remains unchanged» — срок не продлили. Остальные три утверждения в письме есть."
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about students who have already started writing?",
+    "opts": [
+     "They must start a new project.",
+     "They will receive extra credit.",
+     "They may be allowed to keep working alone.",
+     "They have to present first."
+    ],
+    "a": 2,
+    "ex": "Можно написать до пятницы с объяснением — разумные просьбы одобрят. Значит, им, скорее всего, разрешат работать в одиночку. Прямо это не обещано — отсюда «may»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-002",
+  "level": "C",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "group": "Chem 101 study group",
+   "msgs": [
+    {
+     "who": "Priya",
+     "time": "9:02 AM",
+     "text": "Did anyone else get charged twice for the lab fee?"
     },
-    "qs": [
-      {
-        "type": "Factual",
-        "stem": "What problem are the students discussing?",
-        "opts": [
-          "They cannot find the lab.",
-          "The financial aid office is closed.",
-          "Their rent has increased.",
-          "They paid the lab fee two times."
-        ],
-        "a": 3,
-        "ex": "«Charged twice for the lab fee» — с них дважды списали плату за лабораторию."
-      },
-      {
-        "type": "Inference",
-        "stem": "Why is Priya worried?",
-        "opts": [
-          "She may not get her refund in time to pay rent.",
-          "She does not know where the bursar's office is.",
-          "She thinks the refund will never come.",
-          "She has to pay for the lab again."
-        ],
-        "a": 0,
-        "ex": "Возврат придёт в течение 5 рабочих дней, а деньги нужны на аренду «before then» — раньше. Она не сомневается в возврате, её беспокоит срок."
-      },
-      {
-        "type": "Vocabulary",
-        "stem": "What does Priya mean when she writes \"Lifesaver\"?",
-        "hlw": "Lifesaver",
-        "opts": [
-          "Ana's idea is very helpful.",
-          "Ana should be more careful.",
-          "The situation is dangerous.",
-          "She will call for help."
-        ],
-        "a": 0,
-        "ex": "Lifesaver в разговорной речи — «ты меня спас(ла)», то есть совет очень помог. Буквальное значение («спасатель») здесь не подходит."
-      }
-    ]
+    {
+     "who": "Tom",
+     "time": "9:05 AM",
+     "text": "Same here. Called the bursar — apparently it's a system glitch, refunds go out automatically within 5 business days."
+    },
+    {
+     "who": "Priya",
+     "time": "9:06 AM",
+     "text": "Ugh, I need that money for rent before then."
+    },
+    {
+     "who": "Ana",
+     "time": "9:09 AM",
+     "text": "You can request an emergency advance at the financial aid office. Took me like 10 min last semester."
+    },
+    {
+     "who": "Priya",
+     "time": "9:10 AM",
+     "text": "Lifesaver, thanks!"
+    }
+   ]
   },
-  {
-    "id": "R-RDL-C-003",
-    "level": "C",
-    "genre": "web",
-    "doc": {
-      "kind": "notice",
-      "head": "Library Quiet Floors — Updated Policy",
-      "paras": [
-        "Floors 3 and 4 are designated quiet zones. Brief, whispered conversations are acceptable on Floor 3; Floor 4 is silent at all times. Phone calls must be taken in the stairwells.",
-        "Group study rooms on Floor 2 can be reserved online up to 7 days in advance, for a maximum of 3 hours per day per group.",
-        "Reservations not claimed within 15 minutes will be released to waiting students."
-      ]
-    },
-    "qs": [
-      {
-        "type": "Factual",
-        "stem": "Where should students take phone calls?",
-        "opts": [
-          "On Floor 3",
-          "In the group study rooms",
-          "In the stairwells",
-          "On Floor 4"
-        ],
-        "a": 2,
-        "ex": "«Phone calls must be taken in the stairwells» — только на лестнице."
-      },
-      {
-        "type": "Inference",
-        "stem": "What will most likely happen if a group arrives 20 minutes late for its reserved room?",
-        "opts": [
-          "The group will have to pay a fee.",
-          "The room may be given to other students.",
-          "The group will get an extra hour.",
-          "The library will cancel all of the group's future reservations."
-        ],
-        "a": 1,
-        "ex": "Бронь, которую не заняли в течение 15 минут, «будет передана ожидающим студентам». 20 минут — больше 15, значит, комнату, скорее всего, отдадут."
-      },
-      {
-        "type": "Negative Factual",
-        "stem": "According to the policy, which of the following is NOT allowed?",
-        "opts": [
-          "Whispering on Floor 3",
-          "Reserving a room 5 days ahead",
-          "Whispering on Floor 4",
-          "Using a study room for 2 hours"
-        ],
-        "a": 2,
-        "ex": "На 4-м этаже «silent at all times» — даже шёпот нельзя. Шёпот разрешён только на 3-м. Бронь за 5 дней и на 2 часа укладывается в правила."
-      }
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What problem are the students discussing?",
+    "opts": [
+     "They cannot find the lab.",
+     "The financial aid office is closed.",
+     "Their rent has increased.",
+     "They paid the lab fee two times."
+    ],
+    "a": 3,
+    "ex": "«Charged twice for the lab fee» — с них дважды списали плату за лабораторию."
+   },
+   {
+    "type": "Inference",
+    "stem": "Why is Priya worried?",
+    "opts": [
+     "She may not get her refund in time to pay rent.",
+     "She does not know where the bursar's office is.",
+     "She thinks the refund will never come.",
+     "She has to pay for the lab again."
+    ],
+    "a": 0,
+    "ex": "Возврат придёт в течение 5 рабочих дней, а деньги нужны на аренду «before then» — раньше. Она не сомневается в возврате, её беспокоит срок."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does Priya mean when she writes \"Lifesaver\"?",
+    "hlw": "Lifesaver",
+    "opts": [
+     "Ana's idea is very helpful.",
+     "Ana should be more careful.",
+     "The situation is dangerous.",
+     "She will call for help."
+    ],
+    "a": 0,
+    "ex": "Lifesaver в разговорной речи — «ты меня спас(ла)», то есть совет очень помог. Буквальное значение («спасатель») здесь не подходит."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-003",
+  "level": "C",
+  "genre": "web",
+  "doc": {
+   "kind": "notice",
+   "head": "Library Quiet Floors — Updated Policy",
+   "paras": [
+    "Floors 3 and 4 are designated quiet zones. Brief, whispered conversations are acceptable on Floor 3; Floor 4 is silent at all times. Phone calls must be taken in the stairwells.",
+    "Group study rooms on Floor 2 can be reserved online up to 7 days in advance, for a maximum of 3 hours per day per group.",
+    "Reservations not claimed within 15 minutes will be released to waiting students."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Where should students take phone calls?",
+    "opts": [
+     "On Floor 3",
+     "In the group study rooms",
+     "In the stairwells",
+     "On Floor 4"
+    ],
+    "a": 2,
+    "ex": "«Phone calls must be taken in the stairwells» — только на лестнице."
+   },
+   {
+    "type": "Inference",
+    "stem": "What will most likely happen if a group arrives 20 minutes late for its reserved room?",
+    "opts": [
+     "The group will have to pay a fee.",
+     "The room may be given to other students.",
+     "The group will get an extra hour.",
+     "The library will cancel all of the group's future reservations."
+    ],
+    "a": 1,
+    "ex": "Бронь, которую не заняли в течение 15 минут, «будет передана ожидающим студентам». 20 минут — больше 15, значит, комнату, скорее всего, отдадут."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to the policy, which of the following is NOT allowed?",
+    "opts": [
+     "Whispering on Floor 3",
+     "Reserving a room 5 days ahead",
+     "Whispering on Floor 4",
+     "Using a study room for 2 hours"
+    ],
+    "a": 2,
+    "ex": "На 4-м этаже «silent at all times» — даже шёпот нельзя. Шёпот разрешён только на 3-м. Бронь за 5 дней и на 2 часа укладывается в правила."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-101",
+  "level": "A",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "Birch Apartments · Parcel shelf moved",
+   "paras": [
+    "From Monday, small parcels will be kept beside the laundry room instead of at the main desk. The shelf is open from 7 a.m. to 9 p.m. Find your parcel using the flat number on its label. Large boxes will still be held by the building manager. Please take only items addressed to you. If a parcel is missing, leave a message for the manager with the delivery date.",
+    "Collect parcels soon after delivery to avoid crowding. Check inside the label pocket if the flat number is hard to read."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is the notice mainly about?",
+    "opts": [
+     "A new delivery company",
+     "A limit on the number of parcels",
+     "A change to laundry prices",
+     "A new place to collect small parcels"
+    ],
+    "a": 3,
+    "ex": "Главная мысль — в заголовке «Parcel shelf moved» и первой фразе: маленькие посылки теперь лежат у прачечной, а не на стойке. Laundry упоминается только как место, про цены ничего нет."
+   },
+   {
+    "type": "Factual",
+    "stem": "Where should residents collect a large box?",
+    "opts": [
+     "From the building manager",
+     "From the delivery driver's office",
+     "From the laundry machines",
+     "From the new parcel shelf"
+    ],
+    "a": 0,
+    "ex": "«Large boxes will still be held by the building manager». Полка — только для маленьких посылок, это ловушка."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-102",
+  "level": "A",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Naomi",
+   "to": "Friday Choir",
+   "subject": "This week's practice",
+   "paras": [
+    "Hi everyone,",
+    "Our practice this Friday will be in the school dining room because the music room is being painted. We will start at 6 p.m., as usual. Enter through the side door next to the car park. Bring the song sheets from last week. I will bring extra copies for anyone who has lost theirs. There is no practice next Friday because the school will be closed.",
+    "We will practice the opening song first, then work on the new ending. You can leave coats on the chairs near the door.",
+    "Naomi"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why will the choir use the dining room?",
+    "opts": [
+     "The music room is being painted",
+     "The song sheets are stored there",
+     "More singers have joined",
+     "The school is closed this Friday"
+    ],
+    "a": 0,
+    "ex": "«…in the school dining room because the music room is being painted». Школа закрыта не в эту, а в следующую пятницу — ловушка."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should a singer do if they have lost their song sheets?",
+    "opts": [
+     "Wait until next Friday",
+     "Get copies from Naomi",
+     "Collect them from the music room",
+     "Print them at the car park"
+    ],
+    "a": 1,
+    "ex": "«I will bring extra copies for anyone who has lost theirs» — копии принесёт Наоми."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-103",
+  "level": "A",
+  "src": "elijah",
+  "genre": "menu",
+  "doc": {
+   "kind": "table",
+   "head": "Corner Plate - Morning Menu · Served 7-11 a.m., Monday to Friday",
+   "rows": [
+    [
+     "Toast and jam",
+     "$3"
+    ],
+    [
+     "Egg sandwich",
+     "$5"
+    ],
+    [
+     "Fruit bowl",
+     "$4"
+    ],
+    [
+     "Tea",
+     "$2"
+    ],
+    [
+     "Coffee",
+     "$3"
+    ],
+    [
+     "Any food item with tea",
+     "add $1 to the food price."
     ]
-  }
+   ],
+   "foot": "Order and pay at the counter. We will bring your food to your table. Food can also be packed to take away. Please tell us when ordering. The tea offer applies to both eat-in and takeaway orders. Milk is available with tea or coffee at no extra charge. Please ask about ingredients if you have a food allergy. High chairs for young children are beside the window."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much is an egg sandwich with tea under the offer?",
+    "opts": [
+     "$7",
+     "$8",
+     "$6",
+     "$5"
+    ],
+    "a": 2,
+    "ex": "Сэндвич стоит $5, по акции к цене еды добавляется $1: 5 + 1 = $6. Вариант $7 — это 5 + 2, обычная цена чая без акции."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should customers do if they want food to take away?",
+    "opts": [
+     "Buy coffee with their food",
+     "Tell staff when ordering",
+     "Collect food from a table",
+     "Order after 11 a.m."
+    ],
+    "a": 1,
+    "ex": "«Food can also be packed to take away. Please tell us when ordering» — нужно сказать при заказе."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-104",
+  "level": "A",
+  "src": "elijah",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Ellis",
+     "time": "4",
+     "text": "10 p.m.: Can you pick me up for the match tomorrow? My bike has a flat tire."
+    },
+    {
+     "who": "Priya",
+     "time": "4",
+     "text": "13 p.m.: Sure. I'm leaving home at 9:20. I can reach your house at 9:30."
+    },
+    {
+     "who": "Ellis",
+     "time": "4",
+     "text": "15 p.m.: Thanks! I'll wait outside. Should I bring water for both of us?"
+    },
+    {
+     "who": "Priya",
+     "time": "4",
+     "text": "17 p.m.: Just for yourself. I have mine. Bring the tickets, though. You bought them."
+    },
+    {
+     "who": "Ellis",
+     "time": "4",
+     "text": "18 p.m.: They're already in my bag."
+    },
+    {
+     "who": "Priya",
+     "time": "4",
+     "text": "20 p.m.: The weather looks sunny, so bring a hat too. We can get lunch near the ground after the match."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "When will Priya reach Ellis's house?",
+    "opts": [
+     "At 4:10",
+     "At 9:20",
+     "At 4:18",
+     "At 9:30"
+    ],
+    "a": 3,
+    "ex": "«I can reach your house at 9:30». 9:20 — время, когда Прия выезжает из дома, а 4:10 и 4:18 — время сообщений."
+   },
+   {
+    "type": "Factual",
+    "stem": "Who is responsible for bringing the tickets?",
+    "opts": [
+     "Both friends separately",
+     "Ellis",
+     "Priya",
+     "Someone at the match"
+    ],
+    "a": 1,
+    "ex": "Прия пишет: «Bring the tickets, though. You bought them» — билеты у Эллиса, он и должен их взять."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-105",
+  "level": "A",
+  "src": "elijah",
+  "genre": "ad",
+  "doc": {
+   "kind": "notice",
+   "head": "Have your pet photographed at Willow Garden this Sunday!",
+   "paras": [
+    "Our photographer will be beside the main gate from 1 to 4 p.m. A ten-minute photo session costs $15 and includes two digital pictures sent by email. Dogs must be on a lead. Cats and other small pets should arrive in a carrier. Book a time by calling the garden office. You do not need to pay the usual garden entrance fee if you come only for the photos.",
+    "There is a shaded waiting area for pets and owners. Please arrive five minutes before your session and have a favorite toy ready to help your pet look toward the camera."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is included in the $15 price?",
+    "opts": [
+     "A pet carrier",
+     "A printed photo album",
+     "A full-day garden tour",
+     "Two digital pictures"
+    ],
+    "a": 3,
+    "ex": "«…costs $15 and includes two digital pictures sent by email». Альбома, переноски и экскурсии в цену не входит."
+   },
+   {
+    "type": "Factual",
+    "stem": "How can people book a session?",
+    "opts": [
+     "Wait at the gate on Monday",
+     "Buy a garden tour ticket",
+     "Call the garden office",
+     "Email the photographer their pictures"
+    ],
+    "a": 2,
+    "ex": "«Book a time by calling the garden office». Фото отправляют по email, но бронирование — по телефону."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-106",
+  "level": "A",
+  "src": "elijah",
+  "genre": "schedule",
+  "doc": {
+   "kind": "table",
+   "head": "Brook Radio - Open Afternoon · Saturday, June 8",
+   "rows": [
+    [
+     "1:00",
+     "Welcome at reception"
+    ],
+    [
+     "1:15",
+     "Tour of the recording rooms"
+    ],
+    [
+     "2:00",
+     "Meet a local news presenter"
+    ],
+    [
+     "2:30",
+     "Try reading a weather report"
+    ],
+    [
+     "3:00",
+     "End of visit"
+    ]
+   ],
+   "foot": "Places are free, but visitors must register on our website. Children under twelve must come with an adult. Arrive ten minutes before the welcome so we can check your name. Please keep phones silent inside the recording rooms.\nThe tour includes a short explanation of how sound is recorded. Please leave food and drinks outside the studio rooms."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which activity begins at 2:30?",
+    "opts": [
+     "Meeting a news presenter",
+     "Touring the recording rooms",
+     "Checking in at reception",
+     "Reading a weather report"
+    ],
+    "a": 3,
+    "ex": "В расписании: «2:30: Try reading a weather report». Встреча с ведущим — в 2:00."
+   },
+   {
+    "type": "Factual",
+    "stem": "What must all visitors do before attending?",
+    "opts": [
+     "Bring a child with them",
+     "Pay for a place",
+     "Prepare a news story",
+     "Register online"
+    ],
+    "a": 3,
+    "ex": "«Places are free, but visitors must register on our website». Взрослый нужен только детям до 12 лет, а платить не надо."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-107",
+  "level": "A",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "Oak House Shared Kitchen",
+   "paras": [
+    "Please write your name and the date on food you leave in the fridge. Blank labels are in the drawer under the kettle. Every Wednesday morning, the cleaner removes food that has no name on it. Food with a name will stay, unless it is clearly spoiled. Use the cupboard for bread and unopened tins. The fridge's top shelf is for milk only, so there is room for everyone's bottles.",
+    "Close food containers tightly and wipe up any spills before leaving the kitchen. Do not move another resident's food without asking. Tell the house team if you notice the fridge leaking."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Where can residents find blank labels?",
+    "opts": [
+     "Inside the bread cupboard",
+     "On the fridge's top shelf",
+     "In the drawer under the kettle",
+     "Beside the cleaner's trolley"
+    ],
+    "a": 2,
+    "ex": "«Blank labels are in the drawer under the kettle»."
+   },
+   {
+    "type": "Factual",
+    "stem": "Which food will the cleaner remove on Wednesday?",
+    "opts": [
+     "All food labeled on Tuesday",
+     "All food on the top shelf",
+     "Food with no name on it",
+     "All unopened tins"
+    ],
+    "a": 2,
+    "ex": "«The cleaner removes food that has no name on it». Подписанная еда остаётся, если не испортилась."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-108",
+  "level": "A",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Harbor Alterations",
+   "to": "Owen",
+   "subject": "Your jacket is ready",
+   "paras": [
+    "Hello Owen,",
+    "We have finished shortening your jacket sleeves. You can collect the jacket any day this week between 10 a.m. and 5 p.m. We are closed on Sunday. Please bring your collection slip so we can find the correct item quickly. The remaining payment is $18. You paid the other $12 when you left the jacket with us. We accept cash and cards.",
+    "You may try the jacket on in the shop before taking it home. Please check that both sleeves feel comfortable when you bend your arms.",
+    "Thank you,",
+    "Harbor Alterations"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much does Owen still need to pay?",
+    "opts": [
+     "$6",
+     "$18",
+     "$30",
+     "$12"
+    ],
+    "a": 1,
+    "ex": "«The remaining payment is $18. You paid the other $12» — осталось $18. $30 — полная цена, $12 — уже оплачено."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why is Owen asked to bring his collection slip?",
+    "opts": [
+     "To change the shop's opening hours",
+     "To apply for a refund",
+     "To get the sleeves measured",
+     "To help staff find his jacket"
+    ],
+    "a": 3,
+    "ex": "«Please bring your collection slip so we can find the correct item quickly» — чтобы быстро найти его вещь."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-109",
+  "level": "A",
+  "src": "elijah",
+  "genre": "social",
+  "doc": {
+   "kind": "post",
+   "who": "Marisol",
+   "handle": "Town Art Group",
+   "paras": [
+    "Want to draw with other people? Our small group meets at the riverside café every Thursday at 7 p.m. We choose a simple object to draw and share ideas. You don't need any experience. Bring a pencil and some paper; there is no class fee. Please buy a drink because the café lets us use its tables. Send me a message before your first visit so I can save you a seat.",
+    "We usually stay for about an hour, but you can leave earlier. Some people draw quickly and others take their time."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What should a new visitor do before coming?",
+    "opts": [
+     "Complete a drawing test",
+     "Send Marisol a message",
+     "Pay a class fee",
+     "Ask the café for art supplies"
+    ],
+    "a": 1,
+    "ex": "«Send me a message before your first visit so I can save you a seat». Опыт не нужен, платы нет."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why are visitors asked to buy a drink?",
+    "opts": [
+     "The café provides the meeting space",
+     "The café sells drawing paper",
+     "Drinks are included in the class fee",
+     "The group meets before breakfast"
+    ],
+    "a": 0,
+    "ex": "«Please buy a drink because the café lets us use its tables» — кафе даёт место для встреч."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-110",
+  "level": "A",
+  "src": "elijah",
+  "genre": "receipt",
+  "doc": {
+   "kind": "receipt",
+   "head": "FIELDWAY SPORTS",
+   "meta": "",
+   "rows": [
+    [
+     "Collection receipt",
+     "284"
+    ],
+    [
+     "Customer",
+     "Mia Grant"
+    ],
+    [
+     "Item",
+     "Blue running shoes, size 7"
+    ],
+    [
+     "Paid today",
+     "$48 - paid in full"
+    ],
+    [
+     "Collection day",
+     "Thursday, July 18"
+    ],
+    [
+     "Collection point",
+     "Rear service desk"
+    ]
+   ],
+   "foot": "Your shoes are coming from our other branch. We will send a text when they arrive. Please wait for that message before visiting. Bring this receipt when collecting. If someone collects for you, give them this receipt and tell us their name by phone first.\nThe service desk is reached through the shop's main entrance. Ask a staff member if you cannot find it."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What should Mia wait for before going to the shop?",
+    "opts": [
+     "A call from the other branch",
+     "A request for another payment",
+     "A text confirming arrival",
+     "A new shoe-size form"
+    ],
+    "a": 2,
+    "ex": "«We will send a text when they arrive. Please wait for that message before visiting» — ждать SMS о том, что обувь пришла."
+   },
+   {
+    "type": "Factual",
+    "stem": "What must Mia do if a friend collects her shoes?",
+    "opts": [
+     "Ask the friend to pay $48",
+     "Change the collection date online",
+     "Send the friend to the other branch",
+     "Tell the shop the friend's name by phone"
+    ],
+    "a": 3,
+    "ex": "«If someone collects for you, give them this receipt and tell us their name by phone first»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-111",
+  "level": "A",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "SEEDS FOR YOUR GARDEN",
+   "paras": [
+    "Sunday, March 10, 11 a.m.-1 p.m.",
+    "Elm Community Hall",
+    "Bring seeds you no longer need and take some different ones home. Put each kind in a separate envelope. Write the plant name on the front. You can join even if you have no seeds to bring. Volunteers can help you choose plants for small gardens or balcony pots. There will be a children's planting table, but an adult must stay with each child.",
+    "You may bring photos of plants grown from your seeds, but this is optional. A volunteer will display them on the noticeboard. Empty envelopes will be available at the welcome table."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How should people prepare seeds they bring?",
+    "opts": [
+     "Use separate, named envelopes",
+     "Plant them in balcony pots first",
+     "Leave envelopes without names",
+     "Put all seeds in one large bag"
+    ],
+    "a": 0,
+    "ex": "«Put each kind in a separate envelope. Write the plant name on the front» — отдельные подписанные конверты."
+   },
+   {
+    "type": "Factual",
+    "stem": "Who is allowed to join the exchange?",
+    "opts": [
+     "Only people with large gardens",
+     "People who have no seeds to bring",
+     "Only experienced gardeners",
+     "Only families with children"
+    ],
+    "a": 1,
+    "ex": "«You can join even if you have no seeds to bring». Детский стол есть, но участвовать могут не только семьи."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-112",
+  "level": "A",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "NEW WATER STATION",
+   "paras": [
+    "A drinking-water tap is now available beside the west entrance of the station. Use it to fill your own bottle for free. Paper cups are not provided. The tap works from 5 a.m. until the last train leaves at midnight. For hot water, please ask at the café; the new tap supplies cold water only. Keep bags away from the tap so other passengers can reach it easily.",
+    "Let station staff know if the tap is not working. Please turn it off after filling your bottle and wipe away any spills."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What should passengers bring to use the free water?",
+    "opts": [
+     "Their own bottle",
+     "A café receipt",
+     "A first-class train ticket",
+     "A paper cup supplied by staff"
+    ],
+    "a": 0,
+    "ex": "«Use it to fill your own bottle for free. Paper cups are not provided» — нужна своя бутылка."
+   },
+   {
+    "type": "Factual",
+    "stem": "Where can passengers ask for hot water?",
+    "opts": [
+     "On the last train only",
+     "At the ticket office",
+     "At the west-entrance tap",
+     "At the café"
+    ],
+    "a": 3,
+    "ex": "«For hot water, please ask at the café; the new tap supplies cold water only»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-113",
+  "level": "A",
+  "src": "elijah",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Tessa",
+     "time": "2",
+     "text": "05 p.m.: I think I left my green notebook at your place yesterday."
+    },
+    {
+     "who": "Jon",
+     "time": "2",
+     "text": "09 p.m.: Yes, it's on the chair by the window. Do you need it today?"
+    },
+    {
+     "who": "Tessa",
+     "time": "2",
+     "text": "11 p.m.: Yes, for my evening class. Could you leave it with your sister? I'll pass your house at five."
+    },
+    {
+     "who": "Jon",
+     "time": "2",
+     "text": "14 p.m.: She'll be home then. I'll put it on the hall table and tell her you're coming."
+    },
+    {
+     "who": "Tessa",
+     "time": "2",
+     "text": "15 p.m.: Great, thanks!"
+    },
+    {
+     "who": "Jon",
+     "time": "2",
+     "text": "17 p.m.: My sister might be cooking when you arrive, so ring the bell twice if she doesn't hear it. She knows which notebook is yours; the other one is blue."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why does Tessa need the notebook today?",
+    "opts": [
+     "She has an evening class",
+     "She is cleaning the hall",
+     "She has a meeting at two",
+     "She wants to give it to Jon's sister"
+    ],
+    "a": 0,
+    "ex": "«Yes, for my evening class»."
+   },
+   {
+    "type": "Factual",
+    "stem": "Who will give Tessa the notebook?",
+    "opts": [
+     "Jon's sister",
+     "A neighbor at the window",
+     "Jon's teacher",
+     "Tessa's classmate"
+    ],
+    "a": 0,
+    "ex": "Джон оставит тетрадь дома и предупредит сестру: «Could you leave it with your sister?» — «She'll be home then». Отдаст сестра."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-114",
+  "level": "A",
+  "src": "elijah",
+  "genre": "ad",
+  "doc": {
+   "kind": "notice",
+   "head": "TABLES FOR SMALL CELEBRATIONS",
+   "paras": [
+    "Need extra space for guests? Rent a folding table from Meadow Hire. Each table seats six people and costs $10 for a weekend. Collect on Friday after 3 p.m. and return by noon Monday. We do not deliver. Chairs can be rented separately for $2 each. Call us to check availability before coming. Tables fold flat and fit in most cars, but please measure your car space first.",
+    "Check the table surface before putting hot dishes on it; we recommend a protective mat. Staff can also show you how the legs lock open when you collect your table."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is included in the $10 rental?",
+    "opts": [
+     "A table for an entire month",
+     "Six chairs and a table",
+     "One table for a weekend",
+     "Delivery to the customer's home"
+    ],
+    "a": 2,
+    "ex": "«Each table seats six people and costs $10 for a weekend». Стулья — отдельно по $2, доставки нет."
+   },
+   {
+    "type": "Factual",
+    "stem": "When must a rented table be returned?",
+    "opts": [
+     "By noon Sunday",
+     "By noon Monday",
+     "By midnight Saturday",
+     "By 3 p.m. Friday"
+    ],
+    "a": 1,
+    "ex": "«Collect on Friday after 3 p.m. and return by noon Monday». 3 p.m. Friday — время, когда стол можно забрать."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-115",
+  "level": "A",
+  "src": "elijah",
+  "genre": "web",
+  "doc": {
+   "kind": "notice",
+   "head": "Westbridge Film Club · Send us your short film!",
+   "paras": [
+    "We are choosing films for our August community screening. Films must be no longer than five minutes and suitable for all ages. You can use a phone camera. Send a link to your film by June 30, with your name and a short description. Do not send large video files by email. Selected filmmakers will be contacted in July. Entry is free, and you may submit one film each.",
+    "Films can be stories, animations, or short documentaries about everyday life. Include subtitles if speech is difficult to hear. We will ask permission before using a picture from your film online."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How should people submit their films?",
+    "opts": [
+     "Bring a camera to the screening",
+     "Email a large video file in August",
+     "Send a link by June 30",
+     "Post several films without a name"
+    ],
+    "a": 2,
+    "ex": "«Send a link to your film by June 30… Do not send large video files by email»."
+   },
+   {
+    "type": "Factual",
+    "stem": "Which film meets the stated requirements?",
+    "opts": [
+     "A five-minute film for adults only",
+     "A ten-minute film made with a phone",
+     "A four-minute film suitable for children and adults",
+     "A six-minute film suitable for all ages"
+    ],
+    "a": 2,
+    "ex": "Требования: не длиннее пяти минут и «suitable for all ages». Подходит только фильм на 4 минуты для детей и взрослых: в остальных нарушена длина или возраст."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-116",
+  "level": "A",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "NOTICE TO COURT USERS",
+   "paras": [
+    "The downstairs changing room will be closed on Tuesday while a broken shower is repaired. Please use the upstairs changing room. The sports courts will open at their normal time of 8 a.m. Towels can be collected from reception as usual. Visitors who cannot use the stairs should speak to reception staff, who can arrange access to a ground-floor room. The downstairs changing room should reopen on Wednesday morning.",
+    "Signs beside reception will show the way to the temporary room. Please leave muddy shoes on the mat before entering. Staff will check the signs regularly throughout Tuesday to help visitors."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What will remain available as usual on Tuesday?",
+    "opts": [
+     "The sports courts",
+     "The repaired shower from early morning",
+     "The downstairs shower",
+     "The downstairs changing room"
+    ],
+    "a": 0,
+    "ex": "«The sports courts will open at their normal time of 8 a.m.» Нижняя раздевалка и душ во вторник закрыты."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should a visitor who cannot climb stairs do?",
+    "opts": [
+     "Ask reception for help",
+     "Use the broken shower",
+     "Wait until all courts close",
+     "Collect towels on Wednesday only"
+    ],
+    "a": 0,
+    "ex": "«Visitors who cannot use the stairs should speak to reception staff» — обратиться на ресепшен."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-117",
+  "level": "A",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Lidia",
+   "to": "Ben",
+   "subject": "Our first meeting",
+   "paras": [
+    "Hi Ben,",
+    "I'm looking forward to practicing languages together. Let's meet at the café opposite the bus station on Wednesday at 4 p.m. I will wear a yellow jacket so you can recognize me. We can speak English for the first half hour and Spanish for the next half hour. Bring a photo of a place you like; it will give us something to talk about.",
+    "We could also talk about food or music if we run out of ideas. Please send me a message if your bus is delayed. I can wait inside the café.",
+    "See you soon,",
+    "Lidia"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How will Ben recognize Lidia?",
+    "opts": [
+     "By a sign at the bus station",
+     "By her Spanish textbook",
+     "By a photo on the café wall",
+     "By her yellow jacket"
+    ],
+    "a": 3,
+    "ex": "«I will wear a yellow jacket so you can recognize me»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What will they do during the second half hour?",
+    "opts": [
+     "Travel to the bus station",
+     "Speak Spanish",
+     "Buy a yellow jacket",
+     "Speak English"
+    ],
+    "a": 1,
+    "ex": "«English for the first half hour and Spanish for the next half hour» — вторые полчаса на испанском."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-118",
+  "level": "A",
+  "src": "elijah",
+  "genre": "form",
+  "doc": {
+   "kind": "table",
+   "head": "RIDGE TOOL CLUB JOINING FORM",
+   "rows": [
+    [
+     "Name",
+     "____________"
+    ],
+    [
+     "Phone",
+     "____________"
+    ],
+    [
+     "Email",
+     "____________"
+    ],
+    [
+     "Membership",
+     "$20 per year"
+    ]
+   ],
+   "foot": "Bring the completed form and proof of address to the club desk. New members can borrow one tool at a time for up to seven days. A volunteer will explain how to use it safely before your first loan. Tools must be returned clean. Please call before visiting if you need a particular tool; it may already be on loan. Opening times are printed on the back of the form. Please check that your contact details are readable. We use them to send reminders when borrowed tools are due."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What must applicants bring with the form?",
+    "opts": [
+     "A seven-day travel pass",
+     "A tool they own",
+     "Proof of address",
+     "A safety course certificate"
+    ],
+    "a": 2,
+    "ex": "«Bring the completed form and proof of address to the club desk» — подтверждение адреса."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why should someone call before requesting a particular tool?",
+    "opts": [
+     "All tools need advance cleaning",
+     "It may already be borrowed",
+     "Membership prices change daily",
+     "The club accepts forms only by phone"
+    ],
+    "a": 1,
+    "ex": "«Please call before visiting if you need a particular tool; it may already be on loan». On loan = borrowed, уже взят кем-то."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-119",
+  "level": "A",
+  "src": "elijah",
+  "genre": "social",
+  "doc": {
+   "kind": "post",
+   "who": "Nico",
+   "handle": "Fairview Neighbors",
+   "paras": [
+    "I've finished unpacking and have twelve strong cardboard boxes to give away. Most are medium-sized and all are empty. Pick them up from my garage on Saturday morning, between 9 and 11. Please message me with the number you want. You don't have to take all twelve. I can't keep them after Saturday because I need the garage for my car. You'll need your own transport.",
+    "The boxes have some old address labels on them, which you can cover or remove. They are dry and clean. I'll stack the number you request near the garage door."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why did Nico write the post?",
+    "opts": [
+     "To sell a car",
+     "To rent out a garage",
+     "To offer a moving service",
+     "To give away used moving boxes"
+    ],
+    "a": 3,
+    "ex": "Цель поста — отдать коробки: «twelve strong cardboard boxes to give away». Гараж и машина упоминаются, но ничего не продаётся и не сдаётся."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should interested people include in their message?",
+    "opts": [
+     "How many boxes they want",
+     "A request for Sunday delivery",
+     "The price they will pay",
+     "The size of Nico's car"
+    ],
+    "a": 0,
+    "ex": "«Please message me with the number you want» — сколько коробок нужно."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-120",
+  "level": "A",
+  "src": "elijah",
+  "genre": "schedule",
+  "doc": {
+   "kind": "table",
+   "head": "NORTH SQUARE - DIGITAL HELP · Tuesday sessions",
+   "rows": [
+    [
+     "10:00-11:00",
+     "Sending emails"
+    ],
+    [
+     "11:15-12:15",
+     "Using video calls"
+    ],
+    [
+     "1:00-2:00",
+     "Finding bus times online"
+    ],
+    [
+     "2:15-3:15",
+     "Saving phone photos"
+    ]
+   ],
+   "foot": "Each session is free. Bring your own phone or tablet, fully charged. You may attend more than one session. No booking is needed, but there are only eight seats. If a session is full, staff will give you a place at the next week's session instead. Meet at the information desk.\nStaff will explain each step slowly, and you can ask questions. Please do not share passwords with other visitors. You can write down instructions to try again when you get home."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which session would help someone keep copies of pictures?",
+    "opts": [
+     "The 1:00 session",
+     "The 10:00 session",
+     "The 2:15 session",
+     "The 11:15 session"
+    ],
+    "a": 2,
+    "ex": "Сохранять копии фото — это «2:15-3:15: Saving phone photos»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What happens if a session has no seats left?",
+    "opts": [
+     "Visitors must pay to join",
+     "Staff offer a place the following week",
+     "Staff lend every visitor a tablet",
+     "The remaining sessions are canceled"
+    ],
+    "a": 1,
+    "ex": "«If a session is full, staff will give you a place at the next week's session instead» — место на следующей неделе."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-101",
+  "level": "B",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Coast Cycle Hire",
+   "to": "Ava Morgan",
+   "subject": "Your Sunday booking",
+   "paras": [
+    "Dear Ava,",
+    "Your booking for two bicycles on Sunday is confirmed. Collect them between 9 and 10 a.m. from our beach kiosk, not the town shop where you made the booking. Helmets are included. You have paid the hire fee, but a refundable $25 deposit per bicycle is due at collection. We accept cards only at the kiosk. Return the bicycles by 5 p.m. to the same place. If strong winds make the coastal route unsafe, we will text you before 8 a.m. and offer a different route or a refund.",
+    "We can provide a route map on request. Please check the brakes with our attendant before leaving the kiosk.",
+    "Coast Cycle Hire"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Where should Ava collect the bicycles?",
+    "opts": [
+     "At her accommodation",
+     "At the start of the alternative route",
+     "At the beach kiosk",
+     "At the town shop"
+    ],
+    "a": 2,
+    "ex": "«…from our beach kiosk, not the town shop where you made the booking». Магазин в городе — ловушка: там велосипеды бронировали."
+   },
+   {
+    "type": "Factual",
+    "stem": "What payment is required when Ava collects both bicycles?",
+    "opts": [
+     "A second hire fee by card",
+     "A $25 total deposit in cash",
+     "No payment because everything is paid",
+     "A $50 refundable deposit by card"
+    ],
+    "a": 3,
+    "ex": "Залог $25 «per bicycle» → за два велосипеда $50, и «We accept cards only at the kiosk» — картой. Плата за прокат уже внесена."
+   },
+   {
+    "type": "Factual",
+    "stem": "What can Ava expect if the coastal route is unsafe?",
+    "opts": [
+     "A text confirming the coastal route after arrival",
+     "Automatic cancellation without notice",
+     "A message before collection with alternatives",
+     "A guaranteed coastal ride at noon"
+    ],
+    "a": 2,
+    "ex": "«…we will text you before 8 a.m. and offer a different route or a refund», то есть сообщение придёт до выдачи (9–10 a.m.) с вариантами."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-102",
+  "level": "B",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "Pine Street Station - Lift Maintenance",
+   "paras": [
+    "The lift to Platform 2 will be unavailable from April 16 to April 18. Trains will run normally. Passengers who need step-free access should travel from nearby Lake Station, where the same services stop. A free shuttle will connect the two stations every twenty minutes between 6 a.m. and 10 p.m. Show your train ticket to the driver; no separate shuttle ticket is needed. The stairs at Pine Street remain open. Staff will help with small bags, but cannot carry passengers or heavy luggage. Allow extra travel time if using the shuttle.",
+    "The shuttle stops beside each station entrance. Staff at the information desk can point you toward the correct boarding location."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is the main purpose of this notice?",
+    "opts": [
+     "To change the fare at Lake Station",
+     "To announce that all trains are canceled",
+     "To advertise a new heavy-luggage service",
+     "To explain access arrangements during lift maintenance"
+    ],
+    "a": 3,
+    "ex": "Объявление объясняет, как добраться без лифта: соседняя станция, бесплатный шаттл, помощь персонала. Поезда при этом ходят обычно, так что «all trains are canceled» — неверно."
+   },
+   {
+    "type": "Factual",
+    "stem": "What is needed to use the free shuttle?",
+    "opts": [
+     "A lift-maintenance pass",
+     "A train ticket",
+     "A request submitted twenty minutes earlier",
+     "A separate shuttle ticket"
+    ],
+    "a": 1,
+    "ex": "«Show your train ticket to the driver; no separate shuttle ticket is needed»."
+   },
+   {
+    "type": "Inference",
+    "stem": "Which passenger would most likely need the shuttle?",
+    "opts": [
+     "Someone who cannot use stairs and needs Platform 2",
+     "Someone collecting a small bag from staff",
+     "Someone who prefers to buy tickets on the shuttle",
+     "Someone taking a train that does not stop at Lake Station"
+    ],
+    "a": 0,
+    "ex": "Шаттл нужен тем, кому нужен доступ без ступенек: лифт к Platform 2 не работает, а лестница открыта. Значит, это пассажир, который не может подняться по лестнице и едет с Platform 2."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-103",
+  "level": "B",
+  "src": "elijah",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Ruth",
+     "time": "10",
+     "text": "02: Have we ordered Daniel's leaving gift yet?"
+    },
+    {
+     "who": "Mateo",
+     "time": "10",
+     "text": "04: Not yet. The photo book needs everyone's pictures by tonight if it is to arrive Friday."
+    },
+    {
+     "who": "Ruth",
+     "time": "10",
+     "text": "06: I can upload mine after work. Is the café voucher still part of the gift?"
+    },
+    {
+     "who": "Mateo",
+     "time": "10",
+     "text": "08: Yes. We have enough money for both, but not for express delivery as well."
+    },
+    {
+     "who": "Ruth",
+     "time": "10",
+     "text": "10: Then let's remind everyone now. I don't want to hand him an empty bag!"
+    },
+    {
+     "who": "Mateo",
+     "time": "10",
+     "text": "12: I'll send a message. If the book misses Friday, we can give him the voucher first."
+    },
+    {
+     "who": "Mateo",
+     "time": "10",
+     "text": "14: Please choose clear photos without filters. The printer warned that very dark images may lose detail in the book."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What must happen for the book to arrive by Friday?",
+    "opts": [
+     "The group must cancel the voucher",
+     "Daniel must choose a café today",
+     "Everyone must provide pictures by tonight",
+     "Ruth must pay for express delivery"
+    ],
+    "a": 2,
+    "ex": "«The photo book needs everyone's pictures by tonight if it is to arrive Friday»."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does Ruth mean by \"an empty bag\"?",
+    "opts": [
+     "Buying packaging that is too large",
+     "Asking Daniel to return a bag",
+     "Forgetting to collect everyone's money",
+     "Having no physical gift ready to give"
+    ],
+    "a": 3,
+    "ex": "Рут не хочет вручать Даниэлю пустой пакет, то есть остаться без подарка, который можно вручить. Это переносное значение, речь не о размере упаковки.",
+    "hlw": "an empty bag"
+   },
+   {
+    "type": "Factual",
+    "stem": "What is the backup plan if the book arrives late?",
+    "opts": [
+     "Give Daniel the voucher first",
+     "Choose a different leaving date",
+     "Use express delivery regardless of cost",
+     "Give Daniel money instead of either gift"
+    ],
+    "a": 0,
+    "ex": "«If the book misses Friday, we can give him the voucher first»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-104",
+  "level": "B",
+  "src": "elijah",
+  "genre": "web",
+  "doc": {
+   "kind": "notice",
+   "head": "",
+   "paras": [
+    "Help choose our next outdoor film.",
+    "This month's shortlist is now on the Brookfield Cinema website. Residents may vote for one film until Sunday evening. You need an email address to vote, but there is no membership requirement. The film with the most votes will be shown in the park on August 23, provided we can obtain screening permission. If permission is refused, the runner-up will be selected. Bring your own seat; refreshments will be sold on site. In wet weather, the screening will move to the school hall, which has fewer seats. Updates will appear online by noon that day.",
+    "Visitors are welcome to bring picnic food. Please use the bins afterward so the park is ready for its usual morning users."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Who can vote for a film?",
+    "opts": [
+     "Only people who bring their own seat",
+     "Residents who buy refreshments in advance",
+     "Only paid cinema members",
+     "Residents with an email address"
+    ],
+    "a": 3,
+    "ex": "«You need an email address to vote, but there is no membership requirement»."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why might the most popular film not be shown?",
+    "opts": [
+     "Its voters might not buy refreshments",
+     "All outdoor films might require membership",
+     "The organizers might not obtain permission",
+     "The school hall might have no website"
+    ],
+    "a": 2,
+    "ex": "«…provided we can obtain screening permission. If permission is refused, the runner-up will be selected». Provided = при условии, что."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should a visitor do to check a wet-weather change?",
+    "opts": [
+     "Vote again on Sunday evening",
+     "Call the school after the film",
+     "Look online by noon on August 23",
+     "Visit the park before voting ends"
+    ],
+    "a": 2,
+    "ex": "«Updates will appear online by noon that day» — в день показа (23 августа) нужно проверить сайт до полудня."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-105",
+  "level": "B",
+  "src": "elijah",
+  "genre": "ad",
+  "doc": {
+   "kind": "notice",
+   "head": "WINDOW WORKS - SUMMER OFFER",
+   "paras": [
+    "Order curtains before June 12 and receive a free home measuring visit. Fabric and fitting are charged at the usual rates. The offer covers homes within ten kilometers of our shop. Outside that area, a travel charge applies even during the promotion. Samples can be borrowed for three days against a $10 deposit, returned when the samples come back undamaged. Production normally takes two weeks after you approve the measurements and fabric choice. Booking a measuring visit does not commit you to ordering curtains. Call to arrange a visit; online messages may take two working days to answer.",
+    "Our measuring team carries identification, which you can ask to see. Visits usually take twenty minutes, depending on the number of windows."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is free under the promotion for a nearby home?",
+    "opts": [
+     "The fitting service",
+     "The measuring visit",
+     "The sample deposit",
+     "The curtain fabric"
+    ],
+    "a": 1,
+    "ex": "«Order curtains before June 12 and receive a free home measuring visit». Ткань и установка — «at the usual rates»."
+   },
+   {
+    "type": "Factual",
+    "stem": "When does the normal production period begin?",
+    "opts": [
+     "When samples are first borrowed",
+     "On June 12 for every customer",
+     "When an online message is sent",
+     "After measurements and fabric are approved"
+    ],
+    "a": 3,
+    "ex": "«Production normally takes two weeks after you approve the measurements and fabric choice»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What can a customer do after a measuring visit?",
+    "opts": [
+     "Decide not to order curtains",
+     "Avoid travel charges outside the area",
+     "Demand free fitting",
+     "Keep samples indefinitely"
+    ],
+    "a": 0,
+    "ex": "«Booking a measuring visit does not commit you to ordering curtains» — можно отказаться от заказа."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-106",
+  "level": "B",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Amira",
+   "to": "Saturday Helpers",
+   "subject": "Collection rota",
+   "paras": [
+    "Hello everyone,",
+    "Saturday's donated-food collection will start at 8:30 rather than 9 because the bakery is opening earlier. Drivers should come straight to the bakery. Sorting volunteers should still report to the community warehouse at 9; there will be nothing to sort before the first van arrives. We have enough drivers, but need one more person to label boxes. This role involves standing for about an hour and requires no lifting. Please reply by Thursday if you can help with labeling. Anyone unable to attend should contact me directly rather than asking another volunteer to cover without telling me.",
+    "Labeling volunteers will work beside the sorting tables. We will provide marker pens and a short guide to the categories used.",
+    "Amira"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Who should start at 8:30 on Saturday?",
+    "opts": [
+     "The sorting volunteers",
+     "All warehouse visitors",
+     "Only the person labeling boxes",
+     "The drivers"
+    ],
+    "a": 3,
+    "ex": "Сбор начинается в 8:30, и «Drivers should come straight to the bakery». Сортировщики приходят к 9."
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does Amira mention that labeling requires no lifting?",
+    "opts": [
+     "To clarify the physical demands of an open role",
+     "To explain why the bakery opens early",
+     "To announce that all boxes will be empty",
+     "To tell drivers not to load their vans"
+    ],
+    "a": 0,
+    "ex": "Амира ищет человека на маркировку коробок и уточняет, что придётся стоять около часа, но поднимать ничего не нужно, — описывает физическую нагрузку на этой роли."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should a volunteer who cannot attend do?",
+    "opts": [
+     "Arrange a replacement without notifying Amira",
+     "Contact Amira directly",
+     "Reply only to the bakery",
+     "Wait until Saturday to tell a driver"
+    ],
+    "a": 1,
+    "ex": "«Anyone unable to attend should contact me directly rather than asking another volunteer to cover without telling me»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-107",
+  "level": "B",
+  "src": "elijah",
+  "genre": "schedule",
+  "doc": {
+   "kind": "table",
+   "head": "HARBOR FERRY - SATURDAY SERVICE",
+   "rows": [
+    [
+     "Departure from town",
+     "Arrival at island"
+    ],
+    [
+     "9:00",
+     "9:25"
+    ],
+    [
+     "11:00",
+     "11:25"
+    ],
+    [
+     "14:00",
+     "14:25"
+    ]
+   ],
+   "foot": "Return departures from island: 10:00, 12:00, 16:00\nJourney time: 25 minutes each way Buy return tickets at the town terminal before boarding. Online tickets are valid for any departure that day but do not reserve a seat. Boarding closes five minutes before departure. The island café opens at 10 and closes at 15. Bicycles travel free when space permits; passengers with bicycles board after those traveling on foot. Weather cancellations are posted on our website, not on the café's page.\nLarge suitcases should be placed in the marked luggage area. Please keep the cabin aisle clear while the ferry is moving."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "When does boarding close for the 11:00 ferry?",
+    "opts": [
+     "At 10:55",
+     "At 11:25",
+     "At 11:05",
+     "At 11:00"
+    ],
+    "a": 0,
+    "ex": "«Boarding closes five minutes before departure» → 11:00 − 5 минут = 10:55."
+   },
+   {
+    "type": "Inference",
+    "stem": "What is true for someone holding an online ticket?",
+    "opts": [
+     "They must use the 9:00 departure",
+     "They can check cancellations only at the café",
+     "They may still be unable to board a full ferry",
+     "They have a seat on every departure"
+    ],
+    "a": 2,
+    "ex": "«Online tickets are valid for any departure that day but do not reserve a seat». Место не гарантировано, значит, на полный паром можно не попасть."
+   },
+   {
+    "type": "Factual",
+    "stem": "Which return departure is available after the café closes?",
+    "opts": [
+     "10:00",
+     "12:00",
+     "14:00",
+     "16:00"
+    ],
+    "a": 3,
+    "ex": "Кафе закрывается в 15 (3 p.m.). Из обратных рейсов (10:00, 12:00, 16:00) после этого остаётся только 16:00."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-108",
+  "level": "B",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "Cypress Road Saturday Market",
+   "paras": [
+    "Please clear the marked parking bays by 7 a.m. on market days so traders can set up safely. Vehicles may return after 4 p.m., once the stalls have been removed. The rule applies only to bays marked with yellow market signs; parking on the opposite side of the road is unchanged. Residents can use the school car park free between 6 a.m. and 5 p.m. on Saturdays by displaying their street parking permit. Do not leave vehicles there overnight: the gates are locked at 5:15 p.m. Access to private driveways will remain available throughout the market.",
+    "Traders will place temporary signs at the ends of the affected bays. Please do not move them when parking nearby."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which parking spaces must be cleared for the market?",
+    "opts": [
+     "Bays marked with yellow market signs",
+     "Only the school car park spaces",
+     "All private driveways",
+     "All spaces on both sides of the road"
+    ],
+    "a": 0,
+    "ex": "«The rule applies only to bays marked with yellow market signs; parking on the opposite side of the road is unchanged»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What lets residents park free at the school on Saturday?",
+    "opts": [
+     "Displaying their street parking permit",
+     "Showing a market shopping receipt",
+     "Arriving after the gates are locked",
+     "Booking a stall at the market"
+    ],
+    "a": 0,
+    "ex": "«…free between 6 a.m. and 5 p.m. on Saturdays by displaying their street parking permit»."
+   },
+   {
+    "type": "Inference",
+    "stem": "Why should residents remove cars from the school before evening?",
+    "opts": [
+     "Private driveways close at 5 p.m.",
+     "Their street permits expire at 4 p.m.",
+     "They could lose access when the gates lock",
+     "The market continues there overnight"
+    ],
+    "a": 2,
+    "ex": "«Do not leave vehicles there overnight: the gates are locked at 5:15 p.m.» Если не забрать машину, к ней не будет доступа до открытия ворот."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-109",
+  "level": "B",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Fern Books",
+   "to": "Leo Chan",
+   "subject": "Interview arrangements",
+   "paras": [
+    "Dear Leo,",
+    "We would like to invite you to an interview for our weekend sales role on Tuesday at 3 p.m. Please come to the office above the shop, using the door beside the florist. The shop entrance will be busy with customers. Bring a copy of your résumé and the names of two people who can describe your work or study habits. They do not need to have employed you. If the proposed time conflicts with a class, reply by Monday morning; we have some Wednesday appointments available. The interview should take about thirty minutes.",
+    "Please allow time to find the office entrance. If you arrive early, ring the bell and wait for a staff member.",
+    "Fern Books"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which entrance should Leo use?",
+    "opts": [
+     "The door beside the florist",
+     "The delivery entrance behind the shop",
+     "The main shop entrance",
+     "The florist's customer entrance"
+    ],
+    "a": 0,
+    "ex": "«…using the door beside the florist. The shop entrance will be busy with customers»."
+   },
+   {
+    "type": "Inference",
+    "stem": "Who could Leo list as a reference?",
+    "opts": [
+     "A teacher who knows his study habits",
+     "Only a former employer",
+     "Only an employee of Fern Books",
+     "Any customer visiting on Tuesday"
+    ],
+    "a": 0,
+    "ex": "Нужны люди, «who can describe your work or study habits. They do not need to have employed you». Подходит учитель, который знает, как Лео учится."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should Leo do if he has a class at the interview time?",
+    "opts": [
+     "Go to the shop on Wednesday without replying",
+     "Arrive thirty minutes late without notice",
+     "Ask the florist to interview him",
+     "Reply by Monday morning"
+    ],
+    "a": 3,
+    "ex": "«If the proposed time conflicts with a class, reply by Monday morning»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-110",
+  "level": "B",
+  "src": "elijah",
+  "genre": "social",
+  "doc": {
+   "kind": "post",
+   "who": "Samira",
+   "handle": "Neighborhood Supper Club",
+   "paras": [
+    "We have one spare place at Friday's cooking evening because a member is away. We'll prepare a vegetarian meal together, then eat at around 8. Beginners are welcome; this is about sharing skills, not showing off. The $12 contribution covers ingredients. Please let me know about food allergies before accepting the place so we can check the menu. Bring a container if you'd like to take leftovers home, although there may not be any. Message me directly rather than commenting below: I don't always see comments. I'll confirm the place with the first person whose dietary needs we can accommodate.",
+    "We'll cook in pairs so everyone gets involved. Aprons are available, but please wear clothes that won't suffer from a small spill."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"showing off\" mean in this post?",
+    "opts": [
+     "Trying to impress others with one's abilities",
+     "Leaving the meal before it starts",
+     "Displaying the menu for guests",
+     "Showing someone where to sit"
+    ],
+    "a": 0,
+    "ex": "«This is about sharing skills, not showing off». Show off — хвастаться, пытаться впечатлить других своими умениями.",
+    "hlw": "showing off"
+   },
+   {
+    "type": "Factual",
+    "stem": "Why should interested people mention allergies first?",
+    "opts": [
+     "To guarantee leftovers",
+     "To check whether the menu can meet their needs",
+     "To avoid having to cook",
+     "To receive a lower ingredient charge"
+    ],
+    "a": 1,
+    "ex": "«Please let me know about food allergies before accepting the place so we can check the menu»."
+   },
+   {
+    "type": "Factual",
+    "stem": "Who will receive the spare place?",
+    "opts": [
+     "The most experienced cook",
+     "The first person to post any public comment",
+     "The earliest direct respondent whose needs can be met",
+     "Anyone bringing a container"
+    ],
+    "a": 2,
+    "ex": "«I'll confirm the place with the first person whose dietary needs we can accommodate», а писать нужно в личные сообщения, не в комментарии."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-111",
+  "level": "B",
+  "src": "elijah",
+  "genre": "receipt",
+  "doc": {
+   "kind": "receipt",
+   "head": "NORTHLIGHT CAMERA SERVICE",
+   "meta": "",
+   "rows": [
+    [
+     "Invoice 619 - Customer",
+     "Yasmin Reed"
+    ],
+    [
+     "Sensor cleaning",
+     "$35"
+    ],
+    [
+     "Replacement strap",
+     "$15"
+    ],
+    [
+     "Discount",
+     "-$5"
+    ],
+    [
+     "Total due",
+     "$45"
+    ],
+    [
+     "Payment deadline",
+     "September 9"
+    ]
+   ],
+   "foot": "Your camera is ready for collection. The discounted total applies if payment reaches us by the deadline; after that, the standard total of $50 is payable. Pay by bank transfer using invoice 619 as the reference, or by card in the shop. The camera can be collected before payment, but the deadline remains unchanged. A six-month warranty covers the new strap. Cleaning is a service and is not included in that warranty.\nWe can email a payment confirmation if requested. Please check the invoice number when contacting us so we locate your record."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much is payable after September 9?",
+    "opts": [
+     "$45",
+     "$50",
+     "$35",
+     "$15"
+    ],
+    "a": 1,
+    "ex": "«…after that, the standard total of $50 is payable». $45 — цена со скидкой до дедлайна."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should Yasmin use as the bank-transfer reference?",
+    "opts": [
+     "September 9",
+     "The amount of the discount",
+     "The strap's warranty period",
+     "Invoice 619"
+    ],
+    "a": 3,
+    "ex": "«Pay by bank transfer using invoice 619 as the reference»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What is true if Yasmin collects the camera before paying?",
+    "opts": [
+     "The original payment deadline still applies",
+     "The total becomes $35",
+     "The cleaning gains a warranty",
+     "Collection starts a new six-month payment period"
+    ],
+    "a": 0,
+    "ex": "«The camera can be collected before payment, but the deadline remains unchanged» — дедлайн 9 сентября остаётся."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-112",
+  "level": "B",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Shelter Team",
+   "to": "New Volunteers",
+   "subject": "Before your first walk",
+   "paras": [
+    "Hello,",
+    "Thank you for offering to walk our dogs. Before booking a walking shift, attend one introductory session. Sessions run on Tuesday evenings and Saturday mornings; choose either, not both. We will show you how to fit a lead and explain which paths to use. You should wear sturdy shoes and clothes you can wash easily. For your first two shifts, an experienced volunteer will walk with you. After that, staff will decide which dogs you can walk independently. Please do not bring your own pet to the introduction, as this can distract the shelter dogs.",
+    "Training includes a short walk around the grounds. Please tell the session leader beforehand if you need an accessible route for this.",
+    "Shelter Team"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What must volunteers do before booking a shift?",
+    "opts": [
+     "Complete two independent walks",
+     "Attend both weekly introductions",
+     "Bring their own dog for assessment",
+     "Attend one introduction"
+    ],
+    "a": 3,
+    "ex": "«Before booking a walking shift, attend one introductory session… choose either, not both»."
+   },
+   {
+    "type": "Factual",
+    "stem": "Who accompanies a new volunteer on the first two shifts?",
+    "opts": [
+     "No one",
+     "The volunteer's own pet",
+     "An experienced volunteer",
+     "A member of the public"
+    ],
+    "a": 2,
+    "ex": "«For your first two shifts, an experienced volunteer will walk with you»."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why are volunteers asked not to bring their pets?",
+    "opts": [
+     "To avoid distracting the shelter dogs",
+     "To make the walks longer",
+     "To reduce the number of introductions",
+     "To ensure all shoes stay clean"
+    ],
+    "a": 0,
+    "ex": "«Please do not bring your own pet to the introduction, as this can distract the shelter dogs»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-113",
+  "level": "B",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "TOWN MUSIC WEEKEND - REFUNDS",
+   "paras": [
+    "Unused wristbands can be refunded at the ticket office until Thursday at 6 p.m. Bring the original purchase receipt. A wristband that has been cut or worn cannot be refunded, even if you attended no performances. Online buyers should request refunds through their account instead of visiting the office. Refunds go to the original payment method and may take five working days. If you bought several wristbands in one order, you may return only the unused ones. Wristbands can be transferred to another person before use; let us know the new name before the festival opens on Friday.",
+    "Please keep wristbands away from moisture before the event. Damaged barcodes may delay entry while staff check the original booking record."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Where should online buyers request a refund?",
+    "opts": [
+     "From the person receiving a transferred band",
+     "Through their online account",
+     "At a performance entrance",
+     "At the ticket office"
+    ],
+    "a": 1,
+    "ex": "«Online buyers should request refunds through their account instead of visiting the office»."
+   },
+   {
+    "type": "Inference",
+    "stem": "Which wristband could qualify for a refund?",
+    "opts": [
+     "A cut wristband returned before Thursday",
+     "A worn wristband never used at a performance",
+     "An unused wristband returned after the deadline",
+     "An unused, uncut wristband returned with the receipt on time"
+    ],
+    "a": 3,
+    "ex": "Нужны все условия сразу: браслет не использован и не разрезан, есть чек, возврат до четверга 6 p.m. В остальных вариантах нарушено одно из них."
+   },
+   {
+    "type": "Factual",
+    "stem": "What must happen before a wristband is transferred?",
+    "opts": [
+     "The organizer must be told the new name before opening",
+     "The refund must arrive in five days",
+     "Every wristband in the order must be returned",
+     "The recipient must cut the band"
+    ],
+    "a": 0,
+    "ex": "«Wristbands can be transferred… let us know the new name before the festival opens on Friday»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-114",
+  "level": "B",
+  "src": "elijah",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Noor",
+     "time": "12",
+     "text": "40: The bakery says our cake is ready, but they close at four today. Can you collect it?"
+    },
+    {
+     "who": "Ethan",
+     "time": "12",
+     "text": "43: I finish work at three. I can go straight there. Have you paid?"
+    },
+    {
+     "who": "Noor",
+     "time": "12",
+     "text": "45: Yes. Ask for the order under my name. Keep the box flat; the decorations are delicate."
+    },
+    {
+     "who": "Ethan",
+     "time": "12",
+     "text": "47: I'll put it on the car floor, then. Should I take it to the restaurant?"
+    },
+    {
+     "who": "Noor",
+     "time": "12",
+     "text": "49: Please bring it to my flat instead. The restaurant won't store outside food before six."
+    },
+    {
+     "who": "Ethan",
+     "time": "12",
+     "text": "51: Fine. I'll call when I'm downstairs."
+    },
+    {
+     "who": "Ethan",
+     "time": "12",
+     "text": "53: I'll drive carefully and avoid the rough road near the park. Please clear a space in your fridge before I arrive."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why does the cake need to be collected before four?",
+    "opts": [
+     "The order must be paid then",
+     "Noor finishes work then",
+     "The bakery closes then",
+     "The restaurant starts dinner then"
+    ],
+    "a": 2,
+    "ex": "«…they close at four today»."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"delicate\" describe about the decorations?",
+    "opts": [
+     "They need extra payment",
+     "They can be damaged easily",
+     "They are difficult to recognize",
+     "They are very large"
+    ],
+    "a": 1,
+    "ex": "«Keep the box flat; the decorations are delicate». Delicate — хрупкий, легко повредить, поэтому коробку держат ровно.",
+    "hlw": "delicate"
+   },
+   {
+    "type": "Factual",
+    "stem": "Where should Ethan take the cake after collection?",
+    "opts": [
+     "Directly to the restaurant",
+     "To his workplace",
+     "Back to the bakery after six",
+     "To Noor's flat"
+    ],
+    "a": 3,
+    "ex": "«Please bring it to my flat instead. The restaurant won't store outside food before six»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-115",
+  "level": "B",
+  "src": "elijah",
+  "genre": "web",
+  "doc": {
+   "kind": "notice",
+   "head": "HILL ROAD CLOTHING · CLEARANCE WEEK",
+   "paras": [
+    "Selected jackets are half price until Saturday. Sizes shown online reflect yesterday's stock and may sell out during the day. Call the shop to reserve an item for collection; adding it to an online wish list does not hold it. Reservations last until closing on the next working day. If you need longer, speak to staff before your hold expires. Sale items can be exchanged for another size within fourteen days if tags are attached, but refunds are available only for faulty goods. Keep your receipt. Home delivery is unavailable for clearance stock, although regular-price items can still be shipped.",
+    "Reserved items can be tried on at collection before purchase. Staff will confirm the current price, since the promotion ends Saturday."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How can a customer hold a clearance jacket?",
+    "opts": [
+     "Request regular-price home delivery",
+     "Call the shop to reserve it",
+     "Wait for the stock list to update",
+     "Add it to an online wish list"
+    ],
+    "a": 1,
+    "ex": "«Call the shop to reserve an item for collection; adding it to an online wish list does not hold it»."
+   },
+   {
+    "type": "Inference",
+    "stem": "Why might a size listed online be unavailable?",
+    "opts": [
+     "The sale has already ended",
+     "The displayed stock information is not live",
+     "Online customers must buy two jackets",
+     "All online sizes are samples only"
+    ],
+    "a": 1,
+    "ex": "«Sizes shown online reflect yesterday's stock and may sell out during the day» — данные на сайте не обновляются в реальном времени."
+   },
+   {
+    "type": "Factual",
+    "stem": "When may a customer obtain a refund for a sale jacket?",
+    "opts": [
+     "Whenever the customer changes their mind",
+     "Only after fourteen days",
+     "When the jacket is faulty",
+     "Whenever tags have been removed"
+    ],
+    "a": 2,
+    "ex": "«…refunds are available only for faulty goods». Обмен на другой размер возможен, а деньги возвращают только за брак."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-116",
+  "level": "B",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "MILL COURT - FLOOR REPAIRS",
+   "paras": [
+    "The front lobby will be closed from 9 a.m. to 3 p.m. on Thursday while new floor tiles are fitted. Residents should use the garden entrance during that period. The door code is the same as at the front entrance. Deliveries arriving during the work will be directed to the garden gate; please update any delivery instructions you have saved online. The garden path is narrow, so bicycles must be pushed rather than ridden. Emergency access will be maintained. If you normally receive a visitor who needs assistance, contact the caretaker by Wednesday evening to discuss the temporary route.",
+    "The caretaker will put directional signs along the temporary route. Please avoid leaving bags near the garden door during the work."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What should residents do about expected deliveries?",
+    "opts": [
+     "Ask drivers to use a new door code",
+     "Cancel every delivery for the week",
+     "Update saved instructions for the garden gate",
+     "Leave parcels in the front lobby"
+    ],
+    "a": 2,
+    "ex": "«Deliveries arriving during the work will be directed to the garden gate; please update any delivery instructions you have saved online»."
+   },
+   {
+    "type": "Factual",
+    "stem": "How should bicycles be moved along the garden path?",
+    "opts": [
+     "They should be carried by the caretaker",
+     "They should be ridden quickly",
+     "They should be pushed",
+     "They should be left at the front entrance"
+    ],
+    "a": 2,
+    "ex": "«The garden path is narrow, so bicycles must be pushed rather than ridden»."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why should a resident contact the caretaker about a visitor needing assistance?",
+    "opts": [
+     "To obtain a permanent new door code",
+     "To ask for a delivery refund",
+     "To plan access along the temporary route",
+     "To prevent emergency vehicles entering"
+    ],
+    "a": 2,
+    "ex": "«…contact the caretaker by Wednesday evening to discuss the temporary route» — обсудить, как пройти временным путём."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-117",
+  "level": "B",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Daria",
+   "to": "Field Assistants",
+   "subject": "Saturday street survey",
+   "paras": [
+    "Hello team,",
+    "Please meet outside the town hall at 9:15 on Saturday. We will divide into pairs and collect pedestrian counts at four nearby crossings. Each pair needs one phone with a timer and one clipboard; clipboards will be supplied. Do not record people's faces or names. We are counting movement, not identifying individuals. If rain is heavy, we will postpone the survey to Sunday rather than collect data under very different conditions. I will email any postponement by 7:30 Saturday morning. If you cannot work Sunday, tell me now so I can plan replacement pairs in advance.",
+    "Counts will be entered on a shared form afterward. Please write clearly and note the crossing location on each clipboard sheet.",
+    "Daria"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What equipment must each pair provide?",
+    "opts": [
+     "A list of pedestrian names",
+     "One phone with a timer",
+     "Two clipboards",
+     "A camera for recording faces"
+    ],
+    "a": 1,
+    "ex": "«Each pair needs one phone with a timer and one clipboard; clipboards will be supplied». Планшеты выдадут, а телефон нужен свой."
+   },
+   {
+    "type": "Inference",
+    "stem": "Why would heavy rain lead to postponement?",
+    "opts": [
+     "The town hall cannot send emails in rain",
+     "Clipboards can be used only on Sundays",
+     "All pedestrians have already been counted",
+     "It would substantially change the survey conditions"
+    ],
+    "a": 3,
+    "ex": "«…rather than collect data under very different conditions» — в сильный дождь условия подсчёта слишком изменятся, данные будет не сравнить."
+   },
+   {
+    "type": "Factual",
+    "stem": "Who should contact Daria before Saturday?",
+    "opts": [
+     "Anyone expecting an email at 9:15",
+     "An assistant unavailable on Sunday",
+     "Only assistants who own clipboards",
+     "Every pedestrian using a crossing"
+    ],
+    "a": 1,
+    "ex": "«If you cannot work Sunday, tell me now so I can plan replacement pairs»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-118",
+  "level": "B",
+  "src": "elijah",
+  "genre": "receipt",
+  "doc": {
+   "kind": "receipt",
+   "head": "RIVER MUSEUM AUDIO GUIDE LOAN",
+   "meta": "",
+   "rows": [
+    [
+     "Receipt",
+     "732"
+    ],
+    [
+     "Guide hire",
+     "$4"
+    ],
+    [
+     "Refundable deposit",
+     "$20"
+    ],
+    [
+     "Amount paid",
+     "$24"
+    ]
+   ],
+   "foot": "Return your guide to the audio desk before leaving. Deposits are refunded only after staff check that the guide and headphones are complete and working. The audio desk closes at 5:30, thirty minutes before the museum. If you return later, use the reception desk; reception can record the return but cannot process card refunds. In that case, your deposit will be refunded the next working day. Keep this receipt until the money reaches your account. Lost guides may incur a replacement charge greater than the deposit. A staff member will demonstrate the volume control when issuing the guide. Please use headphones rather than playing audio aloud in galleries."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much of the payment is normally refundable?",
+    "opts": [
+     "$20",
+     "$4",
+     "$16",
+     "$24"
+    ],
+    "a": 0,
+    "ex": "Залог $20 — «refundable», плата за аренду $4 не возвращается. $24 — вся сумма."
+   },
+   {
+    "type": "Factual",
+    "stem": "Where should a visitor return the guide at 5:45?",
+    "opts": [
+     "At the next day's entrance queue",
+     "At reception",
+     "At the museum café",
+     "At the closed audio desk"
+    ],
+    "a": 1,
+    "ex": "Стойка аудиогидов закрывается в 5:30, поэтому в 5:45 сдают на ресепшен: «If you return later, use the reception desk»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What happens after a late return to reception?",
+    "opts": [
+     "The museum remains open until the refund arrives",
+     "The visitor must buy the guide",
+     "A card refund will be processed the next working day",
+     "The deposit automatically becomes a hire fee"
+    ],
+    "a": 2,
+    "ex": "«…reception can record the return but cannot process card refunds. In that case, your deposit will be refunded the next working day»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-119",
+  "level": "B",
+  "src": "elijah",
+  "genre": "ad",
+  "doc": {
+   "kind": "notice",
+   "head": "WORK NEAR HOME",
+   "paras": [
+    "Grove Rooms offers day desks from Monday to Friday, 8 a.m.-6 p.m. A $16 day pass includes Wi-Fi, tea, and a shared quiet workspace. Phone calls must be taken in the corridor booth, which can be booked for twenty minutes at a time. Printing costs extra. Book online by 6 p.m. the previous day; walk-in access depends on spare desks. You may leave for lunch and return using your day-pass code. The pass is for one named user and cannot be shared with a colleague. Monthly members have priority for the two private meeting rooms.",
+    "Charging sockets are available beside each desk, but cables are not supplied. Please bring the charger appropriate for your device with you."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which service costs extra?",
+    "opts": [
+     "Returning after lunch",
+     "Tea",
+     "Wi-Fi",
+     "Printing"
+    ],
+    "a": 3,
+    "ex": "«Printing costs extra». Wi-Fi и чай входят в дневной пропуск."
+   },
+   {
+    "type": "Factual",
+    "stem": "Where should a day-pass user make phone calls?",
+    "opts": [
+     "Only in a private meeting room",
+     "In the corridor booth",
+     "In the quiet workspace if speaking softly",
+     "At any quiet-workspace desk"
+    ],
+    "a": 1,
+    "ex": "«Phone calls must be taken in the corridor booth»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What can a person arriving without a booking expect?",
+    "opts": [
+     "Entry only if a desk is available",
+     "A pass that can be shared",
+     "Priority over monthly meeting-room users",
+     "Guaranteed entry because a pass costs $16"
+    ],
+    "a": 0,
+    "ex": "«…walk-in access depends on spare desks» — без брони пустят, только если есть свободный стол."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-120",
+  "level": "B",
+  "src": "elijah",
+  "genre": "social",
+  "doc": {
+   "kind": "post",
+   "who": "Tariq",
+   "handle": "Orchard Friends",
+   "paras": [
+    "Our apple harvest is Saturday from 10 until noon. Volunteers will work in small teams, with one trained person handling each ladder. Everyone else can collect fallen fruit or sort apples at ground level. Please bring work gloves and a reusable bag. We will share sound apples among volunteers after setting aside the quantity promised to the food pantry. Bruised fruit will go to a local juice maker, so please don't discard it. If you can stay for cleanup, message me; we particularly need help folding tables. Children are welcome with an adult but must not climb the ladders.",
+    "Please keep different fruit categories in separate crates. Team leaders will explain the sorting labels before work begins at the orchard."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Who may handle a ladder during the harvest?",
+    "opts": [
+     "Any child accompanied by an adult",
+     "A trained team member",
+     "Only the juice maker",
+     "Anyone bringing a reusable bag"
+    ],
+    "a": 1,
+    "ex": "«…with one trained person handling each ladder». Детям лестницы запрещены."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"sound\" mean in \"sound apples\"?",
+    "opts": [
+     "Recently bought",
+     "Unusually heavy",
+     "Making a noise",
+     "In good condition"
+    ],
+    "a": 3,
+    "ex": "Sound apples — целые, хорошие яблоки, в отличие от bruised fruit (побитых). Значение «звук» здесь не подходит.",
+    "hlw": "sound"
+   },
+   {
+    "type": "Factual",
+    "stem": "What will happen before apples are shared among volunteers?",
+    "opts": [
+     "All bruised fruit will be thrown away",
+     "The pantry's promised amount will be reserved",
+     "Children will finish climbing ladders",
+     "Every volunteer will fold a table"
+    ],
+    "a": 1,
+    "ex": "«We will share sound apples among volunteers after setting aside the quantity promised to the food pantry»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-101",
+  "level": "C",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Juniper Holiday Park",
+   "to": "Ms. Bell",
+   "subject": "Options following your cabin booking",
+   "paras": [
+    "Dear Ms. Bell,",
+    "A burst pipe has closed your cabin for the first night. We can offer a larger hill cabin free, instead of your lakeside one. You may remain there for the entire stay or move to your original cabin the following afternoon. If you choose to move, we will transfer your bags, although you must vacate the hill cabin by 10 a.m.; the lakeside cabin will not be ready until 2 p.m. Alternatively, you may cancel for a full refund. Please reply by noon tomorrow. We will hold the hill cabin until then, but will not treat silence as acceptance. Your paid lake-activity bookings are unaffected unless you cancel the whole stay.",
+    "Check-in instructions will accompany our booking confirmation.",
+    "Juniper Holiday Park"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "What inconvenience comes with moving to the original cabin?",
+    "opts": [
+     "Having to carry all bags without help",
+     "A four-hour gap between cabin access times",
+     "An extra charge for the larger cabin",
+     "Losing every lake-activity booking"
+    ],
+    "a": 1,
+    "ex": "Освободить hill cabin нужно до 10 a.m., а lakeside cabin будет готов только к 2 p.m., то есть четыре часа без домика. Сумки перенесут, так что «carry all bags without help» неверно."
+   },
+   {
+    "type": "Factual",
+    "stem": "What must Ms. Bell do to secure the hill cabin?",
+    "opts": [
+     "Pay the price difference immediately",
+     "Accept the offer before the reply deadline",
+     "Wait without replying until arrival",
+     "Cancel her lake activities"
+    ],
+    "a": 1,
+    "ex": "«We will hold the hill cabin until then, but will not treat silence as acceptance» — нужно принять предложение до полудня завтра. Доплаты нет: «free»."
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the email mention paid lake activities?",
+    "opts": [
+     "To indicate that changing cabins cancels those activities",
+     "To clarify which bookings the cabin problem affects",
+     "To persuade Ms. Bell to buy more activities",
+     "To announce a separate activity refund"
+    ],
+    "a": 1,
+    "ex": "«Your paid lake-activity bookings are unaffected unless you cancel the whole stay» — автор уточняет, каких бронирований касается проблема с домиком."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-102",
+  "level": "C",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "East Borough - Recycling Collection",
+   "paras": [
+    "During the depot refit, glass collections will take place twice monthly instead of weekly. Residents whose usual glass day is Tuesday should use the first and third Tuesdays of each month; Thursday routes will use the second and fourth Thursdays. In months with a fifth collection day, no additional glass pickup is scheduled. Overflow glass may go to the supermarket collection point. Businesses must use contracted services. Do not leave glass beside a full communal bin: crews cannot safely collect loose items. The revised timetable begins May 1 and is expected to end in July. That end date is provisional, so retain this notice until a replacement schedule is issued. Collection alerts in the borough app will be updated, although previously downloaded calendars will not change automatically.",
+    "Please rinse bottles before placing them in bins."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "What should a Tuesday-route resident expect on a fifth Tuesday?",
+    "opts": [
+     "Collection only for businesses",
+     "No scheduled glass collection",
+     "An extra collection for every material",
+     "Automatic pickup of loose overflow glass"
+    ],
+    "a": 1,
+    "ex": "«In months with a fifth collection day, no additional glass pickup is scheduled» — в пятый вторник вывоза не будет."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why should residents keep the notice after the expected refit period?",
+    "opts": [
+     "Paper collections will stop in July",
+     "All app alerts are being discontinued",
+     "The temporary schedule may continue beyond July",
+     "The supermarket point will become business-only"
+    ],
+    "a": 2,
+    "ex": "«That end date is provisional, so retain this notice» — июль только предварительная дата, график может продлиться."
+   },
+   {
+    "type": "Factual",
+    "stem": "Which information will not update automatically?",
+    "opts": [
+     "A calendar downloaded earlier",
+     "Collection alerts in the borough app",
+     "A new calendar downloaded after revision",
+     "The timetable printed on a replacement notice"
+    ],
+    "a": 0,
+    "ex": "«…previously downloaded calendars will not change automatically». Уведомления в приложении обновятся."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-103",
+  "level": "C",
+  "src": "elijah",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Mina",
+     "time": "18",
+     "text": "02: The sofa is yours. The photograph looks gray, but the fabric is pale green."
+    },
+    {
+     "who": "Cal",
+     "time": "18",
+     "text": "06: That's fine. Can your building lift take it?"
+    },
+    {
+     "who": "Mina",
+     "time": "18",
+     "text": "09: The lift is too narrow; bring someone to help on the stairs. I can hold doors, but my wrist means I can't lift anything."
+    },
+    {
+     "who": "Cal",
+     "time": "18",
+     "text": "12: My brother is free Saturday. Could we come at eleven?"
+    },
+    {
+     "who": "Mina",
+     "time": "18",
+     "text": "15: Yes, provided you're finished by noon. The loading bay is booked for a delivery after that."
+    },
+    {
+     "who": "Cal",
+     "time": "18",
+     "text": "18: Would you accept $80 rather than $90?"
+    },
+    {
+     "who": "Mina",
+     "time": "18",
+     "text": "22: If you take it Saturday, yes. Otherwise I'll leave the listing up."
+    },
+    {
+     "who": "Mina",
+     "time": "18",
+     "text": "24: The feet unscrew for easier handling."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What must Cal arrange to remove the sofa?",
+    "opts": [
+     "A booking for the building lift",
+     "A delivery after noon",
+     "Mina's help with lifting",
+     "Someone to help carry it down the stairs"
+    ],
+    "a": 3,
+    "ex": "«The lift is too narrow; bring someone to help on the stairs». Мина держит двери, но поднимать не может."
+   },
+   {
+    "type": "Factual",
+    "stem": "Under what condition will Mina accept $80?",
+    "opts": [
+     "If the fabric matches the photograph",
+     "If Cal keeps the sofa listed online",
+     "If her wrist has recovered",
+     "If Cal collects the sofa on Saturday"
+    ],
+    "a": 3,
+    "ex": "«If you take it Saturday, yes» — $80 при условии, что Кэл заберёт диван в субботу."
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does Mina correct the apparent fabric color?",
+    "opts": [
+     "To claim that the photograph is of a different sofa",
+     "To justify refusing a lower price",
+     "To prevent a mistaken expectation before collection",
+     "To explain why the lift is narrow"
+    ],
+    "a": 2,
+    "ex": "На фото диван серый, а на самом деле светло-зелёный. Мина уточняет цвет заранее, чтобы у Кэла не было неверных ожиданий."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-104",
+  "level": "C",
+  "src": "elijah",
+  "genre": "web",
+  "doc": {
+   "kind": "notice",
+   "head": "Alder Reserve - Proposed Trail Diversion",
+   "paras": [
+    "We are seeking comments on a proposal to divert the lower loop trail away from nesting birds between March and June. The alternative route would add about fifteen minutes and include a short steep section. The upper loop would remain open. This is a consultation, not a closure notice: no diversion will begin before the board reviews responses next month. Comments should describe how the proposal would affect your use of the reserve, especially if the steep section creates an access barrier. Support or opposition is welcome; practical examples help us compare alternatives. Please respond by February 14. Reports of immediate wildlife disturbance should go to the ranger by phone rather than through this consultation form, which is checked only twice weekly.",
+    "Responses may be submitted anonymously if preferred."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is the current status of the lower loop?",
+    "opts": [
+     "It has permanently become the upper loop",
+     "It is open only to board members",
+     "It remains open while a proposed change is considered",
+     "It has already closed until June"
+    ],
+    "a": 2,
+    "ex": "«This is a consultation, not a closure notice: no diversion will begin before the board reviews responses». Тропа пока открыта."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why are respondents asked for practical examples?",
+    "opts": [
+     "To report urgent disturbances through the form",
+     "To avoid allowing expressions of opposition",
+     "To help assess effects and compare route options",
+     "To prove they own land in the reserve"
+    ],
+    "a": 2,
+    "ex": "«Practical examples help us compare alternatives» — примеры помогают оценить, как изменение повлияет на людей, и сравнить варианты маршрута."
+   },
+   {
+    "type": "Factual",
+    "stem": "How should someone report birds being disturbed right now?",
+    "opts": [
+     "Use the consultation form as the urgent channel",
+     "Submit only a route map",
+     "Wait for next month's board review",
+     "Phone the ranger"
+    ],
+    "a": 3,
+    "ex": "«Reports of immediate wildlife disturbance should go to the ranger by phone». Форму проверяют только дважды в неделю."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-105",
+  "level": "C",
+  "src": "elijah",
+  "genre": "ad",
+  "doc": {
+   "kind": "notice",
+   "head": "HOMEFIX APPLIANCE PLAN",
+   "paras": [
+    "For $8 a month, members receive one annual inspection and pay no callout fee for repairs to listed kitchen appliances. Parts and repair labor are billed separately. Appliances must be working when added to the plan; joining after a fault appears does not cover that existing problem. Coverage begins fourteen days after registration, except for the inspection, which can be booked immediately. The plan does not guarantee that an old appliance can be repaired economically. If our technician recommends replacement, you may request a second opinion without losing membership benefits. Cancel with thirty days' notice. Unused inspections cannot be exchanged for cash. Homes outside our service area are ineligible, even if owners bring appliances to our workshop. Check your postcode before submitting payment.",
+    "Inspection reminders are sent by email to members."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which benefit is available immediately after registration?",
+    "opts": [
+     "Booking the annual inspection",
+     "Cash in place of an unused inspection",
+     "Waiver of all parts charges",
+     "Free repair labor for an existing fault"
+    ],
+    "a": 0,
+    "ex": "«Coverage begins fourteen days after registration, except for the inspection, which can be booked immediately»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What does membership mean if a covered appliance is costly to repair?",
+    "opts": [
+     "A second opinion requires giving up the plan benefits",
+     "A successful repair is guaranteed",
+     "Replacement may still be recommended",
+     "All repair costs become part of the monthly fee"
+    ],
+    "a": 2,
+    "ex": "«The plan does not guarantee that an old appliance can be repaired economically. If our technician recommends replacement…» — даже с планом могут посоветовать замену."
+   },
+   {
+    "type": "Factual",
+    "stem": "Who is ineligible for the plan?",
+    "opts": [
+     "An owner canceling with thirty days' notice",
+     "An owner booking an inspection immediately",
+     "An owner requesting a second opinion",
+     "An owner outside the service area who can bring an appliance in"
+    ],
+    "a": 3,
+    "ex": "«Homes outside our service area are ineligible, even if owners bring appliances to our workshop»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-106",
+  "level": "C",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Hall Coordinator",
+   "to": "Event Organizers",
+   "subject": "Amplified music at evening bookings",
+   "paras": [
+    "Dear organizers,",
+    "Following complaints from nearby residents, amplified music must now finish by 9:30 p.m., even when your hall booking runs later. Unamplified conversation and cleanup may continue until the booked end time. Closing exterior doors will reduce sound, but does not permit an extension of the music deadline. Groups that previously advertised later performances may revise their program or cancel without the usual charge if they contact us within seven days. The fee exemption applies only to bookings made before today's notice, not to new reservations. Please brief any hired performers yourself; the hall does not hold their contact details. Staff can lend a basic sound meter, but organizers remain responsible for complying with the cutoff, regardless of the reading shown.",
+    "Please include your booking reference when contacting us.",
+    "Hall Coordinator"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What may continue after 9:30 during a later booking?",
+    "opts": [
+     "Any performance advertised earlier",
+     "Amplified music with exterior doors closed",
+     "Amplified music below a meter reading",
+     "Conversation without amplification and cleanup"
+    ],
+    "a": 3,
+    "ex": "«Unamplified conversation and cleanup may continue until the booked end time». Закрытые двери срок для музыки не продлевают."
+   },
+   {
+    "type": "Inference",
+    "stem": "Which organizer could avoid the cancellation charge?",
+    "opts": [
+     "One canceling an earlier booking a month later",
+     "One making a new booking after reading the notice",
+     "One with an earlier booking who contacts the hall within seven days",
+     "One who tells performers but never contacts the hall"
+    ],
+    "a": 2,
+    "ex": "Без сбора можно отменить, если бронь сделана до сегодняшнего письма и связаться с залом «within seven days». Новые брони льготы не получают."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why must organizers brief hired performers?",
+    "opts": [
+     "Performers are exempt if their details are not recorded",
+     "The hall cannot contact them directly",
+     "The new rule applies only to performers hired after the notice",
+     "Performers determine the music cutoff"
+    ],
+    "a": 1,
+    "ex": "«…the hall does not hold their contact details» — зал не может сам связаться с исполнителями."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-107",
+  "level": "C",
+  "src": "elijah",
+  "genre": "receipt",
+  "doc": {
+   "kind": "receipt",
+   "head": "MAPLE CATERING - REVISED INVOICE",
+   "meta": "",
+   "rows": [
+    [
+     "Event",
+     "Neighborhood Forum, October 12"
+    ],
+    [
+     "Original order",
+     "30 lunches at $12 = $360"
+    ],
+    [
+     "Approved reduction",
+     "5 lunches at $12 = -$60"
+    ],
+    [
+     "Delivery",
+     "$20"
+    ],
+    [
+     "Deposit received",
+     "-$100"
+    ],
+    [
+     "Balance due",
+     "$220"
+    ]
+   ],
+   "foot": "Please pay the balance by October 8, quoting event reference NF12. The five-lunch reduction was received before our final-number deadline and is reflected above. Further reductions cannot lower the invoice, though additional lunches may be ordered until October 10, subject to kitchen capacity. The delivery charge covers bringing the food to the building entrance, not carrying it upstairs. Please arrange helpers if your event is on another floor. The reusable trays should be returned within three days; disposable cutlery and napkins do not need to be returned.\nLabel returned trays with the event reference."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What does the $220 figure represent?",
+    "opts": [
+     "The total cost before any payments",
+     "The outstanding amount after the reduction and deposit",
+     "The charge for thirty lunches alone",
+     "The refundable value of the trays"
+    ],
+    "a": 1,
+    "ex": "360 − 60 + 20 − 100 = $220 — остаток к оплате после уменьшения заказа и депозита."
+   },
+   {
+    "type": "Factual",
+    "stem": "What happens if the organizer now needs fewer lunches?",
+    "opts": [
+     "The amount due will not fall further",
+     "Every unused lunch will receive a $12 credit",
+     "The delivery charge will be removed",
+     "The deposit will automatically be refunded"
+    ],
+    "a": 0,
+    "ex": "«Further reductions cannot lower the invoice» — если обедов нужно меньше, сумма не уменьшится."
+   },
+   {
+    "type": "Factual",
+    "stem": "What must the organizer arrange for an upstairs event?",
+    "opts": [
+     "Helpers to move food from the entrance",
+     "Return of all disposable cutlery",
+     "Payment fifteen minutes before arrival",
+     "A driver who supplies extra napkins upstairs"
+    ],
+    "a": 0,
+    "ex": "«The delivery charge covers bringing the food to the building entrance, not carrying it upstairs. Please arrange helpers…»"
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-108",
+  "level": "C",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "COMPOST COLLECTION PILOT",
+   "paras": [
+    "For the next eight weeks, registered homes may put food scraps in the new brown containers. Meat, bones, and cooked food are accepted; packaging is not, even when labeled biodegradable. Liners supplied with the container are permitted because the treatment facility has tested them. Please do not buy substitutes without checking with the pilot team. Containers will be emptied on Fridays, separately from normal rubbish collection. A missed collection should be reported by noon Monday, but residents should leave the container out only if the team confirms a return visit. You may leave without affecting standard waste services; we will collect the loaned container. Afterward, contamination rates and household feedback will inform decisions about wider provision. Registration alone does not guarantee permanent provision.",
+    "Close the lid securely to discourage animals."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which item is permitted in the brown container?",
+    "opts": [
+     "The packaging around cooked food",
+     "Any shop-bought compost liner",
+     "Any biodegradable food packaging",
+     "A liner supplied by the pilot team"
+    ],
+    "a": 3,
+    "ex": "«Liners supplied with the container are permitted… Please do not buy substitutes without checking». Упаковка запрещена, даже biodegradable."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should residents do after reporting a missed pickup?",
+    "opts": [
+     "Stop all standard rubbish collections",
+     "Add packaging so the team notices it",
+     "Keep it outside until the eight-week trial ends",
+     "Leave the container out only if a return visit is confirmed"
+    ],
+    "a": 3,
+    "ex": "«…leave the container out only if the team confirms a return visit»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What is uncertain about the service?",
+    "opts": [
+     "Whether participants may withdraw",
+     "Whether the container is on loan",
+     "Whether it will continue after the trial",
+     "Whether meat scraps are accepted"
+    ],
+    "a": 2,
+    "ex": "«Registration alone does not guarantee permanent provision» — неизвестно, продолжится ли сервис после пилота. Выйти из пилота можно, мясо принимается."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-109",
+  "level": "C",
+  "src": "elijah",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Alma",
+     "time": "09",
+     "text": "10: I'm working that Saturday now. Could you take my furniture-painting workshop place?"
+    },
+    {
+     "who": "Victor",
+     "time": "09",
+     "text": "14: I'd like to. Does the organizer allow transfers?"
+    },
+    {
+     "who": "Alma",
+     "time": "09",
+     "text": "17: Yes, up to Thursday noon. I need to email your name. The booking includes materials for a small wooden item, which you bring yourself."
+    },
+    {
+     "who": "Victor",
+     "time": "09",
+     "text": "21: I have a metal chair. Would that work?"
+    },
+    {
+     "who": "Alma",
+     "time": "09",
+     "text": "25: The email specifically says wood. A wooden shelf could work. It must fit on a table; transport isn't provided."
+    },
+    {
+     "who": "Victor",
+     "time": "09",
+     "text": "29: I'll check what I have this evening before committing."
+    },
+    {
+     "who": "Alma",
+     "time": "09",
+     "text": "32: Please let me know by ten tomorrow morning. If you can't go, I'll offer it to my cousin so I can still meet the transfer deadline."
+    },
+    {
+     "who": "Victor",
+     "time": "09",
+     "text": "34: I'll measure my shelf tonight."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which item meets the workshop requirements?",
+    "opts": [
+     "A wooden item supplied by the organizer",
+     "A large wooden wardrobe needing transport help",
+     "A small wooden shelf that fits on a table",
+     "A metal chair that fits on a table"
+    ],
+    "a": 2,
+    "ex": "Нужна небольшая деревянная вещь, которая помещается на стол: «specifically says wood… It must fit on a table». Материалы дают, а предмет приносят свой."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why does Alma set an earlier reply time than the transfer deadline?",
+    "opts": [
+     "To leave time to find another person",
+     "To make Victor pay for materials twice",
+     "To arrange transport from the workshop",
+     "To avoid emailing the organizer"
+    ],
+    "a": 0,
+    "ex": "Передать место можно до четверга, полдня. Алме нужен запас, чтобы при отказе Виктора успеть предложить место кузине: «so I can still meet the transfer deadline»."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"before committing\" mean here?",
+    "opts": [
+     "Before applying paint to the item",
+     "Before agreeing definitely to attend",
+     "Before sending furniture to a shop",
+     "Before starting a new job"
+    ],
+    "a": 1,
+    "ex": "Commit — твёрдо пообещать. Before committing — прежде чем окончательно согласиться пойти.",
+    "hlw": "before committing"
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-110",
+  "level": "C",
+  "src": "elijah",
+  "genre": "web",
+  "doc": {
+   "kind": "notice",
+   "head": "HARBOR HISTORY ROOM DIGITAL IMAGE REQUESTS",
+   "paras": [
+    "Visitors may request digital copies of photographs in our local archive. The online catalogue shows low-resolution previews, which are suitable for finding an image but not for printing it clearly. Staff can supply a high-resolution file within five working days if the original has been digitized. Undigitized photographs require a separate assessment and may take longer. A copying fee does not purchase publication rights. Images used in public displays or commercial projects may need permission from the copyright holder; staff can share available ownership information but cannot grant rights they do not hold. Please identify the catalogue number in your request, rather than attaching a screenshot alone. Requests sent after Wednesday may not be ready for a weekend event.",
+    "File delivery is by a secure download link."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What should a digital-copy request include?",
+    "opts": [
+     "The image's catalogue number",
+     "Proof that the image is already published",
+     "Only a screenshot of the preview",
+     "A weekend-event ticket"
+    ],
+    "a": 0,
+    "ex": "«Please identify the catalogue number in your request, rather than attaching a screenshot alone»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What does paying the copying fee establish?",
+    "opts": [
+     "Permission for every commercial use",
+     "A guarantee of delivery before the weekend",
+     "Ownership of the original photograph",
+     "Payment for a copy, without automatically securing publication rights"
+    ],
+    "a": 3,
+    "ex": "«A copying fee does not purchase publication rights» — оплачивается только копия, права на публикацию отдельно."
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the announcement describe previews as low resolution?",
+    "opts": [
+     "To promise that all originals are digitized",
+     "To require commercial permission for viewing previews",
+     "To prohibit searching the catalogue",
+     "To explain why they may not produce clear prints"
+    ],
+    "a": 3,
+    "ex": "Превью «suitable for finding an image but not for printing it clearly» — автор объясняет, почему они не годятся для чёткой печати."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-111",
+  "level": "C",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "MARKET LANE - OUTDOOR TABLES",
+   "paras": [
+    "Cafés may place tables outside from May 1 under the revised pavement permit. A clear pedestrian passage of at least two meters must be maintained, measured from occupied chairs, not empty tables. Planters and menu boards count as obstructions too. Permits authorize seating until 8 p.m.; they do not extend a café's existing alcohol license. Furniture must be removed overnight unless a separate storage arrangement has been approved. Inspectors will first advise businesses about minor layout problems, but a serious access obstruction may require immediate removal of tables. Existing permit holders must submit a new layout sketch by April 20. Renewals will be reviewed against these standards rather than approved automatically.",
+    "Keep the approved sketch available for inspectors."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How is the required pedestrian passage measured?",
+    "opts": [
+     "From occupied chairs rather than empty tables",
+     "Only after all customers have left",
+     "Without counting planters or menu boards",
+     "With every chair pushed under its table"
+    ],
+    "a": 0,
+    "ex": "«…measured from occupied chairs, not empty tables»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What does having an existing pavement permit mean?",
+    "opts": [
+     "Overnight furniture storage is always allowed",
+     "Renewal is automatic without a sketch",
+     "Alcohol service is extended until 8 p.m.",
+     "A revised layout still needs review for renewal"
+    ],
+    "a": 3,
+    "ex": "«Renewals will be reviewed against these standards rather than approved automatically» — нужен новый план расстановки, и его проверят."
+   },
+   {
+    "type": "Factual",
+    "stem": "What may happen when a layout seriously blocks access?",
+    "opts": [
+     "The existing permit guarantees another review before removal",
+     "Tables may need to be removed immediately",
+     "The business receives advice but may keep the tables in place",
+     "Inspectors must wait until the next renewal"
+    ],
+    "a": 1,
+    "ex": "«…a serious access obstruction may require immediate removal of tables». Предупреждения сначала — только для мелких нарушений."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-112",
+  "level": "C",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Valley Review",
+   "to": "Print Edition Subscribers",
+   "subject": "Delivery changes from November",
+   "paras": [
+    "Dear reader,",
+    "From November, our magazine will arrive monthly rather than twice a month. Each issue will contain more pages, and your prepaid subscription will be extended so you still receive the number of issues purchased. Digital access is unchanged. If you prefer to cancel, request a refund for undelivered issues by October 25. After that date, cancellation remains possible, but refunds will be calculated under our standard policy rather than this special arrangement. You need not reply to keep receiving the print edition. Subscribers who recently changed address should update their account before October 20; replying to this email with an address will not update delivery records. We are combining issues to reduce distribution costs, not removing the local reporting section.",
+    "Valley Review",
+    "Account passwords and sign-in procedures remain unchanged."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What will happen to a prepaid subscription kept active?",
+    "opts": [
+     "It will last longer to supply the purchased number of issues",
+     "It will automatically lose digital access",
+     "It will require a reply to remain active",
+     "It will provide half the purchased issues"
+    ],
+    "a": 0,
+    "ex": "«…your prepaid subscription will be extended so you still receive the number of issues purchased». Цифровой доступ не меняется."
+   },
+   {
+    "type": "Factual",
+    "stem": "How should a subscriber change their delivery address?",
+    "opts": [
+     "Update their account before October 20",
+     "Wait until the first monthly issue arrives",
+     "Request an events-guide correction",
+     "Reply with the address to this email"
+    ],
+    "a": 0,
+    "ex": "«…update their account before October 20; replying to this email with an address will not update delivery records»."
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the email mention the local reporting section?",
+    "opts": [
+     "To reassure readers that this content will remain",
+     "To announce a separate subscription fee for local news",
+     "To explain which section is being discontinued",
+     "To replace all printed content with digital reports"
+    ],
+    "a": 0,
+    "ex": "«…not removing the local reporting section» — успокоить читателей: этот раздел останется."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-113",
+  "level": "C",
+  "src": "elijah",
+  "genre": "schedule",
+  "doc": {
+   "kind": "table",
+   "head": "WEST LINE - WEEKEND WORKS · Saturday and Sunday, September 21-22",
+   "rows": [
+    [
+     "Town departure",
+     "Shuttle arrival at East Junction",
+     "Train departure onward"
+    ],
+    [
+     "08:00",
+     "08:35",
+     "08:45"
+    ],
+    [
+     "10:00",
+     "10:35",
+     "10:45"
+    ],
+    [
+     "12:00",
+     "12:35",
+     "12:45"
+    ]
+   ],
+   "foot": "Replacement shuttles leave from the coach stop outside Town Station, not the usual forecourt bus stop. Rail tickets are valid on the shuttles. The printed connections include a ten-minute transfer, but onward trains will not be held if road traffic delays a shuttle. Passengers attending time-sensitive events should consider an earlier departure. Standard bicycles cannot be carried; folded bicycles are accepted if kept inside a bag. Accessible spaces must be reserved through the rail assistance team by Friday noon. This reservation secures an accessible shuttle space, not an onward train seat. Normal rail service is expected to resume Monday, subject to safety checks.\nShuttle drivers can indicate the designated luggage area."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Where do the replacement shuttles depart?",
+    "opts": [
+     "The coach stop outside Town Station",
+     "The rail assistance office",
+     "The onward train platform",
+     "The usual forecourt bus stop"
+    ],
+    "a": 0,
+    "ex": "«Replacement shuttles leave from the coach stop outside Town Station, not the usual forecourt bus stop»."
+   },
+   {
+    "type": "Inference",
+    "stem": "What is the risk for a passenger on the 10:00 shuttle?",
+    "opts": [
+     "The train always waits for the shuttle",
+     "Road delays could cause a missed onward connection",
+     "The planned transfer takes thirty-five minutes",
+     "A rail ticket will not cover the shuttle"
+    ],
+    "a": 1,
+    "ex": "На пересадку 10 минут, и «onward trains will not be held if road traffic delays a shuttle». Пробка может сорвать пересадку."
+   },
+   {
+    "type": "Factual",
+    "stem": "What does an assistance reservation guarantee?",
+    "opts": [
+     "Monday service regardless of safety checks",
+     "Carriage of an unfolded standard bicycle",
+     "An accessible space on the shuttle",
+     "A seat on the onward train"
+    ],
+    "a": 2,
+    "ex": "«This reservation secures an accessible shuttle space, not an onward train seat»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-114",
+  "level": "C",
+  "src": "elijah",
+  "genre": "ad",
+  "doc": {
+   "kind": "notice",
+   "head": "LARK STUDIO - FAMILY PORTRAITS",
+   "paras": [
+    "Our $95 package includes a forty-minute session and five edited digital images; extras cost $12 each. The booking deposit of $30 is part of the package price, not an extra fee. One reschedule is free with at least forty-eight hours' notice; later changes forfeit the deposit unless the studio cancels. If a child becomes ill, contact us before the appointment: we may offer a discretionary transfer, but this is not guaranteed. Your image gallery will remain online for fourteen days. Selecting images after that period may require a retrieval fee. The package allows personal printing and sharing, while advertising use requires a separate agreement. Please tell us the total number of people when booking, including children.",
+    "Please arrive wearing your chosen portrait outfits."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much remains after paying the standard booking deposit?",
+    "opts": [
+     "$30",
+     "$65",
+     "$125",
+     "$95"
+    ],
+    "a": 1,
+    "ex": "Депозит $30 «is part of the package price» → 95 − 30 = $65."
+   },
+   {
+    "type": "Factual",
+    "stem": "What can a family expect after a child's last-minute illness?",
+    "opts": [
+     "The studio may allow a transfer but need not do so",
+     "A guaranteed deposit refund under all circumstances",
+     "Permission to use images in advertising",
+     "An automatic free second reschedule"
+    ],
+    "a": 0,
+    "ex": "«…we may offer a discretionary transfer, but this is not guaranteed» — могут разрешить перенос, но не обязаны."
+   },
+   {
+    "type": "Factual",
+    "stem": "What could trigger an image retrieval fee?",
+    "opts": [
+     "Printing selected images for personal use",
+     "Including children in the family count",
+     "Paying the deposit before the appointment",
+     "Making selections after the gallery's fourteen-day period"
+    ],
+    "a": 3,
+    "ex": "«Selecting images after that period may require a retrieval fee» — после 14 дней."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-115",
+  "level": "C",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Penny",
+   "to": "Garden Stewards",
+   "subject": "Cover for the bank-holiday opening",
+   "paras": [
+    "Hello everyone,",
+    "Our bank-holiday open day needs a second steward from noon to four. I know the rota originally showed only one, but the children's activity now requires someone at the gate while the other person supervises the pond area. If you can cover, you may take a four-hour credit against a future shift. Please agree the replacement date with me before removing yourself from the rota; a credit does not automatically cancel an existing duty. People trained only for gate work are welcome, provided the other steward holds pond-supervision training. Reply with your available hours and training status, even if you can cover only part of the afternoon. I will combine offers if necessary. The current steward need not stay beyond four.",
+    "Name badges will be available beside the gate.",
+    "Penny"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why is an additional steward needed?",
+    "opts": [
+     "All normal shifts are being extended",
+     "The current steward has canceled the whole day",
+     "Two areas must be supervised during the children's activity",
+     "The gate will remain open all night"
+    ],
+    "a": 2,
+    "ex": "«…the children's activity now requires someone at the gate while the other person supervises the pond area» — нужно следить за двумя зонами."
+   },
+   {
+    "type": "Factual",
+    "stem": "What must a volunteer do before using the shift credit?",
+    "opts": [
+     "Remove themselves from any future shift immediately",
+     "Agree a replacement date with Penny",
+     "Complete pond training regardless of their role",
+     "Stay after four on the open day"
+    ],
+    "a": 1,
+    "ex": "«Please agree the replacement date with me before removing yourself from the rota»."
+   },
+   {
+    "type": "Inference",
+    "stem": "Could a gate-trained volunteer offering only two hours help?",
+    "opts": [
+     "No, because only full-afternoon offers are accepted",
+     "No, because the credit changes everyone's normal hours",
+     "Yes, if the remaining staffing and training needs are met",
+     "Yes, and then no pond-trained steward is needed"
+    ],
+    "a": 2,
+    "ex": "Принимаются и частичные предложения («even if you can cover only part of the afternoon»), а с обучением только для ворот можно помогать, «provided the other steward holds pond-supervision training». Значит, да, при соблюдении этих условий."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-116",
+  "level": "C",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "HOLLOW RESERVOIR - BOAT ACCESS",
+   "paras": [
+    "Low water levels have exposed uneven ground at the main launching ramp. Until further notice, private boats must use the temporary ramp near the north car park. Boats already stored at the sailing club may still launch from the club jetty under staff supervision. This exception does not allow visiting boats to unload there. The temporary ramp is open only during staffed hours, 9 a.m.-5 p.m.; vehicles waiting after closing must return another day. Booked tuition sessions will proceed using club equipment, unless instructors contact participants individually. Payment for a parking permit does not authorize launching outside staffed hours. The next inspection will inform reassessment; the main ramp's reopening date remains unknown. Please check the reservoir website before traveling, rather than relying on navigation apps that still show the old access point.",
+    "Launching queues must leave the emergency lane clear."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which boat may use the club jetty under the exception?",
+    "opts": [
+     "Any visiting boat with a parking permit",
+     "Any boat arriving after 5 p.m.",
+     "One already stored at the sailing club",
+     "A visiting boat booked only for ramp access"
+    ],
+    "a": 2,
+    "ex": "«Boats already stored at the sailing club may still launch from the club jetty… This exception does not allow visiting boats»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should someone booked for tuition generally expect?",
+    "opts": [
+     "Their parking permit allows an unstaffed lesson",
+     "Tuition continues only for visitors with private boats",
+     "They must bring their own boat to the temporary ramp",
+     "Their session will proceed unless contacted individually"
+    ],
+    "a": 3,
+    "ex": "«Booked tuition sessions will proceed using club equipment, unless instructors contact participants individually»."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why does the notice recommend checking the reservoir website?",
+    "opts": [
+     "The temporary ramp is reserved for online permit buyers",
+     "Other navigation information may still direct visitors to the old ramp",
+     "The reopening date is already confirmed there",
+     "Launching must be booked through the website"
+    ],
+    "a": 1,
+    "ex": "«…rather than relying on navigation apps that still show the old access point»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-117",
+  "level": "C",
+  "src": "elijah",
+  "genre": "web",
+  "doc": {
+   "kind": "notice",
+   "head": "SECOND-WEAR UNIFORM SERVICE",
+   "paras": [
+    "Families may leave clean, usable school uniforms with us for resale. We price accepted items according to condition and transfer seventy percent of the selling price to the owner; the remainder supports the service. Leaving an item does not guarantee acceptance or a sale. Items with outdated school logos will be offered for fabric recycling only, and require separate consent. Unsold items can be collected after six weeks by arrangement. If we receive no response to our collection reminder within fourteen days, we may donate them. Our stock list updates overnight, so call if you need a particular size that day. Purchasers should check the school's current uniform requirements; we do not confirm whether every item is still approved.",
+    "Drop-off bags should clearly show the owner's name."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much would the owner receive from a $20 sale?",
+    "opts": [
+     "$20",
+     "$6",
+     "$7",
+     "$14"
+    ],
+    "a": 3,
+    "ex": "Владелец получает 70%: 20 × 0,7 = $14. $6 — это оставшиеся 30%, они идут сервису."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should a buyer verify independently?",
+    "opts": [
+     "Whether every listed item will be sold that day",
+     "Whether monthly seller payments have already arrived",
+     "Whether owners receive the full sale price",
+     "Whether an item meets current school requirements"
+    ],
+    "a": 3,
+    "ex": "«Purchasers should check the school's current uniform requirements; we do not confirm whether every item is still approved»."
+   },
+   {
+    "type": "Factual",
+    "stem": "When may an unsold item be donated?",
+    "opts": [
+     "After fourteen days without a response to the reminder",
+     "Immediately after drop-off",
+     "As soon as an overnight stock update occurs",
+     "Whenever the owner asks to collect it"
+    ],
+    "a": 0,
+    "ex": "«If we receive no response to our collection reminder within fourteen days, we may donate them»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-118",
+  "level": "C",
+  "src": "elijah",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Olive Yard",
+   "to": "Mr. Novak",
+   "subject": "Details for your group dinner",
+   "paras": [
+    "Dear Mr. Novak,",
+    "Your table for twelve is reserved for 7 p.m. on May 17. For groups of ten or more, we require the set menu. If your final number falls below ten, you may choose either menu, but tell us by May 14 so the kitchen can plan. After that date, the deposit remains based on twelve guests even if fewer attend; it will still be deducted from the final bill. The table is available until 9:15 because another booking follows. Arriving late does not extend that time. You may bring a celebration cake without a charge, though we need advance notice to make refrigerator space.",
+    "Please nominate one person to coordinate group replies.",
+    "Olive Yard"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "What menu choice is available if the final count is nine and reported on time?",
+    "opts": [
+     "Only the set menu",
+     "The regular menu only, because set menus require twelve",
+     "Either menu, but only if exactly twelve guests attend",
+     "Either the set menu or the regular menu"
+    ],
+    "a": 3,
+    "ex": "Сет-меню обязательно от десяти человек. Если гостей меньше десяти и ресторан предупредили до May 14, «you may choose either menu»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What happens if the group arrives at 7:30?",
+    "opts": [
+     "Their deposit becomes an extra charge",
+     "The next booking must be canceled",
+     "They still need to finish by 9:15",
+     "Their booking automatically ends at 9:45"
+    ],
+    "a": 2,
+    "ex": "«The table is available until 9:15… Arriving late does not extend that time»."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why must the group give notice of a celebration cake?",
+    "opts": [
+     "To pay a mandatory cake fee",
+     "To let the restaurant arrange cold storage",
+     "To obtain permission to serve the cake after 9:15",
+     "To replace the set-menu dessert for every guest"
+    ],
+    "a": 1,
+    "ex": "«…we need advance notice to make refrigerator space» — подготовить место в холодильнике. Платы за торт нет."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-119",
+  "level": "C",
+  "src": "elijah",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Isabel",
+     "time": "20",
+     "text": "01: Is the workspace in your flat's photos available for our exchange week?"
+    },
+    {
+     "who": "Drew",
+     "time": "20",
+     "text": "05: The desk is, but the monitor belongs to my employer, so I'll lock it away. The Wi-Fi works throughout the flat."
+    },
+    {
+     "who": "Isabel",
+     "time": "20",
+     "text": "09: Fine. My partner has calls most mornings. Is the street quiet?"
+    },
+    {
+     "who": "Drew",
+     "time": "20",
+     "text": "13: Usually, though the council has scheduled paving that week. They haven't confirmed hours. I wouldn't promise silence."
+    },
+    {
+     "who": "Isabel",
+     "time": "20",
+     "text": "17: Could we postpone by a week?"
+    },
+    {
+     "who": "Drew",
+     "time": "20",
+     "text": "21: I could, but my original train tickets are nonrefundable. I'd need you to cover the change fee if we switch."
+    },
+    {
+     "who": "Isabel",
+     "time": "20",
+     "text": "25: Let me ask my partner before we agree. We'd rather know the actual fee than guess."
+    },
+    {
+     "who": "Drew",
+     "time": "20",
+     "text": "28: I'll check it tomorrow. Nothing changes until we've both confirmed."
+    },
+    {
+     "who": "Isabel",
+     "time": "20",
+     "text": "30: Thanks for checking before we decide."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What equipment will Isabel be able to use?",
+    "opts": [
+     "A spare monitor provided by Drew",
+     "All equipment shown in the photographs",
+     "The desk, with Wi-Fi available",
+     "The employer-owned monitor"
+    ],
+    "a": 2,
+    "ex": "«The desk is, but the monitor belongs to my employer, so I'll lock it away. The Wi-Fi works throughout the flat»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What is unresolved at the end of the exchange?",
+    "opts": [
+     "Whether both parties will agree to new dates and the fee",
+     "Whether Drew owns the monitor personally",
+     "Whether Wi-Fi reaches the workspace",
+     "Whether the original train tickets are refundable"
+    ],
+    "a": 0,
+    "ex": "«Let me ask my partner before we agree… Nothing changes until we've both confirmed» — новые даты и оплата сбора пока не согласованы."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does Drew mean by \"I wouldn't promise silence\"?",
+    "opts": [
+     "He will require guests to remain silent",
+     "He cannot guarantee a quiet street during the works",
+     "All morning calls are forbidden",
+     "The street will be quiet outside confirmed work hours"
+    ],
+    "a": 1,
+    "ex": "Улицу будут мостить, часы работ не подтверждены. «I wouldn't promise silence» значит, что тишину на улице он гарантировать не может.",
+    "hlw": "I wouldn't promise silence"
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-120",
+  "level": "C",
+  "src": "elijah",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "LEISURE CENTER - LOST PROPERTY",
+   "paras": [
+    "Items found in public areas are recorded and stored for thirty days. Swimwear and towels are kept for seven days for hygiene reasons; clearly perishable items are discarded immediately. To claim an item, describe a feature not obvious from our public list, such as an identifying mark inside a bag. Photographs on the list are intended to help recognition, not to establish ownership. Valuable items require photo identification at collection and cannot be mailed. Other items may be posted at the owner's expense once ownership is verified. After the storage period, usable unclaimed goods are donated. Staff cannot hold items indefinitely while claimants seek evidence. If you think something was stolen rather than misplaced, contact the police as well as notifying reception; our lost-property record is not a theft report.",
+    "Collection appointments can be arranged through reception."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which item has a seven-day storage period?",
+    "opts": [
+     "A bag with an identifying mark",
+     "A towel",
+     "A valuable watch",
+     "Perishable food"
+    ],
+    "a": 1,
+    "ex": "«Swimwear and towels are kept for seven days for hygiene reasons». Скоропортящееся выбрасывают сразу."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why is recognizing a photograph insufficient to claim an item?",
+    "opts": [
+     "Photographed items can be claimed only after thirty days",
+     "Ownership is accepted once the item is described publicly",
+     "A claimant must supply additional evidence of ownership",
+     "A photograph counts as proof only for valuable items"
+    ],
+    "a": 2,
+    "ex": "«Photographs on the list are intended to help recognition, not to establish ownership» — нужно описать признак, которого нет в списке."
+   },
+   {
+    "type": "Factual",
+    "stem": "What must the owner of a valuable item do?",
+    "opts": [
+     "Show photo identification and collect it in person",
+     "Ask staff to hold it indefinitely without evidence",
+     "Pay postage and wait for delivery",
+     "Use the lost-property record instead of reporting theft"
+    ],
+    "a": 0,
+    "ex": "«Valuable items require photo identification at collection and cannot be mailed» — документ с фото и только лично."
+   }
+  ]
+ }
 ]

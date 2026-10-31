@@ -26,8 +26,8 @@ async function placeAll(p, slots, { wrong = false, dragFirst = false } = {}) {
   const mk = async (w, h) => { const p = await (await b.newContext({ viewport: { width: w, height: h } })).newPage(); p.on('pageerror', e => errs.push(e.message)); return p; };
   const p = await mk(1440, 900);
   await p.goto(APP); await p.waitForTimeout(900);
-  if (p.url().includes('setup')) { await p.fill('#name', 'Илья'); await p.fill('#email', 't@example.com'); await p.fill('#password', 'teacher-pass-1'); await p.click('button[type=submit]'); }
-  else { await p.fill('#email', 't@example.com'); await p.fill('#password', 'teacher-pass-1'); await p.click('button[type=submit]'); }
+  if (p.url().includes('setup')) { await p.fill('#name', 'Илья'); await p.fill('#email', 'teacher@example.com'); await p.fill('#password', 'teacher-pass-1'); await p.click('button[type=submit]'); }
+  else { await p.fill('#email', 'teacher@example.com'); await p.fill('#password', 'teacher-pass-1'); await p.click('button[type=submit]'); }
   await p.waitForTimeout(1200);
 
   await p.goto(APP + '#/train/W'); await p.waitForTimeout(1200);

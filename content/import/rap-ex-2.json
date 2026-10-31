@@ -1,0 +1,72 @@
+{
+"A11": [
+"B|Текст о том, как неподвижный воздух в материале замедляет передачу тепла (в одежде и в зданиях). Изоляция полезна не только зимой.",
+"B|«Fast-moving outside air can reduce the benefit of trapped air near the body» — ветер через отверстия.",
+"D|Restrict — ограничивать (limit): «cells that restrict air movement».",
+"A|Охлаждённая комната — пример того, что изоляция полезна и в жару: «Insulation is therefore not useful only in cold weather».",
+"C|Inference|«The material's structure matters as well as its thickness… a thin layer… can sometimes insulate better» — одна толщина не определяет результат."
+],
+"A12": [
+"D|Главная мысль — дальняя связь зависела от физической перевозки писем: дорог, погоды, транспорта.",
+"A|«This arrangement could reduce the need for one traveler to complete an entire journey».",
+"A|Recipient — получатель сообщения.",
+"A|«The date of writing alone does not reveal when the recipient could act» — важно, когда получатель смог действовать.",
+"B|Inference|«Replies also took time, so decisions sometimes had to be made without immediate clarification» — быстро переспросить было нельзя."
+],
+"A13": [
+"B|Опавшие листья связывают растения на суше с жизнью в воде: дают пищу организмам ручья.",
+"A|«A quiet pocket can hold them for longer. Branches and stones can create such pockets».",
+"A|Channel — русло, по которому течёт вода.",
+"D|«The connection is easy to miss because the trees stand outside the channel» — легко не заметить эту пищевую связь.",
+"D|«Removing every fallen branch… also change where organic material remains»."
+],
+"A14": [
+"B|Текст о выгодах совместного оборудования и о том, что оно требует договорённостей (бронирование, уборка, ремонт).",
+"B|«If everyone expects to use the machine on the same afternoon, it cannot meet all their needs at once».",
+"D|Occasionally — время от времени.",
+"B|Ежедневному пользователю выгоднее своя машина, редкому — совместная: решение зависит от частоты использования.",
+"D|Inference|Совместное владение работает, когда потребности «occur at different times» и доступ надёжен. Остальные варианты описывают условия, при которых оно не работает."
+],
+"A15": [
+"B|Текст объясняет, как образуется конденсат и как отличить его от протечки.",
+"C|«It may have come from water vapor already present in the surrounding air».",
+"D|Emerging — выходящий наружу: вода, выходящая из сломанного соединения.",
+"D|Сравнение показывает, как отличить конденсат на холодной трубе от возможной протечки в месте соединения.",
+"D|Inference|«What matters is the relationship between surface temperature and the moisture in the air» — тёплый стакан может недостаточно охлаждать воздух рядом."
+],
+"A16": [
+"D|Текст о том, как точка обзора и место экспозиции влияют на восприятие скульптуры.",
+"C|«If it stands in the center of a room, they may have access to more viewpoints».",
+"C|Projecting — выступающий наружу (о руке скульптуры).",
+"B|Работы с главным направлением обзора уточняют мысль: «There is no rule that every sculpture must be visible from every side».",
+"A|«They also consider how people will approach and move past it»."
+],
+"A17": [
+"D|Главная мысль — категории и инструкции в опросе определяют качество ответов. Длиннее не значит лучше.",
+"C|«A list that leaves out train travel may force some respondents to choose an inaccurate answer or skip the question».",
+"B|Ambiguity — неоднозначность, неясность смысла.",
+"C|Пилотная группа помогает найти непонятные вопросы: «This test can reveal problems that were not obvious to the writer».",
+"A|«Without that guidance, people may answer the same question in different ways»."
+],
+"A18": [
+"A|Текст об экологических функциях мёртвой древесины: разложение, возврат питательных веществ, укрытия для животных.",
+"A|«Very dry conditions may slow it».",
+"B|Substantial — значительный, существенный.",
+"D|Укрытие для животных — функция мёртвого дерева помимо возврата питательных веществ.",
+"C|Inference|Скорость разложения зависит от влажности, температуры и структуры древесины, поэтому по виду бревна нельзя точно судить о его возрасте."
+],
+"A19": [
+"A|Текст объясняет, почему меняется видимая освещённая часть Луны. Форма самой Луны не меняется.",
+"A|«As the Moon travels around Earth, observers see different amounts of that illuminated half». Тень Земли — только при затмении.",
+"C|Portions — части, доли (освещённые части мяча).",
+"B|Модель с лампой и мячом показывает связь между освещением и точкой наблюдения.",
+"C|«An apparent change in an object's outline can come from how it is lit and viewed» — меняется видимый с Земли светлый контур."
+],
+"A20": [
+"B|Названия улиц дают исторические подсказки, но их нужно проверять по другим источникам.",
+"C|«Historians… need to consider when each map was made and which naming system it followed».",
+"A|Literal — буквальный, точно соответствующий названию.",
+"C|Застройщик может выбрать красивое название без связи с местной историей — название не всегда исторический факт.",
+"B|Inference|Название — «a starting point for historical questions rather than a complete answer». Разумно проверить, была ли рядом мельница."
+]
+}

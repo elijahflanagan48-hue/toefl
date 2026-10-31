@@ -1,0 +1,102 @@
+{
+"R-RDL-B-101": [
+"«…from our beach kiosk, not the town shop where you made the booking». Магазин в городе — ловушка: там велосипеды бронировали.",
+"Залог $25 «per bicycle» → за два велосипеда $50, и «We accept cards only at the kiosk» — картой. Плата за прокат уже внесена.",
+"«…we will text you before 8 a.m. and offer a different route or a refund», то есть сообщение придёт до выдачи (9–10 a.m.) с вариантами."
+],
+"R-RDL-B-102": [
+"Объявление объясняет, как добраться без лифта: соседняя станция, бесплатный шаттл, помощь персонала. Поезда при этом ходят обычно, так что «all trains are canceled» — неверно.",
+"«Show your train ticket to the driver; no separate shuttle ticket is needed».",
+"Inference|Шаттл нужен тем, кому нужен доступ без ступенек: лифт к Platform 2 не работает, а лестница открыта. Значит, это пассажир, который не может подняться по лестнице и едет с Platform 2."
+],
+"R-RDL-B-103": [
+"«The photo book needs everyone's pictures by tonight if it is to arrive Friday».",
+"Vocabulary|Рут не хочет вручать Даниэлю пустой пакет, то есть остаться без подарка, который можно вручить. Это переносное значение, речь не о размере упаковки.",
+"«If the book misses Friday, we can give him the voucher first»."
+],
+"R-RDL-B-104": [
+"«You need an email address to vote, but there is no membership requirement».",
+"«…provided we can obtain screening permission. If permission is refused, the runner-up will be selected». Provided = при условии, что.",
+"«Updates will appear online by noon that day» — в день показа (23 августа) нужно проверить сайт до полудня."
+],
+"R-RDL-B-105": [
+"«Order curtains before June 12 and receive a free home measuring visit». Ткань и установка — «at the usual rates».",
+"«Production normally takes two weeks after you approve the measurements and fabric choice».",
+"«Booking a measuring visit does not commit you to ordering curtains» — можно отказаться от заказа."
+],
+"R-RDL-B-106": [
+"Сбор начинается в 8:30, и «Drivers should come straight to the bakery». Сортировщики приходят к 9.",
+"Rhetorical Purpose|Амира ищет человека на маркировку коробок и уточняет, что придётся стоять около часа, но поднимать ничего не нужно, — описывает физическую нагрузку на этой роли.",
+"«Anyone unable to attend should contact me directly rather than asking another volunteer to cover without telling me»."
+],
+"R-RDL-B-107": [
+"«Boarding closes five minutes before departure» → 11:00 − 5 минут = 10:55.",
+"Inference|«Online tickets are valid for any departure that day but do not reserve a seat». Место не гарантировано, значит, на полный паром можно не попасть.",
+"Кафе закрывается в 15 (3 p.m.). Из обратных рейсов (10:00, 12:00, 16:00) после этого остаётся только 16:00."
+],
+"R-RDL-B-108": [
+"«The rule applies only to bays marked with yellow market signs; parking on the opposite side of the road is unchanged».",
+"«…free between 6 a.m. and 5 p.m. on Saturdays by displaying their street parking permit».",
+"Inference|«Do not leave vehicles there overnight: the gates are locked at 5:15 p.m.» Если не забрать машину, к ней не будет доступа до открытия ворот."
+],
+"R-RDL-B-109": [
+"«…using the door beside the florist. The shop entrance will be busy with customers».",
+"Inference|Нужны люди, «who can describe your work or study habits. They do not need to have employed you». Подходит учитель, который знает, как Лео учится.",
+"«If the proposed time conflicts with a class, reply by Monday morning»."
+],
+"R-RDL-B-110": [
+"Vocabulary|«This is about sharing skills, not showing off». Show off — хвастаться, пытаться впечатлить других своими умениями.",
+"«Please let me know about food allergies before accepting the place so we can check the menu».",
+"«I'll confirm the place with the first person whose dietary needs we can accommodate», а писать нужно в личные сообщения, не в комментарии."
+],
+"R-RDL-B-111": [
+"«…after that, the standard total of $50 is payable». $45 — цена со скидкой до дедлайна.",
+"«Pay by bank transfer using invoice 619 as the reference».",
+"«The camera can be collected before payment, but the deadline remains unchanged» — дедлайн 9 сентября остаётся."
+],
+"R-RDL-B-112": [
+"«Before booking a walking shift, attend one introductory session… choose either, not both».",
+"«For your first two shifts, an experienced volunteer will walk with you».",
+"«Please do not bring your own pet to the introduction, as this can distract the shelter dogs»."
+],
+"R-RDL-B-113": [
+"«Online buyers should request refunds through their account instead of visiting the office».",
+"Inference|Нужны все условия сразу: браслет не использован и не разрезан, есть чек, возврат до четверга 6 p.m. В остальных вариантах нарушено одно из них.",
+"«Wristbands can be transferred… let us know the new name before the festival opens on Friday»."
+],
+"R-RDL-B-114": [
+"«…they close at four today».",
+"Vocabulary|«Keep the box flat; the decorations are delicate». Delicate — хрупкий, легко повредить, поэтому коробку держат ровно.",
+"«Please bring it to my flat instead. The restaurant won't store outside food before six»."
+],
+"R-RDL-B-115": [
+"«Call the shop to reserve an item for collection; adding it to an online wish list does not hold it».",
+"Inference|«Sizes shown online reflect yesterday's stock and may sell out during the day» — данные на сайте не обновляются в реальном времени.",
+"«…refunds are available only for faulty goods». Обмен на другой размер возможен, а деньги возвращают только за брак."
+],
+"R-RDL-B-116": [
+"«Deliveries arriving during the work will be directed to the garden gate; please update any delivery instructions you have saved online».",
+"«The garden path is narrow, so bicycles must be pushed rather than ridden».",
+"«…contact the caretaker by Wednesday evening to discuss the temporary route» — обсудить, как пройти временным путём."
+],
+"R-RDL-B-117": [
+"«Each pair needs one phone with a timer and one clipboard; clipboards will be supplied». Планшеты выдадут, а телефон нужен свой.",
+"Inference|«…rather than collect data under very different conditions» — в сильный дождь условия подсчёта слишком изменятся, данные будет не сравнить.",
+"«If you cannot work Sunday, tell me now so I can plan replacement pairs»."
+],
+"R-RDL-B-118": [
+"Залог $20 — «refundable», плата за аренду $4 не возвращается. $24 — вся сумма.",
+"Стойка аудиогидов закрывается в 5:30, поэтому в 5:45 сдают на ресепшен: «If you return later, use the reception desk».",
+"«…reception can record the return but cannot process card refunds. In that case, your deposit will be refunded the next working day»."
+],
+"R-RDL-B-119": [
+"«Printing costs extra». Wi-Fi и чай входят в дневной пропуск.",
+"«Phone calls must be taken in the corridor booth».",
+"«…walk-in access depends on spare desks» — без брони пустят, только если есть свободный стол."
+],
+"R-RDL-B-120": [
+"«…with one trained person handling each ladder». Детям лестницы запрещены.",
+"Vocabulary|Sound apples — целые, хорошие яблоки, в отличие от bruised fruit (побитых). Значение «звук» здесь не подходит.",
+"«We will share sound apples among volunteers after setting aside the quantity promised to the food pantry»."
+]
+}

@@ -1,0 +1,72 @@
+{
+"B1": [
+"B|Маскировка — это связь животного с конкретным фоном, светом и наблюдателем, а не просто окраска.",
+"C|«A darker upper side and lighter underside… This arrangement is called countershading».",
+"D|Conspicuous — бросающийся в глаза, заметный. Противопоставление: заметный на выставке, но эффективный в природе.",
+"B|Хищники видят цвета иначе, поэтому человеческий глаз — ненадёжный судья маскировки.",
+"D|Inference|«Experiments may compare detection against several backgrounds and under different lighting conditions» — проверка в условиях, близких к природным."
+],
+"B2": [
+"B|Записи годичных колец требуют сопоставления узоров из разных деревьев и осторожной интерпретации.",
+"A|«Aligning these sequences helps establish which rings formed during the same years. This process, called crossdating…»",
+"C|Extend a sequence further into the past — продлить ряд, увеличить охват во времени.",
+"C|Сравнение с записанной погодой помогает понять, какой сигнал хранят деревья: «identify what kind of signal the trees preserve».",
+"D|Inference|Даже точно датированное кольцо не говорит само, какой фактор сделал его узким: «A narrow ring is therefore not automatically evidence of one specific climatic event»."
+],
+"B3": [
+"D|Текст о практике извлечения и о том, почему ощущение знакомости — не доказательство усвоения.",
+"A|«A student might close a book and explain a concept…»",
+"A|Retention — сохранение информации в памяти.",
+"C|После неудачной попытки обратная связь помогает исправить ошибку: «Checking accurate feedback afterward helps connect the question with the correct information».",
+"D|Inference|«The ease of a learning activity cannot by itself establish how well the information will remain available» — лёгкость не доказательство."
+],
+"B4": [
+"D|Ледяные керны хранят ценные данные, но их нужно читать с учётом того, как формировались слои и пузырьки газа.",
+"B|«Air may remain connected to the atmosphere through spaces in the snow before those spaces close. Consequently, the gas… can be younger».",
+"A|Distort — искажать, изменять исходную форму.",
+"A|«A pattern found in more than one record can help distinguish a regional feature from a wider event».",
+"A|«Understanding how the archive formed is essential to understanding what it can reveal»."
+],
+"B5": [
+"B|Сезонное предложение и практические ограничения (хранение, перевозка) влияют на цены продуктов.",
+"C|«…sellers may lower prices to attract buyers before the produce spoils».",
+"C|Offset — уравновешивать, компенсировать.",
+"B|Культура, которая хорошо хранится, продаётся постепенно, а скоропортящаяся создаёт «greater pressure to sell quickly».",
+"B|Inference|«Several causes may produce a similar visible result», и высокая цена не обязательно значит, что покупатели больше ценят продукт. По одной цене причину не установить."
+],
+"B6": [
+"B|Форма крыши сочетает практические условия и культурные традиции.",
+"A|«A broad overhang can protect walls and entrances».",
+"D|Dictates — диктует, полностью определяет.",
+"A|При одинаковом количестве осадков общины строят разные крыши — один климат различий не объясняет.",
+"A|Inference|«Its continued use may express identity rather than technical necessity alone»."
+],
+"B7": [
+"C|Текст о том, как заимствованные слова приходят в язык, меняются и как их изучают.",
+"D|«Its meaning can become narrower or broader than in the source language».",
+"A|Prestige — престиж, социальное уважение.",
+"C|«The earliest surviving written example does not necessarily mark the first spoken use» — ограничение письменных источников.",
+"D|Inference|Слово может выглядеть похоже, но работать иначе: «look similar while functioning differently in each». Употребление нужно проверять."
+],
+"B8": [
+"B|Проекции карт всегда идут на компромисс, и проекцию выбирают под задачу карты.",
+"A|«A projection may preserve local angles while changing relative areas».",
+"D|Geographic extent — охват территории, какую область покрывает карта.",
+"C|Увеличенные высокоширотные районы — пример того, как искажение вводит в заблуждение при сравнении площадей.",
+"A|Inference|Для сравнения площадей нужно знать, сохраняет ли проекция площадь, иначе «misleading conclusions»."
+],
+"B9": [
+"D|Апвеллинг соединяет питательные вещества глубин со светом у поверхности и поддерживает жизнь в океане.",
+"C|«Winds help move surface water away, allowing colder water from below to replace it».",
+"B|Depleted — истощённый, уменьшившийся в результате использования.",
+"D|Холодная, но продуктивная вода показывает, что температура — неполный ориентир: «Temperature alone is thus an incomplete guide».",
+"D|«More nutrients do not guarantee… light, grazing, and other conditions also affect growth»."
+],
+"B10": [
+"C|Техника ткачества определяет узоры и то, как их интерпретировать.",
+"D|Нити образуют сетку, поэтому «Designers may simplify curves… or use stepped edges».",
+"A|Motif — элемент узора, мотив.",
+"C|Изнанка и структура нитей дают информацию о том, как сделана ткань, сверх лицевой стороны.",
+"B|Inference|«Two cloths that look alike can have different construction methods» — по внешнему сходству нельзя установить одинаковую технику."
+]
+}
