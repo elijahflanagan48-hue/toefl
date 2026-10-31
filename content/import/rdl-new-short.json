@@ -1,0 +1,639 @@
+[
+ {
+  "id": "R-RDL-A-004",
+  "level": "A",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "LIBRARY PRINTER",
+   "paras": [
+    "Out of order today. Please use the printer on the second floor. Printing is free until Friday."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Where can students print today?",
+    "opts": [
+     "On the second floor",
+     "At the main desk",
+     "At home only",
+     "In the café"
+    ],
+    "a": 0,
+    "ex": "«Please use the printer on the second floor» — этот принтер не работает, печатать нужно на втором этаже."
+   },
+   {
+    "type": "Factual",
+    "stem": "What is true about printing this week?",
+    "opts": [
+     "It costs more than usual.",
+     "It is not possible until Friday.",
+     "It is free until Friday.",
+     "It needs a library card."
+    ],
+    "a": 2,
+    "ex": "«Printing is free until Friday». Печатать можно, просто на другом этаже."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-005",
+  "level": "A",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Sam",
+     "time": "7:40 AM",
+     "text": "Bus is late again. Can you save me a seat in class?"
+    },
+    {
+     "who": "Lucy",
+     "time": "7:42 AM",
+     "text": "Sure! Back row, near the window."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why does Sam write to Lucy?",
+    "opts": [
+     "He forgot his book.",
+     "He wants to sit with her on the bus.",
+     "He cannot find the classroom.",
+     "His bus is late."
+    ],
+    "a": 3,
+    "ex": "«Bus is late again. Can you save me a seat» — автобус опаздывает, и Сэм просит занять ему место."
+   },
+   {
+    "type": "Factual",
+    "stem": "Where will Sam sit?",
+    "opts": [
+     "Next to the teacher",
+     "On the bus",
+     "In the front row",
+     "In the back row near the window"
+    ],
+    "a": 3,
+    "ex": "«Back row, near the window»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-006",
+  "level": "A",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "POOL CLOSED",
+   "paras": [
+    "The swimming pool is closed on Monday for cleaning. It opens again on Tuesday at 7 a.m. The gym stays open."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why is the pool closed on Monday?",
+    "opts": [
+     "It is being cleaned.",
+     "It is a holiday.",
+     "There is a swimming race.",
+     "The gym is busy."
+    ],
+    "a": 0,
+    "ex": "«…closed on Monday for cleaning»."
+   },
+   {
+    "type": "Inference",
+    "stem": "What can a visitor most likely do on Monday?",
+    "opts": [
+     "Swim before 7 a.m.",
+     "Clean the pool",
+     "Use the gym",
+     "Swim after lunch"
+    ],
+    "a": 2,
+    "ex": "«The gym stays open» — в понедельник можно позаниматься в спортзале, а бассейн закрыт весь день."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-007",
+  "level": "A",
+  "genre": "social",
+  "doc": {
+   "kind": "post",
+   "who": "Jonah",
+   "handle": "Hall C Residents",
+   "paras": [
+    "Found: a black umbrella in the laundry room this morning. It's at my door, room 214. Message me if it's yours!"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is the post mainly about?",
+    "opts": [
+     "An umbrella someone found",
+     "A lost key",
+     "A broken washing machine",
+     "A new room number"
+    ],
+    "a": 0,
+    "ex": "«Found: a black umbrella» — Джона нашёл зонт и ищет владельца."
+   },
+   {
+    "type": "Factual",
+    "stem": "What should the owner do?",
+    "opts": [
+     "Go to the laundry room",
+     "Buy a new umbrella",
+     "Send Jonah a message",
+     "Wait until tomorrow"
+    ],
+    "a": 2,
+    "ex": "«Message me if it's yours!»"
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-008",
+  "level": "A",
+  "genre": "menu",
+  "doc": {
+   "kind": "table",
+   "head": "CAMPUS CAFÉ · TODAY",
+   "rows": [
+    [
+     "Soup of the day",
+     "$4"
+    ],
+    [
+     "Pasta",
+     "$7"
+    ],
+    [
+     "Soup + bread",
+     "$5"
+    ]
+   ],
+   "foot": "Students get 10% off with a student card."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much is soup with bread?",
+    "opts": [
+     "$4",
+     "$7",
+     "$9",
+     "$5"
+    ],
+    "a": 3,
+    "ex": "В меню: «Soup + bread — $5». $4 — суп без хлеба."
+   },
+   {
+    "type": "Factual",
+    "stem": "How can students pay less?",
+    "opts": [
+     "By ordering two meals",
+     "By coming early",
+     "By paying in cash",
+     "By showing a student card"
+    ],
+    "a": 3,
+    "ex": "«Students get 10% off with a student card»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-004",
+  "level": "B",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "BIKE RACK NOTICE",
+   "paras": [
+    "Bikes left at the east rack after May 30 will be removed so the area can be repaired. Use the west rack meanwhile. Removed bikes can be collected from Security."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why will bikes be removed from the east rack?",
+    "opts": [
+     "The area will be repaired.",
+     "They are parked illegally.",
+     "Security needs more space.",
+     "The rack is being sold."
+    ],
+    "a": 0,
+    "ex": "«…will be removed so the area can be repaired»."
+   },
+   {
+    "type": "Inference",
+    "stem": "What will most likely happen to a bike left at the east rack on June 2?",
+    "opts": [
+     "It will be repaired for free.",
+     "It will be moved to the west rack.",
+     "It will be taken to Security.",
+     "It will be given away."
+    ],
+    "a": 2,
+    "ex": "После 30 мая велосипеды уберут, а «Removed bikes can be collected from Security» — значит, велосипед окажется у охраны."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-005",
+  "level": "B",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Aisha",
+     "time": "3:05 PM",
+     "text": "Lab report's due at 5, not tomorrow. Did you see the email?"
+    },
+    {
+     "who": "Ben",
+     "time": "3:07 PM",
+     "text": "No! I'll finish the graphs now. Can you check the conclusion?"
+    },
+    {
+     "who": "Aisha",
+     "time": "3:08 PM",
+     "text": "Send it over."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What did Aisha learn from the email?",
+    "opts": [
+     "The deadline is earlier than they thought.",
+     "The lab is closed tomorrow.",
+     "Ben's graphs are wrong.",
+     "The report has been cancelled."
+    ],
+    "a": 0,
+    "ex": "«Lab report's due at 5, not tomorrow» — срок сдачи сегодня в 5, раньше, чем они думали."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does Aisha mean by \"Send it over\"?",
+    "hlw": "Send it over",
+    "opts": [
+     "She will deliver the report herself.",
+     "She asks Ben to email the teacher.",
+     "She wants Ben to share the conclusion with her.",
+     "She refuses to help."
+    ],
+    "a": 2,
+    "ex": "Бен просит проверить вывод, и Айша отвечает «Send it over» — «присылай». Она готова посмотреть текст."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-006",
+  "level": "B",
+  "genre": "web",
+  "doc": {
+   "kind": "notice",
+   "head": "Language Café · This Thursday",
+   "paras": [
+    "Practice Spanish, French, or Japanese with native speakers. Free, no booking — just bring a mug, since we no longer provide paper cups. 6–8 p.m., Student Union, Room 3."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What should participants bring?",
+    "opts": [
+     "A booking confirmation",
+     "A textbook",
+     "Paper cups for everyone",
+     "Their own cup"
+    ],
+    "a": 3,
+    "ex": "«…just bring a mug, since we no longer provide paper cups»."
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about the Language Café?",
+    "opts": [
+     "It is only for native speakers.",
+     "It charges a small fee.",
+     "It meets every evening.",
+     "It used to provide paper cups."
+    ],
+    "a": 3,
+    "ex": "«We no longer provide paper cups» — раньше стаканчики выдавали. Мероприятие бесплатное, и сказано только про этот четверг."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-007",
+  "level": "B",
+  "genre": "receipt",
+  "doc": {
+   "kind": "receipt",
+   "head": "QUICKFIX PHONES",
+   "meta": "Repair ticket 4471",
+   "rows": [
+    [
+     "Screen repair",
+     "$60"
+    ],
+    [
+     "Paid",
+     "$20"
+    ],
+    [
+     "Balance",
+     "$40"
+    ]
+   ],
+   "foot": "Ready Wednesday after 2 p.m. Bring this ticket."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much must the customer still pay?",
+    "opts": [
+     "$40",
+     "$20",
+     "$60",
+     "$80"
+    ],
+    "a": 0,
+    "ex": "«Balance — $40»: ремонт стоит $60, $20 уже оплачено."
+   },
+   {
+    "type": "Factual",
+    "stem": "When can the phone be collected?",
+    "opts": [
+     "Wednesday morning",
+     "Any time on Tuesday",
+     "Wednesday after 2 p.m.",
+     "After the balance is paid online"
+    ],
+    "a": 2,
+    "ex": "«Ready Wednesday after 2 p.m.»"
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-008",
+  "level": "B",
+  "genre": "social",
+  "doc": {
+   "kind": "post",
+   "who": "Green Commons",
+   "handle": "@greencommons",
+   "paras": [
+    "Tree planting moved to Sunday because of storms. Same time, same place. Gloves provided, but bring your own water bottle — we're going plastic-free!"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why was the event moved?",
+    "opts": [
+     "Storms were expected",
+     "Not enough volunteers signed up",
+     "The place was unavailable",
+     "Gloves did not arrive"
+    ],
+    "a": 0,
+    "ex": "«Tree planting moved to Sunday because of storms»."
+   },
+   {
+    "type": "Factual",
+    "stem": "What has stayed the same?",
+    "opts": [
+     "The day of the event",
+     "The need to bring gloves",
+     "The time and location",
+     "The plastic bottles provided"
+    ],
+    "a": 2,
+    "ex": "«Same time, same place» — поменялся только день."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-004",
+  "level": "C",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "RESERVED STUDY ROOMS",
+   "paras": [
+    "Rooms not claimed within 15 minutes of the booking start are released to walk-in users. Repeated no-shows may lead to a two-week booking suspension."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What happens if a student arrives 20 minutes after their booking starts?",
+    "opts": [
+     "The room is kept for the full hour.",
+     "The student must pay a fee.",
+     "The booking is moved to the next day.",
+     "The room may already have been given to someone else."
+    ],
+    "a": 3,
+    "ex": "Если не занять комнату в течение 15 минут, она «released to walk-in users». Через 20 минут её уже могли отдать."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"no-shows\" in the notice refers to",
+    "hlw": "no-shows",
+    "opts": [
+     "rooms without windows",
+     "students who arrive early",
+     "cancelled events",
+     "bookings that people do not use"
+    ],
+    "a": 3,
+    "ex": "No-show — неявка: человек забронировал комнату и не пришёл."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-005",
+  "level": "C",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Registrar's Office",
+   "to": "All students",
+   "subject": "Exam timetable",
+   "paras": [
+    "The draft exam timetable is now online. Report clashes by March 3; after that, changes will be considered only for documented emergencies."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What should a student with two exams at the same time do?",
+    "opts": [
+     "Report the clash by March 3",
+     "Wait for the final timetable",
+     "Choose one exam to skip",
+     "Ask a classmate to change exams"
+    ],
+    "a": 0,
+    "ex": "«Report clashes by March 3». Clash — накладка: два экзамена в одно время."
+   },
+   {
+    "type": "Inference",
+    "stem": "What is suggested about requests made after March 3?",
+    "opts": [
+     "They will always be accepted.",
+     "They must be made in person.",
+     "They need evidence of an emergency.",
+     "They are free of charge."
+    ],
+    "a": 2,
+    "ex": "После 3 марта изменения рассматривают «only for documented emergencies» — нужна подтверждённая чрезвычайная ситуация."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-006",
+  "level": "C",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "msgs": [
+    {
+     "who": "Theo",
+     "time": "9:12 PM",
+     "text": "Landlord says the heating fix is Friday, but only if someone's home to let them in."
+    },
+    {
+     "who": "Mara",
+     "time": "9:15 PM",
+     "text": "I've got lectures all day. Could you swap your shift?"
+    },
+    {
+     "who": "Theo",
+     "time": "9:16 PM",
+     "text": "I'll ask. Otherwise it's next week."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What condition must be met for the repair to happen on Friday?",
+    "opts": [
+     "Someone must be at home.",
+     "The landlord must pay first.",
+     "Mara must cancel her lectures.",
+     "The heating must be turned off."
+    ],
+    "a": 0,
+    "ex": "«…only if someone's home to let them in»."
+   },
+   {
+    "type": "Inference",
+    "stem": "What will most likely happen if Theo cannot change his shift?",
+    "opts": [
+     "Mara will miss her lectures.",
+     "The landlord will enter without them.",
+     "The repair will be delayed until next week.",
+     "They will fix the heating themselves."
+    ],
+    "a": 2,
+    "ex": "«I'll ask. Otherwise it's next week» — если смену поменять не выйдет, ремонт перенесут на следующую неделю."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-007",
+  "level": "C",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "FREE FLU VACCINATIONS",
+   "paras": [
+    "Walk-in clinic, Health Centre, Oct 10–14. Bring your student ID. Those with appointments are seen first; walk-in waiting times may exceed an hour at midday."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "Which student is likely to wait the least?",
+    "opts": [
+     "A walk-in student arriving at noon",
+     "A student without an ID",
+     "A walk-in student on October 15",
+     "A student with an appointment"
+    ],
+    "a": 3,
+    "ex": "«Those with appointments are seen first» — меньше всех ждёт тот, кто записан. 15 октября клиника уже не работает."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"exceed\" in the notice is closest in meaning to",
+    "hlw": "exceed",
+    "opts": [
+     "be shorter than",
+     "be equal to",
+     "be counted as",
+     "be longer than"
+    ],
+    "a": 3,
+    "ex": "Exceed — превышать: ожидание может быть дольше часа."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-008",
+  "level": "C",
+  "genre": "social",
+  "doc": {
+   "kind": "post",
+   "who": "Dana",
+   "handle": "Grad Student Network",
+   "paras": [
+    "Selling last year's statistics textbook, $25. Note: the course switched editions, so check your syllabus before messaging — the old one won't match the assigned page numbers."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why does Dana tell buyers to check their syllabus?",
+    "opts": [
+     "The course now uses a different edition.",
+     "The book is damaged.",
+     "The price has changed.",
+     "The book is for a different course."
+    ],
+    "a": 0,
+    "ex": "«The course switched editions… the old one won't match the assigned page numbers»."
+   },
+   {
+    "type": "Inference",
+    "stem": "Who would most likely find Dana's book useful?",
+    "opts": [
+     "A student who needs the new edition",
+     "A student who wants the assigned page numbers to match the new edition",
+     "A student whose course still uses last year's edition",
+     "A teacher writing a new syllabus"
+    ],
+    "a": 2,
+    "ex": "Книга — прошлогоднее издание, поэтому подойдёт тому, у кого в программе это издание."
+   }
+  ]
+ }
+]
