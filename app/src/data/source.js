@@ -70,7 +70,7 @@ export async function works() {
   if (!isLive()) return M.works;
   const r = await get('/me/submissions');
   return r.submissions.map(s => ({
-    k: s.section, nm: TASK_NAMES[s.task] || s.task, mt: s.prompt?.title || s.prompt?.subject || '', when: dayLabel(s.submitted_at || s.created_at),
+    id: s.id, task: s.task, k: s.section, nm: TASK_NAMES[s.task] || s.task, mt: s.prompt?.title || s.prompt?.subject || s.prompt?.course || '', when: dayLabel(s.submitted_at || s.created_at),
     status: s.status === 'pending' ? 'review' : s.status === 'draft' ? 'draft' : null, score: s.score
   }));
 }
@@ -92,6 +92,17 @@ export async function queue(section) {
     id: q.id, student: q.student, k: q.section, task: TASK_NAMES[q.task] || q.task, taskCode: q.task,
     title: q.prompt?.title || q.prompt?.subject || '', when: ago(q.submitted_at), words: q.words, dur: q.parts ? q.parts + ' отв.' : null, late: q.late
   }));
+}
+
+/** item ids of Writing prompts this student already submitted (to offer new ones first) */
+export async function myWritingItems() {
+  if (!isLive()) return [];
+  const r = await get('/me/submissions');
+  return [...new Set(r.submissions.filter(s => s.section === 'W' && s.item_id).map(s => s.item_id))].slice(0, 50);
+}
+export async function submitWriting({ task, item_id, prompt, text }) {
+  if (!isLive()) return { id: null, status: 'demo' };
+  return post('/submissions', { section: 'W', task, item_id, prompt, text });
 }
 
 export async function submission(id) {

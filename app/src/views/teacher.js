@@ -1,3 +1,4 @@
+import { RUBRIC, CRIT, markedHtml, notesHtml, selectionOffsets, promptBlock } from '../lib/writing.js';
 import { bank, emailWork } from '../data/mock.js';
 import * as src from '../data/source.js';
 import { isLive, audioUrl } from '../lib/api.js';
@@ -111,27 +112,11 @@ export async function reviewList() {
 on('qf', el => { pref.set('qf', el.dataset.v); rerender(); });
 
 /* ---------------- Проверка: одна работа ---------------- */
-const RUBRIC = {
-  email: ['Не по теме, пусто или скопировано', 'Почти непонятно, «телеграфный» язык', 'Попытка есть, но сообщение трудно понять', 'Задача решена частично, заметные ошибки', 'В основном эффективно, мало ошибок', 'Полностью эффективно, разнообразный и точный язык'],
-  dsc: ['Не по теме, пусто или скопировано', 'Нет связных идей, язык из промпта', 'Идеи трудно отследить, слабо развёрнуто', 'В основном понятно, часть объяснения не хватает', 'Релевантно и развёрнуто, мало ошибок', 'Очень ясный вклад, точный и разнообразный язык'],
-  interview: ['Нет ответа или не по теме', 'Отдельные слова, почти неразборчиво', 'Слабо связано с вопросом, трудно понять', 'Отвечает, но ограниченно, паузы мешают', 'Развёрнуто и понятно, небольшие шероховатости', 'Полно, бегло, точный и разнообразный язык'],
-  lrp: ['Нет ответа / неразборчиво', 'Несколько слов', 'Значительная часть пропущена', 'Почти полностью, но смысл неточен', 'Смысл сохранён, мелкие замены', 'Точное повторение, разборчиво']
-};
-const CRIT = {
-  email: ['Закрыт пункт 1', 'Закрыт пункт 2', 'Закрыт пункт 3', 'Уместный регистр и вежливые формулы', 'Связность', 'Нет заученных шаблонов'],
-  dsc: ['Чёткая позиция', 'Новый вклад, не повтор постов', 'Причины и примеры', 'Не меньше 100 слов', 'Связность', 'Нет «воды» и шаблонов'],
-  interview: ['Отвечает на вопрос', 'Развёрнутость на 45 с', 'Беглость и темп', 'Разборчивость', 'Грамматика и лексика'],
-  lrp: ['Знаменательные слова на месте', 'Служебные слова', 'Разборчивость', 'Ритм и ударение']
-};
 const kindOf = task => ({ eml: 'email', dsc: 'dsc', int: 'interview', lrp: 'lrp' }[task] || 'email');
 
 function promptHtml(task, p) {
   if (!p) return '';
-  if (task === 'eml') return `<div class="card pad prompt"><div class="pr-k">${ic('file', 16)} Write an Email · 7 мин</div>
-    ${p.situation ? `<p>${esc(p.situation)}</p>` : ''}${p.bullets ? `<ul>${p.bullets.map(b => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}</div>`;
-  if (task === 'dsc') return `<div class="card pad prompt"><div class="pr-k">${ic('file', 16)} Academic Discussion · 10 мин</div>
-    ${p.professor ? `<p><b>${esc(p.professor.name || 'Professor')}:</b> ${esc(p.professor.text || '')}</p>` : ''}
-    ${(p.students || []).map(s => `<p class="mut"><b>${esc(s.name)}:</b> ${esc(s.text)}</p>`).join('')}</div>`;
+  if (task === 'eml' || task === 'dsc') return `<div class="card pad prompt">${promptBlock(task, p, { compact: true })}</div>`;
   return `<div class="card pad prompt"><div class="pr-k">${ic('mic', 16)} ${task === 'int' ? 'Take an Interview · 45 с на ответ' : 'Listen and Repeat'}</div>${p.scenario ? `<p>${esc(p.scenario)}</p>` : ''}</div>`;
 }
 
@@ -152,12 +137,16 @@ export async function reviewItem(params) {
   const sel = pref.get('score.' + q.id, null) ?? (prev ? Math.round(prev.score) : null);
   const nParts = live ? Math.max(sub.parts, audios.length) : 4;
   const partScores = live && prev?.parts ? prev.parts : [];
+  const demoMarks = [{ s: (text || '').indexOf('enough academic'), e: (text || '').indexOf('enough academic') + 15, q: 'enough academic', note: 'Порядок слов: academic enough — «enough» ставится после прилагательного.' }].filter(m => m.s >= 0);
+  const marks = pref.get('marks.' + q.id, null) ?? (live ? prev?.marks || [] : demoMarks);
+  RV = { id: q.id, text: text || '', sel: null, marks };
 
   const work = isW ? `${promptHtml(task, prompt)}
     <div class="card pad paper">
       ${task === 'eml' && prompt ? `<div class="mailhd"><span>To:</span> ${esc(prompt.to || '')}<br><span>Subject:</span> ${esc(prompt.subject || '')}</div>` : ''}
-      <div class="mailbody">${live ? esc(text).replace(/\n/g, '<br>') : esc(text || '').replace('enough academic', '<mark class="cm" data-n="1">enough academic</mark>').replace(/\n/g, '<br>')}</div>
-      ${live ? '' : `<div class="cmts"><div class="cmt"><b>1</b> Порядок слов: <i>academic enough</i> — «enough» ставится после прилагательного.</div></div>`}
+      <div class="mailbody pre" id="mbody">${markedHtml(text || '', marks)}</div>
+      ${notesHtml(marks, { edit: true })}
+      <div class="markbar"><button class="btn sm" data-act="mark-add">${ic('plus', 15)} Комментарий к фрагменту</button><span class="fade small">Выделите слово или фразу в тексте и нажмите кнопку</span></div>
       <div class="paper-ft fade">${q.words || 0} слов${task === 'dsc' && q.words < 100 ? ' · <span class="badtx">меньше 100</span>' : ''}</div>
     </div>`
     : `${promptHtml(task, prompt) || `<div class="card pad prompt"><div class="pr-k">${ic('mic', 16)} ${esc(q.task)}</div></div>`}
@@ -186,7 +175,10 @@ export async function reviewItem(params) {
   return {
     title: 'Проверка', wide: true,
     html: `${hdr(q.task, { back: '#/t/review', sub: q.student + (q.title ? ' · ' + q.title : '') })}<div class="g-review"><div class="work">${work}</div>${panel}</div>`,
+    unmount() { document.onselectionchange = null; },
     mount(root) {
+      const mb = root.querySelector('#mbody');
+      if (mb) document.onselectionchange = () => { const o = selectionOffsets(mb); if (o) RV.sel = o; };
       if (!live) return;
       root.querySelectorAll('audio[data-sub]').forEach(a => {
         a.addEventListener('play', async function load() {
@@ -205,6 +197,26 @@ export async function reviewItem(params) {
     }
   };
 }
+let RV = null;
+on('mark-add', () => {
+  const o = RV?.sel;
+  if (!o) { toast('Сначала выделите фрагмент текста'); return; }
+  modal(`<h2>Комментарий</h2><p class="mut" style="margin-bottom:10px">«${esc(RV.text.slice(o.s, o.e).slice(0, 120))}»</p>
+    <textarea class="inp" id="mnote" rows="3" placeholder="Что не так и как правильно"></textarea>
+    <div class="row-btns" style="margin-top:12px"><button class="btn" data-act="modal-close">Отмена</button><button class="btn pri" data-act="mark-save">Добавить</button></div>`);
+  RV.pending = { o };
+});
+on('mark-save', () => {
+  const note = document.getElementById('mnote')?.value.trim();
+  if (!note) { toast('Напишите комментарий'); return; }
+  const { o } = RV.pending;
+  const cur = (pref.get('marks.' + RV.id, null) ?? RV.marks).filter(m => m.e <= o.s || m.s >= o.e);
+  cur.push({ s: o.s, e: o.e, q: RV.text.slice(o.s, o.e).slice(0, 120), note: note.slice(0, 600) });
+  cur.sort((a, b) => a.s - b.s);
+  pref.set('marks.' + RV.id, cur); RV.sel = null; window.getSelection()?.removeAllRanges();
+  document.getElementById('layer').innerHTML = ''; rerender();
+});
+on('mark-del', el => { const cur = [...(pref.get('marks.' + RV.id, null) ?? RV.marks)]; cur.splice(Number(el.dataset.i), 1); pref.set('marks.' + RV.id, cur); rerender(); });
 on('score', el => { pref.set('score.' + el.dataset.q, Number(el.dataset.n)); rerender(); });
 on('mini', el => { pref.set('sc.' + el.dataset.q + '.' + el.dataset.i, Number(el.dataset.n)); rerender(); });
 on('save-score', async el => {
@@ -215,12 +227,14 @@ on('save-score', async el => {
   const comment = document.getElementById('rcomment')?.value || '';
   if (!isLive()) { toast('Оценка сохранена (демо)'); setTimeout(() => { location.hash = '#/t/review'; }, 500); return; }
   const payload = { criteria, comment };
+  const marks = pref.get('marks.' + id, null);
+  if (marks) payload.marks = marks;
   if (score != null) payload.score = score;
   if (nParts && parts.every(x => x != null)) payload.parts = parts;
   if (payload.score == null && !payload.parts) { toast(nParts ? 'Поставьте итоговый балл или баллы за каждый ответ' : 'Поставьте балл'); return; }
   try {
     await src.rate(id, payload);
-    pref.set('score.' + id, null); parts.forEach((_, i) => pref.set('sc.' + id + '.' + i, null));
+    pref.set('score.' + id, null); pref.set('marks.' + id, null); parts.forEach((_, i) => pref.set('sc.' + id + '.' + i, null));
     toast('Оценка сохранена'); location.hash = '#/t/review';
   } catch (e) { toast(e.message); }
 });

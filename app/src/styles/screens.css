@@ -310,3 +310,24 @@ body.authing .app{max-width:none;padding:0;margin:0}
 .nodate{color:var(--hero-tx)!important}.nodate b{display:block;font-size:24px;color:var(--gold-2)}
 .auth-brand>b{font-family:var(--ffd);font-size:19px}
 a.qb{color:inherit!important}
+
+/* writing: review & student result */
+.mailbody.pre{white-space:pre-wrap}
+.markbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.cmt{margin:6px 0;line-height:1.5}
+.cmt .cq{color:var(--mut);font-style:italic}
+.cmt .lnk.sm{font-size:12.5px;margin-left:4px}
+.prompt .wprompt{font-size:14.5px}
+.prompt .post{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.prompt .post.prof{border-top:0;padding-top:0}
+.prompt .post p{margin:2px 0 0}
+.prompt .pav{flex:0 0 30px;height:30px;border-radius:50%;background:var(--pri);color:var(--on-pri);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.prompt .pav.s{background:var(--line);color:var(--tx)}
+.wscore{display:flex;align-items:baseline;gap:6px;margin:4px 0 6px}
+.wscore b{font-size:44px;line-height:1}
+.wscore span{color:var(--fade);font-weight:650}
+.critlist{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.critlist li{display:flex;align-items:center;gap:8px}
+.critlist li.ok svg{color:var(--ok)}
+.critlist li.no{color:var(--mut)}.critlist li.no svg{color:var(--bad, #c0392b)}
+.wcomment{white-space:pre-wrap;font-size:14.5px;line-height:1.55}

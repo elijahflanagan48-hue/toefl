@@ -211,3 +211,43 @@ mark.xhl{background:#ffe9a8;color:inherit;padding:0 2px}
 .drag-ghost{position:fixed;left:0;top:0;z-index:100;pointer-events:none;box-shadow:0 10px 24px rgba(0,0,0,.18);opacity:.95}
 .bas .xhint{margin-top:12px}
 @media (max-width:640px){.bub p,.frame{font-size:16px}.slot{min-width:60px}.chunk{font-size:15.5px;padding:8px 11px}}
+
+/* ---------- writing: Email / Academic Discussion (exam-like editor) ---------- */
+.wprompt{font-size:15.5px;line-height:1.6}
+.wprompt p{margin:0 0 12px}
+.wprompt ul{margin:0 0 12px;padding-left:22px}
+.wprompt li{margin:4px 0}
+.wp-k{font-weight:700}
+.wp-tip{color:var(--x-mut);font-size:14px}
+.post{display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--x-line)}
+.post.prof{border-top:0;padding-top:4px}
+.post b{display:block;font-size:14.5px}
+.post i{display:block;font-style:normal;font-size:12.5px;color:var(--x-mut)}
+.post p{margin:4px 0 0;font-size:15px;line-height:1.6}
+.pav{flex:0 0 36px;height:36px;border-radius:50%;background:#2b3140;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.pav.s{background:#d7dbe2;color:#2b3140}
+.wtips{margin-top:16px;border:1px solid var(--x-line);border-radius:8px;padding:10px 14px;background:#f7f8fa;font-family:var(--ff);font-size:14px}
+.wtips summary{cursor:pointer;font-weight:700;display:flex;align-items:center;gap:6px;color:#2b3140}
+.wtips ul{margin:8px 0 2px;padding-left:20px}.wtips li{margin:4px 0;color:#3a4150}
+.wother{margin-top:14px;display:inline-flex;align-items:center;gap:6px;color:#5b6271;font-family:var(--ff)}
+.weditor{display:flex;flex-direction:column;gap:10px}
+.wtools{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.wtb{height:30px;padding:0 12px;border:1px solid var(--x-line);border-radius:5px;background:#f7f8fa;font:600 13.5px var(--ff-exam);color:var(--x-tx)}
+.wtb:hover{background:#eceff3}
+.wcount{margin-left:auto;font-size:13.5px;color:var(--x-mut)}
+.wcount b{color:var(--x-tx);font-variant-numeric:tabular-nums}
+.xbtn.link.dark{color:#5b6271;font-size:13px}
+.wmail{border:1px solid var(--x-line);border-bottom:0;border-radius:4px 4px 0 0;padding:8px 12px;font-size:14.5px;background:#fafbfc}
+.wmail span{display:inline-block;width:64px;color:var(--x-mut);font-weight:600}
+.wtext{width:100%;min-height:300px;flex:1;resize:vertical;border:1px solid var(--x-line);border-radius:4px;padding:12px 14px;background:#fff;
+  font:16px/1.65 var(--ff-exam);color:var(--x-tx);outline:none}
+.wtext.mail{border-radius:0 0 4px 4px}
+.wtext:focus{border-color:#8a94a6;box-shadow:0 0 0 3px rgba(43,49,64,.08)}
+.wmin{margin:0;font-size:13px;color:#a05a00;font-weight:600}
+.wmin.ok{color:#1b7a4d}
+.wsent{white-space:pre-wrap}
+@media (min-width:900px){
+  .writing .xbody.two{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+  .weditor .wtext{min-height:0;height:100%}
+}
+@media (max-width:640px){ .wtext{min-height:260px} .wcount{margin-left:0} }

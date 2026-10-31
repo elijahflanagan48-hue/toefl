@@ -52,9 +52,9 @@ export default async function progress() {
           <div class="eb-n serif">23</div><div class="t"><div class="nm">ошибки ждут повтора</div><div class="mt">6 на сегодня · чаще всего Inference и Rhetorical Purpose</div></div>${ic('right', 20)}
         </a>`}
         <div class="lbl">Мои тексты и записи</div>
-        ${works.length ? `<div class="card rows">${works.map(w => `<div class="row c${w.k}"><span class="sq">${ic(SEC[w.k].ic, 19)}</span>
+        ${works.length ? `<div class="card rows">${works.map(w => `<${w.id ? `a href="#/work/${w.id}"` : 'div'} class="row c${w.k}"><span class="sq">${ic(SEC[w.k].ic, 19)}</span>
           <div class="t"><div class="nm">${w.nm}</div><div class="mt">${w.mt ? w.mt + ' · ' : ''}${w.when}</div></div>
-          <div class="end">${w.status ? st[w.status] : w.score != null ? `<b class="serif big">${band(w.score)}</b><span class="fade">/5</span>` : ''}</div></div>`).join('')}</div>`
+          <div class="end">${w.status ? st[w.status] : w.score != null ? `<b class="serif big">${band(w.score)}</b><span class="fade">/5</span>` : ''}</div></${w.id ? 'a' : 'div'}>`).join('')}</div>`
         : `<div class="card empty"><b>Пока нет работ</b>Письма, ответы на форуме и записи Speaking появятся здесь с оценкой учителя</div>`}
       </section>
     </div>`
