@@ -26,7 +26,7 @@ const PARAM_ROUTES = [['train/', train], ['t/review/', reviewItem], ['practice/'
 
 const NAV = {
   student: [['today', 'today', 'Сегодня'], ['train', 'layers', 'Тренировка'], ['mock', 'timer', 'Пробник'], ['progress', 'trend', 'Прогресс'], ['profile', 'user', 'Профиль']],
-  teacher: [['t/home', 'grid', 'Обзор'], ['t/students', 'users', 'Ученики'], ['t/review', 'inbox', 'Проверка'], ['t/content', 'db', 'Контент'], ['profile', 'user', 'Профиль']]
+  teacher: [['t/home', 'grid', 'Обзор'], ['t/students', 'users', 'Ученики'], ['t/review', 'inbox', 'Проверка'], ['train', 'layers', 'Тренировка'], ['t/content', 'db', 'Контент'], ['profile', 'user', 'Профиль']]
 };
 
 function resolve(path) {
@@ -47,6 +47,7 @@ function renderNav(path) {
   const u = isLive() ? session.user : null;
   const name = u ? u.name : r === 'teacher' ? demoTeacher.name : demoMe.full;
   const reviewCnt = r === 'teacher' && !u ? demoQueue.length : 0;
+  document.getElementById('pill').classList.toggle('many', items.length > 5);
   document.getElementById('pill').innerHTML = items.map(([p, i, l]) =>
     `<a class="tab ${p === active ? 'on' : ''}" href="#/${p}" aria-label="${l}" ${p === active ? 'aria-current="page"' : ''}>${ic(i, 22)}<span class="tl">${l}</span></a>`).join('');
   document.getElementById('rail').innerHTML = `
