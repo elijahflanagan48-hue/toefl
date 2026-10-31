@@ -7,7 +7,7 @@ import { pref } from '../lib/store.js';
 import { isLive } from '../lib/api.js';
 
 const MODES = [['learn', 'Учиться', 'Ответ проверяется сразу, с разбором на русском'], ['timed', 'На время', 'Таймер и правила экзамена, разбор в конце'], ['mistakes', 'Мои ошибки', 'Повтор вопросов, в которых была ошибка, пока не ответишь верно']];
-const READY = { ctw: true, rdl: true, rap: true }; // tasks with a working trainer
+const READY = { ctw: true, rdl: true, rap: true, bas: true }; // tasks with a working trainer
 
 on('train-mode', el => { pref.set('trainMode', el.dataset.v); window.dispatchEvent(new Event('hashchange')); });
 on('start-task', el => toast(el.dataset.soon ? 'Откроется после озвучки' : 'Тренажёр «' + el.dataset.nm + '» появится на этапе ' + el.dataset.stage));
@@ -40,8 +40,9 @@ export default async function train(params) {
   const k = SEC[params[0]] ? params[0] : 'R';
   const c = catalog[k], mode = MODES.some(m => m[0] === pref.get('trainMode', 'learn')) ? pref.get('trainMode', 'learn') : 'learn';
   let st = null, mist = null;
-  if (k === 'R' && isLive()) {
-    try { [st, mist] = await Promise.all([src.stats('R'), src.mistakes('R')]); } catch (e) { /* show the page without stats */ }
+  const banked = k === 'R' || k === 'W';
+  if (banked && isLive()) {
+    try { [st, mist] = await Promise.all([src.stats(k), src.mistakes(k)]); } catch (e) { /* show the page without stats */ }
   }
   const mistByTask = {};
   (mist?.items || []).forEach(x => { mistByTask[x.task] = (mistByTask[x.task] || 0) + x.qs.length; });
@@ -62,7 +63,7 @@ export default async function train(params) {
         : `<button class="qt" data-act="start-task" data-soon="1"><span>${n}</span></button>`;
     }).join('')}</div>` : '';
 
-  const mistNote = k === 'R' && mode === 'mistakes' ? `<a class="note ${mist?.count ? '' : 'info'}" href="#/practice/mistakes?mode=mistakes" style="margin-top:12px">${ic('repeat', 22)}<div class="t"><div class="nm">${isLive() ? (mist?.count ? `Ошибок к повтору: ${mist.count}` : 'Ошибок к повтору нет') : 'Повтор ошибок'}</div><div class="mt">Вопрос уходит из списка, когда отвечаешь на него верно</div></div>${ic('right', 20)}</a>` : '';
+  const mistNote = banked && mode === 'mistakes' ? `<a class="note ${mist?.count ? '' : 'info'}" href="#/practice/mistakes?mode=mistakes&sec=${k}" style="margin-top:12px">${ic('repeat', 22)}<div class="t"><div class="nm">${isLive() ? (mist?.count ? `Ошибок к повтору: ${mist.count}` : 'Ошибок к повтору нет') : 'Повтор ошибок'}</div><div class="mt">Вопрос уходит из списка, когда отвечаешь на него верно</div></div>${ic('right', 20)}</a>` : '';
 
   return {
     title: 'Тренировка', wide: true,

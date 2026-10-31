@@ -156,7 +156,8 @@ export async function practiceStart(spec) {
 function demoGrade(r) {
   const it = demoCache.find(i => i.id === r.item_id);
   const k = it.key[r.q];
-  const correct = it.task === 'ctw' ? (String(r.answer || '').toLowerCase() === String(k).toLowerCase() ? 1 : 0) : (Number(r.answer) === k ? 1 : 0);
+  const correct = it.task === 'ctw' ? (String(r.answer || '').toLowerCase() === String(k).toLowerCase() ? 1 : 0)
+    : it.task === 'bas' ? (JSON.stringify(r.answer) === JSON.stringify(k) ? 1 : 0) : (Number(r.answer) === k ? 1 : 0);
   return { item_id: r.item_id, q: r.q, correct, key: k, explain: it.explain[r.q], qtype: it.qtypes[r.q] };
 }
 export async function practiceAnswer(attemptId, responses) {

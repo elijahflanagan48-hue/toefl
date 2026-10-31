@@ -185,3 +185,29 @@ mark.xhl{background:#ffe9a8;color:inherit;padding:0 2px}
   .practice .xbody.two .xpane.right{order:-1;border-bottom:1px solid #d7dbe2}
   .practice .xbody.two .xpane.left{border-bottom:0}
 }
+
+/* ---------- Build a Sentence ---------- */
+.bas{max-width:760px;margin:0 auto}
+.bas-dlg{display:flex;flex-direction:column;gap:12px;margin:6px 0 20px}
+.bub{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start}
+.bub .who{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 13px var(--ff);background:#e3e7ef;color:#2b3140}
+.bub.b .who{background:#2b3140;color:#fff}
+.bub p{margin:0;padding:10px 14px;background:#eef0f4;border-radius:4px 14px 14px 14px;font-size:17px;line-height:1.45}
+.frame{display:flex;flex-wrap:wrap;align-items:center;gap:8px 6px;padding:12px 14px;background:#fff;border:1px solid #d7dbe2;border-radius:4px 14px 14px 14px;font-size:17px;line-height:1.4;min-height:58px}
+.fx{color:#1b1f27}
+.fx.punct{margin-left:-4px}
+.slot{display:inline-flex;align-items:center;min-width:74px;min-height:38px;padding:6px 10px;border-radius:7px;font:inherit;font-size:16.5px}
+.slot.empty{border:2px dashed #b9c0cc;background:#f7f8fb}
+.slot.filled{border:2px solid #2f56b5;background:#eef3ff;color:#1d3f9a;cursor:pointer;touch-action:none}
+.slot.over{border-color:#2f56b5;background:#dfe8ff}
+.slot.ok{border-color:#1b7a4d;background:#e8f5ee;color:#1b7a4d}
+.slot.bad{border-color:#c03a28;background:#fdeeea;color:#c03a28}
+.pool{display:flex;flex-wrap:wrap;gap:8px;padding:14px;border-radius:12px;background:#f2f4f8;border:1px solid #e3e6eb;min-height:64px}
+.chunk{padding:8px 13px;border-radius:8px;background:#fff;border:1px solid #c9ced8;box-shadow:0 1px 0 #c9ced8;font:inherit;font-size:16.5px;color:#1b1f27;cursor:grab;touch-action:none;user-select:none}
+.chunk:hover{border-color:#2f56b5}
+.chunk.ghost{color:transparent;background:transparent;border:1px dashed #c9ced8;box-shadow:none;cursor:default}
+.chunk[disabled],.slot[disabled]{cursor:default}
+.dragging{opacity:.35}
+.drag-ghost{position:fixed;left:0;top:0;z-index:100;pointer-events:none;box-shadow:0 10px 24px rgba(0,0,0,.18);opacity:.95}
+.bas .xhint{margin-top:12px}
+@media (max-width:640px){.bub p,.frame{font-size:16px}.slot{min-width:60px}.chunk{font-size:15.5px;padding:8px 11px}}
