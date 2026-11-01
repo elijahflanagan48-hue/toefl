@@ -1,0 +1,1281 @@
+{
+ "note": "Тесты — полные варианты (M1 + лёгкий/сложный M2). Задания не повторяются между тестами и тренировкой. Поле bank у каждого задания: test.",
+ "tests": {
+  "T1": {
+   "M1": {
+    "title": "Модуль 1 (основной, 32 вопроса)",
+    "questions": 32,
+    "items": [
+     {
+      "id": "LCR-003",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-003.md",
+      "audio": "LCR-003 Choose a Response.mp3",
+      "answers": [
+       "A"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-005",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-005.md",
+      "audio": "LCR-005 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-001",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-001.md",
+      "audio": "LCR-001 Choose a Response.mp3",
+      "answers": [
+       "C"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-011",
+      "type": "LCR",
+      "level": "C",
+      "script": "L-LCR-C-011.md",
+      "audio": "LCR-011 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-007",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-007.md",
+      "audio": "LCR-007 Choose a Response.mp3",
+      "answers": [
+       "A"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-010",
+      "type": "LCR",
+      "level": "C",
+      "script": "L-LCR-C-010.md",
+      "audio": "LCR-010 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-016",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-016.md",
+      "audio": "LCR-016 Choose a Response.mp3",
+      "answers": [
+       "C"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-012",
+      "type": "LCR",
+      "level": "C",
+      "script": "L-LCR-C-012.md",
+      "audio": "LCR-012 Choose a Response.mp3",
+      "answers": [
+       "A"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-013",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-013.md",
+      "audio": "LCR-013 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-006",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-006.md",
+      "audio": "LCR-006 Choose a Response.mp3",
+      "answers": [
+       "C"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-008",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-008.md",
+      "audio": "LCR-008 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-019",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-019.md",
+      "audio": "LCR-019 Choose a Response.mp3",
+      "answers": [
+       "C"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "CONV-001",
+      "type": "CONV",
+      "level": "B",
+      "script": "L-CONV-B-001.md",
+      "audio": "CONV-001 Conversation.mp3",
+      "answers": [
+       "D",
+       "B"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "CONV-002",
+      "type": "CONV",
+      "level": "B",
+      "script": "L-CONV-B-002.md",
+      "audio": "CONV-002 Conversation.mp3",
+      "answers": [
+       "B",
+       "C"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "CONV-003",
+      "type": "CONV",
+      "level": "C",
+      "script": "L-CONV-C-003.md",
+      "audio": "CONV-003 Conversation.mp3",
+      "answers": [
+       "A",
+       "C"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Purpose"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "ANN-001",
+      "type": "ANN",
+      "level": "B",
+      "script": "L-ANN-B-001.md",
+      "audio": "ANN-001 Announcement.mp3",
+      "answers": [
+       "A",
+       "C"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "ANN-002",
+      "type": "ANN",
+      "level": "B",
+      "script": "L-ANN-B-002.md",
+      "audio": "ANN-002 Announcement.mp3",
+      "answers": [
+       "B",
+       "C"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "ANN-004",
+      "type": "ANN",
+      "level": "B",
+      "script": "L-ANN-B-004.md",
+      "audio": "ANN-004 Announcement.mp3",
+      "answers": [
+       "A",
+       "B"
+      ],
+      "qtypes": [
+       "Purpose",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "TALK-001",
+      "type": "TALK",
+      "level": "B",
+      "script": "L-TALK-B-001.md",
+      "audio": "TALK-001 Academic Talk.mp3",
+      "answers": [
+       "B",
+       "D",
+       "A",
+       "C"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Purpose",
+       "Factual",
+       "Attitude"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "TALK-002",
+      "type": "TALK",
+      "level": "C",
+      "script": "L-TALK-C-002.md",
+      "audio": "TALK-002 Academic Talk.mp3",
+      "answers": [
+       "B",
+       "A",
+       "B",
+       "A"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Method",
+       "Inference",
+       "Attitude"
+      ],
+      "bank": "test",
+      "test": "T1"
+     }
+    ]
+   },
+   "M2-lower": {
+    "title": "Модуль 2, лёгкий (15 вопросов)",
+    "questions": 15,
+    "items": [
+     {
+      "id": "LCR-002",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-002.md",
+      "audio": "LCR-002 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-015",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-015.md",
+      "audio": "LCR-015 Choose a Response.mp3",
+      "answers": [
+       "A"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-004",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-004.md",
+      "audio": "LCR-004 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-017",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-017.md",
+      "audio": "LCR-017 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-014",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-014.md",
+      "audio": "LCR-014 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "CONV-005",
+      "type": "CONV",
+      "level": "B",
+      "script": "L-CONV-B-005.md",
+      "audio": "CONV-005 Conversation.mp3",
+      "answers": [
+       "B",
+       "B"
+      ],
+      "qtypes": [
+       "Inference",
+       "Purpose"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "CONV-007",
+      "type": "CONV",
+      "level": "B",
+      "script": "L-CONV-B-007.md",
+      "audio": "CONV-007 Conversation.mp3",
+      "answers": [
+       "A",
+       "C"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "ANN-006",
+      "type": "ANN",
+      "level": "A",
+      "script": "L-ANN-A-006.md",
+      "audio": "ANN-006 Announcement.mp3",
+      "answers": [
+       "A",
+       "B"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "TALK-003",
+      "type": "TALK",
+      "level": "B",
+      "script": "L-TALK-B-003.md",
+      "audio": "TALK-003 Academic Talk.mp3",
+      "answers": [
+       "A",
+       "D",
+       "C",
+       "D"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual",
+       "Purpose",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T1"
+     }
+    ]
+   },
+   "M2-upper": {
+    "title": "Модуль 2, сложный (15 вопросов)",
+    "questions": 15,
+    "items": [
+     {
+      "id": "LCR-018",
+      "type": "LCR",
+      "level": "C",
+      "script": "L-LCR-C-018.md",
+      "audio": "LCR-018 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-009",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-009.md",
+      "audio": "LCR-009 Choose a Response.mp3",
+      "answers": [
+       "C"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-020",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-020.md",
+      "audio": "LCR-020 Choose a Response.mp3",
+      "answers": [
+       "A"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-021",
+      "type": "LCR",
+      "level": "C",
+      "script": "L-LCR-C-021.md",
+      "audio": "LCR-021 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "LCR-022",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-022.md",
+      "audio": "LCR-022 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "CONV-006",
+      "type": "CONV",
+      "level": "C",
+      "script": "L-CONV-C-006.md",
+      "audio": "CONV-006 Conversation.mp3",
+      "answers": [
+       "B",
+       "D"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "CONV-004",
+      "type": "CONV",
+      "level": "B",
+      "script": "L-CONV-B-004.md",
+      "audio": "CONV-004 Conversation.mp3",
+      "answers": [
+       "B",
+       "B"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "ANN-003",
+      "type": "ANN",
+      "level": "C",
+      "script": "L-ANN-C-003.md",
+      "audio": "ANN-003 Announcement.mp3",
+      "answers": [
+       "B",
+       "B"
+      ],
+      "qtypes": [
+       "Purpose",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T1"
+     },
+     {
+      "id": "TALK-004",
+      "type": "TALK",
+      "level": "C",
+      "script": "L-TALK-C-004.md",
+      "audio": "TALK-004 Academic Talk.mp3",
+      "answers": [
+       "A",
+       "A",
+       "C",
+       "C"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual",
+       "Method",
+       "Attitude"
+      ],
+      "bank": "test",
+      "test": "T1"
+     }
+    ]
+   }
+  },
+  "T2": {
+   "M1": {
+    "title": "Модуль 1 (основной, 32 вопроса)",
+    "questions": 32,
+    "items": [
+     {
+      "id": "LCR-023",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-023.md",
+      "audio": "LCR-023 Choose a Response.mp3",
+      "answers": [
+       "C"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-024",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-024.md",
+      "audio": "LCR-024 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-025",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-025.md",
+      "audio": "LCR-025 Choose a Response.mp3",
+      "answers": [
+       "A"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-026",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-026.md",
+      "audio": "LCR-026 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-027",
+      "type": "LCR",
+      "level": "C",
+      "script": "L-LCR-C-027.md",
+      "audio": "LCR-027 Choose a Response.mp3",
+      "answers": [
+       "C"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-028",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-028.md",
+      "audio": "LCR-028 Choose a Response.mp3",
+      "answers": [
+       "A"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-029",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-029.md",
+      "audio": "LCR-029 Choose a Response.mp3",
+      "answers": [
+       "C"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-030",
+      "type": "LCR",
+      "level": "C",
+      "script": "L-LCR-C-030.md",
+      "audio": "LCR-030 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-031",
+      "type": "LCR",
+      "level": "C",
+      "script": "L-LCR-C-031.md",
+      "audio": "LCR-031 Choose a Response.mp3",
+      "answers": [
+       "C"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-032",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-032.md",
+      "audio": "LCR-032 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-033",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-033.md",
+      "audio": "LCR-033 Choose a Response.mp3",
+      "answers": [
+       "A"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-034",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-034.md",
+      "audio": "LCR-034 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "CONV-008",
+      "type": "CONV",
+      "level": "B",
+      "script": "L-CONV-B-008.md",
+      "audio": "CONV-008 Conversation.mp3",
+      "answers": [
+       "C",
+       "B"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "CONV-009",
+      "type": "CONV",
+      "level": "B",
+      "script": "L-CONV-B-009.md",
+      "audio": "CONV-009 Conversation.mp3",
+      "answers": [
+       "C",
+       "A"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "CONV-010",
+      "type": "CONV",
+      "level": "C",
+      "script": "L-CONV-C-010.md",
+      "audio": "CONV-010 Conversation.mp3",
+      "answers": [
+       "C",
+       "A"
+      ],
+      "qtypes": [
+       "Purpose",
+       "Attitude"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "ANN-007",
+      "type": "ANN",
+      "level": "B",
+      "script": "L-ANN-B-007.md",
+      "audio": "ANN-007 Announcement.mp3",
+      "answers": [
+       "A",
+       "A"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "ANN-008",
+      "type": "ANN",
+      "level": "B",
+      "script": "L-ANN-B-008.md",
+      "audio": "ANN-008 Announcement.mp3",
+      "answers": [
+       "D",
+       "C"
+      ],
+      "qtypes": [
+       "Purpose",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "ANN-009",
+      "type": "ANN",
+      "level": "C",
+      "script": "L-ANN-C-009.md",
+      "audio": "ANN-009 Announcement.mp3",
+      "answers": [
+       "D",
+       "D"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "TALK-006",
+      "type": "TALK",
+      "level": "B",
+      "script": "L-TALK-B-006.md",
+      "audio": "TALK-006 Academic Talk.mp3",
+      "answers": [
+       "C",
+       "D",
+       "B",
+       "A"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual",
+       "Method",
+       "Attitude"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "TALK-007",
+      "type": "TALK",
+      "level": "C",
+      "script": "L-TALK-C-007.md",
+      "audio": "TALK-007 Academic Talk.mp3",
+      "answers": [
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Purpose",
+       "Factual",
+       "Attitude"
+      ],
+      "bank": "test",
+      "test": "T2"
+     }
+    ]
+   },
+   "M2-lower": {
+    "title": "Модуль 2, лёгкий (15 вопросов)",
+    "questions": 15,
+    "items": [
+     {
+      "id": "LCR-035",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-035.md",
+      "audio": "LCR-035 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-036",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-036.md",
+      "audio": "LCR-036 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-037",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-037.md",
+      "audio": "LCR-037 Choose a Response.mp3",
+      "answers": [
+       "A"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-038",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-038.md",
+      "audio": "LCR-038 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-039",
+      "type": "LCR",
+      "level": "A",
+      "script": "L-LCR-A-039.md",
+      "audio": "LCR-039 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "CONV-011",
+      "type": "CONV",
+      "level": "B",
+      "script": "L-CONV-B-011.md",
+      "audio": "CONV-011 Conversation.mp3",
+      "answers": [
+       "A",
+       "D"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "CONV-012",
+      "type": "CONV",
+      "level": "A",
+      "script": "L-CONV-A-012.md",
+      "audio": "CONV-012 Conversation.mp3",
+      "answers": [
+       "B",
+       "B"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "ANN-010",
+      "type": "ANN",
+      "level": "A",
+      "script": "L-ANN-A-010.md",
+      "audio": "ANN-010 Announcement.mp3",
+      "answers": [
+       "A",
+       "C"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "TALK-008",
+      "type": "TALK",
+      "level": "B",
+      "script": "L-TALK-B-008.md",
+      "audio": "TALK-008 Academic Talk.mp3",
+      "answers": [
+       "B",
+       "A",
+       "D",
+       "D"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Factual",
+       "Method",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T2"
+     }
+    ]
+   },
+   "M2-upper": {
+    "title": "Модуль 2, сложный (15 вопросов)",
+    "questions": 15,
+    "items": [
+     {
+      "id": "LCR-040",
+      "type": "LCR",
+      "level": "C",
+      "script": "L-LCR-C-040.md",
+      "audio": "LCR-040 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-041",
+      "type": "LCR",
+      "level": "C",
+      "script": "L-LCR-C-041.md",
+      "audio": "LCR-041 Choose a Response.mp3",
+      "answers": [
+       "C"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-042",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-042.md",
+      "audio": "LCR-042 Choose a Response.mp3",
+      "answers": [
+       "B"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-043",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-043.md",
+      "audio": "LCR-043 Choose a Response.mp3",
+      "answers": [
+       "D"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "LCR-044",
+      "type": "LCR",
+      "level": "B",
+      "script": "L-LCR-B-044.md",
+      "audio": "LCR-044 Choose a Response.mp3",
+      "answers": [
+       "A"
+      ],
+      "qtypes": [
+       "Choose a Response"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "CONV-013",
+      "type": "CONV",
+      "level": "C",
+      "script": "L-CONV-C-013.md",
+      "audio": "CONV-013 Conversation.mp3",
+      "answers": [
+       "D",
+       "A"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "CONV-014",
+      "type": "CONV",
+      "level": "B",
+      "script": "L-CONV-B-014.md",
+      "audio": "CONV-014 Conversation.mp3",
+      "answers": [
+       "B",
+       "B"
+      ],
+      "qtypes": [
+       "Purpose",
+       "Factual"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "ANN-011",
+      "type": "ANN",
+      "level": "C",
+      "script": "L-ANN-C-011.md",
+      "audio": "ANN-011 Announcement.mp3",
+      "answers": [
+       "B",
+       "B"
+      ],
+      "qtypes": [
+       "Factual",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T2"
+     },
+     {
+      "id": "TALK-009",
+      "type": "TALK",
+      "level": "C",
+      "script": "L-TALK-C-009.md",
+      "audio": "TALK-009 Academic Talk.mp3",
+      "answers": [
+       "B",
+       "A",
+       "D",
+       "D"
+      ],
+      "qtypes": [
+       "Main Idea",
+       "Purpose",
+       "Factual",
+       "Inference"
+      ],
+      "bank": "test",
+      "test": "T2"
+     }
+    ]
+   }
+  }
+ }
+}
