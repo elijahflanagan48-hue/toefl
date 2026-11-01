@@ -270,6 +270,168 @@
   ]
  },
  {
+  "id": "L-ANN-A-023",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-023",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-023.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F2",
+  "words": 54,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Hello, students. The dining hall is changing its menu this week. There will be a new salad bar and more vegetarian meals. Breakfast will now be served from seven to ten, and dinner from five to eight. Lunch hours will stay the same. Please tell the manager what you think of the new menu."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is being announced?",
+    "opts": [
+     "A new dining hall building",
+     "A cooking class",
+     "A price increase",
+     "Changes to the dining hall menu"
+    ]
+   },
+   {
+    "stem": "Which meal's hours will not change?",
+    "opts": [
+     "Breakfast",
+     "Dinner",
+     "Snacks",
+     "Lunch"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   3
+  ],
+  "explain": [
+   "*The dining hall is changing its menu*. A — здание то же; B — не упоминается; C — цены не упоминаются",
+   "*Lunch hours will stay the same*. A — завтрак меняется; B — ужин меняется; C — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-024",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-024",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-024.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M2",
+  "words": 55,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Attention, students. During the winter holiday, the campus bus will run on a different schedule. Buses will leave every hour instead of every twenty minutes. The last bus will leave at six in the evening. There will be no service on December twenty-fifth or January first. The regular schedule will start again on January fifth."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the announcement mainly about?",
+    "opts": [
+     "A new bus route",
+     "A holiday bus schedule",
+     "A bus driver job",
+     "Higher bus prices"
+    ]
+   },
+   {
+    "stem": "When will the regular schedule start again?",
+    "opts": [
+     "On December twenty-fifth",
+     "On January first",
+     "On January fifth",
+     "On the first of December"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2
+  ],
+  "explain": [
+   "*During the winter holiday… different schedule*. A — маршрут тот же; C — не упоминается; D — цены не упоминаются",
+   "*start again on January fifth*. A — в этот день автобусов нет; B — в этот день нет; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-025",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-025",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-025.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F",
+  "words": 54,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Good afternoon. If you have lost something on campus, please visit the lost and found office in the student union. It's open from nine to five, Monday through Friday. Items are kept for thirty days. After that, they are given to charity. You can also check photos of found items on the university website."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the purpose of the announcement?",
+    "opts": [
+     "To ask students to give things to charity",
+     "To announce a new university website",
+     "To tell students where to look for lost items",
+     "To report a robbery"
+    ]
+   },
+   {
+    "stem": "What happens to items after thirty days?",
+    "opts": [
+     "They are returned to the owners",
+     "They are given to charity",
+     "They are sold on the website",
+     "They are thrown away"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   1
+  ],
+  "explain": [
+   "*If you have lost something … visit the lost and found*. A — благотворительность — конец срока; B — сайт — доп. способ; D — не упоминается",
+   "*After that, they are given to charity*. A — не упоминается; C — не упоминается; D — не выбрасывают"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Factual"
+  ]
+ },
+ {
   "id": "L-ANN-B-001",
   "type": "ANN",
   "task": "lan",
@@ -756,6 +918,168 @@
   ]
  },
  {
+  "id": "L-ANN-B-026",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-026",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-026.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M",
+  "words": 76,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "The Department of History is pleased to announce its spring lecture series, Voices of the Past. Each Thursday at six, a different scholar will speak about life in a different historical period. The first lecture, on daily life in ancient Rome, will be given by Dr. Maria Lopez in Room two-ten. All lectures are free, but seating is limited, so please arrive early. Students may earn extra credit by writing a short response to any lecture."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main purpose of the announcement?",
+    "opts": [
+     "To announce a new history course",
+     "To promote a series of lectures",
+     "To introduce a new professor",
+     "To explain a change in the schedule"
+    ]
+   },
+   {
+    "stem": "How can students earn extra credit?",
+    "opts": [
+     "By arriving early",
+     "By attending the first lecture",
+     "By writing a response to a lecture",
+     "By volunteering at the department"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2
+  ],
+  "explain": [
+   "*pleased to announce its spring lecture series*. A — курс не упоминается; C — докладчик — гость; D — расписание не меняется",
+   "*writing a short response to any lecture*. A — место ограничено, но кредит не даёт; B — не упоминается; D — не упоминается"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-ANN-B-027",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-027",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-027.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F",
+  "words": 62,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Attention, students. The computer lab in Hartley Hall will be closed for maintenance from Friday at five p.m. until Monday morning. During this time, all software will be updated, and new computers will be installed. Students who need to print or use special software may go to the lab in the library, which is open all weekend. We apologize for any inconvenience."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why will the computer lab be closed?",
+    "opts": [
+     "It will receive updates and new computers",
+     "The software is broken",
+     "The room will be painted",
+     "The library needs the equipment"
+    ]
+   },
+   {
+    "stem": "What can students do if they need to print over the weekend?",
+    "opts": [
+     "Go to the library lab",
+     "Wait until Monday",
+     "Visit Hartley Hall",
+     "Ask the maintenance team"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   0
+  ],
+  "explain": [
+   "*software will be updated, and new computers will be installed*. B — не сломан; C — не упоминается; D — не упоминается",
+   "*go to the lab in the library*. B — можно сразу в библиотеку; C — Hartley закрыт; D — не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-ANN-B-028",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-028",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-028.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M3",
+  "words": 62,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Good morning. Registration for fall classes opens next Monday at eight a.m. Students will register in groups, based on how many credits they have earned. Seniors go first, then juniors, then sophomores. First-year students will register on Wednesday. Before you register, please meet with your academic advisor to approve your plan. Without this approval, the system will not let you sign up."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What does the speaker say students must do before they register?",
+    "opts": [
+     "Pay their tuition",
+     "Meet with their academic advisor",
+     "Wait until Wednesday",
+     "Choose a new major"
+    ]
+   },
+   {
+    "stem": "What can be inferred about first-year students?",
+    "opts": [
+     "They cannot register for fall classes",
+     "They do not need an advisor",
+     "They register after the other groups",
+     "They register on Monday"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2
+  ],
+  "explain": [
+   "*meet with your academic advisor to approve your plan*. A — не упоминается; C — только первокурсники; D — не упоминается",
+   "*First-year students will register on Wednesday*. A — регистрируются в среду; B — нужен всем; D — понедельник — старшие"
+  ],
+  "qtypes": [
+   "Method",
+   "Inference"
+  ]
+ },
+ {
   "id": "L-ANN-C-003",
   "type": "ANN",
   "task": "lan",
@@ -1188,6 +1512,168 @@
   ]
  },
  {
+  "id": "L-ANN-C-029",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-029",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-029.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F2",
+  "words": 72,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Attention, students. The university has updated its policy on academic integrity. Beginning this semester, any student found to have copied material without citing it will receive a zero on the assignment, and a second offense will lead to review by a committee. Previously, penalties varied by instructor. The change is intended to make expectations consistent across all courses. Workshops on proper citation will be offered every Tuesday at noon in the library."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What was different about the previous policy?",
+    "opts": [
+     "Copying was allowed",
+     "All offenses led to a committee review",
+     "Students were not required to cite sources",
+     "Penalties depended on the instructor"
+    ]
+   },
+   {
+    "stem": "Why does the speaker mention the workshops?",
+    "opts": [
+     "To explain how violations are punished",
+     "To offer students help avoiding violations",
+     "To announce a new course",
+     "To ask instructors to attend"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1
+  ],
+  "explain": [
+   "*Previously, penalties varied by instructor*. A — не утверждается; B — только повторное нарушение; C — не утверждается",
+   "*Workshops on proper citation*. A — наказания описаны раньше; C — курса нет; D — не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-ANN-C-030",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-030",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-030.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M3",
+  "words": 81,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Students and staff, the Wellness Center will undergo renovations starting in January. The project, which is expected to take five months, will add a new climbing wall, a larger weight room, and an indoor track. While construction is underway, the main pool and basketball courts will remain open, but the locker rooms will be limited. Temporary lockers will be set up next to the pool. Members who are inconvenienced will receive a free month of membership once the work is finished."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What will the university do for inconvenienced members?",
+    "opts": [
+     "Reduce this semester's fees",
+     "Provide temporary classes",
+     "Close the center for a month",
+     "Give them a free month of membership"
+    ]
+   },
+   {
+    "stem": "What can be inferred about the renovations?",
+    "opts": [
+     "The whole center will close",
+     "Only the pool will be available",
+     "Some facilities will remain available during construction",
+     "The project will finish in January"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   2
+  ],
+  "explain": [
+   "*receive a free month of membership*. A — не упоминается; B — не упоминается; C — не закрывается",
+   "*the main pool and basketball courts will remain open*. A — не закрыт целиком; B — и корты тоже; D — начало — январь, срок 5 месяцев"
+  ],
+  "qtypes": [
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-ANN-C-031",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-031",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-031.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F2",
+  "words": 69,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Good afternoon. The scholarship office has made two changes to this year's application. First, applicants must now submit a two-page personal essay, instead of a single paragraph. Second, letters of recommendation must come directly from the writers, not from the students. The deadline remains March first. Students who have already begun applications will be allowed to submit their previous materials, but they are encouraged to follow the new guidelines."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main purpose of the announcement?",
+    "opts": [
+     "To inform students about changes to the scholarship application",
+     "To announce a new scholarship",
+     "To extend the scholarship deadline",
+     "To explain how to write a letter"
+    ]
+   },
+   {
+    "stem": "What does the speaker imply about students who have already started their applications?",
+    "opts": [
+     "They must start over",
+     "They will receive extra time",
+     "They no longer need an essay",
+     "They may use their earlier materials"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   3
+  ],
+  "explain": [
+   "*made two changes to this year's application*. B — новой стипендии нет; C — срок не меняется; D — письмо — лишь деталь",
+   "*will be allowed to submit their previous materials*. A — не обязаны; B — срок прежний; C — эссе всё равно нужно"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
   "id": "L-CONV-A-012",
   "type": "CONV",
   "task": "lco",
@@ -1469,6 +1955,228 @@
   "qtypes": [
    "Main Idea",
    "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-028",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-028",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-028.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M2, Woman = TOEFL AU-F3",
+  "words": 54,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a library worker."
+   },
+   {
+    "who": "Man",
+    "text": "Hi, I'd like to get a library card."
+   },
+   {
+    "who": "Woman",
+    "text": "Sure. Do you have your student ID with you?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes, here it is."
+   },
+   {
+    "who": "Woman",
+    "text": "Thanks. Your card will be ready in five minutes. You can borrow up to ten books at a time."
+   },
+   {
+    "who": "Man",
+    "text": "Great. How long can I keep them?"
+   },
+   {
+    "who": "Woman",
+    "text": "Three weeks. You can renew them online."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the man talk to the woman?",
+    "opts": [
+     "To return some books",
+     "To ask about his student ID",
+     "To get a library card",
+     "To find a quiet room"
+    ]
+   },
+   {
+    "stem": "How long can the man keep the books?",
+    "opts": [
+     "Three weeks",
+     "Five minutes",
+     "Ten days",
+     "One month"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0
+  ],
+  "explain": [
+   "*I'd like to get a library card*. A — возврат не упоминается; B — ID — лишь документ; D — комнаты не упоминаются",
+   "*Three weeks*. B — 5 минут — выдача карты; C — 10 — число книг; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-029",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-029",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-029.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F3, Man = TOEFL US-M",
+  "words": 51,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Woman",
+    "text": "Do you know how I can get a bus pass?"
+   },
+   {
+    "who": "Man",
+    "text": "You can get one at the transportation office. It's next to the gym."
+   },
+   {
+    "who": "Woman",
+    "text": "How much is it?"
+   },
+   {
+    "who": "Man",
+    "text": "Forty dollars a month, but students get a discount. It's only twenty-five."
+   },
+   {
+    "who": "Woman",
+    "text": "That's great. Do I need a photo?"
+   },
+   {
+    "who": "Man",
+    "text": "No, just your student ID."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What does the woman want to get?",
+    "opts": [
+     "A gym membership",
+     "A student ID",
+     "A parking permit",
+     "A bus pass"
+    ]
+   },
+   {
+    "stem": "How much does the pass cost for students?",
+    "opts": [
+     "Forty dollars a month",
+     "Twenty dollars a month",
+     "Twenty-five dollars a month",
+     "Fifty dollars a month"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   2
+  ],
+  "explain": [
+   "*how I can get a bus pass*. A — спортзал — ориентир; B — ID уже есть; C — не упоминается",
+   "*students get a discount. It's only twenty-five*. A — цена без скидки; B — не упоминается; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-030",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-030",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-030.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M, Woman = TOEFL CA-F2",
+  "words": 55,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two classmates."
+   },
+   {
+    "who": "Man",
+    "text": "Did you write down the homework for biology?"
+   },
+   {
+    "who": "Woman",
+    "text": "Yes. We need to read chapter six and answer the questions at the end."
+   },
+   {
+    "who": "Man",
+    "text": "Is it due tomorrow?"
+   },
+   {
+    "who": "Woman",
+    "text": "No, it's due on Thursday. But the quiz is tomorrow."
+   },
+   {
+    "who": "Man",
+    "text": "Oh no, I forgot about the quiz. Can I look at your notes?"
+   },
+   {
+    "who": "Woman",
+    "text": "Sure. Let's study together after lunch."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the man worried about?",
+    "opts": [
+     "Homework due tomorrow",
+     "Missing lunch",
+     "Losing his notes",
+     "A quiz tomorrow"
+    ]
+   },
+   {
+    "stem": "What will the speakers probably do after lunch?",
+    "opts": [
+     "Study together",
+     "Take the quiz",
+     "Visit the professor",
+     "Go to the library alone"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0
+  ],
+  "explain": [
+   "*I forgot about the quiz*. A — домашка — в четверг; B — обед — время занятия; C — он просит чужие конспекты",
+   "*Let's study together after lunch*. B — квиз завтра; C — не упоминается; D — они будут вместе"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Inference"
   ]
  },
  {
@@ -2574,6 +3282,228 @@
   ]
  },
  {
+  "id": "L-CONV-B-031",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-031",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-031.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F2, Man = TOEFL AU-M3",
+  "words": 80,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a security officer."
+   },
+   {
+    "who": "Woman",
+    "text": "Hello, I think I lost my student ID somewhere in the science building."
+   },
+   {
+    "who": "Man",
+    "text": "Did you check the lost and found? It's on the first floor."
+   },
+   {
+    "who": "Woman",
+    "text": "I did, but it wasn't there. I need it to get into the dorm tonight."
+   },
+   {
+    "who": "Man",
+    "text": "In that case, I can issue a temporary pass for today. The new ID costs fifteen dollars and takes three days."
+   },
+   {
+    "who": "Woman",
+    "text": "Fifteen dollars is fine. Can I do both now?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes. I just need to see another form of identification."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the woman's problem?",
+    "opts": [
+     "She cannot enter the science building",
+     "She was charged too much",
+     "She has lost her student ID",
+     "She missed the lost and found hours"
+    ]
+   },
+   {
+    "stem": "What does the man need from the woman?",
+    "opts": [
+     "Another form of identification",
+     "Fifteen dollars in cash",
+     "A signed form from the dorm",
+     "A photo of the lost ID"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0
+  ],
+  "explain": [
+   "*I think I lost my student ID*. A — нужен для общежития; B — цена приемлема; D — она уже проверила",
+   "*I just need to see another form of identification*. B — сумма названа, но не требуется сейчас; C — не упоминается; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-B-032",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-032",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-032.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2, Woman = TOEFL CA-F",
+  "words": 70,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a tutor."
+   },
+   {
+    "who": "Man",
+    "text": "I'd like to schedule a tutoring session for statistics, please."
+   },
+   {
+    "who": "Woman",
+    "text": "Of course. We have openings on Monday at two and Wednesday at four."
+   },
+   {
+    "who": "Man",
+    "text": "I have a lab on Wednesday afternoon. Is Monday possible?"
+   },
+   {
+    "who": "Woman",
+    "text": "Yes, Monday at two. What would you like to focus on?"
+   },
+   {
+    "who": "Man",
+    "text": "Probability. I understand the formulas, but I can't apply them to word problems."
+   },
+   {
+    "who": "Woman",
+    "text": "Then bring a few examples from your homework, and we'll work through them."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the man choose Monday?",
+    "opts": [
+     "Monday's session is longer",
+     "He prefers morning sessions",
+     "He has a lab on Wednesday afternoon",
+     "The tutor is unavailable Wednesday"
+    ]
+   },
+   {
+    "stem": "What does the woman ask the man to bring?",
+    "opts": [
+     "A list of formulas",
+     "His lab notes",
+     "A textbook",
+     "Examples from his homework"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   3
+  ],
+  "explain": [
+   "*I have a lab on Wednesday afternoon*. A — длительность не упоминается; B — время днём; D — у тьютора есть окно в среду",
+   "*bring a few examples from your homework*. A — формулы он знает; B — не упоминается; C — не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-CONV-B-033",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-033",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-033.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F, Man = TOEFL UK-M",
+  "words": 68,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students in a chemistry lab."
+   },
+   {
+    "who": "Woman",
+    "text": "I don't think my lab partner and I are working well together. He never prepares for the experiments."
+   },
+   {
+    "who": "Man",
+    "text": "Have you talked to him about it?"
+   },
+   {
+    "who": "Woman",
+    "text": "I tried, but he said he's too busy with his job."
+   },
+   {
+    "who": "Man",
+    "text": "Then maybe talk to the instructor. She might let you switch partners."
+   },
+   {
+    "who": "Woman",
+    "text": "I don't want to get him in trouble."
+   },
+   {
+    "who": "Man",
+    "text": "You wouldn't be. You'd just be explaining that the arrangement isn't working."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the woman's main concern?",
+    "opts": [
+     "The experiments are too hard",
+     "Her lab partner does not prepare",
+     "The instructor is unfair",
+     "She is too busy with a job"
+    ]
+   },
+   {
+    "stem": "What does the man suggest the woman do?",
+    "opts": [
+     "Do the experiments alone",
+     "Ask the instructor about changing partners",
+     "Quit the course",
+     "Tell her partner to find a job"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1
+  ],
+  "explain": [
+   "*He never prepares for the experiments*. A — сложность не упоминается; C — к инструктору не претензий; D — работает партнёр",
+   "*talk to the instructor … switch partners*. A — не предлагает; C — не предлагает; D — не предлагает"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Method"
+  ]
+ },
+ {
   "id": "L-CONV-C-003",
   "type": "CONV",
   "task": "lco",
@@ -3166,6 +4096,228 @@
   ],
   "qtypes": [
    "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-C-034",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-034",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-034.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F3, Man = TOEFL CA-M2",
+  "words": 76,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a professor."
+   },
+   {
+    "who": "Woman",
+    "text": "Professor Allen, I'm struggling to narrow down my thesis topic. There are so many things I find interesting."
+   },
+   {
+    "who": "Man",
+    "text": "That's common. What are the two or three that excite you most?"
+   },
+   {
+    "who": "Woman",
+    "text": "Urban farming, food waste, and how cities plan green space."
+   },
+   {
+    "who": "Man",
+    "text": "Interesting. Notice that all three involve how cities use land. Perhaps your question could focus on that."
+   },
+   {
+    "who": "Woman",
+    "text": "So, something like how urban farms change neighborhoods?"
+   },
+   {
+    "who": "Man",
+    "text": "Exactly. Sketch a one-page proposal, and we'll refine it next week."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the professor mention that all three topics involve how cities use land?",
+    "opts": [
+     "To suggest that the topics are too broad",
+     "To explain why farming is more important",
+     "To help the student find a common focus",
+     "To criticize the student's choices"
+    ]
+   },
+   {
+    "stem": "What will the student probably do before the next meeting?",
+    "opts": [
+     "Write a short proposal",
+     "Change her major",
+     "Visit an urban farm",
+     "Choose a different professor"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0
+  ],
+  "explain": [
+   "*all three involve how cities use land*; поиск общей темы. A — не критикует широту; B — не сравнивает; D — одобряет",
+   "*Sketch a one-page proposal*. B — не упоминается; C — не упоминается; D — не упоминается"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-C-035",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-035",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-035.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M, Woman = TOEFL US-F2",
+  "words": 77,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Man",
+    "text": "I'm leaning toward moving off campus next year. The dorms are so restrictive."
+   },
+   {
+    "who": "Woman",
+    "text": "True, but have you thought about transportation? Rent plus a bus pass could cost more than a dorm."
+   },
+   {
+    "who": "Man",
+    "text": "I'd split an apartment with two friends, so rent would be lower."
+   },
+   {
+    "who": "Woman",
+    "text": "That helps. Still, I'd miss being steps from the library. I do my best work there."
+   },
+   {
+    "who": "Man",
+    "text": "I guess I value independence more than convenience."
+   },
+   {
+    "who": "Woman",
+    "text": "Fair enough. Just run the numbers before you sign anything."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What does the woman suggest about moving off campus?",
+    "opts": [
+     "It may be more expensive than the man expects",
+     "It is always cheaper than dorms",
+     "It is impossible for first-year students",
+     "It is better for studying"
+    ]
+   },
+   {
+    "stem": "What does the man mean when he says, \"I value independence more than convenience\"?",
+    "opts": [
+     "He wants to live alone",
+     "He thinks the dorms are convenient",
+     "He has already signed a lease",
+     "He is willing to accept some inconvenience to live freely"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   3
+  ],
+  "explain": [
+   "*Rent plus a bus pass could cost more than a dorm*. B — не утверждается; C — не упоминается; D — она ценит библиотеку рядом",
+   "Свобода важнее удобства. A — он собирается жить с друзьями; B — он говорит, что общежитие ограничивает; C — договор не подписан"
+  ],
+  "qtypes": [
+   "Inference",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-CONV-C-036",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-036",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-036.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F, Man = TOEFL AU-M3",
+  "words": 82,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a financial aid officer."
+   },
+   {
+    "who": "Woman",
+    "text": "I'm calling about my work-study award. I haven't been assigned a job yet, and the semester started two weeks ago."
+   },
+   {
+    "who": "Man",
+    "text": "I see. Work-study positions are filled on a first-come basis, so many have been taken."
+   },
+   {
+    "who": "Woman",
+    "text": "I applied on the first day, though."
+   },
+   {
+    "who": "Man",
+    "text": "Then your application may still be under review. Let me check. Yes, it's incomplete. You need your supervisor's signature."
+   },
+   {
+    "who": "Woman",
+    "text": "I didn't realize I needed one. Can I send it today?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes, and I'll flag your file so it's processed quickly."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why hasn't the woman been assigned a job?",
+    "opts": [
+     "All positions were filled",
+     "Her application is missing a signature",
+     "She applied after the deadline",
+     "She is not eligible"
+    ]
+   },
+   {
+    "stem": "What will the man probably do after receiving the signature?",
+    "opts": [
+     "Reject her application",
+     "Cancel her award",
+     "Ask her to apply again",
+     "Process her application quickly"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   3
+  ],
+  "explain": [
+   "*it's incomplete. You need your supervisor's signature*. A — он сказал «многие»; её заявка просто неполна; C — она подала в первый день; D — право есть",
+   "*I'll flag your file so it's processed quickly*. A — не упоминается; B — не упоминается; C — не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
    "Inference"
   ]
  },
@@ -4228,6 +5380,386 @@
   ],
   "explain": [
    "- B — *Yes* не к «where»\n- C — прошедшее время, не место\n- D — время, а не место"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-092",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-092",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-092.mp3",
+  "voices": "Woman = TOEFL UK-F",
+  "words": 5,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Can you open the door?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "The door is brown.",
+     "Yes, I opened it.",
+     "It's an open store.",
+     "Sure, hold on a second."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — описание вместо действия\n- B — прошедшее время\n- C — *open* в другом смысле"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-094",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-094",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-094.mp3",
+  "voices": "Man = TOEFL CA-M2",
+  "words": 5,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "What time is your class?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "My class is very large.",
+     "It starts at ten thirty.",
+     "Yes, it's at the class.",
+     "I like the time of day."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — размер, а не время\n- C — *Yes* не к «what time»\n- D — не отвечает"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-098",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-098",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-098.mp3",
+  "voices": "Woman = TOEFL CA-F",
+  "words": 6,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Is this the line for tickets?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "I lined up the tickets yesterday.",
+     "The tickets are very cheap.",
+     "Yes, you can stand behind him.",
+     "Tickets are made of paper."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — прошедшее время, не ответ\n- B — цена вместо ответа\n- D — описание материала"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-100",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-100",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-100.mp3",
+  "voices": "Man = TOEFL AU-M",
+  "words": 4,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Where's the nearest ATM?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "It's near eleven o'clock.",
+     "There's one next to the post office.",
+     "Yes, I need some cash.",
+     "The ATM is very heavy."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — время, не место\n- C — *Yes* не к «where»\n- D — нелогичное описание"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-101",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-101",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-101.mp3",
+  "voices": "Woman = TOEFL US-F",
+  "words": 5,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Are you ready to order?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "I ordered a chair.",
+     "Soup is a hot meal.",
+     "Yes, I'll have the soup.",
+     "The order is on the table."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — другой предмет\n- B — общее утверждение\n- D — не отвечает"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-103",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-103",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-103.mp3",
+  "voices": "Woman = TOEFL AU-F",
+  "words": 5,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Do you have a pencil?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, a pencil is wood.",
+     "I pencil it in tomorrow.",
+     "No, I like the movie.",
+     "I have a pen. Is that okay?"
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — не предлагает вариант\n- B — *pencil* в другом смысле\n- C — не по теме"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-104",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-104",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-104.mp3",
+  "voices": "Man = TOEFL US-M2",
+  "words": 6,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Which floor is the lab on?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, it's a big lab.",
+     "The third floor, at the end of the hall.",
+     "The floor is quite dirty.",
+     "I was there at three."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — *Yes* не к «which»\n- C — *floor* повторено без смысла\n- D — время, не этаж"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-109",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-109",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-109.mp3",
+  "voices": "Man = TOEFL AU-M3",
+  "words": 6,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "What did you do last weekend?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I do on weekends.",
+     "The weekend is two days.",
+     "I will do it next week.",
+     "I went hiking with my cousins."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — *Yes* не к «what»\n- B — общее утверждение\n- C — будущее время"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-110",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-110",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-110.mp3",
+  "voices": "Woman = TOEFL CA-F2",
+  "words": 4,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Did you eat breakfast?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Just a banana. I was in a hurry.",
+     "Yes, breakfast is a meal.",
+     "I'll eat lunch at noon.",
+     "The banana was in the lunch."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — общее утверждение\n- C — другой приём пищи\n- D — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-117",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-117",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-117.mp3",
+  "voices": "Man = TOEFL AU-M2",
+  "words": 5,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "How long is the movie?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "About two hours, I think.",
+     "It was in the theater.",
+     "Yes, it's a long movie.",
+     "The movie is on Friday."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — место, не длительность\n- C — *Yes* не к «how long»\n- D — день, не длительность"
   ],
   "qtypes": [
    "Choose a Response"
@@ -5716,6 +7248,386 @@
   ]
  },
  {
+  "id": "L-LCR-B-091",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-091",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-091.mp3",
+  "voices": "Woman = TOEFL AU-F2",
+  "words": 9,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "I'm having trouble with the printer. Can you help?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, the trouble is printed.",
+     "I print it every day.",
+     "Sure. Is it out of paper again?",
+     "The help is on the desk."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — бессмыслица\n- B — не предлагает помощь\n- D — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-095",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-095",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-095.mp3",
+  "voices": "Woman = TOEFL AU-F",
+  "words": 8,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Did you manage to find a parking space?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Eventually. I had to circle the lot twice.",
+     "Yes, the space is in the sky.",
+     "I parked a lot yesterday.",
+     "The managers found it."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — бессмыслица\n- C — *a lot* в другом смысле\n- D — повтор слов"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-096",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-096",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-096.mp3",
+  "voices": "Man = TOEFL US-M",
+  "words": 8,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Would you like to join our study group?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, the group is studying.",
+     "I'd love to. When do you meet?",
+     "I joined it last year.",
+     "The study is joined at noon."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — не принимает приглашение\n- C — прошедшее время\n- D — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-097",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-097",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-097.mp3",
+  "voices": "Man = TOEFL UK-M2",
+  "words": 7,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Could we move our meeting to Thursday?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Thursday works for me. Same time?",
+     "Yes, the meeting moved.",
+     "I met him on Tuesday.",
+     "Thursday is after Wednesday."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — не отвечает на просьбу\n- C — прошедшее время\n- D — очевидный факт"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-099",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-099",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-099.mp3",
+  "voices": "Man = TOEFL UK-M",
+  "words": 6,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "How's your new roommate working out?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, the room is new.",
+     "I work out at the gym.",
+     "My mate is in the room.",
+     "Pretty well. We have a lot in common."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — повтор слов\n- B — *work out* в другом смысле\n- C — повтор слов"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-106",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-106",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-106.mp3",
+  "voices": "Woman = TOEFL CA-F",
+  "words": 12,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Do you know how to get to the science building from here?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, science is very hard.",
+     "I got there yesterday.",
+     "Go straight and turn left at the fountain.",
+     "The building is made of brick."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — не даёт направление\n- B — прошедшее время\n- D — материал, не путь"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-108",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-108",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-108.mp3",
+  "voices": "Woman = TOEFL US-F",
+  "words": 8,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Have you heard back from the housing office?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, the office is in the back.",
+     "I heard it was loud last night.",
+     "Not yet. I'll call them again tomorrow.",
+     "The housing is quite cheap."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — *back* в другом смысле\n- B — *heard* в другом смысле\n- D — цена, не ответ"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-112",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-112",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-112.mp3",
+  "voices": "Woman = TOEFL AU-F",
+  "words": 8,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "What did you think of the guest lecture?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "I guessed the answer.",
+     "Yes, the lecture is at three.",
+     "It was interesting, but a little too long.",
+     "The guest left early."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — созвучие *guess*\n- B — *Yes* не к «what»\n- D — не оценка"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-113",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-113",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-113.mp3",
+  "voices": "Man = TOEFL UK-M",
+  "words": 7,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Why is the line so long today?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "They're giving out free T-shirts.",
+     "Yes, it's a long line.",
+     "I wear a long shirt.",
+     "The shirts are blue."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — *Yes* не к «why»\n- C — *long* в другом смысле\n- D — цвет, не причина"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-119",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-119",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-119.mp3",
+  "voices": "Man = TOEFL US-M2",
+  "words": 7,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Has anyone seen the professor this morning?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "I saw her heading to the faculty lounge.",
+     "Yes, the morning is early.",
+     "I professed it yesterday.",
+     "No, the lounge is closed."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — не отвечает\n- C — созвучие *professor*\n- D — не отвечает на вопрос"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
   "id": "L-LCR-C-010",
   "type": "LCR",
   "task": "lcr",
@@ -6590,6 +8502,386 @@
   ]
  },
  {
+  "id": "L-LCR-C-093",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-093",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-093.mp3",
+  "voices": "Woman = TOEFL US-F2",
+  "words": 11,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "It looks like the café has run out of almost everything."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Probably because of the rush after the game.",
+     "Yes, I look like a café.",
+     "The run was five miles.",
+     "Everything is almost out."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — бессмыслица\n- C — *run* в другом смысле\n- D — повтор без смысла"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-102",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-102",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-102.mp3",
+  "voices": "Man = TOEFL CA-M",
+  "words": 10,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Not many people realize the museum is free on Fridays."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, many people are free.",
+     "Really? That's good to know. I'll go this week.",
+     "I realized the museum yesterday.",
+     "Fridays are not many."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — повтор без смысла\n- C — прошедшее время\n- D — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-105",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-105",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-105.mp3",
+  "voices": "Man = TOEFL UK-M2",
+  "words": 12,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Would you happen to know whether the pool is open this late?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, the pool is happening.",
+     "I know a late swimmer.",
+     "The pool was a happy place.",
+     "I believe it closes at ten, so you've got time."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — бессмыслица\n- B — уход от вопроса\n- C — не про время"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-107",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-107",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-107.mp3",
+  "voices": "Woman = TOEFL UK-F2",
+  "words": 10,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "I thought the deadline was next Monday, not this one."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I thought about Monday.",
+     "The syllabus is next to the deadline.",
+     "This one is not next.",
+     "No, it moved up. Check the updated syllabus."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — повтор слов\n- B — бессмыслица\n- C — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-111",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-111",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-111.mp3",
+  "voices": "Man = TOEFL CA-M",
+  "words": 11,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Hardly any of the seats in the lecture hall were taken."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, seats are taken by hall.",
+     "That's because the class got moved online.",
+     "I took a hall seat hardly.",
+     "The lecture hall is very hard."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — бессмыслица\n- C — бессмыслица\n- D — *hard* в другом смысле"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-114",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-114",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-114.mp3",
+  "voices": "Woman = TOEFL US-F",
+  "words": 10,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "You'd better hurry if you want to catch the shuttle."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "I caught a cold last week.",
+     "Yes, the shuttle is hurried.",
+     "Thanks for the warning. I'm on my way.",
+     "Better is what I want."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — *catch* в другом смысле\n- B — бессмыслица\n- D — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-115",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-115",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-115.mp3",
+  "voices": "Woman = TOEFL UK-F",
+  "words": 8,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "I'm afraid the professor won't accept late submissions."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "I'm afraid of the professors.",
+     "Then I'd better finish tonight, even if I'm exhausted.",
+     "Yes, I'll submit it lately.",
+     "The accept button is late."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — *afraid* в другом смысле\n- C — *late* искажено\n- D — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-116",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-116",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-116.mp3",
+  "voices": "Man = TOEFL US-M",
+  "words": 12,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Seeing how crowded it is, we might want to come back later."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, it's crowded in the back.",
+     "Later is when it was seen.",
+     "We might want a crowd.",
+     "Good idea. Let's try again after lunch."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — не принимает предложение\n- B — бессмыслица\n- C — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-118",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-118",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-118.mp3",
+  "voices": "Woman = TOEFL CA-F",
+  "words": 11,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "I could have sworn I left my notebook on this table."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I swore at the table.",
+     "I left the desk at noon.",
+     "Maybe someone turned it in at the front desk.",
+     "I could have been wrong."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — *swear* в другом смысле\n- B — не помогает найти\n- D — не реагирует"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-120",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-120",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-120.mp3",
+  "voices": "Man = TOEFL UK-M2",
+  "words": 12,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "I never would have guessed that the exam would cover chapter ten."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I guessed chapter ten.",
+     "The cover was blue.",
+     "Me neither. I only skimmed that chapter.",
+     "I would have covered it."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — противоречит *never*\n- B — *cover* в другом смысле\n- D — повтор без смысла"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
   "id": "L-TALK-B-001",
   "type": "TALK",
   "task": "lat",
@@ -7205,6 +9497,240 @@
    "*cheap books would spread dangerous ideas*. B — книги дешёвые; C — налоги не упоминаются; D — не упоминается",
    "*both changed how quickly information moves*. A — не упоминается; B — не утверждается; D — не утверждается",
    "*ask yourself who gained and who lost*. A — не просит; B — иллюстрация, не задание; D — не просит"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-B-018",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-018",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-018.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F",
+  "words": 188,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a physics class."
+   },
+   {
+    "who": "Woman",
+    "text": "Why is the sky blue? It's a question children ask, and the answer is surprisingly interesting. Sunlight looks white, but it is actually a mixture of all colors, from red to violet. When sunlight enters the atmosphere, it collides with gas molecules, mostly nitrogen and oxygen. These molecules scatter the light in all directions. The key point is that short wavelengths, such as blue and violet, are scattered much more than long wavelengths, such as red and orange. This is called Rayleigh scattering, after the British physicist who explained it. As a result, blue light bounces around the sky and reaches your eyes from every direction. You might ask why the sky isn't violet, since violet scatters even more than blue. There are two reasons. The Sun emits less violet light than blue, and our eyes are less sensitive to violet. At sunset, the sunlight travels through much more atmosphere to reach us. Most of the blue is scattered away along the way, which leaves the longer wavelengths, so we see red and orange. On Thursday, we'll look at how the same principle explains why clouds are white."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "Why the sky looks blue",
+     "How sunsets are photographed",
+     "Why clouds are white",
+     "How the atmosphere is formed"
+    ]
+   },
+   {
+    "stem": "According to the professor, why is the sky not violet?",
+    "opts": [
+     "The Sun emits less violet light and our eyes are less sensitive to it",
+     "Violet light is absorbed by the clouds",
+     "Violet light does not enter the atmosphere",
+     "Violet light is scattered less than red light"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention sunsets?",
+    "opts": [
+     "To prove that violet light is the strongest",
+     "To explain how clouds form",
+     "To compare day and night temperatures",
+     "To show how the distance light travels affects its color"
+    ]
+   },
+   {
+    "stem": "What can be inferred about long wavelengths of light?",
+    "opts": [
+     "They cannot be seen by humans",
+     "They are scattered less by the atmosphere than short wavelengths",
+     "They are produced only at sunset",
+     "They are stronger than blue light"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   0,
+   3,
+   1
+  ],
+  "explain": [
+   "Рэлеевское рассеяние объясняет синий цвет. B — облака — на четверг; C — тема лекции; D — состав атмосферы лишь фон",
+   "*two reasons*: меньше фиолетового и глаза менее чувствительны. B — облака не упоминаются; C — входит; D — рассеивается больше",
+   "*sunlight travels through much more atmosphere*. A — не доказывает; B — облака — другая тема; C — температура не обсуждается",
+   "*short wavelengths… are scattered much more than long*. A — красный виден; C — не только на закате; D — не сравнивается по силе"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-B-019",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-019",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-019.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2",
+  "words": 176,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a history class."
+   },
+   {
+    "who": "Man",
+    "text": "When we think of ancient trade, we often picture the Silk Road. But the Silk Road wasn't one road. It was a network of routes that stretched more than four thousand miles, connecting China with the Mediterranean from about the second century B.C. Few traders traveled the whole distance. Instead, goods passed from merchant to merchant, like a relay. Silk was the most famous product, but caravans also carried spices, metals, glass, and horses. Perhaps the most important thing that traveled, however, was not a product. It was ideas. Religions such as Buddhism spread from India into China along these routes, and technologies like papermaking moved westward. Cities along the way, such as Samarkand, grew wealthy as trading centers. The Silk Road also had a darker side. Diseases could spread along the same paths, and historians believe that the plague of the fourteenth century may have traveled this way. By the sixteenth century, sea routes had become cheaper, and the overland trade declined. For next class, please read the assigned chapter on the spread of Buddhism."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What does the professor emphasize about the Silk Road?",
+    "opts": [
+     "It was built by a single empire",
+     "It was used only for silk",
+     "It was a network of routes rather than a single road",
+     "It was mainly a military route"
+    ]
+   },
+   {
+    "stem": "According to the professor, how did most goods travel along the Silk Road?",
+    "opts": [
+     "By a single caravan",
+     "From merchant to merchant",
+     "On large ships",
+     "By government messengers"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention papermaking?",
+    "opts": [
+     "To show that China invented silk",
+     "To describe how books were produced",
+     "To give an example of a technology that spread along the routes",
+     "To explain why the plague spread"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about why overland trade declined?",
+    "opts": [
+     "The cities along the route disappeared",
+     "The plague ended trade completely",
+     "Silk lost its value",
+     "Sea routes became cheaper"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   1,
+   2,
+   3
+  ],
+  "explain": [
+   "*wasn't one road. It was a network*. A — не упоминается; B — были и другие товары; D — не упоминается",
+   "*like a relay*. A — мало кто проезжал весь путь; C — морские маршруты позже; D — не упоминается",
+   "*technologies like papermaking moved westward*. A — шёлк — другое; B — производство книг не описано; D — чума — отдельно",
+   "*sea routes had become cheaper*. A — не говорится; B — не говорится; C — не говорится"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-B-020",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-020",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-020.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F",
+  "words": 184,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an economics class."
+   },
+   {
+    "who": "Woman",
+    "text": "Imagine that your favorite band announces a concert, and tickets cost thirty dollars. They sell out in minutes. Now imagine the same tickets sell for a hundred. Which situation tells us more about how markets work? Today's topic is supply and demand. Demand is how much of a product people want to buy at a given price. In general, as the price rises, demand falls. Supply is how much sellers are willing to produce. As the price rises, supply usually rises, too, because selling becomes more profitable. The price where the two meet is called the equilibrium price. At that price, the amount buyers want equals the amount sellers offer. If the price is below it, there are shortages, and some buyers can't get the product. If it is above it, there are surpluses, and goods remain unsold. Sellers then lower the price. Notice that prices rarely stay still for long. If a new fashion makes a product popular, demand rises, and the equilibrium price goes up. For next time, think of a product whose price changed recently, and be ready to explain why."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the lecture mainly about?",
+    "opts": [
+     "How prices are determined in a market",
+     "Why concert tickets are expensive",
+     "How sellers advertise products",
+     "Why shortages are harmful"
+    ]
+   },
+   {
+    "stem": "According to the professor, what happens when the price is above the equilibrium price?",
+    "opts": [
+     "Demand suddenly rises",
+     "Sellers increase production",
+     "Some goods remain unsold",
+     "Buyers cannot find products"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention a new fashion?",
+    "opts": [
+     "To prove that supply never changes",
+     "To explain why prices fall",
+     "To show how a change in demand can change a price",
+     "To describe a typical shortage"
+    ]
+   },
+   {
+    "stem": "What will students probably do before the next class?",
+    "opts": [
+     "Calculate an equilibrium price",
+     "Explain a recent change in the price of a product",
+     "Attend a concert",
+     "Write a report on shortages"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   2,
+   2,
+   1
+  ],
+  "explain": [
+   "Спрос, предложение и равновесная цена. B — концерт — пример; C — реклама не обсуждается; D — вред не обсуждается",
+   "*there are surpluses, and goods remain unsold*. A — спрос падает; B — сказано: цену снижают; D — это при низкой цене",
+   "*a new fashion makes a product popular, demand rises*. A — не утверждается; B — цена растёт; D — не описывает дефицит",
+   "*think of a product whose price changed*. A — не просит; C — не просит; D — не просит"
   ],
   "qtypes": [
    "Main Idea",
@@ -7913,6 +10439,240 @@
    "Factual",
    "Method",
    "Attitude"
+  ]
+ },
+ {
+  "id": "L-TALK-C-021",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-021",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-021.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M3",
+  "words": 183,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a psychology class."
+   },
+   {
+    "who": "Man",
+    "text": "We spend roughly a third of our lives asleep, yet for a long time scientists considered sleep a passive state. Research now suggests the opposite: during sleep, the brain is busy sorting memories. The process is called consolidation. When you learn something new, such as a list of words, the information is fragile. During sleep, your brain replays recent experiences and strengthens the useful connections. Different stages seem to matter for different kinds of memory. Deep sleep appears to help with facts, while the dreaming stage, known as REM sleep, may help with skills and creative problem solving. One famous study asked two groups to learn a set of word pairs. One group slept afterward, and the other stayed awake. When tested twelve hours later, the group that slept remembered considerably more. Of course, this doesn't mean all-night cramming is useless. It means that cramming without sleep wastes much of the effort. In other words, sleep is not time taken from studying. It is part of studying. Consider that the next time you are tempted to stay up all night before an exam."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main point of the lecture?",
+    "opts": [
+     "Dreams predict future events",
+     "Sleep plays an active role in memory",
+     "Students should study less",
+     "Memory is not affected by sleep"
+    ]
+   },
+   {
+    "stem": "According to the professor, which type of sleep may help with skills and creative problem solving?",
+    "opts": [
+     "Deep sleep",
+     "REM sleep",
+     "Daytime naps",
+     "Light sleep before waking"
+    ]
+   },
+   {
+    "stem": "Why does the professor describe the study with two groups?",
+    "opts": [
+     "To provide evidence that sleep improves memory",
+     "To show that word pairs are easy",
+     "To demonstrate the dangers of cramming",
+     "To compare morning and evening learning"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about staying up all night before an exam?",
+    "opts": [
+     "It always leads to failure",
+     "It is useful only for facts",
+     "It is usually not an efficient way to prepare",
+     "It is the best way to memorize"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1,
+   0,
+   2
+  ],
+  "explain": [
+   "*during sleep, the brain is busy sorting memories*. A — не утверждается; C — не призывает; D — противоположно",
+   "*the dreaming stage, known as REM sleep*. A — глубокий — для фактов; C — не упоминается; D — не упоминается",
+   "*the group that slept remembered considerably more*. B — лёгкость пар не обсуждается; C — цель — доказать пользу сна; D — утро/вечер не сравниваются",
+   "*cramming without sleep wastes much of the effort*. A — «always» слишком сильно; B — не утверждается; D — противоположно"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Method",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-TALK-C-022",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-022",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-022.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F2",
+  "words": 178,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a history class."
+   },
+   {
+    "who": "Woman",
+    "text": "In seventeen-fifty, about one in six people in England lived in a town. By nineteen hundred, it was three in four. This movement of people from the countryside to cities, called urbanization, was one of the major consequences of the Industrial Revolution. Why did it happen? Factories needed workers in large numbers, and they were built near rivers and coal, which meant that towns grew quickly around them. Meanwhile, improvements in farming meant that fewer workers were needed on the land. Cities offered work, but their problems were severe. Housing was crowded and cheap, clean water was scarce, and diseases such as cholera spread rapidly. Life expectancy in industrial cities was often lower than in rural areas. Eventually, reformers pushed governments to build sewers, supply clean water, and regulate factories. These changes did not happen overnight. They took decades, and they were often resisted by factory owners. So, when we speak of progress, remember that the Industrial Revolution produced enormous wealth, but also real suffering. Historians still debate whether ordinary workers were better off in the short term."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the lecture mainly about?",
+    "opts": [
+     "Why and how cities grew during the Industrial Revolution",
+     "How farming methods changed in England",
+     "Why cholera spread across Europe",
+     "How governments built sewers"
+    ]
+   },
+   {
+    "stem": "According to the professor, why did fewer people need to work on farms?",
+    "opts": [
+     "Farming had improved",
+     "Factories needed more space",
+     "Farms were taken by the government",
+     "Diseases killed many farmers"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention life expectancy?",
+    "opts": [
+     "To show that rural life was dangerous",
+     "To illustrate the poor living conditions in industrial cities",
+     "To argue that reforms were unnecessary",
+     "To explain why people left cities"
+    ]
+   },
+   {
+    "stem": "What is the professor's attitude toward the Industrial Revolution?",
+    "opts": [
+     "She believes it was entirely positive",
+     "She thinks it harmed all workers",
+     "She considers it unimportant",
+     "She sees both benefits and costs"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   0,
+   1,
+   3
+  ],
+  "explain": [
+   "Урбанизация как следствие промышленной революции. B — фермерство — одна из причин; C — болезнь — следствие; D — реформы — часть темы",
+   "*improvements in farming meant that fewer workers were needed*. B — не упоминается; C — не упоминается; D — не упоминается",
+   "*Life expectancy in industrial cities was often lower*. A — сельская жизнь не опасна; C — реформы были; D — люди приходили в города",
+   "*enormous wealth, but also real suffering*. A — только плюсы — нет; B — не все вредило; C — важно"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-TALK-C-023",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-023",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-023.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M",
+  "words": 178,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a linguistics class."
+   },
+   {
+    "who": "Man",
+    "text": "Why do young children learn languages so easily, while adults often struggle? Some researchers believe in a critical period, a window of time in early life when the brain is especially open to learning language. The idea gained attention from the case of Genie, a girl discovered in nineteen seventy after being isolated from other people for years. Despite intensive help, she never mastered grammar, which suggested that language must be acquired early. However, the case is hard to interpret, because her isolation also involved severe neglect, which can harm development in many ways. More reliable evidence comes from immigrants. Studies found that people who arrived in a new country as young children reached native-like grammar, while those who arrived after puberty usually did not, regardless of how many years they had lived there. But notice that the decline seems gradual, not sudden, which is why many researchers now prefer the term sensitive period. Adults can still become fluent. They simply tend to rely on different strategies, such as memorizing rules, and they rarely lose their accent completely."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the lecture mainly about?",
+    "opts": [
+     "How immigrants find jobs",
+     "How grammar is taught in schools",
+     "Why accents are difficult to understand",
+     "Whether there is an ideal age for learning a language"
+    ]
+   },
+   {
+    "stem": "Why does the professor say the case of Genie is hard to interpret?",
+    "opts": [
+     "She learned grammar too quickly",
+     "Her isolation involved other harmful factors",
+     "She was not given any help",
+     "She was too old to be studied"
+    ]
+   },
+   {
+    "stem": "How did the studies of immigrants support the idea of a critical period?",
+    "opts": [
+     "Those who arrived as young children reached native-like grammar",
+     "Those who arrived later learned faster",
+     "All immigrants kept strong accents",
+     "The length of residence predicted success"
+    ]
+   },
+   {
+    "stem": "What can be inferred about adult learners?",
+    "opts": [
+     "They cannot learn grammar",
+     "They learn faster than children",
+     "They never lose their accents",
+     "They can become fluent, though they may use different strategies"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1,
+   0,
+   3
+  ],
+  "explain": [
+   "Критический/сензитивный период. A — работа не обсуждается; B — преподавание не обсуждается; C — акценты — лишь деталь",
+   "*her isolation also involved severe neglect*. A — она не выучила; C — помощь была; D — возраст не причина",
+   "*arrived … as young children reached native-like grammar*. B — противоположно; C — не только акценты; D — «regardless of how many years»",
+   "*Adults can still become fluent*. A — противоречит; B — не утверждается; C — «rarely» не «never»"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Method",
+   "Inference"
   ]
  }
 ]
