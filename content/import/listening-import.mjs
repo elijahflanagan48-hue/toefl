@@ -2,6 +2,7 @@
 // Usage: node content/import/listening-import.mjs "<…/03 Listening>"
 import { readFileSync, writeFileSync, readdirSync, existsSync, copyFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 const SRC = process.argv[2]; if (!SRC) { console.error('path to "03 Listening" required'); process.exit(1); }
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '../..');
@@ -36,7 +37,11 @@ for (const f of readdirSync(join(SRC, 'Скрипты')).filter(x => /^L-(LCR|CO
   }
   const mp3 = readdirSync(join(SRC, 'Аудио/Готовые')).find(x => x.startsWith(short + ' '));
   let hasAudio = false;
-  if (mp3) { copyFileSync(join(SRC, 'Аудио/Готовые', mp3), join(ROOT, 'app/public/audio/L', short + '.mp3')); hasAudio = true; }
+  if (mp3) { const to = join(ROOT, 'app/public/audio/L', short + '.mp3');
+    // speech: 64 kbit/s mono 24 kHz is transparent enough and halves the size (decision 66)
+    try { execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', join(SRC, 'Аудио/Готовые', mp3), '-af', 'alimiter=limit=0.97', '-codec:a', 'libmp3lame', '-b:a', '64k', '-ac', '1', '-ar', '24000', to]); }
+    catch (e) { copyFileSync(join(SRC, 'Аудио/Готовые', mp3), to); warn.push(short + ': ffmpeg missing, copied as is'); }
+    hasAudio = true; }
   const test = testOf[short] || null;
   const status = !hasAudio ? 'draft' : test ? 'pretest' : 'active';
   const voices = (md.match(/Голос[аы]?:\s*([^·\n]*)/) || [, ''])[1].trim();
