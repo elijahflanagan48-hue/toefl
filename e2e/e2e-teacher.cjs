@@ -1,4 +1,5 @@
 // E2E: teacher cabinet (P9) — assignment with deadline → student sees it → does it via the link → completion on the teacher's page;
+const LCO_N = JSON.parse(require('fs').readFileSync(__dirname + '/../content/listening/items.json', 'utf8')).filter(x => x.task === 'lco').length;
 // student card; bank browser (filter, preview, status change, import, edit); content overview; teacher can open the mock-test page.
 const { chromium } = require('playwright');
 const fs = require('fs');
@@ -32,7 +33,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   ok(t.url().includes('#/t/student/'), 'student card opens from the list');
   ok((await t.textContent('#app')).includes(sname), 'card shows the name');
   await t.screenshot({ path: OUT + '/card.png' });
-  await t.click('.hdr [data-act="assign"]'); await t.waitForTimeout(600);
+  await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('#a-to', { timeout: 8000 }).catch(() => {});
   ok(await t.evaluate(() => document.getElementById('a-to').selectedOptions[0].textContent.includes('Вера')), 'assign dialog preselects this student');
   await t.selectOption('#a-task', 'R:ctw'); await t.selectOption('#a-mode', 'learn');
   await t.click('[data-act="assign-go"]'); await t.waitForTimeout(1200);
@@ -73,7 +74,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   await t.screenshot({ path: OUT + '/assign.png' });
 
   // results page: student answers an assigned Listening-free item (Reading CtW) wrongly → teacher sees errors + explanation
-  await t.click('.hdr [data-act="assign"]'); await t.waitForTimeout(500);
+  await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('#a-to', { timeout: 8000 }).catch(() => {});
   await t.selectOption('#a-task', 'R:ctw'); await t.click('[data-act="assign-go"]'); await t.waitForTimeout(1000);
   const mine2 = await api('GET', '/me/assignments');
   const a2 = mine2.assignments.find(x => !x.done);
@@ -93,8 +94,9 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   }
 
   // group assignment + delete
+  await t.goto(APP + '#/t/assign'); await t.waitForTimeout(1000);
   const n0 = (await t.$$('.tbl tbody tr')).length;
-  await t.click('.hdr [data-act="assign"]'); await t.waitForTimeout(500);
+  await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('#a-to', { timeout: 8000 }).catch(() => {});
   await t.selectOption('#a-task', 'S:int'); await t.selectOption('#a-mode', 'timed');
   await t.click('[data-act="assign-go"]'); await t.waitForTimeout(1000);
   ok((await t.$$('.tbl tbody tr')).length === n0 + 1, 'group assignment added', n0 + ' → ' + (await t.$$('.tbl tbody tr')).length);
@@ -109,7 +111,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   ok(txt.includes('Complete the Words') && txt.includes('Choose a Response') && txt.includes('Take an Interview'), 'content overview covers R, L, W, S');
   await t.screenshot({ path: OUT + '/content.png' });
   await t.click('tr[data-go*="task=lco"]'); await t.waitForTimeout(1200);
-  ok(t.url().includes('task=lco') && (await t.$$('.tbl tbody tr')).length === 21, 'bank filtered to Conversation (21 tasks)', String((await t.$$('.tbl tbody tr')).length));
+  ok(t.url().includes('task=lco') && (await t.$$('.tbl tbody tr')).length === LCO_N, 'bank filtered to Conversation (' + LCO_N + ' tasks)', String((await t.$$('.tbl tbody tr')).length));
   await t.fill('[data-f=q]', 'CONV-0'); await t.waitForTimeout(1500);
   ok(t.url().includes('q=CONV-0'), 'search updates the URL');
   await t.click('.tbl tbody tr:first-child'); await t.waitForTimeout(800);
