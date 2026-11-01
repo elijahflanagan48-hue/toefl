@@ -218,3 +218,4 @@ export const bankList = p => get('/teacher/items?' + new URLSearchParams(p));
 export const bankItem = id => get('/teacher/items/' + encodeURIComponent(id));
 export const setItemStatus = (id, status) => patch('/teacher/items/' + encodeURIComponent(id), { status });
 export const importItems = items => post('/teacher/items', { items });
+export const assignmentResults = id => get(`/teacher/assignments/${id}/results`);

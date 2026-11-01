@@ -56,10 +56,10 @@ export async function assignView() {
     html: `${hdr('Назначения', { back: '#/t/home', sub: 'Задания с дедлайнами', right: `<button class="btn sm pri" data-act="assign">${ic('plus', 16)} Новое</button>` })}
     ${list.length ? `<div class="card tblwrap"><table class="tbl"><thead><tr><th>Задание</th><th>Кому</th><th>Срок</th><th>Выполнили</th><th></th></tr></thead><tbody>${list.map(a => {
       const pct = a.targets ? Math.round(a.done / a.targets * 100) : 0, late = a.due_at && a.due_at < now && a.done < a.targets;
-      return `<tr><td><b>${esc(a.title)}</b><div class="fade small">${MODE_NAMES[a.spec?.mode] || ''}</div></td>
+      return `<tr><td><a href="#/t/assign/${a.id}"><b>${esc(a.title)}</b></a><div class="fade small">${MODE_NAMES[a.spec?.mode] || ''}</div></td>
         <td>${esc(a.group_name || a.student_name || '—')}</td><td>${a.due_at ? dateLabel(a.due_at) : 'без срока'}${late ? ' <em class="badtx">просрочено</em>' : ''}</td>
         <td><div class="calc"><div class="bar"><i style="width:${pct}%"></i></div><span>${a.done} из ${a.targets}</span></div></td>
-        <td><button class="btn sm ghost" data-act="assign-del" data-id="${a.id}" data-nm="${esc(a.title)}">Удалить</button></td></tr>`;
+        <td><a class="btn sm" href="#/t/assign/${a.id}">Результаты</a> <button class="btn sm ghost" data-act="assign-del" data-id="${a.id}" data-nm="${esc(a.title)}">Удалить</button></td></tr>`;
     }).join('')}</tbody></table></div>`
       : `<div class="card empty"><b>Назначений пока нет</b>Назначьте тренажёр группе или ученику — он появится у них на главной с дедлайном.<br><br><button class="btn sm pri" data-act="assign">${ic('plus', 16)} Назначить</button></div>`}`
   };
@@ -182,3 +182,72 @@ export async function contentLive() {
   };
 }
 on('go', el => { location.hash = el.dataset.go; });
+
+/* ------------------------------------------------------------------ results of one assignment (for the lesson) */
+const L = i => 'ABCD'[i];
+const docText = d => [d.head, d.subject, ...(d.paras || []), ...(d.msgs || []).map(m => (m.from ? m.from + ': ' : '') + m.text), ...(d.rows || []).map(r => r.join(' | ')), d.foot].filter(Boolean).join('\n');
+function ctxOf(it) {
+  const b = it.body;
+  if (it.task === 'rdl') return docText(b.doc || {});
+  if (it.task === 'rap') return (b.paras || []).map(p => p.join(' ')).join('\n\n');
+  if (it.task === 'ctw') return (b.first || '') + ' ' + (b.parts || []).map(p => (p.t != null ? p.t : `${p.pre || ''}${p.keep}${'_'.repeat(p.n)}${p.post || ''}`)).join('');
+  if (['lcr', 'lco', 'lan', 'lat'].includes(it.task)) return it.task === 'lcr' ? '' : (it.explain?.[b.qs.length] || '');
+  return '';
+}
+const who = (list, names) => list.map(r => esc(names[r.user_id] || '?')).join(', ');
+function qBlock(it, q, rows, names) {
+  const n = rows.length, wrong = rows.filter(r => r.correct === 0), key = Array.isArray(it.key) ? it.key[q] : it.key;
+  const expl = Array.isArray(it.explain) ? it.explain[q] : it.explain;
+  const head = `<div class="rq-h"><span class="chip ${wrong.length ? 'bad' : 'ok'}">${n - wrong.length} из ${n}</span><span class="fade small">${esc(it.qtypes?.[q] || '')}</span></div>`;
+  let body = '';
+  if (['rdl', 'rap', 'lcr', 'lco', 'lan', 'lat'].includes(it.task)) {
+    const qq = it.body.qs[q];
+    body = `<p class="rq-s"><b>${q + 1}.</b> ${esc(qq.stem)}</p><ul class="rq-o">${qq.opts.map((o, i) => {
+      const pick = rows.filter(r => Number(r.answer) === i);
+      return `<li class="${i === key ? 'key' : pick.length ? 'bad' : ''}"><b>${L(i)}</b> <span>${esc(o)}</span>${pick.length ? `<em>${pick.length}: ${who(pick, names)}</em>` : ''}</li>`;
+    }).join('')}</ul>`;
+  } else if (it.task === 'ctw') {
+    const p = it.body.parts.filter(x => x.keep != null)[q];
+    body = `<p class="rq-s"><b>Пропуск ${q + 1}.</b> ${esc(p?.pre || '')}<b>${esc(p?.keep || '')}</b><u>${esc(String(key))}</u>${esc(p?.post || '')}</p>
+      ${wrong.length ? `<ul class="rq-o">${wrong.map(r => `<li class="bad"><span>${esc(String(r.answer ?? '—'))}</span><em>${esc(names[r.user_id] || '?')}</em></li>`).join('')}</ul>` : ''}`;
+  } else if (it.task === 'bas') {
+    body = `<p class="rq-s"><b>Ответ:</b> ${esc((key || []).join(' '))}</p>${wrong.length ? `<ul class="rq-o">${wrong.map(r => `<li class="bad"><span>${esc(Array.isArray(r.answer) ? r.answer.join(' ') : String(r.answer ?? '—'))}</span><em>${esc(names[r.user_id] || '?')}</em></li>`).join('')}</ul>` : ''}`;
+  }
+  return `<div class="rq">${head}${body}${expl ? `<div class="rq-e">${esc(String(expl)).replace(/\n/g, '<br>')}</div>` : ''}</div>`;
+}
+
+export async function assignResults(params) {
+  if (!isLive()) return { title: 'Результаты', html: needLive('В демо-режиме результаты недоступны.') };
+  const r = await src.assignmentResults(params[0]);
+  const a = r.assignment, names = Object.fromEntries(r.students.map(s => [s.id, s.name]));
+  const done = r.students.filter(s => s.finished || s.subs.length).length;
+  const scored = r.students.filter(s => s.n);
+  const acc = scored.length ? Math.round(scored.reduce((x, s) => x + s.got, 0) / scored.reduce((x, s) => x + s.n, 0) * 100) : null;
+  // items ordered by error rate
+  const byItem = {};
+  r.responses.forEach(x => { ((byItem[x.item_id] ||= {})[x.q] ||= []).push(x); });
+  const itemList = Object.keys(byItem).map(id => {
+    const rows = Object.values(byItem[id]).flat(), graded = rows.filter(x => x.correct != null);
+    return { id, bad: graded.length ? 1 - graded.reduce((s, x) => s + x.correct, 0) / graded.length : 0 };
+  }).filter(x => r.items[x.id]).sort((x, y) => y.bad - x.bad);
+  const blocks = itemList.map(({ id, bad }) => {
+    const it = r.items[id], ctx = ctxOf(it), qs = Object.keys(byItem[id]).map(Number).sort((x, y) => x - y);
+    return `<article class="card pad rq-item"><div class="rq-top"><b>${esc(id)}</b><span class="fade small">${TNAME[it.task] || it.task} · ${it.level}</span><span class="chip ${bad > 0.3 ? 'bad' : bad > 0 ? 'warn' : 'ok'}">ошибок ${Math.round(bad * 100)}%</span></div>
+      ${it.body?.audio ? `<audio controls preload="none" src="${esc(it.body.audio)}" style="width:100%;margin:6px 0"></audio>` : ''}
+      ${ctx ? `<details class="rq-ctx"><summary>${it.task.startsWith('l') ? 'Расшифровка' : 'Текст'}</summary><p>${esc(ctx).replace(/\n/g, '<br>')}</p></details>` : ''}
+      ${qs.map(q => qBlock(it, q, byItem[id][q], names)).join('')}</article>`;
+  }).join('');
+  return {
+    title: a.title, wide: true,
+    html: `${hdr(a.title, { back: '#/t/assign', sub: `${a.group_name || a.student_name || ''}${a.due_at ? ' · до ' + dateLabel(a.due_at) : ''}` })}
+    <div class="kpis"><div class="kpi">${ic('users', 20)}<b class="serif">${done} из ${r.students.length}</b><span>выполнили</span></div>
+      <div class="kpi">${ic('check', 20)}<b class="serif">${acc == null ? '—' : acc + '%'}</b><span>верных ответов</span></div>
+      <div class="kpi">${ic('alert', 20)}<b class="serif">${itemList.filter(x => x.bad > 0.3).length}</b><span>заданий с ошибками > 30%</span></div></div>
+    <div class="lbl">Ученики</div>
+    <div class="card tblwrap"><table class="tbl"><thead><tr><th>Ученик</th><th>Статус</th><th>Верно</th><th>Работы</th></tr></thead><tbody>${r.students.map(s => `<tr><td><b>${esc(s.name)}</b></td>
+      <td>${s.finished || s.subs.length ? '<span class="chip ok">сделано</span>' : s.attempts ? '<span class="chip warn">начал</span>' : '<span class="chip">не начал</span>'}</td>
+      <td class="num">${s.n ? `${s.got} из ${s.n} · ${Math.round(s.got / s.n * 100)}%` : '—'}</td>
+      <td>${s.subs.map(x => `<a class="btn sm" href="#/t/review/${x.id}">${x.status === 'pending' ? 'проверить' : 'оценка ' + band(x.score)}</a>`).join(' ') || '<span class="fade">—</span>'}</td></tr>`).join('')}</tbody></table></div>
+    ${blocks ? `<div class="lbl">Разбор для урока <b>сначала самые трудные</b></div>${blocks}` : (a.spec?.section === 'W' || a.spec?.section === 'S') ? '' : '<div class="card empty"><b>Ответов пока нет</b>Как только ученики выполнят задание, здесь появится разбор.</div>'}`
+  };
+}

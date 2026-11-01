@@ -321,6 +321,33 @@ on('GET', '/teacher/assignments', async ({ env, user }) => {
     WHERE a.teacher_id = ? ORDER BY a.created_at DESC LIMIT 100`, user.id);
   return { assignments: rows.map(r => ({ ...r, spec: parse(r.spec) })) };
 });
+/** full results of one assignment: who did it, every answer, keys and explanations (for discussing mistakes in class) */
+on('GET', '/teacher/assignments/:id/results', async ({ env, user, params }) => {
+  requireTeacher(user);
+  const a = await one(env, `SELECT a.*, g.name AS group_name, u.name AS student_name FROM assignments a LEFT JOIN groups g ON g.id = a.group_id
+    LEFT JOIN users u ON u.id = a.student_id WHERE a.id = ? AND a.teacher_id = ?`, Number(params.id), user.id);
+  if (!a) throw notFound();
+  const students = await all(env, `SELECT id, name FROM users WHERE role = 'student' AND ((? IS NOT NULL AND group_id = ?) OR (? IS NOT NULL AND id = ?)) ORDER BY name`, a.group_id, a.group_id, a.student_id, a.student_id);
+  const atts = await all(env, 'SELECT id, user_id, mode, started_at, finished_at FROM attempts WHERE assignment_id = ? ORDER BY id', a.id);
+  const rs = await all(env, `SELECT r.attempt_id, r.item_id, r.q, r.qtype, r.answer, r.correct, r.scored, t.user_id FROM responses r JOIN attempts t ON t.id = r.attempt_id
+    WHERE t.assignment_id = ? AND r.item_id IS NOT NULL ORDER BY r.id`, a.id);
+  const subs = await all(env, `SELECT s.id, s.user_id, s.section, s.task, s.status, s.words, s.parts, s.submitted_at, s.prompt,
+    (SELECT score FROM ratings r WHERE r.submission_id = s.id AND r.is_final = 1 ORDER BY r.created_at DESC LIMIT 1) AS score
+    FROM submissions s WHERE s.assignment_id = ? AND s.status != 'draft' ORDER BY s.id`, a.id);
+  const items = {};
+  for (const id of [...new Set(rs.map(r => r.item_id))]) {
+    const it = await one(env, 'SELECT id, task, level, body, key, explain, qtypes FROM items WHERE id = ?', id);
+    if (it) items[id] = { id, task: it.task, level: it.level, body: parse(it.body), key: parse(it.key), explain: parse(it.explain), qtypes: parse(it.qtypes) };
+  }
+  const per = Object.fromEntries(students.map(s => [s.id, { id: s.id, name: s.name, attempts: 0, finished: false, n: 0, got: 0, subs: [] }]));
+  for (const t of atts) { const p = per[t.user_id]; if (p) { p.attempts++; if (t.finished_at) p.finished = true; } }
+  for (const r of rs) { const p = per[r.user_id]; if (p && r.correct != null && r.scored) { p.n++; p.got += r.correct; } }
+  for (const x of subs) { const p = per[x.user_id]; if (p) p.subs.push({ id: x.id, task: x.task, section: x.section, status: x.status, score: x.score, words: x.words, title: parse(x.prompt)?.title || parse(x.prompt)?.subject || '' }); }
+  return {
+    assignment: { ...a, spec: parse(a.spec) }, students: Object.values(per), items,
+    responses: rs.map(r => ({ user_id: r.user_id, item_id: r.item_id, q: r.q, answer: parse(r.answer), correct: r.correct }))
+  };
+});
 on('DELETE', '/teacher/assignments/:id', async ({ env, user, params }) => {
   requireTeacher(user);
   const a = await one(env, 'SELECT id FROM assignments WHERE id = ? AND teacher_id = ?', Number(params.id), user.id);

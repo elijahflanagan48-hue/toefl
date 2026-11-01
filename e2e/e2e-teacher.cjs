@@ -72,6 +72,26 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   ok((await t.textContent('#app')).includes('1 из 1'), 'teacher sees 1 of 1 done');
   await t.screenshot({ path: OUT + '/assign.png' });
 
+  // results page: student answers an assigned Listening-free item (Reading CtW) wrongly → teacher sees errors + explanation
+  await t.click('.hdr [data-act="assign"]'); await t.waitForTimeout(500);
+  await t.selectOption('#a-task', 'R:ctw'); await t.click('[data-act="assign-go"]'); await t.waitForTimeout(1000);
+  const mine2 = await api('GET', '/me/assignments');
+  const a2 = mine2.assignments.find(x => !x.done);
+  ok(!!a2, 'second assignment is open for the student');
+  if (a2) {
+    const at = await api('POST', '/attempts', { kind: 'practice', assignment_id: a2.id, section: 'R', task: 'ctw' });
+    const got = await api('GET', '/items?section=R&task=ctw&limit=1');
+    const it = got.items[0];
+    await api('POST', `/attempts/${at.id}/responses`, { responses: [{ item_id: it.id, q: 0, answer: 'zzz' }] });
+    await api('POST', `/attempts/${at.id}/finish`);
+    await t.goto(APP + '#/t/home'); await t.goto(APP + '#/t/assign/' + a2.id); await t.waitForTimeout(1500);
+    const rt = await t.textContent('#app');
+    ok(rt.includes(sname) && rt.includes('Разбор для урока'), 'results page lists the student and the lesson breakdown', rt.slice(0, 300));
+    ok(!!(await t.$('.rq-item')) && rt.includes(it.id), 'results page shows the item with the wrong answer');
+    ok(rt.includes('zzz'), 'results page shows what the student answered');
+    await t.screenshot({ path: OUT + '/results.png' });
+  }
+
   // group assignment + delete
   const n0 = (await t.$$('.tbl tbody tr')).length;
   await t.click('.hdr [data-act="assign"]'); await t.waitForTimeout(500);
