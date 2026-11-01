@@ -525,15 +525,27 @@ on('PATCH', '/teacher/items/:id', async ({ req, env, user, params }) => {
 const MOCK_PARTS = { 'R:M1': ['R', 'M1'], 'R:lower': ['R', 'lower'], 'R:upper': ['R', 'upper'], 'L:M1': ['L', 'M1'], 'L:lower': ['L', 'lower'], 'L:upper': ['L', 'upper'],
   'W:bas': ['W', 'bas'], 'W:eml': ['W', 'eml'], 'W:dsc': ['W', 'dsc'], 'S:lrp': ['S', 'lrp'], 'S:int': ['S', 'int'] };
 
+/** mocks a student may take: only those the teacher assigned (to them or to their group); teachers see all */
+async function mockAssignments(env, user) {
+  const rows = await all(env, `SELECT a.id, a.title, a.spec, a.due_at FROM assignments a
+    WHERE a.student_id = ? OR (a.group_id IS NOT NULL AND a.group_id = ?) ORDER BY a.id DESC`, user.id, user.group_id ?? -1);
+  const done = new Set((await all(env, `SELECT assignment_id AS id FROM attempts WHERE user_id = ? AND kind = 'mock' AND finished_at IS NOT NULL AND assignment_id IS NOT NULL`, user.id)).map(r => r.id));
+  return rows.map(r => ({ ...r, spec: parse(r.spec), done: done.has(r.id) })).filter(r => r.spec && r.spec.section === 'M');
+}
+
 on('GET', '/mocks', async ({ env, user }) => {
   requireUser(user);
   const rows = await all(env, 'SELECT id, title FROM mocks ORDER BY id');
-  return { mocks: rows };
+  if (user.role !== 'student') return { mocks: rows };
+  const mine = await mockAssignments(env, user), out = [];
+  for (const a of mine) { const m = rows.find(r => r.id === a.spec.task); if (m) out.push({ ...m, assignment_id: a.id, due_at: a.due_at, done: a.done }); }
+  return { mocks: out };
 });
 
 /** items of one part of a mock, in the defined order, without keys (the mock keeps them out of practice) */
 on('GET', '/mocks/:id/part', async ({ env, user, params, url }) => {
   requireUser(user);
+  if (user.role === 'student' && !(await mockAssignments(env, user)).some(a => a.spec.task === params.id)) throw forbidden();
   const spec = MOCK_PARTS[url.searchParams.get('part')];
   if (!spec) throw bad('bad_part');
   const m = await one(env, 'SELECT def FROM mocks WHERE id = ?', params.id);
@@ -590,6 +602,11 @@ on('POST', '/attempts', async ({ req, env, user }) => {
   if (!['learn', 'timed', 'mistakes', 'exam'].includes(mode)) throw bad('bad_mode');
   const section = b.section ?? null;
   if (section && !TASKS[section]) throw bad('bad_section');
+  if (kind === 'mock' && user.role === 'student') {
+    const a = (await mockAssignments(env, user)).find(x => x.id === Number(b.assignment_id) && x.spec.task === b.task);
+    if (!a) throw forbidden();
+    if (a.done) throw bad('mock_done', 'Этот пробник уже пройден. Новое назначение даёт только учитель.');
+  }
   const st = await settingsFor(env, teacherOf(user));
   const r = await run(env, `INSERT INTO attempts (user_id, kind, mode, section, task, assignment_id, threshold, started_at)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`, user.id, kind, mode, section, b.task ?? null, b.assignment_id ?? null, st.route_threshold, now());
@@ -618,13 +635,13 @@ on('POST', '/attempts/:id/responses', async ({ req, env, user, params }) => {
     let qtype = x.qtype ?? null;
     let correct = null;
     if (itemId) {
-      if (!(itemId in keys)) { const it = await one(env, 'SELECT section, task, key, explain, qtypes FROM items WHERE id = ?', itemId); keys[itemId] = it ? { section: it.section, task: it.task, key: parse(it.key), explain: parse(it.explain), qtypes: parse(it.qtypes) } : null; }
+      if (!(itemId in keys)) { const it = await one(env, 'SELECT section, task, key, explain, qtypes, status FROM items WHERE id = ?', itemId); keys[itemId] = it ? { section: it.section, task: it.task, key: parse(it.key), explain: parse(it.explain), qtypes: parse(it.qtypes), status: it.status } : null; }
       const k = keys[itemId];
       if (k) {
         section = k.section;
         if (Array.isArray(k.qtypes) && k.qtypes[q]) qtype = k.qtypes[q];
         correct = grade(k.task, k.key, q, x.answer);
-        if (reveal) results.push({ item_id: itemId, q, correct, key: Array.isArray(k.key) ? k.key[q] : k.key, explain: Array.isArray(k.explain) ? k.explain[q] : k.explain, transcript: transcriptOf(k.task, k.key, k.explain) });
+        if (reveal && !(k.status === 'pretest' && user.role === 'student')) results.push({ item_id: itemId, q, correct, key: Array.isArray(k.key) ? k.key[q] : k.key, explain: Array.isArray(k.explain) ? k.explain[q] : k.explain, transcript: transcriptOf(k.task, k.key, k.explain) });
       }
     }
     if (correct == null && (x.correct === 0 || x.correct === 1 || x.correct === true || x.correct === false)) correct = x.correct ? 1 : 0; // built-in demo content

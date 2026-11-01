@@ -13,7 +13,10 @@ export const ASSIGN_TASKS = [
   { v: 'W:eml', section: 'W', task: 'eml', nm: 'Writing · Write an Email' },
   { v: 'W:dsc', section: 'W', task: 'dsc', nm: 'Writing · Academic Discussion' },
   { v: 'S:lrp', section: 'S', task: 'lrp', nm: 'Speaking · Listen and Repeat' },
-  { v: 'S:int', section: 'S', task: 'int', nm: 'Speaking · Take an Interview' }
+  { v: 'S:int', section: 'S', task: 'int', nm: 'Speaking · Take an Interview' },
+  { v: 'M:T1', section: 'M', task: 'T1', nm: 'Полный пробник 1', mock: true },
+  { v: 'M:T2', section: 'M', task: 'T2', nm: 'Полный пробник 2', mock: true },
+  { v: 'M:T3', section: 'M', task: 'T3', nm: 'Полный пробник 3', mock: true }
 ];
 export const MODE_NAMES = { learn: 'учебный режим', timed: 'на время / как на экзамене' };
 
@@ -22,6 +25,7 @@ export function assignLink(spec = {}, id) {
   const a = id ? `&a=${id}` : '';
   const mode = spec.mode === 'timed' ? 'timed' : 'learn';
   const { section = 'R', task } = spec;
+  if (section === 'M') return `#/mock?${id ? 'a=' + id : ''}`;
   if (section === 'R' && task === 'module') return `#/exam/reading?${id ? 'a=' + id : ''}`;
   if (section === 'S' && (task === 'lrp' || task === 'int')) return `#/speak/${task}?mode=${mode}${a}`;
   if (section === 'W' && (task === 'eml' || task === 'dsc')) return `#/write/${task}?mode=${mode}${a}`;

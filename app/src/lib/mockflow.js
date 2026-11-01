@@ -22,8 +22,8 @@ export function urlOf(f, i) {
   return `#/speak/${part.slice(2)}?mock=1&mode=timed`;
 }
 
-export async function begin(mockId) {
-  const a = await src.startAttempt({ kind: 'mock', mode: 'exam', task: mockId });
+export async function begin(mockId, assignmentId) {
+  const a = await src.startAttempt({ kind: 'mock', mode: 'exam', task: mockId, assignment_id: assignmentId });
   if (!a?.id) throw new Error('Пробник доступен только в аккаунте');
   const f = { mock: mockId, attempt: a.id, at: 0, route: {}, t0: Date.now() };
   putFlow(f);

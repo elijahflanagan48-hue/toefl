@@ -2,7 +2,7 @@ import * as src from '../data/source.js';
 import { ic } from '../lib/icons.js';
 import { band, cefr, overallBand, SEC } from '../lib/util.js';
 import { hdr, on, modal, closeModal, toast } from '../lib/ui.js';
-import { isLive } from '../lib/api.js';
+import { isLive, session } from '../lib/api.js';
 import * as mockflow from '../lib/mockflow.js';
 
 const FLOW = [
@@ -23,12 +23,12 @@ on('mock-start', async () => {
     <div class="row">${ic('volume', 20)}<div class="t"><div class="nm">Наушники и микрофон</div><div class="mt">Listening звучит один раз; микрофон проверим перед Speaking</div></div></div>
     <div class="row">${ic('clock', 20)}<div class="t"><div class="nm">≈ ${total} минут</div><div class="mt">Reading 29 · Listening 27 · Writing 23 · Speaking 8</div></div></div>
   </div>
-  ${list.length ? list.map(m => `<button class="btn pri block" style="margin-bottom:6px" data-act="mock-go" data-id="${m.id}">${ic('play', 17)} ${m.title}</button>`).join('') : '<p class="mut">Пробников пока нет.</p>'}
+  ${list.length ? list.map(m => `<button class="btn pri block" style="margin-bottom:6px" data-act="mock-go" data-id="${m.id}" data-aid="${m.assignment_id || ''}" ${m.done ? 'disabled' : ''}>${ic('play', 17)} ${m.title}${m.done ? ' · пройден' : ''}</button>`).join('') : '<p class="mut">Пробник открывает учитель: он назначает его вам или группе.</p>'}
   <button class="btn ghost block" data-act="modal-close" style="margin-top:6px">Отмена</button>`);
 });
 on('mock-go', async el => {
   el.disabled = true;
-  try { await mockflow.begin(el.dataset.id); closeModal(); } catch (e) { el.disabled = false; toast(e.message); }
+  try { await mockflow.begin(el.dataset.id, Number(el.dataset.aid) || undefined); closeModal(); } catch (e) { el.disabled = false; toast(e.message); }
 });
 
 const total = FLOW.reduce((a, f) => a + f.min, 0);
@@ -82,6 +82,8 @@ export async function mockResult(params) {
 
 export default async function mock() {
   const mocks = await src.mocks();
+  let locked = false;
+  if (isLive() && session.user?.role === 'student') { try { locked = !(await src.mockList()).some(m => !m.done); } catch { locked = true; } }
     const last = mocks[mocks.length - 1] || {};
 
   const hero = `<section class="hero mock-hero on-hero">
@@ -89,7 +91,7 @@ export default async function mock() {
     <h2 class="serif">Reading → Listening → Writing → Speaking</h2>
     <div class="flow">${FLOW.map((f, i) => `${i ? `<span class="arr">${ic('right', 16)}</span>` : ''}
       <div class="fstep c${f.k} ${f.off ? 'off' : ''}"><i class="dot"></i><b>${SEC[f.k].name}</b><span>${f.min} мин · ${f.note}</span></div>`).join('')}</div>
-    <div class="mh-ft"><span>Без перерыва · ≈ ${total} мин сейчас</span><button class="btn gold" data-act="mock-start">${ic('play', 17)} Начать</button></div>
+    <div class="mh-ft"><span>${locked ? 'Пробник открывает учитель — после назначения он появится здесь' : `Без перерыва · ≈ ${total} мин сейчас`}</span>${locked ? '' : `<button class="btn gold" data-act="mock-start">${ic('play', 17)} Начать</button>`}</div>
   </section>`;
 
   const mst = `<div class="card pad mst">

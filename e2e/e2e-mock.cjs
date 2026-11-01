@@ -30,11 +30,17 @@ const hash = p => p.evaluate(() => location.hash);
   const pr = await api(s, 'GET', '/items?section=R&task=ctw&limit=20&level=');
   ok(!pr.items.some(i => ['R-CTW-A-104', 'R-CTW-B-108', 'R-CTW-C-001'].includes(i.id)), 'mock items are not offered in practice');
 
-  // start
+  // closed until the teacher assigns it
   await s.goto(APP + '#/mock'); await s.waitForTimeout(1000);
+  ok(!(await s.$('[data-act="mock-start"]')) && /открывает учитель/.test(await s.textContent('#app')), 'student: mock page is locked until assigned');
+  const ttok = await t.evaluate(() => localStorage.getItem('nt.token')), sid = (await api(s, 'GET', '/me')).user.id;
+  await fetch(API + '/teacher/assignments', { method: 'POST', headers: { Authorization: 'Bearer ' + ttok, 'Content-Type': 'application/json' }, body: JSON.stringify({ title: 'Полный пробник 1', student_id: sid, spec: { section: 'M', task: 'T1' } }) });
+
+  // start
+  await s.goto(APP + '#/progress'); await s.waitForTimeout(500); await s.goto(APP + '#/mock'); await s.waitForTimeout(1000);
   ok((await s.textContent('#app')).includes('Listening') && !(await s.textContent('#app')).includes('после озвучки'), 'mock page: Listening is no longer «after voicing»');
   await s.click('[data-act="mock-start"]'); await s.waitForTimeout(600);
-  ok((await s.$$('[data-act="mock-go"]')).length === 3, 'three tests offered');
+  ok((await s.$$('[data-act="mock-go"]')).length === 1, 'only the assigned test is offered');
   await s.screenshot({ path: OUT + '/start.png' });
   await s.click('[data-act="mock-go"][data-id="T1"]'); await s.waitForTimeout(1500);
   ok((await hash(s)).includes('practice/mock') && (await hash(s)).includes('R:M1'), 'starts with Reading module 1', await hash(s));
@@ -116,7 +122,8 @@ const hash = p => p.evaluate(() => location.hash);
   ok(await s.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'result page fits the width');
 
   // upper route: correct M1 answers over the API
-  const att = await api(s, 'POST', '/attempts', { kind: 'mock', mode: 'exam', task: 'T2' });
+  const a2 = (await api(t, 'POST', '/teacher/assignments', { title: 'Полный пробник 2', student_id: sid, spec: { section: 'M', task: 'T2' } })).id;
+  const att = await api(s, 'POST', '/attempts', { kind: 'mock', mode: 'exam', task: 'T2', assignment_id: a2 });
   const items = (await api(t, 'GET', '/mocks/T2/part?part=R:M1')).items;
   const full = [];
   for (const it of items) { const d = await api(t, 'GET', '/teacher/items/' + it.id); full.push(d.item); }
