@@ -10,7 +10,7 @@ export function ladder(f, target) {
     ${Object.values(SEC).map(s => {
       const v = f[s.k];
       return `<div class="lcol c${s.k}"><div class="plot"><div class="b ${v ? '' : 'na'}" style="--f:${v ? fr(v) : 0.55}">${v ? `<div class="v">${band(v)}</div>` : ''}</div></div>
-        <div class="n">${s.k}${v ? '' : ' · скоро'}</div></div>`;
+        <div class="n">${s.k}${v ? '' : ' · —'}</div></div>`;
     }).join('')}
     <div class="goal" style="--f:${fr(target)}"><span>цель ${band(target)}</span></div>
   </div>`;
@@ -69,7 +69,7 @@ export default async function today() {
         <div class="col-a">${hero}<div class="lbl">Эта неделя <b>${me.weekMin} мин</b></div>${weekCard(me.week, me.streak, me.weekMin)}</div>
         <div class="col-b">${route}${tasks}
           <div class="lbl">Быстрый старт</div>
-          <div class="quick">${Object.values(SEC).map(s => `<a class="qk c${s.k} ${s.k === 'L' ? 'soon' : ''}" href="#/train/${s.k}"><span class="sq">${ic(s.ic, 19)}</span><span>${s.name}</span></a>`).join('')}</div>
+          <div class="quick">${Object.values(SEC).map(s => `<a class="qk c${s.k}" href="#/train/${s.k}"><span class="sq">${ic(s.ic, 19)}</span><span>${s.name}</span></a>`).join('')}</div>
         </div>
       </div>`
   };

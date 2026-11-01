@@ -164,3 +164,9 @@ window.addEventListener('nt-toast', e => toast(e.detail));
 
 applyTheme(pref.get('themeMode', 'auto'));
 route();
+
+/* installable app: offline shell via the service worker; the install prompt is kept for the profile page */
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); window.__installEvt = e; });
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  window.addEventListener('load', () => { try { navigator.serviceWorker.register('./sw.js').catch(() => {}); } catch (e) {} });
+}

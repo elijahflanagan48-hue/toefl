@@ -39,7 +39,7 @@ for (const f of readdirSync(join(SRC, 'Скрипты')).filter(x => /^L-(LCR|CO
   let hasAudio = false;
   if (mp3) { const to = join(ROOT, 'app/public/audio/L', short + '.mp3');
     // speech: 64 kbit/s mono 24 kHz is transparent enough and halves the size (decision 66)
-    try { execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', join(SRC, 'Аудио/Готовые', mp3), '-af', 'alimiter=limit=0.97', '-codec:a', 'libmp3lame', '-b:a', '64k', '-ac', '1', '-ar', '24000', to]); }
+    try { execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', join(SRC, 'Аудио/Готовые', mp3), '-af', 'alimiter=limit=0.89:level=disabled', '-codec:a', 'libmp3lame', '-b:a', '64k', '-ac', '1', '-ar', '24000', to]); }
     catch (e) { copyFileSync(join(SRC, 'Аудио/Готовые', mp3), to); warn.push(short + ': ffmpeg missing, copied as is'); }
     hasAudio = true; }
   const test = testOf[short] || null;

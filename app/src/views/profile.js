@@ -9,6 +9,15 @@ import { pref, applyTheme } from '../lib/store.js';
 const rerender = () => window.dispatchEvent(new Event('hashchange'));
 const inviteLink = code => location.href.split('#')[0] + '#/join?code=' + encodeURIComponent(code);
 
+const standalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+function installBlock() {
+  if (standalone()) return `<div class="lbl">Приложение</div><p class="fade small" style="margin:0 2px">Установлено на этом устройстве.</p>`;
+  if (window.__installEvt) return `<div class="lbl">Приложение</div><button class="btn block" data-act="install">${ic('plus', 17)} Установить на устройство</button>`;
+  if (isIOS()) return `<div class="lbl">Приложение</div><p class="fade small" style="margin:0 2px">Чтобы открывать как приложение: в Safari нажмите «Поделиться» → «На экран “Домой”».</p>`;
+  return '';
+}
+on('install', async () => { const e = window.__installEvt; if (!e) return; window.__installEvt = null; e.prompt(); try { await e.userChoice; } catch (x) {} rerender(); });
 on('theme-mode', el => { pref.set('themeMode', el.dataset.v); applyTheme(el.dataset.v); rerender(); });
 on('role', el => { pref.set('role', el.dataset.v); location.hash = el.dataset.v === 'teacher' ? '#/t/home' : '#/today'; });
 on('target', async el => {
@@ -85,6 +94,7 @@ export default async function profile() {
       <div class="seg" role="radiogroup">${[['auto', 'Авто', 'auto'], ['light', 'Светлая', 'sun'], ['dark', 'Тёмная', 'moon']].map(([v, l, i]) =>
         `<button class="${mode === v ? 'on' : ''}" data-act="theme-mode" data-v="${v}" role="radio" aria-checked="${mode === v}">${ic(i, 17)}${l}</button>`).join('')}</div>
       <p class="fade small" style="margin:8px 2px 0">«Авто» следует за настройкой системы: днём светлая, ночью тёмная.</p>
+      ${installBlock()}
       ${isDemo() ? `<div class="lbl">Демо-режим</div>
       <div class="seg" role="radiogroup">${[['student', 'Ученик'], ['teacher', 'Учитель']].map(([v, l]) =>
         `<button class="${r === v ? 'on' : ''}" data-act="role" data-v="${v}" role="radio" aria-checked="${r === v}">${l}</button>`).join('')}</div>
