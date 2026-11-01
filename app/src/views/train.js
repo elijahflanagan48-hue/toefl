@@ -4,17 +4,17 @@ import { ic } from '../lib/icons.js';
 import { band, SEC } from '../lib/util.js';
 import { hdr, on, toast } from '../lib/ui.js';
 import { pref } from '../lib/store.js';
-import { isLive } from '../lib/api.js';
+import { isLive, session } from '../lib/api.js';
 
 const MODES = [['learn', 'Учиться', 'Ответ проверяется сразу, с разбором на русском'], ['timed', 'На время', 'Таймер и правила экзамена, разбор в конце'], ['mistakes', 'Мои ошибки', 'Повтор вопросов, в которых была ошибка, пока не ответишь верно']];
-const READY = { ctw: true, rdl: true, rap: true, bas: true, eml: true, dsc: true, lrp: true, int: true }; // tasks with a working trainer
+const READY = { ctw: true, rdl: true, rap: true, bas: true, eml: true, dsc: true, lrp: true, int: true, lcr: true, lco: true, lan: true, lat: true }; // tasks with a working trainer
 const WRITE = { eml: true, dsc: true, lrp: true, int: true }; // teacher-graded writing: own editor, no mistakes mode
 
 on('train-mode', el => { pref.set('trainMode', el.dataset.v); window.dispatchEvent(new Event('hashchange')); });
 on('start-task', el => toast(el.dataset.soon ? 'Откроется после озвучки' : 'Тренажёр «' + el.dataset.nm + '» появится на этапе ' + el.dataset.stage));
 
 function taskCard(k, t, st, mode, mist) {
-  const stage = { R: 'P3–P4', W: 'P5–P6', S: 'P7' }[k];
+  const stage = { R: 'P3–P4', W: 'P5–P6', S: 'P7', L: 'P12' }[k];
   const ready = READY[t.id];
   const s = st?.tasks?.[t.id], done = st?.done?.[t.id] || 0, inBank = st?.bank?.[t.id];
   let stat;
@@ -25,7 +25,7 @@ function taskCard(k, t, st, mode, mist) {
   else if (t.acc != null) stat = `<div class="tc-stat"><span>Точность</span><b class="serif">${t.acc}%</b></div><div class="bar c${k}"><i style="width:${t.acc}%"></i></div>`;
   else if (t.score != null) stat = `<div class="tc-stat"><span>Средний балл учителя</span><b class="serif">${band(t.score)}<small> / 5</small></b></div><div class="bar c${k}"><i style="width:${t.score / 5 * 100}%"></i></div>`;
   const meta = WRITE[t.id] && isLive() ? `${inBank ? inBank + ' заданий · ' : ''}${t.time}` : t.scripts != null ? 'ждёт озвучки' : isLive() && inBank != null ? `${done} из ${inBank} · ${t.time}` : isLive() ? t.time : `${t.done} из ${t.n} · ${t.time}`;
-  const href = t.id === 'lrp' || t.id === 'int' ? `#/speak/${t.id}?mode=${mode === 'timed' ? 'timed' : 'learn'}` : WRITE[t.id] ? `#/write/${t.id}?mode=${mode === 'learn' ? 'learn' : 'timed'}` : `#/practice/${t.id}?mode=${mode}`;
+  const href = k === 'L' ? `#/listen/${t.id}?mode=${mode === 'timed' ? 'timed' : 'learn'}` : t.id === 'lrp' || t.id === 'int' ? `#/speak/${t.id}?mode=${mode === 'timed' ? 'timed' : 'learn'}` : WRITE[t.id] ? `#/write/${t.id}?mode=${mode === 'learn' ? 'learn' : 'timed'}` : `#/practice/${t.id}?mode=${mode}`;
   const btn = t.scripts != null ? `<button class="btn sm" data-act="start-task" data-soon="1">${ic('lock', 16)} Скоро</button>`
     : ready && WRITE[t.id] && mode === 'mistakes' ? `<span class="chip">проверяет учитель</span>`
     : ready ? (mode === 'mistakes' && isLive() && !mist ? `<span class="chip ok">ошибок нет</span>` : `<a class="btn sm pri" href="${href}">${mode === 'mistakes' ? `Повторить${mist ? ' · ' + mist : ''}` : 'Начать'}</a>`)
@@ -43,7 +43,7 @@ export default async function train(params) {
   const k = SEC[params[0]] ? params[0] : 'R';
   const c = catalog[k], mode = MODES.some(m => m[0] === pref.get('trainMode', 'learn')) ? pref.get('trainMode', 'learn') : 'learn';
   let st = null, mist = null;
-  const banked = k === 'R' || k === 'W' || k === 'S';
+  const banked = true;
   if (banked && isLive()) {
     try { [st, mist] = await Promise.all([src.stats(k), src.mistakes(k)]); } catch (e) { /* show the page without stats */ }
   }
@@ -63,10 +63,10 @@ export default async function train(params) {
     <div class="qtypes c${k}">${c.types.map(([n]) => {
       const a = typeAcc(n);
       return k === 'R' ? `<a class="qt" href="#/practice/types?type=${encodeURIComponent(n)}&mode=${mode === 'timed' ? 'timed' : 'learn'}"><span>${n}</span>${a != null ? `<b class="${a < 60 ? 'weak' : ''}">${a}%</b>` : ''}</a>`
-        : `<button class="qt" data-act="start-task" data-soon="1"><span>${n}</span></button>`;
+        : `<a class="qt" href="#/listen/types?type=${encodeURIComponent(n)}&mode=${mode === 'timed' ? 'timed' : 'learn'}"><span>${n}</span>${a != null ? `<b class="${a < 60 ? 'weak' : ''}">${a}%</b>` : ''}</a>`;
     }).join('')}</div>` : '';
 
-  const mistNote = banked && mode === 'mistakes' ? `<a class="note ${mist?.count ? '' : 'info'}" href="#/practice/mistakes?mode=mistakes&sec=${k}" style="margin-top:12px">${ic('repeat', 22)}<div class="t"><div class="nm">${isLive() ? (mist?.count ? `Ошибок к повтору: ${mist.count}` : 'Ошибок к повтору нет') : 'Повтор ошибок'}</div><div class="mt">Вопрос уходит из списка, когда отвечаешь на него верно</div></div>${ic('right', 20)}</a>` : '';
+  const mistNote = banked && mode === 'mistakes' ? `<a class="note ${mist?.count ? '' : 'info'}" href="${k === 'L' ? '#/listen/mistakes?mode=mistakes' : `#/practice/mistakes?mode=mistakes&sec=${k}`}" style="margin-top:12px">${ic('repeat', 22)}<div class="t"><div class="nm">${isLive() ? (mist?.count ? `Ошибок к повтору: ${mist.count}` : 'Ошибок к повтору нет') : 'Повтор ошибок'}</div><div class="mt">Вопрос уходит из списка, когда отвечаешь на него верно</div></div>${ic('right', 20)}</a>` : '';
 
   return {
     title: 'Тренировка', wide: true,
@@ -79,6 +79,8 @@ export default async function train(params) {
         ${c.soon ? '' : `<p class="modehint fade">${ic('spark', 15)} ${MODES.find(m => m[0] === mode)[2]}</p>`}
         ${mistNote}
         <div class="tgrid">${c.tasks.map(t => taskCard(k, t, st, mode, mistByTask[t.id] || 0)).join('')}</div>
+        ${k === 'L' && isLive() && session.user && session.user.role !== 'student' ? `<div class="lbl">Для учителя <b>тест-банк T1–T3</b></div>
+          <div class="note info">${ic('lock', 22)}<div class="t"><div class="nm">Задания из тестов недоступны ученикам в тренировке</div><div class="mt">Попробуйте их сами: ${[['lcr', 'Choose a Response'], ['lco', 'Conversation'], ['lan', 'Announcement'], ['lat', 'Academic Talk']].map(([id, n]) => `<a href="#/listen/${id}?mode=${mode === 'timed' ? 'timed' : 'learn'}&bank=test"><b>${n}</b></a>`).join(' · ')}. Чтобы открыть задание ученикам, смените его статус в банке заданий.</div></div></div>` : ''}
         ${types}
         ${k === 'R' ? `<div class="lbl">Модуль целиком</div><a class="note" href="#/exam/reading">${ic('timer', 22)}<div class="t"><div class="nm">Модуль Reading в экзаменационной оболочке</div><div class="mt">Complete the Words → Daily Life → Academic Passage · 12 мин</div></div>${ic('right', 20)}</a>` : ''}
       </div>

@@ -15,6 +15,7 @@ import practice from './views/practice.js';
 import write from './views/write.js';
 import work from './views/work.js';
 import speak from './views/speak.js';
+import listen from './views/listen.js';
 import { studentCard, assignView, bankView, assignResults } from './views/tcab.js';
 import { login, join, setup, password } from './views/auth.js';
 
@@ -26,7 +27,7 @@ const ROUTES = {
   login, join, setup, password
 };
 const PUBLIC = new Set(['login', 'join', 'setup']);
-const PARAM_ROUTES = [['train/', train], ['t/review/', reviewItem], ['practice/', practice], ['write/', write], ['speak/', speak], ['t/student/', studentCard], ['t/assign/', assignResults], ['work/', work]];
+const PARAM_ROUTES = [['train/', train], ['t/review/', reviewItem], ['practice/', practice], ['write/', write], ['speak/', speak], ['listen/', listen], ['t/student/', studentCard], ['t/assign/', assignResults], ['work/', work]];
 
 const NAV = {
   student: [['today', 'today', 'Сегодня'], ['train', 'layers', 'Тренировка'], ['mock', 'timer', 'Пробник'], ['progress', 'trend', 'Прогресс'], ['profile', 'user', 'Профиль']],
@@ -47,7 +48,7 @@ let current = null, seq = 0;
 
 function renderNav(path) {
   const r = navRole(), items = NAV[r];
-  const active = items.find(([p]) => path === p || path.startsWith(p + '/'))?.[0] || (path.startsWith('practice') || path.startsWith('write') || path.startsWith('speak') ? 'train' : path.startsWith('work') ? 'progress' : items[0][0]);
+  const active = items.find(([p]) => path === p || path.startsWith(p + '/'))?.[0] || (path.startsWith('practice') || path.startsWith('write') || path.startsWith('speak') || path.startsWith('listen') ? 'train' : path.startsWith('work') ? 'progress' : items[0][0]);
   const u = isLive() ? session.user : null;
   const name = u ? u.name : r === 'teacher' ? demoTeacher.name : demoMe.full;
   const reviewCnt = r === 'teacher' && !u ? demoQueue.length : 0;

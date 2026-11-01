@@ -278,3 +278,21 @@ mark.xhl{background:#ffe9a8;color:inherit;padding:0 2px}
 .spk-list .it b{display:block;margin-bottom:6px;font-weight:600}
 .spk-list audio{width:100%;height:36px}
 .spk-err{color:#c4342b;font-size:14px;margin-top:10px}
+
+/* ---- Listening player ---- */
+.listen .ls-card{max-width:560px;margin:8vh auto 0;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;padding:8px}
+.listen .ls-ic{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--x-tx) 10%,transparent);color:var(--x-tx)}
+.listen .ls-ic.pulse{animation:lspulse 1.4s ease-in-out infinite}
+@keyframes lspulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.1);opacity:1}}
+@media (prefers-reduced-motion:reduce){.listen .ls-ic.pulse{animation:none}}
+.listen .ls-card .xdir{margin:0;font-size:18px}
+.listen .ls-audio{width:100%;max-width:440px}
+.listen .ls-prog{width:100%;max-width:360px;height:6px;border-radius:3px;background:color-mix(in srgb,var(--x-tx) 14%,transparent);overflow:hidden}
+.listen .ls-prog i{display:block;height:100%;width:0;background:var(--x-tx);transition:width .25s linear}
+.listen .ls-replay{margin:0 0 16px}
+.listen .ls-replay .ls-audio{max-width:100%}
+.ls-tr{margin-top:10px}.ls-tr summary{cursor:pointer;font-weight:700;font-size:14px}
+.ls-tr p{margin:8px 0 0;font-size:14.5px;line-height:1.6;color:var(--x-mut)}
+.ls-rw{border-bottom:1px solid color-mix(in srgb,currentColor 12%,transparent);padding:10px 0}
+.ls-rw summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.ls-rw p{margin:8px 0 0;font-size:14.5px;line-height:1.55}

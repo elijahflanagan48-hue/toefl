@@ -153,7 +153,7 @@ export { overallBand };
 /* ---------------- practice (item bank) ---------------- */
 const demoAttempts = {};
 
-export async function practiceItems({ section = 'R', task, level = 'auto', qtype, limit = 3, exclude = [] }) {
+export async function practiceItems({ section = 'R', task, level = 'auto', qtype, limit = 3, exclude = [], bank }) {
   if (!isLive()) {
     let list = (await demoBank()).filter(i => i.section === section && (!task || i.task === task) && (!qtype || i.qtypes.includes(qtype)));
     if (exclude.length) list = list.filter(i => !exclude.includes(i.id));
@@ -162,6 +162,7 @@ export async function practiceItems({ section = 'R', task, level = 'auto', qtype
   const p = new URLSearchParams({ section, limit: String(limit) });
   if (task) p.set('task', task); if (level) p.set('level', level); if (qtype) p.set('qtype', qtype);
   if (exclude.length) p.set('exclude', exclude.join(','));
+  if (bank) p.set('bank', bank);
   return get('/items?' + p);
 }
 export async function item(id) {

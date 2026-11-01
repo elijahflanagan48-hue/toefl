@@ -422,7 +422,8 @@ on('GET', '/items', async ({ env, user, url }) => {
   requireUser(user);
   const section = url.searchParams.get('section'), task = url.searchParams.get('task'), level = url.searchParams.get('level');
   const limit = Math.min(20, Math.max(1, Number(url.searchParams.get('limit') || 5)));
-  const where = [`status = 'active'`], b = [];
+  const teacher = user.role === 'admin' || user.role === 'teacher';
+  const where = [url.searchParams.get('bank') === 'test' && teacher ? `status IN ('active','pretest')` : `status = 'active'`], b = [];
   if (section) { where.push('section = ?'); b.push(section); }
   if (task) { where.push('task = ?'); b.push(task); }
   let lv = level;
@@ -540,6 +541,9 @@ on('POST', '/attempts', async ({ req, env, user }) => {
   return { id: r.meta.last_row_id, threshold: st.route_threshold };
 });
 
+/** Listening: the last explain element is the transcript (shown only after answering) */
+const transcriptOf = (task, key, ex) => (task && task[0] === 'l' && Array.isArray(ex) && Array.isArray(key) && ex.length > key.length) ? ex[ex.length - 1] : undefined;
+
 on('POST', '/attempts/:id/responses', async ({ req, env, user, params }) => {
   requireUser(user);
   const a = await ownAttempt(env, user, params.id);
@@ -565,7 +569,7 @@ on('POST', '/attempts/:id/responses', async ({ req, env, user, params }) => {
         section = k.section;
         if (Array.isArray(k.qtypes) && k.qtypes[q]) qtype = k.qtypes[q];
         correct = grade(k.task, k.key, q, x.answer);
-        if (reveal) results.push({ item_id: itemId, q, correct, key: Array.isArray(k.key) ? k.key[q] : k.key, explain: Array.isArray(k.explain) ? k.explain[q] : k.explain });
+        if (reveal) results.push({ item_id: itemId, q, correct, key: Array.isArray(k.key) ? k.key[q] : k.key, explain: Array.isArray(k.explain) ? k.explain[q] : k.explain, transcript: transcriptOf(k.task, k.key, k.explain) });
       }
     }
     if (correct == null && (x.correct === 0 || x.correct === 1 || x.correct === true || x.correct === false)) correct = x.correct ? 1 : 0; // built-in demo content
@@ -630,9 +634,9 @@ on('GET', '/attempts/:id', async ({ env, user, params }) => {
   for (const r of rs) {
     const x = { ...r, answer: parse(r.answer) };
     if (reveal && r.item_id) {
-      if (!(r.item_id in cache)) { const it = await one(env, 'SELECT key, explain FROM items WHERE id = ?', r.item_id); cache[r.item_id] = it ? { key: parse(it.key), explain: parse(it.explain) } : null; }
+      if (!(r.item_id in cache)) { const it = await one(env, 'SELECT task, key, explain FROM items WHERE id = ?', r.item_id); cache[r.item_id] = it ? { task: it.task, key: parse(it.key), explain: parse(it.explain) } : null; }
       const c = cache[r.item_id];
-      if (c) { x.key = Array.isArray(c.key) ? c.key[r.q] : c.key; x.explain = Array.isArray(c.explain) ? c.explain[r.q] : c.explain; }
+      if (c) { x.key = Array.isArray(c.key) ? c.key[r.q] : c.key; x.explain = Array.isArray(c.explain) ? c.explain[r.q] : c.explain; x.transcript = transcriptOf(c.task, c.key, c.explain); }
     }
     out.push(x);
   }

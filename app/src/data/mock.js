@@ -34,13 +34,12 @@ export const catalog = {
     ]
   },
   L: {
-    blurb: 'Задания откроются, когда будет готова озвучка. Скрипты уже пишутся.',
-    soon: true,
+    blurb: 'Адаптивная секция: аудио звучит один раз, вопросы идут по одному. В режиме «Учиться» запись можно переслушать и прочитать расшифровку.',
     tasks: [
-      { id: 'lcr', nm: 'Listen and Choose a Response', ru: 'Одна реплика — выбери уместную реакцию', cefr: 'A1–B2', scripts: 40 },
-      { id: 'lco', nm: 'Listen to a Conversation', ru: 'Диалог двух студентов, 2 вопроса', cefr: 'A2–C1', scripts: 18 },
-      { id: 'lan', nm: 'Listen to an Announcement', ru: 'Объявление в кампусе, 2 вопроса', cefr: 'A2–C1', scripts: 12 },
-      { id: 'lat', nm: 'Listen to an Academic Talk', ru: 'Мини-лекция 100–250 слов, 4 вопроса', cefr: 'A2–C2', scripts: 8 }
+      { id: 'lcr', nm: 'Listen and Choose a Response', ru: 'Одна реплика — выбери уместную реакцию', cefr: 'A1–B2', acc: 70, done: 0, n: 40, time: '≈20 с на реплику' },
+      { id: 'lco', nm: 'Listen to a Conversation', ru: 'Диалог двух студентов, 2 вопроса', cefr: 'A2–C1', acc: 66, done: 0, n: 18, time: '≈2 мин' },
+      { id: 'lan', nm: 'Listen to an Announcement', ru: 'Объявление в кампусе, 2 вопроса', cefr: 'A2–C1', acc: 72, done: 0, n: 12, time: '≈1,5 мин' },
+      { id: 'lat', nm: 'Listen to an Academic Talk', ru: 'Мини-лекция 100–250 слов, 4 вопроса', cefr: 'A2–C2', acc: 61, done: 0, n: 8, time: '≈3 мин' }
     ],
     types: [['Main Idea'], ['Factual'], ['Inference'], ['Purpose'], ['Method'], ['Attitude']]
   },
@@ -123,5 +122,5 @@ export const bank = [
   { k: 'W', nm: 'Write for an Academic Discussion', total: 20, lv: [6, 8, 6], cal: null, flags: 0 },
   { k: 'S', nm: 'Listen and Repeat', total: 12, lv: [4, 4, 4], cal: null, flags: 0 },
   { k: 'S', nm: 'Take an Interview', total: 15, lv: [5, 5, 5], cal: null, flags: 0 },
-  { k: 'L', nm: 'Listening · скрипты', total: 78, lv: [26, 28, 24], cal: null, flags: 0, soon: true }
+  { k: 'L', nm: 'Listening · скрипты', total: 78, lv: [26, 28, 24], cal: null, flags: 0 }
 ];
