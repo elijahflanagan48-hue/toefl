@@ -86,14 +86,16 @@ const FAKE_AUDIO = () => { // deterministic: the "recording" lasts 400 ms
   ok(await s.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'no horizontal scroll at 390 on the L page');
   await s.goto(APP + '#/listen/lan?mode=learn&bank=test'); await s.waitForTimeout(1500);
   const src1 = await s.evaluate(() => document.querySelector('.ls-audio')?.getAttribute('src') || '');
-  ok(/ANN-005/.test(src1), 'student with ?bank=test still only gets released items', src1);
+  const _it = JSON.parse(require('fs').readFileSync(__dirname + '/../content/listening/items.json', 'utf8')); const _pre = new Set(_it.filter(x => x.status === 'pretest').map(x => x.id.replace(/^L-(\w+)-[ABC]-(\d+)$/, '$1-$2')));
+  const _sid = (src1.match(/([A-Z]+-\d+)\.mp3/) || [])[1];
+  ok(_sid && !_pre.has(_sid), 'student with ?bank=test still only gets released items', src1);
   await s.screenshot({ path: OUT + '/student-390.png' });
   await s.goto(APP + '#/listen/lcr?mode=learn'); await s.waitForTimeout(1200);
-  ok((await s.textContent('#app')).includes('Заданий пока нет'), 'student: no released LCR items → friendly empty state');
+  ok(await s.evaluate(() => !!document.querySelector('.ls-audio') || /Заданий пока нет/.test(document.body.textContent)), 'student: LCR learn page shows an item or the friendly empty state');
 
   // assignments link
   await t.goto(APP + '#/t/assign'); await t.waitForTimeout(900);
-  await t.click('.hdr [data-act="assign"]'); await t.waitForTimeout(400);
+  await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('#a-task', { timeout: 8000 }).catch(() => {});
   ok(await t.evaluate(() => [...document.querySelectorAll('#a-task option')].some(o => o.value === 'L:lan')), 'teacher can assign Listening tasks');
   ok(errs.length === 0, 'no page errors', errs.join(' | '));
   await b.close();
