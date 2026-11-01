@@ -1,0 +1,1210 @@
+[
+ {
+  "id": "R-RAP-A-201",
+  "level": "A",
+  "src": "claude",
+  "topic": "Life sciences",
+  "title": "Why Honeybees Dance",
+  "paras": [
+   [
+    "When a honeybee finds a good source of flowers, it returns to the hive and performs a short dance.",
+    "The dance tells the other bees where to find the food.",
+    "Scientists first described this behavior in the 1940s, and their discovery later won a Nobel Prize.",
+    "Before then, most people believed that insects could not share such detailed information."
+   ],
+   [
+    "There are two main types of dance.",
+    "If the food is close to the hive, the bee makes a circle.",
+    "The circle shows that flowers are nearby, but it does not point in any particular direction.",
+    "If the food is far away, the bee performs a figure-eight dance known as the waggle dance.",
+    "During the straight middle part, the bee shakes its body quickly from side to side."
+   ],
+   [
+    "The waggle dance contains two kinds of information.",
+    "The angle of the straight part, measured against the vertical wall of the hive, shows the direction of the flowers compared with the sun.",
+    "The length of the waggle shows the distance, so a longer waggle means that the flowers are farther away.",
+    "Other bees follow the dancer closely and then fly out to look for the flowers themselves."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "sentence": "Which one a bee performs depends on how far away the flowers are."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, what did most people believe about insects before the 1940s?",
+    "opts": [
+     "Insects could not share detailed information.",
+     "Bees could not find flowers.",
+     "Insects danced only in winter.",
+     "Bees used only smell to find the hive."
+    ],
+    "a": 0,
+    "ex": "В конце первого абзаца: «most people believed that insects could not share such detailed information». Остальные варианты в тексте не упоминаются."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 0,
+    "ex": "Вставка начинается с «Which one» — она отсылает к «two main types» в предыдущем предложении и сразу подводит к описанию каждого типа. В другом месте у «Which one» нет понятного антецедента."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"it\" in the passage refers to",
+    "hl": {
+     "p": 1,
+     "s": 2,
+     "w": "it"
+    },
+    "opts": [
+     "the hive",
+     "the circle",
+     "the food",
+     "the bee"
+    ],
+    "a": 1,
+    "ex": "«The circle shows that flowers are nearby, but it does not point in any particular direction» — не указывает направление именно круг, поэтому it = the circle."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, all of the following are true of the waggle dance EXCEPT:",
+    "opts": [
+     "It shows the direction of the flowers.",
+     "It shows the distance to the flowers.",
+     "It tells the bees which kind of flower to choose.",
+     "Other bees watch it before they fly out."
+    ],
+    "a": 2,
+    "ex": "Тип цветов в третьем абзаце не называется. Направление (угол), расстояние (длина виляния) и то, что другие пчёлы следят за танцем, в тексте есть."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "simp": {
+     "p": 2,
+     "s": 1
+    },
+    "opts": [
+     "The straight part of the dance is at an angle that shows where the flowers are in relation to the sun.",
+     "The wall of the hive is placed at an angle to show where the sun is.",
+     "The bee measures the angle of the sun to find the straight part of the dance.",
+     "The direction of the hive is shown by the position of the flowers and the sun."
+    ],
+    "a": 0,
+    "ex": "Суть: угол прямой части танца показывает направление на цветы относительно солнца. Остальные варианты меняют, что от чего измеряется."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-A-202",
+  "level": "A",
+  "src": "claude",
+  "topic": "Earth science",
+  "title": "How Glaciers Move",
+  "paras": [
+   [
+    "A glacier is a huge mass of ice that forms over many years in places where snow does not melt completely in summer.",
+    "Each year, new snow falls on top of the old snow and presses it down.",
+    "Slowly, the lower layers turn into dense ice.",
+    "When the ice becomes thick enough, it begins to move."
+   ],
+   [
+    "Glaciers move in two main ways.",
+    "First, the ice itself can bend and flow very slowly, like thick honey, under the weight above it.",
+    "Second, a glacier can slide along the ground when a thin layer of water forms at its base.",
+    "This water may come from melting caused by pressure or by heat from the ground, and it works like oil between two surfaces.",
+    "Because of these two processes, some glaciers move only a few centimeters a day, while fast ones may travel dozens of meters."
+   ],
+   [
+    "As glaciers move, they change the land around them.",
+    "They carry rocks and gravel that scrape the ground like sandpaper.",
+    "Over thousands of years, this action can turn a narrow river valley into a wide U-shaped valley.",
+    "When a glacier finally melts, it leaves behind piles of rock that it carried, which show scientists where the ice once reached."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"dense\" in the passage is closest in meaning to",
+    "hl": {
+     "p": 0,
+     "s": 2,
+     "w": "dense"
+    },
+    "opts": [
+     "tightly packed",
+     "very cold",
+     "completely clear",
+     "easily broken"
+    ],
+    "a": 0,
+    "ex": "Под давлением снега нижние слои спрессовываются в плотный лёд. Dense = tightly packed, плотный."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that compares the water under a glacier to something familiar.",
+    "sel": {
+     "p": 1
+    },
+    "a": 3,
+    "ex": "Сравнение с привычным предметом — «it works like oil between two surfaces» в четвёртом предложении абзаца. Предыдущее предложение только говорит, что вода образуется."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"it\" in the passage refers to",
+    "hl": {
+     "p": 1,
+     "s": 3,
+     "w": "it"
+    },
+    "opts": [
+     "the ground",
+     "the water",
+     "the heat",
+     "the pressure"
+    ],
+    "a": 1,
+    "ex": "«This water may come from … and it works like oil» — как масло работает вода. Heat и pressure — ближайшие существительные-ловушки, но они лишь источники воды."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, all of the following are effects of moving glaciers EXCEPT:",
+    "opts": [
+     "They carry rocks across the land.",
+     "They can make a river valley wider.",
+     "They leave piles of rock when they melt.",
+     "They create new rivers in dry land."
+    ],
+    "a": 3,
+    "ex": "Новые реки в сухих районах в тексте не упоминаются. Перенос камней, расширение долины и оставленные при таянии камни — есть."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "simp": {
+     "p": 2,
+     "s": 3
+    },
+    "opts": [
+     "After a glacier melts, the rocks it left behind show scientists how far the ice used to reach.",
+     "Scientists melt glaciers to find the rocks that the ice carried.",
+     "The rocks that a glacier carries show scientists when the ice will melt.",
+     "A glacier melts only after it has carried all of its rocks to a new place."
+    ],
+    "a": 0,
+    "ex": "Суть: камни, оставшиеся после таяния, показывают, докуда доходил лёд. Остальные варианты меняют причину и следствие."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-203",
+  "level": "B",
+  "src": "claude",
+  "topic": "Social sciences",
+  "title": "Waiting for Two Marshmallows",
+  "paras": [
+   [
+    "In the late 1960s, the psychologist Walter Mischel tested a simple idea with preschool children at Stanford University.",
+    "A researcher placed one marshmallow in front of each child and offered a deal.",
+    "If the child could wait alone for about fifteen minutes without eating it, he or she would receive a second marshmallow.",
+    "Some children ate the treat almost immediately, while others found clever ways to distract themselves."
+   ],
+   [
+    "Years later, Mischel and his colleagues followed up with many of the participants.",
+    "They reported that children who had waited longer tended to have higher test scores and better social skills as teenagers.",
+    "The results spread quickly, and the study became a popular symbol of self-control.",
+    "Many parents and teachers concluded that the ability to delay gratification is a key to success."
+   ],
+   [
+    "More recent research has questioned this conclusion.",
+    "In 2018, a team of researchers repeated the experiment with a much larger and more diverse group of children.",
+    "They found that the link between waiting time and later achievement was considerably weaker than the original studies suggested.",
+    "Once the researchers accounted for the children's family background, such as parents' education and income, the connection almost disappeared.",
+    "This suggests that a child's willingness to wait may reflect how reliable the child's environment is, not just self-control alone."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "However, the original group was small, and most of the children came from families connected with the university."
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about the original Stanford studies from paragraph 3?",
+    "opts": [
+     "Their results may not have applied to all kinds of children.",
+     "They included more children than later research.",
+     "They measured family income very carefully.",
+     "They were repeated by Mischel several times."
+    ],
+    "a": 0,
+    "ex": "Повторное исследование использовало «much larger and more diverse group» — значит, исходная группа была меньше и менее разнообразной. Отсюда осторожность в обобщениях."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 3,
+    "ex": "Вставка с «However» критикует вывод, сделанный в конце абзаца, и подводит к следующему абзацу («More recent research has questioned this conclusion»). Раньше она разорвала бы описание популярности результата."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 3 that offers a possible explanation for why some children are willing to wait longer.",
+    "sel": {
+     "p": 2
+    },
+    "a": 4,
+    "ex": "Объяснение причины даёт последнее предложение: готовность ждать может отражать надёжность среды ребёнка. Остальные предложения описывают результаты."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 1, all of the following describe the original experiment EXCEPT:",
+    "opts": [
+     "Each child was left alone with one marshmallow.",
+     "A child who waited about fifteen minutes could get a second marshmallow.",
+     "The children were tested at a university.",
+     "Parents stayed in the room to help the children wait."
+    ],
+    "a": 3,
+    "ex": "Дети ждали «alone», родители не присутствовали. Остальные три пункта прямо названы в первом абзаце."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "simp": {
+     "p": 2,
+     "s": 3
+    },
+    "opts": [
+     "After family background was taken into account, waiting time and later success were hardly connected.",
+     "The connection disappeared because parents' education and income were not measured.",
+     "Family background became more important to researchers than waiting time.",
+     "The researchers ended the study because the children's backgrounds were too different."
+    ],
+    "a": 0,
+    "ex": "Суть: после учёта семейного фона связь между временем ожидания и успехом почти исчезла. Остальные варианты придумывают другую причину."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-204",
+  "level": "B",
+  "src": "claude",
+  "topic": "Humanities",
+  "title": "Moving Type in Korea",
+  "paras": [
+   [
+    "Many people associate the invention of movable type with Johannes Gutenberg, who printed books in Germany around 1450.",
+    "However, printers in Korea had been using metal type for more than two centuries before that.",
+    "The oldest surviving book printed with movable metal type is a Korean Buddhist text called the Jikji, produced in 1377.",
+    "Its pages were printed from small metal pieces, each carrying a single Chinese character."
+   ],
+   [
+    "Despite this early start, movable type did not transform Korean society the way it later changed Europe.",
+    "One reason was the writing system itself.",
+    "Classical texts used thousands of different Chinese characters.",
+    "A European printer, by contrast, needed only a few dozen letters, which could be combined to make any word.",
+    "Another reason was that printing in Korea was controlled mostly by the government and by temples, which printed small numbers of books for officials and monks."
+   ],
+   [
+    "Gutenberg's workshop operated in a very different setting.",
+    "He sold books to a growing group of merchants, students, and church leaders who wanted to buy them.",
+    "As demand rose, printers across Europe competed to produce books quickly and cheaply, which spread the technology even further.",
+    "In this way, the commercial setting mattered at least as much as the invention itself."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "As a result, a printer had to make and store an enormous number of metal pieces."
+  },
+  "qs": [
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the author mention \"a few dozen letters\" in paragraph 2?",
+    "hl": {
+     "p": 1,
+     "s": 3,
+     "w": "a few dozen letters"
+    },
+    "opts": [
+     "To show how the writing system affected the difficulty of printing",
+     "To prove that European printing was older than Korean printing",
+     "To explain why Gutenberg moved to Korea",
+     "To criticize European books for being too cheap"
+    ],
+    "a": 0,
+    "ex": "Автор противопоставляет алфавит из нескольких десятков букв тысячам иероглифов: так объясняется, почему набор в Корее был сложнее."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 2,
+    "ex": "«As a result» следует за предложением о тысячах иероглифов, а следующее предложение («A European printer, by contrast») противопоставляет им короткий алфавит. В других местах причинно-следственная связь нарушается."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that gives a reason connected to who controlled printing in Korea.",
+    "sel": {
+     "p": 1
+    },
+    "a": 4,
+    "ex": "Печать в Корее контролировали правительство и храмы — об этом последнее предложение абзаца. Остальные предложения про письменность и общий контраст."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"which\" in the passage refers to",
+    "hl": {
+     "p": 2,
+     "s": 2,
+     "w": "which"
+    },
+    "opts": [
+     "rising demand",
+     "printers competing to produce books quickly and cheaply",
+     "Gutenberg's workshop",
+     "the growing group of merchants"
+    ],
+    "a": 1,
+    "ex": "Which относится ко всей ситуации: конкуренция печатников, которая и распространила технологию. Ближайшее существительное demand — ловушка."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 1? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "simp": {
+     "p": 0,
+     "s": 2
+    },
+    "opts": [
+     "The Jikji, a Korean Buddhist book from 1377, is the oldest remaining book printed with movable metal type.",
+     "The Jikji is the oldest Buddhist text, and it was the first book printed in Korea.",
+     "Movable metal type was invented in 1377 in order to print the Jikji.",
+     "A Korean book printed in 1377 was lost, so no book printed with metal type survives."
+    ],
+    "a": 0,
+    "ex": "Суть: «Дзикдзи» (1377) — старейшая сохранившаяся книга, напечатанная подвижным металлическим шрифтом. Другие варианты искажают, что именно старейшее."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-205",
+  "level": "B",
+  "src": "claude",
+  "topic": "Business and economics",
+  "title": "The Box That Changed Shipping",
+  "paras": [
+   [
+    "Until the 1950s, loading a cargo ship was slow, expensive work.",
+    "Goods arrived at the port in barrels, sacks, and wooden crates of every shape and size.",
+    "Teams of dockworkers carried each item on board by hand or with simple cranes, and a ship might wait in port for a week or more.",
+    "Because loading took so long, ships earned money for only part of the year, and the cost of shipping a product was often higher than the cost of making it."
+   ],
+   [
+    "In 1956, an American trucking businessman named Malcolm McLean tried a different approach.",
+    "He had large steel boxes of one standard shape lifted directly from trucks onto a ship, without opening them.",
+    "The cargo stayed sealed inside the container until it reached its destination.",
+    "Loading times fell from days to hours, and goods were damaged and stolen far less often."
+   ],
+   [
+    "Containers soon changed the global economy.",
+    "Once other shippers agreed on standard sizes, a container could move easily from a ship to a train or truck.",
+    "Ports invested in huge cranes and large storage areas, and many older ports that could not adapt lost business.",
+    "As shipping became cheaper, it made sense for companies to manufacture goods in distant countries and sell them everywhere."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "They could also be stacked several layers high, which made better use of space on the ship."
+  },
+  "qs": [
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"adapt\" in the passage is closest in meaning to",
+    "hl": {
+     "p": 2,
+     "s": 2,
+     "w": "adapt"
+    },
+    "opts": [
+     "become larger",
+     "change to suit new conditions",
+     "find new customers",
+     "stay open longer"
+    ],
+    "a": 1,
+    "ex": "Старые порты, которые «could not adapt», потеряли бизнес — то есть не смогли приспособиться к новым условиям."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 1,
+    "ex": "«They» относится к стальным коробкам из предыдущего предложения. После предложения о запечатанном грузе местоимение уже не подходит: рядом нет множественного числа."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 1 that states a result of slow loading for shipping companies.",
+    "sel": {
+     "p": 0
+    },
+    "a": 3,
+    "ex": "Последствие медленной погрузки — суда зарабатывали лишь часть года, а перевозка стоила дороже производства. Это четвёртое предложение абзаца."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"them\" in the passage refers to",
+    "hl": {
+     "p": 1,
+     "s": 1,
+     "w": "them"
+    },
+    "opts": [
+     "the trucks",
+     "the steel boxes",
+     "the dockworkers",
+     "the ports"
+    ],
+    "a": 1,
+    "ex": "«He had large steel boxes … lifted directly from trucks onto a ship, without opening them» — не открывали именно коробки."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, all of the following were results of the spread of containers EXCEPT:",
+    "opts": [
+     "Ports built huge cranes and storage areas.",
+     "Containers could move easily between ships, trains, and trucks.",
+     "Some older ports lost business.",
+     "Companies stopped selling goods in distant countries."
+    ],
+    "a": 3,
+    "ex": "Наоборот, перевозка подешевела, и компании стали продавать товары по всему миру. Остальные три пункта прямо названы в третьем абзаце."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-206",
+  "level": "C",
+  "src": "claude",
+  "topic": "Physical sciences",
+  "title": "Why the Night Sky Is Dark",
+  "paras": [
+   [
+    "At first glance, the darkness of the night sky seems too obvious to need an explanation.",
+    "Yet in the nineteenth century, the German astronomer Heinrich Olbers pointed out a puzzle.",
+    "If the universe were infinite and filled evenly with stars that have existed forever, every line of sight from Earth would eventually end on the surface of a star.",
+    "The entire sky would therefore blaze as brightly as the surface of the Sun, even at midnight."
+   ],
+   [
+    "Astronomers eventually realized that the puzzle disappears once we accept that the universe has a history.",
+    "Light travels at a finite speed, so we can only see objects whose light has had enough time to reach us.",
+    "Because the universe is about 13.8 billion years old, light from beyond a certain distance has not yet arrived.",
+    "The number of stars that can contribute light to our night sky is therefore limited."
+   ],
+   [
+    "A second factor is that the universe is expanding.",
+    "As distant galaxies move away from us, the light they emit is stretched to longer wavelengths, shifting from visible light toward infrared and microwaves.",
+    "Much of this energy is no longer visible to the human eye, even though it still reaches us.",
+    "In fact, it forms a faint glow of microwaves detected in every direction, which scientists regard as a remnant of the early universe."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "Beyond that distance, the universe may contain countless stars that we cannot see."
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about Olbers' puzzle from paragraph 1?",
+    "opts": [
+     "It was based on assumptions that later proved incorrect.",
+     "It was solved by Olbers himself.",
+     "It showed that stars do not produce light.",
+     "It proved that the universe is infinite."
+    ],
+    "a": 0,
+    "ex": "Загадка строится на условии «если Вселенная бесконечна и вечна». Второй абзац показывает, что Вселенная имеет историю, — значит, исходные допущения были неверны."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 2,
+    "ex": "«that distance» отсылает к «a certain distance» из предыдущего предложения. Предложение о том, что за этой границей есть невидимые звёзды, естественно ведёт к выводу про ограниченное число звёзд."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"they\" in the passage refers to",
+    "hl": {
+     "p": 2,
+     "s": 1,
+     "w": "they"
+    },
+    "opts": [
+     "wavelengths",
+     "distant galaxies",
+     "microwaves",
+     "human eyes"
+    ],
+    "a": 1,
+    "ex": "«the light they emit» — свет излучают галактики. Wavelengths — ближайшее множественное существительное после they, но оно не излучает свет."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, all of the following are true of the expansion of the universe EXCEPT:",
+    "opts": [
+     "It stretches the light from distant galaxies.",
+     "It shifts some light out of the range the human eye can see.",
+     "It is linked to a faint glow of microwaves detected in every direction.",
+     "It makes the light of nearby stars much brighter."
+    ],
+    "a": 3,
+    "ex": "О яркости близких звёзд в третьем абзаце ничего не сказано. Растяжение света, сдвиг за пределы видимого и микроволновое свечение — есть."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 1? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "simp": {
+     "p": 0,
+     "s": 2
+    },
+    "opts": [
+     "In an endless, eternal universe full of stars, any direction we looked would eventually meet a star.",
+     "Because stars have existed forever, the universe must be infinite and evenly filled.",
+     "Earth would end up on the surface of a star if the universe were infinite.",
+     "Looking in different directions from Earth would show stars that have existed for different lengths of time."
+    ],
+    "a": 0,
+    "ex": "Суть: в бесконечной вечной Вселенной любой луч зрения упирался бы в звезду. Другие варианты меняют условие и следствие местами."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-207",
+  "level": "C",
+  "src": "claude",
+  "topic": "Arts",
+  "title": "Paint in a Tube",
+  "paras": [
+   [
+    "Before the middle of the nineteenth century, painters who wanted to work outdoors faced a practical problem.",
+    "Oil paint was sold in animal bladders tied with string, and it dried out or spilled when carried from one place to another.",
+    "As a result, most artists painted indoors, working from sketches made outside.",
+    "Landscapes created in the studio often looked formal and carefully arranged rather than fresh."
+   ],
+   [
+    "In 1841, the American portrait painter John Goffe Rand patented a collapsible metal tube with a screw cap.",
+    "Paint could now be stored for months, squeezed out in small amounts, and sealed again.",
+    "The invention was inexpensive to manufacture, and manufacturers soon began filling tubes with a wide range of ready-made colors.",
+    "Artists no longer needed to grind pigments by hand with assistants, which had previously required a workshop."
+   ],
+   [
+    "The result was a new way of painting.",
+    "Claude Monet and Pierre-Auguste Renoir carried portable easels into fields and gardens and painted directly from what they saw.",
+    "They worked quickly to capture changing light, using short, visible brushstrokes instead of smooth, hidden ones.",
+    "Renoir is said to have remarked that without paint in tubes there would have been no Impressionism."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the author mention \"animal bladders\" in paragraph 1?",
+    "hl": {
+     "p": 0,
+     "s": 1,
+     "w": "animal bladders"
+    },
+    "opts": [
+     "To explain why early oil paint was difficult to carry outdoors",
+     "To show that painters preferred natural materials",
+     "To describe how colors were mixed",
+     "To argue that tubes were more expensive than bladders"
+    ],
+    "a": 0,
+    "ex": "Автор описывает, как продавалась краска: в связанных пузырях она высыхала или проливалась. Это объясняет, почему художники работали в студии."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that describes a way the new tubes changed how artists prepared their colors.",
+    "sel": {
+     "p": 1
+    },
+    "a": 3,
+    "ex": "Последнее предложение говорит, что художникам больше не нужно растирать пигменты вручную. Предыдущие предложения про хранение и стоимость."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"They\" in paragraph 3 refers to",
+    "hl": {
+     "p": 2,
+     "s": 2,
+     "w": "They"
+    },
+    "opts": [
+     "portable easels",
+     "fields and gardens",
+     "Claude Monet and Pierre-Auguste Renoir",
+     "short brushstrokes"
+    ],
+    "a": 2,
+    "ex": "Работали быстро художники, которые вынесли мольберты на природу. Предыдущее предложение содержит несколько существительных-ловушек (easels, fields)."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 2, all of the following are true of Rand's tube EXCEPT:",
+    "opts": [
+     "It had a cap that could be screwed on.",
+     "It allowed paint to be stored for months.",
+     "It was inexpensive to manufacture.",
+     "It was designed to be used only by portrait painters."
+    ],
+    "a": 3,
+    "ex": "Ограничение «только для портретистов» в тексте не упоминается: Рэнд был портретистом, но трубка использовалась широко. Остальные характеристики названы."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 1? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "simp": {
+     "p": 0,
+     "s": 1
+    },
+    "opts": [
+     "Oil paint was kept in tied animal bladders, which made it hard to carry because it dried out or spilled.",
+     "Animal bladders were tied with string so that oil paint could dry.",
+     "Painters carried string from place to place to tie their bladders.",
+     "Oil paint spilled only when animal bladders were not tied with string."
+    ],
+    "a": 0,
+    "ex": "Суть: краска хранилась в пузырях и при переноске высыхала или проливалась. Остальные варианты меняют назначение завязки или причину."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-208",
+  "level": "C",
+  "src": "claude",
+  "topic": "Social sciences",
+  "title": "The Commons Revisited",
+  "paras": [
+   [
+    "In 1968, the ecologist Garrett Hardin described a problem that he called the tragedy of the commons.",
+    "He asked readers to imagine a pasture open to all the herders in a village.",
+    "Each herder gains personally from adding one more animal, but the cost of overgrazing is shared by everyone.",
+    "Because every herder reasons in the same way, the pasture is eventually destroyed."
+   ],
+   [
+    "Hardin concluded that shared resources inevitably collapse unless they are privatized or controlled by a government.",
+    "His argument was widely applied to fisheries, forests, and the atmosphere.",
+    "Yet the political scientist Elinor Ostrom, who studied communities around the world, found many cases that did not fit his prediction.",
+    "Mountain villages in Switzerland, for example, have managed shared pastures for centuries."
+   ],
+   [
+    "According to Ostrom, successful communities share certain features.",
+    "Members clearly know who is allowed to use the resource, and they create rules that suit local conditions.",
+    "Those who break the rules are monitored and receive penalties that start small and increase for repeated violations.",
+    "Ostrom received the Nobel Prize in Economics in 2009 for showing that people can often solve such problems without relying on either markets or central authorities."
+   ]
+  ],
+  "insert": {
+   "p": 0,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "Every herder therefore has a reason to add more animals."
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about Hardin's argument from paragraph 2?",
+    "opts": [
+     "It overlooked communities that managed shared resources successfully.",
+     "It was proven correct by Ostrom's research.",
+     "It was ignored by policy makers.",
+     "It applied only to pastures."
+    ],
+    "a": 0,
+    "ex": "Остром нашла «many cases that did not fit his prediction» — значит, аргумент Хардина не учитывал успешные общины. Он применялся и к рыболовству, лесам, атмосфере."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 1 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 2,
+    "ex": "«therefore» требует причины перед собой (выгода каждого пастуха), а следующее предложение («reasons in the same way») ссылается на это рассуждение. Поэтому вставка идёт после третьего предложения."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that gives a specific example of a community that contradicts Hardin's prediction.",
+    "sel": {
+     "p": 1
+    },
+    "a": 3,
+    "ex": "Конкретный пример — горные деревни Швейцарии, веками управляющие общими пастбищами. Предыдущее предложение лишь утверждает, что такие случаи есть."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, all of the following are features of successful communities EXCEPT:",
+    "opts": [
+     "Members know who is allowed to use the resource.",
+     "Rules are suited to local conditions.",
+     "Penalties become stronger for repeated violations.",
+     "Anyone outside the community may use the resource freely."
+    ],
+    "a": 3,
+    "ex": "В тексте члены общины чётко знают, кому разрешено пользоваться ресурсом, то есть доступ для всех открыт не был. Остальные признаки названы в абзаце."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "simp": {
+     "p": 2,
+     "s": 3
+    },
+    "opts": [
+     "Ostrom won the 2009 Nobel Prize in Economics for showing that communities can often manage such problems without markets or governments.",
+     "Ostrom won the Nobel Prize because she proved that markets and governments always fail.",
+     "In 2009, Ostrom showed that people rely on markets and central authorities to solve problems.",
+     "The Nobel Prize in Economics was created in 2009 to honor Ostrom's work."
+    ],
+    "a": 0,
+    "ex": "Суть: премия за доказательство, что люди часто решают такие проблемы без рынка и центральной власти. Остальные варианты искажают причину награды."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-209",
+  "level": "C",
+  "src": "claude",
+  "topic": "Life sciences",
+  "title": "Underground Partners",
+  "paras": [
+   [
+    "Beneath a forest floor lies a vast network of fine fungal threads that connect to the roots of nearly all plants.",
+    "This partnership, known as a mycorrhiza, benefits both sides.",
+    "The fungus extends the plant's reach into the soil, absorbing water and minerals such as phosphorus that roots could not easily gather alone.",
+    "In exchange, the plant supplies the fungus with sugars produced through photosynthesis."
+   ],
+   [
+    "Some researchers have proposed that these fungal threads also link trees to one another, forming what has been called a wood-wide web.",
+    "In laboratory experiments, carbon atoms taken up by one tree have later been detected in neighboring trees.",
+    "Supporters suggest that older, larger trees might use the network to send resources to shaded seedlings, improving the young trees' chance of survival.",
+    "Such interpretations have attracted enormous public interest."
+   ],
+   [
+    "Other scientists urge caution.",
+    "They point out that evidence of carbon moving between plants does not show that the transfer is intended to help the recipient or that it makes a significant difference in a natural forest.",
+    "The fungus itself might retain much of the carbon, and seedlings may survive mainly because of the light and water around them.",
+    "Most researchers agree that the networks exist, but how much they shape forest life remains an open question."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "These results suggested that trees might exchange resources through the fungi."
+  },
+  "qs": [
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"retain\" in the passage is closest in meaning to",
+    "hl": {
+     "p": 2,
+     "s": 2,
+     "w": "retain"
+    },
+    "opts": [
+     "keep",
+     "produce",
+     "transfer",
+     "measure"
+    ],
+    "a": 0,
+    "ex": "Гриб может «retain» часть углерода — оставить у себя, а не передать деревьям. Retain = keep."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 1,
+    "ex": "«These results» относится к лабораторным экспериментам с углеродом из предыдущего предложения. Следующее предложение («Supporters suggest…») развивает эту интерпретацию."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 3 that offers an alternative explanation for why seedlings survive.",
+    "sel": {
+     "p": 2
+    },
+    "a": 2,
+    "ex": "Альтернативное объяснение: сеянцы выживают из-за света и воды вокруг, а не помощи через сеть. Это третье предложение абзаца."
+   },
+   {
+    "type": "Reference",
+    "stem": "The phrase \"Such interpretations\" in the passage refers to",
+    "hl": {
+     "p": 1,
+     "s": 3,
+     "w": "Such interpretations"
+    },
+    "opts": [
+     "descriptions of how fungi absorb minerals",
+     "claims that fungi never benefit from plants",
+     "suggestions that trees use fungal networks to help one another",
+     "the detection of carbon atoms in laboratory tests"
+    ],
+    "a": 2,
+    "ex": "«Interpretations» — это объяснения, а не наблюдения. Речь о предположении, что старые деревья помогают сеянцам через сеть. Само обнаружение углерода — факт, а не интерпретация."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "simp": {
+     "p": 2,
+     "s": 1
+    },
+    "opts": [
+     "Carbon moving between plants does not prove that the transfer is meant to help or that it matters much in real forests.",
+     "Carbon moves between plants only when the transfer is intended to help the recipient.",
+     "The evidence shows that carbon transfer makes a big difference in forests but is not intended.",
+     "Scientists doubt that carbon can move between plants at all."
+    ],
+    "a": 0,
+    "ex": "Суть: сам факт перемещения углерода не доказывает ни цели помочь, ни значимости в реальном лесу. Остальные варианты искажают или отрицают сам факт."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-210",
+  "level": "C",
+  "src": "claude",
+  "topic": "Technology and history",
+  "title": "Cards and Looms",
+  "paras": [
+   [
+    "The origins of modern computing are often traced to machines for arithmetic, but another source was weaving.",
+    "In 1804, the French inventor Joseph-Marie Jacquard demonstrated a loom that could weave complicated patterns automatically.",
+    "Instead of relying on a skilled worker to choose each thread, the loom read instructions from a chain of cards with holes punched in them.",
+    "Where a hole appeared, a hook could pass through and lift a thread; where there was none, the thread stayed down."
+   ],
+   [
+    "Because the pattern was stored on cards rather than in a person's memory, it could be changed by replacing the cards.",
+    "A weaver could also produce exactly the same design again whenever it was needed.",
+    "Some workers feared that the machine would take their jobs, and a few attacked such looms, but the technology spread throughout Europe.",
+    "By the middle of the century, tens of thousands of Jacquard looms were in use."
+   ],
+   [
+    "The idea also attracted the English mathematician Charles Babbage.",
+    "In the 1830s he designed the Analytical Engine, a mechanical calculator that was to be controlled by punched cards.",
+    "His collaborator Ada Lovelace recognized that such a machine could manipulate not only numbers but any symbols that followed rules, such as music.",
+    "Although the machine was never completed, later inventors used punched cards to store data, and they remained in use for computers well into the twentieth century."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "These two features made the loom far more flexible than earlier machines."
+  },
+  "qs": [
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the author mention \"music\" in paragraph 3?",
+    "hl": {
+     "p": 2,
+     "s": 2,
+     "w": "music"
+    },
+    "opts": [
+     "To show that Lovelace understood the machine could work with more than numbers",
+     "To suggest that Babbage's machine could play instruments",
+     "To explain why the engine was never completed",
+     "To compare weaving patterns with songs"
+    ],
+    "a": 0,
+    "ex": "Музыка приведена как пример «любых символов, подчиняющихся правилам»: Лавлейс поняла, что машина способна на большее, чем счёт."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 1,
+    "ex": "«These two features» — это возможность менять узор заменой карт и повторять тот же рисунок. Оба свойства названы в первых двух предложениях, поэтому вставка идёт после второго."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 1 that explains what the presence or absence of a hole in a card caused.",
+    "sel": {
+     "p": 0
+    },
+    "a": 3,
+    "ex": "Последствие наличия или отсутствия отверстия описано в последнем предложении: крючок поднимает нить или нить остаётся внизу."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"they\" in paragraph 3 refers to",
+    "hl": {
+     "p": 2,
+     "s": 3,
+     "w": "they"
+    },
+    "opts": [
+     "later inventors",
+     "punched cards",
+     "computers",
+     "Babbage and Lovelace"
+    ],
+    "a": 1,
+    "ex": "В использовании оставались перфокарты («punched cards to store data, and they remained in use»). Later inventors — ближайший подлежащий-ловушка."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 2, all of the following are true of Jacquard looms EXCEPT:",
+    "opts": [
+     "A pattern could be changed by replacing the cards.",
+     "The same design could be produced again.",
+     "Tens of thousands were in use by the middle of the century.",
+     "Workers welcomed them without any opposition."
+    ],
+    "a": 3,
+    "ex": "Часть рабочих боялась потерять работу, а некоторые даже нападали на станки. Остальные три утверждения есть в абзаце."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-211",
+  "level": "C",
+  "src": "claude",
+  "topic": "Earth science",
+  "title": "The Year Without a Summer",
+  "paras": [
+   [
+    "In April 1815, the volcano Mount Tambora, on an island in present-day Indonesia, erupted with enormous force.",
+    "It threw more than one hundred cubic kilometers of ash and rock into the air, making it the largest eruption in recorded history.",
+    "The explosion and its immediate effects killed tens of thousands of people nearby.",
+    "However, the most widespread consequences were felt thousands of kilometers away, and they appeared a year later."
+   ],
+   [
+    "The eruption released large quantities of sulfur gas into the stratosphere, where it combined with water to form tiny droplets.",
+    "These droplets reflected some sunlight back into space, reducing the energy that reached the surface of the Earth.",
+    "As a result, average temperatures in parts of the Northern Hemisphere fell by as much as one degree Celsius in 1816, which was enough to disrupt the growing season.",
+    "Spring frosts were followed by cold, rainy summers, and snow was reported in New England in June."
+   ],
+   [
+    "Harvests failed across Europe and North America, and food prices rose steeply.",
+    "In many regions, farmers faced hunger and some families left their homes to search for food or to start new lives elsewhere.",
+    "The gloomy weather also left a mark on culture.",
+    "Confined indoors during a stormy summer in Switzerland, the young writer Mary Shelley began the story that became Frankenstein."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "Rain does not reach this layer, so the droplets stay aloft for a long time."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 2, how did the eruption lower temperatures?",
+    "opts": [
+     "Tiny droplets in the upper atmosphere reflected sunlight back into space.",
+     "Ash blocked the ocean currents that carry warm water.",
+     "Smoke from burning forests covered the surface of the Earth.",
+     "The explosion moved the Earth farther from the Sun."
+    ],
+    "a": 0,
+    "ex": "Капли серной кислоты в стратосфере отражали часть солнечного света обратно в космос. Остальные причины в тексте не упоминаются."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 0,
+    "ex": "«this layer» — стратосфера из первого предложения абзаца, а следующее предложение («These droplets reflected…») продолжает рассказ о каплях, которые остаются в воздухе."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 3 that links the consequences of the eruption to a work of literature.",
+    "sel": {
+     "p": 2
+    },
+    "a": 3,
+    "ex": "Связь с литературой — Мэри Шелли начала «Франкенштейна» летом 1816 года. Это последнее предложение абзаца."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, all of the following were consequences of the cold weather EXCEPT:",
+    "opts": [
+     "Harvests failed across Europe and North America.",
+     "Food prices rose steeply.",
+     "Some families left their homes.",
+     "Governments canceled all taxes on farmers."
+    ],
+    "a": 3,
+    "ex": "Об отмене налогов в тексте ничего нет. Неурожаи, рост цен и переезд семей названы в третьем абзаце."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "simp": {
+     "p": 1,
+     "s": 2
+    },
+    "opts": [
+     "In 1816, temperatures in some northern regions dropped by up to a degree, enough to interfere with farming.",
+     "Temperatures in the Northern Hemisphere rose by one degree in 1816, which disrupted farming.",
+     "The growing season lasted a degree longer in 1816 because temperatures fell.",
+     "In 1816, the whole Northern Hemisphere became colder by one degree, which stopped all farming."
+    ],
+    "a": 0,
+    "ex": "Суть: в 1816 году в ряде северных регионов температура упала почти на градус, чего хватило, чтобы нарушить сезон выращивания. Другие варианты меняют знак изменения или преувеличивают."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-212",
+  "level": "C",
+  "src": "claude",
+  "topic": "Social sciences",
+  "title": "When a New Road Makes Traffic Worse",
+  "paras": [
+   [
+    "Common sense suggests that adding a new road to a congested network should make travel faster.",
+    "In 1968, however, the mathematician Dietrich Braess showed that this is not always true.",
+    "Under certain conditions, a new road can increase the travel time for every driver in the network.",
+    "The result seems paradoxical, but it follows from a simple feature of how people choose their routes."
+   ],
+   [
+    "Imagine two routes between a suburb and a city center, each with one slow but steady stretch and one fast stretch that becomes crowded when many cars use it.",
+    "Drivers divide themselves roughly evenly between the two routes, and each trip takes a similar amount of time.",
+    "Now suppose a short connecting road is built that lets drivers combine the two fast stretches.",
+    "Each driver, looking only at his or her own journey, finds the new shortcut attractive.",
+    "As more drivers switch, the fast stretches become congested, and everyone ends up with a longer trip than before."
+   ],
+   [
+    "Researchers think that similar effects occasionally occur in real cities.",
+    "In 2005, Seoul removed an elevated highway through the city center and replaced it with a stream and park, yet traffic in the area did not collapse as many had feared.",
+    "Transportation planners are cautious about drawing general conclusions from such cases.",
+    "Nevertheless, the idea reminds them that individual choices can produce results that nobody wants."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "sentence": "In other words, everyone would be better off if the shortcut did not exist."
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about the drivers in the example in paragraph 2?",
+    "opts": [
+     "They do not consider how their own choices affect other drivers.",
+     "They are unaware that the new road has been built.",
+     "They prefer longer trips to shorter ones.",
+     "They are forced by the government to use the shortcut."
+    ],
+    "a": 0,
+    "ex": "Каждый водитель оценивает только собственную поездку («looking only at his or her own journey»), поэтому не учитывает, что его выбор усиливает пробки для всех."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 3,
+    "ex": "«In other words» подводит итог: после того, как все выбрали короткий путь, поездки стали дольше. Такой вывод возможен только в конце абзаца, после описания последствий."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that explains why the new road is attractive to individual drivers.",
+    "sel": {
+     "p": 1
+    },
+    "a": 3,
+    "ex": "Каждый водитель, глядя только на свой маршрут, считает новую дорогу выгодной — это четвёртое предложение абзаца. Предыдущее предложение лишь описывает строительство."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"them\" in paragraph 3 refers to",
+    "hl": {
+     "p": 2,
+     "s": 3,
+     "w": "them"
+    },
+    "opts": [
+     "real cities",
+     "researchers",
+     "transportation planners",
+     "individual choices"
+    ],
+    "a": 2,
+    "ex": "«Transportation planners are cautious… Nevertheless, the idea reminds them» — напоминание адресовано планировщикам из предыдущего предложения."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "simp": {
+     "p": 2,
+     "s": 1
+    },
+    "opts": [
+     "Although many people feared a traffic collapse, Seoul's removal of a central elevated highway in 2005 did not cause one.",
+     "Seoul built a stream and park in 2005 because traffic had collapsed.",
+     "Many people feared that Seoul's elevated highway would collapse onto the stream in 2005.",
+     "In 2005, traffic in Seoul improved because the elevated highway was removed."
+    ],
+    "a": 0,
+    "ex": "Суть: опасения коллапса движения после сноса эстакады не оправдались. Вариант про улучшение движения утверждает больше, чем сказано в тексте."
+   }
+  ]
+ }
+]

@@ -1495,5 +1495,2021 @@
   ],
   "extra": "depending",
   "ex": "Applicants whose access … depends on institutions. Подлежащее access — ед. ч., поэтому depends."
+ },
+ {
+  "id": "W-BAS-A-021",
+  "level": "A",
+  "focus": "Past Simple",
+  "a": "Where did you leave your umbrella?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "left",
+   "my umbrella",
+   "on the bus"
+  ],
+  "extra": "leaving",
+  "ex": "После did в вопросе отвечаем Past Simple: left. Форма leaving без вспомогательного глагола не образует сказуемое."
+ },
+ {
+  "id": "W-BAS-A-022",
+  "level": "A",
+  "focus": "Would like + to",
+  "a": "Do you want to join the study group?",
+  "parts": [
+   "Yes, I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "would like",
+   "to come",
+   "to the meeting"
+  ],
+  "extra": "coming",
+  "ex": "Would like + to + инфинитив: would like to come. После would like герундий не ставится."
+ },
+ {
+  "id": "W-BAS-A-023",
+  "level": "A",
+  "focus": "Притяжательный падеж",
+  "a": "Whose notebook is this?",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "it",
+   "is",
+   "my sister's",
+   "notebook"
+  ],
+  "extra": "sisters",
+  "ex": "Принадлежность выражается через 's: my sister's notebook. Форма sisters — это просто множественное число."
+ },
+ {
+  "id": "W-BAS-A-024",
+  "level": "A",
+  "focus": "There are + множественное",
+  "a": "What's on the kitchen table?",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "there are",
+   "some apples",
+   "on",
+   "the table"
+  ],
+  "extra": "There is",
+  "ex": "Some apples — множественное число, поэтому there are. There is подходит только к единственному числу."
+ },
+ {
+  "id": "W-BAS-A-025",
+  "level": "A",
+  "focus": "Present Simple, 3-е лицо",
+  "a": "What does Lena do on weekends?",
+  "parts": [
+   "She",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "visits",
+   "her grandmother",
+   "every Sunday"
+  ],
+  "extra": "visit",
+  "ex": "В Present Simple после she у глагола окончание -s: visits. Форма visit подошла бы к I, you, we, they."
+ },
+ {
+  "id": "W-BAS-A-026",
+  "level": "A",
+  "focus": "Предлоги on / at",
+  "a": "When is the exam?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is",
+   "on Monday",
+   "at ten"
+  ],
+  "extra": "in",
+  "ex": "С днём недели — on, с точным временем — at. Порядок: сначала день, потом время. In с днями недели не употребляется."
+ },
+ {
+  "id": "W-BAS-A-027",
+  "level": "A",
+  "focus": "Can: отрицание",
+  "a": "Can your brother drive?",
+  "parts": [
+   "No, he",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "can't",
+   "drive",
+   "yet"
+  ],
+  "extra": "cans",
+  "ex": "После модального глагола can инфинитив без окончаний: can't drive. Формы cans в английском не существует."
+ },
+ {
+  "id": "W-BAS-A-028",
+  "level": "A",
+  "focus": "Present Continuous: отрицание",
+  "a": "Is Tom working today?",
+  "parts": [
+   "No, he",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "isn't",
+   "working",
+   "today"
+  ],
+  "extra": "don't",
+  "ex": "Вопрос с Is — ответ с isn't + глагол с -ing. Don't относится к Present Simple."
+ },
+ {
+  "id": "W-BAS-A-029",
+  "level": "A",
+  "focus": "Неправильные глаголы",
+  "a": "How many books did you buy?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "bought",
+   "three books",
+   "yesterday"
+  ],
+  "extra": "buyed",
+  "ex": "Buy — неправильный глагол: bought. Форма buyed не существует."
+ },
+ {
+  "id": "W-BAS-A-030",
+  "level": "A",
+  "focus": "Past Simple с ago",
+  "a": "Did you finish your homework?",
+  "parts": [
+   "Yes, I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "finished",
+   "it",
+   "an hour ago"
+  ],
+  "extra": "have",
+  "ex": "С выражением an hour ago используется Past Simple. Have finished с ago не сочетается."
+ },
+ {
+  "id": "W-BAS-A-031",
+  "level": "A",
+  "focus": "Сравнительная степень",
+  "a": "Which bag should I buy?",
+  "parts": [
+   "The",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "blue one",
+   "is",
+   "cheaper",
+   "than",
+   "the black one"
+  ],
+  "extra": "more cheap",
+  "ex": "У коротких прилагательных сравнительная степень образуется суффиксом: cheaper than. More cheap — ошибка."
+ },
+ {
+  "id": "W-BAS-A-032",
+  "level": "A",
+  "focus": "Превосходная степень",
+  "a": "Who is the tallest student in your class?",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "Marco",
+   "is",
+   "the tallest",
+   "boy",
+   "in our class"
+  ],
+  "extra": "most tall",
+  "ex": "У коротких прилагательных превосходная степень образуется суффиксом -est: the tallest. Most tall — ошибка."
+ },
+ {
+  "id": "W-BAS-A-033",
+  "level": "A",
+  "focus": "Повелительное наклонение",
+  "a": "How do I log in to the system?",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "enter",
+   "your ID",
+   "and",
+   "click",
+   "Next"
+  ],
+  "extra": "entering",
+  "ex": "Инструкция — это повелительное наклонение: глагол без изменений. Entering не работает как команда."
+ },
+ {
+  "id": "W-BAS-A-034",
+  "level": "A",
+  "focus": "Present Continuous: планы",
+  "a": "What are you doing tonight?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "am",
+   "meeting",
+   "my friends",
+   "at seven"
+  ],
+  "extra": "meet",
+  "ex": "Am + глагол с -ing выражает запланированное действие: am meeting. После am голая форма meet невозможна."
+ },
+ {
+  "id": "W-BAS-A-035",
+  "level": "A",
+  "focus": "Have to",
+  "a": "Why can't you come to the party?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "have to",
+   "finish",
+   "my project",
+   "tonight"
+  ],
+  "extra": "must to",
+  "ex": "Обязанность выражается have to + инфинитив. Must to — ошибка: после must частица to не нужна."
+ },
+ {
+  "id": "W-BAS-A-036",
+  "level": "A",
+  "focus": "Because и Past Simple",
+  "a": "Why is Ana late?",
+  "parts": [
+   "She",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "missed",
+   "the bus",
+   "because",
+   "she",
+   "woke up late"
+  ],
+  "extra": "wake",
+  "ex": "Because вводит причину, в обоих предложениях Past Simple: missed, woke up. Wake не согласуется со временем."
+ },
+ {
+  "id": "W-BAS-A-037",
+  "level": "A",
+  "focus": "Вопрос с does",
+  "a": "I'm going to the library now.",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "what time",
+   "does",
+   "it",
+   "close"
+  ],
+  "extra": "closes",
+  "ex": "В вопросе с does смысловой глагол стоит в начальной форме: does it close. Closes после does не нужен."
+ },
+ {
+  "id": "W-BAS-A-038",
+  "level": "A",
+  "focus": "Вопрос с be",
+  "a": "I have a new roommate.",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "where",
+   "is",
+   "he",
+   "from"
+  ],
+  "extra": "does",
+  "ex": "С глаголом be вспомогательное does не нужно: Where is he from? Does используется с другими глаголами."
+ },
+ {
+  "id": "W-BAS-A-039",
+  "level": "A",
+  "focus": "Артикли a / an",
+  "a": "What did you eat for lunch?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "ate",
+   "a sandwich",
+   "and",
+   "an apple"
+  ],
+  "extra": "eated",
+  "ex": "Eat — неправильный глагол: ate. Артикль a перед согласным звуком, an — перед гласным."
+ },
+ {
+  "id": "W-BAS-A-040",
+  "level": "A",
+  "focus": "Present Simple, частота",
+  "a": "How often do you go to the gym?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "go",
+   "there",
+   "twice a week"
+  ],
+  "extra": "goes",
+  "ex": "После I глагол без окончания: go. Goes нужен для he, she, it."
+ },
+ {
+  "id": "W-BAS-A-041",
+  "level": "A",
+  "focus": "Предлоги места",
+  "a": "Where is the post office?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is",
+   "between",
+   "the bank",
+   "and",
+   "the school"
+  ],
+  "extra": "among",
+  "ex": "Between используется для двух объектов и требует and: between the bank and the school. Among — для групп из трёх и более."
+ },
+ {
+  "id": "W-BAS-A-042",
+  "level": "A",
+  "focus": "Модальный глагол should",
+  "a": "I have a headache. What should I do?",
+  "parts": [
+   "You",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "should",
+   "drink",
+   "some water",
+   "and rest"
+  ],
+  "extra": "to",
+  "ex": "После should идёт инфинитив без to: should drink. Частица to здесь лишняя."
+ },
+ {
+  "id": "W-BAS-A-043",
+  "level": "A",
+  "focus": "Притяжательные местоимения",
+  "a": "Is that Ben's phone?",
+  "parts": [
+   "No, it",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "isn't",
+   "his",
+   "phone"
+  ],
+  "extra": "he's",
+  "ex": "His — притяжательное местоимение: his phone. He's означает he is или he has и после it isn't не подходит."
+ },
+ {
+  "id": "W-BAS-A-044",
+  "level": "A",
+  "focus": "Past Simple глагола be",
+  "a": "Were you at the concert?",
+  "parts": [
+   "Yes, I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "was",
+   "there",
+   "with",
+   "my cousin"
+  ],
+  "extra": "were",
+  "ex": "С местоимением I в прошедшем времени используется was. Were подходит к you, we, they."
+ },
+ {
+  "id": "W-BAS-A-045",
+  "level": "A",
+  "focus": "Going to",
+  "a": "What are you going to do after class?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "am going",
+   "to have",
+   "lunch",
+   "with Sam"
+  ],
+  "extra": "will",
+  "ex": "Намерение выражается am going to + инфинитив. Will в этой конструкции не нужен."
+ },
+ {
+  "id": "W-BAS-A-046",
+  "level": "A",
+  "focus": "Present Perfect с ever / never",
+  "a": "Have you ever been to London?",
+  "parts": [
+   "No, I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "have",
+   "never",
+   "been",
+   "there"
+  ],
+  "extra": "was",
+  "ex": "Опыт выражается Present Perfect: have never been. Was never не отвечает на вопрос в этом времени."
+ },
+ {
+  "id": "W-BAS-A-047",
+  "level": "A",
+  "focus": "Наречия образа действия",
+  "a": "How did the team play?",
+  "parts": [
+   "They",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "played",
+   "very",
+   "well",
+   "yesterday"
+  ],
+  "extra": "good",
+  "ex": "Наречие от good — well: played very well. Good — прилагательное и после глагола действия не используется."
+ },
+ {
+  "id": "W-BAS-A-048",
+  "level": "A",
+  "focus": "Личные местоимения",
+  "a": "Do you know the new teacher?",
+  "parts": [
+   "Yes, I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "met",
+   "her",
+   "last week"
+  ],
+  "extra": "she",
+  "ex": "После глагола нужен объектный падеж: met her. She — подлежащее и после глагола не ставится."
+ },
+ {
+  "id": "W-BAS-A-049",
+  "level": "A",
+  "focus": "Present Simple: отрицание",
+  "a": "Does your sister eat meat?",
+  "parts": [
+   "No, she",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "doesn't",
+   "eat",
+   "any meat"
+  ],
+  "extra": "don't",
+  "ex": "С she в отрицании используется doesn't + глагол без окончания. Don't относится к I, you, we, they."
+ },
+ {
+  "id": "W-BAS-A-050",
+  "level": "A",
+  "focus": "Will для обещаний",
+  "a": "When will you call me?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "will call",
+   "you",
+   "after",
+   "class"
+  ],
+  "extra": "will calls",
+  "ex": "После will глагол без окончания: will call. Will calls — ошибка."
+ },
+ {
+  "id": "W-BAS-B-021",
+  "level": "B",
+  "focus": "Косвенный вопрос",
+  "a": "What did the receptionist ask you?",
+  "parts": [
+   "She",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "wanted to know",
+   "where",
+   "I",
+   "had parked",
+   "my car"
+  ],
+  "extra": "did I",
+  "ex": "После wanted to know порядок слов прямой: where I had parked. Did I — порядок прямого вопроса, здесь он не нужен."
+ },
+ {
+  "id": "W-BAS-B-022",
+  "level": "B",
+  "focus": "Косвенная речь",
+  "a": "What did the coach say?",
+  "parts": [
+   "He said that",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "we",
+   "would play",
+   "the final",
+   "on Saturday"
+  ],
+  "extra": "to play",
+  "ex": "После said that идёт полное придаточное со сдвигом времён: we would play. To play не образует сказуемое."
+ },
+ {
+  "id": "W-BAS-B-023",
+  "level": "B",
+  "focus": "Пассив в Past Simple",
+  "a": "Why is the road closed?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "was damaged",
+   "by",
+   "a storm",
+   "last night"
+  ],
+  "extra": "damaged",
+  "ex": "Пассив: was damaged by a storm. Без was форма damaged не образует сказуемое."
+ },
+ {
+  "id": "W-BAS-B-024",
+  "level": "B",
+  "focus": "Определительное придаточное с who",
+  "a": "Who is Dr. Lee?",
+  "parts": [
+   "She",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is",
+   "the professor",
+   "who",
+   "teaches",
+   "my chemistry class"
+  ],
+  "extra": "which",
+  "ex": "К людям относится who: the professor who teaches. Which употребляется для предметов."
+ },
+ {
+  "id": "W-BAS-B-025",
+  "level": "B",
+  "focus": "Условное предложение 2-го типа",
+  "a": "Would you travel more if you could?",
+  "parts": [
+   "Yes, I",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "would travel",
+   "much more",
+   "if",
+   "the flights",
+   "were cheaper"
+  ],
+  "extra": "would be",
+  "ex": "Тип 2: if + Past Simple, would + глагол. После if would не ставится: if the flights were cheaper."
+ },
+ {
+  "id": "W-BAS-B-026",
+  "level": "B",
+  "focus": "Present Perfect Continuous",
+  "a": "Why are your eyes so red?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "have been",
+   "studying",
+   "for",
+   "six hours"
+  ],
+  "extra": "since",
+  "ex": "Have been studying for + период времени. Since требует точки отсчёта (since morning), а не длительности."
+ },
+ {
+  "id": "W-BAS-B-027",
+  "level": "B",
+  "focus": "Герундий после enjoy",
+  "a": "What do you like about your job?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "enjoy",
+   "working",
+   "with",
+   "international students"
+  ],
+  "extra": "to work",
+  "ex": "После enjoy идёт герундий: enjoy working. Инфинитив с to здесь не используется."
+ },
+ {
+  "id": "W-BAS-B-028",
+  "level": "B",
+  "focus": "Used to",
+  "a": "Did you always live in the city?",
+  "parts": [
+   "No, I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "used to",
+   "live",
+   "in a small village"
+  ],
+  "extra": "am used to",
+  "ex": "Used to + инфинитив обозначает прошлую привычку или состояние. Am used to требует герундия."
+ },
+ {
+  "id": "W-BAS-B-029",
+  "level": "B",
+  "focus": "Not as … as",
+  "a": "Is the new library bigger than the old one?",
+  "parts": [
+   "Actually, it",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is",
+   "not",
+   "as big",
+   "as",
+   "the old one"
+  ],
+  "extra": "more big",
+  "ex": "Равенство и неравенство: not as big as. Форма more big неверна: у коротких прилагательных суффикс -er."
+ },
+ {
+  "id": "W-BAS-B-030",
+  "level": "B",
+  "focus": "Модальный перфект",
+  "a": "Why didn't Ahmed answer the phone?",
+  "parts": [
+   "He",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "might",
+   "have",
+   "been",
+   "sleeping"
+  ],
+  "extra": "might has",
+  "ex": "Предположение о прошлом: might have been sleeping. После модального глагола have без окончаний."
+ },
+ {
+  "id": "W-BAS-B-031",
+  "level": "B",
+  "focus": "Present Perfect Passive",
+  "a": "Is the report ready?",
+  "parts": [
+   "Yes, it",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "has",
+   "been",
+   "sent",
+   "to the director"
+  ],
+  "extra": "have",
+  "ex": "Present Perfect Passive: has been sent. С it нужен has, а не have."
+ },
+ {
+  "id": "W-BAS-B-032",
+  "level": "B",
+  "focus": "Wish + Past Simple",
+  "a": "Do you like living far from campus?",
+  "parts": [
+   "Not really. I wish",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "I",
+   "lived",
+   "closer",
+   "to campus"
+  ],
+  "extra": "live",
+  "ex": "Нереальное желание о настоящем выражается через Past Simple: I wish I lived. Начальная форма live не подходит."
+ },
+ {
+  "id": "W-BAS-B-033",
+  "level": "B",
+  "focus": "Пассив с модальным глаголом",
+  "a": "Can students use their phones during the test?",
+  "parts": [
+   "No, phones",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "must",
+   "be",
+   "turned off"
+  ],
+  "extra": "must to",
+  "ex": "Модальный пассив: must be turned off. После must частица to не нужна."
+ },
+ {
+  "id": "W-BAS-B-034",
+  "level": "B",
+  "focus": "Whose в определительном придаточном",
+  "a": "Which student won the prize?",
+  "parts": [
+   "It was",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "the girl",
+   "whose",
+   "essay",
+   "was chosen",
+   "by the judges"
+  ],
+  "extra": "who's",
+  "ex": "Whose показывает принадлежность: the girl whose essay. Who's — сокращение от who is или who has."
+ },
+ {
+  "id": "W-BAS-B-035",
+  "level": "B",
+  "focus": "So that",
+  "a": "Why did Mia buy a new alarm clock?",
+  "parts": [
+   "She",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "bought it",
+   "so that",
+   "she",
+   "wouldn't",
+   "be late"
+  ],
+  "extra": "so as",
+  "ex": "So that вводит цель, после него идёт полное придаточное: so that she wouldn't be late. So as требует инфинитива."
+ },
+ {
+  "id": "W-BAS-B-036",
+  "level": "B",
+  "focus": "Although",
+  "a": "Did you enjoy the lecture?",
+  "parts": [
+   "Yes, I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "enjoyed it",
+   "although",
+   "the room",
+   "was cold"
+  ],
+  "extra": "despite",
+  "ex": "Although вводит полное придаточное: although the room was cold. Despite требует существительного или герундия."
+ },
+ {
+  "id": "W-BAS-B-037",
+  "level": "B",
+  "focus": "Косвенный вопрос после Do you know",
+  "a": "I need to find the registrar's office.",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "do you know",
+   "where",
+   "it",
+   "is"
+  ],
+  "extra": "does",
+  "ex": "В косвенном вопросе после Do you know порядок прямой: where it is. Does здесь лишнее."
+ },
+ {
+  "id": "W-BAS-B-038",
+  "level": "B",
+  "focus": "Past Perfect",
+  "a": "Why were you so surprised?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "had never",
+   "seen",
+   "such a large crowd",
+   "before"
+  ],
+  "extra": "seeing",
+  "ex": "Past Perfect: had never seen. Форма seeing без вспомогательного глагола не образует сказуемое."
+ },
+ {
+  "id": "W-BAS-B-039",
+  "level": "B",
+  "focus": "Because of",
+  "a": "Why was the flight delayed?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "was delayed",
+   "because of",
+   "the heavy fog"
+  ],
+  "extra": "because",
+  "ex": "Because of + существительное: because of the heavy fog. Because требует придаточного со сказуемым."
+ },
+ {
+  "id": "W-BAS-B-040",
+  "level": "B",
+  "focus": "Too + прилагательное",
+  "a": "Can you carry the box?",
+  "parts": [
+   "No, it",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is",
+   "too",
+   "heavy",
+   "for me"
+  ],
+  "extra": "enough",
+  "ex": "Too heavy for me — слишком тяжёлая. Enough в утвердительной конструкции так не ставится, и значение было бы противоположным."
+ },
+ {
+  "id": "W-BAS-B-041",
+  "level": "B",
+  "focus": "Suggest + герундий",
+  "a": "What should we do this weekend?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "suggest",
+   "going",
+   "to the museum",
+   "on Saturday"
+  ],
+  "extra": "to go",
+  "ex": "После suggest идёт герундий: suggest going. Инфинитив с to здесь неправилен."
+ },
+ {
+  "id": "W-BAS-B-042",
+  "level": "B",
+  "focus": "Вопрос в Past Simple Passive",
+  "a": "Everyone is talking about the festival.",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "when",
+   "was",
+   "it",
+   "announced"
+  ],
+  "extra": "did",
+  "ex": "В вопросе пассива вспомогательный глагол be стоит перед подлежащим: was it announced. Did не нужен."
+ },
+ {
+  "id": "W-BAS-B-043",
+  "level": "B",
+  "focus": "Сложное дополнение",
+  "a": "What did your parents want?",
+  "parts": [
+   "They",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "wanted",
+   "me",
+   "to apply",
+   "for the scholarship"
+  ],
+  "extra": "applying",
+  "ex": "Want + кто-то + to-инфинитив: wanted me to apply. Герундий здесь не используется."
+ },
+ {
+  "id": "W-BAS-B-044",
+  "level": "B",
+  "focus": "Определительное придаточное с that",
+  "a": "Which book did you borrow?",
+  "parts": [
+   "It's",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "the one",
+   "that",
+   "my professor",
+   "recommended"
+  ],
+  "extra": "what",
+  "ex": "The one that my professor recommended — определительное придаточное. What не может присоединяться к существительному."
+ },
+ {
+  "id": "W-BAS-B-045",
+  "level": "B",
+  "focus": "Придаточное времени с as soon as",
+  "a": "When will we get the test results?",
+  "parts": [
+   "You",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "will receive",
+   "them",
+   "as soon as",
+   "the teachers",
+   "finish grading"
+  ],
+  "extra": "will finish",
+  "ex": "После as soon as будущее выражается через Present Simple: finish grading. Will finish в придаточном времени неправильно."
+ },
+ {
+  "id": "W-BAS-B-046",
+  "level": "B",
+  "focus": "Both … and",
+  "a": "Is the course useful?",
+  "parts": [
+   "Yes, it",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "teaches",
+   "both",
+   "writing",
+   "and",
+   "speaking"
+  ],
+  "extra": "either",
+  "ex": "Both … and соединяет два элемента: both writing and speaking. Either требует or."
+ },
+ {
+  "id": "W-BAS-B-047",
+  "level": "B",
+  "focus": "Whether + инфинитив",
+  "a": "Did Mia accept the job?",
+  "parts": [
+   "She",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "hasn't",
+   "decided",
+   "whether",
+   "to accept it",
+   "yet"
+  ],
+  "extra": "decide",
+  "ex": "Present Perfect: hasn't decided. После hasn't нужна форма третьей формы глагола, а не начальная."
+ },
+ {
+  "id": "W-BAS-B-048",
+  "level": "B",
+  "focus": "Present Perfect с for / since",
+  "a": "Where is everyone?",
+  "parts": [
+   "Most students",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "have gone",
+   "home",
+   "for",
+   "the holiday"
+  ],
+  "extra": "have went",
+  "ex": "Present Perfect образуется с причастием gone. Form went — это Past Simple."
+ },
+ {
+  "id": "W-BAS-B-049",
+  "level": "B",
+  "focus": "Little и few",
+  "a": "Is there enough time for questions?",
+  "parts": [
+   "Unfortunately,",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "there",
+   "is",
+   "very little",
+   "time",
+   "left"
+  ],
+  "extra": "very few",
+  "ex": "Time — неисчисляемое существительное, поэтому little. Few используется с исчисляемыми."
+ },
+ {
+  "id": "W-BAS-B-050",
+  "level": "B",
+  "focus": "Предлог + герундий",
+  "a": "How did you improve your listening?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "improved",
+   "it",
+   "by",
+   "watching",
+   "online lectures"
+  ],
+  "extra": "watch",
+  "ex": "После предлога by идёт герундий: by watching. Начальная форма watch после предлога невозможна."
+ },
+ {
+  "id": "W-BAS-C-021",
+  "level": "C",
+  "focus": "Инверсия: No sooner … than",
+  "a": "Did the lecture go smoothly?",
+  "parts": [
+   "No sooner",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "had",
+   "the lecture",
+   "begun",
+   "than",
+   "the projector",
+   "failed"
+  ],
+  "extra": "when",
+  "ex": "No sooner … than вызывает инверсию: had the lecture begun. With when конструкция неправильна: нужен than."
+ },
+ {
+  "id": "W-BAS-C-022",
+  "level": "C",
+  "focus": "Инверсия: Rarely",
+  "a": "Does the professor give extensions?",
+  "parts": [
+   "Rarely",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "does",
+   "she",
+   "grant",
+   "an extension",
+   "without a good reason"
+  ],
+  "extra": "grants",
+  "ex": "После Rarely в начале предложения идёт инверсия: does she grant. После does глагол без окончания."
+ },
+ {
+  "id": "W-BAS-C-023",
+  "level": "C",
+  "focus": "Сослагательное наклонение",
+  "a": "Why is Mr. Dunn attending the meeting?",
+  "parts": [
+   "The board",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "insisted",
+   "that",
+   "he",
+   "be",
+   "present"
+  ],
+  "extra": "is",
+  "ex": "После insist that используется сослагательное наклонение: he be present. Is здесь неправильно."
+ },
+ {
+  "id": "W-BAS-C-024",
+  "level": "C",
+  "focus": "Расщеплённое предложение",
+  "a": "Did the manager make the final decision?",
+  "parts": [
+   "No, it",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "was",
+   "the committee",
+   "that",
+   "made",
+   "the final decision"
+  ],
+  "extra": "what",
+  "ex": "Cleft-конструкция: it was the committee that made. What не присоединяется к существительному."
+ },
+ {
+  "id": "W-BAS-C-025",
+  "level": "C",
+  "focus": "Смешанное условное",
+  "a": "Why aren't you in the engineering program?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "would be",
+   "studying",
+   "engineering",
+   "if I",
+   "had passed",
+   "the exam"
+  ],
+  "extra": "would have been",
+  "ex": "Смешанный тип: условие в прошлом, следствие в настоящем. Had passed в условии, would be studying в главной."
+ },
+ {
+  "id": "W-BAS-C-026",
+  "level": "C",
+  "focus": "Пассив с глаголами мнения",
+  "a": "Is the old bridge in good condition?",
+  "parts": [
+   "The bridge",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is believed",
+   "to have been",
+   "damaged",
+   "in the storm"
+  ],
+  "extra": "believed",
+  "ex": "Is believed to have been damaged — пассив с перфектным инфинитивом. Одно believed без is не образует сказуемое."
+ },
+ {
+  "id": "W-BAS-C-027",
+  "level": "C",
+  "focus": "Причастный оборот",
+  "a": "How did Lena find out about the scholarship?",
+  "parts": [
+   null,
+   null,
+   ", she",
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "browsing",
+   "the department's website",
+   "noticed",
+   "the announcement"
+  ],
+  "extra": "browsed",
+  "ex": "Причастие настоящего времени в начале предложения: Browsing … she noticed. Browsed в этой роли недопустимо."
+ },
+ {
+  "id": "W-BAS-C-028",
+  "level": "C",
+  "focus": "Which как комментарий",
+  "a": "Why is the library so crowded?",
+  "parts": [
+   "The exams start soon,",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "which",
+   "is why",
+   "everyone",
+   "is studying"
+  ],
+  "extra": "what",
+  "ex": "Which присоединяет комментарий к предыдущему предложению: which is why. What не может выполнять эту функцию."
+ },
+ {
+  "id": "W-BAS-C-029",
+  "level": "C",
+  "focus": "Despite / in spite of",
+  "a": "Did the team finish on time?",
+  "parts": [
+   "Yes, they",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "met the deadline",
+   "in spite of",
+   "losing",
+   "two members"
+  ],
+  "extra": "in spite",
+  "ex": "In spite of — цельное сочетание. Без of оно неправильно."
+ },
+ {
+  "id": "W-BAS-C-030",
+  "level": "C",
+  "focus": "Придаточное подлежащее",
+  "a": "Were the survey results expected?",
+  "parts": [
+   "No, what",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "the survey",
+   "found",
+   "surprised",
+   "many researchers"
+  ],
+  "extra": "that",
+  "ex": "Придаточное с what выступает как подлежащее: What the survey found surprised many researchers. That не подходит."
+ },
+ {
+  "id": "W-BAS-C-031",
+  "level": "C",
+  "focus": "Seem + перфектный инфинитив",
+  "a": "Why is the lab empty?",
+  "parts": [
+   "The researchers",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "seem",
+   "to have",
+   "left",
+   "early"
+  ],
+  "extra": "to had",
+  "ex": "Seem to have left — перфектный инфинитив. To had — ошибка: после to нужна начальная форма."
+ },
+ {
+  "id": "W-BAS-C-032",
+  "level": "C",
+  "focus": "Whoever",
+  "a": "Who should I give the form to?",
+  "parts": [
+   "You can give it to",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "whoever",
+   "is",
+   "working",
+   "at the front desk"
+  ],
+  "extra": "whatever",
+  "ex": "Whoever — любой человек, который. Whatever относится к предметам."
+ },
+ {
+  "id": "W-BAS-C-033",
+  "level": "C",
+  "focus": "Каузатив have",
+  "a": "Did you repair your laptop yourself?",
+  "parts": [
+   "No, I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "had",
+   "it",
+   "repaired",
+   "by a technician"
+  ],
+  "extra": "repair",
+  "ex": "Каузатив: had it repaired. Начальная форма repair в этой конструкции не подходит."
+ },
+ {
+  "id": "W-BAS-C-034",
+  "level": "C",
+  "focus": "Инверсия: Only after",
+  "a": "Can students access the archive freely?",
+  "parts": [
+   "Only after",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "registering",
+   "can",
+   "students",
+   "enter",
+   "the archive"
+  ],
+  "extra": "students can",
+  "ex": "После Only after идёт инверсия: can students enter. Students can — прямой порядок."
+ },
+ {
+  "id": "W-BAS-C-035",
+  "level": "C",
+  "focus": "Условное без if",
+  "a": "Did the volunteers help a lot?",
+  "parts": [
+   "Yes,",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "without",
+   "them",
+   "the event",
+   "would have",
+   "failed"
+  ],
+  "extra": "will have",
+  "ex": "Without + местоимение заменяет условное придаточное: would have failed. Will have failed относится к будущему."
+ },
+ {
+  "id": "W-BAS-C-036",
+  "level": "C",
+  "focus": "Would rather … than",
+  "a": "Would you like to take the bus?",
+  "parts": [
+   "I'd",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "rather",
+   "walk",
+   "than",
+   "wait",
+   "in the rain"
+  ],
+  "extra": "prefer",
+  "ex": "Would rather + инфинитив без to: would rather walk than wait. Prefer требует to или другой конструкции."
+ },
+ {
+  "id": "W-BAS-C-037",
+  "level": "C",
+  "focus": "So … that",
+  "a": "Did the new policy work?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "worked",
+   "so well",
+   "that",
+   "other schools",
+   "adopted it"
+  ],
+  "extra": "such well",
+  "ex": "So well that — следствие. Such well неправильно: such идёт с существительными."
+ },
+ {
+  "id": "W-BAS-C-038",
+  "level": "C",
+  "focus": "Depends on whether",
+  "a": "Will the trip be canceled?",
+  "parts": [
+   "That",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "depends",
+   "on",
+   "whether",
+   "the weather",
+   "improves"
+  ],
+  "extra": "that",
+  "ex": "Depends on whether — зависит от того, ли. That в этой роли не подходит."
+ },
+ {
+  "id": "W-BAS-C-039",
+  "level": "C",
+  "focus": "Сравнение количества",
+  "a": "Is enrollment growing?",
+  "parts": [
+   "No,",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "fewer students",
+   "enrolled",
+   "this year",
+   "than",
+   "last year"
+  ],
+  "extra": "less",
+  "ex": "Few — с исчисляемыми существительными: fewer students. Less — с неисчисляемыми."
+ },
+ {
+  "id": "W-BAS-C-040",
+  "level": "C",
+  "focus": "Приложение",
+  "a": "Who wrote this report?",
+  "parts": [
+   "It was written by Dr. Alvarez,",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "a historian",
+   "who",
+   "works",
+   "at our university"
+  ],
+  "extra": "which",
+  "ex": "Who относится к человеку: a historian who works. Which употребляется для предметов."
+ },
+ {
+  "id": "W-BAS-C-041",
+  "level": "C",
+  "focus": "Пассивный инфинитив",
+  "a": "What does the old equipment need?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "needs",
+   "to be",
+   "replaced",
+   "as soon as possible"
+  ],
+  "extra": "replacing",
+  "ex": "Needs to be replaced — пассивный инфинитив. Replacing с to be не сочетается."
+ },
+ {
+  "id": "W-BAS-C-042",
+  "level": "C",
+  "focus": "Инверсия: Little did",
+  "a": "Did you know about the merger?",
+  "parts": [
+   "No, little",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "did",
+   "we",
+   "realize",
+   "how serious it was"
+  ],
+  "extra": "we did",
+  "ex": "После Little в начале предложения идёт инверсия: did we realize. We did — прямой порядок."
+ },
+ {
+  "id": "W-BAS-C-043",
+  "level": "C",
+  "focus": "In which",
+  "a": "What is a seminar?",
+  "parts": [
+   "It is",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "a class",
+   "in which",
+   "students",
+   "discuss",
+   "ideas",
+   "with a professor"
+  ],
+  "extra": "that",
+  "ex": "Предлог перед which: in which students discuss. That не может стоять после предлога."
+ },
+ {
+  "id": "W-BAS-C-044",
+  "level": "C",
+  "focus": "Инверсия: Not until",
+  "a": "When did you find out the results?",
+  "parts": [
+   "Not until",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "Friday",
+   "did",
+   "the office",
+   "post",
+   "the scores"
+  ],
+  "extra": "had",
+  "ex": "После Not until … идёт инверсия: did the office post. Had не образует вопросительную структуру с post."
+ },
+ {
+  "id": "W-BAS-C-045",
+  "level": "C",
+  "focus": "Only if",
+  "a": "Can I submit my essay late?",
+  "parts": [
+   "Yes, but only",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "if",
+   "you",
+   "tell",
+   "me",
+   "beforehand"
+  ],
+  "extra": "unless",
+  "ex": "Only if — только при условии, что. Unless означает «если не» и меняет смысл."
+ },
+ {
+  "id": "W-BAS-C-046",
+  "level": "C",
+  "focus": "Предлог + which",
+  "a": "Which tool did you use?",
+  "parts": [
+   "This is",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "the program",
+   "with which",
+   "I",
+   "analyzed",
+   "the data"
+  ],
+  "extra": "which with",
+  "ex": "Предлог стоит перед which: with which. Which with — неправильный порядок."
+ },
+ {
+  "id": "W-BAS-C-047",
+  "level": "C",
+  "focus": "Придаточное с whether",
+  "a": "What is the main concern?",
+  "parts": [
+   "The question",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is",
+   "whether",
+   "the plan",
+   "can work",
+   "without more money"
+  ],
+  "extra": "that",
+  "ex": "Whether вводит придаточное с альтернативой: whether the plan can work. That здесь меняет смысл и конструкцию."
+ },
+ {
+  "id": "W-BAS-C-048",
+  "level": "C",
+  "focus": "Инверсия вместо if",
+  "a": "Would the experiment have succeeded?",
+  "parts": [
+   "Had",
+   null,
+   null,
+   null,
+   ", it",
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "they",
+   "used",
+   "better equipment",
+   "would have",
+   "succeeded"
+  ],
+  "extra": "should",
+  "ex": "Had they used = if they had used. В главной части would have succeeded. Should не подходит."
+ },
+ {
+  "id": "W-BAS-C-049",
+  "level": "C",
+  "focus": "The more … the better",
+  "a": "How can I improve faster?",
+  "parts": [
+   "The more",
+   null,
+   null,
+   ", the",
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "you",
+   "read",
+   "better",
+   "you write"
+  ],
+  "extra": "most",
+  "ex": "Двойное сравнение: the more you read, the better you write. Most не образует такую конструкцию."
+ },
+ {
+  "id": "W-BAS-C-050",
+  "level": "C",
+  "focus": "Сокращённое причастие",
+  "a": "Which proposal did the board approve?",
+  "parts": [
+   "It approved",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "the proposal",
+   "submitted",
+   "by",
+   "the engineering team"
+  ],
+  "extra": "submitting",
+  "ex": "Пассивное причастие: the proposal submitted by. Submitting имело бы активное значение."
  }
 ]
