@@ -54,8 +54,8 @@ export const catalog = {
   S: {
     blurb: 'Без подготовки, ответ записывается сразу. Записи слушает учитель.',
     tasks: [
-      { id: 'lrp', nm: 'Listen and Repeat', ru: '7 предложений по сценарию, 8–12 с', cefr: 'A1–C2', score: 3.5, done: 3, n: 12, time: '≈2 мин', tts: true },
-      { id: 'int', nm: 'Take an Interview', ru: '4 вопроса исследователя, по 45 с', cefr: 'A1–C2', score: 3.5, done: 2, n: 15, time: '≈4 мин', tts: true }
+      { id: 'lrp', nm: 'Listen and Repeat', ru: '7 предложений по сценарию, 8–12 с', cefr: 'A1–C2', score: 3.5, done: 3, n: 12, time: '≈2 мин' },
+      { id: 'int', nm: 'Take an Interview', ru: '4 вопроса исследователя, по 45 с', cefr: 'A1–C2', score: 3.5, done: 2, n: 15, time: '≈4 мин' }
     ]
   }
 };

@@ -87,6 +87,16 @@ function enVoice(role) {
   const pref = role === 'int' ? /(female|samantha|jenny|aria|zira)/i : /(male|daniel|guy|david|alex)/i;
   return en.find(v => /en[-_]US/i.test(v.lang) && pref.test(v.name)) || en.find(v => /en[-_]US/i.test(v.lang)) || en[0] || null;
 }
+/** plays a recorded clip; resolves 'ended' | 'error' (missing / blocked file) | 'cancel' (stopSpeak) */
+export function playClip(url) {
+  stopSpeak();
+  return new Promise(resolve => {
+    let a, done = false;
+    const end = r => { if (done) return; done = true; cancelSpeak = null; resolve(r); };
+    cancelSpeak = () => { try { a && a.pause(); } catch (e) {} end('cancel'); };
+    try { a = new Audio(url); a.onended = () => end('ended'); a.onerror = () => end('error'); a.play().catch(() => end('error')); } catch (e) { end('error'); }
+  });
+}
 /** speaks `text`; resolves when finished (or after an estimated time if the browser has no voice / never fires onend) */
 export function speak(text, { rate = 0.95, role = 'lrp' } = {}) {
   stopSpeak();

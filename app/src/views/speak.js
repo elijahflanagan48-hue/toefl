@@ -67,11 +67,11 @@ function render() {
     <p>${S.task === 'lrp' ? 'Вы услышите 7 предложений. После каждого — короткая пауза и сигнал: повторите предложение так точно, как можете. Каждое предложение звучит один раз.'
       : 'Вам зададут 4 вопроса. После каждого раздастся сигнал, и сразу начнётся запись — 45 секунд. Времени на подготовку нет.'}</p>
     <div class="spk-btns"><button class="btn pri" data-act="s-start">Начать</button></div>
-    <p class="spk-hint">${rec.ttsAvailable() ? 'Пока вопросы озвучивает голос браузера — позже появится запись диктора.' : 'В этом браузере нет английского голоса: текст будет показан на экране.'}</p></div>`);
+    <p class="spk-hint">Включите звук: задания озвучены диктором.</p></div>`);
   if (ph === 'narr') return show(`<div class="spk-card"><div class="spk-ic say">${ic('volume', 30)}</div><h2>Слушайте</h2><p class="big">${esc(it.body.scenario)}</p></div>`);
   if (ph === 'listen' || ph === 'gap' || ph === 'rec') {
     const text = lines()[S.k], n = lines().length, lim = limitFor(S.task, S.k);
-    const showText = S.mode !== 'timed' || !rec.ttsAvailable();
+    const showText = S.mode !== 'timed';
     const head = ph === 'listen' ? `<div class="spk-ic say">${ic('volume', 30)}</div><h2>Слушайте</h2>` : ph === 'gap' ? `<div class="spk-ic">${ic('mic', 30)}</div><h2>Приготовьтесь</h2>`
       : `<div class="spk-ic rec">${ic('mic', 30)}</div><h2>Говорите</h2>`;
     return show(`${progress()}<div class="spk-card">${head}
@@ -110,6 +110,15 @@ on('s-mic', async () => {
 on('s-go', () => { cleanupAll(); S.phase = 'intro'; render(); });
 on('s-start', () => begin());
 
+/** recorded voice (audio/S/SP-LR|INT-<level>-<nnn>-<k>.mp3, k=0 narrator intro); browser voice only when the file is missing */
+const clipUrl = k => `audio/S/${S.item.id.replace('S-LRP-', 'SP-LR-').replace('S-INT-', 'SP-INT-')}-${k}.mp3`;
+async function say(k, text, role, rate) {
+  if (!S) return;
+  const r = await rec.playClip(clipUrl(k));
+  if (r !== 'error' || !S) return;
+  await rec.speak(text, { role, rate });
+}
+
 async function begin() {
   const tok = ++run;
   rec.audioCtx(); // unlock audio inside the user gesture
@@ -117,11 +126,12 @@ async function begin() {
   try { st = await rec.getMic(); } catch (e) { S.err = e.message; S.phase = 'mic'; S.micOk = false; render(); return; }
   S.stream = st;
   S.phase = 'narr'; render();
-  await rec.speak(S.item.body.scenario, { role: 'int' });
+  await say(0, S.item.body.scenario, 'int', 0.95);
   if (!alive(tok)) return;
   await wait(600);
-  for (S.k = 0; S.k < lines().length; S.k++) {
+  for (let k = 0, n = lines().length; k < n; k++) {
     if (!alive(tok)) return;
+    S.k = k;
     await runPart(tok);
   }
   if (!alive(tok)) return;
@@ -132,7 +142,7 @@ async function begin() {
 async function runPart(tok) {
   const k = S.k, text = lines()[k], lim = limitFor(S.task, k);
   S.phase = 'listen'; render();
-  await rec.speak(text, { role: S.task === 'int' ? 'int' : 'lrp', rate: S.task === 'lrp' ? 0.92 : 0.95 });
+  await say(k + 1, text, S.task === 'int' ? 'int' : 'lrp', S.task === 'lrp' ? 0.92 : 0.95);
   if (!alive(tok)) return;
   if (S.task === 'lrp') { S.phase = 'gap'; render(); await wait(2000); } else await wait(500);
   if (!alive(tok)) return;
