@@ -432,6 +432,114 @@
   ]
  },
  {
+  "id": "L-ANN-A-032",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-032",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-032.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M",
+  "words": 60,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Attention, students. The computer lab in the library will have new opening hours starting next week. It will be open from eight in the morning until ten at night, Monday to Thursday. On Fridays, it will close at five. On weekends, it will be open from noon to six. Printing costs five cents a page. Please bring your own paper."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the announcement mainly about?",
+    "opts": [
+     "A new printer",
+     "New hours for the computer lab",
+     "Free printing for students",
+     "A computer class"
+    ]
+   },
+   {
+    "stem": "When does the lab close on Fridays?",
+    "opts": [
+     "At ten",
+     "At six",
+     "At noon",
+     "At five"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   3
+  ],
+  "explain": [
+   "*new opening hours*. A — принтер не новый; C — печать платная; D — курса нет",
+   "*On Fridays, it will close at five*. A — пн–чт; B — выходные; C — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-033",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-033",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-033.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F",
+  "words": 55,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Good morning, everyone. The airport shuttle for winter break will leave from the main gate. There will be three buses on December seventeenth, at eight, ten, and noon. The ride takes about forty minutes and costs fifteen dollars. You can buy tickets at the student center until Friday. After that, tickets will cost twenty dollars."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is being announced?",
+    "opts": [
+     "A shuttle service to the airport",
+     "A change in the exam schedule",
+     "A campus tour",
+     "A new airport"
+    ]
+   },
+   {
+    "stem": "How much will a ticket cost after Friday?",
+    "opts": [
+     "Twenty dollars",
+     "Fifteen dollars",
+     "Forty dollars",
+     "Ten dollars"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   0
+  ],
+  "explain": [
+   "*The airport shuttle for winter break*. B — экзамены не упоминаются; C — экскурсии нет; D — аэропорт уже есть",
+   "*After that, tickets will cost twenty dollars*. B — до пятницы; C — 40 — минуты; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
   "id": "L-ANN-B-001",
   "type": "ANN",
   "task": "lan",
@@ -1080,6 +1188,114 @@
   ]
  },
  {
+  "id": "L-ANN-B-034",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-034",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-034.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F",
+  "words": 66,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Attention, students. The Red Cross will hold a blood drive in the student union this Thursday and Friday from ten to four. Each donation takes about forty-five minutes, including a short health check. Please eat a good meal and drink plenty of water beforehand. Donors will receive a free T-shirt and a snack. To schedule an appointment, visit the student union website, or just stop by."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the purpose of the announcement?",
+    "opts": [
+     "To announce a health class",
+     "To encourage students to donate blood",
+     "To sell T-shirts",
+     "To report a medical problem"
+    ]
+   },
+   {
+    "stem": "What does the speaker recommend donors do before donating?",
+    "opts": [
+     "Schedule a health check",
+     "Eat a good meal and drink water",
+     "Visit the website",
+     "Take a day off"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1
+  ],
+  "explain": [
+   "*blood drive*; призыв записаться. A — класса нет; C — футболка — подарок; D — проблемы нет",
+   "*eat a good meal and drink plenty of water beforehand*. A — проверка проходит на месте; C — запись — отдельное; D — не упоминается"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-ANN-B-035",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-035",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-035.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M2",
+  "words": 63,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "The student newspaper is holding a photography contest. Students may submit up to three photographs on the theme of campus life. The pictures must be taken this semester, and the winning entries will be printed in the spring issue. First prize is a two-hundred-dollar gift card for the campus bookstore. The deadline is November thirtieth, and entries should be emailed to the editor."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the announcement about?",
+    "opts": [
+     "A new student newspaper",
+     "A photography class",
+     "A photography contest",
+     "A gift card sale"
+    ]
+   },
+   {
+    "stem": "What does the speaker say about the photographs?",
+    "opts": [
+     "They must show the library",
+     "They must be printed in color",
+     "They must be sent by mail",
+     "They must be taken this semester"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   3
+  ],
+  "explain": [
+   "*photography contest*. A — газета уже есть; B — курса нет; D — карта — приз",
+   "*must be taken this semester*. A — не упоминается; B — не упоминается; C — по email"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
   "id": "L-ANN-C-003",
   "type": "ANN",
   "task": "lan",
@@ -1674,6 +1890,114 @@
   ]
  },
  {
+  "id": "L-ANN-C-036",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-036",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-036.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F",
+  "words": 78,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Beginning next semester, the university will change how tuition is paid. Instead of one large payment at the start of the term, students may now choose to pay in three installments. The first is due on the first day of classes, and the others one and two months later. A small fee of twenty-five dollars will apply to the installment plan. Students who prefer to pay everything at once may continue to do so without any extra charge."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is new about the tuition payment system?",
+    "opts": [
+     "Tuition will be lower",
+     "Payments will be due earlier",
+     "Students can pay in installments",
+     "Students must pay in cash"
+    ]
+   },
+   {
+    "stem": "What does the speaker imply about students who pay in full?",
+    "opts": [
+     "They will not be charged an additional fee",
+     "They will receive a discount",
+     "They must pay early",
+     "They can no longer choose their plan"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0
+  ],
+  "explain": [
+   "*may now choose to pay in three installments*. A — размер не меняется; B — сроки не раньше; D — способ не упоминается",
+   "*without any extra charge*. B — скидки нет; C — срок прежний; D — выбор остаётся"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-ANN-C-037",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-037",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-037.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M",
+  "words": 81,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "This is a notice from the Office of Campus Safety. On Wednesday at noon, the university will test its emergency alert system. Students and staff will receive a text message, an email, and an audible siren across campus. There is no real emergency, and no action is required. The test is part of an annual check to ensure that alerts are delivered quickly. Anyone who does not receive a message should update their contact information on the safety website by Friday."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why is the university conducting the test?",
+    "opts": [
+     "To respond to an emergency",
+     "To train new security staff",
+     "To make sure alerts are delivered quickly",
+     "To replace the old siren"
+    ]
+   },
+   {
+    "stem": "What should students do if they do not receive a message?",
+    "opts": [
+     "Update their contact information online",
+     "Call the Office of Campus Safety",
+     "Visit the office in person",
+     "Wait for another test"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0
+  ],
+  "explain": [
+   "*annual check to ensure that alerts are delivered quickly*. A — срочности нет; B — не упоминается; D — не упоминается",
+   "*update their contact information on the safety website*. B — звонок не упоминается; C — визит не упоминается; D — не упоминается"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Method"
+  ]
+ },
+ {
   "id": "L-CONV-A-012",
   "type": "CONV",
   "task": "lco",
@@ -2177,6 +2501,154 @@
   "qtypes": [
    "Main Idea",
    "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-A-037",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-037",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-037.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M, Woman = TOEFL AU-F",
+  "words": 57,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a recreation center worker."
+   },
+   {
+    "who": "Man",
+    "text": "Hi, I'd like to rent a bike for the weekend."
+   },
+   {
+    "who": "Woman",
+    "text": "Sure. It's five dollars a day. Do you have a student ID?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes, here you are."
+   },
+   {
+    "who": "Woman",
+    "text": "Thanks. The bikes come with a helmet and a lock. Please return it by six on Sunday."
+   },
+   {
+    "who": "Man",
+    "text": "Okay. Can I take it off campus?"
+   },
+   {
+    "who": "Woman",
+    "text": "Yes, but please stay on bike paths."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What does the man want to do?",
+    "opts": [
+     "Rent a bike",
+     "Buy a helmet",
+     "Join a bike club",
+     "Fix a bike"
+    ]
+   },
+   {
+    "stem": "When must the man return the bike?",
+    "opts": [
+     "By five on Saturday",
+     "By six on Sunday",
+     "On Monday morning",
+     "By noon on Sunday"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   1
+  ],
+  "explain": [
+   "*I'd like to rent a bike*. B — шлем идёт в комплекте; C — клуб не упоминается; D — ремонт не упоминается",
+   "*return it by six on Sunday*. A — не упоминается; C — не упоминается; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-038",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-038",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-038.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F, Man = TOEFL UK-M2",
+  "words": 51,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Woman",
+    "text": "Hi. I saw your poster for the chess club. When do you meet?"
+   },
+   {
+    "who": "Man",
+    "text": "Every Wednesday at seven, in the student center. Do you play?"
+   },
+   {
+    "who": "Woman",
+    "text": "A little. I'm still learning."
+   },
+   {
+    "who": "Man",
+    "text": "That's fine. We have beginners and advanced players."
+   },
+   {
+    "who": "Woman",
+    "text": "Great. Do I have to pay anything?"
+   },
+   {
+    "who": "Man",
+    "text": "No, it's free. Just come on Wednesday."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the woman talk to the man?",
+    "opts": [
+     "She wants to buy a chess set",
+     "She wants to teach chess",
+     "She is interested in a chess club",
+     "She lost her poster"
+    ]
+   },
+   {
+    "stem": "What does the man say about the club?",
+    "opts": [
+     "It is only for advanced players",
+     "It is free",
+     "It meets on weekends",
+     "It requires a fee"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   1
+  ],
+  "explain": [
+   "*I saw your poster for the chess club*. A — не покупает; B — не учит; D — не терялся",
+   "*No, it's free*. A — есть и новички; C — по средам; D — бесплатно"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
   ]
  },
  {
@@ -3504,6 +3976,154 @@
   ]
  },
  {
+  "id": "L-CONV-B-039",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-039",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-039.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M, Woman = TOEFL CA-F",
+  "words": 68,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a professor."
+   },
+   {
+    "who": "Man",
+    "text": "Professor Hill, I need to miss next Tuesday's class. My basketball team has an away game."
+   },
+   {
+    "who": "Woman",
+    "text": "Thanks for telling me in advance. Will you also miss the quiz?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes, it's on the same day. Could I take it early?"
+   },
+   {
+    "who": "Woman",
+    "text": "You can take it Monday afternoon in my office. I'll also post the lecture slides online."
+   },
+   {
+    "who": "Man",
+    "text": "That's great. Thank you."
+   },
+   {
+    "who": "Woman",
+    "text": "No problem. Just tell your other professors as well."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why will the man miss class?",
+    "opts": [
+     "He is sick",
+     "He has a job interview",
+     "He is traveling home",
+     "His team has a game"
+    ]
+   },
+   {
+    "stem": "What does the professor offer to do?",
+    "opts": [
+     "Cancel the quiz",
+     "Give him extra credit",
+     "Record the lecture",
+     "Let him take the quiz early"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   3
+  ],
+  "explain": [
+   "*My basketball team has an away game*. A — не болен; B — не упоминается; C — не упоминается",
+   "*take it Monday afternoon in my office*. A — не отменяет; B — не упоминается; C — она выложит слайды, не запись"
+  ],
+  "qtypes": [
+   "Factual",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-CONV-B-040",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-040",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-040.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F3, Man = TOEFL US-M",
+  "words": 74,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Woman",
+    "text": "For our art history assignment, I was thinking we could visit the city museum."
+   },
+   {
+    "who": "Man",
+    "text": "Good idea. Is it free for students?"
+   },
+   {
+    "who": "Woman",
+    "text": "On Fridays it is. The rest of the week it's twelve dollars."
+   },
+   {
+    "who": "Man",
+    "text": "Then Friday it is. But the museum closes at five, and I have class until three."
+   },
+   {
+    "who": "Woman",
+    "text": "That's enough time if we go straight there. The bus takes only fifteen minutes."
+   },
+   {
+    "who": "Man",
+    "text": "All right. Let's meet at the bus stop at three fifteen."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why do the speakers decide to go on Friday?",
+    "opts": [
+     "Admission is free for students",
+     "The museum is less crowded",
+     "The bus runs more often",
+     "They have no class that day"
+    ]
+   },
+   {
+    "stem": "What will the speakers probably do on Friday?",
+    "opts": [
+     "Meet at the museum entrance at five",
+     "Skip class to go earlier",
+     "Meet at the bus stop after class",
+     "Take a taxi to the museum"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   2
+  ],
+  "explain": [
+   "*On Fridays it is* [free]. B — не упоминается; C — не упоминается; D — у мужчины занятия до трёх",
+   "*Let's meet at the bus stop at three fifteen*. A — в пять музей закрывается; B — они не пропускают; D — автобус"
+  ],
+  "qtypes": [
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
   "id": "L-CONV-C-003",
   "type": "CONV",
   "task": "lco",
@@ -4319,6 +4939,154 @@
   "qtypes": [
    "Factual",
    "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-C-041",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-041",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-041.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F2, Man = TOEFL CA-M2",
+  "words": 87,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a librarian."
+   },
+   {
+    "who": "Woman",
+    "text": "I'm writing a paper on the history of public transportation, but most of the websites I found seem unreliable."
+   },
+   {
+    "who": "Man",
+    "text": "That's a common problem. Have you tried our academic databases?"
+   },
+   {
+    "who": "Woman",
+    "text": "I'm not sure how to use them. They look complicated."
+   },
+   {
+    "who": "Man",
+    "text": "They're easier than they look. Let me show you. You can limit your search to peer-reviewed articles, which are checked by experts."
+   },
+   {
+    "who": "Woman",
+    "text": "That would help a lot. Can I access them from my dorm?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes, with your student login. I'll also give you a guide to citing sources."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What problem does the woman describe?",
+    "opts": [
+     "She cannot log in to the library",
+     "She cannot find reliable sources online",
+     "She does not know her topic",
+     "She has no time to write"
+    ]
+   },
+   {
+    "stem": "Why does the librarian mention peer-reviewed articles?",
+    "opts": [
+     "To suggest changing the topic",
+     "To show that databases are expensive",
+     "To explain how to find trustworthy sources",
+     "To describe how to cite sources"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2
+  ],
+  "explain": [
+   "*most of the websites I found seem unreliable*. A — доступ есть; C — тема известна; D — время не упоминается",
+   "*checked by experts*. A — тема остаётся; B — платность не упоминается; D — цитирование — отдельно"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-CONV-C-042",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-042",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-042.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2, Woman = TOEFL AU-F",
+  "words": 86,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and an academic advisor."
+   },
+   {
+    "who": "Man",
+    "text": "I'd like to add a second major in economics, but I'm worried about the workload."
+   },
+   {
+    "who": "Woman",
+    "text": "It's doable, but you'd have to plan carefully. Most students need an extra semester."
+   },
+   {
+    "who": "Man",
+    "text": "I was hoping to graduate on time. My scholarship ends after eight semesters."
+   },
+   {
+    "who": "Woman",
+    "text": "In that case, consider a minor instead. It requires only five courses, and you'd still have a recognized specialization."
+   },
+   {
+    "who": "Man",
+    "text": "That's a good compromise. Would the courses overlap with my current major?"
+   },
+   {
+    "who": "Woman",
+    "text": "Two of them would. Let me print the list so you can compare."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why is the man concerned about adding a second major?",
+    "opts": [
+     "His scholarship may end before he finishes",
+     "Economics is too difficult",
+     "He may not be accepted",
+     "The courses are too expensive"
+    ]
+   },
+   {
+    "stem": "What can be inferred about the advisor's opinion of a minor?",
+    "opts": [
+     "She believes it has no value",
+     "She thinks it requires more courses than a major",
+     "She prefers it to every other plan",
+     "She thinks it is a practical option for him"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   3
+  ],
+  "explain": [
+   "*My scholarship ends after eight semesters*. B — не упоминается; C — не упоминается; D — не упоминается",
+   "*consider a minor instead … recognized specialization*. A — ценность признана; B — 5 курсов — меньше; C — не «каждого»"
+  ],
+  "qtypes": [
+   "Factual",
+   "Attitude"
   ]
  },
  {
@@ -5760,6 +6528,310 @@
   ],
   "explain": [
    "- B — место, не длительность\n- C — *Yes* не к «how long»\n- D — день, не длительность"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-121",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-121",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-121.mp3",
+  "voices": "Man = TOEFL AU-M3",
+  "words": 6,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "How much do I owe you?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "The money is in my bag.",
+     "Yes, I have a lot.",
+     "Five minutes ago.",
+     "Just five dollars."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — не называет сумму\n- B — *Yes* не к «how much»\n- C — время, не сумма"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-122",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-122",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-122.mp3",
+  "voices": "Man = TOEFL US-M2",
+  "words": 4,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Which bus goes downtown?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Take number twelve.",
+     "Yes, it goes there.",
+     "The downtown is big.",
+     "I took the bus yesterday."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — *Yes* не к «which»\n- C — описание, не номер\n- D — прошедшее время"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-124",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-124",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-124.mp3",
+  "voices": "Man = TOEFL UK-M2",
+  "words": 3,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "What's for lunch?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "I lunch at noon.",
+     "Yes, it's for me.",
+     "Chicken sandwiches, I think.",
+     "The lunch is on the table."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — время, не меню\n- B — *Yes* не к «what»\n- D — место, не меню"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-129",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-129",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-129.mp3",
+  "voices": "Woman = TOEFL AU-F",
+  "words": 6,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Are you coming to the party?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "I'd like to, but I have to work.",
+     "Yes, the party is coming.",
+     "I came to work late.",
+     "The party is at the park."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — бессмыслица\n- C — прошедшее время\n- D — место, не ответ"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-130",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-130",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-130.mp3",
+  "voices": "Man = TOEFL US-M2",
+  "words": 4,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "How was your trip?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I took a trip.",
+     "The trip is on Monday.",
+     "Great. We saw a lot of mountains.",
+     "My ship was very big."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — *Yes* не к «how»\n- B — будущее время\n- D — созвучие *trip/ship*"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-131",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-131",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-131.mp3",
+  "voices": "Woman = TOEFL UK-F2",
+  "words": 6,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Do you know my phone number?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "No, but I can look it up.",
+     "Yes, my phone is new.",
+     "The number is seven.",
+     "I know a number of people."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — не отвечает\n- C — бессмыслица\n- D — *number* в другом смысле"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-134",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-134",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-134.mp3",
+  "voices": "Woman = TOEFL UK-F",
+  "words": 6,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Could you turn off the light?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Sure. Is it too bright?",
+     "The light is on the wall.",
+     "Yes, I turned it left.",
+     "No, it's turned off."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — описание, не реакция\n- C — бессмыслица\n- D — не по смыслу"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-A-140",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "A",
+  "short": "LCR-140",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-140.mp3",
+  "voices": "Woman = TOEFL AU-F",
+  "words": 6,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Is there a bakery around here?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "I baked a cake last week.",
+     "The bakery is very hot.",
+     "Yes, I'm around here.",
+     "Yes, there's a good one on Pine Street."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — прошедшее время, не ответ\n- B — описание вместо ответа\n- C — бессмыслица"
   ],
   "qtypes": [
    "Choose a Response"
@@ -7628,6 +8700,310 @@
   ]
  },
  {
+  "id": "L-LCR-B-126",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-126",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-126.mp3",
+  "voices": "Man = TOEFL US-M",
+  "words": 7,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "How come you didn't take the shuttle?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I took it.",
+     "The shuttle is blue.",
+     "Come tomorrow.",
+     "I missed it by a minute."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — противоречит вопросу\n- B — цвет, не причина\n- C — созвучие *come*"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-127",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-127",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-127.mp3",
+  "voices": "Man = TOEFL AU-M2",
+  "words": 10,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Did you hear that the café is closing next month?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, the café is closed.",
+     "No way. Where will we study now?",
+     "I heard it last month.",
+     "The month is almost over."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — не реакция на новость\n- C — другой срок\n- D — не по теме"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-137",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-137",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-137.mp3",
+  "voices": "Woman = TOEFL CA-F2",
+  "words": 7,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "What's the deadline for the lab report?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, the lab is open.",
+     "Next Friday, but the draft is due Monday.",
+     "I reported it yesterday.",
+     "The line is long."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — *Yes* не к «what»\n- C — *report* в другом смысле\n- D — не по теме"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-138",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-138",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-138.mp3",
+  "voices": "Man = TOEFL US-M2",
+  "words": 9,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Have you ever taken a class with Professor Gray?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Once. Her exams are tough but fair.",
+     "Yes, I took the gray one.",
+     "Professor is a class.",
+     "I graded it last year."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — игра слов *gray*\n- C — бессмыслица\n- D — другое действие"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-139",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-139",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-139.mp3",
+  "voices": "Woman = TOEFL UK-F2",
+  "words": 8,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Isn't this the room where the meeting is?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, the room is big.",
+     "I think so. Let me check the schedule.",
+     "We met in another meeting.",
+     "The schedule is a room."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — не отвечает\n- C — повтор слов\n- D — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-142",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-142",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-142.mp3",
+  "voices": "Woman = TOEFL UK-F",
+  "words": 9,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Do you think I should apply for the scholarship?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Definitely. You have nothing to lose.",
+     "Yes, I think about it.",
+     "I applied last year.",
+     "The scholarship office closes at five."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — не даёт совет\n- C — прошедшее время\n- D — не отвечает на вопрос"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-143",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-143",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-143.mp3",
+  "voices": "Man = TOEFL CA-M2",
+  "words": 6,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "I can't find my keys anywhere."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I found them.",
+     "The key is in the lock.",
+     "Anywhere is a place.",
+     "Did you check your jacket pockets?"
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — не реакция\n- B — не помогает\n- C — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-B-144",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "B",
+  "short": "LCR-144",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-144.mp3",
+  "voices": "Woman = TOEFL US-F2",
+  "words": 10,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "Would you rather meet in the morning or the afternoon?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I'd meet you.",
+     "The morning was cold.",
+     "Afternoon works better for me.",
+     "I meet them every week."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — не выбирает\n- B — описание, не выбор\n- D — не по теме"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
   "id": "L-LCR-C-010",
   "type": "LCR",
   "task": "lcr",
@@ -8882,6 +10258,934 @@
   ]
  },
  {
+  "id": "L-LCR-C-123",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-123",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-123.mp3",
+  "voices": "Man = TOEFL CA-M2",
+  "words": 8,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "If only I had started the paper earlier."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I started the paper.",
+     "Well, there's still time to make it better.",
+     "Earlier is not later.",
+     "The paper is only a start."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — противоречит\n- C — не реакция\n- D — не реакция"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-125",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-125",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-125.mp3",
+  "voices": "Woman = TOEFL CA-F2",
+  "words": 12,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "It wouldn't kill them to answer their email once in a while."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Right? I've been waiting for a reply for a week.",
+     "Yes, they wouldn't die.",
+     "I answered them twice.",
+     "Mail is slower than e-mail."
+    ]
+   }
+  ],
+  "key": [
+   0
+  ],
+  "explain": [
+   "- B — буквальный смысл\n- C — не реакция\n- D — не реакция"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-128",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-128",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-128.mp3",
+  "voices": "Man = TOEFL UK-M",
+  "words": 11,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Few students seem to know the writing center offers free tutoring."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, few seem to be free.",
+     "The tutoring is writing.",
+     "I seem to know it.",
+     "I only found out last week myself."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — повтор без смысла\n- B — бессмыслица\n- C — противоречит *few*"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-132",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-132",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-132.mp3",
+  "voices": "Man = TOEFL CA-M",
+  "words": 12,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "The professor made it sound as if the exam would be easy."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, it sounded easy.",
+     "That's what I thought, too, until I saw question one.",
+     "The exam made a sound.",
+     "I thought of the professor."
+    ]
+   }
+  ],
+  "key": [
+   1
+  ],
+  "explain": [
+   "- A — повтор без разворота\n- C — *sound* в другом смысле\n- D — не реакция"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-133",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-133",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-133.mp3",
+  "voices": "Man = TOEFL AU-M",
+  "words": 10,
+  "transcript": [
+   {
+    "who": "Man",
+    "text": "Do you happen to know if the cafeteria accepts cards?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, the cards are happening.",
+     "I know a card game.",
+     "The cafeteria is accepted.",
+     "I'm pretty sure it does, but let me check."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — бессмыслица\n- B — другой смысл *cards*\n- C — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-135",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-135",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-135.mp3",
+  "voices": "Woman = TOEFL CA-F",
+  "words": 9,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "You'd have loved the concert if you had come."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I loved it.",
+     "The concert was not coming.",
+     "I wish I had. Something came up at work.",
+     "I come from work."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — противоречит условию\n- B — бессмыслица\n- D — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-136",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-136",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-136.mp3",
+  "voices": "Woman = TOEFL US-F2",
+  "words": 10,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "I've been meaning to ask you about the study guide."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I mean to ask.",
+     "The guide is asked.",
+     "I've been to the study.",
+     "Go ahead. I have it right here."
+    ]
+   }
+  ],
+  "key": [
+   3
+  ],
+  "explain": [
+   "- A — повтор без смысла\n- B — бессмыслица\n- C — другой смысл *study*"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-LCR-C-141",
+  "type": "LCR",
+  "task": "lcr",
+  "level": "C",
+  "short": "LCR-141",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/LCR-141.mp3",
+  "voices": "Woman = TOEFL AU-F2",
+  "words": 12,
+  "transcript": [
+   {
+    "who": "Woman",
+    "text": "I haven't decided whether to live on or off campus next year."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Choose the best response.",
+    "opts": [
+     "Yes, I decided on campus.",
+     "Next year is a long time.",
+     "Well, how important is having your own kitchen?",
+     "Campus is off the road."
+    ]
+   }
+  ],
+  "key": [
+   2
+  ],
+  "explain": [
+   "- A — противоречит\n- B — не реагирует\n- D — бессмыслица"
+  ],
+  "qtypes": [
+   "Choose a Response"
+  ]
+ },
+ {
+  "id": "L-TALK-A-024",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-024",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-024.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F3",
+  "words": 186,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an earth science class."
+   },
+   {
+    "who": "Woman",
+    "text": "Today we will talk about the water cycle. Water on Earth is always moving, and it never really disappears. This movement is very important for all living things, including people, animals, and plants. The cycle has four main steps. First, the Sun heats water in oceans, lakes, and rivers. The water turns into a gas called water vapor. This step is called evaporation. Plants also give off water vapor through their leaves. Second, the vapor rises into the sky, where the air is cold. There, it cools and turns back into tiny drops of water. This is called condensation, and the drops form clouds. Third, when the drops in the clouds grow big and heavy, they fall to the ground as rain, snow, or hail. This step is called precipitation. Fourth, the water collects in rivers, lakes, and under the ground. Then the cycle starts again. Notice that the same water has been used for millions of years. The water you drank this morning may once have been in a dinosaur's lake. For homework, please draw the water cycle and label each of the four steps."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How clouds are used in weather reports",
+     "How water moves around the Earth",
+     "Why oceans are salty",
+     "How plants grow"
+    ]
+   },
+   {
+    "stem": "What happens during condensation?",
+    "opts": [
+     "Water falls as rain",
+     "The Sun heats the ocean",
+     "Water collects under the ground",
+     "Water vapor turns into tiny drops of water"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention a dinosaur's lake?",
+    "opts": [
+     "To show that water has been used again and again",
+     "To explain how dinosaurs lived",
+     "To describe a lake in her town",
+     "To show that lakes are dangerous"
+    ]
+   },
+   {
+    "stem": "What will students probably do for homework?",
+    "opts": [
+     "Write a story about rain",
+     "Draw and label the steps of the water cycle",
+     "Measure rainfall at home",
+     "Read about dinosaurs"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   3,
+   0,
+   1
+  ],
+  "explain": [
+   "Круговорот воды. A — прогнозы не упоминаются; C — не упоминается; D — растения — лишь деталь",
+   "*cools and turns back into tiny drops*. A — это осадки; B — это испарение; C — это сбор",
+   "*the same water has been used for millions of years*. B — динозавры — пример; C — не упоминается; D — не упоминается",
+   "*draw the water cycle and label each of the four steps*. A — не просит; C — не просит; D — не просит"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-A-025",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-025",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-025.mp3",
+  "voices": "Narrator, Man = TOEFL US-M",
+  "words": 191,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an astronomy class."
+   },
+   {
+    "who": "Man",
+    "text": "Have you ever noticed that the Moon looks different from night to night? Sometimes it is a bright circle, and sometimes it is only a thin line. These changes are called the phases of the Moon. The Moon does not make its own light. It only reflects light from the Sun. At any time, half of the Moon is lit by the Sun. But as the Moon travels around the Earth, we see different parts of the lit half. It takes about twenty-nine days to go through all the phases. When the Moon is between the Earth and the Sun, we cannot see the lit side. This is called the new moon. About a week later, we see half of the lit side, which is called the first quarter. When the Earth is between the Moon and the Sun, we see the whole lit side. That is the full moon. Many people think the Earth's shadow causes the phases. This is not correct. The shadow only matters during a lunar eclipse, which is quite rare. Tonight, if the sky is clear, try to look at the Moon and name its phase."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main topic of the talk?",
+    "opts": [
+     "How the Moon was formed",
+     "Why the Moon appears to change shape",
+     "How eclipses happen",
+     "Why the Sun gives light"
+    ]
+   },
+   {
+    "stem": "According to the professor, what is a new moon?",
+    "opts": [
+     "The phase when the whole Moon is bright",
+     "The phase when we cannot see the lit side of the Moon",
+     "The phase when the Moon makes its own light",
+     "The phase seen during an eclipse"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention the Earth's shadow?",
+    "opts": [
+     "To explain how eclipses are photographed",
+     "To describe the first quarter",
+     "To correct a common mistake",
+     "To show how long the cycle takes"
+    ]
+   },
+   {
+    "stem": "What does the professor suggest students do tonight?",
+    "opts": [
+     "Take photographs of the Moon",
+     "Look for an eclipse",
+     "Calculate the length of the cycle",
+     "Observe the Moon and name its phase"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1,
+   2,
+   3
+  ],
+  "explain": [
+   "Фазы Луны. A — формирование не обсуждается; C — затмение — лишь поправка; D — Солнце — фон",
+   "*between the Earth and the Sun, we cannot see the lit side*. A — это полнолуние; C — Луна не светит сама; D — затмение — другое",
+   "*Many people think … This is not correct*. A — фото не упоминается; B — не по теме; D — цикл — другое",
+   "*try to look at the Moon and name its phase*. A — не предлагает; B — не предлагает; C — не предлагает"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-TALK-A-026",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-026",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-026.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F2",
+  "words": 186,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an environmental studies class."
+   },
+   {
+    "who": "Woman",
+    "text": "Let's talk about recycling paper. Every year, people use millions of tons of paper for books, boxes, and newspapers. Making paper from trees uses a lot of water and energy. Recycling is a better choice, and the process is simple. First, used paper is collected and taken to a factory. Workers sort it by type, because different kinds of paper need different treatment. Second, the paper is mixed with water in a large machine, which turns it into a soft, wet mixture called pulp. Third, the pulp is cleaned to remove ink, glue, and plastic. After that, the pulp is pressed flat and dried, and new paper is ready to use. One ton of recycled paper can save about seventeen trees. However, paper cannot be recycled forever. Each time, the fibers become shorter and weaker, so paper can usually be recycled only five to seven times. This is why we should also try to use less paper in the first place. Recycling also keeps old paper out of the trash, where it takes up space. Please bring a piece of used paper to our next class."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How paper is recycled",
+     "How trees are planted",
+     "How books are printed",
+     "Why newspapers are popular"
+    ]
+   },
+   {
+    "stem": "According to the professor, what is pulp?",
+    "opts": [
+     "A kind of ink",
+     "A machine in the factory",
+     "A soft, wet mixture of paper and water",
+     "A plastic that is removed"
+    ]
+   },
+   {
+    "stem": "Why does the professor say paper cannot be recycled forever?",
+    "opts": [
+     "The factories are too few",
+     "The ink cannot be removed",
+     "The fibers become shorter and weaker each time",
+     "People throw away too much paper"
+    ]
+   },
+   {
+    "stem": "What can be inferred about the professor's attitude?",
+    "opts": [
+     "She thinks recycling is useless",
+     "She prefers making paper from trees",
+     "She thinks using less paper is also important",
+     "She believes paper is always cheap"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   2,
+   2,
+   2
+  ],
+  "explain": [
+   "Процесс переработки бумаги. B — деревья — лишь аргумент; C — печать не обсуждается; D — газеты — пример",
+   "*a soft, wet mixture called pulp*. A — чернила удаляют; B — машина — другая; D — пластик удаляют",
+   "*the fibers become shorter and weaker*. A — не упоминается; B — чернила удаляют; D — не причина",
+   "*we should also try to use less paper in the first place*. A — противоположно; B — противоположно; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-TALK-A-027",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-027",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-027.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M2",
+  "words": 183,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a history class."
+   },
+   {
+    "who": "Man",
+    "text": "The pyramids of Egypt are among the most famous buildings in the world. The Great Pyramid of Giza was built more than four thousand five hundred years ago for a king named Khufu. It stood for almost four thousand years as the tallest building on Earth. How did people build it without modern machines? Historians believe that thousands of workers cut huge blocks of stone, often weighing more than two tons. They moved the blocks on wooden sleds across the sand. To make this easier, workers poured water on the sand in front of the sleds. Scientists have shown that wet sand is much less difficult to pull a sled over. For a long time, people believed that slaves built the pyramids. However, discoveries near Giza show that the workers were paid laborers, who lived in towns nearby and received bread, beer, and meat. They were proud of their work and even named their teams. The pyramid is still an amazing building today, and millions of tourists visit it every year. Next week we will discuss why the pharaohs wanted such large tombs."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the lecture mainly about?",
+    "opts": [
+     "Why the pharaohs lived in Giza",
+     "How stone is cut today",
+     "What Egyptian workers ate",
+     "How the Great Pyramid was built"
+    ]
+   },
+   {
+    "stem": "According to the professor, why did workers pour water on the sand?",
+    "opts": [
+     "To make it easier to pull the sleds",
+     "To keep the workers cool",
+     "To clean the stones",
+     "To make the stones heavier"
+    ]
+   },
+   {
+    "stem": "What did the discoveries near Giza show about the workers?",
+    "opts": [
+     "They were paid and lived in nearby towns",
+     "They were slaves from other countries",
+     "They worked for free",
+     "They lived inside the pyramid"
+    ]
+   },
+   {
+    "stem": "What can be inferred about the old belief that slaves built the pyramids?",
+    "opts": [
+     "It was based on written records",
+     "It is still accepted by historians",
+     "It explains how the stones were moved",
+     "New evidence shows that it was probably wrong"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0,
+   0,
+   3
+  ],
+  "explain": [
+   "Как строили пирамиду. A — будет на следующей неделе; B — не упоминается; C — еда — деталь",
+   "*wet sand is much less difficult to pull a sled over*. B — не упоминается; C — не упоминается; D — не упоминается",
+   "*paid laborers, who lived in towns nearby*. B — старое мнение; C — старое мнение; D — не упоминается",
+   "*For a long time, people believed… However, discoveries*. A — не упоминается; B — противоположно; C — не объясняет"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Method",
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-A-032",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-032",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-032.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F2",
+  "words": 188,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a biology class."
+   },
+   {
+    "who": "Woman",
+    "text": "Today I want to talk about honeybees and why they are so important. A honeybee lives in a large group called a colony, and one colony can have up to fifty thousand bees. Most of them are workers, and their job is to find food. Bees feed on nectar, a sweet liquid inside flowers, and on pollen, a fine yellow powder. While a bee visits a flower, some pollen sticks to its furry body. When the bee flies to the next flower, the pollen falls off. This is called pollination, and it is how many plants make seeds and fruit. Apples, almonds, and blueberries all depend on bees. In fact, about one third of the food we eat needs pollination. Bees also make honey. They store nectar in wax cells and fan it with their wings until it becomes thick. Sadly, in many countries the number of bees is falling. Farmers use chemicals that hurt them, and cities have fewer flowers. You can help bees by planting flowers on your balcony or in your garden. Next time, we will look at how bees communicate with a special dance."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How bees build their homes",
+     "How farmers make honey",
+     "Why flowers have bright colors",
+     "Why honeybees are important"
+    ]
+   },
+   {
+    "stem": "According to the professor, what is pollination?",
+    "opts": [
+     "Bees drinking nectar",
+     "Pollen moving from one flower to another",
+     "Bees making wax cells",
+     "Plants growing without seeds"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention apples, almonds, and blueberries?",
+    "opts": [
+     "To explain what bees like to eat",
+     "To show that many foods depend on bees",
+     "To describe the food on the farm",
+     "To compare different kinds of honey"
+    ]
+   },
+   {
+    "stem": "What does the professor suggest people can do to help bees?",
+    "opts": [
+     "Stop eating honey",
+     "Move bees to cities",
+     "Plant flowers",
+     "Use more chemicals"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1,
+   1,
+   2
+  ],
+  "explain": [
+   "Пчёлы и их значение. A — дома — лишь деталь; B — мёд делают пчёлы, а не фермеры; C — цвет цветов не обсуждается",
+   "*the pollen falls off* на следующем цветке — опыление. A — это питание, а не опыление; C — воск — для мёда; D — опыление даёт семена",
+   "*all depend on bees*. A — пчёлы едят нектар и пыльцу; C — ферма не описывается; D — сравнения мёда нет",
+   "*planting flowers on your balcony or in your garden*. A — не предлагает; B — в городах мало цветов; D — химия вредит пчёлам"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-TALK-A-033",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-033",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-033.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2",
+  "words": 196,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a physics class."
+   },
+   {
+    "who": "Man",
+    "text": "Have you ever used a magnet to pick up a paper clip? A magnet is an object that pulls some metals, such as iron, toward it. Every magnet has two ends, called poles, a north pole and a south pole. Opposite poles attract each other, but the same poles push each other away. Try this at home with two magnets and you will feel it. Now, the Earth itself is like a giant magnet. Deep inside the planet, hot liquid metal moves around, and this creates a magnetic field that reaches far into space. A compass uses this field. Inside a compass there is a small magnetic needle that can turn freely. The needle lines up with the Earth's field, so one end always points north. For hundreds of years, sailors used compasses to find their way across the sea when they could not see land. Today we have phones with maps, but many of them still contain a tiny compass. Some animals, such as birds and sea turtles, can also sense the Earth's magnetic field and use it to travel long distances. For our next class, please bring a small magnet and a paper clip."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the lecture mainly about?",
+    "opts": [
+     "How magnets work and how a compass uses the Earth's magnetism",
+     "How sailors built their ships",
+     "How phones show maps",
+     "How animals travel long distances"
+    ]
+   },
+   {
+    "stem": "According to the professor, what happens when two same poles are brought together?",
+    "opts": [
+     "They pull each other closer",
+     "They push each other away",
+     "They lose their magnetism",
+     "They turn into opposite poles"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention sailors?",
+    "opts": [
+     "To show how compasses were used in the past",
+     "To explain why the Earth is a magnet",
+     "To describe how needles are made",
+     "To say that sailors discovered magnets"
+    ]
+   },
+   {
+    "stem": "According to the professor, why does the needle of a compass point north?",
+    "opts": [
+     "It lines up with the Earth's magnetic field",
+     "It is pulled by the stars",
+     "It is attracted by the sea",
+     "It is controlled by hot metal inside the compass"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   1,
+   0,
+   0
+  ],
+  "explain": [
+   "Магниты и компас. B — корабли не обсуждаются; C — карты в телефонах — лишь упоминание; D — животные — лишь деталь",
+   "*the same poles push each other away*. A — так ведут себя разные полюса; C — не упоминается; D — не упоминается",
+   "*sailors used compasses to find their way across the sea*. B — причина — жидкий металл внутри Земли; C — изготовление не описывается; D — открытие не приписывается морякам",
+   "*The needle lines up with the Earth's field*. B — звёзды не упоминаются; C — море не упоминается; D — горячий металл — внутри планеты"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-TALK-A-034",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-034",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-034.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F",
+  "words": 204,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a nutrition class."
+   },
+   {
+    "who": "Woman",
+    "text": "Today's topic is vitamins. Vitamins are small substances that our bodies need to stay healthy, but our bodies cannot make most of them. This means we must get them from food. There are thirteen important vitamins, and each one has its own job. For example, vitamin C helps the body heal cuts and fight colds. You can find it in oranges, lemons, and peppers. Vitamin A helps us see in dim light, and you can get it from carrots and sweet potatoes. Vitamin D is special, because the skin makes it when we spend time in the sun. It helps our bones stay strong. If a person does not get enough of a vitamin, they can become ill. A long time ago, sailors on long trips ate no fresh fruit and often developed a disease called scurvy. Their gums bled and they felt very weak. Later, doctors discovered that lemons and limes could cure it, because they contain vitamin C. Today most people can get all the vitamins they need from a varied diet. Many people take pills, but doctors say that eating different kinds of fresh food is usually better. Please write down everything you ate yesterday and we will check it together."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How doctors treat serious diseases",
+     "Why sailors travel far",
+     "How vitamin pills are made",
+     "Why the body needs vitamins and where to get them"
+    ]
+   },
+   {
+    "stem": "According to the professor, how does the body get vitamin D?",
+    "opts": [
+     "From carrots and sweet potatoes",
+     "From lemons and limes",
+     "The skin makes it in the sun",
+     "From vitamin pills only"
+    ]
+   },
+   {
+    "stem": "Why does the professor tell the story of the sailors?",
+    "opts": [
+     "To explain how ships were built",
+     "To prove that fruit is expensive",
+     "To describe a new medicine",
+     "To show that missing a vitamin can cause illness"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about vitamin pills?",
+    "opts": [
+     "Everyone must take them",
+     "Fresh food is usually a better choice",
+     "They are dangerous for most people",
+     "They contain all thirteen vitamins"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   2,
+   3,
+   1
+  ],
+  "explain": [
+   "Витамины и их источники. A — болезни — лишь пример; B — моряки — лишь пример; C — таблетки не описываются",
+   "*the skin makes it when we spend time in the sun*. A — это витамин A; B — это витамин C; D — таблетки не обязательны",
+   "*scurvy… lemons and limes could cure it*. A — корабли не обсуждаются; B — цена не упоминается; C — лекарство давно известно",
+   "*eating different kinds of fresh food is usually better*. A — не обязательно; C — не говорится, что опасны; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-TALK-A-035",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-035",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-035.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M2",
+  "words": 200,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a geography class."
+   },
+   {
+    "who": "Man",
+    "text": "A glacier is a huge river of ice that moves very slowly over the land. Glaciers cover about ten percent of the Earth's land, mostly near the poles and high in the mountains. How does a glacier begin? In cold places, more snow falls in winter than melts in summer. Year after year, the snow piles up. The weight of the new snow presses on the old snow and slowly turns it into hard ice. When the ice becomes thick enough, it starts to move downhill because of gravity. Most glaciers move only a few centimeters a day, but some move several meters. As a glacier moves, it carries rocks and scrapes the ground beneath it. Over thousands of years, this can cut deep valleys, like the ones you can see in Switzerland and Norway. Glaciers are also an important source of fresh water. In summer, the melting ice feeds rivers that millions of people use. Unfortunately, in recent years many glaciers have become smaller because the climate is getting warmer. Scientists measure them every year to see how fast they are changing. Next week, we will look at some photographs of the same glacier taken one hundred years apart."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the lecture mainly about?",
+    "opts": [
+     "How glaciers form and move",
+     "Why the climate is changing",
+     "How rivers cut valleys",
+     "Where people find fresh water"
+    ]
+   },
+   {
+    "stem": "According to the professor, why does the snow turn into ice?",
+    "opts": [
+     "The weight of new snow presses on the old snow",
+     "The Sun melts it every summer",
+     "Strong winds make it harder",
+     "It is covered by rocks"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention Switzerland and Norway?",
+    "opts": [
+     "To show where glaciers are growing",
+     "To explain where most people live",
+     "To name countries with the most snow",
+     "To give examples of valleys cut by glaciers"
+    ]
+   },
+   {
+    "stem": "What will students probably do next week?",
+    "opts": [
+     "Measure a glacier themselves",
+     "Visit a river in the mountains",
+     "Write about the climate",
+     "Look at old and new photographs of a glacier"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   0,
+   3,
+   3
+  ],
+  "explain": [
+   "Образование и движение ледников. B — климат — лишь деталь; C — долины режет ледник; D — вода — лишь деталь",
+   "*The weight of the new snow presses on the old snow*. B — тает меньше, чем выпадает; C — ветер не упоминается; D — камни переносит ледник",
+   "*cut deep valleys, like the ones you can see in Switzerland and Norway*. A — ледники там не растут; B — население не обсуждается; C — снег не сравнивается",
+   "*look at some photographs of the same glacier taken one hundred years apart*. A — измеряют учёные; B — поездка не планируется; C — письмо не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
   "id": "L-TALK-B-001",
   "type": "TALK",
   "task": "lat",
@@ -9736,6 +12040,240 @@
    "Main Idea",
    "Factual",
    "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-B-028",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-028",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-028.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F",
+  "words": 189,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an earth science class."
+   },
+   {
+    "who": "Woman",
+    "text": "Coral reefs cover less than one percent of the ocean floor, yet they are home to about a quarter of all marine species. That is why scientists call them the rainforests of the sea. What exactly is a coral reef? It is a structure built by tiny animals called coral polyps. Each polyp makes a hard skeleton of limestone around itself. When polyps die, their skeletons remain, and new polyps grow on top. Over thousands of years, this process creates huge reefs, such as the Great Barrier Reef in Australia. Corals have a partnership with algae, tiny plants that live inside them. The algae use sunlight to make food and share it with the coral, and in return, the coral gives them shelter. This is why reefs grow only in clear, shallow water, where sunlight can reach. The partnership is also fragile. If the water gets too warm, the coral pushes out the algae. The coral turns white, which is called bleaching, and it may die. Rising ocean temperatures have caused many bleaching events in recent decades, and that is why reefs are a major concern for scientists today."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the professor call coral reefs \"the rainforests of the sea\"?",
+    "opts": [
+     "They support a large number of species",
+     "They grow in warm, wet places",
+     "They are the largest structures on Earth",
+     "They produce most of the world's oxygen"
+    ]
+   },
+   {
+    "stem": "According to the professor, how do coral reefs grow?",
+    "opts": [
+     "Algae build limestone walls",
+     "Waves pile up sand and rocks",
+     "Coral seeds float to the surface",
+     "New polyps grow on the skeletons of dead ones"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about coral reefs in deep water?",
+    "opts": [
+     "They are larger than shallow reefs",
+     "They are more protected from warming",
+     "They are home to more species",
+     "They are unlikely because algae need sunlight"
+    ]
+   },
+   {
+    "stem": "What is the professor's attitude toward coral bleaching?",
+    "opts": [
+     "Indifferent",
+     "Amused",
+     "Concerned",
+     "Doubtful"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   3,
+   3,
+   2
+  ],
+  "explain": [
+   "*home to about a quarter of all marine species*. B — не причина; C — не утверждается; D — не упоминается",
+   "*new polyps grow on top*. A — водоросли дают пищу; B — не упоминается; C — не упоминается",
+   "*grow only in clear, shallow water, where sunlight can reach*. A — не упоминается; B — не упоминается; C — не упоминается",
+   "*a major concern for scientists today*. A — не безразлична; B — не смешно; D — сомнений нет"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Factual",
+   "Inference",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-TALK-B-029",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-029",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-029.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M",
+  "words": 195,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a history of technology class."
+   },
+   {
+    "who": "Man",
+    "text": "In eighteen seventy-six, a teacher of deaf students named Alexander Graham Bell was awarded a patent for the telephone. His idea was to send the human voice over an electric wire. Before that, the fastest way to send a message was the telegraph, which could only send clicks in a code. Bell's invention was different. When a person speaks into the device, the sound makes a thin metal plate move. This movement changes an electric current, which travels along a wire to another device. There, the process works in reverse, and the current is turned back into sound. Interestingly, another inventor, Elisha Gray, filed a similar patent on the very same day. The two men argued about it in court, and Bell won. At first, many people did not see how useful the telephone would be. A famous company that could have bought the patent said it was only a toy. But within twenty years, there were hundreds of thousands of telephones in the United States. Today we carry a phone in our pocket, and it can do far more than carry a voice, and we rarely think about how remarkable this idea once was."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What was different about Bell's invention compared with the telegraph?",
+    "opts": [
+     "It used no electricity",
+     "It was cheaper to build",
+     "It sent messages in code",
+     "It could send the human voice"
+    ]
+   },
+   {
+    "stem": "According to the professor, what happens inside the telephone when a person speaks?",
+    "opts": [
+     "A wire records the voice",
+     "Sound moves a metal plate, which changes an electric current",
+     "A code is sent through clicks",
+     "A battery turns sound into light"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention Elisha Gray?",
+    "opts": [
+     "To explain who invented the telegraph",
+     "To show that another inventor filed a similar patent",
+     "To show that Bell worked alone",
+     "To describe a telephone company"
+    ]
+   },
+   {
+    "stem": "What can be inferred about the company that called the telephone a toy?",
+    "opts": [
+     "It built the first telephones",
+     "It underestimated the invention",
+     "It won the court case",
+     "It sold telegraph machines"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1,
+   1,
+   1
+  ],
+  "explain": [
+   "*send the human voice over an electric wire*. A — электричество нужно; B — цена не упоминается; C — код — у телеграфа",
+   "*the sound makes a thin metal plate move. This movement changes an electric current*. A — не записывает; C — это телеграф; D — не упоминается",
+   "*filed a similar patent on the very same day*. A — не упоминается; C — противоположно; D — не упоминается",
+   "*could have bought the patent said it was only a toy*; позже телефонов сотни тысяч. A — не упоминается; C — выиграл Белл; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Method",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-B-030",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-030",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-030.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F2",
+  "words": 177,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a biology class."
+   },
+   {
+    "who": "Woman",
+    "text": "Why do doctors give vaccines to healthy people? To understand this, we first need to look at how the immune system works. When a virus enters your body, special cells recognize it as a foreign invader. They produce proteins called antibodies, which attach to the virus and help destroy it. The first time you meet a virus, this takes several days, and you may get sick in the meantime. However, the immune system also keeps memory cells, which remember the virus for years. If the same virus returns, the memory cells react quickly, and the infection is stopped early. A vaccine uses this memory system. It contains a harmless piece of a virus, or a weakened version, which cannot make you seriously ill. Your body reacts to it just as it would to the real thing and builds memory cells. As a result, when you meet the actual virus, you are already prepared. When many people in a community are vaccinated, it is difficult for a virus to spread, which also protects people who cannot be vaccinated."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the lecture mainly about?",
+    "opts": [
+     "How vaccines prepare the immune system",
+     "How viruses reproduce",
+     "Why some people get sick more often",
+     "How antibodies are made in a laboratory"
+    ]
+   },
+   {
+    "stem": "According to the professor, what do memory cells do?",
+    "opts": [
+     "Destroy the vaccine",
+     "Produce the virus",
+     "Make people sick",
+     "Remember a virus and react quickly if it returns"
+    ]
+   },
+   {
+    "stem": "Why does the professor say that a vaccine cannot make you seriously ill?",
+    "opts": [
+     "It contains antibodies",
+     "It is taken only by healthy people",
+     "It is made from memory cells",
+     "It contains only a harmless or weakened part of a virus"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about vaccinating many people in a community?",
+    "opts": [
+     "It can protect people who are not vaccinated",
+     "It makes the vaccine stronger",
+     "It is unnecessary for most viruses",
+     "It prevents antibodies from forming"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   3,
+   3,
+   0
+  ],
+  "explain": [
+   "Вакцина использует иммунную память. B — размножение не обсуждается; C — не обсуждается; D — не обсуждается",
+   "*remember the virus for years… react quickly*. A — не упоминается; B — не упоминается; C — не упоминается",
+   "*a harmless piece of a virus, or a weakened version*. A — вакцина запускает их выработку; B — не причина; C — не упоминается",
+   "*also protects people who cannot be vaccinated*. B — не упоминается; C — не утверждается; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Method",
    "Inference"
   ]
  },
@@ -10673,6 +13211,240 @@
    "Factual",
    "Method",
    "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-C-031",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-031",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-031.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M3",
+  "words": 191,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an economics class."
+   },
+   {
+    "who": "Man",
+    "text": "Imagine that you and a partner are arrested for a crime and questioned in separate rooms. The police offer each of you the same deal. If you confess and your partner stays silent, you go free, and your partner gets ten years. If both of you stay silent, you each get one year. If both confess, you each get five years. What should you do? This is the prisoner's dilemma, a classic example from game theory. Whatever your partner does, you are better off confessing. If your partner is silent, you go free instead of getting a year. If your partner confesses, you get five years instead of ten. But your partner reasons the same way, so both of you confess and get five years, which is worse than the one year you would have received by staying silent. The dilemma shows that individual self-interest can lead to a poor result for everyone. Economists use it to explain situations such as price wars between companies, or countries failing to reduce pollution. Notice, though, that when people interact repeatedly, cooperation becomes much more likely, because they can reward trust and punish betrayal."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main point of the lecture?",
+    "opts": [
+     "Criminals usually confess to the police",
+     "Rational self-interest can produce an outcome that is bad for everyone",
+     "Partners should always trust each other",
+     "Companies should avoid price wars"
+    ]
+   },
+   {
+    "stem": "According to the professor, why is confessing the better choice for each prisoner individually?",
+    "opts": [
+     "It always means going free",
+     "It earns the trust of the police",
+     "It gives a better result whatever the partner does",
+     "It is what the partner expects"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention price wars and pollution?",
+    "opts": [
+     "To show that economists disagree",
+     "To explain how prisoners are questioned",
+     "To give real-world examples of the dilemma",
+     "To describe how cooperation fails in prisons"
+    ]
+   },
+   {
+    "stem": "What does the professor suggest about repeated interactions?",
+    "opts": [
+     "They make betrayal more profitable",
+     "They remove the dilemma completely",
+     "They make cooperation more likely",
+     "They are rare in economics"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2,
+   2,
+   2
+  ],
+  "explain": [
+   "*individual self-interest can lead to a poor result for everyone*. A — пример, не тема; C — не утверждается; D — пример",
+   "*Whatever your partner does, you are better off confessing*. A — не всегда; B — не упоминается; D — не упоминается",
+   "*Economists use it to explain situations such as price wars…*. A — не упоминается; B — не упоминается; D — не упоминается",
+   "*when people interact repeatedly, cooperation becomes much more likely*. A — противоположно; B — не «полностью»; D — не утверждается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-TALK-C-036",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-036",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-036.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F2",
+  "words": 208,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an economics class."
+   },
+   {
+    "who": "Woman",
+    "text": "Inflation is usually defined as a sustained increase in the general level of prices, which means that each unit of currency buys less over time. It is typically measured by tracking the cost of a basket of goods that households commonly buy. Economists distinguish between two main causes. In demand-pull inflation, consumers and businesses want to buy more than the economy can produce, so sellers raise prices. In cost-push inflation, the expenses of production rise, perhaps because of higher energy prices, and companies pass these costs on to customers. Moderate inflation, around two percent a year, is generally considered healthy, since it encourages spending and investment rather than hoarding money. High inflation is far more damaging. People on fixed incomes, such as retirees, find that their savings lose value, and businesses struggle to plan because they cannot predict their future costs. In extreme cases, called hyperinflation, prices can double within days, and people may stop trusting the currency altogether. Germany in the nineteen twenties is a famous example. Central banks respond to rising inflation mainly by increasing interest rates, which makes borrowing more expensive and slows spending. However, this policy has a cost, because it can also reduce employment. This tension is something we will explore next week."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main purpose of the lecture?",
+    "opts": [
+     "To compare the economies of different countries",
+     "To show why interest rates should be low",
+     "To explain what inflation is, what causes it, and how it is handled",
+     "To describe how prices are recorded in shops"
+    ]
+   },
+   {
+    "stem": "According to the professor, what happens in demand-pull inflation?",
+    "opts": [
+     "Energy prices rise sharply",
+     "Companies lower their production costs",
+     "People want to buy more than the economy can produce",
+     "The government prints less money"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention Germany in the nineteen twenties?",
+    "opts": [
+     "To show that moderate inflation is healthy",
+     "To explain how central banks work",
+     "To illustrate an extreme case of inflation",
+     "To describe a country with high employment"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about raising interest rates?",
+    "opts": [
+     "It solves one problem but may create another",
+     "It always stops inflation immediately",
+     "It is rarely used by central banks",
+     "It increases spending in the economy"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   2,
+   2,
+   0
+  ],
+  "explain": [
+   "Определение, причины и меры против инфляции. A — Германия — лишь пример; B — низкие ставки не защищаются; D — корзина товаров — лишь деталь",
+   "*want to buy more than the economy can produce*. A — это cost-push; B — издержки не снижаются; D — не упоминается",
+   "*In extreme cases, called hyperinflation… Germany… a famous example*. A — умеренная инфляция — другой пример; B — центробанки не описываются; D — занятость не упоминается",
+   "*this policy has a cost, because it can also reduce employment*. B — «immediately» не сказано; C — используется «mainly»; D — траты замедляются"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-C-037",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-037",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-037.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M3",
+  "words": 213,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an astronomy class."
+   },
+   {
+    "who": "Man",
+    "text": "A black hole is a region of space where gravity is so strong that nothing, not even light, can escape from it. The idea may sound like science fiction, but we now have strong evidence that black holes exist. Most form when a very massive star runs out of fuel at the end of its life. Without the energy from nuclear reactions to balance gravity, the star's core collapses into an extremely small, dense point. The boundary around it is called the event horizon. Once something crosses this boundary, it cannot return. A common misconception is that black holes act like cosmic vacuum cleaners, pulling in everything nearby. In fact, if the Sun were replaced by a black hole of the same mass, the planets would continue to orbit just as they do now. Because black holes emit no light, astronomers cannot see them directly. Instead, they detect them indirectly, by observing how a black hole affects its surroundings. For instance, gas that spirals toward a black hole becomes extremely hot and glows brightly, and stars near it move in unusual orbits. In two thousand nineteen, scientists combined radio telescopes around the world to produce the first image of the shadow of a black hole. That achievement confirmed predictions made a century earlier."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the lecture mainly about?",
+    "opts": [
+     "Why the Sun will become a black hole",
+     "How radio telescopes are built",
+     "Why stars move in unusual orbits",
+     "How black holes form and how scientists know they exist"
+    ]
+   },
+   {
+    "stem": "According to the professor, what is the event horizon?",
+    "opts": [
+     "The center where the star's fuel is stored",
+     "The bright gas around a black hole",
+     "The boundary beyond which nothing can return",
+     "The shadow seen by radio telescopes"
+    ]
+   },
+   {
+    "stem": "Why does the professor describe the Sun being replaced by a black hole?",
+    "opts": [
+     "To explain how stars lose their fuel",
+     "To correct a common misunderstanding",
+     "To prove that planets never move",
+     "To show how dangerous the Sun is"
+    ]
+   },
+   {
+    "stem": "According to the professor, how do astronomers detect black holes?",
+    "opts": [
+     "By photographing the light they emit",
+     "By studying their effects on nearby gas and stars",
+     "By measuring their temperature directly",
+     "By watching them pull in planets"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   2,
+   1,
+   1
+  ],
+  "explain": [
+   "Образование чёрных дыр и их обнаружение. A — Солнце не станет чёрной дырой; B — телескопы — лишь деталь; C — орбиты — лишь признак",
+   "*Once something crosses this boundary, it cannot return*. A — топливо закончилось; B — светится газ вокруг; D — тень — отдельный факт",
+   "*A common misconception… the planets would continue to orbit*. A — топливо — другая тема; C — планеты продолжают орбиту; D — опасность Солнца не обсуждается",
+   "*detect them indirectly, by observing how a black hole affects its surroundings*. A — чёрные дыры не излучают свет; C — прямые измерения невозможны; D — это ложное представление"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Method"
   ]
  }
 ]
