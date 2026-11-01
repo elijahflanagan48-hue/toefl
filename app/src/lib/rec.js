@@ -47,7 +47,19 @@ export function meter(st, cb) {
 /** one recording: start() then stop() → {blob, ms, mime}. */
 export function recorder(st) {
   const mime = pickMime();
-  const mr = new MediaRecorder(st, mime ? { mimeType: mime } : undefined);
+  // boost the quiet iPad microphone: gain → compressor (keeps peaks from clipping) → recorded stream
+  let rs = st, nodes = [];
+  const c = audioCtx();
+  if (c && c.createMediaStreamDestination) {
+    try {
+      const src = c.createMediaStreamSource(st), g = c.createGain(), cp = c.createDynamicsCompressor(), dst = c.createMediaStreamDestination();
+      g.gain.value = 5;
+      cp.threshold.value = -20; cp.knee.value = 12; cp.ratio.value = 10; cp.attack.value = 0.003; cp.release.value = 0.15;
+      src.connect(g); g.connect(cp); cp.connect(dst);
+      rs = dst.stream; nodes = [src, g, cp];
+    } catch (e) { rs = st; }
+  }
+  const mr = new MediaRecorder(rs, mime ? { mimeType: mime } : undefined);
   const chunks = [];
   let t0 = 0;
   mr.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
@@ -55,7 +67,7 @@ export function recorder(st) {
     start() { t0 = performance.now(); mr.start(250); },
     stop() {
       return new Promise(res => {
-        const done = () => { const type = mr.mimeType || mime || 'audio/webm'; res({ blob: new Blob(chunks, { type }), ms: Math.round(performance.now() - t0), mime: type }); };
+        const done = () => { nodes.forEach(n => { try { n.disconnect(); } catch (e) {} }); const type = mr.mimeType || mime || 'audio/webm'; res({ blob: new Blob(chunks, { type }), ms: Math.round(performance.now() - t0), mime: type }); };
         if (mr.state === 'inactive') return done();
         mr.onstop = done;
         try { mr.stop(); } catch (e) { done(); }
@@ -111,7 +123,7 @@ export function playClip(url) {
     const buf = c ? await loadBuf(url) : null;
     if (done) return;
     if (buf && c) {
-      try { node = c.createBufferSource(); node.buffer = buf; node.connect(c.destination); node.onended = () => end('ended'); node.start(); return; } catch (e) { node = null; }
+      try { node = c.createBufferSource(); node.buffer = buf; const g = c.createGain(); g.gain.value = 1.5; const lim = c.createDynamicsCompressor(); lim.threshold.value = -8; lim.knee.value = 4; lim.ratio.value = 20; lim.attack.value = 0.002; lim.release.value = 0.1; node.connect(g); g.connect(lim); lim.connect(c.destination); node.onended = () => end('ended'); node.start(); return; } catch (e) { node = null; }
     }
     try { a = new Audio(url); a.onended = () => end('ended'); a.onerror = () => end('error'); a.play().catch(() => end('error')); } catch (e) { end('error'); }
   });

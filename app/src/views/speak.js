@@ -112,7 +112,7 @@ on('s-mic', async () => {
     cleanup.push(() => clearInterval(iv));
   } catch (e) { S.err = e.message; render(); }
 });
-on('s-go', () => { cleanupAll(); S.phase = 'intro'; render(); });
+on('s-go', () => { cleanupAll(); rec.releaseMic(); S.phase = 'intro'; render(); }); // the mic stays off while prompts play (iOS drops playback volume while it is open)
 on('s-start', () => begin());
 
 /** recorded voice (audio/S/SP-LR|INT-<level>-<nnn>-<k>.mp3, k=0 narrator intro); browser voice only when the file is missing */
@@ -128,9 +128,6 @@ async function begin() {
   const tok = ++run;
   rec.audioCtx(); // unlock audio inside the user gesture
   rec.preload(Array.from({ length: lines().length + 1 }, (_, k) => clipUrl(k))); // decode every clip of the task up front
-  let st;
-  try { st = await rec.getMic(); } catch (e) { S.err = e.message; S.phase = 'mic'; S.micOk = false; render(); return; }
-  S.stream = st;
   S.phase = 'narr'; render();
   await say(0, S.item.body.scenario, 'int', 0.95);
   if (!alive(tok)) return;
@@ -138,7 +135,7 @@ async function begin() {
   for (let k = 0, n = lines().length; k < n; k++) {
     if (!alive(tok)) return;
     S.k = k;
-    await runPart(tok);
+    try { await runPart(tok); } catch (e) { if (!alive(tok)) return; S.err = e.message; S.phase = 'mic'; S.micOk = false; render(); return; }
   }
   if (!alive(tok)) return;
   S.phase = 'send'; S.err = ''; render();
@@ -150,8 +147,13 @@ async function runPart(tok) {
   S.phase = 'listen'; render();
   await say(k + 1, text, S.task === 'int' ? 'int' : 'lrp', S.task === 'lrp' ? 0.92 : 0.95);
   if (!alive(tok)) return;
+  // switch the microphone on only now, during the pause
+  const micP = rec.getMic().then(st => ({ st }), e => ({ e }));
   if (S.task === 'lrp') { S.phase = 'gap'; render(); await wait(2000); } else await wait(500);
-  if (!alive(tok)) return;
+  const m = await micP;
+  if (!alive(tok)) { rec.releaseMic(); return; }
+  if (m.e) throw m.e;
+  S.stream = m.st;
   await rec.beep();
   if (!alive(tok)) return;
   const r = rec.recorder(S.stream);
@@ -172,6 +174,7 @@ async function runPart(tok) {
   });
   stopMeter();
   const out = await r.stop();
+  rec.releaseMic(); S.stream = null;
   if (!alive(tok)) return;
   if (out.blob.size < 300) { S.parts[k] = { empty: true, up: 'ok' }; return; } // stopped before any sound was captured
   S.parts[k] = { ...out, url: URL.createObjectURL(out.blob), up: 'idle' };
