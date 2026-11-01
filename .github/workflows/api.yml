@@ -61,6 +61,7 @@ jobs:
           node ../content/build.mjs
           npx wrangler d1 execute noeon-toefl --remote --file seed/reading.sql 2>&1 | tail -3
           npx wrangler d1 execute noeon-toefl --remote --file seed/writing.sql 2>&1 | tail -3
+          npx wrangler d1 execute noeon-toefl --remote --file seed/speaking.sql 2>&1 | tail -3
       - name: Deploy
         run: npx wrangler deploy 2>&1 | tee /tmp/deploy.log; exit ${PIPESTATUS[0]}
       - name: Report deploy errors

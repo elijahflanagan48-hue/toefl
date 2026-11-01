@@ -2,7 +2,7 @@
 // Every function returns the same shape either way, so the views do not care which one is used.
 
 import * as M from './mock.js';
-import { get, post, put, patch, isLive, loadMe, session } from '../lib/api.js';
+import { api, get, post, put, patch, isLive, loadMe, session } from '../lib/api.js';
 import { overallBand } from '../lib/util.js';
 // demo content is loaded only in demo mode (separate chunk)
 let demoCache = null;
@@ -100,6 +100,21 @@ export async function myWritingItems() {
   const r = await get('/me/submissions');
   return [...new Set(r.submissions.filter(s => s.section === 'W' && s.item_id).map(s => s.item_id))].slice(0, 50);
 }
+/** item ids of Speaking prompts this student already did */
+export async function mySpeakingItems() {
+  if (!isLive()) return [];
+  const r = await get('/me/submissions');
+  return [...new Set(r.submissions.filter(s => s.section === 'S' && s.item_id).map(s => s.item_id))].slice(0, 50);
+}
+export async function createSpeaking({ task, item_id, prompt, parts }) {
+  if (!isLive()) return { id: null };
+  return post('/submissions', { section: 'S', task, item_id, prompt, parts });
+}
+export async function uploadAudio(subId, part, blob, ms) {
+  if (!isLive() || !subId) return null;
+  return api('PUT', `/submissions/${subId}/audio/${part}`, undefined, { raw: blob, type: String(blob.type || 'audio/webm').split(';')[0], headers: { 'X-Duration-Ms': String(ms || 0) } });
+}
+export const submitSpeaking = subId => (isLive() && subId ? post(`/submissions/${subId}/submit`) : null);
 export async function submitWriting({ task, item_id, prompt, text }) {
   if (!isLive()) return { id: null, status: 'demo' };
   return post('/submissions', { section: 'W', task, item_id, prompt, text });

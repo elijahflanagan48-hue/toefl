@@ -7,8 +7,8 @@ import { pref } from '../lib/store.js';
 import { isLive } from '../lib/api.js';
 
 const MODES = [['learn', 'Учиться', 'Ответ проверяется сразу, с разбором на русском'], ['timed', 'На время', 'Таймер и правила экзамена, разбор в конце'], ['mistakes', 'Мои ошибки', 'Повтор вопросов, в которых была ошибка, пока не ответишь верно']];
-const READY = { ctw: true, rdl: true, rap: true, bas: true, eml: true, dsc: true }; // tasks with a working trainer
-const WRITE = { eml: true, dsc: true }; // teacher-graded writing: own editor, no mistakes mode
+const READY = { ctw: true, rdl: true, rap: true, bas: true, eml: true, dsc: true, lrp: true, int: true }; // tasks with a working trainer
+const WRITE = { eml: true, dsc: true, lrp: true, int: true }; // teacher-graded writing: own editor, no mistakes mode
 
 on('train-mode', el => { pref.set('trainMode', el.dataset.v); window.dispatchEvent(new Event('hashchange')); });
 on('start-task', el => toast(el.dataset.soon ? 'Откроется после озвучки' : 'Тренажёр «' + el.dataset.nm + '» появится на этапе ' + el.dataset.stage));
@@ -25,7 +25,7 @@ function taskCard(k, t, st, mode, mist) {
   else if (t.acc != null) stat = `<div class="tc-stat"><span>Точность</span><b class="serif">${t.acc}%</b></div><div class="bar c${k}"><i style="width:${t.acc}%"></i></div>`;
   else if (t.score != null) stat = `<div class="tc-stat"><span>Средний балл учителя</span><b class="serif">${band(t.score)}<small> / 5</small></b></div><div class="bar c${k}"><i style="width:${t.score / 5 * 100}%"></i></div>`;
   const meta = WRITE[t.id] && isLive() ? `${inBank ? inBank + ' заданий · ' : ''}${t.time}` : t.scripts != null ? 'ждёт озвучки' : isLive() && inBank != null ? `${done} из ${inBank} · ${t.time}` : isLive() ? t.time : `${t.done} из ${t.n} · ${t.time}`;
-  const href = WRITE[t.id] ? `#/write/${t.id}?mode=${mode === 'learn' ? 'learn' : 'timed'}` : `#/practice/${t.id}?mode=${mode}`;
+  const href = t.id === 'lrp' || t.id === 'int' ? `#/speak/${t.id}?mode=${mode === 'timed' ? 'timed' : 'learn'}` : WRITE[t.id] ? `#/write/${t.id}?mode=${mode === 'learn' ? 'learn' : 'timed'}` : `#/practice/${t.id}?mode=${mode}`;
   const btn = t.scripts != null ? `<button class="btn sm" data-act="start-task" data-soon="1">${ic('lock', 16)} Скоро</button>`
     : ready && WRITE[t.id] && mode === 'mistakes' ? `<span class="chip">проверяет учитель</span>`
     : ready ? (mode === 'mistakes' && isLive() && !mist ? `<span class="chip ok">ошибок нет</span>` : `<a class="btn sm pri" href="${href}">${mode === 'mistakes' ? `Повторить${mist ? ' · ' + mist : ''}` : 'Начать'}</a>`)
@@ -43,7 +43,7 @@ export default async function train(params) {
   const k = SEC[params[0]] ? params[0] : 'R';
   const c = catalog[k], mode = MODES.some(m => m[0] === pref.get('trainMode', 'learn')) ? pref.get('trainMode', 'learn') : 'learn';
   let st = null, mist = null;
-  const banked = k === 'R' || k === 'W';
+  const banked = k === 'R' || k === 'W' || k === 'S';
   if (banked && isLive()) {
     try { [st, mist] = await Promise.all([src.stats(k), src.mistakes(k)]); } catch (e) { /* show the page without stats */ }
   }

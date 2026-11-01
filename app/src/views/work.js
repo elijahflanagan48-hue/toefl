@@ -1,7 +1,7 @@
 // Student's view of one submitted Writing task: prompt, own text with the teacher's fragment comments,
 // score on the 0–5 scale with its description, checklist criteria and the overall comment.
 import * as src from '../data/source.js';
-import { isLive } from '../lib/api.js';
+import { isLive, audioUrl } from '../lib/api.js';
 import { ic } from '../lib/icons.js';
 import { band, esc } from '../lib/util.js';
 import { hdr } from '../lib/ui.js';
@@ -22,7 +22,12 @@ export default async function work(params) {
       <div class="mailbody pre">${markedHtml(s.text || '', marks)}</div>
       ${notesHtml(marks)}
       <div class="paper-ft fade">${words} слов${s.task === 'dsc' && words < 100 ? ' · <span class="badtx">меньше 100</span>' : ''}</div></div>`
-    : `<div class="card pad"><p class="mut">Записи ответов: ${r.audio.length}</p></div>`;
+    : `<div class="card rows audios">${Array.from({ length: Math.max(s.parts, r.audio.length) }, (_, i) => {
+      const has = r.audio.some(a => a.part === i), sc = rate?.parts?.[i];
+      return `<div class="row arow audio-row"><div class="t"><div class="nm">${i + 1}. ${esc(p?.questions?.[i] || '')}</div>
+        ${has ? `<audio controls preload="none" data-sub="${s.id}" data-part="${i}"></audio>` : '<div class="fade small">нет записи</div>'}</div>
+        ${sc != null ? `<div class="end"><b class="serif">${band(sc)}</b><span class="fade small"> / 5</span></div>` : ''}</div>`;
+    }).join('')}</div>`;
 
   const side = rate ? `<aside class="card pad rubric wres">
       <div class="lbl">Оценка учителя</div>
@@ -37,7 +42,16 @@ export default async function work(params) {
   return {
     title: name, wide: true,
     html: `${hdr(name, { back: '#/progress', sub: p?.subject || p?.course || '' })}
-      <div class="g-review"><div class="work"><div class="card pad prompt">${promptBlock(s.task, p, { compact: true })}</div>${paper}</div>${side}</div>
-      <div class="row-btns" style="margin-top:16px">${s.section === 'W' ? `<a class="btn pri" href="#/write/${s.task}?mode=timed">${ic('repeat', 16)} Новое задание</a>` : ''}</div>`
+      <div class="g-review"><div class="work"><div class="card pad prompt">${s.section === 'W' ? promptBlock(s.task, p, { compact: true }) : `<div class="pr-k">${ic('mic', 16)} ${esc(name)}${p?.title ? ' · ' + esc(p.title) : ''}</div>${p?.scenario ? `<p>${esc(p.scenario)}</p>` : ''}`}</div>${paper}</div>${side}</div>
+      <div class="row-btns" style="margin-top:16px">${s.section === 'W' ? `<a class="btn pri" href="#/write/${s.task}?mode=timed">${ic('repeat', 16)} Новое задание</a>` : `<a class="btn pri" href="#/speak/${s.task}?mode=timed">${ic('repeat', 16)} Новое задание</a>`}</div>`,
+    mount(root) {
+      root.querySelectorAll('audio[data-sub]').forEach(a => {
+        a.addEventListener('play', async function load() {
+          if (a.src) return;
+          a.removeEventListener('play', load);
+          try { a.src = await audioUrl(a.dataset.sub, a.dataset.part); a.play(); } catch (e) { /* no audio */ }
+        });
+      });
+    }
   };
 }
