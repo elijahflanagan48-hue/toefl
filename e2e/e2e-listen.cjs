@@ -19,9 +19,9 @@ const FAKE_AUDIO = () => { // deterministic: the "recording" lasts 400 ms
   if (t.url().includes('#/login')) { await t.fill('#email', 'teacher@example.com'); await t.fill('#password', 'teacher-pass-1'); await t.click('button[type=submit]'); await t.waitForTimeout(1200); }
 
   // the L page is open now; teacher sees the test-bank row
-  await t.goto(APP + '#/train/L'); await t.waitForTimeout(1200);
+  await t.goto(APP + '#/train/L'); await t.waitForFunction(() => document.querySelector('#app')?.textContent.length > 300, null, { timeout: 8000 }).catch(() => {}); await t.waitForTimeout(300);
   let txt = await t.textContent('#app');
-  ok(!txt.includes('Скоро') && txt.includes('Listen and Choose a Response'), 'Listening page: tasks are open (no «Скоро»)');
+  ok(!txt.includes('Скоро') && txt.includes('Listen and Choose a Response'), 'Listening page: tasks are open (no «Скоро»)', txt.replace(/\s+/g, ' ').slice(0, 300));
   ok(txt.includes('тест-банк'), 'teacher sees the test-bank row');
   await t.screenshot({ path: OUT + '/train.png' });
 
