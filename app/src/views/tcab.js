@@ -170,6 +170,7 @@ export async function contentLive() {
   return {
     title: 'Контент', wide: true,
     html: `${hdr('Контент', { sub: `Банк заданий · ${list.reduce((a, b) => a + b.n, 0)} единиц`, right: `<a class="btn sm" href="#/t/bank">${ic('list', 16)} Все задания</a> <button class="btn sm" data-act="imp">${ic('upload', 16)} Импорт JSON</button>` })}
+    <a class="note info" href="#/t/calibration" style="margin-bottom:12px">${ic('trend', 22)}<div class="t"><div class="nm">Калибровка заданий</div><div class="mt">Сложность и качество заданий по ответам учеников: какие перевести на другой уровень, где проверить ключ</div></div></a>
     <div class="card tblwrap"><table class="tbl bank"><thead><tr><th>Задание</th><th>Всего</th><th>A · B · C</th><th>Откалибровано</th><th></th></tr></thead>
       <tbody>${list.map(b => `<tr data-act="go" data-go="#/t/bank?section=${b.section}&task=${b.task}"><td><div class="who-s c${b.section}"><span class="sq sm">${ic(SEC[b.section].ic, 16)}</span><b>${TNAME[b.task] || b.task}</b></div></td>
         <td class="num">${b.n}</td><td><div class="lvbar">${['A', 'B', 'C'].map((l, i) => `<i class="lv${i}" style="flex:${b.lv[l] || 0.2}" title="${l}: ${b.lv[l]}">${b.lv[l]}</i>`).join('')}</div></td>
@@ -251,3 +252,40 @@ export async function assignResults(params) {
     ${blocks ? `<div class="lbl">Разбор для урока <b>сначала самые трудные</b></div>${blocks}` : (a.spec?.section === 'W' || a.spec?.section === 'S') ? '' : '<div class="card empty"><b>Ответов пока нет</b>Как только ученики выполнят задание, здесь появится разбор.</div>'}`
   };
 }
+
+/* ---------------- calibration: difficulty of bank items from student answers ---------------- */
+const FLAG = { easy: ['слишком лёгкое (>90% верных)', 'warn'], hard: ['слишком трудное (<20% верных)', 'warn'], weak: ['слабо различает сильных и слабых', 'warn'],
+  inverted: ['сильные отвечают хуже слабых: проверьте ключ', 'bad'], 'key?': ['сильные чаще выбирают другой вариант: проверьте ключ', 'bad'] };
+const FLAG_SHORT = { easy: 'лёгкое', hard: 'трудное', weak: 'слабо различает', inverted: 'проверьте ключ', 'key?': 'проверьте ключ' };
+const TSHORT = { ctw: 'CtW', rdl: 'Daily Life', rap: 'Academic', lcr: 'Response', lco: 'Conversation', lan: 'Announcement', lat: 'Talk', bas: 'Build a Sentence' };
+export async function calibrationView() {
+  if (!isLive()) return { title: 'Калибровка', html: needLive('В демо-режиме калибровка недоступна.') };
+  const task = new URLSearchParams(location.hash.split('?')[1] || '').get('task') || '';
+  const r = await src.calibration(task);
+  const tasks = ['ctw', 'rdl', 'rap', 'lcr', 'lco', 'lan', 'lat', 'bas'];
+  const kpi = (v, l) => `<div class="kpi"><b>${v}</b><span>${l}</span></div>`;
+  const rows = r.items.map(i => {
+    const move = i.rec && i.rec !== i.level;
+    return `<tr><td><b>${esc(i.id)}</b></td><td>${TSHORT[i.task] || i.task}</td>
+      <td>${i.level}${move ? ` → <b>${i.rec}</b>` : i.rec ? ' ✓' : ''}${i.cal_level ? ' <span class="fade small">(уже откалибровано)</span>' : ''}</td>
+      <td class="num">${i.n}</td><td class="num">${i.n >= 5 ? Math.round(i.p * 100) + '%' : '—'}</td><td class="num">${i.rec ? i.b.toFixed(1) : '—'}</td><td class="num">${i.disc == null ? '—' : i.disc.toFixed(2)}</td>
+      <td>${i.n < r.min_n ? `<span class="fade small">нужно ещё ${r.min_n - i.n}</span>` : i.flags.filter(f => !(f === 'weak' && (i.flags.includes('easy') || i.flags.includes('hard')))).map(f => `<span class="chip ${FLAG[f][1]}" title="${FLAG[f][0]}">${FLAG_SHORT[f]}</span>`).join(' ') || '<span class="fade">—</span>'}</td>
+      <td>${move ? `<button class="btn sm" data-act="cal-apply" data-id="${esc(i.id)}">Применить</button>` : ''}</td></tr>`;
+  }).join('');
+  return {
+    title: 'Калибровка', wide: true,
+    html: `${hdr('Калибровка заданий', { back: '#/t/content', sub: `по первым ответам учеников · минимум ${r.min_n} ответов на задание`, right: r.to_move ? `<button class="btn sm pri" data-act="cal-apply-all">Применить всё (${r.to_move})</button>` : '' })}
+    <div class="kpis">${kpi(r.with_data, 'заданий с ответами')}${kpi(r.ready, 'готово к оценке')}${kpi(r.to_move, 'сменят уровень')}${kpi(r.flagged, 'с флагами')}</div>
+    <div class="toolbar"><select class="inp" id="cal-task" aria-label="Задание"><option value="">Все задания</option>${tasks.map(t => `<option value="${t}" ${t === task ? 'selected' : ''}>${TNAME[t]}</option>`).join('')}</select></div>
+    ${r.items.length ? `<div class="card tblwrap" style="max-width:100%"><table class="tbl bank" style="min-width:0"><thead><tr><th>Id</th><th>Задание</th><th>Уровень</th><th>Ответов</th><th>Верно</th><th title="Сложность в логитах: −1 лёгкое, 0 среднее, +1 трудное">b</th><th title="Точечно-бисериальная корреляция: как хорошо задание отделяет сильных от слабых">Различение</th><th>Флаги</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
+    <p class="fade small" style="margin:10px 2px">Считаются только первые ответы каждого ученика (повторы не искажают картину). Уровень A — b ниже −0,5, C — выше +0,5. Применённый уровень сохраняется и не затирается при обновлении банка.</p>`
+      : `<div class="card empty"><b>Ответов пока нет</b>Калибровка заработает, когда ученики начнут решать задания: для оценки нужно ${r.min_n}+ ответов на задание.</div>`}`,
+    mount(root) { root.querySelector('#cal-task')?.addEventListener('change', e => { location.hash = '#/t/calibration' + (e.target.value ? '?task=' + e.target.value : ''); }); }
+  };
+}
+on('cal-apply', async el => { try { const r = await src.applyCalibration({ ids: [el.dataset.id] }); toast(r.moved ? 'Уровень обновлён' : 'Сохранено'); rerender(); } catch (e) { toast(e.message); } });
+on('cal-apply-all', async () => {
+  modal(`<h2>Применить всё?</h2><p class="mut" style="margin-bottom:14px">Уровни всех заданий с достаточным числом ответов будут заменены рекомендованными. Содержимое пробников не меняется.</p>
+    <div class="row-btns"><button class="btn" data-act="modal-close">Отмена</button><button class="btn pri" data-act="cal-apply-go">Применить</button></div>`);
+});
+on('cal-apply-go', async () => { try { const r = await src.applyCalibration({}); closeModal(); toast(`Обновлено: ${r.updated}, сменили уровень: ${r.moved}`); rerender(); } catch (e) { closeModal(); toast(e.message); } });

@@ -222,6 +222,8 @@ export const createAssignment = d => post('/teacher/assignments', d);
 export const deleteAssignment = id => api('DELETE', '/teacher/assignments/' + id);
 export async function bankStats() { return isLive() ? (await get('/teacher/items/stats')).stats : []; }
 export const bankList = p => get('/teacher/items?' + new URLSearchParams(p));
+export const calibration = (task = '') => get('/teacher/calibration' + (task ? '?task=' + task : ''));
+export const applyCalibration = d => post('/teacher/calibration/apply', d);
 export const bankItem = id => get('/teacher/items/' + encodeURIComponent(id));
 export const setItemStatus = (id, status) => patch('/teacher/items/' + encodeURIComponent(id), { status });
 export const importItems = items => post('/teacher/items', { items });

@@ -6,6 +6,7 @@ import {
   publicUser, inviteCode, tempPassword, sha256
 } from './auth.js';
 import { bandRL, bandWS, overall, route as routeOf, grade, cefr } from './scoring.js';
+import { calibrate, MIN_N } from './calibration.js';
 
 const DEFAULT_SETTINGS = { route_threshold: 0.6 };
 const TASKS = {
@@ -489,6 +490,44 @@ on('GET', '/teacher/items/stats', async ({ env, user }) => {
       SUM(CASE WHEN COALESCE(st.n, 0) >= 30 THEN 1 ELSE 0 END) AS calibrated
     FROM items i LEFT JOIN item_stats st ON st.item_id = i.id WHERE i.status != 'retired' GROUP BY i.section, i.task, i.level`);
   return { stats: rows };
+});
+
+/** calibration: difficulty / discrimination of bank items from the first answers of students */
+async function calibrationRows(env) {
+  const items = (await all(env, `SELECT id, section, task, level, status, key, cal_b, cal_level FROM items
+    WHERE status != 'retired' AND (section IN ('R','L') OR task = 'bas')`)).map(i => ({ ...i, key: parse(i.key) }));
+  const rows = (await all(env, `SELECT u, item, q, c, a FROM (
+      SELECT at.user_id AS u, r.item_id AS item, r.q AS q, r.correct AS c, r.answer AS a,
+             ROW_NUMBER() OVER (PARTITION BY at.user_id, r.item_id, r.q ORDER BY r.id) AS rn
+      FROM responses r JOIN attempts at ON at.id = r.attempt_id JOIN users us ON us.id = at.user_id
+      WHERE us.role = 'student' AND r.correct IS NOT NULL AND r.item_id IS NOT NULL AND r.item_id != '') WHERE rn = 1`)).map(r => ({ ...r, a: parse(r.a) }));
+  const byId = new Map(items.map(i => [i.id, i]));
+  return calibrate(rows, items).map(x => ({ ...x, cal_level: byId.get(x.id).cal_level }));
+}
+on('GET', '/teacher/calibration', async ({ env, user, url }) => {
+  requireTeacher(user);
+  const all_ = await calibrationRows(env), task = url.searchParams.get('task');
+  const withData = all_.filter(x => x.n > 0 && (!task || x.task === task));
+  const ready = all_.filter(x => x.rec);
+  return {
+    min_n: MIN_N, total: all_.length, with_data: all_.filter(x => x.n > 0).length, ready: ready.length,
+    to_move: ready.filter(x => x.rec !== x.level).length, flagged: ready.filter(x => x.flags.length).length,
+    items: withData.sort((a, b) => (b.flags.length - a.flags.length) || ((a.rec !== a.level) === (b.rec !== b.level) ? b.n - a.n : (a.rec !== a.level ? -1 : 1))).slice(0, 300)
+  };
+});
+/** apply the recommended level (and store the estimated b): for the given ids, or every item with enough data */
+on('POST', '/teacher/calibration/apply', async ({ req, env, user }) => {
+  requireTeacher(user);
+  const b = await body(req);
+  const ids = Array.isArray(b.ids) ? new Set(b.ids.map(String)) : null;
+  const list = (await calibrationRows(env)).filter(x => x.rec && (!ids || ids.has(x.id)));
+  let moved = 0;
+  for (const x of list) {
+    const lvl = b.levels === false ? x.level : x.rec;
+    if (lvl !== x.level) moved++;
+    await run(env, 'UPDATE items SET cal_b = ?, cal_n = ?, cal_level = ?, level = ?, b = ?, updated_at = ? WHERE id = ?', x.b, x.n, lvl, lvl, x.b, now(), x.id);
+  }
+  return { updated: list.length, moved };
 });
 
 /** bank browser: list with status, calibration counters and a short preview */

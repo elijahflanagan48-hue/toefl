@@ -16,13 +16,13 @@ import write from './views/write.js';
 import work from './views/work.js';
 import speak from './views/speak.js';
 import listen from './views/listen.js';
-import { studentCard, assignView, bankView, assignResults } from './views/tcab.js';
+import { studentCard, assignView, bankView, assignResults, calibrationView } from './views/tcab.js';
 import { login, join, setup, password } from './views/auth.js';
 
 /* ---------- routes ---------- */
 const ROUTES = {
   today, train, mock, progress, profile,
-  't/home': tHome, 't/students': studentsView, 't/review': reviewList, 't/content': content, 't/assign': assignView, 't/bank': bankView,
+  't/home': tHome, 't/students': studentsView, 't/review': reviewList, 't/content': content, 't/assign': assignView, 't/bank': bankView, 't/calibration': calibrationView,
   'exam/reading': examReading, 'mock/next': mockNext,
   login, join, setup, password
 };

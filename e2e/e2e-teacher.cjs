@@ -13,6 +13,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   const t = await mk(1440, 900);
   await t.goto(APP); await t.waitForTimeout(800);
   if (t.url().includes('#/login')) { await t.fill('#email', 'teacher@example.com'); await t.fill('#password', 'teacher-pass-1'); await t.click('button[type=submit]'); await t.waitForTimeout(1200); }
+  { const tok = await t.evaluate(() => localStorage.getItem('nt.token')), h = { Authorization: 'Bearer ' + tok }; const l = await (await fetch('http://127.0.0.1:8787/teacher/assignments', { headers: h })).json(); for (const a of l.assignments || []) await fetch('http://127.0.0.1:8787/teacher/assignments/' + a.id, { method: 'DELETE', headers: h }); } // start from a clean slate
   await t.goto(APP + '#/profile'); await t.waitForTimeout(900);
   const code = (await t.textContent('.groups .code')).trim();
   const s = await mk(1280, 900);
@@ -24,7 +25,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   // nav has the mock-test entry for the teacher
   await t.goto(APP + '#/t/home'); await t.waitForTimeout(900);
   ok(!!(await t.$('.rail a[href="#/mock"], nav a[href="#/mock"]')), 'teacher navigation has «Пробник»');
-  await t.goto(APP + '#/mock'); await t.waitForTimeout(900);
+  await t.goto(APP + '#/mock'); await t.waitForTimeout(2000);
   ok(!(await t.textContent('#app')).includes('Cannot') && (await t.textContent('#app')).length > 50, 'teacher opens the mock page');
 
   // assign to the student
@@ -69,13 +70,13 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   await s.goto(APP + '#/train/R'); await s.goto(APP + '#/today'); await s.waitForTimeout(1500);
   ok(!(await s.$('a[href*="#/practice/ctw"][href*="a="]')), 'done assignment disappears from «Сегодня»');
 
-  await t.goto(APP + '#/t/home'); await t.goto(APP + '#/t/assign'); await t.waitForTimeout(1200);
-  ok((await t.textContent('#app')).includes('1 из 1'), 'teacher sees 1 of 1 done');
+  await t.goto(APP + '#/t/home'); await t.goto(APP + '#/t/assign'); await t.waitForFunction(() => document.querySelector('#app')?.textContent.includes('1 из 1'), null, { timeout: 8000 }).catch(() => {});
+  ok((await t.textContent('#app')).includes('1 из 1'), 'teacher sees 1 of 1 done', (await t.textContent('#app')).replace(/\s+/g, ' ').slice(0, 400));
   await t.screenshot({ path: OUT + '/assign.png' });
 
   // results page: student answers an assigned Listening-free item (Reading CtW) wrongly → teacher sees errors + explanation
   await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('#a-to', { timeout: 8000 }).catch(() => {});
-  await t.selectOption('#a-task', 'R:ctw'); await t.click('[data-act="assign-go"]'); await t.waitForTimeout(1000);
+  await t.selectOption('#a-to', 's' + (await api('GET', '/me')).user.id); await t.selectOption('#a-task', 'R:ctw'); await t.click('[data-act="assign-go"]'); await t.waitForTimeout(1000);
   const mine2 = await api('GET', '/me/assignments');
   const a2 = mine2.assignments.find(x => !x.done);
   ok(!!a2, 'second assignment is open for the student');
@@ -85,7 +86,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
     const it = got.items[0];
     await api('POST', `/attempts/${at.id}/responses`, { responses: [{ item_id: it.id, q: 0, answer: 'zzz' }] });
     await api('POST', `/attempts/${at.id}/finish`);
-    await t.goto(APP + '#/t/home'); await t.goto(APP + '#/t/assign/' + a2.id); await t.waitForTimeout(1500);
+    await t.goto(APP + '#/t/home'); await t.goto(APP + '#/t/assign/' + a2.id); await t.waitForSelector('.rq-item', { timeout: 8000 }).catch(() => {}); await t.waitForTimeout(500);
     const rt = await t.textContent('#app');
     ok(rt.includes(sname) && rt.includes('Разбор для урока'), 'results page lists the student and the lesson breakdown', rt.slice(0, 300));
     ok(!!(await t.$('.rq-item')) && rt.includes(it.id), 'results page shows the item with the wrong answer');
