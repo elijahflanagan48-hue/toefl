@@ -521,6 +521,61 @@ on('PATCH', '/teacher/items/:id', async ({ req, env, user, params }) => {
 });
 
 /* ------------------------------------------------------------------ attempts */
+/* ------------------------------------------------------------------ full mock tests */
+const MOCK_PARTS = { 'R:M1': ['R', 'M1'], 'R:lower': ['R', 'lower'], 'R:upper': ['R', 'upper'], 'L:M1': ['L', 'M1'], 'L:lower': ['L', 'lower'], 'L:upper': ['L', 'upper'],
+  'W:bas': ['W', 'bas'], 'W:eml': ['W', 'eml'], 'W:dsc': ['W', 'dsc'], 'S:lrp': ['S', 'lrp'], 'S:int': ['S', 'int'] };
+
+on('GET', '/mocks', async ({ env, user }) => {
+  requireUser(user);
+  const rows = await all(env, 'SELECT id, title FROM mocks ORDER BY id');
+  return { mocks: rows };
+});
+
+/** items of one part of a mock, in the defined order, without keys (the mock keeps them out of practice) */
+on('GET', '/mocks/:id/part', async ({ env, user, params, url }) => {
+  requireUser(user);
+  const spec = MOCK_PARTS[url.searchParams.get('part')];
+  if (!spec) throw bad('bad_part');
+  const m = await one(env, 'SELECT def FROM mocks WHERE id = ?', params.id);
+  if (!m) throw notFound();
+  const def = parse(m.def);
+  let ids = def[spec[0]][spec[1]];
+  if (!Array.isArray(ids)) ids = [ids];
+  const out = [];
+  for (const id of ids) { const it = await one(env, 'SELECT * FROM items WHERE id = ?', id); if (it) out.push(publicItem(it)); }
+  return { items: out };
+});
+
+/** result of a mock attempt: R/L bands from the attempt, W/S from teacher ratings once they exist */
+on('GET', '/attempts/:id/summary', async ({ env, user, params }) => {
+  requireUser(user);
+  const a = await one(env, 'SELECT * FROM attempts WHERE id = ?', Number(params.id));
+  if (!a || !(await canSeeStudent(env, user, a.user_id))) throw notFound();
+  const secs = await all(env, `SELECT section, module, COUNT(*) AS n, SUM(correct) AS got FROM responses WHERE attempt_id = ? AND correct IS NOT NULL GROUP BY section, module`, a.id);
+  const subs = await all(env, `SELECT s.id, s.section, s.task, s.status, s.item_id,
+      (SELECT score FROM ratings r WHERE r.submission_id = s.id AND r.is_final = 1 ORDER BY id DESC LIMIT 1) AS score,
+      (SELECT parts FROM ratings r WHERE r.submission_id = s.id AND r.is_final = 1 ORDER BY id DESC LIMIT 1) AS parts
+    FROM submissions s WHERE s.attempt_id = ? ORDER BY s.id`, a.id);
+  const bands = parse(a.bands) || {};
+  const route = parse(a.route) || {};
+  const bas = secs.filter(x => x.section === 'W').reduce((t, x) => ({ got: t.got + (x.got || 0), n: t.n + x.n }), { got: 0, n: 0 });
+  const eml = subs.find(x => x.task === 'eml'), dsc = subs.find(x => x.task === 'dsc'), lrp = subs.find(x => x.task === 'lrp'), int = subs.find(x => x.task === 'int');
+  const W = { bas, eml: eml && { id: eml.id, status: eml.status, score: eml.score }, dsc: dsc && { id: dsc.id, status: dsc.status, score: dsc.score } };
+  if (bas.n && eml?.score != null && dsc?.score != null) { W.raw = bas.got + eml.score + dsc.score; W.band = bandWS(W.raw, 20); bands.W = W.band; }
+  const sum = x => { const p = parse(x?.parts); return Array.isArray(p) ? p.reduce((t, v) => t + Number(v), 0) : x?.score != null ? x.score : null; };
+  const S = { lrp: lrp && { id: lrp.id, status: lrp.status, score: lrp.score }, int: int && { id: int.id, status: int.status, score: int.score } };
+  if (lrp?.score != null && int?.score != null) {
+    S.raw = (parse(lrp.parts) ? sum(lrp) : lrp.score * 7) + (parse(int.parts) ? sum(int) : int.score * 4);
+    S.band = bandWS(S.raw, 55); bands.S = S.band;
+  }
+  const all4 = ['R', 'L', 'W', 'S'].map(k => bands[k]);
+  delete bands.overall; // finish() stores a partial overall (R and L only): the full one needs all four sections
+  if (all4.every(x => x != null)) bands.overall = overall(all4);
+  const modules = {};
+  for (const x of secs) if (x.section === 'R' || x.section === 'L') (modules[x.section] ||= {})[x.module] = { got: x.got || 0, of: x.n };
+  return { attempt: { id: a.id, kind: a.kind, task: a.task, started_at: a.started_at, finished_at: a.finished_at }, route, bands, modules, W, S };
+});
+
 async function ownAttempt(env, user, id) {
   const a = await one(env, 'SELECT * FROM attempts WHERE id = ?', Number(id));
   if (!a || a.user_id !== user.id) throw notFound();

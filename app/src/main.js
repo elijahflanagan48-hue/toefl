@@ -6,7 +6,7 @@ import { me as demoMe, teacher as demoTeacher, queue as demoQueue } from './data
 
 import today from './views/today.js';
 import train from './views/train.js';
-import mock from './views/mock.js';
+import mock, { mockNext, mockResult } from './views/mock.js';
 import progress from './views/progress.js';
 import profile from './views/profile.js';
 import { home as tHome, studentsView, reviewList, reviewItem, content } from './views/teacher.js';
@@ -23,11 +23,11 @@ import { login, join, setup, password } from './views/auth.js';
 const ROUTES = {
   today, train, mock, progress, profile,
   't/home': tHome, 't/students': studentsView, 't/review': reviewList, 't/content': content, 't/assign': assignView, 't/bank': bankView,
-  'exam/reading': examReading,
+  'exam/reading': examReading, 'mock/next': mockNext,
   login, join, setup, password
 };
 const PUBLIC = new Set(['login', 'join', 'setup']);
-const PARAM_ROUTES = [['train/', train], ['t/review/', reviewItem], ['practice/', practice], ['write/', write], ['speak/', speak], ['listen/', listen], ['t/student/', studentCard], ['t/assign/', assignResults], ['work/', work]];
+const PARAM_ROUTES = [['mock/result/', mockResult], ['train/', train], ['t/review/', reviewItem], ['practice/', practice], ['write/', write], ['speak/', speak], ['listen/', listen], ['t/student/', studentCard], ['t/assign/', assignResults], ['work/', work]];
 
 const NAV = {
   student: [['today', 'today', 'Сегодня'], ['train', 'layers', 'Тренировка'], ['mock', 'timer', 'Пробник'], ['progress', 'trend', 'Прогресс'], ['profile', 'user', 'Профиль']],

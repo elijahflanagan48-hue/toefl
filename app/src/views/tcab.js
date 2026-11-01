@@ -32,7 +32,7 @@ export async function studentCard(params) {
           <button class="btn sm" data-act="assign" data-sid="${st.id}" style="margin-top:12px">${ic('plus', 16)} Назначить тренажёр</button></div>
         <div class="lbl">Последние попытки</div>
         ${att.length ? `<div class="card tblwrap"><table class="tbl"><thead><tr><th>Дата</th><th>Что</th><th>Баллы</th></tr></thead><tbody>${att.map(a => `<tr><td>${dateLabel(a.finished_at)}</td>
-          <td>${KIND[a.kind] || a.kind}${a.section ? ' · ' + SEC[a.section].name : ''}${a.route?.R ? ` · ${a.route.R === 'upper' ? 'трудный' : 'лёгкий'} модуль 2` : ''}</td>
+          <td>${a.kind === 'mock' ? `<a href="#/mock/result/${a.id}"><b>Пробник ${esc((a.task || '').replace(/^T/, ''))}</b></a>` : KIND[a.kind] || a.kind}${a.section ? ' · ' + SEC[a.section].name : ''}${a.route?.R ? ` · ${a.route.R === 'upper' ? 'трудный' : 'лёгкий'} модуль 2` : ''}</td>
           <td class="num">${['R', 'L', 'W', 'S'].filter(k => a.bands?.[k] != null).map(k => `${k} ${band(a.bands[k])}`).join(' · ') || '—'}</td></tr>`).join('')}</tbody></table></div>` : '<div class="card empty"><b>Попыток пока нет</b></div>'}
       </section>
       <section><div class="lbl">Работы Writing и Speaking</div>

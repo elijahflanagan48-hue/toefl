@@ -1,0 +1,263 @@
+{
+ "T1": {
+  "title": "Пробник 1",
+  "R": {
+   "M1": [
+    "R-CTW-A-104",
+    "R-CTW-B-108",
+    "R-RDL-A-201",
+    "R-RDL-B-202",
+    "R-RAP-B-204",
+    "R-RAP-B-205"
+   ],
+   "lower": [
+    "R-CTW-A-111",
+    "R-RAP-A-202"
+   ],
+   "upper": [
+    "R-CTW-C-001",
+    "R-RAP-C-210"
+   ]
+  },
+  "L": {
+   "M1": [
+    "L-LCR-A-003",
+    "L-LCR-B-005",
+    "L-LCR-B-001",
+    "L-LCR-C-011",
+    "L-LCR-B-007",
+    "L-LCR-C-010",
+    "L-LCR-B-016",
+    "L-LCR-C-012",
+    "L-LCR-A-013",
+    "L-LCR-B-006",
+    "L-LCR-B-008",
+    "L-LCR-B-019",
+    "L-CONV-B-001",
+    "L-CONV-B-002",
+    "L-CONV-C-003",
+    "L-ANN-B-001",
+    "L-ANN-B-002",
+    "L-ANN-B-004",
+    "L-TALK-B-001",
+    "L-TALK-C-002"
+   ],
+   "lower": [
+    "L-LCR-A-002",
+    "L-LCR-A-015",
+    "L-LCR-A-004",
+    "L-LCR-B-017",
+    "L-LCR-A-014",
+    "L-CONV-B-005",
+    "L-CONV-B-007",
+    "L-ANN-A-006",
+    "L-TALK-B-003"
+   ],
+   "upper": [
+    "L-LCR-C-018",
+    "L-LCR-B-009",
+    "L-LCR-B-020",
+    "L-LCR-C-021",
+    "L-LCR-B-022",
+    "L-CONV-C-006",
+    "L-CONV-B-004",
+    "L-ANN-C-003",
+    "L-TALK-C-004"
+   ]
+  },
+  "W": {
+   "bas": [
+    "W-BAS-C-038",
+    "W-BAS-B-038",
+    "W-BAS-A-037",
+    "W-BAS-A-003",
+    "W-BAS-A-013",
+    "W-BAS-C-043",
+    "W-BAS-B-040",
+    "W-BAS-C-036",
+    "W-BAS-B-044",
+    "W-BAS-B-019"
+   ],
+   "eml": "W-EML-B-020",
+   "dsc": "W-DSC-B-001"
+  },
+  "S": {
+   "lrp": "S-LRP-B-005",
+   "int": "S-INT-B-006"
+  }
+ },
+ "T2": {
+  "title": "Пробник 2",
+  "R": {
+   "M1": [
+    "R-CTW-A-106",
+    "R-CTW-B-003",
+    "R-RDL-A-208",
+    "R-RDL-B-120",
+    "R-RAP-B-203",
+    "R-RAP-B-002"
+   ],
+   "lower": [
+    "R-CTW-A-108",
+    "R-RAP-A-201"
+   ],
+   "upper": [
+    "R-CTW-C-119",
+    "R-RAP-C-207"
+   ]
+  },
+  "L": {
+   "M1": [
+    "L-LCR-A-023",
+    "L-LCR-B-024",
+    "L-LCR-A-025",
+    "L-LCR-B-026",
+    "L-LCR-C-027",
+    "L-LCR-B-028",
+    "L-LCR-B-029",
+    "L-LCR-C-030",
+    "L-LCR-C-031",
+    "L-LCR-B-032",
+    "L-LCR-B-033",
+    "L-LCR-A-034",
+    "L-CONV-B-008",
+    "L-CONV-B-009",
+    "L-CONV-C-010",
+    "L-ANN-B-007",
+    "L-ANN-B-008",
+    "L-ANN-C-009",
+    "L-TALK-B-006",
+    "L-TALK-C-007"
+   ],
+   "lower": [
+    "L-LCR-A-035",
+    "L-LCR-B-036",
+    "L-LCR-A-037",
+    "L-LCR-A-038",
+    "L-LCR-A-039",
+    "L-CONV-B-011",
+    "L-CONV-A-012",
+    "L-ANN-A-010",
+    "L-TALK-B-008"
+   ],
+   "upper": [
+    "L-LCR-C-040",
+    "L-LCR-C-041",
+    "L-LCR-B-042",
+    "L-LCR-B-043",
+    "L-LCR-B-044",
+    "L-CONV-C-013",
+    "L-CONV-B-014",
+    "L-ANN-C-011",
+    "L-TALK-C-009"
+   ]
+  },
+  "W": {
+   "bas": [
+    "W-BAS-A-020",
+    "W-BAS-B-029",
+    "W-BAS-C-005",
+    "W-BAS-C-012",
+    "W-BAS-C-028",
+    "W-BAS-B-045",
+    "W-BAS-B-024",
+    "W-BAS-A-041",
+    "W-BAS-B-031",
+    "W-BAS-A-040"
+   ],
+   "eml": "W-EML-B-002",
+   "dsc": "W-DSC-C-016"
+  },
+  "S": {
+   "lrp": "S-LRP-B-006",
+   "int": "S-INT-B-007"
+  }
+ },
+ "T3": {
+  "title": "Пробник 3",
+  "R": {
+   "M1": [
+    "R-CTW-A-113",
+    "R-CTW-B-117",
+    "R-RDL-A-104",
+    "R-RDL-B-119",
+    "R-RAP-B-001",
+    "R-RAP-B-103"
+   ],
+   "lower": [
+    "R-CTW-A-101",
+    "R-RAP-A-002"
+   ],
+   "upper": [
+    "R-CTW-C-106",
+    "R-RAP-C-002"
+   ]
+  },
+  "L": {
+   "M1": [
+    "L-LCR-A-045",
+    "L-LCR-B-046",
+    "L-LCR-B-047",
+    "L-LCR-C-048",
+    "L-LCR-C-049",
+    "L-LCR-B-050",
+    "L-LCR-B-051",
+    "L-LCR-B-052",
+    "L-LCR-A-053",
+    "L-LCR-C-054",
+    "L-LCR-B-055",
+    "L-LCR-A-056",
+    "L-CONV-B-015",
+    "L-CONV-B-016",
+    "L-CONV-C-017",
+    "L-ANN-B-012",
+    "L-ANN-B-013",
+    "L-ANN-C-014",
+    "L-TALK-B-010",
+    "L-TALK-C-011"
+   ],
+   "lower": [
+    "L-LCR-A-057",
+    "L-LCR-A-058",
+    "L-LCR-B-059",
+    "L-LCR-A-060",
+    "L-LCR-A-061",
+    "L-CONV-B-018",
+    "L-CONV-A-019",
+    "L-ANN-A-015",
+    "L-TALK-B-012"
+   ],
+   "upper": [
+    "L-LCR-C-062",
+    "L-LCR-B-063",
+    "L-LCR-B-064",
+    "L-LCR-B-065",
+    "L-LCR-C-066",
+    "L-CONV-C-020",
+    "L-CONV-B-021",
+    "L-ANN-C-016",
+    "L-TALK-C-013"
+   ]
+  },
+  "W": {
+   "bas": [
+    "W-BAS-B-023",
+    "W-BAS-B-048",
+    "W-BAS-C-014",
+    "W-BAS-A-016",
+    "W-BAS-C-040",
+    "W-BAS-C-031",
+    "W-BAS-A-022",
+    "W-BAS-A-025",
+    "W-BAS-B-017",
+    "W-BAS-B-006"
+   ],
+   "eml": "W-EML-C-003",
+   "dsc": "W-DSC-B-011"
+  },
+  "S": {
+   "lrp": "S-LRP-B-007",
+   "int": "S-INT-B-008"
+  }
+ }
+}

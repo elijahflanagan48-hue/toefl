@@ -7,6 +7,8 @@ import * as src from '../data/source.js';
 import { ic } from '../lib/icons.js';
 import { esc } from '../lib/util.js';
 import { on, modal, closeModal, toast } from '../lib/ui.js';
+import { activeFlow } from '../lib/mockstate.js';
+import * as mockflow from '../lib/mockflow.js';
 
 const TASK = {
   lcr: { name: 'Listen and Choose a Response', limit: 8, sec: 20 },
@@ -14,16 +16,18 @@ const TASK = {
   lan: { name: 'Listen to an Announcement', limit: 3, sec: 30 },
   lat: { name: 'Listen to an Academic Talk', limit: 2, sec: 35 },
   types: { name: 'Тренажёр типа вопроса', limit: 5, sec: 30 },
-  mistakes: { name: 'Мои ошибки', limit: 5, sec: 30 }
+  mistakes: { name: 'Мои ошибки', limit: 5, sec: 30 },
+  mock: { name: 'Listening', limit: 99, sec: 30 } // full mock test: items fixed by the mock
 };
 const MODE = { learn: 'Учиться', timed: 'На время', mistakes: 'Мои ошибки' };
 const LETTERS = 'ABCD';
 let P = null, timer = null, audio = null;
 
 /* ---------------- session ---------------- */
-async function load(task, mode, qtype, exclude, bank) {
+async function load(task, mode, qtype, exclude, bank, mock = null) {
   let items = [], only = null;
-  if (task === 'mistakes' || mode === 'mistakes') {
+  if (mock) items = await src.mockPart(mock.mock, mock.part);
+  else if (task === 'mistakes' || mode === 'mistakes') {
     const m = await src.mistakes('L', task === 'mistakes' ? undefined : task);
     const pick = m.items.slice(0, TASK.mistakes.limit);
     items = await Promise.all(pick.map(x => src.item(x.item_id)));
@@ -195,6 +199,15 @@ async function finish() {
   clearInterval(timer); stopAudio();
   P.busy = true; closeModal();
   try {
+    if (P.mock) {
+      const module = P.mock.part === 'L:M1' ? 1 : 2;
+      await src.saveResponses(P.attemptId, qScreens().flatMap(responsesFor).map(x => ({ ...x, module })));
+      const r = P.mock.part === 'L:M1' ? await src.routeAttempt(P.attemptId, 'L') : null;
+      P.busy = false;
+      document.getElementById('app').innerHTML = '<div class="exam"><div class="xres-in"><div class="skel"></div></div></div>';
+      mockflow.advance(r ? { L: r.route } : null);
+      return;
+    }
     if (P.mode === 'timed') {
       const r = await src.practiceFinish(P.attemptId, qScreens().flatMap(responsesFor));
       P.results = r.responses.map(x => {
@@ -224,20 +237,25 @@ on('ls-play', () => { const s = P?.screens[P.at]; if (s && !isQ(s) && !P.played[
 on('ls-opt', el => { const s = P.screens[P.at]; if (!isQ(s) || checked(s)) return; P.ans[qid(s.it, s.i)] = +el.dataset.k; render(); });
 on('ls-check', check);
 on('ls-next', () => { if (P.mode === 'timed') { go(P.at + 1); return; } if (P.at < P.screens.length - 1) go(P.at + 1); else finish(); });
-on('ls-exit', () => modal(`<h2>Выйти из тренировки?</h2><p class="mut" style="margin-bottom:14px">${P.mode === 'timed' ? 'Ответы этого подхода не сохранятся.' : 'Проверенные ответы уже сохранены.'}</p>
+on('ls-exit', () => P.mock ? modal(`<h2>Выйти из пробника?</h2><p class="mut" style="margin-bottom:14px">Пройденные части сохранены, но пробник придётся начать заново.</p>
+  <a class="btn pri block" href="#/mock" data-act="ls-leave">Выйти</a><button class="btn ghost block" data-act="modal-close" style="margin-top:6px">Продолжить</button>`) : modal(`<h2>Выйти из тренировки?</h2><p class="mut" style="margin-bottom:14px">${P.mode === 'timed' ? 'Ответы этого подхода не сохранятся.' : 'Проверенные ответы уже сохранены.'}</p>
   <a class="btn pri block" href="#/train/L" data-act="modal-close">Выйти</a><button class="btn ghost block" data-act="modal-close" style="margin-top:6px">Продолжить</button>`));
+on('ls-leave', () => { mockflow.quit(); closeModal(); });
 on('ls-again', () => { start(P.task, P.mode, P.qtype, P.items.map(i => i.id), P.bank); });
 
 async function start(task, mode, qtype, exclude = [], bank) {
   clearInterval(timer); stopAudio();
-  const title = task === 'types' ? qtype : TASK[task].name;
-  P = { task, mode, qtype, bank, title, section: 'L', items: [], screens: [], at: 0, ans: {}, fb: {}, log: [], results: null, busy: false, played: {}, playing: false, left: 0 };
+  const fl = task === 'mock' ? activeFlow() : null;
+  const mock = fl ? { mock: fl.mock, part: new URLSearchParams(location.hash.split('?')[1] || '').get('part'), attempt: fl.attempt } : null;
+  if (task === 'mock') mode = 'timed';
+  const title = mock ? 'Listening · Module ' + (mock.part === 'L:M1' ? 1 : 2) : task === 'types' ? qtype : TASK[task].name;
+  P = { task, mode, qtype, bank, mock, title, section: 'L', items: [], screens: [], at: 0, ans: {}, fb: {}, log: [], results: null, busy: false, played: {}, playing: false, left: 0 };
   document.getElementById('app').innerHTML = `<div class="exam"><div class="xbar"><div class="xb-l"><span class="xsec">${esc(title)}</span></div></div><div class="xres-in"><div class="skel"></div></div></div>`;
   try {
-    const { items, screens } = await load(task, mode, qtype, exclude, bank);
+    const { items, screens } = await load(task, mode, qtype, exclude, bank, mock);
     Object.assign(P, { items, screens });
     if (screens.length) {
-      const a = await src.practiceStart({ mode: mode === 'mistakes' ? 'mistakes' : mode, section: 'L', task: task === 'types' || task === 'mistakes' ? null : task });
+      const a = mock ? { id: mock.attempt } : await src.practiceStart({ mode: mode === 'mistakes' ? 'mistakes' : mode, section: 'L', task: task === 'types' || task === 'mistakes' ? null : task });
       P.attemptId = a.id;
       if (mode === 'timed') { P.left = secFor(screens[0]); timer = setInterval(tick, 1000); }
     }

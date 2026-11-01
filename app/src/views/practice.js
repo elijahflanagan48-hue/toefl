@@ -5,6 +5,8 @@ import * as src from '../data/source.js';
 import { ic } from '../lib/icons.js';
 import { esc, mmss } from '../lib/util.js';
 import { on, modal, closeModal, toast } from '../lib/ui.js';
+import { activeFlow } from '../lib/mockstate.js';
+import * as mockflow from '../lib/mockflow.js';
 
 const TASK = {
   ctw: { name: 'Complete the Words', per: 1, limit: 2, sec: 150 },
@@ -12,16 +14,20 @@ const TASK = {
   rap: { name: 'Read an Academic Passage', limit: 1, sec: 50 },
   bas: { name: 'Build a Sentence', limit: 10, sec: 35, section: 'W' },
   types: { name: 'Тренажёр типа вопроса', limit: 6, sec: 50 },
-  mistakes: { name: 'Мои ошибки', limit: 5, sec: 50 }
+  mistakes: { name: 'Мои ошибки', limit: 5, sec: 50 },
+  mock: { name: 'Пробник', limit: 99, sec: 40 } // full mock test: R modules and Build a Sentence, items fixed by the mock
 };
+const MOCK_TIME = { 'R:M1': 20 * 60, 'R:lower': 9 * 60, 'R:upper': 9 * 60, 'W:bas': 6 * 60 };
+const MOCK_TITLE = { 'R:M1': 'Reading · Module 1', 'R:lower': 'Reading · Module 2', 'R:upper': 'Reading · Module 2', 'W:bas': 'Writing · Build a Sentence' };
 const MODE = { learn: 'Учиться', timed: 'На время', mistakes: 'Мои ошибки' };
 const LETTERS = 'ABCD';
 let P = null, timer = null;
 
 /* ---------------- session ---------------- */
-async function load(task, mode, qtype, exclude = [], section = 'R') {
+async function load(task, mode, qtype, exclude = [], section = 'R', mock = null) {
   let items = [], only = null;
-  if (task === 'mistakes' || mode === 'mistakes') {
+  if (mock) items = await src.mockPart(mock.mock, mock.part);
+  else if (task === 'mistakes' || mode === 'mistakes') {
     const m = await src.mistakes(section, task === 'mistakes' ? undefined : task);
     const pick = m.items.slice(0, TASK.mistakes.limit);
     items = await Promise.all(pick.map(x => src.item(x.item_id)));
@@ -319,6 +325,15 @@ async function finish() {
   clearInterval(timer);
   P.busy = true; closeModal();
   try {
+    if (P.mock) {
+      const module = P.mock.part === 'R:M1' || P.mock.part === 'W:bas' ? 1 : 2;
+      await src.saveResponses(P.attemptId, P.screens.flatMap(responsesFor).map(x => ({ ...x, module })));
+      const r = P.mock.part === 'R:M1' ? await src.routeAttempt(P.attemptId, 'R') : null;
+      P.busy = false; P.results = null;
+      document.getElementById('app').innerHTML = '<div class="exam"><div class="xres-in"><div class="skel"></div></div></div>';
+      mockflow.advance(r ? { R: r.route } : null);
+      return;
+    }
     if (P.mode === 'timed') {
       const all = P.screens.flatMap(responsesFor);
       const r = await src.practiceFinish(P.attemptId, all);
@@ -358,8 +373,10 @@ on('pr-back', () => go(P.at - 1));
 on('pr-review', () => modal(`<h2>Review</h2><div class="xrev">${P.screens.map((s, k) => `<button class="${answered(s) ? 'a' : ''} ${k === P.at ? 'cur' : ''}" data-act="pr-goto" data-k="${k}"><b>${k + 1}</b><span>${answered(s) ? 'Answered' : 'Not answered'}</span></button>`).join('')}</div>
   <button class="btn block" data-act="modal-close" style="margin-top:14px">Return</button>`));
 on('pr-goto', el => { closeModal(); go(+el.dataset.k); });
-on('pr-exit', () => modal(`<h2>Выйти из тренировки?</h2><p class="mut" style="margin-bottom:14px">${P.mode === 'timed' ? 'Ответы этого подхода не сохранятся.' : 'Проверенные ответы уже сохранены.'}</p>
+on('pr-exit', () => P.mock ? modal(`<h2>Выйти из пробника?</h2><p class="mut" style="margin-bottom:14px">Пройденные части сохранены, но пробник придётся начать заново.</p>
+  <a class="btn pri block" href="#/mock" data-act="pr-leave">Выйти</a><button class="btn ghost block" data-act="modal-close" style="margin-top:6px">Продолжить</button>`) : modal(`<h2>Выйти из тренировки?</h2><p class="mut" style="margin-bottom:14px">${P.mode === 'timed' ? 'Ответы этого подхода не сохранятся.' : 'Проверенные ответы уже сохранены.'}</p>
   <a class="btn pri block" href="#/train/${P.section}" data-act="modal-close">Выйти</a><button class="btn ghost block" data-act="modal-close" style="margin-top:6px">Продолжить</button>`));
+on('pr-leave', () => { mockflow.quit(); closeModal(); });
 on('pr-again', () => { const seen = P.items.map(i => i.id); start(P.task, P.mode, P.qtype, seen, P.section); });
 
 function onInput(e) {
@@ -384,17 +401,20 @@ function tick() {
 
 async function start(task, mode, qtype, exclude = [], section = 'R') {
   clearInterval(timer);
-  const title = task === 'types' ? qtype : TASK[task].name;
-  P = { task, mode, qtype, title, section, items: [], screens: [], at: 0, ans: {}, fb: {}, log: [], results: null, busy: false };
+  const fl = task === 'mock' ? activeFlow() : null;
+  const mock = fl ? { mock: fl.mock, part: new URLSearchParams(location.hash.split('?')[1] || '').get('part'), attempt: fl.attempt } : null;
+  if (task === 'mock') { mode = 'timed'; if (mock) section = mock.part[0]; }
+  const title = mock ? MOCK_TITLE[mock.part] || 'Пробник' : task === 'types' ? qtype : TASK[task].name;
+  P = { task, mode, qtype, title, section, mock, items: [], screens: [], at: 0, ans: {}, fb: {}, log: [], results: null, busy: false };
   document.getElementById('app').innerHTML = `<div class="exam"><div class="xbar"><div class="xb-l"><span class="xsec">${esc(title)}</span></div></div><div class="xres-in"><div class="skel"></div></div></div>`;
   try {
-    const { items, screens } = await load(task, mode, qtype, exclude, P.section);
+    const { items, screens } = await load(task, mode, qtype, exclude, P.section, mock);
     Object.assign(P, { items, screens });
     if (screens.length) {
-      const a = await src.practiceStart({ mode: mode === 'mistakes' ? 'mistakes' : mode, section: P.section, task: task === 'types' || task === 'mistakes' ? null : task });
+      const a = mock ? { id: mock.attempt } : await src.practiceStart({ mode: mode === 'mistakes' ? 'mistakes' : mode, section: P.section, task: task === 'types' || task === 'mistakes' ? null : task });
       P.attemptId = a.id;
       if (mode === 'timed') {
-        P.left = screens.reduce((t, s) => t + (s.kind === 'ctw' ? TASK.ctw.sec : (TASK[s.it.task]?.sec || 45)), 0);
+        P.left = mock ? (MOCK_TIME[mock.part] || 600) : screens.reduce((t, s) => t + (s.kind === 'ctw' ? TASK.ctw.sec : (TASK[s.it.task]?.sec || 45)), 0);
         timer = setInterval(tick, 1000);
       }
     }

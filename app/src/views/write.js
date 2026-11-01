@@ -9,6 +9,8 @@ import { on, modal, closeModal, toast } from '../lib/ui.js';
 import { pref } from '../lib/store.js';
 import { isLive } from '../lib/api.js';
 import { WTASK, countWords, promptBlock } from '../lib/writing.js';
+import { activeFlow } from '../lib/mockstate.js';
+import * as mockflow from '../lib/mockflow.js';
 
 const TIPS = {
   eml: ['Первая фраза — зачем вы пишете.', 'По 1–3 предложения на каждый из трёх пунктов, в том же порядке.', 'Вежливые формулы по ситуации: Could you…?, I would appreciate it if…, I was wondering whether…', 'Завершение и подпись: Thank you for your help. Best regards, …', 'Ориентир — 100–150 слов. Последнюю минуту оставьте на проверку ошибок.'],
@@ -19,6 +21,8 @@ let W = null, timer = null;
 const draftKey = () => 'wdraft.' + W.item.id;
 
 async function load(task, exclude) {
+  const f = activeFlow();
+  if (f) return (await src.mockPart(f.mock, 'W:' + task))[0] || null; // full mock test: fixed item
   const r = await src.practiceItems({ section: 'W', task, limit: 1, exclude, level: null });
   return r.items[0] || null;
 }
@@ -92,7 +96,7 @@ function render() {
   root.innerHTML = `<div class="exam writing">${bar()}
     <div class="xbody two">
       <div class="xpane left">${promptBlock(W.task, W.item.body)}${tips}
-        ${W.text ? '' : `<button class="lnk sm wother" data-act="w-other">${ic('repeat', 14)} Другое задание</button>`}</div>
+        ${W.text || activeFlow() ? '' : `<button class="lnk sm wother" data-act="w-other">${ic('repeat', 14)} Другое задание</button>`}</div>
       <div class="xpane right weditor">${editor()}</div>
     </div></div>`;
 }
@@ -120,7 +124,9 @@ async function submit(auto = false) {
     const r = text ? await src.submitWriting({ task: W.task, item_id: W.item.id, prompt: W.item.body, text, seconds: W.used }) : null;
     pref.set(draftKey(), null);
     W.done = { id: r?.id || null, words: countWords(text), text: text || '(пусто)', auto };
-    closeModal(); render();
+    closeModal();
+    if (activeFlow()) { mockflow.advance(); return; }
+    render();
   } catch (e) {
     W.sending = false; toast(e.message);
     if (!auto) timer = setInterval(tick, 1000);
@@ -146,8 +152,10 @@ on('w-submit', () => {
     <div class="row-btns"><button class="btn" data-act="modal-close">Продолжить писать</button><button class="btn pri" data-act="w-confirm">Отправить</button></div>`);
 });
 on('w-confirm', () => submit(false));
+on('w-leave', () => { mockflow.quit(); closeModal(); });
 on('w-again', () => start(W.task, W.mode));
-on('w-exit', () => modal(`<h2>Выйти?</h2><p class="mut" style="margin-bottom:14px">Черновик сохранится на этом устройстве, но таймер начнётся заново.</p>
+on('w-exit', () => activeFlow() ? modal(`<h2>Выйти из пробника?</h2><p class="mut" style="margin-bottom:14px">Пройденные части сохранены, но пробник придётся начать заново.</p>
+  <div class="row-btns"><button class="btn" data-act="modal-close">Остаться</button><a class="btn pri" href="#/mock" data-act="w-leave">Выйти</a></div>`) : modal(`<h2>Выйти?</h2><p class="mut" style="margin-bottom:14px">Черновик сохранится на этом устройстве, но таймер начнётся заново.</p>
   <div class="row-btns"><button class="btn" data-act="modal-close">Остаться</button><a class="btn pri" href="#/train/W">Выйти</a></div>`));
 
 function onInput(e) {

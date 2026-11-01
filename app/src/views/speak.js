@@ -7,6 +7,8 @@ import { esc } from '../lib/util.js';
 import { on, modal, closeModal, toast } from '../lib/ui.js';
 import { isLive } from '../lib/api.js';
 import * as rec from '../lib/rec.js';
+import { activeFlow } from '../lib/mockstate.js';
+import * as mockflow from '../lib/mockflow.js';
 
 const NAME = { lrp: 'Listen and Repeat', int: 'Take an Interview' };
 const LRP_LIMIT = [8, 8, 10, 10, 10, 12, 12];
@@ -19,6 +21,8 @@ const alive = tok => S && tok === run;
 const lines = () => (S.task === 'lrp' ? S.item.body.sentences : S.item.body.questions);
 
 async function load(exclude) {
+  const f = activeFlow();
+  if (f) return (await src.mockPart(f.mock, 'S:' + S.task))[0] || null; // full mock test: fixed item
   const r = await src.practiceItems({ section: 'S', task: S.task, limit: 1, exclude, level: null });
   return r.items[0] || null;
 }
@@ -199,6 +203,7 @@ async function finish(tok) {
   try { await src.submitSpeaking(S.subId); }
   catch (e) { S.err = e.message; S.phase = 'send'; render(); return; }
   rec.releaseMic();
+  if (activeFlow()) { mockflow.advance(); return; }
   S.phase = 'done'; render();
 }
 on('s-retry', () => {
@@ -208,11 +213,13 @@ on('s-retry', () => {
 });
 on('s-again', () => start(S.task, S.mode));
 on('s-exit', () => {
+  if (activeFlow()) { modal(`<h2>Выйти из пробника?</h2><p class="mut" style="margin-bottom:14px">Пройденные части сохранены, но пробник придётся начать заново.</p>
+    <div class="row-btns"><button class="btn" data-act="modal-close">Остаться</button><a class="btn pri" href="#/mock" data-act="s-leave">Выйти</a></div>`); return; }
   if (!S || S.phase === 'mic' || S.phase === 'intro' || S.phase === 'done' || S.phase === 'empty') { location.hash = '#/train/S'; return; }
   modal(`<h2>Выйти из задания?</h2><p class="mut" style="margin-bottom:14px">Записанные ответы не будут отправлены учителю.</p>
     <div class="row-btns"><button class="btn" data-act="modal-close">Остаться</button><a class="btn pri" href="#/train/S" data-act="s-leave">Выйти</a></div>`);
 });
-on('s-leave', () => closeModal());
+on('s-leave', () => { mockflow.quit(); closeModal(); });
 
 export default function speak(params) {
   const task = NAME[params[0]] ? params[0] : 'int';

@@ -5,6 +5,7 @@ import * as M from './mock.js';
 import { api, get, post, put, patch, isLive, loadMe, session } from '../lib/api.js';
 import { overallBand } from '../lib/util.js';
 import { assignLink } from '../lib/assign.js';
+import { mockAttemptId } from '../lib/mockstate.js';
 /** assignment the student arrived from (…?a=ID), stored with attempts and submissions */
 const aid = () => Number(new URLSearchParams(location.hash.split('?')[1] || '').get('a')) || undefined;
 // demo content is loaded only in demo mode (separate chunk)
@@ -64,7 +65,7 @@ export async function mocks() {
   if (!isLive()) return M.mocks;
   const r = await get('/me/attempts');
   return r.attempts.filter(a => a.finished_at && a.kind !== 'practice').reverse().map(a => ({
-    date: dayLabel(a.finished_at), kind: KIND[a.kind] + (a.section ? ' · ' + ({ R: 'Reading', L: 'Listening', W: 'Writing', S: 'Speaking' })[a.section] : ''),
+    id: a.id, isMock: a.kind === 'mock', date: dayLabel(a.finished_at), kind: (a.kind === 'mock' ? 'Пробник ' + String(a.task || '').replace(/^T/, '') : KIND[a.kind]) + (a.section ? ' · ' + ({ R: 'Reading', L: 'Listening', W: 'Writing', S: 'Speaking' })[a.section] : ''),
     R: a.bands?.R ?? null, L: a.bands?.L ?? null, W: a.bands?.W ?? null, S: a.bands?.S ?? null, route: a.route?.R || null
   }));
 }
@@ -111,7 +112,7 @@ export async function mySpeakingItems() {
 }
 export async function createSpeaking({ task, item_id, prompt, parts }) {
   if (!isLive()) return { id: null };
-  return post('/submissions', { section: 'S', task, item_id, prompt, parts, assignment_id: aid() });
+  return post('/submissions', { section: 'S', task, item_id, prompt, parts, assignment_id: aid(), attempt_id: mockAttemptId() });
 }
 export async function uploadAudio(subId, part, blob, ms) {
   if (!isLive() || !subId) return null;
@@ -120,7 +121,7 @@ export async function uploadAudio(subId, part, blob, ms) {
 export const submitSpeaking = subId => (isLive() && subId ? post(`/submissions/${subId}/submit`) : null);
 export async function submitWriting({ task, item_id, prompt, text }) {
   if (!isLive()) return { id: null, status: 'demo' };
-  return post('/submissions', { section: 'W', task, item_id, prompt, text, assignment_id: aid() });
+  return post('/submissions', { section: 'W', task, item_id, prompt, text, assignment_id: aid(), attempt_id: mockAttemptId() });
 }
 
 export async function submission(id) {
@@ -149,6 +150,11 @@ export async function routeAttempt(id, section) { if (!isLive() || !id) return n
 export async function finishAttempt(id) { if (!isLive() || !id) return null; return post(`/attempts/${id}/finish`); }
 
 export { overallBand };
+
+/* ---------------- full mock tests ---------------- */
+export async function mockList() { if (!isLive()) return []; return (await get('/mocks')).mocks; }
+export async function mockPart(mockId, part) { return (await get(`/mocks/${mockId}/part?part=${encodeURIComponent(part)}`)).items; }
+export async function mockSummary(attemptId) { return get(`/attempts/${attemptId}/summary`); }
 
 /* ---------------- practice (item bank) ---------------- */
 const demoAttempts = {};
