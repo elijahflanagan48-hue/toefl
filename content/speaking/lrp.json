@@ -1,14 +1,302 @@
 [
-{"id":"S-LRP-A-001","level":"A","title":"Library volunteer","scenario":"You are a new volunteer at a college library. A librarian is showing you how to help visitors.","sentences":["Please welcome visitors at the front desk.","Show them where the quiet study rooms are.","Visitors with a student card can borrow up to five books.","If a book is late, please ask the visitor to pay a fee.","The printers on the second floor are free for all students.","Anyone looking for old newspapers should ask the basement librarian.","Remind everyone to return their books before the library closes."]},
-{"id":"S-LRP-A-002","level":"A","title":"Campus café trainee","scenario":"You are a new worker at the campus café. The manager is explaining the rules of the job.","sentences":["Always wash your hands before starting work.","Greet every customer with a smile.","Write each order clearly on a card and give it to the cook.","Please keep the counter clean and put the cups back on the shelf.","If a customer has an allergy, ask the manager first.","The coffee machine must be turned off and cleaned at the end of every evening.","On busy days, you can take a short break after you finish the lunch rush."]},
-{"id":"S-LRP-A-003","level":"A","title":"Dormitory helper","scenario":"You are a student helper at a dormitory. A resident advisor is training you to welcome new students.","sentences":["Give each new student a key and a folder.","Show them where the laundry room is located.","Remind them that visitors must leave the building by ten o'clock.","The kitchen on each floor is shared by all of the residents.","If students lose their keys, they should contact the front office right away.","Please tell them that the heating in every room can be controlled with the small dial.","Students who need help with their luggage can ask a volunteer wearing a green badge."]},
-{"id":"S-LRP-A-004","level":"A","title":"Laboratory safety","scenario":"You are assisting in a chemistry laboratory. A teaching assistant is explaining the safety rules.","sentences":["Always wear your safety glasses in the lab.","Tie back your hair before you begin.","Never taste or smell any of the chemicals in the lab.","If something spills, tell your instructor and leave the area.","Put used glass into the special box, not into the trash.","After class, wash your hands and return all equipment to the correct shelf.","Students who have long sleeves should roll them up so they do not touch the burners."]},
-{"id":"S-LRP-B-005","level":"B","title":"Science museum guide","scenario":"You are a volunteer guide at a college science museum. A coordinator is training you to talk to visitors.","sentences":["Welcome the visitors to the museum.","Explain how to use the exhibits.","The dinosaur exhibit is located on the second floor.","Young children must always be accompanied by an adult.","Please ask visitors not to touch the fragile glass cases.","The gift shop near the exit sells books, posters, and small science kits for children.","If you cannot answer a question, politely suggest asking a staff member."]},
-{"id":"S-LRP-B-006","level":"B","title":"International student ambassador","scenario":"You are a student ambassador at the international office. A staff member is training you to give advice to new students.","sentences":["Check your university email daily.","Bring your passport and visa to the office.","The campus bank offers special accounts for new students.","Students can join a conversation group to practice speaking English.","If you have questions about classes, visit your advisor.","You must register for all of your courses online before the first week ends.","Many students visit the writing center, where tutors review their essays."]},
-{"id":"S-LRP-B-007","level":"B","title":"Psychology survey assistant","scenario":"You are a student assistant in a psychology department. A professor is explaining how to run a short survey.","sentences":["Please greet each participant politely.","Explain that the survey is voluntary.","Participants should sign a consent form before the survey begins.","The questionnaire takes about fifteen minutes to complete.","If someone feels uncomfortable, they may stop at any time.","After each session, thank the participant and write the date in the notebook.","Please keep all the finished answer sheets in the locked cabinet every evening."]},
-{"id":"S-LRP-B-008","level":"B","title":"Campus tour guide","scenario":"You are leading a campus tour for prospective students. A tour manager is reviewing what to say at each stop.","sentences":["Begin by introducing yourself.","The library is open until midnight.","The science building has modern laboratories for students.","Most first-year students live in the residence halls near the sports center.","Lunch is served in the dining hall from eleven thirty until two.","Students can join one of over a hundred clubs that meet in the union.","Questions about applying can be sent to the admissions office directly."]},
-{"id":"S-LRP-C-009","level":"C","title":"Conference volunteer","scenario":"You are volunteering at an academic conference. The organizer is explaining your responsibilities.","sentences":["Please check each guest's name badge carefully.","Direct guests to the registration desk.","Speakers must arrive early to test their presentation equipment.","Lunch is provided for registered participants only.","The poster session takes place in the east wing of the building.","Anyone having difficulty hearing should be directed to the front seats.","If a technical problem occurs, tell the coordinator right away."]},
-{"id":"S-LRP-C-010","level":"C","title":"Student newspaper intern","scenario":"You are an intern at the student newspaper. An editor is explaining how to prepare for an interview.","sentences":["Research your subject thoroughly beforehand.","Prepare questions that need detailed answers.","Always ask permission before recording a conversation.","Listen closely, since good questions often follow answers.","Take notes by hand as well, in case the recording does not work.","Afterward, send a brief message to thank the person and confirm the quotations.","Every claim in an article should be supported by a reliable source."]},
-{"id":"S-LRP-C-011","level":"C","title":"Water-testing project","scenario":"You are a research assistant in an environmental science laboratory. A professor is describing a water-testing project.","sentences":["We collect samples from the river weekly.","Label each bottle with the date and place.","The samples must be kept cold until they reach the laboratory.","Measure the temperature and acidity of the water first.","Record each measurement carefully in your field notebook.","Because the instruments are sensitive, carry them in the protective case.","If the readings differ greatly from last week's results, repeat the test again."]},
-{"id":"S-LRP-C-012","level":"C","title":"Teaching assistant duties","scenario":"You are a teaching assistant for an introductory economics course. The instructor is explaining your duties.","sentences":["Please arrive ten minutes before class.","Hand out the problem sets at the door.","Students often ask what the final exam will cover.","Direct those questions to me instead of answering them yourself.","Weekly tutorials are held on Tuesday and Thursday afternoons.","Please explain to students that late assignments lose ten percent for each day.","At the end of the semester, you will help organize the final projects."]}
+ {
+  "id": "S-LRP-A-001",
+  "level": "A",
+  "title": "Library volunteer",
+  "scenario": "You are a new volunteer at a college library. A librarian is showing you how to help visitors.",
+  "sentences": [
+   "Please welcome visitors at the front desk.",
+   "Show them where the quiet study rooms are.",
+   "Visitors with a student card can borrow up to five books.",
+   "If a book is late, please ask the visitor to pay a fee.",
+   "The printers on the second floor are free for all students.",
+   "Anyone looking for old newspapers should ask the basement librarian.",
+   "Remind everyone to return their books before the library closes."
+  ]
+ },
+ {
+  "id": "S-LRP-A-002",
+  "level": "A",
+  "title": "Campus café trainee",
+  "scenario": "You are a new worker at the campus café. The manager is explaining the rules of the job.",
+  "sentences": [
+   "Always wash your hands before starting work.",
+   "Greet every customer with a smile.",
+   "Write each order clearly on a card and give it to the cook.",
+   "Please keep the counter clean and put the cups back on the shelf.",
+   "If a customer has an allergy, ask the manager first.",
+   "The coffee machine must be turned off and cleaned at the end of every evening.",
+   "On busy days, you can take a short break after you finish the lunch rush."
+  ]
+ },
+ {
+  "id": "S-LRP-A-003",
+  "level": "A",
+  "title": "Dormitory helper",
+  "scenario": "You are a student helper at a dormitory. A resident advisor is training you to welcome new students.",
+  "sentences": [
+   "Give each new student a key and a folder.",
+   "Show them where the laundry room is located.",
+   "Remind them that visitors must leave the building by ten o'clock.",
+   "The kitchen on each floor is shared by all of the residents.",
+   "If students lose their keys, they should contact the front office right away.",
+   "Please tell them that the heating in every room can be controlled with the small dial.",
+   "Students who need help with their luggage can ask a volunteer wearing a green badge."
+  ]
+ },
+ {
+  "id": "S-LRP-A-004",
+  "level": "A",
+  "title": "Laboratory safety",
+  "scenario": "You are assisting in a chemistry laboratory. A teaching assistant is explaining the safety rules.",
+  "sentences": [
+   "Always wear your safety glasses in the lab.",
+   "Tie back your hair before you begin.",
+   "Never taste or smell any of the chemicals in the lab.",
+   "If something spills, tell your instructor and leave the area.",
+   "Put used glass into the special box, not into the trash.",
+   "After class, wash your hands and return all equipment to the correct shelf.",
+   "Students who have long sleeves should roll them up so they do not touch the burners."
+  ]
+ },
+ {
+  "id": "S-LRP-B-005",
+  "level": "B",
+  "title": "Science museum guide",
+  "scenario": "You are a volunteer guide at a college science museum. A coordinator is training you to talk to visitors.",
+  "sentences": [
+   "Welcome the visitors to the museum.",
+   "Explain how to use the exhibits.",
+   "The dinosaur exhibit is located on the second floor.",
+   "Young children must always be accompanied by an adult.",
+   "Please ask visitors not to touch the fragile glass cases.",
+   "The gift shop near the exit sells books, posters, and small science kits for children.",
+   "If you cannot answer a question, politely suggest asking a staff member."
+  ]
+ },
+ {
+  "id": "S-LRP-B-006",
+  "level": "B",
+  "title": "International student ambassador",
+  "scenario": "You are a student ambassador at the international office. A staff member is training you to give advice to new students.",
+  "sentences": [
+   "Check your university email daily.",
+   "Bring your passport and visa to the office.",
+   "The campus bank offers special accounts for new students.",
+   "Students can join a conversation group to practice speaking English.",
+   "If you have questions about classes, visit your advisor.",
+   "You must register for all of your courses online before the first week ends.",
+   "Many students visit the writing center, where tutors review their essays."
+  ]
+ },
+ {
+  "id": "S-LRP-B-007",
+  "level": "B",
+  "title": "Psychology survey assistant",
+  "scenario": "You are a student assistant in a psychology department. A professor is explaining how to run a short survey.",
+  "sentences": [
+   "Please greet each participant politely.",
+   "Explain that the survey is voluntary.",
+   "Participants should sign a consent form before the survey begins.",
+   "The questionnaire takes about fifteen minutes to complete.",
+   "If someone feels uncomfortable, they may stop at any time.",
+   "After each session, thank the participant and write the date in the notebook.",
+   "Please keep all the finished answer sheets in the locked cabinet every evening."
+  ]
+ },
+ {
+  "id": "S-LRP-B-008",
+  "level": "B",
+  "title": "Campus tour guide",
+  "scenario": "You are leading a campus tour for prospective students. A tour manager is reviewing what to say at each stop.",
+  "sentences": [
+   "Begin by introducing yourself.",
+   "The library is open until midnight.",
+   "The science building has modern laboratories for students.",
+   "Most first-year students live in the residence halls near the sports center.",
+   "Lunch is served in the dining hall from eleven thirty until two.",
+   "Students can join one of over a hundred clubs that meet in the union.",
+   "Questions about applying can be sent to the admissions office directly."
+  ]
+ },
+ {
+  "id": "S-LRP-C-009",
+  "level": "C",
+  "title": "Conference volunteer",
+  "scenario": "You are volunteering at an academic conference. The organizer is explaining your responsibilities.",
+  "sentences": [
+   "Please check each guest's name badge carefully.",
+   "Direct guests to the registration desk.",
+   "Speakers must arrive early to test their presentation equipment.",
+   "Lunch is provided for registered participants only.",
+   "The poster session takes place in the east wing of the building.",
+   "Anyone having difficulty hearing should be directed to the front seats.",
+   "If a technical problem occurs, tell the coordinator right away."
+  ]
+ },
+ {
+  "id": "S-LRP-C-010",
+  "level": "C",
+  "title": "Student newspaper intern",
+  "scenario": "You are an intern at the student newspaper. An editor is explaining how to prepare for an interview.",
+  "sentences": [
+   "Research your subject thoroughly beforehand.",
+   "Prepare questions that need detailed answers.",
+   "Always ask permission before recording a conversation.",
+   "Listen closely, since good questions often follow answers.",
+   "Take notes by hand as well, in case the recording does not work.",
+   "Afterward, send a brief message to thank the person and confirm the quotations.",
+   "Every claim in an article should be supported by a reliable source."
+  ]
+ },
+ {
+  "id": "S-LRP-C-011",
+  "level": "C",
+  "title": "Water-testing project",
+  "scenario": "You are a research assistant in an environmental science laboratory. A professor is describing a water-testing project.",
+  "sentences": [
+   "We collect samples from the river weekly.",
+   "Label each bottle with the date and place.",
+   "The samples must be kept cold until they reach the laboratory.",
+   "Measure the temperature and acidity of the water first.",
+   "Record each measurement carefully in your field notebook.",
+   "Because the instruments are sensitive, carry them in the protective case.",
+   "If the readings differ greatly from last week's results, repeat the test again."
+  ]
+ },
+ {
+  "id": "S-LRP-C-012",
+  "level": "C",
+  "title": "Teaching assistant duties",
+  "scenario": "You are a teaching assistant for an introductory economics course. The instructor is explaining your duties.",
+  "sentences": [
+   "Please arrive ten minutes before class.",
+   "Hand out the problem sets at the door.",
+   "Students often ask what the final exam will cover.",
+   "Direct those questions to me instead of answering them yourself.",
+   "Weekly tutorials are held on Tuesday and Thursday afternoons.",
+   "Please explain to students that late assignments lose ten percent for each day.",
+   "At the end of the semester, you will help organize the final projects."
+  ]
+ },
+ {
+  "id": "S-LRP-B-013",
+  "level": "B",
+  "title": "Recycling center",
+  "scenario": "You are helping at the campus recycling center. The supervisor is explaining how to sort items for incoming students.",
+  "sentences": [
+   "Please sort the plastic bottles by color.",
+   "Paper goes into the blue containers.",
+   "Cardboard boxes should be flattened before they go in the bin.",
+   "Glass containers need to be rinsed and placed on the top shelf.",
+   "If you are unsure about an item, ask the supervisor.",
+   "Batteries and other electronic devices should go to the front desk.",
+   "Before you leave, please make sure each container is empty and the lid is closed."
+  ]
+ },
+ {
+  "id": "S-LRP-B-014",
+  "level": "B",
+  "title": "IT help desk",
+  "scenario": "You have a part-time job at the campus IT help desk. A supervisor is training you to assist students with common problems.",
+  "sentences": [
+   "Greet each student and ask for a name.",
+   "Check whether the printer has paper.",
+   "Most wireless problems can be fixed by restarting the router.",
+   "Students who forget their passwords must show a valid student card.",
+   "If a laptop will not turn on, plug it in for ten minutes first.",
+   "Please tell students that the library lends tablets and chargers for up to three days.",
+   "At closing time, record every repair in the log and lock the cabinet."
+  ]
+ },
+ {
+  "id": "S-LRP-B-015",
+  "level": "B",
+  "title": "Career fair volunteer",
+  "scenario": "You are volunteering at a university career fair. A coordinator is explaining how to welcome employers and students.",
+  "sentences": [
+   "Welcome each employer at the entrance.",
+   "Give every visitor a name tag.",
+   "Employers are seated at tables arranged by industry.",
+   "Please direct students to the resume workshop in the small hall.",
+   "If a representative needs water, bring it to their table.",
+   "Students should bring several copies of their resumes and a list of questions.",
+   "When the fair closes, help the employers pack up their displays carefully."
+  ]
+ },
+ {
+  "id": "S-LRP-B-016",
+  "level": "B",
+  "title": "Fitness center desk",
+  "scenario": "You are working at the front desk of the campus fitness center. The manager is describing your responsibilities.",
+  "sentences": [
+   "Scan each student's card at the door.",
+   "Towels are available near the lockers.",
+   "Group classes fill up quickly, so students should reserve a spot online.",
+   "Visitors must pay a small fee unless a member brings them.",
+   "Please remind everyone to wipe the machines after using them.",
+   "If you notice any damaged equipment, put a sign on it and tell me.",
+   "The pool closes for cleaning every Wednesday, so please empty your locker by noon."
+  ]
+ },
+ {
+  "id": "S-LRP-B-017",
+  "level": "B",
+  "title": "Campus radio station",
+  "scenario": "You are a new volunteer at the campus radio station. A student manager is showing you how the studio works.",
+  "sentences": [
+   "Turn on the microphone before you speak.",
+   "Keep your headphones on during the show.",
+   "Each program begins with a short introduction and the news.",
+   "Please choose music that is appropriate for all listeners.",
+   "If a guest arrives early, offer them a seat in the lounge.",
+   "Never open the studio door while the red light above it is shining.",
+   "After your show, save the recording and write the song list on the schedule board."
+  ]
+ },
+ {
+  "id": "S-LRP-B-018",
+  "level": "B",
+  "title": "Campus bookstore",
+  "scenario": "You are working at the campus bookstore at the start of the semester. The manager is explaining how to help customers.",
+  "sentences": [
+   "Ask students which courses they are taking.",
+   "Used books are cheaper than new ones.",
+   "Textbooks can be returned within two weeks with a receipt.",
+   "Please restock the popular titles every morning.",
+   "Students can sell their old books back at the counter near the entrance.",
+   "Customers who want a discount should show a student card before they pay.",
+   "If a book is out of stock, take the customer's email so the store can order it."
+  ]
+ },
+ {
+  "id": "S-LRP-B-019",
+  "level": "B",
+  "title": "Community garden",
+  "scenario": "You are volunteering at a community garden run by the university. The garden leader is explaining the weekly tasks.",
+  "sentences": [
+   "Water the plants early in the morning.",
+   "Pull out the weeds around the tomatoes.",
+   "Vegetables are picked on Fridays and shared with families.",
+   "Please wear gloves and a hat when you work outside in the sun.",
+   "Please return all of the tools to the shed before you leave.",
+   "New volunteers should ask a leader before they plant anything in the empty beds.",
+   "During the summer, the garden hosts workshops where neighbors learn how to grow their own food."
+  ]
+ },
+ {
+  "id": "S-LRP-B-020",
+  "level": "B",
+  "title": "Admissions office intern",
+  "scenario": "You are an intern in the university admissions office. A staff member is explaining how to answer questions from applicants.",
+  "sentences": [
+   "Greet visitors with a friendly smile.",
+   "Applications are due by the first of March.",
+   "Please explain that all documents must be sent together.",
+   "Applicants can check their status on the university website.",
+   "If someone asks about scholarships, give them the information sheet.",
+   "International applicants must also submit proof of their English test scores.",
+   "Students who want to visit the campus can sign up for a guided tour at the front desk."
+  ]
+ }
 ]
