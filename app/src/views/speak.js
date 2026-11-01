@@ -129,6 +129,8 @@ async function begin() {
   rec.audioCtx(); // unlock audio inside the user gesture
   rec.preload(Array.from({ length: lines().length + 1 }, (_, k) => clipUrl(k))); // decode every clip of the task up front
   S.phase = 'narr'; render();
+  await rec.warmUp(); // right after the mic check iOS is still switching its audio route: the first seconds come out as crackle
+  if (!alive(tok)) return;
   await say(0, S.item.body.scenario, 'int', 0.95);
   if (!alive(tok)) return;
   await wait(600);
@@ -224,7 +226,8 @@ on('s-exit', () => {
   modal(`<h2>Выйти из задания?</h2><p class="mut" style="margin-bottom:14px">Записанные ответы не будут отправлены учителю.</p>
     <div class="row-btns"><button class="btn" data-act="modal-close">Остаться</button><a class="btn pri" href="#/train/S" data-act="s-leave">Выйти</a></div>`);
 });
-on('s-leave', () => { mockflow.quit(); closeModal(); });
+// navigate explicitly: Safari drops the link's own navigation when the modal is removed inside the click handler
+on('s-leave', () => { const inMock = !!activeFlow(); mockflow.quit(); closeModal(); cleanupAll(); location.hash = inMock ? '#/mock' : '#/train/S'; });
 
 export default function speak(params) {
   const task = NAME[params[0]] ? params[0] : 'int';

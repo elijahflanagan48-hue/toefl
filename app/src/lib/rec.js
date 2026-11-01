@@ -110,6 +110,15 @@ function loadBuf(url) {
   }
   return bufs.get(url);
 }
+/** wakes the output route with an inaudible tone and waits until iOS has switched from "record" back to "playback" */
+export async function warmUp(ms = 1300) {
+  const c = audioCtx();
+  if (c) {
+    try { if (c.state !== 'running') await c.resume(); } catch (e) {}
+    try { const o = c.createOscillator(), g = c.createGain(); g.gain.value = 0.001; o.frequency.value = 220; o.connect(g); g.connect(c.destination); o.start(); o.stop(c.currentTime + ms / 1000); } catch (e) {}
+  }
+  await new Promise(r => setTimeout(r, ms));
+}
 export function preload(urls) { if (audioCtx()) urls.forEach(u => { loadBuf(u); }); }
 /** plays a recorded clip; resolves 'ended' | 'error' (missing / blocked file) | 'cancel' (stopSpeak) */
 export function playClip(url) {

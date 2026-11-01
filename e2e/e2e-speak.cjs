@@ -48,7 +48,8 @@ const until = async (p, fn, ms = 30000) => { const t = Date.now(); while (Date.n
   await s.click('[data-act="s-exit"]');
   await s.waitForTimeout(300);
   ok((await s.textContent('#layer')).includes('не будут отправлены'), 'leaving mid-task warns');
-  await s.click('#layer a.btn.pri'); await s.waitForTimeout(600);
+  await s.click('#layer a.btn.pri'); await s.waitForTimeout(800);
+  ok(s.url().includes('#/train/S'), 'the Exit button really leaves the task', s.url());
 
   // Listen and Repeat · learn: all 7 parts with early stop
   await s.goto(APP + '#/speak/lrp?mode=learn'); await s.waitForTimeout(900);
