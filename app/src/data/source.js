@@ -4,6 +4,9 @@
 import * as M from './mock.js';
 import { api, get, post, put, patch, isLive, loadMe, session } from '../lib/api.js';
 import { overallBand } from '../lib/util.js';
+import { assignLink } from '../lib/assign.js';
+/** assignment the student arrived from (…?a=ID), stored with attempts and submissions */
+const aid = () => Number(new URLSearchParams(location.hash.split('?')[1] || '').get('a')) || undefined;
 // demo content is loaded only in demo mode (separate chunk)
 let demoCache = null;
 const demoBank = async () => demoCache || (demoCache = (await import('./demo-reading.json')).default);
@@ -52,8 +55,8 @@ export async function today() {
     name: u.name.split(' ')[0], full: u.name, teacher: u.teacher?.name || '', target: u.target ?? 4.5,
     examDate: u.exam_date, examLabel: u.exam_date ? dayLabel(u.exam_date) : '',
     forecast: s.forecast, streak: s.streak, weekMin, week, plan: planFor(s.forecast),
-    tasks: a.assignments.map(x => ({ nm: x.title, mt: 'от учителя · ' + (x.spec?.mode === 'exam' ? 'экзаменационный режим' : 'учебный режим'), due: dueLabel(x.due_at),
-      to: x.spec?.section === 'R' && x.spec?.kind !== 'practice' ? '#/exam/reading' : '#/train/' + (x.spec?.section || 'R') }))
+    tasks: a.assignments.filter(x => !x.done).map(x => ({ nm: x.title, mt: 'от учителя · ' + (x.spec?.mode === 'timed' || x.spec?.mode === 'exam' ? 'как на экзамене' : 'учебный режим'), due: dueLabel(x.due_at),
+      to: assignLink(x.spec, x.id) }))
   };
 }
 
@@ -108,7 +111,7 @@ export async function mySpeakingItems() {
 }
 export async function createSpeaking({ task, item_id, prompt, parts }) {
   if (!isLive()) return { id: null };
-  return post('/submissions', { section: 'S', task, item_id, prompt, parts });
+  return post('/submissions', { section: 'S', task, item_id, prompt, parts, assignment_id: aid() });
 }
 export async function uploadAudio(subId, part, blob, ms) {
   if (!isLive() || !subId) return null;
@@ -117,7 +120,7 @@ export async function uploadAudio(subId, part, blob, ms) {
 export const submitSpeaking = subId => (isLive() && subId ? post(`/submissions/${subId}/submit`) : null);
 export async function submitWriting({ task, item_id, prompt, text }) {
   if (!isLive()) return { id: null, status: 'demo' };
-  return post('/submissions', { section: 'W', task, item_id, prompt, text });
+  return post('/submissions', { section: 'W', task, item_id, prompt, text, assignment_id: aid() });
 }
 
 export async function submission(id) {
@@ -140,7 +143,7 @@ export const saveSettings = s => put('/teacher/settings', s);
 export const saveMe = d => patch('/me', d).then(r => { session.user = { ...session.user, ...r.user }; return r.user; });
 
 /* ---------------- attempts (exam shell) ---------------- */
-export async function startAttempt(spec) { if (!isLive()) return null; return post('/attempts', spec); }
+export async function startAttempt(spec) { if (!isLive()) return null; return post('/attempts', { assignment_id: aid(), ...spec }); }
 export async function saveResponses(id, responses) { if (!isLive() || !id) return null; return post(`/attempts/${id}/responses`, { responses }); }
 export async function routeAttempt(id, section) { if (!isLive() || !id) return null; return post(`/attempts/${id}/route`, { section }); }
 export async function finishAttempt(id) { if (!isLive() || !id) return null; return post(`/attempts/${id}/finish`); }
@@ -177,7 +180,7 @@ export async function stats(section = 'R') {
 /** practice attempt; in demo mode graded locally against the bundled keys */
 export async function practiceStart(spec) {
   if (!isLive()) { const id = 'demo-' + Date.now(); demoAttempts[id] = { spec, res: [] }; return { id }; }
-  return post('/attempts', { kind: 'practice', ...spec });
+  return post('/attempts', { kind: 'practice', assignment_id: aid(), ...spec });
 }
 function demoGrade(r) {
   const it = demoCache.find(i => i.id === r.item_id);
@@ -199,3 +202,19 @@ export async function practiceFinish(attemptId, responses) {
   await post(`/attempts/${attemptId}/finish`);
   return get(`/attempts/${attemptId}`);
 }
+
+/* ---------------- teacher cabinet: student card, assignments, bank ---------------- */
+export async function studentDetail(id) {
+  if (!isLive()) return null;
+  const r = await get('/teacher/students/' + id);
+  const [R, W] = await Promise.all([get(`/me/stats?section=R&user=${id}`), get(`/me/stats?section=W&user=${id}`)]).catch(() => [null, null]);
+  return { ...r, stats: { R, W } };
+}
+export async function assignments() { return isLive() ? (await get('/teacher/assignments')).assignments : []; }
+export const createAssignment = d => post('/teacher/assignments', d);
+export const deleteAssignment = id => api('DELETE', '/teacher/assignments/' + id);
+export async function bankStats() { return isLive() ? (await get('/teacher/items/stats')).stats : []; }
+export const bankList = p => get('/teacher/items?' + new URLSearchParams(p));
+export const bankItem = id => get('/teacher/items/' + encodeURIComponent(id));
+export const setItemStatus = (id, status) => patch('/teacher/items/' + encodeURIComponent(id), { status });
+export const importItems = items => post('/teacher/items', { items });

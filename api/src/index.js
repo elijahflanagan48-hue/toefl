@@ -230,7 +230,9 @@ on('GET', '/me/assignments', async ({ env, user }) => {
   requireUser(user);
   const rows = await all(env, `SELECT a.*, u.name AS teacher_name FROM assignments a JOIN users u ON u.id = a.teacher_id
     WHERE a.student_id = ? OR (a.group_id IS NOT NULL AND a.group_id = ?) ORDER BY COALESCE(a.due_at, a.created_at) ASC LIMIT 50`, user.id, user.group_id ?? -1);
-  return { assignments: rows.map(r => ({ ...r, spec: parse(r.spec) })) };
+  const done = new Set((await all(env, `SELECT assignment_id AS id FROM attempts WHERE user_id = ? AND assignment_id IS NOT NULL AND finished_at IS NOT NULL
+    UNION SELECT assignment_id FROM submissions WHERE user_id = ? AND assignment_id IS NOT NULL AND status != 'draft'`, user.id, user.id)).map(r => r.id));
+  return { assignments: rows.map(r => ({ ...r, spec: parse(r.spec), done: done.has(r.id) })) };
 });
 
 /* ------------------------------------------------------------------ teacher: groups & students */
@@ -311,8 +313,22 @@ on('PUT', '/teacher/settings', async ({ req, env, user }) => {
 /* ------------------------------------------------------------------ assignments */
 on('GET', '/teacher/assignments', async ({ env, user }) => {
   requireTeacher(user);
-  const rows = await all(env, 'SELECT * FROM assignments WHERE teacher_id = ? ORDER BY created_at DESC LIMIT 100', user.id);
+  const rows = await all(env, `SELECT a.*, g.name AS group_name, u.name AS student_name,
+      (SELECT COUNT(*) FROM users s WHERE s.role = 'student' AND ((a.group_id IS NOT NULL AND s.group_id = a.group_id) OR (a.student_id IS NOT NULL AND s.id = a.student_id))) AS targets,
+      (SELECT COUNT(*) FROM (SELECT user_id FROM attempts WHERE assignment_id = a.id AND finished_at IS NOT NULL
+        UNION SELECT user_id FROM submissions WHERE assignment_id = a.id AND status != 'draft')) AS done
+    FROM assignments a LEFT JOIN groups g ON g.id = a.group_id LEFT JOIN users u ON u.id = a.student_id
+    WHERE a.teacher_id = ? ORDER BY a.created_at DESC LIMIT 100`, user.id);
   return { assignments: rows.map(r => ({ ...r, spec: parse(r.spec) })) };
+});
+on('DELETE', '/teacher/assignments/:id', async ({ env, user, params }) => {
+  requireTeacher(user);
+  const a = await one(env, 'SELECT id FROM assignments WHERE id = ? AND teacher_id = ?', Number(params.id), user.id);
+  if (!a) throw notFound();
+  await run(env, 'UPDATE attempts SET assignment_id = NULL WHERE assignment_id = ?', a.id);
+  await run(env, 'UPDATE submissions SET assignment_id = NULL WHERE assignment_id = ?', a.id);
+  await run(env, 'DELETE FROM assignments WHERE id = ?', a.id);
+  return { ok: true };
 });
 on('POST', '/teacher/assignments', async ({ req, env, user }) => {
   requireTeacher(user);
@@ -445,6 +461,35 @@ on('GET', '/teacher/items/stats', async ({ env, user }) => {
       SUM(CASE WHEN COALESCE(st.n, 0) >= 30 THEN 1 ELSE 0 END) AS calibrated
     FROM items i LEFT JOIN item_stats st ON st.item_id = i.id WHERE i.status != 'retired' GROUP BY i.section, i.task, i.level`);
   return { stats: rows };
+});
+
+/** bank browser: list with status, calibration counters and a short preview */
+on('GET', '/teacher/items', async ({ env, user, url }) => {
+  requireTeacher(user);
+  const p = url.searchParams, where = [], b = [];
+  for (const k of ['section', 'task', 'level', 'status']) if (p.get(k)) { where.push(`i.${k} = ?`); b.push(p.get(k)); }
+  const q = (p.get('q') || '').trim().slice(0, 60);
+  if (q) { where.push('(i.id LIKE ? OR i.body LIKE ?)'); b.push('%' + q.replace(/[%_]/g, '') + '%', '%' + q.replace(/[%_"\\]/g, '') + '%'); }
+  const lim = Math.min(300, Math.max(1, Number(p.get('limit') || 100))), off = Math.max(0, Number(p.get('offset') || 0));
+  const rows = await all(env, `SELECT i.id, i.section, i.task, i.level, i.status, i.qtypes, i.b, substr(i.body, 1, 220) AS head, COALESCE(st.n, 0) AS n, COALESCE(st.correct, 0) AS got
+    FROM items i LEFT JOIN item_stats st ON st.item_id = i.id ${where.length ? 'WHERE ' + where.join(' AND ') : ''} ORDER BY i.section, i.task, i.id LIMIT ? OFFSET ?`, ...b, lim, off);
+  const total = await one(env, `SELECT COUNT(*) AS n FROM items i ${where.length ? 'WHERE ' + where.join(' AND ') : ''}`, ...b);
+  return { total: total.n, items: rows.map(r => ({ ...r, qtypes: parse(r.qtypes) })) };
+});
+on('GET', '/teacher/items/:id', async ({ env, user, params }) => {
+  requireTeacher(user);
+  const it = await one(env, 'SELECT * FROM items WHERE id = ?', params.id);
+  if (!it) throw notFound();
+  const st = await one(env, 'SELECT n, correct FROM item_stats WHERE item_id = ?', it.id);
+  return { item: { id: it.id, section: it.section, task: it.task, level: it.level, status: it.status, b: it.b, body: parse(it.body), key: parse(it.key), explain: parse(it.explain), qtypes: parse(it.qtypes) }, stats: st || { n: 0, correct: 0 } };
+});
+on('PATCH', '/teacher/items/:id', async ({ req, env, user, params }) => {
+  requireTeacher(user);
+  const b = await body(req);
+  if (!['draft', 'active', 'pretest', 'retired'].includes(b.status)) throw bad('status');
+  const r = await run(env, 'UPDATE items SET status = ?, updated_at = ? WHERE id = ?', b.status, now(), params.id);
+  if (!r.meta.changes) throw notFound();
+  return { ok: true };
 });
 
 /* ------------------------------------------------------------------ attempts */

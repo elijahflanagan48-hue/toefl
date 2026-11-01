@@ -6,6 +6,7 @@ import { ic } from '../lib/icons.js';
 import { band, cefr, overallBand, heat, SEC, esc, plural } from '../lib/util.js';
 import { hdr, on, toast, modal } from '../lib/ui.js';
 import { pref } from '../lib/store.js';
+import { contentLive } from './tcab.js';
 
 const ovOf = s => overallBand([s.R, s.L, s.W, s.S]);
 const initials = n => String(n || '?').split(' ').map(x => x[0]).join('').slice(0, 2);
@@ -31,7 +32,7 @@ export async function home() {
 
   return {
     title: 'Обзор', wide: true,
-    html: `${hdr('Обзор', { sub: 'Кабинет учителя' })}
+    html: `${hdr('Обзор', { sub: 'Кабинет учителя', right: isLive() ? `<a class="btn sm" href="#/t/assign">${ic('cal', 16)} Назначения</a> <button class="btn sm pri" data-act="assign">${ic('plus', 16)} Назначить</button>` : '' })}
     <div class="kpis">${kpi.map(([i, v, l, h], n) => `<a class="kpi ${n === 1 && queue.length ? 'hot' : ''}" href="${h}">${ic(i, 20)}<b class="serif">${v}</b><span>${l}</span></a>`).join('')}</div>
     <div class="g-thome">
       <section>
@@ -53,8 +54,6 @@ const qRow = q => `<a class="row c${q.k}" href="#/t/review/${q.id}"><span class=
   <div class="t"><div class="nm">${esc(q.task)}</div><div class="mt">${esc(q.student)} · ${q.when}${q.late ? ' · <em class="badtx">после дедлайна</em>' : ''}</div></div>
   <div class="end">${q.words ? q.words + ' сл.' : q.dur || ''}${ic('right', 18)}</div></a>`;
 
-on('open-student', () => toast('Карточка ученика — этап P9'));
-on('assign', () => toast('Назначение заданий — этап P9'));
 
 /* ---------------- Ученики ---------------- */
 export async function studentsView() {
@@ -67,7 +66,7 @@ export async function studentsView() {
       ${groups.length > 1 ? `<div class="seg grp">${['Все', ...groups].map((g, i) => `<button class="${i ? '' : 'on'}" data-act="grp" data-v="${esc(g)}">${esc(g)}</button>`).join('')}</div>` : ''}</div>
     <div class="scards">${students.map(s => {
       const ov = ovOf(s);
-      return `<article class="card scard" data-name="${esc(s.name.toLowerCase())}" data-grp="${esc(s.group)}">
+      return `<article class="card scard" data-act="open-student" data-id="${s.id}" data-name="${esc(s.name.toLowerCase())}" data-grp="${esc(s.group)}">
         <div class="sc-hd"><span class="av">${esc(initials(s.name))}</span><div class="t"><b>${esc(s.name)}</b><span>${esc(s.group)}</span></div>
           <div class="sc-ov"><b class="serif">${ov == null ? '—' : band(ov)}</b>${ov == null ? '' : `<span class="cefr">${cefr(ov)}</span>`}</div></div>
         <div class="sc-secs">${['R', 'L', 'W', 'S'].map(k => `<div class="c${k}"><span>${k}</span><b class="serif">${s[k] == null ? '—' : band(s[k])}</b><div class="pips">${[1, 2, 3, 4, 5, 6].map(n => `<i class="${s[k] >= n ? 'on' : s[k] >= n - .5 ? 'half' : ''}"></i>`).join('')}</div></div>`).join('')}</div>
@@ -241,6 +240,7 @@ on('save-score', async el => {
 
 /* ---------------- Контент ---------------- */
 export function content() {
+  if (isLive()) return contentLive();
   const sum = bank.reduce((a, b) => a + b.total, 0);
   return {
     title: 'Контент', wide: true,
@@ -260,5 +260,3 @@ export function content() {
     </div>`
   };
 }
-on('imp', () => toast('Импорт и редактор — этап P9'));
-on('open-bank', () => toast('Список заданий — этап P9'));

@@ -15,21 +15,22 @@ import practice from './views/practice.js';
 import write from './views/write.js';
 import work from './views/work.js';
 import speak from './views/speak.js';
+import { studentCard, assignView, bankView } from './views/tcab.js';
 import { login, join, setup, password } from './views/auth.js';
 
 /* ---------- routes ---------- */
 const ROUTES = {
   today, train, mock, progress, profile,
-  't/home': tHome, 't/students': studentsView, 't/review': reviewList, 't/content': content,
+  't/home': tHome, 't/students': studentsView, 't/review': reviewList, 't/content': content, 't/assign': assignView, 't/bank': bankView,
   'exam/reading': examReading,
   login, join, setup, password
 };
 const PUBLIC = new Set(['login', 'join', 'setup']);
-const PARAM_ROUTES = [['train/', train], ['t/review/', reviewItem], ['practice/', practice], ['write/', write], ['speak/', speak], ['work/', work]];
+const PARAM_ROUTES = [['train/', train], ['t/review/', reviewItem], ['practice/', practice], ['write/', write], ['speak/', speak], ['t/student/', studentCard], ['work/', work]];
 
 const NAV = {
   student: [['today', 'today', 'Сегодня'], ['train', 'layers', 'Тренировка'], ['mock', 'timer', 'Пробник'], ['progress', 'trend', 'Прогресс'], ['profile', 'user', 'Профиль']],
-  teacher: [['t/home', 'grid', 'Обзор'], ['t/students', 'users', 'Ученики'], ['t/review', 'inbox', 'Проверка'], ['train', 'layers', 'Тренировка'], ['t/content', 'db', 'Контент'], ['profile', 'user', 'Профиль']]
+  teacher: [['t/home', 'grid', 'Обзор'], ['t/students', 'users', 'Ученики'], ['t/review', 'inbox', 'Проверка'], ['train', 'layers', 'Тренировка'], ['mock', 'timer', 'Пробник'], ['t/content', 'db', 'Контент'], ['profile', 'user', 'Профиль']]
 };
 
 function resolve(path) {
