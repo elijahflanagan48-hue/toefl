@@ -75,7 +75,8 @@ function render() {
   if (ph === 'narr') return show(`<div class="spk-card"><div class="spk-ic say">${ic('volume', 30)}</div><h2>Слушайте</h2><p class="big">${esc(it.body.scenario)}</p></div>`);
   if (ph === 'listen' || ph === 'gap' || ph === 'rec') {
     const text = lines()[S.k], n = lines().length, lim = limitFor(S.task, S.k);
-    const showText = S.mode !== 'timed';
+    // Listen and Repeat is a listening task: the sentence is never shown while it is being said or recorded (it appears in the results).
+    const showText = S.task === 'int' && S.mode !== 'timed';
     const head = ph === 'listen' ? `<div class="spk-ic say">${ic('volume', 30)}</div><h2>Слушайте</h2>` : ph === 'gap' ? `<div class="spk-ic">${ic('mic', 30)}</div><h2>Приготовьтесь</h2>`
       : `<div class="spk-ic rec">${ic('mic', 30)}</div><h2>Говорите</h2>`;
     return show(`${progress()}<div class="spk-card">${head}
@@ -126,6 +127,7 @@ async function say(k, text, role, rate) {
 async function begin() {
   const tok = ++run;
   rec.audioCtx(); // unlock audio inside the user gesture
+  rec.preload(Array.from({ length: lines().length + 1 }, (_, k) => clipUrl(k))); // decode every clip of the task up front
   let st;
   try { st = await rec.getMic(); } catch (e) { S.err = e.message; S.phase = 'mic'; S.micOk = false; render(); return; }
   S.stream = st;

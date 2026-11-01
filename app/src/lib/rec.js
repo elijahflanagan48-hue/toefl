@@ -16,7 +16,7 @@ export function audioCtx() {
 export async function getMic() {
   if (stream && stream.getAudioTracks().some(t => t.readyState === 'live')) return stream;
   if (!supported()) throw new Error('Этот браузер не умеет записывать звук. Откройте приложение в Chrome, Edge, Safari или Firefox.');
-  try { stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } }); }
+  try { stream = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: false, noiseSuppression: false, autoGainControl: false } }); }
   catch (e) {
     const denied = e && (e.name === 'NotAllowedError' || e.name === 'SecurityError');
     throw new Error(denied ? 'Доступ к микрофону запрещён. Разрешите его в настройках сайта (значок замка у адреса) и обновите страницу.'
@@ -87,13 +87,32 @@ function enVoice(role) {
   const pref = role === 'int' ? /(female|samantha|jenny|aria|zira)/i : /(male|daniel|guy|david|alex)/i;
   return en.find(v => /en[-_]US/i.test(v.lang) && pref.test(v.name)) || en.find(v => /en[-_]US/i.test(v.lang)) || en[0] || null;
 }
+/* Clips are decoded once and played through the Web Audio context that was unlocked by the "Start" tap.
+   iOS/iPadOS Safari silently refuses `new Audio().play()` outside a tap — that is why only the first clip used to sound. */
+const bufs = new Map();
+function loadBuf(url) {
+  if (!bufs.has(url)) {
+    bufs.set(url, fetch(url).then(r => { if (!r.ok) throw new Error('http'); return r.arrayBuffer(); })
+      .then(ab => new Promise((ok, no) => { const p = audioCtx().decodeAudioData(ab, ok, no); if (p && p.catch) p.catch(no); }))
+      .catch(() => { bufs.delete(url); return null; }));
+  }
+  return bufs.get(url);
+}
+export function preload(urls) { if (audioCtx()) urls.forEach(u => { loadBuf(u); }); }
 /** plays a recorded clip; resolves 'ended' | 'error' (missing / blocked file) | 'cancel' (stopSpeak) */
 export function playClip(url) {
   stopSpeak();
-  return new Promise(resolve => {
-    let a, done = false;
+  return new Promise(async resolve => {
+    let a = null, node = null, done = false;
     const end = r => { if (done) return; done = true; cancelSpeak = null; resolve(r); };
-    cancelSpeak = () => { try { a && a.pause(); } catch (e) {} end('cancel'); };
+    cancelSpeak = () => { try { node && node.stop(); } catch (e) {} try { a && a.pause(); } catch (e) {} end('cancel'); };
+    const c = audioCtx();
+    if (c && c.state !== 'running') { try { await c.resume(); } catch (e) {} }
+    const buf = c ? await loadBuf(url) : null;
+    if (done) return;
+    if (buf && c) {
+      try { node = c.createBufferSource(); node.buffer = buf; node.connect(c.destination); node.onended = () => end('ended'); node.start(); return; } catch (e) { node = null; }
+    }
     try { a = new Audio(url); a.onended = () => end('ended'); a.onerror = () => end('error'); a.play().catch(() => end('error')); } catch (e) { end('error'); }
   });
 }

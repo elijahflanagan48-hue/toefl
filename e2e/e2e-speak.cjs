@@ -54,15 +54,16 @@ const until = async (p, fn, ms = 30000) => { const t = Date.now(); while (Date.n
   await s.goto(APP + '#/speak/lrp?mode=learn'); await s.waitForTimeout(900);
   await s.click('[data-act="s-mic"]'); await until(s, () => !!document.querySelector('[data-act="s-go"]'), 8000);
   await s.click('[data-act="s-go"]'); await s.click('[data-act="s-start"]');
-  const sentences = [];
   for (let k = 0; k < 7; k++) {
     ok(await until(s, () => !!document.querySelector('[data-act="s-stop"]'), 25000), `part ${k + 1}: recording`);
-    sentences.push((await s.textContent('.spk-sub')).trim());
+    ok(!(await s.$('.spk-sub')), `part ${k + 1}: the sentence is not shown on screen (listening task)`);
     await s.waitForTimeout(1500);
     await s.click('[data-act="s-stop"]');
     await until(s, () => !document.querySelector('[data-act="s-stop"]'), 5000);
   }
   ok(await until(s, () => /Ответы отправлены/.test(document.querySelector('.spk-card')?.textContent || ''), 30000), 'LRP submitted');
+  const sentences = (await s.$$eval('.spk-list .it b', els => els.map(e => e.textContent.replace(/^\d+\.\s*/, '').trim())));
+  ok(sentences.length === 7 && sentences.every(Boolean), 'results screen lists the seven sentences');
   const lrpHref = await s.getAttribute('.spk-btns a[href^="#/work/"]', 'href');
   ok(!!lrpHref, 'link to the work');
   ok((await s.$$('.spk-list audio')).length === 7, 'seven local players');

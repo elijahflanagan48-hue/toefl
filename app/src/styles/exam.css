@@ -6,6 +6,9 @@ body.examing .rail{display:none}
 body.examing .app{max-width:none;padding:0;margin:0}
 
 .exam{--x-bg:#eef0f3;--x-surf:#fff;--x-tx:#1b1f27;--x-mut:#5b6271;--x-line:#d7dbe2;--x-bar:#2b3140;--x-bar-tx:#f2f4f7;--x-acc:#16213f;
+  /* the exam shell stays light even in the dark app theme: reset the shared tokens so .btn / links stay readable */
+  --surf:#fff;--surf2:#f5f7fb;--tx:#1b1f27;--mut:#5b6271;--fade:#8a91a0;--line:#d7dbe2;--line2:#d1d9e8;
+  --pri:#16213f;--pri-2:#24325c;--on-pri:#fff;--gold:#a86f08;
   min-height:100vh;display:flex;flex-direction:column;background:var(--x-bg);color:var(--x-tx);font-family:var(--ff-exam);letter-spacing:0}
 
 .xbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:8px 12px calc(8px);padding-top:calc(8px + env(safe-area-inset-top));
