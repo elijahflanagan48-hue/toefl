@@ -44,7 +44,7 @@ function resolve(path) {
 export const navRole = () => (isLive() && session.user ? (session.user.role === 'student' ? 'student' : 'teacher') : role());
 const home = () => (navRole() === 'teacher' ? 't/home' : 'today');
 
-let current = null, seq = 0;
+let current = null, seq = 0, lastPath = null;
 
 function renderNav(path) {
   const r = navRole(), items = NAV[r];
@@ -105,17 +105,37 @@ async function route() {
   if (my !== seq) return; // a newer navigation won
   current = view;
 
-  document.body.classList.toggle('examing', !!view.exam);
-  document.body.classList.toggle('authing', !!view.auth);
-  document.getElementById('pill').classList.toggle('hide', !!view.exam || !!view.auth);
-  if (!view.exam && !view.auth) renderNav(path);
+  const commit = () => {
+    document.body.classList.toggle('examing', !!view.exam);
+    document.body.classList.toggle('authing', !!view.auth);
+    document.getElementById('pill').classList.toggle('hide', !!view.exam || !!view.auth);
+    if (!view.exam && !view.auth) renderNav(path);
 
-  app.className = 'app' + (view.wide ? ' wide' : '');
-  if (view.html != null) app.innerHTML = view.html;
-  if (view.mount) view.mount(app);
-  document.title = (view.title ? view.title + ' · ' : '') + 'NOEON TOEFL';
-  if (!route.soft) { window.scrollTo(0, 0); app.classList.remove('viewin'); void app.offsetWidth; app.classList.add('viewin'); setTimeout(() => app.classList.remove('viewin'), 320); }
+    app.className = 'app' + (view.wide ? ' wide' : '');
+    if (view.html != null) app.innerHTML = view.html;
+    if (view.mount) view.mount(app);
+    document.title = (view.title ? view.title + ' · ' : '') + 'NOEON TOEFL';
+    if (!route.soft) window.scrollTo(0, 0);
+  };
+  const calm = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if (!route.soft && !calm && document.startViewTransition && lastPath !== null) {
+    // the browser cross-fades old and new screens on the compositor: no layout flash, no dropped frames
+    try { document.startViewTransition(commit); } catch (e) { commit(); }
+  } else {
+    commit();
+    if (!route.soft && !calm) { app.classList.remove('viewin'); void app.offsetWidth; app.classList.add('viewin'); setTimeout(() => app.classList.remove('viewin'), 320); }
+  }
+  lastPath = path;
 }
+
+/* warm the data the moment a finger touches a tab, ~100 ms before the click fires */
+const warm = e => {
+  const a = e.target.closest && e.target.closest('#pill .tab, #rail .tab'); if (!a) return;
+  const path = (a.getAttribute('href') || '').replace(/^#\/?/, '');
+  const hit = path && resolve(path); if (!hit) return;
+  try { const v = hit[0](hit[1]); if (v && v.then) v.catch(() => {}); } catch (e) {}
+};
+document.addEventListener('pointerdown', warm, { passive: true });
 
 /* re-render on hashchange; same-path re-renders (state toggles) keep scroll and skip the animation */
 let lastHash = location.hash;

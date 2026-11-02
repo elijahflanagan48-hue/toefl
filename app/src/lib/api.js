@@ -23,6 +23,7 @@ export class ApiError extends Error {
 }
 
 export async function api(method, path, data, { raw, type, headers = {} } = {}) {
+  if (method !== 'GET') dropCache();
   const h = { ...headers };
   if (session.token) h.Authorization = 'Bearer ' + session.token;
   let body;
@@ -40,10 +41,24 @@ export async function api(method, path, data, { raw, type, headers = {} } = {}) 
   return out;
 }
 
-export const get = p => api('GET', p);
-export const post = (p, d = {}) => api('POST', p, d);
-export const patch = (p, d) => api('PATCH', p, d);
-export const put = (p, d) => api('PUT', p, d);
+/* GET cache: identical requests within 3 s share one answer (and one in-flight request), so switching between sections is instant
+   and the nav can warm the data on touch-down. Any write clears everything, so screens never show stale results after an action. */
+const cache = new Map(), TTL = 3000;
+const clone = v => { try { return structuredClone(v); } catch (e) { return JSON.parse(JSON.stringify(v)); } };
+export const dropCache = () => cache.clear();
+export function get(p) {
+  const hit = cache.get(p);
+  if (hit && Date.now() - hit.t < TTL) return hit.p.then(clone);
+  const pr = api('GET', p);
+  const ent = { t: Date.now(), p: pr };
+  cache.set(p, ent);
+  pr.then(v => { if (v instanceof Response) cache.delete(p); }, () => { if (cache.get(p) === ent) cache.delete(p); });
+  return pr.then(v => (v instanceof Response ? v : clone(v)));
+}
+const write = (m, p, d) => api(m, p, d);
+export const post = (p, d = {}) => write('POST', p, d);
+export const patch = (p, d) => write('PATCH', p, d);
+export const put = (p, d) => write('PUT', p, d);
 
 /** load the current user once per page load (or after login) */
 export async function loadMe(force = false) {
