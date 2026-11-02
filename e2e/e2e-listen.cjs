@@ -27,11 +27,11 @@ const FAKE_AUDIO = () => { // deterministic: the "recording" lasts 400 ms
 
   // learn mode, conversation from the test bank
   await t.goto(APP + '#/listen/lco?mode=learn&bank=test'); await t.waitForTimeout(1500);
-  ok(!!(await t.$('.ls-audio')), 'learn: audio screen with a player');
-  ok(await t.evaluate(() => /audio\/L\/CONV-\d+\.mp3/.test(document.querySelector('.ls-audio').getAttribute('src'))), 'learn: player points at the conversation mp3');
+  ok(!(await t.$('.ls-audio')), 'learn: the intro screen has no player (audio lives on the questions screen)');
   await t.screenshot({ path: OUT + '/learn-audio.png' });
   await t.click('[data-act="ls-next"]'); await t.waitForTimeout(300);
   ok(!!(await t.$('.opts .opt')) && !!(await t.$('.ls-replay .ls-audio')), 'learn: question with replay player');
+  ok(await t.evaluate(() => /audio\/L\/CONV-\d+\.mp3/.test(document.querySelector('.ls-audio').getAttribute('src'))), 'learn: player points at the conversation mp3');
   ok(!!(await t.$('[data-act="ls-check"][disabled]')), 'learn: «Проверить» disabled until answered');
   await t.keyboard.press('1'); await t.waitForTimeout(200);
   await t.click('[data-act="ls-check"]'); await t.waitForTimeout(900);
@@ -85,12 +85,14 @@ const FAKE_AUDIO = () => { // deterministic: the "recording" lasts 400 ms
   ok(!txt.includes('тест-банк'), 'student does not see the teacher test-bank row');
   ok(await s.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'no horizontal scroll at 390 on the L page');
   await s.goto(APP + '#/listen/lan?mode=learn&bank=test'); await s.waitForTimeout(1500);
+  await s.click('[data-act="ls-next"]').catch(() => {}); await s.waitForTimeout(300);
   const src1 = await s.evaluate(() => document.querySelector('.ls-audio')?.getAttribute('src') || '');
   const _it = JSON.parse(require('fs').readFileSync(__dirname + '/../content/listening/items.json', 'utf8')); const _pre = new Set(_it.filter(x => x.status === 'pretest').map(x => x.id.replace(/^L-(\w+)-[ABC]-(\d+)$/, '$1-$2')));
   const _sid = (src1.match(/([A-Z]+-\d+)\.mp3/) || [])[1];
   ok(_sid && !_pre.has(_sid), 'student with ?bank=test still only gets released items', src1);
   await s.screenshot({ path: OUT + '/student-390.png' });
   await s.goto(APP + '#/listen/lcr?mode=learn'); await s.waitForTimeout(1200);
+  await s.click('[data-act="ls-next"]').catch(() => {}); await s.waitForTimeout(300);
   ok(await s.evaluate(() => !!document.querySelector('.ls-audio') || /Заданий пока нет/.test(document.body.textContent)), 'student: LCR learn page shows an item or the friendly empty state');
 
   // assignments link

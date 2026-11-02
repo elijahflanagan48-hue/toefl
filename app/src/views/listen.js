@@ -77,8 +77,7 @@ function audioScreen(s) {
   const what = { lcr: 'Вы услышите одну реплику.', lco: 'Вы услышите разговор двух студентов.', lan: 'Вы услышите объявление в кампусе.', lat: 'Вы услышите фрагмент лекции.' }[it.task] || 'Прослушайте запись.';
   if (!timed) return `<div class="ls-card"><div class="ls-ic">${ic('volume', 30)}</div>
     <p class="xdir">${what}</p>
-    ${player(it)}
-    <p class="xhint">Запись можно слушать сколько нужно. Вопросов: ${n}. Нажмите «К вопросам», когда будете готовы.</p></div>`;
+    <p class="xhint">На следующем экране будет запись, её можно слушать сколько нужно. Вопросов: ${n}. Нажмите «К вопросам», когда будете готовы.</p></div>`;
   if (P.audioErr) return `<div class="ls-card"><div class="ls-ic">${ic('alert', 30)}</div><p class="xdir">Не удалось воспроизвести запись</p>
     <p class="xhint">Проверьте звук и соединение, затем попробуйте ещё раз.</p><button class="btn pri" data-act="ls-play">Повторить</button></div>`;
   if (P.playing) return `<div class="ls-card playing"><div class="ls-ic pulse">${ic('volume', 30)}</div><p class="xdir">Идёт запись…</p>

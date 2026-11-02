@@ -300,5 +300,3 @@ mark.xhl{background:#ffe9a8;color:inherit;padding:0 2px}
 .ls-rw summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .ls-rw p{margin:8px 0 0;font-size:14.5px;line-height:1.55}
 
-/* iPad/iPhone Safari draw a blurred status strip over the top ~24px even when the safe-area inset reads 0: keep the bar below it */
-@supports (-webkit-touch-callout:none){.xbar{padding-top:max(calc(9px + env(safe-area-inset-top)),36px)}}

@@ -99,7 +99,7 @@ function render() {
 
 /* ------------------------------------------------------------------ flow */
 function bindMeter(st) {
-  const stop = rec.meter(st, v => { const el = document.getElementById('lvl'); if (el) el.style.width = Math.round(v * 100) + '%'; if (v > 0.12 && S) S.heard = true; });
+  const stop = rec.meter(st, v => { const el = document.getElementById('lvl'); if (el) el.style.width = Math.round(v * 100) + '%'; if (v > 0.2 && S) S.heard = true; });
   cleanup.push(stop);
   return stop;
 }

@@ -16,7 +16,7 @@ export function audioCtx() {
 export async function getMic() {
   if (stream && stream.getAudioTracks().some(t => t.readyState === 'live')) return stream;
   if (!supported()) throw new Error('Этот браузер не умеет записывать звук. Откройте приложение в Chrome, Edge, Safari или Firefox.');
-  try { stream = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: false, noiseSuppression: false, autoGainControl: false } }); }
+  try { stream = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: true, noiseSuppression: true, autoGainControl: true } }); }
   catch (e) {
     const denied = e && (e.name === 'NotAllowedError' || e.name === 'SecurityError');
     throw new Error(denied ? 'Доступ к микрофону запрещён. Разрешите его в настройках сайта (значок замка у адреса) и обновите страницу.'
@@ -37,7 +37,7 @@ export function meter(st, cb) {
     if (dead) return;
     an.getByteTimeDomainData(buf);
     let m = 0; for (let i = 0; i < buf.length; i++) m = Math.max(m, Math.abs(buf[i] - 128));
-    cb(Math.min(1, m / 64));
+    cb(Math.min(1, m / 18)); // sensitive: normal speech at arm's length fills the bar
     raf = requestAnimationFrame(loop);
   };
   loop();
@@ -53,7 +53,7 @@ export function recorder(st) {
   if (c && c.createMediaStreamDestination) {
     try {
       const src = c.createMediaStreamSource(st), g = c.createGain(), cp = c.createDynamicsCompressor(), dst = c.createMediaStreamDestination();
-      g.gain.value = 5;
+      g.gain.value = 3;
       cp.threshold.value = -20; cp.knee.value = 12; cp.ratio.value = 10; cp.attack.value = 0.003; cp.release.value = 0.15;
       src.connect(g); g.connect(cp); cp.connect(dst);
       rs = dst.stream; nodes = [src, g, cp];
