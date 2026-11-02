@@ -6858,5 +6858,1204 @@
     "ex": "Суть: опасения коллапса движения после сноса эстакады не оправдались. Вариант про улучшение движения утверждает больше, чем сказано в тексте."
    }
   ]
+ },
+ {
+  "id": "R-RAP-A-203",
+  "level": "A",
+  "src": "claude",
+  "topic": "Technology and history",
+  "title": "Making Elevators Safe",
+  "paras": [
+   [
+    "Before the 1850s, few people wanted to ride in an elevator.",
+    "Hoists were used in factories and warehouses, but they were dangerous.",
+    "If the rope broke, the platform fell to the ground.",
+    "Because of this risk, most buildings had only four or five floors, and the upper floors were cheap to rent."
+   ],
+   [
+    "An American inventor named Elisha Otis solved the problem.",
+    "He designed a safety brake that worked automatically.",
+    "When the rope was tight, the brake stayed open.",
+    "If the rope broke, strong springs pushed metal bars into the sides of the shaft and stopped the platform.",
+    "In 1854, Otis showed his invention at a fair in New York.",
+    "He stood on a high platform and ordered a worker to cut the rope.",
+    "The platform dropped only a few centimeters and then stopped."
+   ],
+   [
+    "The demonstration made people trust elevators.",
+    "Within a few years, shops and hotels began to install them.",
+    "Taller buildings became possible, and the best rooms were now on the upper floors, where the air was fresh and the view was good.",
+    "Elevators changed the shape of cities, and they are one reason why modern skylines look the way they do."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    2,
+    4,
+    5,
+    6
+   ],
+   "sentence": "Everyone who was watching expected the platform to crash."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, why did most buildings have only four or five floors?",
+    "opts": [
+     "Upper floors were more expensive than lower floors.",
+     "Elevators were dangerous to use.",
+     "Builders did not have strong rope.",
+     "Most people preferred to live near the ground."
+    ],
+    "a": 1,
+    "ex": "В конце первого абзаца: «Because of this risk» — из-за риска падения лифта здания были невысокими, а верхние этажи стоили дёшево. Вариант про дорогие верхние этажи противоречит тексту."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 3,
+    "ex": "Вставка описывает ожидание зрителей перед падением платформы. Она должна стоять после «ordered a worker to cut the rope» и перед «The platform dropped only a few centimeters». Раньше слово «the platform» не имеет антецедента."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"them\" in paragraph 3 refers to",
+    "opts": [
+     "hotels",
+     "floors",
+     "elevators",
+     "people"
+    ],
+    "a": 2,
+    "ex": "«shops and hotels began to install them» — устанавливали лифты. Shops и hotels — это те, кто устанавливал, а не то, что устанавливали.",
+    "hl": {
+     "p": 2,
+     "s": 1,
+     "w": "them"
+    }
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 2, all of the following are true of the safety brake EXCEPT:",
+    "opts": [
+     "It worked automatically.",
+     "It used strong springs.",
+     "It stopped the platform when the rope broke.",
+     "It needed a worker to pull a handle."
+    ],
+    "a": 3,
+    "ex": "Тормоз «worked automatically» — рабочий не нужен. Пружины и остановка платформы при обрыве каната прямо названы в тексте."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "Elevators made tall buildings possible, and the upper floors became the most attractive rooms.",
+     "Tall buildings had fresh air, so people wanted to build elevators.",
+     "The best rooms were on the upper floors because tall buildings had better views than short ones.",
+     "Elevators made the upper floors cleaner, but they did not allow taller buildings."
+    ],
+    "a": 0,
+    "ex": "Суть: благодаря лифтам стали возможны высокие здания, а лучшие комнаты оказались наверху. Остальные варианты путают причину и следствие.",
+    "simp": {
+     "p": 2,
+     "s": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-A-204",
+  "level": "A",
+  "src": "claude",
+  "topic": "Life sciences",
+  "title": "Why Leaves Change Color",
+  "paras": [
+   [
+    "In many countries, trees show beautiful red, orange, and yellow colors in autumn.",
+    "These colors are not new.",
+    "They are in the leaves all year, but in spring and summer we cannot see them.",
+    "During those months, leaves are full of chlorophyll, a green substance that helps the tree make food from sunlight.",
+    "The green is so strong that it hides the other colors."
+   ],
+   [
+    "In autumn, the days become shorter and the weather becomes cooler.",
+    "The tree begins to prepare for winter.",
+    "It stops making chlorophyll, and the green substance slowly breaks down.",
+    "As the green disappears, yellow and orange colors that were hidden become visible.",
+    "Red colors are different.",
+    "Many trees make red substances in autumn, especially when the days are sunny and the nights are cool."
+   ],
+   [
+    "Scientists are still studying why trees make red colors.",
+    "One idea is that the red substance protects the leaf from strong sunlight while the tree takes back useful materials from it.",
+    "Eventually the leaf falls, and the tree rests through the winter until spring returns."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    3,
+    4,
+    5
+   ],
+   "sentence": "Without it, the leaf cannot make food from sunlight."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, why can we not see yellow and orange colors in summer?",
+    "opts": [
+     "The colors do not exist until autumn.",
+     "The green color of chlorophyll hides them.",
+     "Rain washes them off the leaves.",
+     "The leaves are too small to show them."
+    ],
+    "a": 1,
+    "ex": "В первом абзаце: цвета есть в листьях весь год, но «the green is so strong that it hides the other colors». Вариант «не существуют до осени» противоречит тексту."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"visible\" in the passage is closest in meaning to",
+    "opts": [
+     "easy to break",
+     "very bright",
+     "easy to see",
+     "quick to change"
+    ],
+    "a": 2,
+    "ex": "Когда зелёный цвет исчезает, жёлтый и оранжевый становятся видимыми. Visible = easy to see.",
+    "hl": {
+     "p": 1,
+     "s": 3,
+     "w": "visible"
+    }
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 1,
+    "ex": "В вставке «it» — это хлорофилл, поэтому она идёт после предложения «It stops making chlorophyll…». Без хлорофилла лист не может производить пищу. В других местах слову «it» нечего заменять."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that describes when trees make red substances.",
+    "sel": {
+     "p": 1
+    },
+    "a": 5,
+    "ex": "Условия, при которых деревья вырабатывают красные вещества, описаны в последнем предложении: солнечные дни и прохладные ночи. Предыдущее предложение («Red colors are different») лишь вводит тему."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"it\" in paragraph 3 refers to",
+    "opts": [
+     "the tree",
+     "the sunlight",
+     "the red substance",
+     "the leaf"
+    ],
+    "a": 3,
+    "ex": "«the tree takes back useful materials from it» — дерево забирает полезные вещества из листа. Tree — подлежащее и не может быть тем, откуда забирают.",
+    "hl": {
+     "p": 2,
+     "s": 1,
+     "w": "it"
+    }
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-A-205",
+  "level": "A",
+  "src": "claude",
+  "topic": "Social sciences",
+  "title": "Sharing Bicycles in Cities",
+  "paras": [
+   [
+    "In the last twenty years, many cities have started bicycle-sharing programs.",
+    "A person can take a bicycle from a station, ride to another part of the city, and leave it at a different station.",
+    "Users usually pay with a card or a phone, and short trips are often cheap or free.",
+    "Some large cities have hundreds of stations."
+   ],
+   [
+    "City governments have several reasons for starting these programs.",
+    "First, bicycles do not make air pollution, so they can help keep the air clean.",
+    "Second, they reduce the number of cars on busy streets.",
+    "Third, they offer a cheap way to travel for people who cannot afford a car.",
+    "Some programs also report that users become healthier because they exercise more."
+   ],
+   [
+    "However, the programs also face problems.",
+    "Bicycles must be moved from stations that are full to stations that are empty, and this work is expensive.",
+    "Some bicycles are damaged or stolen.",
+    "For these reasons, a program needs careful planning.",
+    "Cities that place stations close together and build safe bicycle lanes usually have the most success."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "Fewer cars also mean less noise."
+  },
+  "qs": [
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 2, all of the following are reasons for starting bicycle-sharing programs EXCEPT:",
+    "opts": [
+     "Bicycles are faster than any other kind of transport.",
+     "Bicycles do not cause air pollution.",
+     "Bicycles reduce the number of cars on streets.",
+     "Bicycles are a cheap way to travel."
+    ],
+    "a": 0,
+    "ex": "Скорость в сравнении с другим транспортом во втором абзаце не упоминается. Чистый воздух, меньше машин и дешёвый проезд названы прямо."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 2,
+    "ex": "«Fewer cars» продолжает мысль предыдущего предложения о сокращении числа машин. Раньше машины ещё не упомянуты, а после слова «Third» речь идёт о дешёвом проезде."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"this\" in paragraph 3 refers to",
+    "opts": [
+     "building new stations",
+     "moving bicycles between stations",
+     "paying with a phone",
+     "repairing damaged bicycles"
+    ],
+    "a": 1,
+    "ex": "«Bicycles must be moved from stations that are full to stations that are empty, and this work is expensive» — дорогая работа — перемещение велосипедов.",
+    "hl": {
+     "p": 2,
+     "s": 1,
+     "w": "this"
+    }
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about bicycle-sharing programs from paragraph 3?",
+    "opts": [
+     "They always earn money for the city.",
+     "Most users steal the bicycles.",
+     "Their success depends partly on how stations and lanes are planned.",
+     "They work only in small cities."
+    ],
+    "a": 2,
+    "ex": "Последнее предложение: успех чаще у городов, где станции стоят близко и есть безопасные дорожки. Значит, результат зависит от планирования."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"reduce\" in the passage is closest in meaning to",
+    "opts": [
+     "make faster",
+     "make cleaner",
+     "make safer",
+     "make smaller"
+    ],
+    "a": 3,
+    "ex": "Велосипеды сокращают число машин на улицах. Reduce = make smaller.",
+    "hl": {
+     "p": 1,
+     "s": 2,
+     "w": "reduce"
+    }
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-A-206",
+  "level": "A",
+  "src": "claude",
+  "topic": "Physical sciences",
+  "title": "How a Rainbow Forms",
+  "paras": [
+   [
+    "A rainbow appears when sunlight passes through drops of water in the air.",
+    "Sunlight looks white, but it is really a mixture of many colors.",
+    "Each color is a different kind of light.",
+    "We usually see rainbows after rain, when the sun comes out while the air is still full of small drops."
+   ],
+   [
+    "When a ray of sunlight enters a raindrop, it bends.",
+    "Different colors bend by different amounts, so the colors separate.",
+    "The light then hits the back of the drop and reflects, which means that it bounces back.",
+    "When it leaves the drop, it bends again.",
+    "Red light leaves at a slightly wider angle than blue light, and this is why red is on the outside of the rainbow and blue is on the inside."
+   ],
+   [
+    "To see a rainbow, you must stand with the sun behind you and the raindrops in front of you.",
+    "Sometimes a second, fainter rainbow appears above the first one.",
+    "In the second rainbow, the colors are in the opposite order, because the light reflects twice inside each drop."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, when do we usually see rainbows?",
+    "opts": [
+     "After rain, when the sun comes out",
+     "At night, when the sky is clear",
+     "In winter, when the air is very cold",
+     "At noon, when the sun is high"
+    ],
+    "a": 0,
+    "ex": "В конце первого абзаца: радуги видны после дождя, когда выходит солнце и в воздухе ещё много капель."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 3 that explains why the colors of the second rainbow are in the opposite order.",
+    "sel": {
+     "p": 2
+    },
+    "a": 2,
+    "ex": "Причина обратного порядка цветов дана в последнем предложении: свет отражается внутри капли дважды. Предыдущее предложение только сообщает, что второй радуги иногда видно."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"it\" in paragraph 2 refers to",
+    "opts": [
+     "the drop",
+     "the light",
+     "the back",
+     "the raindrop"
+    ],
+    "a": 1,
+    "ex": "«The light then hits the back of the drop and reflects, which means that it bounces back» — отскакивает свет. Drop и back — ближайшие существительные, но они не отражаются.",
+    "hl": {
+     "p": 1,
+     "s": 2,
+     "w": "it"
+    }
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "Blue light leaves at a wider angle than red light, so blue appears on the outside.",
+     "Red and blue light leave at the same angle, which makes the rainbow round.",
+     "Because red light leaves the drop at a wider angle than blue light, red appears on the outer edge and blue on the inner edge.",
+     "Red appears on the outside of the rainbow because red light bends more than blue light."
+    ],
+    "a": 2,
+    "ex": "Суть: красный свет выходит под большим углом, поэтому красный цвет снаружи, синий внутри. Остальные варианты меняют цвета местами или добавляют то, чего нет в тексте.",
+    "simp": {
+     "p": 1,
+     "s": 4
+    }
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"fainter\" in the passage is closest in meaning to",
+    "opts": [
+     "larger",
+     "colder",
+     "closer",
+     "less bright"
+    ],
+    "a": 3,
+    "ex": "Вторая радуга появляется выше первой и выглядит слабее. Fainter = less bright.",
+    "hl": {
+     "p": 2,
+     "s": 1,
+     "w": "fainter"
+    }
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-206",
+  "level": "B",
+  "src": "claude",
+  "topic": "Life sciences",
+  "title": "How Bats Find Their Way in the Dark",
+  "paras": [
+   [
+    "Most bats are active at night, when there is too little light for them to rely on their eyes.",
+    "Instead, they use a system called echolocation.",
+    "A bat produces a series of short, high-pitched calls, usually too high for humans to hear, and listens carefully for the echoes that return after the sound hits objects.",
+    "By measuring how long an echo takes to come back, the bat can judge how far away an object is."
+   ],
+   [
+    "The pattern of the echo carries more information than distance alone.",
+    "A large, smooth surface returns a strong echo, whereas a soft surface such as fur absorbs much of the sound.",
+    "The bat can therefore tell the difference between a wall and a branch, and even between different kinds of insects.",
+    "When a bat is searching, it calls slowly.",
+    "When it detects prey, it calls faster and faster, and in the final moments of the chase the calls form a rapid buzz that gives it a very detailed picture of the target."
+   ],
+   [
+    "Echolocation is not without difficulties.",
+    "In a crowded cave, thousands of bats call at once, yet each bat appears able to pick out its own echoes.",
+    "Some moths have evolved ears that detect bat calls, and a few can even produce clicks that confuse the bat.",
+    "This continuing competition shows how closely the two groups have shaped each other."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "For example, a bat can recognize a moth by the way its wings change the echo."
+  },
+  "qs": [
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 1, all of the following are true of echolocation EXCEPT:",
+    "opts": [
+     "The calls are low enough for humans to hear easily.",
+     "A bat listens for echoes that return.",
+     "The time an echo takes shows the distance of an object.",
+     "The calls are short and high-pitched."
+    ],
+    "a": 0,
+    "ex": "Звуки «usually too high for humans to hear» — люди их обычно не слышат. Остальные пункты прямо названы в первом абзаце."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 2,
+    "ex": "«For example» должно следовать за общим утверждением. Оно подходит после «The bat can therefore tell the difference… between different kinds of insects». В других местах пример появился бы раньше, чем сама мысль."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that explains how a bat's calls change when it finds prey.",
+    "sel": {
+     "p": 1
+    },
+    "a": 4,
+    "ex": "Изменение звуков при обнаружении добычи описано в последнем предложении абзаца: летучая мышь кричит всё чаще, в конце получается быстрый «жужжащий» звук."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"its\" in paragraph 3 refers to",
+    "opts": [
+     "the cave",
+     "each bat",
+     "thousands of bats",
+     "the echo"
+    ],
+    "a": 1,
+    "ex": "«each bat appears able to pick out its own echoes» — свои эхо у каждой мыши. Thousands of bats — множественное число, которое не согласуется с its.",
+    "hl": {
+     "p": 2,
+     "s": 1,
+     "w": "its"
+    }
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about bats in a crowded cave?",
+    "opts": [
+     "They stop using echolocation.",
+     "They call more quietly than moths.",
+     "They can separate their own echoes from those of other bats.",
+     "They fly only when the cave is empty."
+    ],
+    "a": 2,
+    "ex": "Хотя кричат тысячи мышей, «each bat appears able to pick out its own echoes». Значит, они различают собственные эхо."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-207",
+  "level": "B",
+  "src": "claude",
+  "topic": "Technology and history",
+  "title": "The Telegraph and the Speed of News",
+  "paras": [
+   [
+    "Before the 1840s, news could travel no faster than a person, a horse, or a ship.",
+    "A message from one city to another might take days, and a message across an ocean took weeks.",
+    "Merchants, governments, and newspapers all depended on these slow channels, and decisions were often made using information that was already out of date."
+   ],
+   [
+    "The electric telegraph changed this situation.",
+    "A telegraph operator tapped a key to send a pattern of short and long electrical pulses along a wire, and a receiver at the other end turned the pulses into letters.",
+    "The best-known system used a code developed by Samuel Morse.",
+    "By the 1850s, wires connected most major cities in Europe and North America, and in 1866 a cable across the Atlantic Ocean finally made messages between the continents almost instant."
+   ],
+   [
+    "The consequences were large.",
+    "Newspapers began to publish stories from distant places on the same day.",
+    "Traders could compare prices in different markets within minutes, which reduced differences between them.",
+    "Because messages were charged by the word, people also learned to write short and efficient sentences, a habit that some writers believe influenced the style of modern news reporting."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 1? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "Merchants, governments, and newspapers made decisions slowly because they wanted old information.",
+     "Slow communication made old information more valuable to governments.",
+     "Newspapers decided which communication channels were out of date.",
+     "Because they relied on slow communication, people often made decisions using old information."
+    ],
+    "a": 3,
+    "ex": "Суть: из-за медленной связи решения часто принимали на устаревших данных. Остальные варианты меняют причину и следствие.",
+    "simp": {
+     "p": 0,
+     "s": 2
+    }
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 2, all of the following are true of the telegraph EXCEPT:",
+    "opts": [
+     "It carried the human voice along a wire.",
+     "Operators used a key to send signals.",
+     "One well-known system used Morse's code.",
+     "By the 1850s, wires connected many major cities."
+    ],
+    "a": 0,
+    "ex": "Телеграф передавал серии коротких и длинных импульсов, превращаемых в буквы, а не человеческий голос. Остальные пункты есть во втором абзаце."
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the author mention \"a cable across the Atlantic Ocean\"?",
+    "opts": [
+     "To explain how Morse developed his code",
+     "To show how the telegraph eventually connected continents",
+     "To argue that ships were no longer needed",
+     "To describe an early experiment that failed"
+    ],
+    "a": 1,
+    "ex": "Упоминание кабеля показывает, что в 1866 году телеграф связал континенты и сообщения стали почти мгновенными.",
+    "hl": {
+     "p": 1,
+     "s": 3,
+     "w": "a cable across the Atlantic Ocean"
+    }
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"them\" in paragraph 3 refers to",
+    "opts": [
+     "prices",
+     "traders",
+     "markets",
+     "minutes"
+    ],
+    "a": 2,
+    "ex": "«Traders could compare prices in different markets… which reduced differences between them» — различия между рынками. Prices — ближайшее существительное, но различия сокращались между рынками.",
+    "hl": {
+     "p": 2,
+     "s": 2,
+     "w": "them"
+    }
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 3 that explains why telegraph users wrote short sentences.",
+    "sel": {
+     "p": 2
+    },
+    "a": 3,
+    "ex": "Причина дана в последнем предложении: сообщения оплачивали за слово, поэтому люди учились писать коротко. Остальные предложения описывают другие последствия телеграфа."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-208",
+  "level": "B",
+  "src": "claude",
+  "topic": "Business and economics",
+  "title": "Why Free Samples Work",
+  "paras": [
+   [
+    "Walk through a supermarket on a weekend, and you may find a small table where a worker offers tiny pieces of cheese or sausage.",
+    "Companies spend considerable money on such free samples, and they do so for a reason that goes beyond letting customers taste the product.",
+    "Marketing researchers have long suspected that a free gift creates a feeling of obligation."
+   ],
+   [
+    "Psychologists call this feeling reciprocity, the tendency to return a favor.",
+    "In one frequently cited experiment, participants who had been given a small gift by a stranger were later more willing to buy raffle tickets from that stranger than participants who had received nothing.",
+    "The size of the gift hardly mattered, and the effect appeared even when people disliked the person who gave it."
+   ],
+   [
+    "Reciprocity does not fully explain the success of samples, however.",
+    "Tasting a product also reduces uncertainty, because customers learn immediately whether they like it.",
+    "In addition, the pleasant experience may put shoppers in a better mood, which makes them more generous with their money.",
+    "Researchers still debate which of these effects is most important, and the answer probably varies from product to product."
+   ]
+  ],
+  "insert": {
+   "p": 2,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "For instance, a shopper who dislikes the taste can simply walk away."
+  },
+  "qs": [
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"obligation\" in the passage is closest in meaning to",
+    "opts": [
+     "a sense of surprise",
+     "a sense of hunger",
+     "a sense of pride",
+     "a sense of duty"
+    ],
+    "a": 3,
+    "ex": "Бесплатный подарок создаёт ощущение, что нужно что-то вернуть. Obligation = a sense of duty.",
+    "hl": {
+     "p": 0,
+     "s": 2,
+     "w": "obligation"
+    }
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that suggests reciprocity does not depend on liking the person who gives the gift.",
+    "sel": {
+     "p": 1
+    },
+    "a": 2,
+    "ex": "Эффект проявлялся, «even when people disliked the person who gave it». Предыдущее предложение описывает эксперимент, но ничего не говорит о симпатии."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 3 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 1,
+    "ex": "«For instance» приводит пример к предыдущему утверждению: пробник снимает неопределённость, потому что можно сразу узнать, нравится ли продукт. В других местах пример не связан с предыдущей мыслью."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"it\" in paragraph 3 refers to",
+    "opts": [
+     "the product",
+     "uncertainty",
+     "the supermarket",
+     "a favor"
+    ],
+    "a": 0,
+    "ex": "«Tasting a product … customers learn immediately whether they like it» — нравится продукт. Uncertainty — ближайшее существительное, но нравиться может только продукт.",
+    "hl": {
+     "p": 2,
+     "s": 1,
+     "w": "it"
+    }
+   },
+   {
+    "type": "Inference",
+    "stem": "What does the author suggest about the success of free samples?",
+    "opts": [
+     "It depends only on reciprocity.",
+     "It probably has several causes that work together.",
+     "It has been fully explained by experiments.",
+     "It occurs only with food products."
+    ],
+    "a": 1,
+    "ex": "В третьем абзаце названы несколько причин: взаимность, снятие неопределённости и хорошее настроение. Исследователи спорят о значимости каждой, то есть причин несколько."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-209",
+  "level": "B",
+  "src": "claude",
+  "topic": "Earth science",
+  "title": "How Caves Form",
+  "paras": [
+   [
+    "Many of the world's largest caves are found in limestone, a rock made mainly from the remains of sea creatures.",
+    "Limestone is hard, yet it dissolves slowly in water that is slightly acidic.",
+    "Rainwater absorbs carbon dioxide from the air and from the soil, and this makes it weakly acidic."
+   ],
+   [
+    "As the water seeps down through small cracks in the rock, it dissolves a little of the stone along the way.",
+    "Over thousands of years, the cracks widen and join together, forming passages.",
+    "When the water table, the level below which the ground is full of water, drops, the passages fill with air and become caves.",
+    "Large caves usually take hundreds of thousands of years to develop."
+   ],
+   [
+    "Once a cave is filled with air, a different process begins.",
+    "Water continues to drip from the ceiling, carrying dissolved limestone.",
+    "When a drop hangs in the air, a small amount of carbon dioxide escapes from it, and a thin ring of limestone is left behind.",
+    "Repeated over centuries, this process builds icicle-shaped stalactites that grow downward from the ceiling.",
+    "Drops that fall to the floor can build stalagmites, which rise upward."
+   ]
+  ],
+  "insert": {
+   "p": 2,
+   "slots": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "sentence": "The water that formed the cave therefore also decorates it."
+  },
+  "qs": [
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 1? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "Limestone dissolves quickly because it is a hard rock.",
+     "Water becomes acidic when limestone dissolves in it.",
+     "Although limestone is a hard rock, slightly acidic water can gradually dissolve it.",
+     "Hard rocks like limestone cannot be dissolved by any kind of water."
+    ],
+    "a": 2,
+    "ex": "Суть: известняк твёрдый, но медленно растворяется в слабокислой воде. Остальные варианты искажают скорость, причину или возможность растворения.",
+    "simp": {
+     "p": 0,
+     "s": 1
+    }
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that explains how a cave becomes filled with air.",
+    "sel": {
+     "p": 1
+    },
+    "a": 2,
+    "ex": "Пещера заполняется воздухом, когда уровень грунтовых вод опускается — это третье предложение абзаца."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"it\" in paragraph 2 refers to",
+    "opts": [
+     "the rock",
+     "a crack",
+     "the stone",
+     "the water"
+    ],
+    "a": 3,
+    "ex": "«As the water seeps down… it dissolves a little of the stone» — растворяет камень вода. Rock и stone — то, что растворяется.",
+    "hl": {
+     "p": 1,
+     "s": 0,
+     "w": "it"
+    }
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 3 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 3,
+    "ex": "«Therefore» подводит итог описанного процесса: та же вода, что создала пещеру, теперь её украшает. Такой вывод возможен только после рассказа о сталактитах и сталагмитах, то есть в конце абзаца."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, all of the following are true of stalactites EXCEPT:",
+    "opts": [
+     "They grow upward from the floor of the cave.",
+     "They hang from the ceiling.",
+     "They are built from dissolved limestone.",
+     "They take centuries to form."
+    ],
+    "a": 0,
+    "ex": "Сталактиты растут вниз от потолка, а вверх растут сталагмиты. Остальные пункты прямо названы в абзаце."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-213",
+  "level": "C",
+  "src": "claude",
+  "topic": "Social sciences",
+  "title": "Why Crowds Can Be Wise",
+  "paras": [
+   [
+    "In 1906, the statistician Francis Galton attended a country fair where visitors were invited to guess the weight of an ox after it had been slaughtered and dressed.",
+    "Nearly eight hundred people entered, most of them with no special expertise.",
+    "When Galton calculated the middle value of all the guesses, he was surprised to find that it came remarkably close to the true weight, closer than almost any individual estimate, including those from experienced farmers and butchers."
+   ],
+   [
+    "Later researchers have explained such results through a simple statistical idea.",
+    "Each person's guess contains some useful knowledge and some random error.",
+    "When many people make guesses independently, the errors tend to point in different directions and cancel each other out, leaving a more accurate average.",
+    "The effect depends on two conditions: the guesses must be made independently, and the group must include a variety of viewpoints."
+   ],
+   [
+    "When these conditions fail, crowds can perform poorly.",
+    "If people see one another's answers before making their own, early mistakes spread, and everyone drifts toward the same error.",
+    "Likewise, a group made up of people with identical backgrounds is likely to share the same blind spots.",
+    "The lesson is not that groups are always wiser than experts, but that their judgments are valuable only when each member thinks for himself or herself."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "In other words, no single guess needs to be accurate for the average to be accurate."
+  },
+  "qs": [
+   {
+    "type": "Reference",
+    "stem": "The word \"it\" in paragraph 1 refers to",
+    "opts": [
+     "the weight of the ox",
+     "the middle value of the guesses",
+     "the country fair",
+     "the number of entries"
+    ],
+    "a": 1,
+    "ex": "«he was surprised to find that it came remarkably close to the true weight» — близко к истинному весу оказалось усреднённое значение всех догадок.",
+    "hl": {
+     "p": 0,
+     "s": 2,
+     "w": "it"
+    }
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 2,
+    "ex": "«In other words» пересказывает предыдущую мысль: ошибки взаимно компенсируются, поэтому не обязательно, чтобы отдельная догадка была точной. Следующее предложение уже вводит новую тему — условия эффекта."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that explains why the errors in many guesses tend to disappear.",
+    "sel": {
+     "p": 1
+    },
+    "a": 2,
+    "ex": "Объяснение даёт третье предложение абзаца: при независимых оценках ошибки направлены в разные стороны и гасят друг друга."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, crowds may perform poorly in all of the following situations EXCEPT when",
+    "opts": [
+     "people can see one another's answers first",
+     "all members have identical backgrounds",
+     "each person makes a guess without seeing the others' answers",
+     "early mistakes spread through the group"
+    ],
+    "a": 2,
+    "ex": "Независимые оценки как раз условие хорошей работы толпы. Остальные три ситуации названы в третьем абзаце как причины плохих результатов."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 3? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "Groups are wiser than experts only when each member follows the opinion of the group.",
+     "Experts are always wiser than groups because group members do not think for themselves.",
+     "The lesson is that every member of a group should be an expert.",
+     "Groups are not automatically wiser than experts; their judgments are useful only when members think independently."
+    ],
+    "a": 3,
+    "ex": "Суть: группы не всегда мудрее экспертов, их суждения ценны только при независимом мышлении. Остальные варианты искажают смысл.",
+    "simp": {
+     "p": 2,
+     "s": 3
+    }
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-214",
+  "level": "C",
+  "src": "claude",
+  "topic": "Arts",
+  "title": "Perspective in Renaissance Painting",
+  "paras": [
+   [
+    "Medieval European painters rarely tried to show space as the eye sees it.",
+    "Figures were often arranged according to their importance rather than their distance, and buildings tilted at angles that could not exist in reality.",
+    "In the early fifteenth century, however, Italian artists began to search for a method of representing three-dimensional space convincingly on a flat surface."
+   ],
+   [
+    "The architect Filippo Brunelleschi is generally credited with demonstrating the principle around 1415.",
+    "He observed that parallel lines, such as the edges of a road or the sides of a building, appear to converge as they recede into the distance, meeting at a single vanishing point on the horizon.",
+    "A painter who places this point on the canvas and draws all receding lines toward it can create the impression of depth.",
+    "In the 1430s, Leon Battista Alberti described the method in writing, and his treatise on painting taught it to a wider group of artists."
+   ],
+   [
+    "Linear perspective did not simply make paintings more realistic; it changed what a painting was.",
+    "Instead of a collection of symbols, the picture became a window through which a viewer looked at a scene from one fixed position.",
+    "Some historians argue that this habit of seeing the world from a single point of view shaped other areas of thought, including science and mapmaking, although that claim remains debated."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the author mention \"buildings tilted at angles that could not exist in reality\"?",
+    "opts": [
+     "To illustrate how medieval painting differed from realistic representation",
+     "To criticize the architects of medieval Europe",
+     "To show that medieval painters lacked all skill",
+     "To explain how Brunelleschi designed his own buildings"
+    ],
+    "a": 0,
+    "ex": "Пример показывает, что средневековая живопись не стремилась к реалистичному пространству. Автор противопоставляет её поискам итальянских художников XV века.",
+    "hl": {
+     "p": 0,
+     "s": 1,
+     "w": "buildings tilted at angles that could not exist in reality"
+    }
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "Parallel lines in real life actually meet at a point on the horizon.",
+     "Parallel lines seem to come together at one point on the horizon as they move away from the viewer.",
+     "Roads and buildings look smaller than the horizon.",
+     "Distant objects are painted on the horizon instead of along the road."
+    ],
+    "a": 1,
+    "ex": "Суть: параллельные линии кажутся сходящимися в одной точке на горизонте. Вариант про реальную встречу линий неверен — они только кажутся сходящимися.",
+    "simp": {
+     "p": 1,
+     "s": 1
+    }
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"converge\" in the passage is closest in meaning to",
+    "opts": [
+     "move apart",
+     "become shorter",
+     "come together",
+     "turn darker"
+    ],
+    "a": 2,
+    "ex": "Параллельные линии кажутся сходящимися в точке схода. Converge = come together.",
+    "hl": {
+     "p": 1,
+     "s": 1,
+     "w": "converge"
+    }
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that describes how a painter can create the impression of depth.",
+    "sel": {
+     "p": 1
+    },
+    "a": 2,
+    "ex": "Способ создать иллюзию глубины описан в третьем предложении: поставить точку схода на холсте и направить к ней все уходящие линии."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"his\" in paragraph 2 refers to",
+    "opts": [
+     "Filippo Brunelleschi",
+     "a painter",
+     "a wider group of artists",
+     "Leon Battista Alberti"
+    ],
+    "a": 3,
+    "ex": "«Leon Battista Alberti described the method in writing, and his treatise…» — трактат принадлежит Альберти. Brunelleschi упомянут в начале абзаца и не подходит.",
+    "hl": {
+     "p": 1,
+     "s": 3,
+     "w": "his"
+    }
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-215",
+  "level": "C",
+  "src": "claude",
+  "topic": "Life sciences",
+  "title": "How Bacteria Become Resistant",
+  "paras": [
+   [
+    "Antibiotics rarely kill every bacterium in a population.",
+    "Within a large group of bacteria, individual cells differ slightly in their genes, and a few may happen to have a trait that lets them survive the drug.",
+    "When the antibiotic removes the susceptible cells, the survivors face less competition and multiply quickly, so the next generation contains a much higher share of resistant cells."
+   ],
+   [
+    "Resistance can also spread sideways.",
+    "Bacteria can pass small pieces of genetic material to one another, even between different species, so a trait that evolved in one place may appear in organisms that never encountered the drug.",
+    "Using antibiotics when they are not needed, for example against viral infections, increases the pressure on bacteria to adapt."
+   ],
+   [
+    "Because developing new antibiotics is expensive and slow, many experts argue that protecting existing drugs is just as important.",
+    "Hospitals monitor how often each drug is prescribed, farmers are being encouraged to reduce routine use in animals, and researchers are exploring treatments that work differently, such as viruses that attack only bacteria.",
+    "None of these measures alone is sufficient, but together they may slow the spread of resistance."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 1 that explains why resistant bacteria become more common.",
+    "sel": {
+     "p": 0
+    },
+    "a": 2,
+    "ex": "Рост доли устойчивых бактерий объясняет третье предложение абзаца: после гибели чувствительных клеток выжившие размножаются быстрее."
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred from paragraph 1 about the bacteria in a large population?",
+    "opts": [
+     "They do not all react to a drug in the same way.",
+     "They all become resistant at the same time.",
+     "They change their genes because they need to survive.",
+     "They cannot multiply when a drug is present."
+    ],
+    "a": 0,
+    "ex": "Клетки «differ slightly in their genes», и лишь у некоторых есть признак, позволяющий выжить. Значит, реакция на препарат у них разная."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"they\" in paragraph 2 refers to",
+    "opts": [
+     "bacteria",
+     "antibiotics",
+     "viral infections",
+     "species"
+    ],
+    "a": 1,
+    "ex": "«Using antibiotics when they are not needed» — не нужны именно антибиотики. Infections — ближайшее существительное, но оно не подходит по смыслу.",
+    "hl": {
+     "p": 1,
+     "s": 2,
+     "w": "they"
+    }
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "Bacteria of different species cannot share genes, so resistance stays where it evolved.",
+     "Resistance appears in organisms that never met the drug because they evolved the same trait independently.",
+     "Because bacteria can share genes, even across species, resistance can appear in organisms that were never exposed to the drug.",
+     "Bacteria pass genetic material only to members of their own species, which spreads resistance slowly."
+    ],
+    "a": 2,
+    "ex": "Суть: благодаря обмену генами, в том числе между видами, устойчивость возникает у организмов, не встречавшихся с препаратом. Остальные варианты отрицают обмен или добавляют лишнее.",
+    "simp": {
+     "p": 1,
+     "s": 1
+    }
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, all of the following are being done to slow resistance EXCEPT:",
+    "opts": [
+     "Hospitals tracking how often each drug is prescribed",
+     "Farmers being encouraged to reduce routine use",
+     "Researchers exploring viruses that attack bacteria",
+     "Banning every antibiotic in hospitals"
+    ],
+    "a": 3,
+    "ex": "Полный запрет антибиотиков в больницах в тексте не упоминается. Остальные меры названы во втором предложении абзаца."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-216",
+  "level": "C",
+  "src": "claude",
+  "topic": "Business and economics",
+  "title": "The Sunk Cost Trap",
+  "paras": [
+   [
+    "Imagine that you have paid for a ticket to a concert, but on the day of the event you feel unwell and the weather is dreadful.",
+    "Many people go anyway, reasoning that otherwise the money would be wasted.",
+    "Economists point out that this reasoning contains an error.",
+    "The ticket price is a sunk cost, money that has already been spent and cannot be recovered whatever you decide, so it should play no part in the choice."
+   ],
+   [
+    "Yet the pull of sunk costs is strong, and it affects decisions far larger than concert attendance.",
+    "Governments continue funding projects that are clearly failing because so much has already been invested.",
+    "Companies keep developing products that customers do not want.",
+    "In each case, the decision-makers compare the future cost of continuing not with the future benefit but with the amount already lost, and the lost amount makes quitting feel like admitting defeat."
+   ],
+   [
+    "Researchers suggest several remedies.",
+    "One is to ask what a newcomer, who had paid nothing so far, would decide if given the same choice.",
+    "Another is to set clear exit conditions before starting, so that stopping later becomes a matter of following a rule rather than admitting a mistake.",
+    "Neither approach eliminates the emotional pull, but both can make it easier to recognize when past spending is steering a decision."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the author describe a concert ticket in paragraph 1?",
+    "opts": [
+     "To illustrate the idea of a sunk cost with a familiar situation",
+     "To argue that concerts are too expensive",
+     "To show that people dislike bad weather",
+     "To explain how economists set ticket prices"
+    ],
+    "a": 0,
+    "ex": "Билет на концерт — бытовой пример невозвратных затрат: деньги потрачены и не вернутся, что бы вы ни решили."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"it\" in paragraph 2 refers to",
+    "opts": [
+     "concert attendance",
+     "the pull of sunk costs",
+     "the amount already spent",
+     "the choice"
+    ],
+    "a": 1,
+    "ex": "«Yet the pull of sunk costs is strong, and it affects decisions far larger» — влияет на решения сила притяжения невозвратных затрат.",
+    "hl": {
+     "p": 1,
+     "s": 0,
+     "w": "it"
+    }
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 3 that describes a way to make stopping easier by deciding in advance.",
+    "sel": {
+     "p": 2
+    },
+    "a": 2,
+    "ex": "Заранее заданные условия выхода описаны в третьем предложении абзаца: остановка превращается в следование правилу, а не в признание ошибки."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "In these cases, decision-makers compare future costs with future benefits, but the lost amount makes continuing feel like defeat.",
+     "Decision-makers continue because the amount already lost makes continuing cheaper than quitting.",
+     "In these cases, people judge whether to continue by looking at what they have already lost, and quitting feels like defeat.",
+     "Quitting feels like admitting defeat only when the future benefit is smaller than the past cost."
+    ],
+    "a": 2,
+    "ex": "Суть: вместо будущей выгоды люди сравнивают с уже потерянной суммой, и уйти кажется поражением. Остальные варианты меняют логику сравнения.",
+    "simp": {
+     "p": 1,
+     "s": 3
+    }
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, all of the following are mentioned as remedies EXCEPT:",
+    "opts": [
+     "Imagining how a newcomer would decide",
+     "Setting exit conditions before starting",
+     "Following a rule when it is time to stop",
+     "Asking experts to pay for past mistakes"
+    ],
+    "a": 3,
+    "ex": "Оплата прошлых ошибок экспертами в тексте не упоминается. Взгляд новичка и заранее заданные условия выхода названы прямо."
+   }
+  ]
  }
 ]

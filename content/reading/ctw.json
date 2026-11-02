@@ -490,5 +490,47 @@
   "level": "A",
   "topic": "Business and economics",
   "text": "A small shop must decide how much to charge for its products. If the price is too high, customers may go to another shop. If the price is too low, the owner may not earn enough money. The owner thinks about the cost of the goods, the rent, and the time that employees work. Many shops also look at the prices in nearby stores. Sometimes they offer a sale to attract new customers. A good price helps the shop stay open and keeps customers happy."
+ },
+ {
+  "id": "R-CTW-B-121",
+  "level": "B",
+  "topic": "Physical sciences",
+  "text": "Soap cleans dishes because its molecules have two different ends. One end is attracted to water, while the other end attaches to oil and grease. When soapy water touches a greasy plate, the oily ends surround small pieces of grease and pull them away from the surface. The water-loving ends remain on the outside of each piece, so the water can carry the grease down the drain. This explains why water alone cannot remove oil but soap can.",
+  "src": "claude"
+ },
+ {
+  "id": "R-CTW-B-122",
+  "level": "B",
+  "topic": "History",
+  "text": "In many medieval towns, craftsmen of the same trade lived on the same street. Bakers, tanners, and metalworkers each had their own area, and some street names still remind us of these trades. This arrangement had practical advantages. Customers knew where to find a particular product, and craftsmen could share tools and information with their neighbors. It also allowed town officials to inspect goods more easily. Over time, however, many industries moved out of the center because they needed more space.",
+  "src": "claude"
+ },
+ {
+  "id": "R-CTW-B-123",
+  "level": "B",
+  "topic": "Social sciences",
+  "text": "Libraries in the past were often quiet places where talking was not allowed. Today, many libraries have changed their role. They offer free internet access, workshops, and meeting rooms, and some even lend tools or seeds. Librarians say that these services attract people who rarely visited before. At the same time, readers who want silence still need quiet areas for study. For this reason, designers often separate noisy spaces from quiet ones inside the same building.",
+  "src": "claude"
+ },
+ {
+  "id": "R-CTW-C-121",
+  "level": "C",
+  "topic": "Life sciences",
+  "text": "Pollination is often described as a simple exchange in which insects collect food and plants gain a means of reproduction. In practice, the relationship is more complicated. Some flowers imitate the appearance of female insects, deceiving males into visiting without offering any reward. Others open only at night, restricting access to a small number of specialized species. Such strategies can increase the efficiency of pollen transfer, but they also make the plant dependent on a narrow set of partners, which becomes a serious risk if those partners decline.",
+  "src": "claude"
+ },
+ {
+  "id": "R-CTW-C-122",
+  "level": "C",
+  "topic": "Physical sciences",
+  "text": "A scientific model is a simplified representation of a system that helps researchers predict its behavior. Because the real system is often too hard to describe completely, modelers must decide which features to keep and which to ignore. These choices are rarely neutral, and they reflect assumptions about what matters most. A model that predicts one phenomenon accurately may fail badly when applied to another. For that reason, scientists test models against new observations and revise them whenever the evidence demands it.",
+  "src": "claude"
+ },
+ {
+  "id": "R-CTW-C-123",
+  "level": "C",
+  "topic": "Business and economics",
+  "text": "Brand loyalty is frequently interpreted as evidence that consumers prefer a product, yet it can also arise from habit and convenience. A shopper who repeatedly buys the same brand may simply have stopped comparing alternatives. Companies sometimes exploit this tendency by making small changes that are difficult to notice, such as adjusting package sizes. Analysts therefore distinguish genuine attachment from inertia, because only the former is likely to persist when a competitor introduces a better offer.",
+  "src": "claude"
  }
 ]
