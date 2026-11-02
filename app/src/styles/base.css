@@ -5,7 +5,7 @@ body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--ff);font-si
 button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0}
 input,textarea,select{font:inherit;font-size:16px;color:inherit}
 a{color:var(--pri);text-decoration:none}
-:root[data-theme="dark"] a:not(.btn){color:var(--gold)}
+:root[data-theme="dark"] a:where(:not(.btn)){color:var(--gold)}
 a.btn{color:var(--tx)}
 ::selection{background:rgba(240,184,74,.35)}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:6px}
@@ -23,7 +23,7 @@ p{margin:0}
 /* screen header */
 .hdr{display:flex;align-items:center;gap:8px;padding:calc(14px + env(safe-area-inset-top)) 0 12px;position:sticky;top:0;z-index:10;
   background:linear-gradient(var(--bg) 74%,transparent)}
-.hdr h1{flex:1;min-width:0;font-family:var(--ffd);font-size:26px;font-weight:700;letter-spacing:-.025em;
+.hdr h1{flex:1 1 0;min-width:0;font-family:var(--ffd);font-size:26px;font-weight:700;letter-spacing:-.025em;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .hdr .back{color:var(--tx)}
 .hdr .sub{display:block;font-family:var(--ff);font-size:13.5px;font-weight:600;color:var(--fade);letter-spacing:-.005em;margin-top:1px}
@@ -82,9 +82,11 @@ p{margin:0}
 .rail .who>div b{display:block;font-size:14px}
 .rail .who>div span{display:block;font-size:12.5px;color:var(--fade);font-weight:600}
 
-/* view transition */
-.viewin{animation:viewin .32s var(--ease)}
-@keyframes viewin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* view transition: opacity + a few px of GPU-composited movement only, so it never stutters */
+.viewin{animation:viewin .26s var(--ease) both;will-change:opacity,transform}
+@keyframes viewin{from{opacity:0;transform:translate3d(0,5px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+.hdr .btn{flex:none}
+@media (max-width:620px){.hdr .btn .bl{display:none}.hdr .btn.sm{padding:0;width:40px;height:40px;border-radius:11px}}
 @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .brand>b{font-family:var(--ffd);font-size:18px;letter-spacing:-.01em}

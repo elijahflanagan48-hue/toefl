@@ -53,8 +53,12 @@ function renderNav(path) {
   const name = u ? u.name : r === 'teacher' ? demoTeacher.name : demoMe.full;
   const reviewCnt = r === 'teacher' && !u ? demoQueue.length : 0;
   document.getElementById('pill').classList.toggle('many', items.length > 5);
-  document.getElementById('pill').innerHTML = items.map(([p, i, l]) =>
-    `<a class="tab ${p === active ? 'on' : ''}" href="#/${p}" aria-label="${l}" ${p === active ? 'aria-current="page"' : ''}>${ic(i, 22)}<span class="tl">${l}</span></a>`).join('');
+  const pill = document.getElementById('pill'), key = r + ':' + items.length;
+  if (pill.dataset.key !== key) { // build the tabs once per role; afterwards only switch the active one so the pill animates instead of flashing
+    pill.dataset.key = key;
+    pill.innerHTML = items.map(([p, i, l]) => `<a class="tab" href="#/${p}" data-p="${p}" aria-label="${l}">${ic(i, 22)}<span class="tl">${l}</span></a>`).join('');
+  }
+  pill.querySelectorAll('.tab').forEach(a => { const on = a.dataset.p === active; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
   document.getElementById('rail').innerHTML = `
     <div class="brand"><span class="mk">${mark(24)}</span><b>NOEON TOEFL</b></div>
     <nav class="nav">${items.map(([p, i, l]) => `<a class="tab ${p === active ? 'on' : ''}" href="#/${p}">${ic(i, 21)}${l}${p === 't/review' && reviewCnt ? `<span class="cnt">${reviewCnt}</span>` : ''}</a>`).join('')}</nav>
@@ -84,14 +88,17 @@ async function route() {
   if (current && current.unmount) current.unmount();
   closeModal();
   const app = document.getElementById('app');
-  let view;
+  let view, skelT = 0;
   try {
     view = fn(params);
     if (view && typeof view.then === 'function') {
-      if (!route.soft) app.innerHTML = '<div class="skel"></div><div class="skel"></div>';
+      // keep the old screen until the data arrives; show the skeleton only if it takes noticeably long
+      if (!route.soft) skelT = setTimeout(() => { if (my === seq) app.innerHTML = '<div class="skel"></div><div class="skel"></div>'; }, 260);
       view = await view;
     }
+    clearTimeout(skelT);
   } catch (e) {
+    clearTimeout(skelT);
     if (e.status === 401) { location.replace('#/login'); return; }
     view = { title: 'Ошибка', html: `<div class="empty"><b>Не получилось загрузить</b>${e.message || ''}<br><br><button class="btn" data-act="retry">Повторить</button></div>` };
   }
@@ -107,7 +114,7 @@ async function route() {
   if (view.html != null) app.innerHTML = view.html;
   if (view.mount) view.mount(app);
   document.title = (view.title ? view.title + ' · ' : '') + 'NOEON TOEFL';
-  if (!route.soft) { window.scrollTo(0, 0); app.classList.remove('viewin'); void app.offsetWidth; app.classList.add('viewin'); }
+  if (!route.soft) { window.scrollTo(0, 0); app.classList.remove('viewin'); void app.offsetWidth; app.classList.add('viewin'); setTimeout(() => app.classList.remove('viewin'), 320); }
 }
 
 /* re-render on hashchange; same-path re-renders (state toggles) keep scroll and skip the animation */

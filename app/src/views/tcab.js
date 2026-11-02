@@ -23,7 +23,7 @@ export async function studentCard(params) {
   const subs = d.submissions.slice(0, 8);
   return {
     title: st.name, wide: true,
-    html: `${hdr(st.name, { back: '#/t/students', sub: [st.group_name, st.email].filter(Boolean).join(' · '), right: `<button class="btn sm pri" data-act="assign" data-sid="${st.id}">${ic('plus', 16)} Назначить</button>` })}
+    html: `${hdr(st.name, { back: '#/t/students', sub: [st.group_name, st.email].filter(Boolean).join(' · '), right: `<button class="btn sm pri" data-act="assign" data-sid="${st.id}" aria-label="Назначить">${ic('plus', 16)}<span class="bl"> Назначить</span></button>` })}
     <div class="kpis">${['R', 'L', 'W', 'S'].map(k => `<div class="kpi"><span class="sc ${heat(f[k], st.target ?? 4.5)}">${f[k] == null ? 'нет' : band(f[k])}</span><b class="serif" style="font-size:15px">${SEC[k].name}</b><span>прогноз</span></div>`).join('')}
       <div class="kpi hot">${ic('trend', 20)}<b class="serif">${ov == null ? '—' : band(ov)}</b><span>общий${ov == null ? '' : ' · ' + cefr(ov)} · цель ${band(st.target ?? 4.5)}</span></div></div>
     <div class="g-two">

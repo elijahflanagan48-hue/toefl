@@ -32,7 +32,7 @@ export async function home() {
 
   return {
     title: 'Обзор', wide: true,
-    html: `${hdr('Обзор', { sub: 'Кабинет учителя', right: isLive() ? `<a class="btn sm" href="#/t/assign">${ic('cal', 16)} Назначения</a> <button class="btn sm pri" data-act="assign">${ic('plus', 16)} Назначить</button>` : '' })}
+    html: `${hdr('Обзор', { sub: 'Кабинет учителя', right: isLive() ? `<a class="btn sm" href="#/t/assign" aria-label="Назначения">${ic('cal', 16)}<span class="bl"> Назначения</span></a><button class="btn sm pri" data-act="assign" aria-label="Назначить">${ic('plus', 16)}<span class="bl"> Назначить</span></button>` : '' })}
     <div class="kpis">${kpi.map(([i, v, l, h], n) => `<a class="kpi ${n === 1 && queue.length ? 'hot' : ''}" href="${h}">${ic(i, 20)}<b class="serif">${v}</b><span>${l}</span></a>`).join('')}</div>
     <div class="g-thome">
       <section>
