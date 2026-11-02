@@ -90,7 +90,14 @@ p{margin:0}
 .viewin{animation:viewin .26s var(--ease) both;will-change:opacity,transform}
 @keyframes viewin{from{opacity:0;transform:translate3d(0,5px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
 .hdr .btn{flex:none}
-@media (max-width:620px){.hdr .btn .bl{display:none}.hdr .btn.sm{padding:0;width:40px;height:40px;border-radius:11px}}
+@media (max-width:620px){
+  /* several actions don't fit next to the title: title + theme button stay on the first row, the actions wrap below */
+  .hdr{flex-wrap:wrap;row-gap:8px}
+  .hdr h1{flex:1 1 130px;min-width:130px;order:1}
+  .hdr>[data-act="theme-toggle"]{order:2}
+  .hdr>.btn,.hdr>.lnk{order:3}
+  .hdr .btn .bl{display:none}.hdr .btn.sm:has(.bl){padding:0;width:40px;height:40px;border-radius:11px}
+}
 @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .brand>b{font-family:var(--ffd);font-size:18px;letter-spacing:-.01em}
