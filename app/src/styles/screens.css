@@ -305,7 +305,15 @@ body.authing .app{max-width:none;padding:0;margin:0}
 @keyframes sk{to{background-position:-200% 0}}
 .empty{text-align:center;padding:36px 20px;color:var(--mut)}
 .empty b{display:block;color:var(--tx);font-size:17px;margin-bottom:4px}
-.audio-row audio{width:100%;margin-top:8px;height:36px}
+.audio-row audio{width:100%;min-width:220px;margin-top:8px;height:40px;display:block}
+/* phones: the recording gets the full row (a native player collapses to a bare play button when squeezed), scores go underneath */
+@media (max-width:720px){
+  .audio-row{flex-wrap:wrap}
+  .audio-row>.t{flex:1 1 100%;min-width:0}
+  .audio-row>.end{flex:1 1 100%;flex-direction:row;align-items:center;justify-content:flex-start;margin-top:4px}
+  .audios .arow .minis{gap:6px}
+  .audios .arow .mini{width:40px;height:40px;font-size:15px;border-radius:10px}
+}
 .groups .row .code{font-family:var(--ffd);font-weight:700;letter-spacing:.05em;font-size:16px;color:var(--tx)}
 .nodate{color:var(--hero-tx)!important}.nodate b{display:block;font-size:24px;color:var(--gold-2)}
 .auth-brand>b{font-family:var(--ffd);font-size:19px}

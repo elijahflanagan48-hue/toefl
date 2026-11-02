@@ -279,7 +279,7 @@ mark.xhl{background:#ffe9a8;color:inherit;padding:0 2px}
 .spk-list{text-align:left;margin-top:14px;display:grid;gap:10px}
 .spk-list .it{background:#fff;border:1px solid var(--x-line);border-radius:12px;padding:10px 12px;font-size:14.5px}
 .spk-list .it b{display:block;margin-bottom:6px;font-weight:600}
-.spk-list audio{width:100%;height:36px}
+.spk-list audio{width:100%;min-width:220px;height:40px;display:block}
 .spk-err{color:#c4342b;font-size:14px;margin-top:10px}
 
 /* ---- Listening player ---- */
