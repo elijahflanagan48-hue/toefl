@@ -239,14 +239,14 @@
   "id": "R-CTW-B-107",
   "level": "B",
   "topic": "Campus life",
-  "text": "A careers office offers practice interviews before students apply for jobs. Advisers record short interviews with permission and review the answers afterward. Students notice habits that they may overlook while concentrating on questions. One person may speak too quickly, while another gives examples without explaining the result. The adviser suggests a specific change, and the student tries the same question again. Repeated answers should sound natural rather than completely rehearsed. Recording alone does not improve an answer. Its value comes from careful review followed by another opportunity to practice.",
+  "text": "A careers office offers practice interviews before students apply for jobs. Advisers record short interviews with permission and review the answers afterward. Students notice habits that they may miss while concentrating on questions. One person may speak too quickly, while another gives examples without explaining the result. The adviser suggests a specific change, and the student tries the same question again. Repeated answers should sound natural rather than completely rehearsed. Recording alone does not improve an answer. Its value comes from careful review followed by another opportunity to practice.",
   "src": "elijah"
  },
  {
   "id": "R-CTW-B-108",
   "level": "B",
   "topic": "Business and economics",
-  "text": "A company tests a new package before using it to ship pottery. Researchers place fragile objects inside boxes and simulate ordinary transport conditions. They examine whether the protective material prevents damage during repeated movement. Tests include shaking, stacking, and carefully controlled drops. The company also considers how much space the package takes up in a delivery vehicle. Damaged boxes reveal where the protective structure first failed. Strong protection is important, but unnecessary material adds weight and cost. A successful design balances safety with efficient use of resources and storage space.",
+  "text": "A company tests a new package before using it to ship pottery. Researchers place fragile objects inside boxes and simulate ordinary transport conditions. They examine if the protective material prevents damage during repeated movement. Tests include shaking, stacking, and carefully controlled drops. The company also considers how much space the package takes up in a delivery vehicle. Damaged boxes reveal where the protective structure first failed. Strong protection is important, but unnecessary material adds weight and cost. A successful design balances safety with efficient use of resources and storage space.",
   "src": "elijah"
  },
  {
@@ -274,7 +274,7 @@
   "id": "R-CTW-B-112",
   "level": "B",
   "topic": "Campus life",
-  "text": "A lecturer adds captions to a recorded lesson for students to review. The captions display spoken words onscreen and clarify unfamiliar names or terminology. Captions should not hide important diagrams or practical demonstrations. Students can follow the explanation when they cannot use sound. Captions also make it easier to search for a particular part of the recording. Automatic captions provide a useful first draft, but they may misidentify technical words. The lecturer checks them before publication. Accurate captions require attention to meaning as well as the timing of each line.",
+  "text": "A lecturer adds captions to a recorded lesson for students to review. The captions display spoken words onscreen and clarify unfamiliar names or terminology. Captions must not hide important diagrams or practical demonstrations. Students can follow the explanation when they cannot use sound. Captions also make it easier to search for a particular part of the recording. Automatic captions provide a useful first draft, but they may misidentify technical words. The lecturer checks them before publication. Accurate captions require attention to meaning as well as the timing of each line.",
   "src": "elijah"
  },
  {
@@ -337,7 +337,7 @@
   "id": "R-CTW-C-101",
   "level": "C",
   "topic": "History",
-  "text": "An archive reflects decisions about what was considered worth preserving. Researchers examine surviving documents critically and consider whose experiences remain poorly represented. Catalogs reveal which items earlier staff gave special attention. The absence of records cannot automatically establish that an activity never occurred. Some groups produced fewer written documents and lacked institutions able to preserve them. Consequently, an apparently detailed collection may still provide an uneven account of the past. Historians strengthen their interpretations by comparing sources and acknowledging gaps, rather than treating survival as a neutral measure of historical importance.",
+  "text": "An archive reflects decisions about what was considered worth preserving. Researchers examine surviving documents critically and consider whose experiences remain poorly represented. Catalogs show which items earlier staff gave special attention. The absence of records cannot automatically establish that an activity never occurred. Some groups produced fewer written documents and lacked institutions able to preserve them. Consequently, an apparently detailed collection may still provide an uneven account of the past. Historians strengthen their interpretations by comparing sources and acknowledging gaps, rather than treating survival as a neutral measure of historical importance.",
   "src": "elijah"
  },
  {
@@ -379,7 +379,7 @@
   "id": "R-CTW-C-107",
   "level": "C",
   "topic": "History",
-  "text": "Restoring an old building requires decisions about which period its appearance should represent. Architects assess later additions critically, recognizing that alterations may possess historical significance themselves. Removing a newer feature could reveal an earlier design while erasing evidence of subsequent use. Restoration is therefore an interpretation as well as a technical intervention. Detailed documentation helps future researchers understand what was retained, altered, or reconstructed. It also makes clear where an apparently original surface reflects modern judgment rather than material that has survived unchanged.",
+  "text": "Restoring an old building requires decisions about which period its appearance should represent. Architects assess later additions critically, recognizing that alterations may have historical significance themselves. Removing a newer feature could show an earlier design while erasing evidence of subsequent use. Restoration is therefore an interpretation as well as a technical intervention. Detailed documentation helps future researchers understand what was retained, altered, or reconstructed. It also makes clear where an apparently original surface reflects modern judgment rather than material that has survived unchanged.",
   "src": "elijah"
  },
  {
@@ -442,7 +442,7 @@
   "id": "R-CTW-C-116",
   "level": "C",
   "topic": "Social sciences",
-  "text": "A translator must sometimes choose between preserving a phrase's form and conveying its function. Readers interpret familiar expressions readily, whereas literal renderings may obscure the intended social meaning. An expression of polite disagreement can sound unusually harsh when transferred word for word into another language. The translator therefore considers context, audience, and the relationship between speakers. Several versions may be defensible, each emphasizing a different feature of the original. Explaining consequential choices makes the interpretation visible instead of presenting translation as a purely mechanical substitution.",
+  "text": "A translator must sometimes choose between preserving a phrase's form and conveying its function. Readers interpret familiar expressions readily, whereas literal renderings may blur the intended social meaning. An expression of polite disagreement can sound unusually harsh when transferred word for word into another language. The translator therefore considers context, audience, and the relationship between speakers. Several versions may be defensible, each emphasizing a different feature of the original. Explaining consequential choices makes the interpretation visible instead of presenting translation as a purely mechanical substitution.",
   "src": "elijah"
  },
  {
@@ -472,5 +472,23 @@
   "topic": "Social sciences",
   "text": "Comparing two teaching approaches requires attention to differences that existed before instruction began. Evaluators examine initial performance systematically and consider whether unequal preparation could explain later achievement differences. One group that starts with stronger skills may finish ahead even if its instruction is less effective. Measuring change can provide a different perspective from comparing final scores alone. However, neither comparison automatically removes all uncertainty. A credible evaluation describes the groups, the learning conditions, and the limitations that prevent a simple attribution of outcomes to teaching method.",
   "src": "elijah"
+ },
+ {
+  "id": "R-CTW-A-121",
+  "level": "A",
+  "topic": "Physical sciences",
+  "text": "Rain is an important part of the water cycle. The sun heats water in rivers, lakes, and oceans, and some of it turns into vapor. The vapor rises into the air and becomes cool. Then it forms small drops that make clouds. When the drops become heavy, they fall to the ground as rain or snow. The water flows back into rivers and lakes, and the cycle starts again. People need this cycle for drinking water and for growing food."
+ },
+ {
+  "id": "R-CTW-A-122",
+  "level": "A",
+  "topic": "History",
+  "text": "Long ago, people did not have clocks in their homes. They used the sun to tell the time. A tall stick in the ground made a shadow, and the shadow moved during the day. Later, people made water clocks and candle clocks, which could work at night. The first mechanical clocks appeared in Europe about seven hundred years ago. They were very large and stood in towers in the middle of towns. Today, almost everyone has a small clock on a phone or on a wrist."
+ },
+ {
+  "id": "R-CTW-A-123",
+  "level": "A",
+  "topic": "Business and economics",
+  "text": "A small shop must decide how much to charge for its products. If the price is too high, customers may go to another shop. If the price is too low, the owner may not earn enough money. The owner thinks about the cost of the goods, the rent, and the time that employees work. Many shops also look at the prices in nearby stores. Sometimes they offer a sale to attract new customers. A good price helps the shop stay open and keeps customers happy."
  }
 ]
