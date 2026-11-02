@@ -5,7 +5,7 @@ compatibility_date = "2026-09-01"
 [vars]
 # Comma-separated list of origins allowed to call the API (GitHub Pages site + local dev).
 # Audio recordings: R2 bucket noeon-toefl-audio (created 2026-10-30).
-ALLOWED_ORIGINS = "https://elijahflanagan48-hue.github.io,http://localhost:5173,http://localhost:4173"
+ALLOWED_ORIGINS = "https://toefl.noeon.org,https://elijahflanagan48-hue.github.io,http://localhost:5173,http://localhost:4173"
 SESSION_DAYS = "60"
 AUDIO_MAX_MB = "8"
 
