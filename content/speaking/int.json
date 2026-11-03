@@ -274,5 +274,125 @@
    "Some people say schools should spend more time on art and music. Do you agree or disagree?",
    "How might technology change the way that artists create their work?"
   ]
+ },
+ {
+  "id": "S-INT-A-024",
+  "level": "A",
+  "title": "Shopping habits",
+  "scenario": "A magazine is writing about how young people shop. You will answer four questions from a reporter.",
+  "questions": [
+   "Where do you usually buy your clothes?",
+   "Tell me about the last thing you bought that you really liked.",
+   "Do you think shopping online is better than shopping in a store? Why?",
+   "What would you buy if you won a small prize today?"
+  ]
+ },
+ {
+  "id": "S-INT-A-025",
+  "level": "A",
+  "title": "Weather and seasons",
+  "scenario": "A radio program is asking listeners about the weather. You will answer four questions from the host.",
+  "questions": [
+   "What is the weather like in your city in the summer?",
+   "Which season do you like best, and why do you like it?",
+   "Some people feel happier when the weather is sunny. Do you agree?",
+   "How would your life be different if you lived in a much colder place?"
+  ]
+ },
+ {
+  "id": "S-INT-A-026",
+  "level": "A",
+  "title": "Family and home",
+  "scenario": "A student newspaper is writing about family life. You will answer four questions from a student reporter.",
+  "questions": [
+   "Who do you live with, and what do you like about your home?",
+   "What do you usually do together with your family on weekends?",
+   "Do you think children should help with the housework? Why or why not?",
+   "Describe the home that you would like to have in the future."
+  ]
+ },
+ {
+  "id": "S-INT-A-027",
+  "level": "A",
+  "title": "Daily routine",
+  "scenario": "A university is doing a survey about student routines. You will answer four questions from a researcher.",
+  "questions": [
+   "What time do you usually wake up, and what do you do first?",
+   "Which part of your day is the busiest for you?",
+   "Some people like to plan every day carefully. What do you think about this?",
+   "If you could change one thing about your daily routine, what would it be?"
+  ]
+ },
+ {
+  "id": "S-INT-A-028",
+  "level": "A",
+  "title": "Holidays and celebrations",
+  "scenario": "A community center is collecting stories about holidays. You will answer four questions from an interviewer.",
+  "questions": [
+   "What is your favorite holiday, and how do you celebrate it?",
+   "Tell me about a special meal that you eat on a holiday.",
+   "Do you think people spend too much money on celebrations? Why or why not?",
+   "How do you think holidays will change in the next twenty years?"
+  ]
+ },
+ {
+  "id": "S-INT-C-029",
+  "level": "C",
+  "title": "Technology and privacy",
+  "scenario": "A university is researching attitudes toward online privacy. You will answer four questions from a researcher.",
+  "questions": [
+   "How careful are you about the personal information you share online?",
+   "In what ways have apps and websites changed the way people think about privacy?",
+   "Some people argue that companies should be forbidden from collecting personal data. To what extent do you agree?",
+   "If privacy continues to decline, what consequences might this have for society?"
+  ]
+ },
+ {
+  "id": "S-INT-C-030",
+  "level": "C",
+  "title": "Work and careers",
+  "scenario": "A career center is studying how students think about their future jobs. You will answer four questions from an advisor.",
+  "questions": [
+   "What factors are most important to you when you think about a future career?",
+   "How has your education influenced the kind of work you would like to do?",
+   "Some experts claim that people will change careers several times in their lives. What is your opinion about this?",
+   "If many jobs were replaced by automation, how should governments respond?"
+  ]
+ },
+ {
+  "id": "S-INT-C-031",
+  "level": "C",
+  "title": "Cities and rural life",
+  "scenario": "An urban planning institute is researching where people prefer to live. You will answer four questions from an interviewer.",
+  "questions": [
+   "Would you rather live in a large city or in the countryside, and why?",
+   "How do you think living in a city affects a person's relationships with others?",
+   "Some people believe that rural communities are disappearing. To what degree do you think this is a serious problem?",
+   "If you were responsible for improving a city, what changes would you make first?"
+  ]
+ },
+ {
+  "id": "S-INT-C-032",
+  "level": "C",
+  "title": "Online learning",
+  "scenario": "A university is evaluating its online courses. You will answer four questions from an education researcher.",
+  "questions": [
+   "What has been your experience with online courses or learning videos?",
+   "In what ways does learning online differ from learning in a classroom?",
+   "Some educators claim that online courses cannot replace face-to-face teaching. How far do you agree with this view?",
+   "If universities offered all of their courses online, what would be gained and what would be lost?"
+  ]
+ },
+ {
+  "id": "S-INT-C-033",
+  "level": "C",
+  "title": "Culture and globalization",
+  "scenario": "A cultural foundation is researching how global trends affect local traditions. You will answer four questions from an interviewer.",
+  "questions": [
+   "How are the traditions in your country different from those in other places?",
+   "In what ways have foreign films, music, and food influenced the culture where you live?",
+   "Some people fear that globalization is destroying local cultures. To what extent is this concern justified?",
+   "If you could preserve one tradition for future generations, which would you choose, and why?"
+  ]
  }
 ]

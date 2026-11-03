@@ -298,5 +298,125 @@
    "International applicants must also submit proof of their English test scores.",
    "Students who want to visit the campus can sign up for a guided tour at the front desk."
   ]
+ },
+ {
+  "id": "S-LRP-A-021",
+  "level": "A",
+  "title": "Bike rental shop",
+  "scenario": "You are a new worker at a bike rental shop near campus. The owner is explaining your daily tasks.",
+  "sentences": [
+   "Please check each bike before you rent it.",
+   "Ask each customer to wear a helmet.",
+   "Write the customer's name and phone number clearly on the form.",
+   "All bikes must be back at the shop before six in the evening.",
+   "If a tire is flat, please tell the repair person right away.",
+   "Tourists often ask about the best paths, so please learn the map of the lake.",
+   "At the end of each day, please wash all the bikes and put them in the back room."
+  ]
+ },
+ {
+  "id": "S-LRP-A-022",
+  "level": "A",
+  "title": "Health center desk",
+  "scenario": "You are a student helper at the campus health center. The nurse is explaining how to welcome patients.",
+  "sentences": [
+   "Please greet each student politely.",
+   "Ask for the name of the student first.",
+   "Check the appointment book and find the correct time for each student.",
+   "Students with a fever should sit in the small waiting room.",
+   "The nurse can see two students at the same time on busy days.",
+   "If a student feels very sick, call the nurse and bring a chair immediately.",
+   "Please keep the front desk tidy and answer the telephone before the third ring."
+  ]
+ },
+ {
+  "id": "S-LRP-A-023",
+  "level": "A",
+  "title": "Swimming pool assistant",
+  "scenario": "You are a part-time assistant at the campus swimming pool. The lifeguard is explaining the safety rules.",
+  "sentences": [
+   "Please walk slowly around the pool.",
+   "All children must wear a swimming cap.",
+   "Check that the pool gate is closed every hour of the day.",
+   "Swimmers should take a shower before they enter the water.",
+   "If you see a problem, blow the whistle and call the lifeguard.",
+   "The pool is closed on Sunday, so we clean the floor and test the water that day.",
+   "Please remind everyone that food and glass bottles are not allowed near the pool."
+  ]
+ },
+ {
+  "id": "S-LRP-A-024",
+  "level": "A",
+  "title": "Computer lab helper",
+  "scenario": "You are a student helper in the computer lab. A teacher is explaining what you should do each day.",
+  "sentences": [
+   "Please turn on all of the computers.",
+   "Sign each student into the lab book.",
+   "Show new students how to log in to the system on the first day.",
+   "Students can print up to ten pages for free every week.",
+   "If a computer is not working, put a red card on the screen.",
+   "The lab is quiet during exam week, so please ask students to speak softly.",
+   "Before you leave in the evening, turn off the lights and lock the door."
+  ]
+ },
+ {
+  "id": "S-LRP-C-025",
+  "level": "C",
+  "title": "Museum exhibit assistant",
+  "scenario": "You are an assistant at a university art museum. The curator is describing how new exhibits are prepared.",
+  "sentences": [
+   "Handle every artifact with great care.",
+   "Record the condition of each piece.",
+   "Visitors are not permitted to touch any of the displays.",
+   "Lighting must be adjusted to protect the older paintings.",
+   "Please document each loan before the exhibit opens.",
+   "Before each opening, we review the catalog to confirm the descriptions.",
+   "Report any damage to the registrar at once, even if it seems minor."
+  ]
+ },
+ {
+  "id": "S-LRP-C-026",
+  "level": "C",
+  "title": "Orientation week coordinator",
+  "scenario": "You are helping to organize orientation week for new international students. The coordinator is explaining your responsibilities.",
+  "sentences": [
+   "Distribute the welcome packets at the door.",
+   "Introduce yourself to each newcomer.",
+   "Students who need housing assistance should visit the second table.",
+   "Please make sure that every group leader has a complete schedule.",
+   "Questions about visas go to the international office.",
+   "Some students will feel nervous, so try to be patient and encouraging at all times.",
+   "After the closing session, collect the feedback forms and return them to my office."
+  ]
+ },
+ {
+  "id": "S-LRP-C-027",
+  "level": "C",
+  "title": "Field research assistant",
+  "scenario": "You are assisting a professor with a field study of local birds. The professor is explaining the procedures.",
+  "sentences": [
+   "Arrive at the site before sunrise.",
+   "Record the weather conditions carefully.",
+   "Binoculars should be returned to the equipment case afterward.",
+   "Please avoid making sudden noises near the nesting areas.",
+   "Each sighting must be entered into the data sheet without delay.",
+   "If you are unsure about a species, take a photograph instead of guessing.",
+   "We will compare this season's results with last year's at our weekly meeting."
+  ]
+ },
+ {
+  "id": "S-LRP-C-028",
+  "level": "C",
+  "title": "Alumni event planner",
+  "scenario": "You are an intern in the university alumni office. Your supervisor is explaining how to prepare for the annual reunion.",
+  "sentences": [
+   "Confirm the guest list with the registration team.",
+   "Contact the caterer about special diets.",
+   "Name tags should be printed in advance for every attendee.",
+   "Please reserve the main auditorium for the keynote speaker.",
+   "Our budget does not allow extra decorations this year.",
+   "On the day, you will be responsible for greeting the former students warmly.",
+   "After the reunion, we will send a survey to see how we can improve."
+  ]
  }
 ]
