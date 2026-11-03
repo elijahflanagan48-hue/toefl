@@ -394,5 +394,125 @@
    "Some people fear that globalization is destroying local cultures. To what extent is this concern justified?",
    "If you could preserve one tradition for future generations, which would you choose, and why?"
   ]
+ },
+ {
+  "id": "S-INT-A-034",
+  "level": "A",
+  "title": "Pets and animals",
+  "scenario": "A pet store is asking customers about animals. You will answer four questions from an interviewer.",
+  "questions": [
+   "Do you have a pet, or would you like to have one?",
+   "Tell me about an animal that you like very much.",
+   "Some people think that cats are better pets than dogs. What do you think?",
+   "What would you do if you found a lost animal on the street?"
+  ]
+ },
+ {
+  "id": "S-INT-A-035",
+  "level": "A",
+  "title": "Music and movies",
+  "scenario": "A student club is asking members about their favorite entertainment. You will answer four questions from a club leader.",
+  "questions": [
+   "What kind of music do you listen to most often?",
+   "Tell me about a movie that you watched recently.",
+   "Do you prefer watching movies at home or in a theater? Why?",
+   "How do you think movies and music will change in the future?"
+  ]
+ },
+ {
+  "id": "S-INT-A-036",
+  "level": "A",
+  "title": "Neighborhood",
+  "scenario": "A city newspaper is writing about local neighborhoods. You will answer four questions from a reporter.",
+  "questions": [
+   "What do you like most about the neighborhood where you live?",
+   "Where do you usually go to buy food or other things?",
+   "Do you think it is important to know your neighbors? Why or why not?",
+   "What would you change in your neighborhood if you could?"
+  ]
+ },
+ {
+  "id": "S-INT-A-037",
+  "level": "A",
+  "title": "Cooking at home",
+  "scenario": "A cooking magazine is asking readers about their meals. You will answer four questions from an editor.",
+  "questions": [
+   "How often do you cook at home, and what do you usually make?",
+   "Tell me about the person who taught you to cook.",
+   "Some people think that cooking at home is healthier than eating out. Do you agree?",
+   "If you could cook dinner for any guest, who would it be and what would you make?"
+  ]
+ },
+ {
+  "id": "S-INT-A-038",
+  "level": "A",
+  "title": "Weekend plans",
+  "scenario": "A student center is planning weekend activities. You will answer four questions from a staff member.",
+  "questions": [
+   "What do you usually do on Saturday mornings?",
+   "Tell me about a place that you enjoyed visiting on a weekend.",
+   "Do you think students should study on weekends? Why or why not?",
+   "If you had a free weekend next month, what would you like to do?"
+  ]
+ },
+ {
+  "id": "S-INT-C-039",
+  "level": "C",
+  "title": "Media and news",
+  "scenario": "A communications department is researching how people follow the news. You will answer four questions from a researcher.",
+  "questions": [
+   "How do you usually keep up with news about the world?",
+   "In what ways has the internet changed the way people trust information?",
+   "Some critics argue that news organizations focus too much on sensational stories. To what extent do you agree?",
+   "If people stopped reading the news altogether, what effects might this have on a community?"
+  ]
+ },
+ {
+  "id": "S-INT-C-040",
+  "level": "C",
+  "title": "Success and failure",
+  "scenario": "A university counseling center is studying attitudes toward failure. You will answer four questions from a counselor.",
+  "questions": [
+   "How do you usually react when you fail at something important?",
+   "In what ways can a failure be useful for a person's development?",
+   "Some people claim that students today are afraid to take risks. How far do you agree with this view?",
+   "If schools gave less importance to grades, how might students behave differently?"
+  ]
+ },
+ {
+  "id": "S-INT-C-041",
+  "level": "C",
+  "title": "Leadership and teamwork",
+  "scenario": "A business school is researching what makes a good team. You will answer four questions from an interviewer.",
+  "questions": [
+   "Describe a time when you worked as part of a team.",
+   "What qualities do you think are most important in a good leader?",
+   "Some people believe that the best leaders are born, not made. To what degree do you agree?",
+   "If a team member refused to cooperate, how should the group deal with the situation?"
+  ]
+ },
+ {
+  "id": "S-INT-C-042",
+  "level": "C",
+  "title": "Science and society",
+  "scenario": "A science museum is gathering opinions about research funding. You will answer four questions from an interviewer.",
+  "questions": [
+   "Which scientific discoveries do you think have most improved daily life?",
+   "How should the public be informed about the results of new research?",
+   "Some people argue that governments should fund only research with practical benefits. What is your opinion?",
+   "If scientists could solve only one global problem in the next decade, which should it be, and why?"
+  ]
+ },
+ {
+  "id": "S-INT-C-043",
+  "level": "C",
+  "title": "Language and identity",
+  "scenario": "A university is researching the relationship between language and culture. You will answer four questions from a researcher.",
+  "questions": [
+   "How important is your first language to your sense of who you are?",
+   "In what ways can learning a foreign language change the way a person thinks?",
+   "Some linguists claim that speaking several languages makes people more open-minded. To what extent do you agree?",
+   "If everyone in the world spoke the same language, how might culture be affected?"
+  ]
  }
 ]

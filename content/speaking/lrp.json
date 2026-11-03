@@ -418,5 +418,125 @@
    "On the day, you will be responsible for greeting the former students warmly.",
    "After the reunion, we will send a survey to see how we can improve."
   ]
+ },
+ {
+  "id": "S-LRP-A-029",
+  "level": "A",
+  "title": "Parking office helper",
+  "scenario": "You are a student helper at the campus parking office. The manager is explaining the daily rules.",
+  "sentences": [
+   "Please greet every driver politely.",
+   "Check the permit on the window.",
+   "Visitors can park only in the blue area near the gate.",
+   "Drivers must pay at the machine before they leave the lot.",
+   "If a car blocks the road, call the security office.",
+   "The north parking lot is full by eight, so please send new drivers to the east lot.",
+   "At the end of the shift, write the number of cars on the report sheet."
+  ]
+ },
+ {
+  "id": "S-LRP-A-030",
+  "level": "A",
+  "title": "Cafeteria cashier",
+  "scenario": "You are a new cashier in the student cafeteria. The supervisor is explaining your tasks.",
+  "sentences": [
+   "Please count the money in the morning.",
+   "Smile and say hello to everyone.",
+   "Students can pay with cash or with their meal card at any counter.",
+   "Always give the customer a receipt after the payment.",
+   "If the line is long, ask another worker to help you.",
+   "The price of the soup changes every day, so check the sign near the register.",
+   "Before you go home, put the money in the box and give the key to the manager."
+  ]
+ },
+ {
+  "id": "S-LRP-A-031",
+  "level": "A",
+  "title": "Language lab assistant",
+  "scenario": "You are an assistant in the language lab. The teacher is explaining how to help the students.",
+  "sentences": [
+   "Please open the lab at nine o'clock.",
+   "Give each student a pair of headphones.",
+   "Show the students where the practice lessons are on the computer.",
+   "Visitors must write their names on the list at the door.",
+   "If the sound is not working, try another computer first.",
+   "Students can borrow a dictionary, but they must return it before closing.",
+   "When the last class is over, collect the headphones and lock them in the cabinet."
+  ]
+ },
+ {
+  "id": "S-LRP-A-032",
+  "level": "A",
+  "title": "Dormitory front desk",
+  "scenario": "You are working at the front desk of a student dormitory. The manager is describing your duties.",
+  "sentences": [
+   "Please check the name of every guest.",
+   "Keep all of the keys in the small box.",
+   "Residents may invite only one friend at a time.",
+   "Guests must leave the building before eleven at night.",
+   "If a package arrives, put a note on the resident's door.",
+   "The laundry room is open all day, but the machines stop working at midnight.",
+   "Please tell the residents about the fire drill, which will be on Friday afternoon."
+  ]
+ },
+ {
+  "id": "S-LRP-C-033",
+  "level": "C",
+  "title": "Debate tournament volunteer",
+  "scenario": "You are volunteering at a university debate tournament. The organizer is explaining your responsibilities.",
+  "sentences": [
+   "Escort each team to its assigned room.",
+   "Distribute the judging forms promptly.",
+   "Competitors should arrive at least fifteen minutes before each round.",
+   "Please keep the corridors quiet while the debates are in progress.",
+   "Every timekeeper must be seated before the first speech begins.",
+   "If a judge is absent, tell the head organizer so we can find another.",
+   "After the final round, collect the scoring sheets and give them to the director."
+  ]
+ },
+ {
+  "id": "S-LRP-C-034",
+  "level": "C",
+  "title": "Archive assistant",
+  "scenario": "You are an assistant in the university library archive. The archivist is explaining the procedures.",
+  "sentences": [
+   "Wash your hands before touching documents.",
+   "Use only pencils instead of ink pens.",
+   "Visitors must request materials at least a day in advance.",
+   "Photographs are allowed only with the archivist's permission.",
+   "Fragile letters should be handled with extreme gentleness.",
+   "Every item that leaves the reading room must be recorded in the logbook.",
+   "If you notice moisture, tell me so that we can protect the collection."
+  ]
+ },
+ {
+  "id": "S-LRP-C-035",
+  "level": "C",
+  "title": "Peer tutoring coordinator",
+  "scenario": "You are a coordinator in the peer tutoring program. The program director is explaining your duties.",
+  "sentences": [
+   "Match each student with a suitable tutor.",
+   "Confirm all sessions by email.",
+   "Tutors are expected to prepare materials in advance.",
+   "Please remind students to bring their assignments to each meeting.",
+   "Complaints should be reported to the director without delay.",
+   "Each month, you will summarize the attendance records in a short report.",
+   "Because demand increases before exams, we may need to recruit more tutors."
+  ]
+ },
+ {
+  "id": "S-LRP-C-036",
+  "level": "C",
+  "title": "Guest lecturer host",
+  "scenario": "You are a student host for a visiting professor. The department secretary is explaining how to welcome the speaker.",
+  "sentences": [
+   "Meet the professor at the main entrance.",
+   "Offer to carry her luggage.",
+   "Escort her to the faculty lounge for refreshments.",
+   "Please check that the projector is working properly.",
+   "Introduce yourself and explain the schedule for the afternoon.",
+   "During the lecture, you should sit near the front in case she needs any assistance.",
+   "Afterward, take her to the hotel and confirm her flight for tomorrow."
+  ]
  }
 ]
