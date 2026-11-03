@@ -16108,5 +16108,1241 @@
    "Purpose",
    "Inference"
   ]
+ },
+ {
+  "id": "L-ANN-A-050",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-050",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-050.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F3",
+  "words": 65,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Attention, students. The library will stay open late during exam week. From Monday to Friday, it will close at midnight instead of nine in the evening. Study rooms can be reserved at the front desk, but each group may use a room for only two hours. Free coffee and tea will be available on the first floor after ten o'clock. Good luck on your exams!"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the announcement mainly about?",
+    "opts": [
+     "A new coffee shop on campus",
+     "Longer library hours during exam week",
+     "A change to the exam schedule",
+     "Rules for returning books"
+    ]
+   },
+   {
+    "stem": "How long may a group use a study room?",
+    "opts": [
+     "For one hour",
+     "Until midnight",
+     "For two hours",
+     "For the whole day"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2
+  ],
+  "explain": [
+   "Библиотека работает дольше в экзаменационную неделю. A — кофе — лишь деталь; C — расписание экзаменов не меняется; D — возврат книг не упоминается",
+   "*only two hours*. A — не упоминается; B — это время закрытия; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-051",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-051",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-051.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M2",
+  "words": 64,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Hello, everyone. This Saturday, the Environmental Club is planning a clean-up day at Lakeside Park. We will meet at the main gate at nine in the morning. The club will provide gloves and bags, but please bring your own water bottle. Everyone who helps will receive a free lunch and a club T-shirt. To join, just send an email to the club before Thursday."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What will the volunteers do on Saturday?",
+    "opts": [
+     "Plant trees along the lake",
+     "Sell club T-shirts",
+     "Clean a park",
+     "Collect water bottles"
+    ]
+   },
+   {
+    "stem": "What should volunteers bring?",
+    "opts": [
+     "A water bottle",
+     "Gloves",
+     "A bag",
+     "Lunch"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0
+  ],
+  "explain": [
+   "*clean-up day at Lakeside Park*. A — деревья не упоминаются; B — футболки дают, а не продают; D — бутылки приносят с собой",
+   "*please bring your own water bottle*. B — перчатки даёт клуб; C — мешки даёт клуб; D — обед дают бесплатно"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-B-052",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-052",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-052.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F2",
+  "words": 73,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Attention, students. Elections for next year's student government will be held on Wednesday, April tenth. Anyone who wants to run must pick up an application at the Student Life office and return it by this Friday at five. Each candidate needs signatures from fifty classmates. Voting will take place online, and the link will be sent to your university email. Candidates will give short speeches in the student center on Tuesday at noon."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What must a student do to become a candidate?",
+    "opts": [
+     "Give a speech on Wednesday",
+     "Send a link to the university",
+     "Vote online first",
+     "Return an application with fifty signatures"
+    ]
+   },
+   {
+    "stem": "What can be inferred about the speeches?",
+    "opts": [
+     "They are required for voting online",
+     "They will be held after the election",
+     "They are meant to help students choose a candidate",
+     "They will be sent by email"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   2
+  ],
+  "explain": [
+   "*application... signatures from fifty classmates*. A — речи — на вторник и необязательно как условие; B — ссылку присылает университет; C — голосование — не условие",
+   "Речи проходят до выборов. A — для голосования не нужны; B — они до выборов; D — по почте идёт ссылка"
+  ],
+  "qtypes": [
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-ANN-B-053",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-053",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-053.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M",
+  "words": 73,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Residents of Oak Hall, please note an important change. The deadline to apply for next year's housing has been moved from March first to February twentieth. The reason is that the housing office needs more time to arrange rooms for the growing number of first-year students. Applications are available online, and a fee of fifty dollars is due with each application. Students who miss the deadline will be placed on a waiting list."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why was the housing deadline changed?",
+    "opts": [
+     "Fewer students applied this year",
+     "The office needs more time to arrange rooms",
+     "Oak Hall will close for repairs",
+     "The application fee has increased"
+    ]
+   },
+   {
+    "stem": "What will happen to students who miss the deadline?",
+    "opts": [
+     "They will pay a higher fee",
+     "They will be placed on a waiting list",
+     "They will lose their rooms in Oak Hall",
+     "They will apply in March"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1
+  ],
+  "explain": [
+   "*needs more time to arrange rooms*. A — студентов становится больше; C — ремонт не упоминается; D — плата не менялась",
+   "*placed on a waiting list*. A — повышение платы не упоминается; C — нынешние комнаты не обсуждаются; D — срок перенесён на более ранний"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-C-054",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-054",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-054.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M3",
+  "words": 77,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Students and faculty, the university has revised its academic integrity policy, effective next semester. First, all written assignments will now be checked by plagiarism-detection software before they are graded. Second, a student who is accused of cheating will have the right to present a defense before a committee that includes at least one other student. The previous policy allowed instructors to decide such cases alone. Information sessions will be held in the first two weeks of classes."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is one change in the new policy?",
+    "opts": [
+     "Instructors will decide cheating cases alone",
+     "Students may not attend committee meetings",
+     "All exams will be online",
+     "Written work will be checked by software"
+    ]
+   },
+   {
+    "stem": "Why does the speaker mention the previous policy?",
+    "opts": [
+     "To criticize the instructors",
+     "To show how the process for accusations has changed",
+     "To explain how software works",
+     "To announce an information session"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1
+  ],
+  "explain": [
+   "*checked by plagiarism-detection software*. A — так было раньше; B — студент в комиссии участвует; C — экзамены не упоминаются",
+   "Контраст: раньше решал один преподаватель. A — критики нет; C — работа ПО не объясняется; D — сессии — отдельная деталь"
+  ],
+  "qtypes": [
+   "Factual",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-ANN-C-055",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-055",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-055.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F",
+  "words": 84,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Attention, graduate students. The Office of Research is now accepting applications for the Fenwick Grant, which supports projects that combine two or more disciplines. Awards of up to eight thousand dollars may be used for equipment, travel, or participant payments, but not for salaries. Applicants must submit a two-page proposal and a letter from a faculty adviser by the fifteenth of next month. Because the committee received more proposals than expected last year, only projects that clearly explain their interdisciplinary value will be considered."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What kind of projects does the Fenwick Grant support?",
+    "opts": [
+     "Projects that need new equipment",
+     "Projects that combine different disciplines",
+     "Projects led by faculty advisers",
+     "Projects about travel"
+    ]
+   },
+   {
+    "stem": "What can be inferred about the competition this year?",
+    "opts": [
+     "It may be more selective than before",
+     "It will have fewer applicants",
+     "It is open only to faculty",
+     "It now pays salaries"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   0
+  ],
+  "explain": [
+   "*combine two or more disciplines*. A — оборудование — лишь статья расходов; C — преподаватель пишет письмо; D — поездки — лишь статья расходов",
+   "В прошлом году заявок было больше ожидаемого. B — заявок скорее много; C — только аспиранты; D — зарплаты не оплачиваются"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-A-056",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-056",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-056.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F2, Man = TOEFL UK-M",
+  "words": 58,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a transportation office worker."
+   },
+   {
+    "who": "Woman",
+    "text": "Hello. How can I help you?"
+   },
+   {
+    "who": "Man",
+    "text": "Hi. I'd like to buy a bus pass for the semester."
+   },
+   {
+    "who": "Woman",
+    "text": "Sure. A semester pass costs sixty dollars. Do you have your student card?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes, here it is. Can I use the pass on weekends too?"
+   },
+   {
+    "who": "Woman",
+    "text": "Yes, it works every day of the week. Your pass will be ready in two minutes."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What does the man want to buy?",
+    "opts": [
+     "A bus pass for the semester",
+     "A student card",
+     "A weekend ticket",
+     "A bicycle"
+    ]
+   },
+   {
+    "stem": "What does the woman say about weekends?",
+    "opts": [
+     "The buses do not run",
+     "The pass costs more",
+     "He must buy another ticket",
+     "The pass can be used on those days"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   3
+  ],
+  "explain": [
+   "*a bus pass for the semester*. B — карта у него уже есть; C — выходные — лишь вопрос; D — велосипед не упоминается",
+   "*it works every day of the week*. A — автобусы ходят; B — цена одна; C — второй билет не нужен"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-057",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-057",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-057.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2, Woman = TOEFL CA-F",
+  "words": 53,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Man",
+    "text": "Do you want to study for the biology test together?"
+   },
+   {
+    "who": "Woman",
+    "text": "Good idea. I'm free on Tuesday after class."
+   },
+   {
+    "who": "Man",
+    "text": "I have a part-time job on Tuesday. What about Wednesday at four?"
+   },
+   {
+    "who": "Woman",
+    "text": "Wednesday is fine. Let's meet in the library, on the second floor."
+   },
+   {
+    "who": "Man",
+    "text": "Great. I'll bring my notes, and you can bring the textbook."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "When will the students meet?",
+    "opts": [
+     "On Tuesday after class",
+     "On Tuesday at four",
+     "On Wednesday after work",
+     "On Wednesday at four"
+    ]
+   },
+   {
+    "stem": "What will the woman bring?",
+    "opts": [
+     "The textbook",
+     "Her notes",
+     "A computer",
+     "Some food"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0
+  ],
+  "explain": [
+   "*Wednesday at four*. A — вторник не подходит ему; B — путает день; C — работа во вторник",
+   "*you can bring the textbook*. B — конспекты принесёт он; C — не упоминается; D — не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-B-058",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-058",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-058.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F2, Man = TOEFL AU-M",
+  "words": 77,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Woman",
+    "text": "You look nervous. What's going on?"
+   },
+   {
+    "who": "Man",
+    "text": "I have an interview tomorrow for a summer internship at a marketing company."
+   },
+   {
+    "who": "Woman",
+    "text": "That's exciting! Have you prepared?"
+   },
+   {
+    "who": "Man",
+    "text": "I read about the company, but I still don't know how to answer the question 'Tell me about yourself.'"
+   },
+   {
+    "who": "Woman",
+    "text": "Keep it short. Mention your major, one project you're proud of, and why you like their work."
+   },
+   {
+    "who": "Man",
+    "text": "That makes sense. Could we practice for a few minutes?"
+   },
+   {
+    "who": "Woman",
+    "text": "Sure, I have time before my class."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the man worried about?",
+    "opts": [
+     "Finding a company to work for",
+     "How to answer a question at an interview",
+     "Missing a class",
+     "Choosing a major"
+    ]
+   },
+   {
+    "stem": "What does the woman suggest?",
+    "opts": [
+     "Giving a short answer about his work and interests",
+     "Reading more about the company",
+     "Asking the interviewer questions first",
+     "Talking only about his major"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   0
+  ],
+  "explain": [
+   "*I still don't know how to answer*. A — компания уже найдена; C — занятие у неё, не у него; D — специальность не обсуждается",
+   "Она советует кратко назвать специальность, проект и интерес к компании. B — это он уже сделал; C — не упоминается; D — нужно упомянуть ещё проект и интерес"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-B-059",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-059",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-059.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M2, Woman = TOEFL US-F2",
+  "words": 80,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a dining services manager."
+   },
+   {
+    "who": "Man",
+    "text": "Excuse me. I'd like to change my meal plan. I'm on the large plan, but I rarely eat dinner on campus."
+   },
+   {
+    "who": "Woman",
+    "text": "I understand. When do you usually eat here?"
+   },
+   {
+    "who": "Man",
+    "text": "Mostly breakfast and lunch, because I work in the evenings."
+   },
+   {
+    "who": "Woman",
+    "text": "Then the lunch plan would suit you better. It's cheaper, and it includes a free coffee every morning."
+   },
+   {
+    "who": "Man",
+    "text": "Sounds good. Is there a fee for changing?"
+   },
+   {
+    "who": "Woman",
+    "text": "No fee until the end of the second week. After that, there's a small charge."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the man want to change his meal plan?",
+    "opts": [
+     "He dislikes the food",
+     "He seldom eats dinner on campus",
+     "He is moving off campus",
+     "He wants a bigger plan"
+    ]
+   },
+   {
+    "stem": "According to the woman, when is changing the plan free?",
+    "opts": [
+     "Only on the first day",
+     "Until the end of the semester",
+     "Whenever he asks",
+     "Until the end of the second week"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   3
+  ],
+  "explain": [
+   "*I rarely eat dinner on campus*. A — вкус не обсуждается; C — переезд не упоминается; D — он хочет сменить большой план на меньший",
+   "*No fee until the end of the second week*. A — срок длиннее; B — срок короче; C — после срока есть плата"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-C-060",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-060",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-060.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F2, Man = TOEFL AU-M3",
+  "words": 98,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a professor."
+   },
+   {
+    "who": "Woman",
+    "text": "Professor Grant, I've been thinking about my research proposal. I'd like to study how social media affects students' sleep."
+   },
+   {
+    "who": "Man",
+    "text": "It's relevant, but quite broad. What exactly will you measure?"
+   },
+   {
+    "who": "Woman",
+    "text": "I planned to ask students about their phone use and sleep."
+   },
+   {
+    "who": "Man",
+    "text": "The trouble with self-reported data is that people often misjudge their own habits. Have you considered using the sleep-tracking apps that many students already use?"
+   },
+   {
+    "who": "Woman",
+    "text": "That's a good point. I didn't think about the privacy issue, though."
+   },
+   {
+    "who": "Man",
+    "text": "You'd need written permission from each participant. If you narrow the topic to first-year students, the project will be more manageable."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What concern does the professor raise about the student's plan?",
+    "opts": [
+     "The topic is not interesting",
+     "People may not report their habits accurately",
+     "Sleep cannot be measured",
+     "There are no students to ask"
+    ]
+   },
+   {
+    "stem": "What does the professor suggest to make the project more manageable?",
+    "opts": [
+     "Using a larger group of participants",
+     "Focusing on first-year students",
+     "Dropping the sleep question",
+     "Studying only phone use"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1
+  ],
+  "explain": [
+   "*people often misjudge their own habits*. A — он называет тему актуальной; C — он предлагает измерять сон; D — участники есть",
+   "*narrow the topic to first-year students*. A — нужно сузить, а не расширить; C — сон остаётся темой; D — телефоны остаются"
+  ],
+  "qtypes": [
+   "Inference",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-C-061",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-061",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-061.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2, Woman = TOEFL CA-F",
+  "words": 99,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Man",
+    "text": "I've been thinking about switching my major from engineering to design."
+   },
+   {
+    "who": "Woman",
+    "text": "Really? I thought you loved your physics course."
+   },
+   {
+    "who": "Man",
+    "text": "I do, but I spend most of my free time drawing and building models. It doesn't feel like work."
+   },
+   {
+    "who": "Woman",
+    "text": "That sounds like a strong sign. But have you talked to an advisor about the credits? You'd lose a semester, wouldn't you?"
+   },
+   {
+    "who": "Man",
+    "text": "Possibly. That's what worries me. My parents think engineering is a safer choice."
+   },
+   {
+    "who": "Woman",
+    "text": "Safe for whom, though? If you're unhappy, you may not finish. Why not take one design class next term and see?"
+   },
+   {
+    "who": "Man",
+    "text": "That's actually a sensible compromise."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the man's main concern about changing his major?",
+    "opts": [
+     "He might lose a semester",
+     "He dislikes drawing",
+     "He would have to leave the university",
+     "He failed his physics course"
+    ]
+   },
+   {
+    "stem": "What does the woman imply when she says, 'Safe for whom, though?'",
+    "opts": [
+     "His parents know very little about engineering",
+     "Safe choices are not always the best for the student",
+     "Design is the safer subject",
+     "She is unsure about the idea"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   1
+  ],
+  "explain": [
+   "*You'd lose a semester... That's what worries me*. B — рисование ему нравится; C — уход из вуза не обсуждается; D — физика ему нравится",
+   "Она ставит под сомнение довод о «безопасности». A — о знаниях родителей речи нет; C — она не считает дизайн безопаснее; D — она поддерживает пробу"
+  ],
+  "qtypes": [
+   "Factual",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-TALK-A-044",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-044",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-044.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M",
+  "words": 197,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an earth science class."
+   },
+   {
+    "who": "Man",
+    "text": "Today we will talk about volcanoes. A volcano is an opening in the surface of the Earth. Deep underground, the rock is so hot that it melts. This melted rock is called magma. Because magma is lighter than the rock around it, it slowly rises. When it reaches the surface, it comes out of the volcano, and then we call it lava. Lava can be dangerous, but it is not the only danger. A volcano can also throw ash high into the sky. The ash can cover towns and make it hard to breathe. Still, many people live near volcanoes. Why? The reason is that volcanic soil is very rich. Farmers can grow fruit, vegetables, and coffee in it. Scientists watch active volcanoes carefully. They use special tools to measure small earthquakes and changes in gas. When these signs grow stronger, scientists warn the people nearby, and sometimes everyone must leave the area. Volcanoes also create new land. The islands of Hawaii were all made by volcanoes, over millions of years. So volcanoes can be both frightening and useful. Next week, we will look at how scientists predict an eruption. Please read the first chapter before class."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How farmers grow coffee",
+     "How islands are named",
+     "Why earthquakes are dangerous",
+     "How volcanoes work and affect people"
+    ]
+   },
+   {
+    "stem": "According to the professor, why do many people live near volcanoes?",
+    "opts": [
+     "The air is clean",
+     "The lava keeps houses warm",
+     "Ash makes the land flat",
+     "The soil is very rich"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention the islands of Hawaii?",
+    "opts": [
+     "To show that volcanoes can make new land",
+     "To describe a recent eruption",
+     "To explain how ash travels",
+     "To compare two kinds of lava"
+    ]
+   },
+   {
+    "stem": "What will the students probably do before the next class?",
+    "opts": [
+     "Visit a volcano",
+     "Measure earthquakes",
+     "Read a chapter",
+     "Write a report on coffee"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   3,
+   0,
+   2
+  ],
+  "explain": [
+   "Вулканы: как устроены и как влияют на людей. A — кофе — лишь деталь; B — названия островов не обсуждаются; C — землетрясения — лишь признак",
+   "*volcanic soil is very rich*. A — чистый воздух не упоминается; B — тепло лавы не упоминается; C — пепел — опасность",
+   "*Volcanoes also create new land*; Hawaii — пример. B — недавнее извержение не обсуждается; C — пепел не связан с Гавайями; D — виды лавы не сравниваются",
+   "*read the first chapter before class*. A — поездка не упоминается; B — измерения делают учёные; D — отчёта нет"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-TALK-A-045",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-045",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-045.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F",
+  "words": 192,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a health science class."
+   },
+   {
+    "who": "Woman",
+    "text": "Today we will learn about the human heart. The heart is a muscle about the size of your fist. Its job is to push blood around the body. Blood carries oxygen from the lungs to every part of you, from your brain to your toes. The heart has four rooms, called chambers. The two upper chambers receive blood, and the two lower chambers push it out. Between them, small doors, called valves, open and close. They make sure that blood moves in only one direction. When a doctor listens to your heart, the sound of this opening and closing is what she hears. A healthy adult heart beats about seventy times each minute, and it never takes a rest. Over a lifetime, it beats more than two billion times. Exercise makes the heart stronger, just like it makes other muscles stronger. A strong heart can push more blood with each beat, so it does not need to beat as often. That is why athletes often have a slower heartbeat than other people. For tomorrow's lab, please bring a watch with a second hand. We will measure our heartbeat before and after exercise."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main topic of the talk?",
+    "opts": [
+     "How doctors treat illness",
+     "How lungs take in oxygen",
+     "How the heart works",
+     "How athletes train"
+    ]
+   },
+   {
+    "stem": "According to the professor, what do the valves do?",
+    "opts": [
+     "They keep blood moving in one direction",
+     "They push blood out of the heart",
+     "They carry oxygen to the brain",
+     "They make the heart bigger"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about athletes?",
+    "opts": [
+     "Their hearts are larger than a fist",
+     "Their hearts do not need to beat as often",
+     "They have more valves",
+     "They never feel tired"
+    ]
+   },
+   {
+    "stem": "Why does the professor ask students to bring a watch?",
+    "opts": [
+     "To time the lecture",
+     "To record the lab results later",
+     "To measure their heartbeat",
+     "To check the doctor's time"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0,
+   1,
+   2
+  ],
+  "explain": [
+   "Сердце: устройство и работа. A — врачи — лишь пример; B — лёгкие — лишь деталь; D — спортсмены — лишь пример",
+   "*blood moves in only one direction*. B — это делают нижние камеры; C — кислород несёт кровь; D — размер не обсуждается",
+   "Сильное сердце → более редкий пульс. A — размер не обсуждается; C — число клапанов не обсуждается; D — усталость не упоминается",
+   "*measure our heartbeat before and after exercise*. A — лекцию не засекают; B — запись результатов не упоминается; D — врач не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Inference",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-TALK-B-046",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-046",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-046.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M2",
+  "words": 205,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an environmental science class."
+   },
+   {
+    "who": "Man",
+    "text": "Solar power is one of the fastest growing sources of energy in the world. A solar panel is made of many small cells, usually built from silicon. When sunlight hits a cell, it knocks tiny particles called electrons loose, and the movement of these electrons creates electricity. This is called the photovoltaic effect. Thirty years ago, solar panels were extremely expensive, so only satellites and a few homes used them. Today, the price of a panel has fallen by more than ninety percent, partly because factories have learned to make them in huge numbers. As a result, in many sunny countries solar is now the cheapest way to produce new electricity. However, there are challenges. The sun does not shine at night, and on cloudy days a panel produces much less energy. For this reason, solar farms need batteries or other sources of power as a backup. Some engineers are testing a different idea: instead of storing electricity, use extra energy during the day to pump water uphill and then release it through a turbine at night. Whatever solution wins, one point is clear. The cost of solar is no longer the main obstacle. The real question is how to store and share the energy."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How satellites use energy",
+     "How silicon is made",
+     "How solar power works and what limits it",
+     "Why electricity prices change every year"
+    ]
+   },
+   {
+    "stem": "According to the professor, why have solar panels become cheaper?",
+    "opts": [
+     "Silicon has become cheaper than water",
+     "Satellites now pay for them",
+     "Cells need less sunlight",
+     "Factories make them in large numbers"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention pumping water uphill?",
+    "opts": [
+     "To explain how a panel is built",
+     "To show that solar farms need water",
+     "To give an example of a way to store energy",
+     "To compare solar with hydropower plants"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about the future of solar power?",
+    "opts": [
+     "Solar will stay too expensive",
+     "Cloudy countries should stop using it",
+     "Storing energy is now the biggest challenge",
+     "Batteries will no longer be needed"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   3,
+   2,
+   2
+  ],
+  "explain": [
+   "Принцип работы солнечных панелей и их ограничения. A — спутники — лишь пример; B — кремний — лишь деталь; D — цены — лишь одна тема",
+   "*factories have learned to make them in huge numbers*. A — кремний и вода не сравниваются; B — спутники не платят; C — свет нужен прежний",
+   "Пример альтернативы батареям. A — устройство панели не связано; B — вода не нужна фермам; D — сравнение с ГЭС не делается",
+   "*cost is no longer the main obstacle... store and share*. A — цена уже не главная проблема; B — облачные страны не упоминаются; D — батареи как раз нужны"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-B-047",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-047",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-047.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F2",
+  "words": 204,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a psychology class."
+   },
+   {
+    "who": "Woman",
+    "text": "Let's talk about memory. Psychologists often divide memory into two main types. Short-term memory holds a small amount of information for a very short time. For example, when someone tells you a phone number, you can keep it in your head for perhaps twenty seconds. Most people can hold about seven items at once. Long-term memory, on the other hand, can store information for years, and it seems to have almost no limit. So how does information move from the first type to the second? Research suggests that repetition helps, but meaning helps even more. In one famous experiment, students were asked to remember a list of words. Some students simply repeated the words, while others tried to connect each word to a personal experience. The second group remembered far more words a week later. This tells us that deep thinking matters more than simple repetition. It also explains why cramming the night before an exam often fails. Facts that are memorized in a hurry usually stay in short-term memory and disappear quickly. A better plan is to study a little each day and to explain the ideas in your own words. Next time, we will discuss why sleep is so important for memory."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main point of the talk?",
+    "opts": [
+     "Short-term memory is stronger than long-term memory",
+     "Most people can remember only seven facts",
+     "Meaningful learning builds long-term memory better than repetition",
+     "Sleep is the key to every exam"
+    ]
+   },
+   {
+    "stem": "How did the second group of students study the words?",
+    "opts": [
+     "They repeated the words many times",
+     "They wrote the words on cards",
+     "They studied only the night before",
+     "They connected each word to a personal experience"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about cramming?",
+    "opts": [
+     "It is not an effective way to learn",
+     "It is the best way to remember numbers",
+     "It moves facts into long-term memory",
+     "It works only for a week"
+    ]
+   },
+   {
+    "stem": "What will the class probably discuss next time?",
+    "opts": [
+     "The size of long-term memory",
+     "Famous experiments with words",
+     "How to remember phone numbers",
+     "The connection between sleep and memory"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   3,
+   0,
+   3
+  ],
+  "explain": [
+   "Осмысление лучше простого повторения. A — сравнения силы нет; B — семь элементов — деталь; D — сон — тема следующего занятия",
+   "*connect each word to a personal experience*. A — так делала первая группа; B — карточки не упоминаются; C — зубрёжка — иной пример",
+   "Зубрёжка → информация быстро исчезает. B — числа не упоминаются; C — наоборот: остаётся в кратковременной; D — срок в неделю — из эксперимента",
+   "*why sleep is so important for memory*. A — размер уже упомянут; B — эксперимент уже был; C — номера телефонов — пример"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Method",
+   "Inference",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-TALK-C-048",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-048",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-048.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M2",
+  "words": 214,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a philosophy of science class."
+   },
+   {
+    "who": "Man",
+    "text": "In recent years, many scientists have become worried about what is often called the replication crisis. Replication means repeating a study to see whether the same result appears again. In principle, this is how science corrects itself. A surprising finding is published, other laboratories test it, and the finding is either confirmed or rejected. In practice, however, replication is rare. Journals prefer to publish new and exciting results, and researchers are rewarded for novelty, not for double-checking each other. When teams in psychology finally attempted to repeat one hundred published experiments, fewer than half produced the original result. Some people concluded that science was broken. I think that is too pessimistic. The failures revealed real problems, such as small samples and the habit of testing many ideas until one appears significant by chance. But the fact that these problems were discovered by scientists themselves is evidence that the method works. Since then, many journals have begun to accept studies in advance, before the results are known, which reduces the pressure to produce dramatic findings. Others require researchers to share their data openly. These reforms are slow, and they will not remove error entirely. Still, a field that admits its mistakes and changes its habits is in a stronger position than one that never checks."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the professor's main point?",
+    "opts": [
+     "Psychology experiments should no longer be published",
+     "Replication is easy and common",
+     "Science has failed completely",
+     "Scientific fields can improve by finding their own mistakes"
+    ]
+   },
+   {
+    "stem": "According to the professor, why is replication rare?",
+    "opts": [
+     "Researchers are rewarded for new results",
+     "Journals refuse all old studies",
+     "Laboratories lack enough equipment",
+     "Scientists distrust one another"
+    ]
+   },
+   {
+    "stem": "What is the professor's attitude toward the claim that science is broken?",
+    "opts": [
+     "He fully agrees with it",
+     "He believes it is unimportant",
+     "He is unsure about it",
+     "He thinks it is too negative"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention journals accepting studies in advance?",
+    "opts": [
+     "To give an example of a reform",
+     "To show that results are often false",
+     "To explain why samples are small",
+     "To criticize the use of open data"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0,
+   3,
+   0
+  ],
+  "explain": [
+   "Кризис воспроизводимости показывает, что метод работает. A — публиковать не запрещают; B — репликация редка; C — профессор считает вывод слишком пессимистичным",
+   "*rewarded for novelty, not for double-checking*. B — журналы предпочитают новое, но не отказывают всем; C — оборудование не упоминается; D — недоверие не упоминается",
+   "*I think that is too pessimistic*. A — он не согласен; B — он считает важным обсуждать; C — он уверен",
+   "Пример реформы, снижающей давление. B — ложность не доказывается; C — малые выборки — другая проблема; D — открытые данные он не критикует"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Attitude",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-TALK-C-049",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-049",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-049.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F2",
+  "words": 206,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a linguistics class."
+   },
+   {
+    "who": "Woman",
+    "text": "Linguists estimate that there are about seven thousand languages in the world, but nearly half of them are endangered. A language is considered endangered when children stop learning it, so that it will probably disappear when the oldest speakers die. On average, one language falls silent every few weeks. Why does this happen? Usually it is not because anyone forces people to stop speaking. Instead, families gradually choose the language that offers more economic opportunity, such as the language of school, government, or the internet. Over two or three generations, the older language is used less and less at home. Some people ask whether this matters. After all, if everyone could communicate in one language, wouldn't life be simpler? The difficulty is that each language contains knowledge developed over centuries. For instance, speakers of certain Pacific languages have detailed words for ocean currents and fish behavior that are unknown to science. When the language disappears, so does that knowledge. Fortunately, revival is sometimes possible. The Maori language of New Zealand, which was close to disappearing, is now taught in preschools, and the number of young speakers has grown. Success, though, requires more than classes. It requires places where children can use the language in daily life."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How a single world language could be created",
+     "Why languages disappear and why that matters",
+     "How children learn to speak",
+     "Which languages are the most difficult"
+    ]
+   },
+   {
+    "stem": "According to the professor, why do languages usually become endangered?",
+    "opts": [
+     "Governments forbid people to speak them",
+     "Schools stop teaching reading",
+     "Families choose languages that offer more opportunity",
+     "Older speakers move abroad"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention words for ocean currents?",
+    "opts": [
+     "To show that a language can hold knowledge unknown to science",
+     "To prove that Pacific languages are simple",
+     "To explain how fish behave",
+     "To compare two language families"
+    ]
+   },
+   {
+    "stem": "What can be inferred about reviving the Maori language?",
+    "opts": [
+     "It has been unsuccessful",
+     "It is taught only to adults",
+     "Classes alone are not enough to keep a language alive",
+     "It is now spoken by most New Zealanders"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2,
+   0,
+   2
+  ],
+  "explain": [
+   "Исчезновение языков и его значение. A — единый язык — лишь вопрос; C — изучение детьми — лишь деталь; D — сложность не обсуждается",
+   "*families gradually choose the language that offers more economic opportunity*. A — запрет не является причиной; B — школьное чтение не упоминается; D — переезд не упоминается",
+   "Пример знания, которое теряется вместе с языком. B — простота не обсуждается; C — поведение рыб — лишь деталь; D — языковые семьи не сравниваются",
+   "*requires more than classes... daily life*. A — рост числа говорящих — успех; B — детсады упомянуты; D — большинство не утверждается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
  }
 ]
