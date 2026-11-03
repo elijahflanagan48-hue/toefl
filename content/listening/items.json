@@ -17344,5 +17344,1233 @@
    "Purpose",
    "Inference"
   ]
+ },
+ {
+  "id": "L-ANN-A-056",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-056",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-056.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M",
+  "words": 66,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Attention, students. The Bike Club is holding a free repair day this Friday from noon to four o'clock in front of the student center. Mechanics will check your brakes and tires and fix small problems. If you need a new part, you can buy it at half price. No appointment is needed, but please bring your student card. Helmets will also be available for ten dollars."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What will happen on Friday?",
+    "opts": [
+     "Helmets will be given away",
+     "The Bike Club will hold elections",
+     "A new bike shop will open",
+     "Bicycles will be repaired for free"
+    ]
+   },
+   {
+    "stem": "What should students bring?",
+    "opts": [
+     "Their student card",
+     "A new part",
+     "An appointment form",
+     "A helmet"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0
+  ],
+  "explain": [
+   "*free repair day*. A — шлемы продаются за десять долларов; B — выборы не упоминаются; C — магазин не упоминается",
+   "*please bring your student card*. B — деталь можно купить; C — запись не нужна; D — шлемы продаются"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-057",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-057",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-057.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F3",
+  "words": 63,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Hello, everyone. The International Student Association invites you to the annual food festival on Saturday at six in the evening in the main hall. Students from more than twenty countries will cook traditional dishes. Tickets cost five dollars and include unlimited tasting. There will also be music and dancing after the meal. You can buy tickets at the information desk until Friday afternoon."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the announcement mainly about?",
+    "opts": [
+     "A festival with food from many countries",
+     "A cooking class for beginners",
+     "A new student restaurant",
+     "A concert in the main hall"
+    ]
+   },
+   {
+    "stem": "Until when can students buy tickets?",
+    "opts": [
+     "Friday afternoon",
+     "Saturday at six",
+     "Friday morning",
+     "Saturday morning"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   0
+  ],
+  "explain": [
+   "*annual food festival*. B — урока нет; C — ресторана нет; D — музыка — лишь часть",
+   "*until Friday afternoon*. B — это время начала; C — не упоминается; D — не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-B-058",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-058",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-058.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F2",
+  "words": 68,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Good afternoon, students. The Career Center will hold its summer internship fair next Wednesday in the gymnasium from ten to three. More than forty companies will attend, including several technology firms and two hospitals. To save time at the fair, you can register online and upload your résumé before Monday. Students who register early will be able to schedule a short interview in advance. Business clothing is recommended."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is one advantage of registering before Monday?",
+    "opts": [
+     "Students can skip the fair",
+     "Students can schedule an interview in advance",
+     "Companies will visit the dorms",
+     "Students will receive a résumé"
+    ]
+   },
+   {
+    "stem": "What can be inferred about the fair?",
+    "opts": [
+     "It is held in the evening",
+     "It is only for technology students",
+     "Students are expected to dress formally",
+     "It lasts the whole week"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2
+  ],
+  "explain": [
+   "*schedule a short interview in advance*. A — пропускать ярмарку нельзя; C — не упоминается; D — резюме загружают сами",
+   "*Business clothing is recommended*. A — ярмарка днём; B — не только технологии; D — один день"
+  ],
+  "qtypes": [
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-ANN-B-059",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-059",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-059.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2",
+  "words": 76,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Attention, members of the fitness center. Beginning next Monday, the main weight room will be closed for renovation until the end of the semester. During this time, a temporary weight room will be available in the east wing of the sports building, but it will have less equipment. The pool and the running track will stay open. Membership fees will be reduced by twenty percent. We apologize for any inconvenience and thank you for your patience."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why is the announcement being made?",
+    "opts": [
+     "To announce a new membership fee",
+     "To describe a new pool",
+     "To invite students to a race",
+     "To inform members about a temporary closing"
+    ]
+   },
+   {
+    "stem": "What will happen to the membership fees?",
+    "opts": [
+     "They will be raised",
+     "They will be lowered",
+     "They will stay the same",
+     "They will be cancelled"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1
+  ],
+  "explain": [
+   "*main weight room will be closed*. A — плата снижена, а не новая; B — бассейн открыт; C — гонка не упоминается",
+   "*reduced by twenty percent*. A — не повышаются; C — изменятся; D — не отменяются"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-C-060",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-060",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-060.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F",
+  "words": 78,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Attention, faculty and students. Effective this fall, the university will change its late submission policy. Previously, individual instructors decided whether to accept assignments after the deadline. Under the new policy, all assignments submitted within forty-eight hours will be accepted with a penalty of ten percent, while later submissions will receive no credit unless an extension was approved in advance. Documented medical emergencies are exempt. The policy was developed after students complained that grading practices varied widely between courses."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main purpose of the new policy?",
+    "opts": [
+     "To punish students who miss classes",
+     "To make rules about late work consistent across courses",
+     "To remove deadlines",
+     "To increase tuition"
+    ]
+   },
+   {
+    "stem": "What can be inferred about work submitted three days late?",
+    "opts": [
+     "It will probably receive no credit",
+     "It will lose ten percent",
+     "It will be graded normally",
+     "It will be sent to the registrar"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   0
+  ],
+  "explain": [
+   "Единые правила вместо решений преподавателей. A — пропуски занятий не обсуждаются; C — сроки остаются; D — оплата не упоминается",
+   "Позже 48 часов — без зачёта, если нет продления. B — 10% — для сдачи в течение 48 часов; C — штрафа не будет — неверно; D — регистратор лишь публикует текст"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-ANN-C-061",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-061",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-061.mp3",
+  "voices": "Narrator, Man = TOEFL US-M",
+  "words": 84,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Graduate students, please note a new requirement. Beginning next semester, everyone who conducts research involving human participants must complete an online ethics training course before submitting a proposal. The course takes approximately three hours and covers informed consent, privacy, and the responsible handling of data. Certificates remain valid for three years. The requirement was introduced after a review found that several projects had collected data without proper consent forms. Students who completed a similar course at another institution may submit their certificate for approval."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Who must complete the new training?",
+    "opts": [
+     "Students whose research involves human participants",
+     "All faculty members",
+     "Undergraduate students",
+     "Researchers who use only published data"
+    ]
+   },
+   {
+    "stem": "Why was the requirement introduced?",
+    "opts": [
+     "The course is very popular",
+     "Certificates expired too soon",
+     "Some projects collected data without consent forms",
+     "Students asked for more training"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   2
+  ],
+  "explain": [
+   "*research involving human participants*. B — речь о студентах-магистрантах и аспирантах; C — бакалавры не упоминаются; D — данные из публикаций не упоминаются",
+   "*data without proper consent forms*. A — популярность не упоминается; B — срок три года; D — просьбы студентов не упоминаются"
+  ],
+  "qtypes": [
+   "Factual",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-CONV-A-062",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-062",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-062.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2, Woman = TOEFL UK-F2",
+  "words": 56,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a bookstore worker."
+   },
+   {
+    "who": "Man",
+    "text": "Hi. I bought this chemistry book last week, but my teacher changed the textbook."
+   },
+   {
+    "who": "Woman",
+    "text": "I see. Do you have the receipt?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes, here it is. Can I get my money back?"
+   },
+   {
+    "who": "Woman",
+    "text": "You can return it within ten days if the book is not damaged. It looks new, so that's fine."
+   },
+   {
+    "who": "Man",
+    "text": "Great. Thank you for your help."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the man want to return the book?",
+    "opts": [
+     "The book is damaged",
+     "His teacher changed the textbook",
+     "It costs too much",
+     "He lost the receipt"
+    ]
+   },
+   {
+    "stem": "What does the woman say about the book?",
+    "opts": [
+     "It is old",
+     "It is expensive",
+     "It looks new",
+     "It is not available"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2
+  ],
+  "explain": [
+   "*my teacher changed the textbook*. A — книга как новая; C — цена не обсуждается; D — день покупки не обсуждается",
+   "*It looks new, so that's fine*. A — не старая; B — цена не упоминается; D — она есть у мужчины"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-063",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-063",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-063.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F, Man = TOEFL CA-M2",
+  "words": 52,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Woman",
+    "text": "Are you going home for the holiday?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes. I'm taking the bus on Thursday morning. It takes four hours."
+   },
+   {
+    "who": "Woman",
+    "text": "My town is near yours. Can I go with you?"
+   },
+   {
+    "who": "Man",
+    "text": "Of course! The bus leaves at eight. Let's meet at the station at seven forty."
+   },
+   {
+    "who": "Woman",
+    "text": "Perfect. I'll bring some snacks for the trip."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "When will the students meet?",
+    "opts": [
+     "At eight",
+     "At seven",
+     "At seven forty",
+     "At four"
+    ]
+   },
+   {
+    "stem": "What will the woman bring?",
+    "opts": [
+     "Her ticket",
+     "A book",
+     "Some snacks",
+     "A map"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   2
+  ],
+  "explain": [
+   "*seven forty*. A — это время отправления; B — не упоминается; D — это длительность поездки",
+   "*I'll bring some snacks*. A — билет не упоминается; B — не упоминается; D — не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-B-064",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-064",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-064.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F3, Man = TOEFL AU-M2",
+  "words": 75,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a professor."
+   },
+   {
+    "who": "Woman",
+    "text": "Professor Davis, I'm sorry I missed Tuesday's class. I had a fever."
+   },
+   {
+    "who": "Man",
+    "text": "I hope you're feeling better. Did you get the notes from a classmate?"
+   },
+   {
+    "who": "Woman",
+    "text": "Yes, but I'm not sure I understand the part about supply and demand."
+   },
+   {
+    "who": "Man",
+    "text": "That was the most important topic. Why don't you come to my office hours on Thursday at two? I'll go through some examples."
+   },
+   {
+    "who": "Woman",
+    "text": "Thank you. Should I read anything first?"
+   },
+   {
+    "who": "Man",
+    "text": "Just chapter four. Then bring your questions."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the student visit the professor?",
+    "opts": [
+     "To ask for a higher grade",
+     "To change her class schedule",
+     "To get help with a topic she missed",
+     "To return a book"
+    ]
+   },
+   {
+    "stem": "What does the professor ask the student to do before Thursday?",
+    "opts": [
+     "Write a summary",
+     "Read chapter four",
+     "Call a classmate",
+     "Prepare an essay"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   1
+  ],
+  "explain": [
+   "*not sure I understand the part about supply and demand*. A — оценки не обсуждаются; B — расписание не обсуждается; D — книги не упоминаются",
+   "*Just chapter four*. A — резюме не просят; C — одногруппника она уже спросила; D — эссе не просят"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-B-065",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-065",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-065.mp3",
+  "voices": "Narrator, Man = TOEFL US-M, Woman = TOEFL CA-F2",
+  "words": 99,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and an academic coach."
+   },
+   {
+    "who": "Man",
+    "text": "I always feel like I'm running out of time. I have three classes, a job, and a lot of reading."
+   },
+   {
+    "who": "Woman",
+    "text": "Let's look at your week. How do you usually plan your study time?"
+   },
+   {
+    "who": "Man",
+    "text": "I don't really plan it. I just start when I have a free hour."
+   },
+   {
+    "who": "Woman",
+    "text": "That's the problem. Try to set fixed times for each subject, and put them in a calendar. Also, begin with the hardest task while you still have energy."
+   },
+   {
+    "who": "Man",
+    "text": "I never thought about starting with the hardest one."
+   },
+   {
+    "who": "Woman",
+    "text": "Try it for two weeks, and then come back to tell me how it went."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What problem does the man describe?",
+    "opts": [
+     "He dislikes his classes",
+     "He does not have enough time for his tasks",
+     "He cannot find a job",
+     "He forgets his reading"
+    ]
+   },
+   {
+    "stem": "What does the woman suggest?",
+    "opts": [
+     "Planning fixed study times and starting with the hardest task",
+     "Dropping a class",
+     "Studying only on weekends",
+     "Working fewer hours"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   0
+  ],
+  "explain": [
+   "*running out of time*. A — занятия не обсуждаются; C — работа у него есть; D — чтение не забывает",
+   "Фиксированное время и сложная задача первой. B — отказ от курса не предлагается; C — выходные не упоминаются; D — работа не обсуждается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-C-066",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-066",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-066.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F, Man = TOEFL AU-M",
+  "words": 99,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a professor."
+   },
+   {
+    "who": "Woman",
+    "text": "Professor Wells, I'd like to talk about the grade on my history paper. I think my argument was strong, but I received a C."
+   },
+   {
+    "who": "Man",
+    "text": "Your argument was interesting, but several claims lacked evidence. In the third section, for example, you describe the public reaction without citing a source."
+   },
+   {
+    "who": "Woman",
+    "text": "I see. I assumed that the reaction was well known."
+   },
+   {
+    "who": "Man",
+    "text": "In academic writing, nothing is assumed. If you revise the paper with proper sources, I'm willing to reconsider the grade."
+   },
+   {
+    "who": "Woman",
+    "text": "How much time do I have?"
+   },
+   {
+    "who": "Man",
+    "text": "Until the end of next week. Visit the writing center first for help with citations."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "According to the professor, what was wrong with the student's paper?",
+    "opts": [
+     "The argument was uninteresting",
+     "It was too short",
+     "Some claims were not supported by sources",
+     "It was submitted late"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about the student's assumption?",
+    "opts": [
+     "It was correct",
+     "It is common among professors",
+     "It improved the argument",
+     "It is not acceptable in academic writing"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   3
+  ],
+  "explain": [
+   "*several claims lacked evidence*. A — аргумент интересен; B — длина не обсуждается; D — срок не обсуждается",
+   "*nothing is assumed*. A — она не права; B — профессоров не касается; C — улучшения нет"
+  ],
+  "qtypes": [
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-C-067",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-067",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-067.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M2, Woman = TOEFL US-F2",
+  "words": 98,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Man",
+    "text": "There's a public lecture tonight about ocean pollution. Do you want to come? It starts at seven."
+   },
+   {
+    "who": "Woman",
+    "text": "I'd love to, but I have a chemistry exam tomorrow, and I'm still behind."
+   },
+   {
+    "who": "Man",
+    "text": "I understand. But the speaker is famous, and these opportunities don't come often. You can study afterward."
+   },
+   {
+    "who": "Woman",
+    "text": "Honestly, I'd be too tired after the lecture. Last time I tried that, I fell asleep over my notes."
+   },
+   {
+    "who": "Man",
+    "text": "Maybe you could just come for the first hour? The speaker talks first, and the questions come later."
+   },
+   {
+    "who": "Woman",
+    "text": "Hmm. That might work. If I study until six, I'll feel less guilty."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why is the woman hesitant to attend the lecture?",
+    "opts": [
+     "She needs to prepare for an exam",
+     "She dislikes the topic",
+     "She has no transportation",
+     "She already heard the speaker"
+    ]
+   },
+   {
+    "stem": "What is the woman's attitude at the end of the conversation?",
+    "opts": [
+     "She firmly refuses to go",
+     "She is angry with the man",
+     "She has already decided to skip her exam",
+     "She is considering the man's suggestion"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   3
+  ],
+  "explain": [
+   "*chemistry exam tomorrow*. B — тема не критикуется; C — транспорт не упоминается; D — лектора не слышала",
+   "*That might work*. A — она не отказывается; B — гнева нет; C — экзамен не пропускает"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-TALK-A-050",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-050",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-050.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F3",
+  "words": 203,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an ecology class."
+   },
+   {
+    "who": "Woman",
+    "text": "Today we will talk about rainforests. A rainforest is a thick forest that gets a lot of rain, often more than two meters every year. Rainforests are found near the equator, where the weather is warm all year. Although they cover only a small part of the Earth, they are home to more than half of all the kinds of plants and animals in the world. The forest has several layers. At the top are very tall trees, called the canopy. Their leaves make a green roof, so only a little sunlight reaches the ground. Under the canopy, the air is dark and wet, and many small plants and insects live there. Rainforests are also important for people. Trees take in carbon dioxide and give out oxygen, so rainforests help to clean the air. Many medicines come from rainforest plants. Sadly, every year, large parts of rainforest are cut down to make farms and roads. When the trees disappear, many animals lose their homes. Some scientists say that we are losing a rainforest area the size of a football field every few seconds. To finish today, please write the name of one animal that lives in the rainforest and bring it to class."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How farmers grow food",
+     "Where the equator is",
+     "Which animals are the biggest",
+     "Why rainforests are special and important"
+    ]
+   },
+   {
+    "stem": "According to the professor, why does little sunlight reach the ground?",
+    "opts": [
+     "The air is too dry",
+     "The canopy makes a roof of leaves",
+     "The trees are very short",
+     "The rain comes every hour"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention a football field?",
+    "opts": [
+     "To describe the size of the canopy",
+     "To compare two kinds of trees",
+     "To show how fast the forest is disappearing",
+     "To explain how roads are built"
+    ]
+   },
+   {
+    "stem": "What will students do at the end of class?",
+    "opts": [
+     "Draw a map of the equator",
+     "Count trees in a picture",
+     "Read about medicine",
+     "Write the name of a rainforest animal"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1,
+   2,
+   3
+  ],
+  "explain": [
+   "Тропический лес: особенности и значение. A — фермы — лишь угроза; B — экватор — лишь деталь; C — размер животных не обсуждается",
+   "*leaves make a green roof*. A — воздух влажный; C — деревья высокие; D — частота дождей не указана",
+   "Пример скорости вырубки. A — размер кроны не приводится; B — деревья не сравниваются; D — дороги — лишь причина",
+   "*write the name of one animal*. A — карта не упоминается; B — подсчёт не упоминается; C — чтение не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Method"
+  ]
+ },
+ {
+  "id": "L-TALK-A-051",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-051",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-051.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M",
+  "words": 199,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a physics class."
+   },
+   {
+    "who": "Man",
+    "text": "How can a heavy airplane fly? Today we will look at the idea of lift. An airplane wing has a special shape. The top of the wing is curved, and the bottom is flatter. When the plane moves forward, air flows over and under the wing. The air above the wing moves faster than the air below it, and this makes the pressure above the wing lower. The higher pressure below pushes the wing up. That upward push is called lift. A plane needs speed to create enough lift, which is why it runs along the ground before it takes off. The engines give the plane power to move forward. They do not hold the plane in the air. If the engines stop, a plane can still glide for a long time because the wings keep making lift. Pilots can also change the angle of the wing. A larger angle gives more lift, but if the angle becomes too large, the air cannot flow smoothly, and the plane may fall. This is called a stall. Pilots learn to avoid it. For our next class, please bring a sheet of paper. We will make a simple model of a wing."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How engines are built",
+     "How a wing makes a plane fly",
+     "How pilots learn to land",
+     "Why planes run on the ground"
+    ]
+   },
+   {
+    "stem": "What does the professor say about air above the wing?",
+    "opts": [
+     "It is heavier than air below",
+     "It stops at high speed",
+     "It pushes the wing up",
+     "It moves faster than air below"
+    ]
+   },
+   {
+    "stem": "What can be inferred about a plane whose engines stop?",
+    "opts": [
+     "It must fall at once",
+     "It can still glide for some time",
+     "It will fly faster",
+     "It loses its wings"
+    ]
+   },
+   {
+    "stem": "Why will students bring a sheet of paper next class?",
+    "opts": [
+     "To write a test",
+     "To draw a pilot",
+     "To make a simple model of a wing",
+     "To measure air pressure"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   3,
+   1,
+   2
+  ],
+  "explain": [
+   "Подъёмная сила крыла. A — двигатели — лишь деталь; C — посадка не обсуждается; D — разбег — лишь деталь",
+   "*air above the wing moves faster*. A — тяжесть не упоминается; B — не останавливается; C — вверх толкает воздух снизу",
+   "Крылья продолжают создавать подъёмную силу. A — падение не мгновенное; C — скорость не растёт; D — крылья остаются",
+   "*make a simple model of a wing*. A — теста нет; B — пилот не упоминается; D — давление не измеряют"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Inference",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-TALK-B-052",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-052",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-052.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F3",
+  "words": 193,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an earth science class."
+   },
+   {
+    "who": "Woman",
+    "text": "The surface of the Earth is not one solid piece. It is broken into large sections called tectonic plates, which move very slowly, about as fast as your fingernails grow. This idea is called plate tectonics. Where plates meet, interesting things happen. When two plates push toward each other, one may slide beneath the other, or the edges may crumple upward. The Himalayas, the highest mountains on Earth, formed this way, when the plate carrying India collided with Asia. These mountains are still rising today. Where plates move apart, melted rock rises from below and creates new crust. This happens along cracks on the ocean floor. And where plates slide past each other, stress can build up for decades. When the rocks finally slip, we feel an earthquake. For a long time, scientists could not explain how continents moved. In nineteen twelve, Alfred Wegener proposed that continents drift, but he could not describe the force behind it, so most scientists rejected his idea. Only decades later, when researchers mapped the ocean floor, did the evidence become convincing. Wegener's story reminds us that a good idea sometimes needs better tools before it is accepted."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main idea of the talk?",
+    "opts": [
+     "Mountains are the oldest features on Earth",
+     "Earthquakes can be predicted exactly",
+     "The movement of plates explains many features of the Earth",
+     "Continents stay in the same place"
+    ]
+   },
+   {
+    "stem": "According to the professor, how did the Himalayas form?",
+    "opts": [
+     "Two plates collided",
+     "Melted rock rose from the ocean floor",
+     "Plates slid past each other",
+     "The ocean floor was mapped"
+    ]
+   },
+   {
+    "stem": "Why did most scientists reject Wegener's idea at first?",
+    "opts": [
+     "He had not visited the ocean",
+     "He could not explain the force that moved continents",
+     "He said the plates move quickly",
+     "He studied only mountains"
+    ]
+   },
+   {
+    "stem": "What is the professor's attitude toward Wegener's story?",
+    "opts": [
+     "It shows that scientists should ignore evidence",
+     "It proves that old ideas are always right",
+     "It shows that new ideas may need better tools",
+     "It is not an important example"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0,
+   1,
+   2
+  ],
+  "explain": [
+   "Тектоника плит объясняет горы, землетрясения и т.д. A — возраст гор не обсуждается; B — предсказание не обсуждается; D — континенты движутся",
+   "*plate carrying India collided with Asia*. B — это про расхождение плит; C — это про землетрясения; D — картографирование — позднее",
+   "*could not describe the force behind it*. A — океан не упоминается; C — плиты движутся медленно; D — горы — другой пример",
+   "*a good idea sometimes needs better tools*. A — он за доказательства; B — старые идеи не всегда верны; D — он считает пример важным"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-TALK-B-053",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-053",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-053.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2",
+  "words": 203,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a history class."
+   },
+   {
+    "who": "Man",
+    "text": "Before the late seventeen hundreds, most goods were made by hand at home or in small workshops. A family might spin thread in the evening and weave cloth in the morning. Then, in Britain, a series of inventions changed everything. Machines such as the spinning jenny could spin many threads at once, and later the steam engine provided power that did not depend on rivers or wind. Factories appeared, and with them a new kind of work. People left farms and moved to towns to work for wages. Production increased enormously, and cloth became cheaper than ever before. This period is known as the Industrial Revolution. However, the changes were not all positive. Early factory work was dangerous, hours were long, and many workers were children. Cities grew so quickly that housing and clean water were often unavailable, and diseases spread easily. Over time, workers organized and demanded reforms, which led to laws about working hours and safety. Historians still debate whether ordinary people were better off in the early years of industrialization. Some point to cheaper goods, while others stress the harsh conditions. What is clear is that the Industrial Revolution created the modern economy and changed how and where people live."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How industrialization changed work and life",
+     "How cloth is woven by hand",
+     "How rivers produce power",
+     "Why Britain has many farms"
+    ]
+   },
+   {
+    "stem": "According to the professor, why was the steam engine important?",
+    "opts": [
+     "It gave power that did not depend on rivers or wind",
+     "It made children work shorter hours",
+     "It improved housing in towns",
+     "It replaced all workshops"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention child workers?",
+    "opts": [
+     "To prove that factories were new",
+     "To show that the changes had negative sides",
+     "To explain how thread is made",
+     "To compare Britain with other countries"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about historians?",
+    "opts": [
+     "They agree that factory work was pleasant",
+     "They study only inventions",
+     "They believe reforms were unnecessary",
+     "They disagree about whether people's lives improved at first"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   0,
+   1,
+   3
+  ],
+  "explain": [
+   "Промышленная революция. B — ручное ткачество — фон; C — реки — лишь деталь; D — фермы — лишь деталь",
+   "*power that did not depend on rivers or wind*. B — дети работали много; C — жильё ухудшилось; D — не все мастерские исчезли",
+   "Пример тяжёлых условий. A — новизна фабрик — иная мысль; C — производство нити — не цель; D — сравнения стран нет",
+   "*historians still debate*. A — условия были тяжёлыми; B — они изучают и жизнь людей; C — реформы были важны"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-C-054",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-054",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-054.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F2",
+  "words": 216,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a neuroscience class."
+   },
+   {
+    "who": "Woman",
+    "text": "For a long time, scientists believed that the adult brain was fixed. According to this view, a child's brain develops rapidly, but after a certain age, the connections between neurons are permanent, and damaged areas cannot be repaired. Research over the last few decades has challenged that picture. The brain turns out to be remarkably adaptable, a quality we call neuroplasticity. When you learn a new skill, such as juggling, the connections among the relevant neurons strengthen, and brain scans show measurable changes in structure within weeks. Perhaps the most striking evidence comes from people who have lost a sense. In many blind individuals, regions that normally process vision are recruited to handle sound and touch, which may explain their unusually fine hearing. Plasticity also helps patients recover from strokes, as healthy regions gradually take over some functions of the damaged ones. However, plasticity has limits, and it is not always beneficial. Chronic pain, for example, may result from nerve pathways that have been reinforced too strongly. Moreover, the brain changes most easily when a person is attentive and challenged. Passive exposure, such as listening to a language in the background, appears to do far less. So the practical lesson is not that the brain can change effortlessly, but that it changes in response to effort."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main point of the talk?",
+    "opts": [
+     "The brain is fixed after childhood",
+     "Strokes cannot be treated",
+     "Learning new skills is always easy",
+     "The adult brain can change, especially in response to effort"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention blind individuals?",
+    "opts": [
+     "To explain why some people hear poorly",
+     "To show that vision is unimportant",
+     "To describe how juggling is learned",
+     "To give evidence that brain regions can take on new functions"
+    ]
+   },
+   {
+    "stem": "According to the professor, how can plasticity be harmful?",
+    "opts": [
+     "It prevents recovery from strokes",
+     "It weakens attention",
+     "It slows learning of languages",
+     "It may strengthen the pathways involved in chronic pain"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about listening to a language in the background?",
+    "opts": [
+     "It is probably not very effective for changing the brain",
+     "It strengthens pathways quickly",
+     "It is better than active practice",
+     "It harms attention"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   3,
+   3,
+   0
+  ],
+  "explain": [
+   "Нейропластичность и роль усилий. A — это устаревшая точка зрения; B — восстановление возможно; C — лёгкость не утверждается",
+   "Области зрения используются для звука и осязания. A — слух у них лучше; B — значение зрения не оспаривается; C — жонглирование — другой пример",
+   "*chronic pain... pathways reinforced too strongly*. A — при инсульте плюс; B — внимание не ослабляет; C — языки — пример пассивного воздействия",
+   "Пассивное воздействие даёт меньше. B — результат слабый; C — лучше активная практика; D — вред не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Purpose",
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-C-055",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-055",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-055.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M2",
+  "words": 211,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an economics class."
+   },
+   {
+    "who": "Man",
+    "text": "Traditional economics assumes that people make rational decisions, weighing costs and benefits carefully. Behavioral economists, however, have shown that our choices are often influenced by factors that have little to do with logic. Consider the idea of a default option. In countries where citizens are automatically registered as organ donors unless they opt out, participation rates are above ninety percent. In countries where people must actively sign up, rates are often below fifteen percent. The decision is the same, yet the wording of the form changes the result dramatically. Behavioral economists call this type of design a nudge, a small change in how choices are presented that guides behavior without forbidding anything. Another example is anchoring. If a shop displays an expensive jacket next to a moderately priced one, the second suddenly seems like a bargain, even if its price is high. Critics of nudging raise an important concern: who decides which choices are best for people? A nudge that improves savings might seem harmless, but the same technique could be used to encourage unnecessary spending. Defenders respond that every choice has to be presented somehow, so designers cannot avoid influencing people. The real question, they argue, is whether the influence is transparent and serves the interests of those being nudged."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the professor's main point?",
+    "opts": [
+     "People always make rational choices",
+     "Small changes in presentation can strongly affect decisions",
+     "Organ donation should be forbidden",
+     "Expensive items sell best"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention organ donation?",
+    "opts": [
+     "To criticize doctors",
+     "To show that people dislike forms",
+     "To illustrate the effect of a default option",
+     "To compare two shopping habits"
+    ]
+   },
+   {
+    "stem": "What concern do critics of nudging raise?",
+    "opts": [
+     "Nudges are too expensive",
+     "Nudges forbid some choices",
+     "Nudges do not change behavior",
+     "It is unclear who should decide what is best for people"
+    ]
+   },
+   {
+    "stem": "What is the defenders' attitude toward influence?",
+    "opts": [
+     "It cannot be avoided, so it should be open and beneficial",
+     "It should always be hidden",
+     "It is acceptable only for shops",
+     "It is wrong in every case"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2,
+   3,
+   0
+  ],
+  "explain": [
+   "Подталкивание (nudge) и поведенческая экономика. A — это допущение традиционной экономики; C — запрет не обсуждается; D — дорогие товары — пример якоря",
+   "Пример влияния варианта по умолчанию. A — врачи не критикуются; B — формы — лишь деталь; D — покупки — другой пример",
+   "*who decides which choices are best*. A — цена не обсуждается; B — запретов нет; C — поведение меняется",
+   "*cannot avoid influencing... transparent*. B — скрытность не одобряется; C — не только магазины; D — не во всех случаях неверно"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Purpose",
+   "Factual",
+   "Attitude"
+  ]
  }
 ]
