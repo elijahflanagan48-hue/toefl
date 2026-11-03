@@ -97,8 +97,8 @@ const FAKE_AUDIO = () => { // deterministic: the "recording" lasts 400 ms
 
   // assignments link
   await t.goto(APP + '#/t/assign'); await t.waitForTimeout(900);
-  await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('#a-task', { timeout: 8000 }).catch(() => {});
-  ok(await t.evaluate(() => [...document.querySelectorAll('#a-task option')].some(o => o.value === 'L:lan')), 'teacher can assign Listening tasks');
+  await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('input[name="a-task"]', { timeout: 8000 }).catch(() => {});
+  ok(await t.evaluate(() => [...document.querySelectorAll('input[name="a-task"]')].some(o => o.value === 'L:lan')), 'teacher can assign Listening tasks');
   ok(errs.length === 0, 'no page errors', errs.join(' | '));
   await b.close();
   console.log(`\nlistening e2e: ${pass} passed, ${fail} failed`);

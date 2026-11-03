@@ -4,7 +4,7 @@ import { isLive } from '../lib/api.js';
 import { ic } from '../lib/icons.js';
 import { band, cefr, overallBand, heat, SEC, esc, plural } from '../lib/util.js';
 import { hdr, on, toast, modal, closeModal } from '../lib/ui.js';
-import { ASSIGN_TASKS, MODE_NAMES } from '../lib/assign.js';
+import { ASSIGN_TASKS, MODE_NAMES, SECTION_NAMES, buildAssignments } from '../lib/assign.js';
 
 const rerender = () => window.dispatchEvent(new Event('hashchange'));
 const dateLabel = ms => (ms ? new Date(ms).toLocaleDateString('ru-RU', { day: 'numeric', month: 'short' }) : '—');
@@ -54,19 +54,37 @@ export async function assignView() {
   return {
     title: 'Назначения', wide: true,
     html: `${hdr('Назначения', { back: '#/t/home', sub: 'Задания с дедлайнами', right: `<button class="btn sm pri" data-act="assign">${ic('plus', 16)} Новое</button>` })}
-    ${list.length ? `<div class="card tblwrap"><table class="tbl"><thead><tr><th>Задание</th><th>Кому</th><th>Срок</th><th>Выполнили</th><th></th></tr></thead><tbody>${list.map(a => {
-      const pct = a.targets ? Math.round(a.done / a.targets * 100) : 0, late = a.due_at && a.due_at < now && a.done < a.targets;
-      return `<tr><td><a href="#/t/assign/${a.id}"><b>${esc(a.title)}</b></a><div class="fade small">${MODE_NAMES[a.spec?.mode] || ''}</div></td>
-        <td>${esc(a.group_name || a.student_name || '—')}</td><td>${a.due_at ? dateLabel(a.due_at) : 'без срока'}${late ? ' <em class="badtx">просрочено</em>' : ''}</td>
-        <td><div class="calc"><div class="bar"><i style="width:${pct}%"></i></div><span>${a.done} из ${a.targets}</span></div></td>
+    ${list.length ? `<div class="card tblwrap"><table class="tbl"><thead><tr><th>Задание</th><th>Кому</th><th>Срок</th><th>Выполнили</th><th></th></tr></thead><tbody>${groupAssignments(list).map(g => {
+      const a = g.parts[0], late = a.due_at && a.due_at < now && g.parts.some(p => p.done < p.targets);
+      const bar = p => { const pct = p.targets ? Math.round(p.done / p.targets * 100) : 0; return `<div class="calc"><div class="bar"><i style="width:${pct}%"></i></div><span>${p.done} из ${p.targets}</span></div>`; };
+      const ids = g.parts.map(p => p.id).join(',');
+      const who = `<td>${esc(a.group_name || a.student_name || '—')}</td><td>${a.due_at ? dateLabel(a.due_at) : 'без срока'}${late ? ' <em class="badtx">просрочено</em>' : ''}</td>`;
+      if (g.parts.length === 1) return `<tr><td><a href="#/t/assign/${a.id}"><b>${esc(a.title)}</b></a><div class="fade small">${MODE_NAMES[a.spec?.mode] || ''}</div></td>
+        ${who}<td>${bar(a)}</td>
         <td><a class="btn sm" href="#/t/assign/${a.id}">Результаты</a> <button class="btn sm ghost" data-act="assign-del" data-id="${a.id}" data-nm="${esc(a.title)}">Удалить</button></td></tr>`;
+      return `<tr class="aset"><td><b>${esc(g.label)}</b><div class="fade small">${g.parts.length} ${plural(g.parts.length, 'задание', 'задания', 'заданий')} · ${MODE_NAMES[a.spec?.mode] || ''}</div>
+        <ul class="aparts">${g.parts.map(p => `<li><a href="#/t/assign/${p.id}">${esc(p.title.replace(/^[^:]*: /, ''))}</a></li>`).join('')}</ul></td>
+        ${who}<td>${g.parts.map(p => `<div class="aprog"><span class="fade small">${esc(p.title.replace(/^[^:]*: /, ''))}</span>${bar(p)}</div>`).join('')}</td>
+        <td><button class="btn sm ghost" data-act="assign-del" data-id="${ids}" data-nm="${esc(g.label)} (${g.parts.length} ${plural(g.parts.length, 'задание', 'задания', 'заданий')})">Удалить всё</button></td></tr>`;
     }).join('')}</tbody></table></div>`
-      : `<div class="card empty"><b>Назначений пока нет</b>Назначьте тренажёр группе или ученику — он появится у них на главной с дедлайном.<br><br><button class="btn sm pri" data-act="assign">${ic('plus', 16)} Назначить</button></div>`}`
+      : `<div class="card empty"><b>Назначений пока нет</b>Назначьте задания группе или ученику — они появятся у них на главной с дедлайном.<br><br><button class="btn sm pri" data-act="assign">${ic('plus', 16)} Назначить</button></div>`}`
   };
 }
-on('assign-del', el => modal(`<h2>Удалить назначение?</h2><p class="mut" style="margin-bottom:14px">«${esc(el.dataset.nm)}» исчезнет у учеников. Сделанные работы останутся.</p>
+/** tasks created together share spec.set → shown as one row; everything else is a row of its own */
+function groupAssignments(list) {
+  const out = [], bySet = new Map();
+  for (const a of list) {
+    const k = a.spec?.set;
+    if (!k) { out.push({ parts: [a] }); continue; }
+    if (!bySet.has(k)) { const g = { label: a.spec.setLabel || 'Набор заданий', parts: [] }; bySet.set(k, g); out.push(g); }
+    bySet.get(k).parts.push(a);
+  }
+  for (const g of out) g.parts.sort((x, y) => x.id - y.id); // in the order they were picked
+  return out;
+}
+on('assign-del', el => modal(`<h2>Удалить назначение?</h2><p class="mut" style="margin-bottom:14px">«${esc(el.dataset.nm)}» ${el.dataset.id.includes(',') ? 'исчезнут' : 'исчезнет'} у учеников. Сделанные работы останутся.</p>
   <button class="btn pri block" data-act="assign-del-go" data-id="${el.dataset.id}">Удалить</button><button class="btn ghost block" data-act="modal-close" style="margin-top:6px">Отмена</button>`));
-on('assign-del-go', async el => { try { await src.deleteAssignment(el.dataset.id); closeModal(); toast('Удалено'); rerender(); } catch (e) { toast(e.message); } });
+on('assign-del-go', async el => { try { for (const id of String(el.dataset.id).split(',')) await src.deleteAssignment(id); closeModal(); toast('Удалено'); rerender(); } catch (e) { toast(e.message); } });
 
 on('assign', async el => {
   if (!isLive()) { toast('Назначения работают в аккаунте'); return; }
@@ -78,19 +96,47 @@ on('assign', async el => {
     <div class="field"><label for="a-to">Кому</label><select class="inp" id="a-to">
       <optgroup label="Группа">${groups.map(g => `<option value="g${g.id}">${esc(g.name)} · ${g.students ?? ''} уч.</option>`).join('')}</optgroup>
       <optgroup label="Ученик">${students.map(s => `<option value="s${s.id}" ${String(s.id) === sid ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</optgroup></select></div>
-    <div class="field"><label for="a-task">Что</label><select class="inp" id="a-task">${ASSIGN_TASKS.map(t => `<option value="${t.v}">${t.nm}</option>`).join('')}</select></div>
+    <div class="field"><label>Что назначить <span class="fade small">— можно отметить несколько заданий или сразу весь раздел</span></label>
+      <div class="picklist">${['R', 'L', 'W', 'S', 'M'].map(sec => {
+        const ts = ASSIGN_TASKS.filter(t => t.section === sec), core = ts.filter(t => t.core);
+        return `<fieldset class="pickgrp"><legend>${SECTION_NAMES[sec]}</legend>
+          ${core.length ? `<label class="pick all"><input type="checkbox" data-pick="all" data-sec="${sec}"> <b>Весь ${SECTION_NAMES[sec]}</b> <span class="fade small">${core.length} типа заданий</span></label>` : ''}
+          ${ts.map(t => `<label class="pick"><input type="checkbox" name="a-task" value="${t.v}" data-core="${t.core ? 1 : ''}" data-sec="${sec}" data-pick="one"> ${esc(t.nm.replace(/^[^·]*· /, ''))}</label>`).join('')}</fieldset>`;
+      }).join('')}</div>
+      <div class="fade small" id="a-count" role="status" style="margin-top:6px">Выберите хотя бы одно задание</div></div>
     <div class="field"><label for="a-mode">Режим</label><select class="inp" id="a-mode"><option value="learn">${MODE_NAMES.learn}</option><option value="timed">${MODE_NAMES.timed}</option></select></div>
     <div class="field"><label for="a-due">Срок (необязательно)</label><input class="inp" id="a-due" type="date" value="${tomorrow}"></div>
-    <div class="row-btns"><button class="btn" data-act="modal-close">Отмена</button><button class="btn pri" data-act="assign-go">Назначить</button></div>`);
+    <div class="row-btns"><button class="btn" data-act="modal-close">Отмена</button><button class="btn pri" data-act="assign-go" disabled>Назначить</button></div>`);
   if (sid) document.getElementById('a-to').value = 's' + sid;
 });
-on('assign-go', async () => {
-  const to = document.getElementById('a-to').value, t = ASSIGN_TASKS.find(x => x.v === document.getElementById('a-task').value);
-  const mode = document.getElementById('a-mode').value, dueS = document.getElementById('a-due').value;
-  const payload = { title: t.nm.replace(' · ', ': '), spec: { section: t.section, task: t.task || undefined, mode }, due_at: dueS ? new Date(dueS + 'T23:59:00').getTime() : undefined };
+const pickBoxes = () => [...document.querySelectorAll('input[name="a-task"]')];
+function syncPick() {
+  const boxes = pickBoxes();
+  for (const all of document.querySelectorAll('input[data-pick="all"]')) {
+    const core = boxes.filter(b => b.dataset.sec === all.dataset.sec && b.dataset.core), n = core.filter(b => b.checked).length;
+    all.checked = n === core.length; all.indeterminate = n > 0 && n < core.length;
+  }
+  const n = boxes.filter(b => b.checked).length;
+  document.getElementById('a-count').textContent = n ? `Выбрано: ${n}` : 'Выберите хотя бы одно задание';
+  document.querySelector('[data-act="assign-go"]').disabled = !n;
+}
+/* plain click listener, not data-act: the global data-act handler calls preventDefault, which would undo a checkbox toggle */
+document.addEventListener('click', e => {
+  const box = e.target instanceof Element && e.target.closest('input[data-pick]');
+  if (!box) return;
+  if (box.dataset.pick === 'all') for (const b of pickBoxes()) if (b.dataset.sec === box.dataset.sec && b.dataset.core) b.checked = box.checked;
+  syncPick();
+});
+on('assign-go', async el => {
+  const to = document.getElementById('a-to').value, mode = document.getElementById('a-mode').value, dueS = document.getElementById('a-due').value;
+  const picked = pickBoxes().filter(b => b.checked).map(b => b.value);
+  if (!picked.length) { toast('Отметьте хотя бы одно задание'); return; }
+  const { items, setLabel } = buildAssignments(picked, mode);
+  const payload = { items, set_label: setLabel, due_at: dueS ? new Date(dueS + 'T23:59:00').getTime() : undefined };
   if (to[0] === 'g') payload.group_id = Number(to.slice(1)); else payload.student_id = Number(to.slice(1));
-  try { await src.createAssignment(payload); closeModal(); toast('Назначено'); if (location.hash.startsWith('#/t/assign')) rerender(); else location.hash = '#/t/assign'; }
-  catch (e) { toast(e.message); }
+  el.disabled = true;
+  try { await src.createAssignment(payload); closeModal(); toast(items.length > 1 ? `Назначено: ${items.length}` : 'Назначено'); if (location.hash.startsWith('#/t/assign')) rerender(); else location.hash = '#/t/assign'; }
+  catch (e) { el.disabled = false; toast(e.message); }
 });
 
 /* ------------------------------------------------------------------ bank */

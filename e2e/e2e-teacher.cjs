@@ -36,7 +36,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   await t.screenshot({ path: OUT + '/card.png' });
   await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('#a-to', { timeout: 8000 }).catch(() => {});
   ok(await t.evaluate(() => document.getElementById('a-to').selectedOptions[0].textContent.includes('Вера')), 'assign dialog preselects this student');
-  await t.selectOption('#a-task', 'R:ctw'); await t.selectOption('#a-mode', 'learn');
+  await t.check('input[name="a-task"][value="R:ctw"]'); await t.selectOption('#a-mode', 'learn');
   await t.click('[data-act="assign-go"]'); await t.waitForTimeout(1200);
   ok(t.url().includes('#/t/assign'), 'goes to the assignments page');
   let txt = await t.textContent('#app');
@@ -76,7 +76,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
 
   // results page: student answers an assigned Listening-free item (Reading CtW) wrongly → teacher sees errors + explanation
   await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('#a-to', { timeout: 8000 }).catch(() => {});
-  await t.selectOption('#a-to', 's' + (await api('GET', '/me')).user.id); await t.selectOption('#a-task', 'R:ctw'); await t.click('[data-act="assign-go"]'); await t.waitForTimeout(1000);
+  await t.selectOption('#a-to', 's' + (await api('GET', '/me')).user.id); await t.check('input[name="a-task"][value="R:ctw"]'); await t.click('[data-act="assign-go"]'); await t.waitForTimeout(1000);
   const mine2 = await api('GET', '/me/assignments');
   const a2 = mine2.assignments.find(x => !x.done);
   ok(!!a2, 'second assignment is open for the student');
@@ -98,7 +98,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   await t.goto(APP + '#/t/assign'); await t.waitForTimeout(1000);
   const n0 = (await t.$$('.tbl tbody tr')).length;
   await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('#a-to', { timeout: 8000 }).catch(() => {});
-  await t.selectOption('#a-task', 'S:int'); await t.selectOption('#a-mode', 'timed');
+  await t.check('input[name="a-task"][value="S:int"]'); await t.selectOption('#a-mode', 'timed');
   await t.click('[data-act="assign-go"]'); await t.waitForTimeout(1000);
   ok((await t.$$('.tbl tbody tr')).length === n0 + 1, 'group assignment added', n0 + ' → ' + (await t.$$('.tbl tbody tr')).length);
   await t.click('.tbl tbody tr:first-child [data-act="assign-del"]'); await t.waitForTimeout(400);

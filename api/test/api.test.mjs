@@ -197,6 +197,37 @@ ok(r.status === 200, 'assignment created');
 r = await call('GET', '/me/assignments', { token: S3 });
 ok(r.data.assignments.length === 1 && r.data.assignments[0].teacher_name === 'Илья', 'student sees assignment');
 
+// several tasks in one request (e.g. a whole section) → one assignment per task, grouped by spec.set
+const item = (title, task) => ({ title, spec: { section: 'R', task, mode: 'learn' } });
+r = await call('POST', '/teacher/assignments', { token: T, json: { items: [item('Reading: Complete the Words', 'ctw'), item('Reading: Read in Daily Life', 'rdl'), item('Reading: Read an Academic Passage', 'rap')], set_label: 'Весь Reading', student_id: sid, due_at: Date.now() + 864e5 } });
+ok(r.status === 200 && r.data.ids.length === 3 && r.data.id === r.data.ids[0], 'several tasks created in one request');
+const setIds = r.data.ids;
+r = await call('GET', '/me/assignments', { token: S3 });
+const setRows = r.data.assignments.filter(a => setIds.includes(a.id));
+ok(setRows.length === 3 && setRows[0].spec.set && new Set(setRows.map(a => a.spec.set)).size === 1 && setRows.every(a => a.spec.setLabel === 'Весь Reading'), 'the tasks share one set and label');
+ok(setRows.map(a => a.spec.task).sort().join() === 'ctw,rap,rdl' && setRows.every(a => a.spec.section === 'R' && a.spec.mode === 'learn'), 'each task keeps its own spec');
+r = await call('GET', '/teacher/assignments', { token: T });
+ok(r.data.assignments.filter(a => setIds.includes(a.id)).length === 3, 'teacher list has all three tasks');
+r = await call('POST', '/teacher/assignments', { token: T, json: { items: [item('Reading: Complete the Words', 'ctw')], student_id: sid } });
+const oneId = r.data.id;
+r = await call('GET', '/me/assignments', { token: S3 });
+ok(r.data.assignments.find(a => a.id === oneId)?.spec.set === undefined, 'a single task in the items form gets no set');
+r = await call('POST', '/teacher/assignments', { token: T, json: { items: [], student_id: sid } });
+ok(r.status === 400, 'empty items rejected');
+r = await call('POST', '/teacher/assignments', { token: T, json: { items: Array.from({ length: 21 }, () => item('x', 'ctw')), student_id: sid } });
+ok(r.status === 400, 'more than 20 tasks rejected');
+r = await call('POST', '/teacher/assignments', { token: T, json: { items: [item('ok', 'ctw'), { spec: { section: 'R' } }], student_id: sid } });
+ok(r.status === 400, 'an item without a title rejects the whole request');
+r = await call('GET', '/me/assignments', { token: S3 });
+ok(r.data.assignments.length === 5, 'a rejected request creates nothing', String(r.data.assignments.length));
+r = await call('POST', '/teacher/assignments', { token: T, json: { items: [item('ok', 'ctw')] } });
+ok(r.status === 400, 'target is still required');
+r = await call('POST', '/teacher/assignments', { token: S3, json: { items: [item('ok', 'ctw')], student_id: sid } });
+ok(r.status === 403, 'a student cannot assign');
+for (const id of [...setIds, oneId]) await call('DELETE', `/teacher/assignments/${id}`, { token: T });
+r = await call('GET', '/me/assignments', { token: S3 });
+ok(r.data.assignments.length === 1, 'cleanup leaves the original assignment');
+
 // --- practice: learn-mode feedback, mistakes, stats, adaptive level
 r = await call('POST', '/attempts', { token: S3, json: { kind: 'practice', mode: 'learn', section: 'R', task: 'rdl' } });
 const lat = r.data.id;

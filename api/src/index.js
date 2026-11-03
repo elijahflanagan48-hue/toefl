@@ -361,17 +361,36 @@ on('DELETE', '/teacher/assignments/:id', async ({ env, user, params }) => {
 on('POST', '/teacher/assignments', async ({ req, env, user }) => {
   requireTeacher(user);
   const b = await body(req);
-  const title = str(b, 'title', { min: 1, max: 120 });
-  const spec = b.spec && typeof b.spec === 'object' ? b.spec : null;
-  if (!spec) throw bad('missing_spec');
+  /* one request may carry several tasks: `items: [{title, spec}]` → one assignment row per task, all with the same
+     target and deadline; when there is more than one they share spec.set / spec.setLabel so the teacher's list can group them */
+  let list;
+  if (Array.isArray(b.items)) {
+    if (b.items.length < 1 || b.items.length > 20) throw bad('items', 'В одном назначении — от 1 до 20 заданий');
+    list = b.items.map(it => {
+      const title = str(it ?? {}, 'title', { min: 1, max: 120 });
+      if (!it.spec || typeof it.spec !== 'object' || Array.isArray(it.spec)) throw bad('missing_spec');
+      return { title, spec: it.spec };
+    });
+  } else {
+    const title = str(b, 'title', { min: 1, max: 120 });
+    const spec = b.spec && typeof b.spec === 'object' ? b.spec : null;
+    if (!spec) throw bad('missing_spec');
+    list = [{ title, spec }];
+  }
   const gid = b.group_id != null ? Number(b.group_id) : null, sid = b.student_id != null ? Number(b.student_id) : null;
   if (!gid === !sid) throw bad('target', 'Укажите группу или ученика');
   if (gid && !(await one(env, 'SELECT id FROM groups WHERE id = ? AND teacher_id = ?', gid, user.id))) throw notFound();
   if (sid && !(await canSeeStudent(env, user, sid))) throw notFound();
   const due = b.due_at != null ? num(b, 'due_at', { min: 0 }) : null;
-  const r = await run(env, 'INSERT INTO assignments (teacher_id, group_id, student_id, title, spec, due_at, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-    user.id, gid, sid, title, JSON.stringify(spec), due, now());
-  return { id: r.meta.last_row_id };
+  const set = list.length > 1 ? now().toString(36) + Math.random().toString(36).slice(2, 6) : null;
+  const setLabel = set ? (typeof b.set_label === 'string' && b.set_label.trim() ? b.set_label.trim().slice(0, 120) : `Набор: ${list.length} заданий`) : null;
+  const ids = [];
+  for (const { title, spec } of list) {
+    const r = await run(env, 'INSERT INTO assignments (teacher_id, group_id, student_id, title, spec, due_at, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      user.id, gid, sid, title, JSON.stringify(set ? { ...spec, set, setLabel } : spec), due, now());
+    ids.push(r.meta.last_row_id);
+  }
+  return { id: ids[0], ids };
 });
 
 /* ------------------------------------------------------------------ practice stats */
