@@ -228,6 +228,34 @@ for (const id of [...setIds, oneId]) await call('DELETE', `/teacher/assignments/
 r = await call('GET', '/me/assignments', { token: S3 });
 ok(r.data.assignments.length === 1, 'cleanup leaves the original assignment');
 
+// changing a deadline: one assignment, several at once, removing it
+r = await call('POST', '/teacher/assignments', { token: T, json: { items: [item('Reading: Complete the Words', 'ctw'), item('Reading: Read in Daily Life', 'rdl')], student_id: sid, due_at: 1000 } });
+const dueIds = r.data.ids;
+const dueOf = async id => (await call('GET', '/me/assignments', { token: S3 })).data.assignments.find(a => a.id === id)?.due_at;
+r = await call('PATCH', `/teacher/assignments/${dueIds[0]}`, { token: T, json: { due_at: 2000 } });
+ok(r.status === 200 && r.data.due_at === 2000, 'deadline of one assignment changed');
+ok((await dueOf(dueIds[0])) === 2000 && (await dueOf(dueIds[1])) === 1000, 'only that assignment changed');
+r = await call('PATCH', '/teacher/assignments', { token: T, json: { ids: dueIds, due_at: 3000 } });
+ok(r.status === 200 && (await dueOf(dueIds[0])) === 3000 && (await dueOf(dueIds[1])) === 3000, 'deadline of several assignments changed at once');
+r = await call('PATCH', '/teacher/assignments', { token: T, json: { ids: [...dueIds, 99999999], due_at: 4000 } });
+ok(r.status === 404 && (await dueOf(dueIds[0])) === 3000, 'an unknown id rejects the whole batch, nothing changes');
+r = await call('PATCH', '/teacher/assignments', { token: T, json: { ids: dueIds, due_at: null } });
+ok(r.status === 200 && (await dueOf(dueIds[0])) === null && (await dueOf(dueIds[1])) === null, 'null removes the deadline');
+r = await call('PATCH', `/teacher/assignments/${dueIds[0]}`, { token: T, json: {} });
+ok(r.status === 400, 'deadline is required');
+r = await call('PATCH', `/teacher/assignments/${dueIds[0]}`, { token: T, json: { due_at: 'soon' } });
+ok(r.status === 400, 'a non-numeric deadline is rejected');
+r = await call('PATCH', `/teacher/assignments/${dueIds[0]}`, { token: T, json: { due_at: -5 } });
+ok(r.status === 400, 'a negative deadline is rejected');
+r = await call('PATCH', '/teacher/assignments', { token: T, json: { ids: [], due_at: 5 } });
+ok(r.status === 400, 'empty id list rejected');
+r = await call('PATCH', `/teacher/assignments/${dueIds[0]}`, { token: T, json: { due_at: 5 } });
+r = await call('PATCH', `/teacher/assignments/${dueIds[0]}`, { token: S3, json: { due_at: 7 } });
+ok(r.status === 403 && (await dueOf(dueIds[0])) === 5, 'a student cannot change a deadline');
+r = await call('PATCH', '/teacher/assignments/99999999', { token: T, json: { due_at: 5 } });
+ok(r.status === 404, 'unknown assignment → 404');
+for (const id of dueIds) await call('DELETE', `/teacher/assignments/${id}`, { token: T });
+
 // --- practice: learn-mode feedback, mistakes, stats, adaptive level
 r = await call('POST', '/attempts', { token: S3, json: { kind: 'practice', mode: 'learn', section: 'R', task: 'rdl' } });
 const lat = r.data.id;

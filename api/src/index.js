@@ -358,6 +358,29 @@ on('DELETE', '/teacher/assignments/:id', async ({ env, user, params }) => {
   await run(env, 'DELETE FROM assignments WHERE id = ?', a.id);
   return { ok: true };
 });
+/** change the deadline of one assignment (`/:id`) or of several at once (`ids`, e.g. every task of a set); `due_at: null` removes it */
+async function setDue(env, user, ids, b) {
+  if (!('due_at' in b)) throw bad('missing_due_at', 'Не указан срок');
+  const due = b.due_at === null ? null : num(b, 'due_at', { min: 0 });
+  const mine = [];
+  for (const id of ids) {
+    const a = await one(env, 'SELECT id FROM assignments WHERE id = ? AND teacher_id = ?', id, user.id);
+    if (!a) throw notFound();
+    mine.push(a.id);
+  }
+  for (const id of mine) await run(env, 'UPDATE assignments SET due_at = ? WHERE id = ?', due, id);
+  return { ok: true, due_at: due, ids: mine };
+}
+on('PATCH', '/teacher/assignments/:id', async ({ req, env, user, params }) => {
+  requireTeacher(user);
+  return setDue(env, user, [Number(params.id)], await body(req));
+});
+on('PATCH', '/teacher/assignments', async ({ req, env, user }) => {
+  requireTeacher(user);
+  const b = await body(req);
+  if (!Array.isArray(b.ids) || b.ids.length < 1 || b.ids.length > 20 || !b.ids.every(Number.isInteger)) throw bad('ids', 'Нужен список назначений (1–20)');
+  return setDue(env, user, [...new Set(b.ids)], b);
+});
 on('POST', '/teacher/assignments', async ({ req, env, user }) => {
   requireTeacher(user);
   const b = await body(req);

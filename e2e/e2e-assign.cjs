@@ -96,6 +96,20 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   const links = await s.$$eval('a.note', as => as.map(a => a.getAttribute('href')));
   ok(['practice/ctw', 'practice/rdl', 'practice/rap', 'practice/bas', 'speak/lrp', 'listen/lcr'].every(k => links.some(l => l.includes(k))), 'student sees a tracked link for each task', links.join(' ') || (await s.textContent('#app')).replace(/\s+/g, ' ').slice(0, 300));
 
+  // ---- change the deadline of a whole set, then clear it
+  await t.goto(APP + '#/t/assign'); await t.waitForTimeout(900);
+  await t.click('tr.aset:has-text("Весь Reading") [data-act="due-edit"]'); await t.waitForSelector('#d-due');
+  await t.fill('#d-due', '2031-03-15'); await t.click('[data-act="due-go"]:has-text("Сохранить")'); await t.waitForTimeout(1200);
+  const dueNow = (await sapi('GET', '/me/assignments')).assignments;
+  const rd = dueNow.filter(a => a.spec.setLabel === 'Весь Reading');
+  ok(rd.length === 3 && rd.every(a => new Date(a.due_at).getFullYear() === 2031 && new Date(a.due_at).getMonth() === 2), 'new deadline applied to all three tasks of the set', JSON.stringify(rd.map(a => a.due_at)));
+  ok(dueNow.filter(a => a.spec.setLabel !== 'Весь Reading').every(a => !a.due_at || new Date(a.due_at).getFullYear() !== 2031), 'other assignments untouched');
+  ok((await t.textContent('tr.aset:has-text("Весь Reading")')).includes('15'), 'list shows the new date');
+  await t.click('tr.aset:has-text("Весь Reading") [data-act="due-edit"]'); await t.waitForSelector('#d-due');
+  await t.click('[data-act="due-go"]:has-text("Без срока")'); await t.waitForTimeout(1200);
+  ok((await sapi('GET', '/me/assignments')).assignments.filter(a => a.spec.setLabel === 'Весь Reading').every(a => !a.due_at), '«Без срока» clears it for the whole set');
+  ok((await t.textContent('tr.aset:has-text("Весь Reading")')).includes('без срока'), 'list says «без срока»');
+
   // ---- delete a whole set at once
   await t.goto(APP + '#/t/assign'); await t.waitForTimeout(900);
   await t.click('tr.aset:has-text("Весь Reading") [data-act="assign-del"]'); await t.waitForTimeout(400);

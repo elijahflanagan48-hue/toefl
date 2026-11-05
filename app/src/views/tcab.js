@@ -58,7 +58,7 @@ export async function assignView() {
       const a = g.parts[0], late = a.due_at && a.due_at < now && g.parts.some(p => p.done < p.targets);
       const bar = p => { const pct = p.targets ? Math.round(p.done / p.targets * 100) : 0; return `<div class="calc"><div class="bar"><i style="width:${pct}%"></i></div><span>${p.done} из ${p.targets}</span></div>`; };
       const ids = g.parts.map(p => p.id).join(',');
-      const who = `<td>${esc(a.group_name || a.student_name || '—')}</td><td>${a.due_at ? dateLabel(a.due_at) : 'без срока'}${late ? ' <em class="badtx">просрочено</em>' : ''}</td>`;
+      const who = `<td>${esc(a.group_name || a.student_name || '—')}</td><td>${a.due_at ? dateLabel(a.due_at) : 'без срока'}${late ? ' <em class="badtx">просрочено</em>' : ''}<div><button class="linkbtn" data-act="due-edit" data-id="${ids}" data-due="${a.due_at || ''}" data-nm="${esc(g.parts.length > 1 ? g.label : a.title)}">изменить срок</button></div></td>`;
       if (g.parts.length === 1) return `<tr><td><a href="#/t/assign/${a.id}"><b>${esc(a.title)}</b></a><div class="fade small">${MODE_NAMES[a.spec?.mode] || ''}</div></td>
         ${who}<td>${bar(a)}</td>
         <td><a class="btn sm" href="#/t/assign/${a.id}">Результаты</a> <button class="btn sm ghost" data-act="assign-del" data-id="${a.id}" data-nm="${esc(a.title)}">Удалить</button></td></tr>`;
@@ -82,6 +82,24 @@ function groupAssignments(list) {
   for (const g of out) g.parts.sort((x, y) => x.id - y.id); // in the order they were picked
   return out;
 }
+/* change the deadline of an assignment (all tasks of a set at once) */
+const dateInput = ms => ms ? new Date(Number(ms)).toLocaleDateString('sv-SE') : '';
+on('due-edit', el => {
+  const many = el.dataset.id.includes(',');
+  modal(`<h2>Срок выполнения</h2><p class="mut" style="margin-bottom:12px">«${esc(el.dataset.nm)}»${many ? ' — срок изменится у всех заданий набора' : ''}</p>
+    <div class="field"><label for="d-due">Новая дата</label><input class="inp" id="d-due" type="date" value="${dateInput(el.dataset.due)}"></div>
+    <div class="row-btns"><button class="btn" data-act="modal-close">Отмена</button>
+      ${el.dataset.due ? `<button class="btn ghost" data-act="due-go" data-id="${el.dataset.id}" data-clear="1">Без срока</button>` : ''}
+      <button class="btn pri" data-act="due-go" data-id="${el.dataset.id}">Сохранить</button></div>`);
+});
+on('due-go', async el => {
+  const v = document.getElementById('d-due').value;
+  if (!el.dataset.clear && !v) { toast('Выберите дату или нажмите «Без срока»'); return; }
+  const due = el.dataset.clear ? null : new Date(v + 'T23:59:00').getTime();
+  el.disabled = true;
+  try { await src.setAssignmentsDue(el.dataset.id.split(',').map(Number), due); closeModal(); toast(due ? 'Срок изменён' : 'Срок убран'); rerender(); }
+  catch (e) { el.disabled = false; toast(e.message); }
+});
 on('assign-del', el => modal(`<h2>Удалить назначение?</h2><p class="mut" style="margin-bottom:14px">«${esc(el.dataset.nm)}» ${el.dataset.id.includes(',') ? 'исчезнут' : 'исчезнет'} у учеников. Сделанные работы останутся.</p>
   <button class="btn pri block" data-act="assign-del-go" data-id="${el.dataset.id}">Удалить</button><button class="btn ghost block" data-act="modal-close" style="margin-top:6px">Отмена</button>`));
 on('assign-del-go', async el => { try { for (const id of String(el.dataset.id).split(',')) await src.deleteAssignment(id); closeModal(); toast('Удалено'); rerender(); } catch (e) { toast(e.message); } });
@@ -286,7 +304,7 @@ export async function assignResults(params) {
   }).join('');
   return {
     title: a.title, wide: true,
-    html: `${hdr(a.title, { back: '#/t/assign', sub: `${a.group_name || a.student_name || ''}${a.due_at ? ' · до ' + dateLabel(a.due_at) : ''}` })}
+    html: `${hdr(a.title, { back: '#/t/assign', sub: `${a.group_name || a.student_name || ''}${a.due_at ? ' · до ' + dateLabel(a.due_at) : ' · без срока'}`, right: `<button class="btn sm" data-act="due-edit" data-id="${a.id}" data-due="${a.due_at || ''}" data-nm="${esc(a.title)}">Срок</button>` })}
     <div class="kpis"><div class="kpi">${ic('users', 20)}<b class="serif">${done} из ${r.students.length}</b><span>выполнили</span></div>
       <div class="kpi">${ic('check', 20)}<b class="serif">${acc == null ? '—' : acc + '%'}</b><span>верных ответов</span></div>
       <div class="kpi">${ic('alert', 20)}<b class="serif">${itemList.filter(x => x.bad > 0.3).length}</b><span>заданий с ошибками > 30%</span></div></div>

@@ -220,6 +220,8 @@ export async function studentDetail(id) {
 export async function assignments() { return isLive() ? (await get('/teacher/assignments')).assignments : []; }
 export const createAssignment = d => post('/teacher/assignments', d);
 export const deleteAssignment = id => api('DELETE', '/teacher/assignments/' + id);
+/** dueAt: ms timestamp or null (no deadline); ids: every task of a set */
+export const setAssignmentsDue = (ids, dueAt) => patch('/teacher/assignments', { ids, due_at: dueAt });
 export async function bankStats() { return isLive() ? (await get('/teacher/items/stats')).stats : []; }
 export const bankList = p => get('/teacher/items?' + new URLSearchParams(p));
 export const calibration = (task = '') => get('/teacher/calibration' + (task ? '?task=' + task : ''));
