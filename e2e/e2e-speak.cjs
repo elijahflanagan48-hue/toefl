@@ -95,7 +95,11 @@ const until = async (p, fn, ms = 30000) => { const t = Date.now(); while (Date.n
   await t.goto(APP + '#/t/review/' + lrpId); await t.waitForTimeout(1500);
   ok((await t.$$('.audio-row')).length === 7, 'teacher sees 7 audio rows');
   ok((await t.textContent('.audios')).includes(sentences[0].slice(0, 20)), 'teacher sees the target sentences');
-  await t.keyboard.press('3'); await t.waitForTimeout(700);
+  ok((await t.$$('.scoreb')).length === 0 && (await t.textContent('.autosc')).includes('0 из 7'), 'Listen and Repeat: no manual total, the form waits for per-answer scores');
+  await t.keyboard.press('5'); await t.waitForTimeout(500);
+  ok((await t.textContent('.autosc')).includes('1 из 7'), 'a digit key rates the first unrated answer');
+  for (const [i, n] of [[1, 5], [2, 4], [3, 4], [4, 3], [5, 3], [6, 4]]) await t.click(`[data-act="mini"][data-i="${i}"][data-n="${n}"]`);
+  ok((await t.textContent('.autosc')).includes('4,0'), 'the total is computed from the answers (28 / 7 = 4,0)', await t.textContent('.autosc'));
   await t.fill('#rcomment', 'Хорошо слышно, следите за окончаниями.');
   await t.click('[data-act="save-score"]'); await t.waitForTimeout(1200);
 
@@ -106,6 +110,7 @@ const until = async (p, fn, ms = 30000) => { const t = Date.now(); while (Date.n
   await s.click('audio[data-sub]'); await s.waitForTimeout(600);
   await s.goto(APP + lrpHref); await s.waitForTimeout(1500);
   ok((await s.textContent('.wres')).includes('Хорошо слышно'), 'student sees the teacher comment');
+  ok((await s.textContent('.wscore')).includes('4,0'), 'student sees the computed total 4,0');
   await s.screenshot({ path: OUT + '/work-lrp.png' });
 
   // mobile layout of the recording screen

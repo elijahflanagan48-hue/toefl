@@ -136,6 +136,11 @@ export async function reviewItem(params) {
   const sel = pref.get('score.' + q.id, null) ?? (prev ? Math.round(prev.score) : null);
   const nParts = live ? Math.max(sub.parts, audios.length) : 4;
   const partScores = live && prev?.parts ? prev.parts : [];
+  // Listen and Repeat: the total is the mean of the per-answer scores — never picked by hand
+  const auto = !isW && kind === 'lrp';
+  const partNow = Array.from({ length: nParts }, (_, i) => pref.get('sc.' + q.id + '.' + i, null) ?? partScores[i] ?? null);
+  const rated = partNow.filter(x => x != null).length;
+  const autoAvg = auto && nParts && rated === nParts ? Math.round(partNow.reduce((a, b) => a + b, 0) / nParts * 10) / 10 : null;
   const demoMarks = [{ s: (text || '').indexOf('enough academic'), e: (text || '').indexOf('enough academic') + 15, q: 'enough academic', note: 'Порядок слов: academic enough — «enough» ставится после прилагательного.' }].filter(m => m.s >= 0);
   const marks = pref.get('marks.' + q.id, null) ?? (live ? prev?.marks || [] : demoMarks);
   RV = { id: q.id, text: text || '', sel: null, marks };
@@ -165,8 +170,8 @@ export async function reviewItem(params) {
   const panel = `<aside class="card pad rubric">
     <div class="rb-hd"><span class="av">${esc(initials(q.student))}</span><div><b>${esc(q.student)}</b><span class="fade">${esc(q.task)}</span></div></div>
     ${prev ? `<p class="chip ok" style="margin-top:10px">Оценено: ${band(prev.score)} / 5</p>` : ''}
-    <div class="lbl" style="margin-top:14px">${isW ? 'Балл по рубрике ETS' : 'Итог (или средний по ответам)'}</div>
-    <div class="scores">${RUBRIC[kind].map((d, n) => `<button class="scoreb ${sel === n ? 'on' : ''}" data-act="score" data-q="${q.id}" data-n="${n}"><b class="serif">${n}</b><span>${d}</span></button>`).join('')}</div>
+    <div class="lbl" style="margin-top:14px">${isW ? 'Балл по рубрике ETS' : auto ? 'Итог: среднее по ответам (считается само)' : 'Итог (или средний по ответам)'}</div>
+    ${auto ? `<div class="autosc ${autoAvg == null ? 'wait' : ''}">${autoAvg == null ? `<span>Оцените каждый ответ баллом 0–5: сейчас ${rated} из ${nParts}</span>` : `<div class="wscore"><b class="serif">${band(autoAvg)}</b><span>/ 5</span></div><p class="mut">${esc(RUBRIC[kind][Math.round(autoAvg)] || '')}</p>`}</div>` : `<div class="scores">${RUBRIC[kind].map((d, n) => `<button class="scoreb ${sel === n ? 'on' : ''}" data-act="score" data-q="${q.id}" data-n="${n}"><b class="serif">${n}</b><span>${d}</span></button>`).join('')}</div>`}
     <div class="lbl">Чек-лист <span class="chint" id="chint"></span></div>
     <div class="cgrps">${CRIT[kind].map(g => `<details class="cgrp" open data-g="${g.id}"><summary><b>${g.t}</b><span class="cgn" data-n="${g.id}"></span></summary>
       <p class="cgq">${g.q}</p>
@@ -174,7 +179,7 @@ export async function reviewItem(params) {
     <div class="lbl">Комментарий ученику</div>
     <div class="phr">${PHRASES[kind].map((t, i) => `<button type="button" class="phb" data-act="phrase" data-t="${esc(t)}">${esc(t)}</button>`).join('')}</div>
     <textarea class="inp" id="rcomment" rows="4" placeholder="Что получилось и что улучшить">${esc(comment)}</textarea>
-    <div class="rb-ft"><a class="btn ghost" href="#/t/review">К очереди</a><button class="btn pri" data-act="save-score" data-q="${q.id}" data-s="${isW ? 'W' : 'S'}" data-parts="${isW ? 0 : nParts}">${ic('check', 17)} Сохранить</button></div>
+    <div class="rb-ft"><a class="btn ghost" href="#/t/review">К очереди</a><button class="btn pri" data-act="save-score" data-q="${q.id}" data-s="${isW ? 'W' : 'S'}" data-k="${kind}" data-parts="${isW ? 0 : nParts}">${ic('check', 17)} Сохранить</button></div>
     <p class="fade small kbdh"><kbd>0</kbd>–<kbd>5</kbd> балл · <kbd>Ctrl</kbd>+<kbd>Enter</kbd> сохранить · <kbd>J</kbd>/<kbd>K</kbd> следующая/предыдущая</p>
   </aside>`;
 
@@ -207,7 +212,10 @@ export async function reviewItem(params) {
     },
     keys(e) {
       if (e.target.closest('textarea,input')) { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) document.querySelector('[data-act="save-score"]').click(); return; }
-      if (/^[0-5]$/.test(e.key)) { pref.set('score.' + q.id, Number(e.key)); rerender(); }
+      if (/^[0-5]$/.test(e.key)) {
+        if (auto) { const i = partNow.findIndex((x, k) => pref.get('sc.' + q.id + '.' + k, null) == null && partScores[k] == null); if (i >= 0) { pref.set('sc.' + q.id + '.' + i, Number(e.key)); rerender(); } }
+        else { pref.set('score.' + q.id, Number(e.key)); rerender(); }
+      }
       const i = queueIds.indexOf(q.id);
       if (e.key === 'j' && queueIds[i + 1] != null) location.hash = '#/t/review/' + queueIds[i + 1];
       if (e.key === 'k' && i > 0) location.hash = '#/t/review/' + queueIds[i - 1];
@@ -243,7 +251,8 @@ on('score', el => { pref.set('score.' + el.dataset.q, Number(el.dataset.n)); rer
 on('mini', el => { pref.set('sc.' + el.dataset.q + '.' + el.dataset.i, Number(el.dataset.n)); rerender(); });
 on('save-score', async el => {
   const id = el.dataset.q, nParts = Number(el.dataset.parts);
-  const score = pref.get('score.' + id, null);
+  const lrp = el.dataset.k === 'lrp';
+  const score = lrp ? null : pref.get('score.' + id, null);
   const parts = Array.from({ length: nParts }, (_, i) => pref.get('sc.' + id + '.' + i, null));
   const criteria = Object.fromEntries([...document.querySelectorAll('input[name=crit]')].map(c => [c.value, c.checked]));
   const comment = document.getElementById('rcomment')?.value || '';
@@ -253,7 +262,7 @@ on('save-score', async el => {
   if (marks) payload.marks = marks;
   if (score != null) payload.score = score;
   if (nParts && parts.every(x => x != null)) payload.parts = parts;
-  if (payload.score == null && !payload.parts) { toast(nParts ? 'Поставьте итоговый балл или баллы за каждый ответ' : 'Поставьте балл'); return; }
+  if (payload.score == null && !payload.parts) { toast(lrp ? 'Оцените каждый ответ: итог посчитается сам' : nParts ? 'Поставьте итоговый балл или баллы за каждый ответ' : 'Поставьте балл'); return; }
   try {
     await src.rate(id, payload);
     pref.set('score.' + id, null); pref.set('marks.' + id, null); pref.set('crit.' + id, null); pref.set('cmt.' + id, null); parts.forEach((_, i) => pref.set('sc.' + id + '.' + i, null));
