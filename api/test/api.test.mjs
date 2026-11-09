@@ -254,6 +254,14 @@ r = await call('PATCH', `/teacher/assignments/${dueIds[0]}`, { token: S3, json: 
 ok(r.status === 403 && (await dueOf(dueIds[0])) === 5, 'a student cannot change a deadline');
 r = await call('PATCH', '/teacher/assignments/99999999', { token: T, json: { due_at: 5 } });
 ok(r.status === 404, 'unknown assignment → 404');
+// the student card lists what was assigned and where he stands: new → in progress → done
+const asgOf = async id => (await call('GET', `/teacher/students/${sid}`, { token: T })).data.assignments.find(x => x.id === id);
+ok((await asgOf(dueIds[0]))?.status === 'new', 'student card: a fresh assignment is «new»');
+const atA = (await call('POST', '/attempts', { token: S3, json: { kind: 'practice', mode: 'learn', section: 'R', task: 'ctw', assignment_id: dueIds[0] } })).data.id;
+ok((await asgOf(dueIds[0]))?.status === 'progress' && (await asgOf(dueIds[1]))?.status === 'new', 'student card: a started attempt makes it «in progress»');
+await call('POST', `/attempts/${atA}/finish`, { token: S3 });
+ok((await asgOf(dueIds[0]))?.status === 'done' && (await asgOf(dueIds[1]))?.status === 'new', 'student card: a finished attempt makes it «done»');
+ok((await call('GET', `/teacher/students/${sid}`, { token: T })).data.assignments.every(x => x.title && x.spec), 'student card: assignments carry title and spec');
 for (const id of dueIds) await call('DELETE', `/teacher/assignments/${id}`, { token: T });
 
 // --- practice: learn-mode feedback, mistakes, stats, adaptive level

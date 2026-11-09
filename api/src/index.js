@@ -282,10 +282,19 @@ on('GET', '/teacher/students/:id', async ({ env, user, params }) => {
   if (!(await canSeeStudent(env, user, sid))) throw notFound();
   const s = await one(env, 'SELECT * FROM users WHERE id = ?', sid);
   const attempts = await all(env, 'SELECT id, kind, mode, section, task, route, bands, started_at, finished_at FROM attempts WHERE user_id = ? ORDER BY started_at DESC LIMIT 100', sid);
+  // everything assigned to this student (personally or through his group) and where he stands: new / in progress / done
+  const asg = await all(env, `SELECT a.id, a.title, a.spec, a.due_at, a.created_at, a.group_id, a.student_id FROM assignments a
+    WHERE (a.student_id = ? OR (a.group_id IS NOT NULL AND a.group_id = ?))${user.role === 'admin' ? '' : ' AND a.teacher_id = ?'}
+    ORDER BY a.created_at DESC LIMIT 200`, ...(user.role === 'admin' ? [sid, s.group_id ?? -1] : [sid, s.group_id ?? -1, user.id]));
+  const doneIds = new Set((await all(env, `SELECT assignment_id AS id FROM attempts WHERE user_id = ? AND assignment_id IS NOT NULL AND finished_at IS NOT NULL
+    UNION SELECT assignment_id FROM submissions WHERE user_id = ? AND assignment_id IS NOT NULL AND status != 'draft'`, sid, sid)).map(r => r.id));
+  const startedIds = new Set((await all(env, `SELECT assignment_id AS id FROM attempts WHERE user_id = ? AND assignment_id IS NOT NULL
+    UNION SELECT assignment_id FROM submissions WHERE user_id = ? AND assignment_id IS NOT NULL`, sid, sid)).map(r => r.id));
   return {
     student: publicUser(s), summary: await summaryFor(env, sid),
     attempts: attempts.map(a => ({ ...a, route: parse(a.route), bands: parse(a.bands) })),
-    submissions: await submissionsList(env, 'WHERE s.user_id = ?', sid)
+    submissions: await submissionsList(env, 'WHERE s.user_id = ?', sid),
+    assignments: asg.map(a => ({ ...a, spec: parse(a.spec), status: doneIds.has(a.id) ? 'done' : startedIds.has(a.id) ? 'progress' : 'new' }))
   };
 });
 

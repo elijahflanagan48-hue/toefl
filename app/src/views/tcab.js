@@ -12,6 +12,19 @@ const KIND = { practice: 'Тренировка', module: 'Модуль', section
 const needLive = html => `${hdr('Кабинет учителя')}<div class="card empty"><b>Доступно в аккаунте</b>${html}</div>`;
 
 /* ------------------------------------------------------------------ student card */
+/** what the teacher has assigned to this student: open ones (new / in progress) first, finished ones folded below */
+const ASTATUS = { new: ['не начато', 'warn'], progress: ['в процессе', 'info'], done: ['выполнено', 'ok'] };
+function assignedBlock(list, sid) {
+  const open = list.filter(a => a.status !== 'done').sort((x, y) => (x.due_at ?? Infinity) - (y.due_at ?? Infinity) || y.created_at - x.created_at);
+  const done = list.filter(a => a.status === 'done');
+  const row = a => { const late = a.status !== 'done' && a.due_at && a.due_at < Date.now(), [st, cls] = ASTATUS[a.status];
+    return `<a class="row" href="#/t/assign/${a.id}"><div class="t"><div class="nm">${esc(a.title)}</div>
+      <div class="mt">${[MODE_NAMES[a.spec?.mode], a.spec?.setLabel, a.group_id ? 'всей группе' : 'лично', a.due_at ? 'до ' + dateLabel(a.due_at) : 'без срока'].filter(Boolean).map(esc).join(' · ')}</div></div>
+      <div class="end">${late ? '<span class="chip bad">просрочено</span>' : ''}<span class="chip ${cls}">${st}</span>${ic('right', 18)}</div></a>`; };
+  return `<div class="lbl">Назначенные задания${open.length ? ` · осталось ${open.length}` : ''}</div>
+    ${open.length ? `<div class="card rows" style="margin-bottom:10px">${open.map(row).join('')}</div>` : `<div class="card empty" style="margin-bottom:10px"><b>${list.length ? 'Всё назначенное выполнено' : 'Заданий не назначено'}</b></div>`}
+    ${done.length ? `<details class="adone"><summary>Выполненные назначения (${done.length})</summary><div class="card rows" style="margin-top:8px">${done.map(row).join('')}</div></details>` : ''}`;
+}
 export async function studentCard(params) {
   if (!isLive()) return { title: 'Ученик', html: needLive('В демо-режиме карточки учеников недоступны.') };
   const d = await src.studentDetail(params[0]);
@@ -28,6 +41,7 @@ export async function studentCard(params) {
     html: `${hdr(st.name, { back: '#/t/students', sub: [st.group_name, st.email].filter(Boolean).join(' · '), right: `<button class="btn sm pri" data-act="assign" data-sid="${st.id}" aria-label="Назначить">${ic('plus', 16)}<span class="bl"> Назначить</span></button>` })}
     <div class="kpis">${['R', 'L', 'W', 'S'].map(k => `<div class="kpi"><span class="sc ${heat(f[k], st.target ?? 4.5)}">${f[k] == null ? 'нет' : band(f[k])}</span><b class="serif" style="font-size:15px">${SEC[k].name}</b><span>прогноз</span></div>`).join('')}
       <div class="kpi hot">${ic('trend', 20)}<b class="serif">${ov == null ? '—' : band(ov)}</b><span>общий${ov == null ? '' : ' · ' + cefr(ov)} · цель ${band(st.target ?? 4.5)}</span></div></div>
+    ${assignedBlock(d.assignments || [], st.id)}
     <div class="g-two">
       <section><div class="lbl">Слабые типы вопросов</div>
         <div class="card pad weak">${weakR.length || weakW.length ? `${wrows(weakR, 'R')}${wrows(weakW, 'W')}` : '<p class="mut">Пока мало ответов: нужно хотя бы 3 вопроса каждого типа.</p>'}

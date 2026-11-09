@@ -96,6 +96,16 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   const links = await s.$$eval('a.note', as => as.map(a => a.getAttribute('href')));
   ok(['practice/ctw', 'practice/rdl', 'practice/rap', 'practice/bas', 'speak/lrp', 'listen/lcr'].every(k => links.some(l => l.includes(k))), 'student sees a tracked link for each task', links.join(' ') || (await s.textContent('#app')).replace(/\s+/g, ' ').slice(0, 300));
 
+  // ---- the student card lists the open assignments with their status
+  await t.goto(APP + '#/t/students'); await t.waitForTimeout(800);
+  await t.click('.scard:has-text("' + sname + '")'); await t.waitForTimeout(1200);
+  ok((await t.textContent('#app')).includes('Назначенные задания · осталось 6'), 'student card: «осталось 6» assignments');
+  ok((await t.$$('.chip:has-text("не начато")')).length === 6, 'student card: all six are «не начато»');
+  ok((await t.textContent('#app')).includes('Весь Reading'), 'student card: set label shown');
+  await t.screenshot({ path: OUT + '/card-assigned.png' });
+  await t.click('a.row:has-text("Complete the Words")'); await t.waitForTimeout(900);
+  ok(t.url().includes('#/t/assign/'), 'an assignment row opens its results');
+
   // ---- change the deadline of a whole set, then clear it
   await t.goto(APP + '#/t/assign'); await t.waitForTimeout(900);
   await t.click('tr.aset:has-text("Весь Reading") [data-act="due-edit"]'); await t.waitForSelector('#d-due');
