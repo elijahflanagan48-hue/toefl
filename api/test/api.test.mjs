@@ -277,6 +277,10 @@ ok(r.status === 200 && r.data.groups.every(g => g.item.task === 'ctw'), 'answer 
 const lg = (await call('GET', `/teacher/students/${sid}/log`, { token: T })).data.groups[0];
 r = await call('GET', `/teacher/students/${sid}/log?attempt=${lg.attempt.id}`, { token: T });
 ok(r.status === 200 && r.data.groups.length >= 1 && r.data.groups.every(g => g.attempt.id === lg.attempt.id), 'answer log of one attempt');
+r = await call('GET', `/teacher/students/${sid}/log?limit=1`, { token: T });
+ok(r.status === 200 && r.data.groups.length === 1 && Array.isArray(r.data.subs), 'answer log pages (limit) and carries submissions on the first page');
+r = await call('GET', `/teacher/students/${sid}/log?limit=1&offset=1`, { token: T });
+ok(r.status === 200 && r.data.subs.length === 0 && (r.data.groups.length === 0 || r.data.groups[0].item.id), 'later pages come without submissions');
 r = await call('GET', `/teacher/students/${sid}/log`, { token: S3 });
 ok(r.status === 403, 'a student cannot open the teacher answer log');
 r = await call('GET', '/items?section=R&task=rdl&level=auto', { token: S3 });

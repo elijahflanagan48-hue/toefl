@@ -77,8 +77,21 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   ok((await t.textContent('.hdr')).includes('Попытка'), 'header says which attempt');
   await t.goto(APP + '#/t/students'); await t.waitForTimeout(500);
   await t.click('.scard:has-text("' + sname + '")'); await t.waitForTimeout(1200);
-  await t.click('a:has-text("Все ответы Reading")'); await t.waitForSelector('.lg');
-  ok((await t.$$('.lg')).length === 6, 'all Reading answers: 6 items', String((await t.$$('.lg')).length));
+  await t.click('a:has-text("Все выполненные задания")'); await t.waitForSelector('.lg');
+  ok((await t.$$('.lg')).length === 6, 'one button opens everything the student did: 6 items', String((await t.$$('.lg')).length));
+  ok((await t.$$('.lgtabs a')).length === 5, 'section tabs are there');
+  ok((await t.$$('.lgsrc')).length >= 3 && (await t.textContent('.lgsrc')).length > 80, 'the source text is shown with the questions');
+  ok((await t.$$('.xdoc')).length >= 1, 'Read in Daily Life document rendered');
+  await t.screenshot({ path: OUT + '/log-all.png' });
+  await t.click('.lgtabs a:has-text("Reading")'); await t.waitForSelector('.lg'); await t.waitForTimeout(500);
+  ok((await t.$$('.lg')).length === 6, 'Reading tab shows the 6 items');
+  await t.click('.lgtabs a:has-text("Listening")'); await t.waitForTimeout(900);
+  ok((await t.$$('.lg')).length === 0 && (await t.textContent('#app')).includes('пока нет'), 'Listening tab is empty for this student');
+  await t.click('.lgtabs a:has-text("Writing")'); await t.waitForTimeout(900);
+  ok((await t.textContent('#app')).includes('пока нет'), 'Writing tab: empty state');
+  await t.goto(APP + '#/t/students'); await t.waitForTimeout(500);
+  await t.click('.scard:has-text("' + sname + '")'); await t.waitForTimeout(1200);
+  await t.click('a:has-text("Все выполненные задания")'); await t.waitForSelector('.lg');
 
   // phone width
   const m = await mk(375, 800);

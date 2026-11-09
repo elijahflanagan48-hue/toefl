@@ -30,8 +30,9 @@ export async function studentCard(params) {
       <section><div class="lbl">Слабые типы вопросов</div>
         <div class="card pad weak">${weakR.length || weakW.length ? `${wrows(weakR, 'R')}${wrows(weakW, 'W')}` : '<p class="mut">Пока мало ответов: нужно хотя бы 3 вопроса каждого типа.</p>'}
           <div class="row-btns" style="margin-top:12px"><button class="btn sm" data-act="assign" data-sid="${st.id}">${ic('plus', 16)} Назначить тренажёр</button>
-            <a class="btn sm ghost" href="#/t/student/${st.id}/log/R">Все ответы Reading</a><a class="btn sm ghost" href="#/t/student/${st.id}/log/W">Writing</a><a class="btn sm ghost" href="#/t/student/${st.id}/log/L">Listening</a></div></div>
+            </div></div>
         <div class="lbl">Последние попытки</div>
+        <a class="btn sm" href="#/t/student/${st.id}/log/all" style="margin-bottom:10px">Все выполненные задания ученика</a>
         ${att.length ? `<div class="card tblwrap"><table class="tbl"><thead><tr><th>Дата</th><th>Что</th><th>Баллы</th></tr></thead><tbody>${att.map(a => `<tr><td>${dateLabel(a.finished_at)}</td>
           <td>${a.kind === 'mock' ? `<a href="#/mock/result/${a.id}"><b>Пробник ${esc((a.task || '').replace(/^T/, ''))}</b></a> · <a href="#/t/student/${st.id}/attempt/${a.id}">ответы</a>` : `<a href="#/t/student/${st.id}/attempt/${a.id}"><b>${KIND[a.kind] || a.kind}</b></a>`}${a.section ? ' · ' + SEC[a.section].name : ''}${a.route?.R ? ` · ${a.route.R === 'upper' ? 'трудный' : 'лёгкий'} модуль 2` : ''}</td>
           <td class="num">${['R', 'L', 'W', 'S'].filter(k => a.bands?.[k] != null).map(k => `${k} ${band(a.bands[k])}`).join(' · ') || '—'}</td></tr>`).join('')}</tbody></table></div>` : '<div class="card empty"><b>Попыток пока нет</b></div>'}

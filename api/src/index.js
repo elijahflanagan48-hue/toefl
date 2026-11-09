@@ -297,14 +297,15 @@ on('GET', '/teacher/students/:id/log', async ({ env, user, params, url }) => {
   if (!(await canSeeStudent(env, user, sid))) throw notFound();
   const q = url.searchParams, where = ['a.user_id = ?'], b = [sid];
   const attempt = q.get('attempt'), section = q.get('section'), task = q.get('task'), qtype = q.get('qtype');
+  const limit = Math.min(60, Math.max(1, Number(q.get('limit')) || 30)), offset = Math.max(0, Number(q.get('offset')) || 0);
   if (attempt) { where.push('a.id = ?'); b.push(Number(attempt)); }
   if (section) { where.push('r.section = ?'); b.push(section); }
   if (task) { where.push('i.task = ?'); b.push(task); }
   if (qtype) { where.push('r.qtype = ?'); b.push(qtype); }
-  // newest (attempt, item) pairs that match the filter; then all their responses
+  // newest (attempt, item) pairs that match the filter, one page; then all their responses
   const pairs = await all(env, `SELECT a.id AS attempt_id, r.item_id, MAX(r.created_at) AS at
     FROM responses r JOIN attempts a ON a.id = r.attempt_id LEFT JOIN items i ON i.id = r.item_id
-    WHERE ${where.join(' AND ')} AND r.item_id != '' AND r.correct IS NOT NULL GROUP BY a.id, r.item_id ORDER BY at DESC LIMIT 60`, ...b);
+    WHERE ${where.join(' AND ')} AND r.item_id != '' AND r.correct IS NOT NULL GROUP BY a.id, r.item_id ORDER BY at DESC LIMIT ? OFFSET ?`, ...b, limit, offset);
   const attempts = {}, items = {}, groups = [];
   for (const p of pairs) {
     if (!(p.attempt_id in attempts)) attempts[p.attempt_id] = await one(env, 'SELECT id, kind, mode, section, task, assignment_id, started_at, finished_at FROM attempts WHERE id = ?', p.attempt_id);
@@ -314,7 +315,10 @@ on('GET', '/teacher/students/:id/log', async ({ env, user, params, url }) => {
     groups.push({ attempt: attempts[p.attempt_id], item: items[p.item_id], at: p.at, rs: rs.map(r => ({ ...r, answer: parse(r.answer) })) });
   }
   const st = await one(env, 'SELECT id, name FROM users WHERE id = ?', sid);
-  return { student: st, filter: { attempt: attempt ? Number(attempt) : null, section, task, qtype }, groups };
+  // teacher-graded work (Writing / Speaking) belongs to the same history; sent with the first page only
+  const subs = !offset && !attempt && !qtype && !task && (!section || section === 'W' || section === 'S')
+    ? await submissionsList(env, `WHERE s.user_id = ?${section ? ' AND s.section = ?' : ''}`, ...(section ? [sid, section] : [sid])) : [];
+  return { student: st, filter: { attempt: attempt ? Number(attempt) : null, section, task, qtype }, groups, subs, more: pairs.length === limit };
 });
 
 on('POST', '/teacher/students/:id/reset-password', async ({ env, user, params }) => {

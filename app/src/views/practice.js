@@ -63,7 +63,7 @@ const gapLen = (it, i) => it.body.parts.filter(p => p.n)[i].n;
 const checked = s => s.kind === 'ctw' ? s.qs.every(i => P.fb[qid(s.it, i)]) : !!P.fb[qid(s.it, s.i)];
 
 /* ---------------- left pane renderers ---------------- */
-function docHtml(d, hlw) {
+export function docHtml(d, hlw) {
   const mark = t => hlw ? esc(t).replace(esc(hlw), `<mark class="xhl">${esc(hlw)}</mark>`) : esc(t);
   const paras = (d.paras || []).map(p => `<p>${mark(p).replace(/\n/g, '<br>')}</p>`).join('');
   switch (d.kind) {
