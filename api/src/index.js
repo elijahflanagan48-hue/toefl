@@ -289,6 +289,34 @@ on('GET', '/teacher/students/:id', async ({ env, user, params }) => {
   };
 });
 
+/** answer log for a teacher: every item the student worked on, with the student's answers next to the key.
+ *  filters: ?attempt=ID | ?section=R&qtype=Factual | ?section=R&task=ctw (any combination); newest first */
+on('GET', '/teacher/students/:id/log', async ({ env, user, params, url }) => {
+  requireTeacher(user);
+  const sid = Number(params.id);
+  if (!(await canSeeStudent(env, user, sid))) throw notFound();
+  const q = url.searchParams, where = ['a.user_id = ?'], b = [sid];
+  const attempt = q.get('attempt'), section = q.get('section'), task = q.get('task'), qtype = q.get('qtype');
+  if (attempt) { where.push('a.id = ?'); b.push(Number(attempt)); }
+  if (section) { where.push('r.section = ?'); b.push(section); }
+  if (task) { where.push('i.task = ?'); b.push(task); }
+  if (qtype) { where.push('r.qtype = ?'); b.push(qtype); }
+  // newest (attempt, item) pairs that match the filter; then all their responses
+  const pairs = await all(env, `SELECT a.id AS attempt_id, r.item_id, MAX(r.created_at) AS at
+    FROM responses r JOIN attempts a ON a.id = r.attempt_id LEFT JOIN items i ON i.id = r.item_id
+    WHERE ${where.join(' AND ')} AND r.item_id != '' AND r.correct IS NOT NULL GROUP BY a.id, r.item_id ORDER BY at DESC LIMIT 60`, ...b);
+  const attempts = {}, items = {}, groups = [];
+  for (const p of pairs) {
+    if (!(p.attempt_id in attempts)) attempts[p.attempt_id] = await one(env, 'SELECT id, kind, mode, section, task, assignment_id, started_at, finished_at FROM attempts WHERE id = ?', p.attempt_id);
+    if (!(p.item_id in items)) { const it = await one(env, 'SELECT id, section, task, level, body, key, explain, qtypes FROM items WHERE id = ?', p.item_id); items[p.item_id] = it && { id: it.id, section: it.section, task: it.task, level: it.level, body: parse(it.body), key: parse(it.key), explain: parse(it.explain), qtypes: parse(it.qtypes) }; }
+    if (!items[p.item_id]) continue;
+    const rs = await all(env, 'SELECT q, module, qtype, answer, correct, ms FROM responses WHERE attempt_id = ? AND item_id = ? ORDER BY module, q', p.attempt_id, p.item_id);
+    groups.push({ attempt: attempts[p.attempt_id], item: items[p.item_id], at: p.at, rs: rs.map(r => ({ ...r, answer: parse(r.answer) })) });
+  }
+  const st = await one(env, 'SELECT id, name FROM users WHERE id = ?', sid);
+  return { student: st, filter: { attempt: attempt ? Number(attempt) : null, section, task, qtype }, groups };
+});
+
 on('POST', '/teacher/students/:id/reset-password', async ({ env, user, params }) => {
   requireTeacher(user);
   const sid = Number(params.id);

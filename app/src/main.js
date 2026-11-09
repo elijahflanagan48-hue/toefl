@@ -16,6 +16,7 @@ import write from './views/write.js';
 import work from './views/work.js';
 import speak from './views/speak.js';
 import listen from './views/listen.js';
+import { studentLog } from './views/slog.js';
 import { studentCard, assignView, bankView, assignResults, calibrationView } from './views/tcab.js';
 import { login, join, setup, password } from './views/auth.js';
 
@@ -27,7 +28,7 @@ const ROUTES = {
   login, join, setup, password
 };
 const PUBLIC = new Set(['login', 'join', 'setup']);
-const PARAM_ROUTES = [['mock/result/', mockResult], ['train/', train], ['t/review/', reviewItem], ['practice/', practice], ['write/', write], ['speak/', speak], ['listen/', listen], ['t/student/', studentCard], ['t/assign/', assignResults], ['work/', work]];
+const PARAM_ROUTES = [['mock/result/', mockResult], ['train/', train], ['t/review/', reviewItem], ['practice/', practice], ['write/', write], ['speak/', speak], ['listen/', listen], ['t/student/', params => (params[1] === 'log' || params[1] === 'attempt' ? studentLog(params) : studentCard(params))], ['t/assign/', assignResults], ['work/', work]];
 
 const NAV = {
   student: [['today', 'today', 'Сегодня'], ['train', 'layers', 'Тренировка'], ['mock', 'timer', 'Пробник'], ['progress', 'trend', 'Прогресс'], ['profile', 'user', 'Профиль']],

@@ -18,7 +18,7 @@ export async function studentCard(params) {
   const st = d.student, f = d.summary.forecast, ov = overallBand([f.R, f.L, f.W, f.S]);
   const weak = sec => Object.entries(d.stats[sec]?.types || {}).filter(([, v]) => v.n >= 3).sort((a, b) => a[1].acc - b[1].acc).slice(0, 5);
   const weakR = weak('R'), weakW = weak('W');
-  const wrows = (list, k) => list.map(([n, v]) => `<div class="qb c${k}"><span class="qn">${esc(n)}</span><div class="bar"><i style="width:${v.acc}%;background:${v.acc < 60 ? 'var(--sS)' : 'var(--ok)'}"></i></div><b>${v.acc}%</b></div>`).join('');
+  const wrows = (list, k) => list.map(([n, v]) => `<a class="qb c${k}" href="#/t/student/${st.id}/log/${k}/${encodeURIComponent(n)}" title="Показать ответы ученика"><span class="qn">${esc(n)}</span><div class="bar"><i style="width:${v.acc}%;background:${v.acc < 60 ? 'var(--sS)' : 'var(--ok)'}"></i></div><b>${v.acc}%</b>${ic('right', 16)}</a>`).join('');
   const att = d.attempts.filter(a => a.finished_at).slice(0, 8);
   const subs = d.submissions.slice(0, 8);
   return {
@@ -29,10 +29,11 @@ export async function studentCard(params) {
     <div class="g-two">
       <section><div class="lbl">Слабые типы вопросов</div>
         <div class="card pad weak">${weakR.length || weakW.length ? `${wrows(weakR, 'R')}${wrows(weakW, 'W')}` : '<p class="mut">Пока мало ответов: нужно хотя бы 3 вопроса каждого типа.</p>'}
-          <button class="btn sm" data-act="assign" data-sid="${st.id}" style="margin-top:12px">${ic('plus', 16)} Назначить тренажёр</button></div>
+          <div class="row-btns" style="margin-top:12px"><button class="btn sm" data-act="assign" data-sid="${st.id}">${ic('plus', 16)} Назначить тренажёр</button>
+            <a class="btn sm ghost" href="#/t/student/${st.id}/log/R">Все ответы Reading</a><a class="btn sm ghost" href="#/t/student/${st.id}/log/W">Writing</a><a class="btn sm ghost" href="#/t/student/${st.id}/log/L">Listening</a></div></div>
         <div class="lbl">Последние попытки</div>
         ${att.length ? `<div class="card tblwrap"><table class="tbl"><thead><tr><th>Дата</th><th>Что</th><th>Баллы</th></tr></thead><tbody>${att.map(a => `<tr><td>${dateLabel(a.finished_at)}</td>
-          <td>${a.kind === 'mock' ? `<a href="#/mock/result/${a.id}"><b>Пробник ${esc((a.task || '').replace(/^T/, ''))}</b></a>` : KIND[a.kind] || a.kind}${a.section ? ' · ' + SEC[a.section].name : ''}${a.route?.R ? ` · ${a.route.R === 'upper' ? 'трудный' : 'лёгкий'} модуль 2` : ''}</td>
+          <td>${a.kind === 'mock' ? `<a href="#/mock/result/${a.id}"><b>Пробник ${esc((a.task || '').replace(/^T/, ''))}</b></a> · <a href="#/t/student/${st.id}/attempt/${a.id}">ответы</a>` : `<a href="#/t/student/${st.id}/attempt/${a.id}"><b>${KIND[a.kind] || a.kind}</b></a>`}${a.section ? ' · ' + SEC[a.section].name : ''}${a.route?.R ? ` · ${a.route.R === 'upper' ? 'трудный' : 'лёгкий'} модуль 2` : ''}</td>
           <td class="num">${['R', 'L', 'W', 'S'].filter(k => a.bands?.[k] != null).map(k => `${k} ${band(a.bands[k])}`).join(' · ') || '—'}</td></tr>`).join('')}</tbody></table></div>` : '<div class="card empty"><b>Попыток пока нет</b></div>'}
       </section>
       <section><div class="lbl">Работы Writing и Speaking</div>

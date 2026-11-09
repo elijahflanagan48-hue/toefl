@@ -217,6 +217,10 @@ export async function studentDetail(id) {
   const [R, W] = await Promise.all([get(`/me/stats?section=R&user=${id}`), get(`/me/stats?section=W&user=${id}`)]).catch(() => [null, null]);
   return { ...r, stats: { R, W } };
 }
+export async function studentLog(id, f = {}) {
+  const q = Object.entries(f).filter(([, v]) => v != null && v !== '').map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&');
+  return get(`/teacher/students/${id}/log${q ? '?' + q : ''}`);
+}
 export async function assignments() { return isLive() ? (await get('/teacher/assignments')).assignments : []; }
 export const createAssignment = d => post('/teacher/assignments', d);
 export const deleteAssignment = id => api('DELETE', '/teacher/assignments/' + id);
