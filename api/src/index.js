@@ -965,7 +965,7 @@ on('POST', '/teacher/submissions/:id/rating', async ({ req, env, user, params })
   await run(env, 'UPDATE ratings SET is_final = 0 WHERE submission_id = ?', s.id);
   const r = await run(env, `INSERT INTO ratings (submission_id, source, rater_id, score, parts, criteria, comment, marks, is_final, created_at)
     VALUES (?, 'teacher', ?, ?, ?, ?, ?, ?, 1, ?)`, s.id, user.id, score,
-  parts ? JSON.stringify(parts) : null, b.criteria ? JSON.stringify(b.criteria).slice(0, 4000) : null, comment,
+  parts ? JSON.stringify(parts) : null, b.criteria ? JSON.stringify(b.criteria).slice(0, 8000) : null, comment,
   Array.isArray(b.marks) ? JSON.stringify(b.marks).slice(0, 8000) : null, now());
   await run(env, `UPDATE submissions SET status = 'graded' WHERE id = ?`, s.id);
   return { id: r.meta.last_row_id, score };

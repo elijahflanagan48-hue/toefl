@@ -1,4 +1,4 @@
-import { RUBRIC, CRIT, markedHtml, notesHtml, selectionOffsets, promptBlock } from '../lib/writing.js';
+import { RUBRIC, CRIT, PHRASES, critFlat, critHint, markedHtml, notesHtml, selectionOffsets, promptBlock } from '../lib/writing.js';
 import { bank, emailWork } from '../data/mock.js';
 import * as src from '../data/source.js';
 import { isLive, audioUrl } from '../lib/api.js';
@@ -157,15 +157,23 @@ export async function reviewItem(params) {
         <div class="end"><div class="minis">${[0, 1, 2, 3, 4, 5].map(n => `<button class="mini ${(pref.get('sc.' + q.id + '.' + i) ?? partScores[i]) === n ? 'on' : ''}" data-act="mini" data-q="${q.id}" data-i="${i}" data-n="${n}">${n}</button>`).join('')}</div></div></div>`;
     }).join('')}</div>`;
 
+  // checklist and comment survive re-renders (picking a score re-draws the panel): drafts live in pref until saved
+  const savedCrit = {}; for (const c of critFlat(kind)) if (prev?.criteria?.[c.id] != null) savedCrit[c.id] = !!prev.criteria[c.id];
+  const ticked = pref.get('crit.' + q.id, null) ?? savedCrit;
+  const comment = pref.get('cmt.' + q.id, null) ?? (prev?.comment || '');
+  RV.kind = kind;
   const panel = `<aside class="card pad rubric">
     <div class="rb-hd"><span class="av">${esc(initials(q.student))}</span><div><b>${esc(q.student)}</b><span class="fade">${esc(q.task)}</span></div></div>
     ${prev ? `<p class="chip ok" style="margin-top:10px">Оценено: ${band(prev.score)} / 5</p>` : ''}
     <div class="lbl" style="margin-top:14px">${isW ? 'Балл по рубрике ETS' : 'Итог (или средний по ответам)'}</div>
     <div class="scores">${RUBRIC[kind].map((d, n) => `<button class="scoreb ${sel === n ? 'on' : ''}" data-act="score" data-q="${q.id}" data-n="${n}"><b class="serif">${n}</b><span>${d}</span></button>`).join('')}</div>
-    <div class="lbl">Критерии</div>
-    <div class="crit">${CRIT[kind].map((c, i) => `<label class="ck"><input type="checkbox" name="crit" value="${esc(c)}" ${prev?.criteria?.[c] ? 'checked' : ''}><span>${c}</span></label>`).join('')}</div>
+    <div class="lbl">Чек-лист <span class="chint" id="chint"></span></div>
+    <div class="cgrps">${CRIT[kind].map(g => `<details class="cgrp" open data-g="${g.id}"><summary><b>${g.t}</b><span class="cgn" data-n="${g.id}"></span></summary>
+      <p class="cgq">${g.q}</p>
+      <div class="crit">${g.items.map(c => `<label class="ck"><input type="checkbox" name="crit" value="${c.id}" ${ticked[c.id] ? 'checked' : ''}><span>${c.t}</span></label>`).join('')}</div></details>`).join('')}</div>
     <div class="lbl">Комментарий ученику</div>
-    <textarea class="inp" id="rcomment" rows="3" placeholder="Что получилось и что улучшить">${esc(prev?.comment || '')}</textarea>
+    <div class="phr">${PHRASES[kind].map((t, i) => `<button type="button" class="phb" data-act="phrase" data-t="${esc(t)}">${esc(t)}</button>`).join('')}</div>
+    <textarea class="inp" id="rcomment" rows="4" placeholder="Что получилось и что улучшить">${esc(comment)}</textarea>
     <div class="rb-ft"><a class="btn ghost" href="#/t/review">К очереди</a><button class="btn pri" data-act="save-score" data-q="${q.id}" data-s="${isW ? 'W' : 'S'}" data-parts="${isW ? 0 : nParts}">${ic('check', 17)} Сохранить</button></div>
     <p class="fade small kbdh"><kbd>0</kbd>–<kbd>5</kbd> балл · <kbd>Ctrl</kbd>+<kbd>Enter</kbd> сохранить · <kbd>J</kbd>/<kbd>K</kbd> следующая/предыдущая</p>
   </aside>`;
@@ -176,6 +184,16 @@ export async function reviewItem(params) {
     html: `${hdr(q.task, { back: '#/t/review', sub: q.student + (q.title ? ' · ' + q.title : '') })}<div class="g-review"><div class="work">${work}</div>${panel}</div>`,
     unmount() { document.onselectionchange = null; },
     mount(root) {
+      const sync = () => {
+        const st = {}; root.querySelectorAll('input[name=crit]').forEach(c => { st[c.value] = c.checked; });
+        for (const g of CRIT[kind]) { const el = root.querySelector(`[data-n="${g.id}"]`); if (el) el.textContent = `${g.items.filter(c => st[c.id]).length}/${g.items.length}`; }
+        const h = critHint(kind, st), ch = root.querySelector('#chint');
+        if (ch) ch.textContent = h && h.n ? `· отмечено ${h.n} из ${h.of}, ориентир ≈ ${h.score}` : '';
+        return st;
+      };
+      sync();
+      root.querySelectorAll('input[name=crit]').forEach(c => c.addEventListener('change', () => pref.set('crit.' + q.id, sync())));
+      root.querySelector('#rcomment')?.addEventListener('input', e => pref.set('cmt.' + q.id, e.target.value));
       const mb = root.querySelector('#mbody');
       if (mb) document.onselectionchange = () => { const o = selectionOffsets(mb); if (o) RV.sel = o; };
       if (!live) return;
@@ -197,6 +215,11 @@ export async function reviewItem(params) {
   };
 }
 let RV = null;
+on('phrase', el => {
+  const ta = document.getElementById('rcomment'); if (!ta) return;
+  ta.value = (ta.value.trim() ? ta.value.trim() + ' ' : '') + el.dataset.t;
+  ta.dispatchEvent(new Event('input')); ta.focus();
+});
 on('mark-add', () => {
   const o = RV?.sel;
   if (!o) { toast('Сначала выделите фрагмент текста'); return; }
@@ -233,7 +256,7 @@ on('save-score', async el => {
   if (payload.score == null && !payload.parts) { toast(nParts ? 'Поставьте итоговый балл или баллы за каждый ответ' : 'Поставьте балл'); return; }
   try {
     await src.rate(id, payload);
-    pref.set('score.' + id, null); pref.set('marks.' + id, null); parts.forEach((_, i) => pref.set('sc.' + id + '.' + i, null));
+    pref.set('score.' + id, null); pref.set('marks.' + id, null); pref.set('crit.' + id, null); pref.set('cmt.' + id, null); parts.forEach((_, i) => pref.set('sc.' + id + '.' + i, null));
     toast('Оценка сохранена'); location.hash = '#/t/review';
   } catch (e) { toast(e.message); }
 });

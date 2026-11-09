@@ -5,7 +5,18 @@ import { isLive, audioUrl } from '../lib/api.js';
 import { ic } from '../lib/icons.js';
 import { band, esc } from '../lib/util.js';
 import { hdr } from '../lib/ui.js';
-import { RUBRIC, CRIT, markedHtml, notesHtml, promptBlock, countWords } from '../lib/writing.js';
+import { RUBRIC, CRIT, critLabel, markedHtml, notesHtml, promptBlock, countWords } from '../lib/writing.js';
+
+/** criteria the teacher ticked, grouped as on the review form; old ratings (text keys) are listed flat */
+function critBlock(kind, cr) {
+  const li = (key, ok) => `<li class="${ok ? 'ok' : 'no'}">${ic(ok ? 'check' : 'x', 15)}<span>${esc(critLabel(kind, key))}</span></li>`;
+  const known = new Set(), groups = (CRIT[kind] || []).map(g => {
+    const rows = g.items.filter(c => c.id in cr); rows.forEach(c => known.add(c.id));
+    return rows.length ? `<div class="cgs"><b>${g.t}</b><ul class="critlist">${rows.map(c => li(c.id, cr[c.id])).join('')}</ul></div>` : '';
+  }).join('');
+  const rest = Object.entries(cr).filter(([k]) => !known.has(k));
+  return groups + (rest.length ? `<ul class="critlist">${rest.map(([k, v]) => li(k, v)).join('')}</ul>` : '');
+}
 
 export default async function work(params) {
   if (!isLive()) return { title: 'Работа', html: `${hdr('Работа', { back: '#/progress' })}<div class="card empty"><b>Доступно в аккаунте</b>В демо-режиме работы не сохраняются.</div>` };
@@ -15,7 +26,6 @@ export default async function work(params) {
   const name = src.TASK_NAMES[s.task] || s.task;
   const marks = rate?.marks || [];
   const words = s.words ?? countWords(s.text);
-  const crit = CRIT[kind] || [];
 
   const paper = s.section === 'W' ? `<div class="card pad paper">
       ${s.task === 'eml' && p ? `<div class="mailhd"><span>To:</span> ${esc(p.to || '')}<br><span>Subject:</span> ${esc(p.subject || '')}</div>` : ''}
@@ -33,7 +43,7 @@ export default async function work(params) {
       <div class="lbl">Оценка учителя</div>
       <div class="wscore"><b class="serif">${band(rate.score)}</b><span>/ 5</span></div>
       <p class="mut">${esc(RUBRIC[kind]?.[Math.round(rate.score)] || '')}</p>
-      ${rate.criteria ? `<div class="lbl" style="margin-top:14px">Критерии</div><ul class="critlist">${crit.filter(c => c in rate.criteria).map(c => `<li class="${rate.criteria[c] ? 'ok' : 'no'}">${ic(rate.criteria[c] ? 'check' : 'x', 15)}<span>${esc(c)}</span></li>`).join('')}</ul>` : ''}
+      ${rate.criteria && Object.keys(rate.criteria).length ? `<div class="lbl" style="margin-top:14px">Критерии</div>${critBlock(kind, rate.criteria)}` : ''}
       ${rate.comment ? `<div class="lbl" style="margin-top:14px">Комментарий</div><p class="wcomment">${esc(rate.comment)}</p>` : ''}
       ${marks.length ? `<p class="fade small" style="margin-top:12px">Пометки в тексте: ${marks.length}</p>` : ''}
     </aside>`
