@@ -283,6 +283,16 @@ r = await call('GET', `/teacher/students/${sid}/log?limit=1&offset=1`, { token: 
 ok(r.status === 200 && r.data.subs.length === 0 && (r.data.groups.length === 0 || r.data.groups[0].item.id), 'later pages come without submissions');
 r = await call('GET', `/teacher/students/${sid}/log`, { token: S3 });
 ok(r.status === 403, 'a student cannot open the teacher answer log');
+// the level follows the last three completed items (no 30-day window)
+const lvl = async () => (await call('GET', '/items?section=R&task=rdl&level=auto&limit=1', { token: S3 })).data.level;
+const doItem = async answers => { const at = (await call('POST', '/attempts', { token: S3, json: { kind: 'practice', mode: 'learn', section: 'R', task: 'rdl' } })).data.id; await call('POST', `/attempts/${at}/responses`, { token: S3, json: { responses: answers.map((a, q) => ({ item_id: 'T-RDL-1', q, answer: a })) } }); };
+ok((await call('GET', '/items?section=R&task=rap&level=auto&limit=1', { token: S3 })).data.level === 'B', 'level: no history for a task → B');
+await doItem([0, 0]);
+ok((await lvl()) === 'A', 'level drops to A after a poor item (1 of 4 recently)', await lvl());
+await doItem([1, 2]); await doItem([1, 2]);
+ok((await lvl()) === 'B', 'level rises to B as results improve (4 of 6)', await lvl());
+await doItem([1, 2]);
+ok((await lvl()) === 'C', 'level reaches C after three good items in a row', await lvl());
 r = await call('GET', '/items?section=R&task=rdl&level=auto', { token: S3 });
 ok(['A', 'B', 'C'].includes(r.data.level), 'adaptive level chosen: ' + r.data.level);
 r = await call('GET', '/items/T-RDL-1', { token: S3 });

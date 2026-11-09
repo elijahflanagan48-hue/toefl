@@ -449,12 +449,15 @@ on('POST', '/teacher/assignments', async ({ req, env, user }) => {
 });
 
 /* ------------------------------------------------------------------ practice stats */
-/** recent accuracy on a task → level for adaptive practice: <55% A, <80% B, else C (first time: B) */
+/** level for adaptive practice, from the student's LAST THREE completed items of this task (no calendar window):
+ *  accuracy <55% → A, <80% → B, else C. Fewer than 3 answers so far → B. Re-evaluated on every new item, so it moves quickly. */
 async function autoLevel(env, uid, section, task) {
   const r = await one(env, `SELECT COUNT(*) AS n, SUM(r.correct) AS got FROM responses r JOIN attempts a ON a.id = r.attempt_id
-    JOIN items i ON i.id = r.item_id WHERE a.user_id = ? AND r.correct IS NOT NULL AND (? IS NULL OR i.section = ?) AND (? IS NULL OR i.task = ?)
-    AND r.created_at > ?`, uid, section, section, task, task, now() - 30 * 864e5);
-  if (!r.n || r.n < 5) return 'B';
+    WHERE a.user_id = ? AND r.correct IS NOT NULL AND (r.attempt_id, r.item_id) IN (
+      SELECT r2.attempt_id, r2.item_id FROM responses r2 JOIN attempts a2 ON a2.id = r2.attempt_id JOIN items i ON i.id = r2.item_id
+      WHERE a2.user_id = ? AND r2.correct IS NOT NULL AND (? IS NULL OR i.section = ?) AND (? IS NULL OR i.task = ?)
+      GROUP BY r2.attempt_id, r2.item_id ORDER BY MAX(r2.created_at) DESC, MAX(r2.id) DESC LIMIT 3)`, uid, uid, section, section, task, task);
+  if (!r.n || r.n < 3) return 'B';
   const acc = r.got / r.n;
   return acc < 0.55 ? 'A' : acc < 0.8 ? 'B' : 'C';
 }
