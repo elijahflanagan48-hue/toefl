@@ -34,7 +34,6 @@ async function start(task, mode) {
   try {
     const done = await src.myWritingItems().catch(() => []);
     W.item = await load(task, done);
-    if (!W.item && done.length) W.item = await load(task, []); // everything done once — allow repeats
   } catch (e) { toast(e.message); }
   W.loading = false;
   if (W.item) W.text = pref.get(draftKey(), '') || '';
@@ -87,7 +86,7 @@ function render() {
   if (!W) return;
   if (W.loading) { root.innerHTML = `<div class="exam">${bar()}<div class="xres-in"><div class="skel"></div></div></div>`; return; }
   if (!W.item) {
-    root.innerHTML = `<div class="exam">${bar()}<div class="xres-in"><div class="xres-hero"><div class="k">Заданий пока нет</div><p class="mut" style="margin-top:8px">Банк ${esc(WTASK[W.task].short)} пополняется.</p></div>
+    root.innerHTML = `<div class="exam">${bar()}<div class="xres-in"><div class="xres-hero"><div class="k">Заданий пока нет</div><p class="mut" style="margin-top:8px">Вы прошли все задания этого типа, новые появятся при пополнении банка.</p></div>
       <div class="xr-ft"><a class="btn pri" href="#/train/W">К тренировке</a></div></div></div>`;
     return;
   }

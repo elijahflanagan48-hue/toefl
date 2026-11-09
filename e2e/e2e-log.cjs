@@ -47,6 +47,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   await t.click('.scard:has-text("' + sname + '")'); await t.waitForTimeout(1200);
   ok((await t.$$('a.qb')).length >= 1, 'weak-type rows are links');
   await t.screenshot({ path: OUT + '/card.png' });
+  ok((await t.textContent('.lvls')).includes('Complete the Words') && (await t.$$('.lvls .chip.lvl')).length >= 2, 'card shows the current level per task');
 
   // Complete the Words → log
   await t.click('a.qb:has-text("Complete the Words")'); await t.waitForSelector('.lg', { timeout: 8000 });
@@ -55,6 +56,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   ok((await t.$$('.gp.bad')).length >= 3 && (await t.$$('.gp.key')).length >= 3 && (await t.$$('.gp.ok')).length === 3, 'wrong answers shown struck-through with the right letters beside, correct ones green');
   ok((await t.textContent('.lg')).includes('qq'), 'the student\'s typed answer is visible');
   ok((await t.textContent('.hdr')).includes(sname), 'header names the student');
+  ok((await t.$$eval('.lg .chip.lvl', e => e.map(x => x.textContent))).every(x => /уровень [ABC]$/.test(x.trim())) && (await t.$$('.lg .chip.lvl')).length === 3, 'every item shows its level (A/B/C)');
   await t.screenshot({ path: OUT + '/log-ctw.png', fullPage: true });
 
   // back → Factual (rdl) via the card

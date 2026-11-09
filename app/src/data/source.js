@@ -214,8 +214,8 @@ export async function practiceFinish(attemptId, responses) {
 export async function studentDetail(id) {
   if (!isLive()) return null;
   const r = await get('/teacher/students/' + id);
-  const [R, W] = await Promise.all([get(`/me/stats?section=R&user=${id}`), get(`/me/stats?section=W&user=${id}`)]).catch(() => [null, null]);
-  return { ...r, stats: { R, W } };
+  const [R, W, L] = await Promise.all(['R', 'W', 'L'].map(k => get(`/me/stats?section=${k}&user=${id}`).catch(() => null)));
+  return { ...r, stats: { R, W, L } };
 }
 export async function studentLog(id, f = {}) {
   const q = Object.entries(f).filter(([, v]) => v != null && v !== '').map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&');

@@ -300,6 +300,25 @@ ok(r.status === 200 && !('key' in r.data.item) && r.data.item.body.qs.length ===
 r = await call('GET', '/items?section=R&exclude=T-RDL-1,T-CTW-1', { token: S3 });
 ok(r.data.items.length === 0, 'exclude parameter');
 
+// --- every task is new: what a student has met is never served to him again; others still get it
+r = await call('GET', '/items?section=R&task=rdl', { token: S3 });
+ok(r.status === 200 && r.data.items.length === 0, 'a student never gets a task he has already done');
+r = await call('GET', '/items?section=R&task=rdl&bank=test', { token: T });
+ok(r.data.items.some(i => i.id === 'T-RDL-1'), 'the teacher can still preview any task');
+r = await call('POST', '/auth/register', { json: { name: 'Новичок', email: `n-${tag}@x.io`, password: 'student-pass-3', code } });
+const S5 = r.data.token;
+r = await call('GET', '/items?section=R&task=rdl&level=auto', { token: S5 });
+ok(r.data.items.some(i => i.id === 'T-RDL-1'), 'a different student still gets that task');
+await call('POST', '/teacher/items', { token: T, json: { items: [{ id: 'T-RDL-C', section: 'R', task: 'rdl', level: 'C', body: { text: 'Notice', qs: [{ stem: 'Q1', opts: ['a', 'b', 'c', 'd'] }] }, key: [1], explain: ['…'], qtypes: ['Factual'] }] } });
+const at5 = (await call('POST', '/attempts', { token: S5, json: { kind: 'practice', mode: 'learn', section: 'R', task: 'rdl' } })).data.id;
+await call('POST', `/attempts/${at5}/responses`, { token: S5, json: { responses: [{ item_id: 'T-RDL-1', q: 0, answer: 1 }] } });
+r = await call('GET', '/items?section=R&task=rdl&level=auto', { token: S5 });
+ok(r.data.items.length === 1 && r.data.items[0].id === 'T-RDL-C', 'when the own level has nothing new left, the nearest level supplies it', JSON.stringify(r.data.items.map(i => i.id)));
+r = await call('GET', '/items?section=R&task=rdl&level=B', { token: S5 });
+ok(r.data.items.length === 0, 'an explicit level stays strict');
+r = await call('GET', `/me/stats?section=R&user=${sid}`, { token: T });
+ok(r.data.levels && ['A', 'B', 'C'].includes(r.data.levels.rdl), 'stats carry the current level per task for the teacher');
+
 // --- CORS
 const pre = await fetch(BASE + '/me', { method: 'OPTIONS', headers: { Origin: 'https://elijahflanagan48-hue.github.io' } });
 ok(pre.status === 204 && pre.headers.get('Access-Control-Allow-Origin') === 'https://elijahflanagan48-hue.github.io', 'CORS preflight for Pages origin');

@@ -35,7 +35,6 @@ async function start(task, mode) {
   try {
     const done = await src.mySpeakingItems().catch(() => []);
     S.item = await load(done);
-    if (!S.item && done.length) S.item = await load([]);
   } catch (e) { toast(e.message); }
   S.phase = S.item ? 'mic' : 'empty';
   render();
@@ -60,7 +59,7 @@ function render() {
   if (!S) return;
   const it = S.item, ph = S.phase;
   if (ph === 'loading') return show(`<div class="skel"></div>`);
-  if (ph === 'empty') return show(`<div class="spk-card"><h2>Заданий пока нет</h2><p>Банк Speaking пополняется.</p><div class="spk-btns"><a class="btn pri" href="#/train/S">К тренировке</a></div></div>`);
+  if (ph === 'empty') return show(`<div class="spk-card"><h2>Заданий пока нет</h2><p>Вы прошли все задания этого типа, новые появятся при пополнении банка.</p><div class="spk-btns"><a class="btn pri" href="#/train/S">К тренировке</a></div></div>`);
   if (ph === 'mic') return show(`<div class="spk-card"><div class="spk-ic">${ic('mic', 30)}</div><h2>Проверка микрофона</h2>
     <p>${rec.supported() ? 'Нажмите «Включить» и скажите вслух несколько слов — полоска ниже должна двигаться. Лучше в наушниках, в тишине.' : 'Этот браузер не умеет записывать звук. Откройте приложение в Chrome, Edge, Safari или Firefox.'}</p>
     <div class="lvl" aria-hidden="true"><i id="lvl"></i></div><div class="spk-hint" id="lvlmsg">${S.micOk ? 'Микрофон включён' : ''}</div>

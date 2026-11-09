@@ -475,7 +475,9 @@ on('GET', '/me/stats', async ({ env, user, url }) => {
     JOIN items i ON i.id = r.item_id WHERE a.user_id = ? AND i.section = ? GROUP BY i.task`, uid, section);
   const bank = await all(env, `SELECT task, COUNT(*) AS n FROM items WHERE section = ? AND status = 'active' GROUP BY task`, section);
   const mk = rows => Object.fromEntries(rows.map(r => [r.task ?? r.qtype, { n: r.n, got: r.got || 0, acc: r.n ? Math.round((r.got || 0) / r.n * 100) : null }]));
-  return { tasks: mk(byTask), types: mk(byType), done: Object.fromEntries(items.map(r => [r.task, r.done])), bank: Object.fromEntries(bank.map(r => [r.task, r.n])) };
+  const levels = {};
+  for (const t of TASKS[section] || []) levels[t] = await autoLevel(env, uid, section, t);
+  return { tasks: mk(byTask), types: mk(byType), levels, done: Object.fromEntries(items.map(r => [r.task, r.done])), bank: Object.fromEntries(bank.map(r => [r.task, r.n])) };
 });
 
 /** mistakes to repeat: (item, question) pairs whose latest answer was wrong */
@@ -496,6 +498,11 @@ on('GET', '/me/mistakes', async ({ env, user, url }) => {
 /* ------------------------------------------------------------------ items */
 const publicItem = it => ({ id: it.id, section: it.section, task: it.task, level: it.level, body: parse(it.body), qtypes: parse(it.qtypes) });
 
+/** items the student has already met (answered in any attempt, or submitted for teacher review) — never served again */
+const SEEN = `SELECT r.item_id FROM responses r JOIN attempts a ON a.id = r.attempt_id WHERE a.user_id = ? AND r.item_id != ''
+  UNION SELECT item_id FROM submissions WHERE user_id = ? AND item_id IS NOT NULL AND item_id != ''`;
+const LEVEL_ORDER = { A: ['A', 'B', 'C'], B: ['B', 'A', 'C'], C: ['C', 'B', 'A'] };
+
 on('GET', '/items', async ({ env, user, url }) => {
   requireUser(user);
   const section = url.searchParams.get('section'), task = url.searchParams.get('task'), level = url.searchParams.get('level');
@@ -504,14 +511,21 @@ on('GET', '/items', async ({ env, user, url }) => {
   const where = [url.searchParams.get('bank') === 'test' && teacher ? `status IN ('active','pretest')` : `status = 'active'`], b = [];
   if (section) { where.push('section = ?'); b.push(section); }
   if (task) { where.push('task = ?'); b.push(task); }
-  let lv = level;
-  if (lv === 'auto') lv = await autoLevel(env, user.id, section, task);
-  if (lv) { where.push('level = ?'); b.push(lv); }
+  if (!teacher) { where.push(`id NOT IN (${SEEN})`); b.push(user.id, user.id); } // every task is new to the student, always
   const qtype = url.searchParams.get('qtype');
   if (qtype) { where.push('qtypes LIKE ?'); b.push('%"' + qtype.replace(/[%_"]/g, '') + '"%'); }
   const exclude = (url.searchParams.get('exclude') || '').split(',').filter(Boolean).slice(0, 50);
   if (exclude.length) { where.push(`id NOT IN (${exclude.map(() => '?').join(',')})`); b.push(...exclude); }
-  const rows = await all(env, `SELECT * FROM items WHERE ${where.join(' AND ')} ORDER BY RANDOM() LIMIT ${limit}`, ...b);
+  let lv = level, order = [level || null];
+  if (lv === 'auto') { lv = await autoLevel(env, user.id, section, task); order = LEVEL_ORDER[lv]; } // own level first; when its fresh tasks run out, the nearest level
+  const rows = [];
+  for (const l of order) {
+    if (rows.length >= limit) break;
+    const w = [...where], bb = [...b];
+    if (l) { w.push('level = ?'); bb.push(l); }
+    if (rows.length) { w.push(`id NOT IN (${rows.map(() => '?').join(',')})`); bb.push(...rows.map(r => r.id)); }
+    rows.push(...await all(env, `SELECT * FROM items WHERE ${w.join(' AND ')} ORDER BY RANDOM() LIMIT ${limit - rows.length}`, ...bb));
+  }
   return { items: rows.map(publicItem), level: lv || null };
 });
 

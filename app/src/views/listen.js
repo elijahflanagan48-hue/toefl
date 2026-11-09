@@ -130,7 +130,7 @@ function render() {
     const m = P.task === 'mistakes' || P.mode === 'mistakes';
     root.innerHTML = `<div class="exam"><div class="xbar"><div class="xb-l"><a class="xexit" href="#/train/L">${ic('x', 18)}</a><span class="xsec">${esc(P.title)}</span></div></div>
       <div class="xres-in"><div class="xres-hero"><div class="k">${m ? 'Ошибок для повтора нет' : 'Заданий пока нет'}</div>
-      <p class="mut" style="margin-top:8px">${m ? 'Все ошибки исправлены. Новые появятся после тренировок.' : 'В тренировке нет заданий этого типа, которых вы ещё не видели. Банк пополняется.'}</p></div>
+      <p class="mut" style="margin-top:8px">${m ? 'Все ошибки исправлены. Новые появятся после тренировок.' : 'Вы прошли все задания этого типа. Новые появятся при пополнении банка.'}</p></div>
       <div class="xr-ft"><a class="btn pri" href="#/train/L">К тренировке</a></div></div></div>`;
     return;
   }

@@ -73,7 +73,7 @@ function group(g) {
   const got = rs.filter(r => r.correct).length;
   const body = it.task === 'ctw' ? ctwHtml(it, rs) : it.task === 'bas' ? basHtml(it, rs) : mcqHtml(it, rs);
   const title = it.body?.title || it.body?.topic || it.body?.genre || '';
-  return `<article class="card pad lg"><header class="lgh"><div><b>${esc(src.TASK_NAMES[it.task] || NAMES[it.task] || it.task)}</b> <span class="mut">· ${esc(it.id)}${title ? ' · ' + esc(title) : ''}</span></div>
+  return `<article class="card pad lg"><header class="lgh"><div><b>${esc(src.TASK_NAMES[it.task] || NAMES[it.task] || it.task)}</b> <span class="chip lvl">уровень ${esc(it.level || '—')}</span> <span class="mut">· ${esc(it.id)}${title ? ' · ' + esc(title) : ''}</span></div>
     <div class="mut sm">${when(g.at)} · ${KIND[a.kind] || a.kind}${a.mode ? ', ' + (MODE[a.mode] || a.mode) : ''}${a.assignment_id ? ' · по заданию' : ''}</div>
     <span class="chip ${got === rs.length ? 'ok' : got === 0 ? 'bad' : 'warn'}">${got} из ${rs.length}</span></header>${sourceHtml(it)}${body}</article>`;
 }

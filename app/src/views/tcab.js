@@ -19,6 +19,8 @@ export async function studentCard(params) {
   const weak = sec => Object.entries(d.stats[sec]?.types || {}).filter(([, v]) => v.n >= 3).sort((a, b) => a[1].acc - b[1].acc).slice(0, 5);
   const weakR = weak('R'), weakW = weak('W');
   const wrows = (list, k) => list.map(([n, v]) => `<a class="qb c${k}" href="#/t/student/${st.id}/log/${k}/${encodeURIComponent(n)}" title="Показать ответы ученика"><span class="qn">${esc(n)}</span><div class="bar"><i style="width:${v.acc}%;background:${v.acc < 60 ? 'var(--sS)' : 'var(--ok)'}"></i></div><b>${v.acc}%</b>${ic('right', 16)}</a>`).join('');
+  const LV = [['R', 'ctw', 'Complete the Words'], ['R', 'rdl', 'Read in Daily Life'], ['R', 'rap', 'Read an Academic Passage'], ['W', 'bas', 'Build a Sentence'], ['L', 'lcr', 'Listen and Choose'], ['L', 'lco', 'Conversation'], ['L', 'lan', 'Announcement'], ['L', 'lat', 'Academic Talk']];
+  const lvlLine = LV.map(([sec, t, nm]) => { const lv = d.stats[sec]?.levels?.[t], n = d.stats[sec]?.tasks?.[t]?.n; return n ? `<span class="lvrow"><span>${nm}</span><b class="chip lvl">${lv}</b></span>` : ''; }).join('');
   const att = d.attempts.filter(a => a.finished_at).slice(0, 8);
   const subs = d.submissions.slice(0, 8);
   return {
@@ -31,6 +33,7 @@ export async function studentCard(params) {
         <div class="card pad weak">${weakR.length || weakW.length ? `${wrows(weakR, 'R')}${wrows(weakW, 'W')}` : '<p class="mut">Пока мало ответов: нужно хотя бы 3 вопроса каждого типа.</p>'}
           <div class="row-btns" style="margin-top:12px"><button class="btn sm" data-act="assign" data-sid="${st.id}">${ic('plus', 16)} Назначить тренажёр</button>
             </div></div>
+        ${lvlLine ? `<div class="lbl">Текущий уровень заданий</div><div class="card pad lvls">${lvlLine}</div>` : ''}
         <div class="lbl">Последние попытки</div>
         <a class="btn sm" href="#/t/student/${st.id}/log/all" style="margin-bottom:10px">Все выполненные задания ученика</a>
         ${att.length ? `<div class="card tblwrap"><table class="tbl"><thead><tr><th>Дата</th><th>Что</th><th>Баллы</th></tr></thead><tbody>${att.map(a => `<tr><td>${dateLabel(a.finished_at)}</td>

@@ -263,7 +263,7 @@ function render() {
   if (!P.screens.length) {
     root.innerHTML = `<div class="exam"><div class="xbar"><div class="xb-l"><a class="xexit" href="#/train/${P.section}">${ic('x', 18)}</a><span class="xsec">${esc(P.title)}</span></div></div>
       <div class="xres-in"><div class="xres-hero"><div class="k">${P.mode === 'mistakes' || P.task === 'mistakes' ? 'Ошибок для повтора нет' : 'Задания закончились'}</div>
-      <p class="mut" style="margin-top:8px">${P.mode === 'mistakes' || P.task === 'mistakes' ? 'Все ошибки исправлены. Новые появятся после тренировок.' : 'Вы прошли все задания этого типа на своём уровне. Банк будет пополняться.'}</p></div>
+      <p class="mut" style="margin-top:8px">${P.mode === 'mistakes' || P.task === 'mistakes' ? 'Все ошибки исправлены. Новые появятся после тренировок.' : 'Вы прошли все задания этого типа. Новые появятся при пополнении банка.'}</p></div>
       <div class="xr-ft"><a class="btn pri" href="#/train/${P.section}">К тренировке</a></div></div></div>`;
     return;
   }
