@@ -79,9 +79,9 @@
     "stem": "What is the announcement mainly about?",
     "opts": [
      "A sale at the campus bookstore",
-     "New store hours",
-     "A new university logo",
-     "A pen design contest"
+     "New opening hours for the store",
+     "A change to the university logo",
+     "A design contest for school pens"
     ]
    },
    {
@@ -294,9 +294,9 @@
    {
     "stem": "What is being announced?",
     "opts": [
-     "A new dining hall building",
-     "A cooking class",
-     "A price increase",
+     "A new building for the dining hall",
+     "A cooking class for new students",
+     "A price increase for all meals",
      "Changes to the dining hall menu"
     ]
    },
@@ -348,10 +348,10 @@
    {
     "stem": "What is the announcement mainly about?",
     "opts": [
-     "A new bus route",
-     "A holiday bus schedule",
-     "A bus driver job",
-     "Higher bus prices"
+     "A new route for campus buses",
+     "A holiday schedule for buses",
+     "A job opening for bus drivers",
+     "Higher prices for bus tickets"
     ]
    },
    {
@@ -403,9 +403,9 @@
     "stem": "What is the purpose of the announcement?",
     "opts": [
      "To ask students to give things to charity",
-     "To announce a new university website",
-     "To tell students where to look for lost items",
-     "To report a robbery"
+     "To announce a new website for the university",
+     "To tell students where to find lost items",
+     "To warn students about a recent robbery"
     ]
    },
    {
@@ -456,10 +456,10 @@
    {
     "stem": "What is the announcement mainly about?",
     "opts": [
-     "A new printer",
+     "A new printer for the library",
      "New hours for the computer lab",
-     "Free printing for students",
-     "A computer class"
+     "Free printing for every student",
+     "A computer class for new users"
     ]
    },
    {
@@ -511,9 +511,9 @@
     "stem": "What is being announced?",
     "opts": [
      "A shuttle service to the airport",
-     "A change in the exam schedule",
-     "A campus tour",
-     "A new airport"
+     "A change to the exam schedule",
+     "A campus tour for new students",
+     "A new airport near the campus"
     ]
    },
    {
@@ -573,10 +573,10 @@
    {
     "stem": "What do students need to do to join the tour?",
     "opts": [
-     "Sign up online",
-     "Come to the main gate",
-     "Pay a small fee",
-     "Bring a student ID"
+     "Sign up online before Saturday",
+     "Meet at the main gate at ten",
+     "Pay a small fee at the gate",
+     "Bring a student ID to the tour"
     ]
    }
   ],
@@ -628,9 +628,9 @@
     "stem": "What can students do on Monday?",
     "opts": [
      "Swim at the community center",
-     "Use the pool at six",
-     "Ask for a refund",
-     "Take a swimming class"
+     "Use the university pool at six",
+     "Get a refund for the pool fee",
+     "Take a swimming class on campus"
     ]
    }
   ],
@@ -681,10 +681,10 @@
    {
     "stem": "What will happen if it rains?",
     "opts": [
-     "The concert will be canceled",
-     "The pizza will be free",
+     "The concert will be canceled that day",
+     "The pizza will be free only if it rains",
      "The concert will be in the student center",
-     "The concert will start later"
+     "The concert will start an hour later"
     ]
    }
   ],
@@ -834,8 +834,8 @@
    {
     "stem": "What is the main purpose of the announcement?",
     "opts": [
-     "To announce new exam dates",
-     "To inform students about longer library hours",
+     "To announce the dates of the final exams",
+     "To tell students about longer library hours",
      "To explain how to reserve books online",
      "To remind students to return library books"
     ]
@@ -1059,10 +1059,10 @@
    {
     "stem": "What does the speaker recommend residents do?",
     "opts": [
-     "Store some water beforehand",
-     "Move to another building",
-     "Take showers before nine",
-     "Call the repair crew"
+     "Store some drinking water in advance",
+     "Move to another building until two",
+     "Take their showers before nine a.m.",
+     "Call the repair crew for updates"
     ]
    }
   ],
@@ -1105,8 +1105,8 @@
     "stem": "What is the purpose of the announcement?",
     "opts": [
      "To announce the results of a recent game",
-     "To tell students how to join intramural soccer",
-     "To ask for volunteers to coach teams",
+     "To tell students how to join soccer teams",
+     "To ask for volunteers to coach the teams",
      "To explain a change in the game schedule"
     ]
    },
@@ -1114,8 +1114,8 @@
     "stem": "What can students without a team do?",
     "opts": [
      "Sign up on the department website only",
-     "Wait for the next season",
-     "Play on Wednesday evenings",
+     "Wait until next season to join a team",
+     "Play in a game on Wednesday evenings",
      "Attend a meeting at the recreation center"
     ]
    }
@@ -1167,10 +1167,10 @@
    {
     "stem": "What can students do this week if they want help with their résumés?",
     "opts": [
-     "Attend a workshop in the gymnasium",
-     "Email the companies directly",
+     "Attend a résumé workshop at the fair",
+     "Email their résumés to the companies",
      "Make an appointment at the career center",
-     "Order copies at the bookstore"
+     "Order printed copies at the bookstore"
     ]
    }
   ],
@@ -1221,10 +1221,10 @@
    {
     "stem": "What can be inferred about Lot F?",
     "opts": [
-     "It is farther from the main campus than Lot C",
-     "It is closed for repairs",
-     "It costs extra to use",
-     "It is only for faculty"
+     "It is farther from campus than Lot C",
+     "It is closed for repaving this week",
+     "It costs extra for commuters to use",
+     "It is reserved for faculty and staff"
     ]
    }
   ],
@@ -1275,7 +1275,7 @@
    {
     "stem": "How can students earn extra credit?",
     "opts": [
-     "By arriving early",
+     "By arriving early to a lecture",
      "By attending the first lecture",
      "By writing a response to a lecture",
      "By volunteering at the department"
@@ -1320,10 +1320,10 @@
    {
     "stem": "Why will the computer lab be closed?",
     "opts": [
-     "It will receive updates and new computers",
-     "The software is broken",
-     "The room will be painted",
-     "The library needs the equipment"
+     "It will get new software and computers",
+     "The software is broken and must be fixed",
+     "The room will be painted and cleaned",
+     "The library needs the lab's equipment"
     ]
    },
    {
@@ -1374,10 +1374,10 @@
    {
     "stem": "What does the speaker say students must do before they register?",
     "opts": [
-     "Pay their tuition",
+     "Pay their tuition for the semester",
      "Meet with their academic advisor",
-     "Wait until Wednesday",
-     "Choose a new major"
+     "Wait until Wednesday to register",
+     "Choose a major for next semester"
     ]
    },
    {
@@ -1428,19 +1428,19 @@
    {
     "stem": "What is the purpose of the announcement?",
     "opts": [
-     "To announce a health class",
+     "To advertise a health class for students",
      "To encourage students to donate blood",
-     "To sell T-shirts",
-     "To report a medical problem"
+     "To sell T-shirts for the Red Cross",
+     "To report a medical problem on campus"
     ]
    },
    {
     "stem": "What does the speaker recommend donors do before donating?",
     "opts": [
-     "Schedule a health check",
-     "Eat a good meal and drink water",
-     "Visit the website",
-     "Take a day off"
+     "Schedule a health check beforehand",
+     "Eat a good meal and drink more water",
+     "Visit the website to read the rules",
+     "Take the whole day off from classes"
     ]
    }
   ],
@@ -1491,9 +1491,9 @@
    {
     "stem": "What does the speaker say about the photographs?",
     "opts": [
-     "They must show the library",
-     "They must be printed in color",
-     "They must be sent by mail",
+     "They must show the campus library",
+     "They must be printed in full color",
+     "They must be mailed to the newspaper",
      "They must be taken this semester"
     ]
    }
@@ -1537,18 +1537,18 @@
     "stem": "What is the purpose of the workshop?",
     "opts": [
      "To help students improve their résumés",
-     "To introduce new employers",
-     "To teach interview skills",
-     "To explain how to print documents"
+     "To introduce students to new employers",
+     "To teach students interview skills",
+     "To show students how to print documents"
     ]
    },
    {
     "stem": "What should students do by Wednesday?",
     "opts": [
      "Register at the front desk",
-     "Print their résumé",
-     "Visit the adviser",
-     "Choose a career"
+     "Print a copy of their résumé",
+     "Visit the adviser in her office",
+     "Choose a career to focus on"
     ]
    }
   ],
@@ -1590,19 +1590,19 @@
    {
     "stem": "What should residents do when the alarm sounds?",
     "opts": [
-     "Stay in their rooms",
-     "Use the elevators",
-     "Call the staff",
-     "Go to the parking lot"
+     "Stay in their rooms quietly",
+     "Use the elevators to leave",
+     "Call the staff for help",
+     "Gather in the parking lot"
     ]
    },
    {
     "stem": "What can be inferred about the drill?",
     "opts": [
-     "It is a practice, not a real emergency",
-     "It will last all night",
-     "It will happen every day",
-     "It is only for staff members"
+     "It is only practice, not an emergency",
+     "It will last for several hours",
+     "It will happen every evening at nine",
+     "It is only for staff and not residents"
     ]
    }
   ],
@@ -1644,19 +1644,19 @@
    {
     "stem": "Who must attend photo day?",
     "opts": [
-     "All students",
-     "Students with hats",
+     "All students who live on campus",
+     "Students who wear hats or sunglasses",
      "Students who do not have an ID card",
-     "Only new employees"
+     "Only new employees on campus"
     ]
    },
    {
     "stem": "What can students do if they cannot attend?",
     "opts": [
-     "Send a photo by email",
-     "Skip the ID card",
-     "Come on a weekend",
-     "Visit the card office later"
+     "Email a photo to the card office",
+     "Skip the card until next year",
+     "Come to the office on a weekend",
+     "Visit the card office on a weekday"
     ]
    }
   ],
@@ -1699,9 +1699,9 @@
     "stem": "What is the announcement mainly about?",
     "opts": [
      "An information session on studying abroad",
-     "A trip to five universities",
-     "A new housing program",
-     "A class on foreign languages"
+     "A trip to five partner universities",
+     "A new housing program for students",
+     "A class on foreign languages and culture"
     ]
    },
    {
@@ -1761,10 +1761,10 @@
    {
     "stem": "What can be inferred about students who already have a north-lot permit?",
     "opts": [
-     "They must pay for a new permit",
-     "They can park in the east lot without new paperwork",
-     "They will receive a free bus pass",
-     "They must use the shuttle every day"
+     "They must pay again for a new east-lot permit",
+     "They can use the east lot without new paperwork",
+     "They will receive a free monthly bus pass",
+     "They must ride the shuttle every day to class"
     ]
    }
   ],
@@ -1806,18 +1806,18 @@
    {
     "stem": "What is the announcement mainly about?",
     "opts": [
-     "A change in the registration deadline",
-     "The role of academic advisors",
-     "New classes available next semester",
-     "A temporary shutdown of the online registration system"
+     "A change to the registration deadline for spring",
+     "The role of academic advisors in registration",
+     "New classes that are available next semester",
+     "A temporary shutdown of the registration portal"
     ]
    },
    {
     "stem": "What does the speaker suggest students should do?",
     "opts": [
      "Choose their classes before the portal closes",
-     "Visit the advisors on Sunday",
-     "Wait until the upgrade is finished",
+     "Visit the advisors in their offices on Sunday",
+     "Wait for the upgrade to finish before choosing",
      "Change their schedules after the upgrade"
     ]
    }
@@ -1869,9 +1869,9 @@
    {
     "stem": "What does the speaker suggest students should do?",
     "opts": [
-     "Wait for another announcement",
-     "Apply for a different scholarship",
-     "Ask their professors to apply",
+     "Wait for another announcement about the rules",
+     "Apply for a different scholarship this year",
+     "Ask their professors to submit applications",
      "Prepare their materials earlier than before"
     ]
    }
@@ -1923,10 +1923,10 @@
    {
     "stem": "What does the speaker imply about the video format?",
     "opts": [
-     "It was requested by the winners",
-     "It is different from the usual way of announcing winners",
-     "It will cost more than a live ceremony",
-     "It will be used every year"
+     "It was requested by the department winners",
+     "It differs from how winners are normally announced",
+     "It will cost much more than a live ceremony",
+     "It will be used at the awards every year"
     ]
    }
   ],
@@ -1969,9 +1969,9 @@
     "stem": "Why is the lecture being rescheduled?",
     "opts": [
      "The speaker's flight was canceled",
-     "The auditorium is unavailable",
-     "Too few tickets were sold",
-     "Dr. Hayes became ill"
+     "The auditorium is not available tonight",
+     "Too few tickets were sold in advance",
+     "Dr. Hayes became ill this afternoon"
     ]
    },
    {
@@ -2022,9 +2022,9 @@
    {
     "stem": "What is new about the gallery?",
     "opts": [
-     "It offers lessons to students",
-     "It is open on weekends only",
-     "It charges visitors a fee",
+     "It offers art lessons to all students",
+     "It is open only on weekends and holidays",
+     "It charges all visitors an entrance fee",
      "It includes a studio where artists work"
     ]
    },
@@ -2032,7 +2032,7 @@
     "stem": "What is the speaker's attitude toward the reopening?",
     "opts": [
      "Concerned",
-     "Neutral",
+     "Indifferent",
      "Disappointed",
      "Enthusiastic"
     ]
@@ -2076,19 +2076,19 @@
    {
     "stem": "Why has the deadline been changed?",
     "opts": [
-     "To reduce the late fee",
-     "To increase the number of graduates",
-     "To match the graduate schools' deadlines",
-     "To give the registrar more time to check requirements"
+     "To lower the late fee for graduating students",
+     "To increase the number of graduates this spring",
+     "To match the deadlines set by graduate schools",
+     "To give the registrar time to verify requirements"
     ]
    },
    {
     "stem": "What does the speaker imply about students who applied before the announcement?",
     "opts": [
-     "They must pay a late fee",
-     "They must reapply",
+     "They must pay the fifty-dollar late fee",
+     "They must reapply under the new deadline",
      "Their applications are still valid",
-     "They will graduate early"
+     "They will be allowed to graduate early"
     ]
    }
   ],
@@ -2130,19 +2130,19 @@
    {
     "stem": "What is the main purpose of the announcement?",
     "opts": [
-     "To announce a new computer lab",
-     "To warn students about a temporary network disruption",
-     "To ask students to test the network",
-     "To explain how to use the library catalog"
+     "To announce a new computer lab in the library",
+     "To warn students about a network disruption",
+     "To ask students to help test the new network",
+     "To explain how to search the library catalog"
     ]
    },
    {
     "stem": "What does the speaker suggest students do if they need the internet urgently?",
     "opts": [
-     "Wait until Sunday",
-     "Use wired connections in the computer labs",
-     "Visit the library",
-     "Use their phones"
+     "Wait until Sunday to finish their work",
+     "Use the wired connections in the labs",
+     "Visit the library and use its catalog",
+     "Use their phones as a personal hotspot"
     ]
    }
   ],
@@ -2195,8 +2195,8 @@
     "opts": [
      "To explain how violations are punished",
      "To offer students help avoiding violations",
-     "To announce a new course",
-     "To ask instructors to attend"
+     "To announce a new course about writing",
+     "To ask instructors to attend the sessions"
     ]
    }
   ],
@@ -2238,19 +2238,19 @@
    {
     "stem": "What will the university do for inconvenienced members?",
     "opts": [
-     "Reduce this semester's fees",
-     "Provide temporary classes",
-     "Close the center for a month",
+     "Reduce their fees for this semester",
+     "Provide classes in a temporary gym",
+     "Close the whole center for a month",
      "Give them a free month of membership"
     ]
    },
    {
     "stem": "What can be inferred about the renovations?",
     "opts": [
-     "The whole center will close",
-     "Only the pool will be available",
-     "Some facilities will remain available during construction",
-     "The project will finish in January"
+     "The whole center will close during the work",
+     "Only the pool will stay open during the work",
+     "Some facilities will stay open during the work",
+     "The project will be completed by early January"
     ]
    }
   ],
@@ -2292,18 +2292,18 @@
    {
     "stem": "What is the main purpose of the announcement?",
     "opts": [
-     "To inform students about changes to the scholarship application",
-     "To announce a new scholarship",
-     "To extend the scholarship deadline",
-     "To explain how to write a letter"
+     "To inform students about changes to the application",
+     "To announce a new scholarship for graduate students",
+     "To extend the deadline for the scholarship application",
+     "To explain how to write a recommendation letter"
     ]
    },
    {
     "stem": "What does the speaker imply about students who have already started their applications?",
     "opts": [
-     "They must start over",
-     "They will receive extra time",
-     "They no longer need an essay",
+     "They must start over with a new essay",
+     "They will be given extra time to apply",
+     "They no longer need to write an essay",
      "They may use their earlier materials"
     ]
    }
@@ -2346,19 +2346,19 @@
    {
     "stem": "What is new about the tuition payment system?",
     "opts": [
-     "Tuition will be lower",
-     "Payments will be due earlier",
-     "Students can pay in installments",
-     "Students must pay in cash"
+     "Tuition will be lower for all students",
+     "Payments will be due earlier in the term",
+     "Students can pay in three installments",
+     "Students must pay in cash at the office"
     ]
    },
    {
     "stem": "What does the speaker imply about students who pay in full?",
     "opts": [
      "They will not be charged an additional fee",
-     "They will receive a discount",
-     "They must pay early",
-     "They can no longer choose their plan"
+     "They will receive a discount for paying early",
+     "They must pay a month before classes start",
+     "They can no longer choose their payment plan"
     ]
    }
   ],
@@ -2400,19 +2400,19 @@
    {
     "stem": "Why is the university conducting the test?",
     "opts": [
-     "To respond to an emergency",
-     "To train new security staff",
+     "To respond to a real emergency on campus",
+     "To train new members of the security staff",
      "To make sure alerts are delivered quickly",
-     "To replace the old siren"
+     "To replace the old siren with a new one"
     ]
    },
    {
     "stem": "What should students do if they do not receive a message?",
     "opts": [
      "Update their contact information online",
-     "Call the Office of Campus Safety",
-     "Visit the office in person",
-     "Wait for another test"
+     "Call the Office of Campus Safety on Friday",
+     "Visit the safety office in person on Friday",
+     "Wait for the next test of the system"
     ]
    }
   ],
@@ -2455,9 +2455,9 @@
     "stem": "What change does the announcement describe?",
     "opts": [
      "An earlier deadline for pass-fail requests",
-     "A new pass-fail course",
-     "A longer semester",
-     "A new registrar"
+     "A new course that is graded pass-fail",
+     "A semester that is three weeks longer",
+     "A new registrar for pass-fail courses"
     ]
    },
    {
@@ -2508,10 +2508,10 @@
    {
     "stem": "Why are some classes being moved?",
     "opts": [
-     "The Humanities Building is larger",
-     "Laboratory equipment is being replaced",
-     "Construction is taking place in the science building",
-     "Some lectures were canceled"
+     "The Humanities Building has more classroom space",
+     "Laboratory equipment is being replaced in the labs",
+     "Construction is happening in the science building",
+     "Some lectures were canceled for lack of students"
     ]
    },
    {
@@ -2617,9 +2617,9 @@
     "stem": "What is the main purpose of the announcement?",
     "opts": [
      "To tell students about canceled morning classes",
-     "To change the semester schedule",
-     "To close the university for a week",
-     "To announce an emergency exam"
+     "To change the schedule for the whole semester",
+     "To close the university for the whole week",
+     "To announce an emergency exam for tomorrow"
     ]
    },
    {
@@ -2840,9 +2840,9 @@
     "stem": "What will the man do before buying another book?",
     "opts": [
      "Check the edition number online",
-     "Ask his professor",
-     "Write his name in the book",
-     "Find the receipt"
+     "Ask his professor about the edition",
+     "Write his name in the book first",
+     "Look for the receipt at home"
     ]
    }
   ],
@@ -2900,10 +2900,10 @@
    {
     "stem": "What does the woman want to find?",
     "opts": [
-     "The fountain",
-     "The student center",
+     "The fountain on campus",
+     "The student services office",
      "The registrar's office",
-     "A classroom"
+     "A classroom for her class"
     ]
    },
    {
@@ -3057,10 +3057,10 @@
    {
     "stem": "How much does the pass cost for students?",
     "opts": [
-     "Forty dollars a month",
-     "Twenty dollars a month",
+     "Forty dollars every month",
+     "Thirty-five dollars a month",
      "Twenty-five dollars a month",
-     "Fifty dollars a month"
+     "Fifty-five dollars a month"
     ]
    }
   ],
@@ -3270,10 +3270,10 @@
    {
     "stem": "Why does the woman talk to the man?",
     "opts": [
-     "She wants to buy a chess set",
-     "She wants to teach chess",
+     "She wants to buy a chess set today",
+     "She wants to teach chess to beginners",
      "She is interested in a chess club",
-     "She lost her poster"
+     "She lost her poster for the club"
     ]
    },
    {
@@ -3346,9 +3346,9 @@
     "stem": "How long will it take to get a new card?",
     "opts": [
      "About five minutes",
-     "One day",
-     "About an hour",
-     "Until next week"
+     "About one full day",
+     "About one hour or more",
+     "Until early next week"
     ]
    }
   ],
@@ -3406,10 +3406,10 @@
    {
     "stem": "Why are the students meeting on Friday?",
     "opts": [
-     "To study for an exam",
+     "To study for the final exam",
      "To celebrate a birthday",
-     "To watch a game",
-     "To visit the park"
+     "To watch a soccer game",
+     "To have a picnic in the park"
     ]
    },
    {
@@ -3686,19 +3686,19 @@
    {
     "stem": "Why does the man go to the office?",
     "opts": [
-     "To report a lost wallet",
+     "To report that his wallet was lost",
      "To pick up a replacement student ID",
      "To ask about dining hall prices",
-     "To apply for a digital license"
+     "To apply for a digital driver's license"
     ]
    },
    {
     "stem": "According to the woman, what will happen tomorrow?",
     "opts": [
-     "The office will close early",
-     "The man's phone will stop working",
-     "The old ID will no longer work at the dining hall",
-     "A new photo will be required"
+     "The office will close early for a staff meeting",
+     "The man's phone will stop working on campus",
+     "The old ID will stop working at the dining hall",
+     "A new photo will be required at the dining hall"
     ]
    }
   ],
@@ -3843,10 +3843,10 @@
    {
     "stem": "Why does the woman mention that the film is only ninety minutes?",
     "opts": [
-     "To explain why the club chose it",
+     "To explain why the club chose that film",
      "To suggest that the man has enough time",
-     "To warn him that it will end late",
-     "To compare it with a longer film"
+     "To warn him that the film will end late",
+     "To compare it with a longer documentary"
     ]
    }
   ],
@@ -3982,10 +3982,10 @@
    {
     "stem": "Why does the man visit the health center?",
     "opts": [
-     "To renew his student ID",
-     "To cancel an appointment",
+     "To renew his health center ID card",
+     "To cancel his flu shot appointment",
      "To find out how to get a flu shot",
-     "To ask for medicine for a cold"
+     "To ask for some medicine for a cold"
     ]
    },
    {
@@ -4057,18 +4057,18 @@
     "stem": "What are the speakers mainly discussing?",
     "opts": [
      "Where to find a cheaper hotel at the lake",
-     "Whether to rent a car for the trip",
+     "Whether to rent a car for spring break",
      "How to travel to a lake for spring break",
-     "How to get up early"
+     "How to get up early for the morning bus"
     ]
    },
    {
     "stem": "What will the woman probably do tonight?",
     "opts": [
-     "Ask her cousin about a ride",
-     "Buy a bus ticket",
-     "Book a parking space",
-     "Call the lake resort"
+     "Ask her cousin about a ride there",
+     "Buy a bus ticket for thirty dollars",
+     "Book a parking space at the lake",
+     "Call the lake resort about prices"
     ]
    }
   ],
@@ -4131,17 +4131,17 @@
     "stem": "What problem does the woman describe?",
     "opts": [
      "Her laptop loses its Wi-Fi connection",
-     "Her laptop will not turn on",
-     "The library has no Wi-Fi",
-     "She forgot her password"
+     "Her laptop will not turn on properly",
+     "The library does not have any Wi-Fi",
+     "She forgot her password for the network"
     ]
    },
    {
     "stem": "According to the man, why might the library connection be unreliable?",
     "opts": [
-     "The wireless driver is old",
-     "The building is too old",
-     "The dorm network interferes",
+     "The wireless driver is out of date",
+     "The library building has thick walls",
+     "The dorm network blocks the signal",
      "Many people are using the network"
     ]
    }
@@ -4213,10 +4213,10 @@
    {
     "stem": "What does the advisor say she will do?",
     "opts": [
-     "Move the man to another floor",
+     "Move the man to a quieter room upstairs",
      "Talk to the residents without naming the man",
-     "Change the rules about quiet hours",
-     "Call the man's professor"
+     "Change the quiet hours for the whole floor",
+     "Tell the man's professor about the noise"
     ]
    }
   ],
@@ -4279,9 +4279,9 @@
     "stem": "Why does the man talk to the woman?",
     "opts": [
      "To find out about joining the gym",
-     "To cancel his membership",
-     "To ask for a refund",
-     "To apply for a job at the gym"
+     "To cancel his membership at the gym",
+     "To ask for a refund of his day pass",
+     "To apply for a job at the campus gym"
     ]
    },
    {
@@ -4436,9 +4436,9 @@
     "stem": "What will the man probably do next?",
     "opts": [
      "Buy stamps at another window",
-     "Return to his hotel",
-     "Fill out a form",
-     "Wait for a letter"
+     "Go back to his hotel to rest",
+     "Fill out a form for the package",
+     "Wait for a letter from home"
     ]
    }
   ],
@@ -4509,9 +4509,9 @@
    {
     "stem": "How can the man pay for the permit?",
     "opts": [
-     "By mailing a check",
+     "By mailing a check to the cashier",
      "By adding it to his student account",
-     "By paying online only",
+     "By paying online with a credit card",
      "By getting a discount from the dean"
     ]
    }
@@ -4640,9 +4640,9 @@
    {
     "stem": "Why does the woman mention the tutoring center?",
     "opts": [
-     "To explain the drop deadline",
-     "To recommend a different course",
-     "To say tutors are expensive",
+     "To explain the deadline for dropping classes",
+     "To recommend an easier course to take instead",
+     "To warn him that tutoring will cost a lot",
      "To suggest an alternative to dropping the class"
     ]
    },
@@ -4724,9 +4724,9 @@
     "stem": "What does the man need from the woman?",
     "opts": [
      "Another form of identification",
-     "Fifteen dollars in cash",
-     "A signed form from the dorm",
-     "A photo of the lost ID"
+     "Fifteen dollars in cash right now",
+     "A signed form from the dorm staff",
+     "A photo of his lost student ID"
     ]
    }
   ],
@@ -4797,9 +4797,9 @@
    {
     "stem": "What does the woman ask the man to bring?",
     "opts": [
-     "A list of formulas",
-     "His lab notes",
-     "A textbook",
+     "A list of the main formulas",
+     "His lab notes from Wednesday",
+     "The textbook for the course",
      "Examples from his homework"
     ]
    }
@@ -4862,19 +4862,19 @@
    {
     "stem": "What is the woman's main concern?",
     "opts": [
-     "The experiments are too hard",
-     "Her lab partner does not prepare",
-     "The instructor is unfair",
-     "She is too busy with a job"
+     "The experiments are too hard for her",
+     "Her lab partner does not prepare enough",
+     "The instructor is unfair about grades",
+     "She is too busy with a part-time job"
     ]
    },
    {
     "stem": "What does the man suggest the woman do?",
     "opts": [
-     "Do the experiments alone",
+     "Do all of the experiments by herself",
      "Ask the instructor about changing partners",
-     "Quit the course",
-     "Tell her partner to find a job"
+     "Quit the course and try again next year",
+     "Tell her partner to quit his job at once"
     ]
    }
   ],
@@ -4945,10 +4945,10 @@
    {
     "stem": "What does the professor offer to do?",
     "opts": [
-     "Cancel the quiz",
-     "Give him extra credit",
-     "Record the lecture",
-     "Let him take the quiz early"
+     "Cancel the quiz for the whole team",
+     "Give him extra credit for the game",
+     "Record the lecture and send it to him",
+     "Let him take the quiz a day early"
     ]
    }
   ],
@@ -5010,10 +5010,10 @@
    {
     "stem": "Why do the speakers decide to go on Friday?",
     "opts": [
-     "Admission is free for students",
-     "The museum is less crowded",
-     "The bus runs more often",
-     "They have no class that day"
+     "Admission is free for all students",
+     "The museum is less crowded that day",
+     "The bus runs more often that day",
+     "They have no classes that afternoon"
     ]
    },
    {
@@ -5076,10 +5076,10 @@
    {
     "stem": "Why does the student visit the professor?",
     "opts": [
-     "To discuss her sister's wedding",
-     "To ask about a grade",
-     "To ask for more time on an essay",
-     "To choose a topic"
+     "To talk about her sister's wedding",
+     "To ask about the grade on her essay",
+     "To ask for more time on her essay",
+     "To choose a new topic for her essay"
     ]
    },
    {
@@ -5142,19 +5142,19 @@
    {
     "stem": "What does the man ask the woman to do?",
     "opts": [
-     "Turn off the lamp",
-     "Go to sleep",
-     "Take her exam later",
-     "Study somewhere else"
+     "Turn off the lamp on her desk",
+     "Go to sleep a little earlier",
+     "Take her exam on another day",
+     "Study somewhere else in the dorm"
     ]
    },
    {
     "stem": "What can be inferred about the woman?",
     "opts": [
-     "She is angry with her roommate",
-     "She has finished studying",
-     "She did not realize she was disturbing him",
-     "She prefers to work late at night"
+     "She is angry that he asked her to move",
+     "She has finished studying for the exam",
+     "She did not know she was bothering him",
+     "She always prefers to study very late"
     ]
    }
   ],
@@ -5208,19 +5208,19 @@
    {
     "stem": "Why does the woman want to change rooms?",
     "opts": [
-     "Her schedule is different from her roommate's",
-     "Her room is too small",
-     "Her dorm is too noisy",
-     "She wants a cheaper room"
+     "Her schedule differs from her roommate's",
+     "Her room is too small for her things",
+     "Her dorm is too noisy for studying",
+     "She wants a cheaper room this semester"
     ]
    },
    {
     "stem": "What does the man offer the woman?",
     "opts": [
-     "A discount on the room",
-     "A room in another city",
-     "A free single room",
-     "A place on a waiting list"
+     "A discount on the single room",
+     "A room in a building off campus",
+     "A single room at no extra cost",
+     "A place on the waiting list now"
     ]
    }
   ],
@@ -5275,9 +5275,9 @@
     "stem": "What is the woman's problem?",
     "opts": [
      "She cannot decide between two courses",
-     "She cannot afford her classes",
-     "She dislikes both subjects",
-     "She missed the registration"
+     "She cannot afford her elective classes",
+     "She dislikes both subjects very much",
+     "She missed the registration deadline"
     ]
    },
    {
@@ -5340,19 +5340,19 @@
    {
     "stem": "Why is the woman's account showing a problem?",
     "opts": [
-     "She lost a library book",
-     "She borrowed too many books",
+     "She lost the book she borrowed last week",
+     "She borrowed more books than the limit",
      "The system did not record her returned book",
-     "She returned the book late"
+     "She returned the book after the due date"
     ]
    },
    {
     "stem": "What will the librarian do?",
     "opts": [
-     "Charge a small fine",
-     "Ask her to come back tomorrow",
-     "Order a new copy of the book",
-     "Remove the fine and send an email"
+     "Charge her a small fine for the delay",
+     "Ask her to come back tomorrow morning",
+     "Order a new copy of the book online",
+     "Remove the fine and send her an email"
     ]
    }
   ],
@@ -5501,10 +5501,10 @@
    {
     "stem": "What does the man imply about the new arrangement?",
     "opts": [
-     "He thinks it is completely fair",
-     "He would prefer to hire a cleaner",
-     "He plans to ask the woman to do more",
-     "He will accept it, though it gives him more work"
+     "He thinks the plan is completely fair to him",
+     "He would rather hire a cleaner for the kitchen",
+     "He plans to ask the woman to do more later",
+     "He will accept it, though it means more work"
     ]
    }
   ],
@@ -5640,10 +5640,10 @@
    {
     "stem": "What are the speakers mainly discussing?",
     "opts": [
-     "Dividing sections of a report",
-     "Finding sources for an essay",
-     "Visiting cities for a project",
-     "Choosing a topic for a presentation"
+     "Dividing the sections of a group report",
+     "Finding enough sources for an essay",
+     "Visiting different cities for a project",
+     "Choosing a topic for a class presentation"
     ]
    },
    {
@@ -5715,16 +5715,16 @@
     "stem": "What does the professor imply about the woman's lab report?",
     "opts": [
      "Its results were not explained enough",
-     "Its data was unreliable",
-     "Its predictions were incorrect",
-     "It was submitted late"
+     "Its data was too weak to be trusted",
+     "Its predictions were mostly incorrect",
+     "It was submitted after the deadline"
     ]
    },
    {
     "stem": "Why does the professor say, \"They rarely do\"?",
     "opts": [
-     "To criticize the woman's data collection",
-     "To disagree that results are clear without explanation",
+     "To criticize how the woman collected data",
+     "To disagree that results explain themselves",
      "To suggest that the woman has few results",
      "To say that predictions are rarely correct"
     ]
@@ -5788,19 +5788,19 @@
    {
     "stem": "Why does the woman prefer the unpaid internship?",
     "opts": [
-     "It is closer to campus",
-     "It offers a travel stipend",
+     "It is located much closer to campus",
+     "It offers her a small travel stipend",
      "It could help her future applications",
-     "It lasts longer"
+     "It lasts longer than the paid internship"
     ]
    },
    {
     "stem": "What does the man suggest the woman do?",
     "opts": [
-     "Buy a car before she decides",
-     "Accept both internships",
+     "Buy a used car before she makes a decision",
+     "Accept both internships at the same time",
      "Ask the company for help with travel costs",
-     "Choose the better-paid offer"
+     "Choose the offer with the better pay"
     ]
    }
   ],
@@ -5862,10 +5862,10 @@
    {
     "stem": "What is the woman's main concern?",
     "opts": [
-     "The research is not accurate",
-     "The man's section is too long for the time limit",
-     "The professor dislikes appendices",
-     "The man has not finished his work"
+     "The man's research is not accurate enough",
+     "The man's section is too long for ten minutes",
+     "The professor dislikes appendices in a talk",
+     "The man has not finished the research on time"
     ]
    },
    {
@@ -5936,19 +5936,19 @@
    {
     "stem": "Why does the professor ask for the outline?",
     "opts": [
-     "To grade it separately",
+     "To grade it separately as an assignment",
      "To make sure the student is making progress",
-     "To decide whether the student was sick",
-     "To change the paper's topic"
+     "To decide whether the student was really sick",
+     "To change the topic of the research paper"
     ]
    },
    {
     "stem": "What does the professor imply in her last statement?",
     "opts": [
-     "She dislikes extensions",
-     "She expects a perfect paper",
+     "She dislikes giving any extensions",
+     "She expects a perfect paper this time",
      "She prefers quality work to quick work",
-     "She wants the paper tomorrow"
+     "She wants the finished paper tomorrow"
     ]
    }
   ],
@@ -6084,19 +6084,19 @@
    {
     "stem": "What does the woman suggest about moving off campus?",
     "opts": [
-     "It may be more expensive than the man expects",
-     "It is always cheaper than dorms",
+     "It may cost more than he expects to pay",
+     "It is always cheaper than living in dorms",
      "It is impossible for first-year students",
-     "It is better for studying"
+     "It is better for studying than the dorm"
     ]
    },
    {
     "stem": "What does the man mean when he says, \"I value independence more than convenience\"?",
     "opts": [
-     "He wants to live alone",
-     "He thinks the dorms are convenient",
-     "He has already signed a lease",
-     "He is willing to accept some inconvenience to live freely"
+     "He wants to live alone in his own apartment",
+     "He thinks that dorm life is convenient for him",
+     "He has already signed a lease for next year",
+     "He will accept some inconvenience to live freely"
     ]
    }
   ],
@@ -6158,19 +6158,19 @@
    {
     "stem": "Why hasn't the woman been assigned a job?",
     "opts": [
-     "All positions were filled",
+     "All of the positions were already filled",
      "Her application is missing a signature",
-     "She applied after the deadline",
-     "She is not eligible"
+     "She applied after the deadline passed",
+     "She is not eligible for this award"
     ]
    },
    {
     "stem": "What will the man probably do after receiving the signature?",
     "opts": [
-     "Reject her application",
-     "Cancel her award",
-     "Ask her to apply again",
-     "Process her application quickly"
+     "Reject her application and return it",
+     "Cancel her award for this semester",
+     "Ask her to apply again next semester",
+     "Process her application right away"
     ]
    }
   ],
@@ -6232,19 +6232,19 @@
    {
     "stem": "What problem does the woman describe?",
     "opts": [
-     "She cannot log in to the library",
+     "She cannot log in to the library database",
      "She cannot find reliable sources online",
-     "She does not know her topic",
-     "She has no time to write"
+     "She cannot choose a topic for her paper",
+     "She has no time left to write her paper"
     ]
    },
    {
     "stem": "Why does the librarian mention peer-reviewed articles?",
     "opts": [
-     "To suggest changing the topic",
-     "To show that databases are expensive",
+     "To suggest changing the topic of her paper",
+     "To show that databases are expensive to use",
      "To explain how to find trustworthy sources",
-     "To describe how to cite sources"
+     "To describe how to cite sources correctly"
     ]
    }
   ],
@@ -6307,9 +6307,9 @@
     "stem": "Why is the man concerned about adding a second major?",
     "opts": [
      "His scholarship may end before he finishes",
-     "Economics is too difficult",
-     "He may not be accepted",
-     "The courses are too expensive"
+     "Economics is too hard for most students",
+     "He may not be accepted into the program",
+     "The extra courses cost too much money"
     ]
    },
    {
@@ -6381,10 +6381,10 @@
    {
     "stem": "What does the professor imply about the original topic?",
     "opts": [
-     "It has already been studied thoroughly",
-     "It is not related to the course",
-     "It is too narrow to be interesting",
-     "It would be difficult to cover in a single project"
+     "It has already been studied very thoroughly",
+     "It is not related to the topic of the course",
+     "It is too narrow to be of interest to many",
+     "It would be too hard to cover in one project"
     ]
    }
   ],
@@ -6447,10 +6447,10 @@
    {
     "stem": "What will the woman probably do?",
     "opts": [
-     "Shorten the introduction but keep the chart",
-     "Remove the chart",
-     "Rewrite all of the slides",
-     "Ask the professor for advice"
+     "Shorten the introduction and keep the chart",
+     "Remove the chart from the introduction",
+     "Rewrite all of the slides before Friday",
+     "Ask the professor for advice on the slides"
     ]
    }
   ],
@@ -6514,9 +6514,9 @@
     "stem": "Why does the counselor suggest finding news about the company?",
     "opts": [
      "It makes a good impression on employers",
-     "It is required by the company",
-     "It will make the interview shorter",
-     "The website is often out of date"
+     "It is required by the marketing company",
+     "It will make the interview much shorter",
+     "The company website is often out of date"
     ]
    }
   ],
@@ -6570,10 +6570,10 @@
    {
     "stem": "What does the man report?",
     "opts": [
-     "A slide is missing",
+     "A slide is missing from the cabinet",
      "A microscope is not working properly",
-     "A room is locked",
-     "A technician is late"
+     "A room is locked and cannot be used",
+     "A technician is late for the repair"
     ]
    },
    {
@@ -6696,9 +6696,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the cafeteria opens at seven.",
-     "I'll fast for the whole week.",
-     "It's a very long way to campus.",
+     "Yes, the cafeteria opens at seven today.",
+     "I'll fast for the whole week, I think.",
+     "It's a very long way to the campus.",
      "I know. It feels like it just started."
     ]
    }
@@ -6924,10 +6924,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I moved last year, too.",
+     "I moved to a new city last year, too.",
      "Anytime. That's what friends are for.",
-     "You're welcome to move it.",
-     "Please help me later."
+     "You're welcome to move it, if you like.",
+     "Please help me with my work later."
     ]
    }
   ],
@@ -6962,10 +6962,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, it's a good charger.",
+     "Yes, it's a good charger, isn't it?",
      "That's okay. I have another one.",
-     "I forgot it, too, last week.",
-     "Please charge me less."
+     "I forgot mine, too, last week at home.",
+     "Please charge me a little less next time."
     ]
    }
   ],
@@ -7152,9 +7152,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "No, I don't vend anything.",
-     "The machine is very expensive.",
-     "Nearby is a good word.",
+     "No, I don't vend anything here, sorry.",
+     "The machine is very expensive to fix.",
+     "Nearby is a good word to learn.",
      "Yes, there's one on the second floor."
     ]
    }
@@ -7228,10 +7228,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I parked it.",
-     "The park is very big.",
+     "Yes, I parked it there this morning.",
+     "The park is very big and quite green.",
      "In the lot behind the library.",
-     "I walk to school."
+     "I walk to school every day, actually."
     ]
    }
   ],
@@ -7267,9 +7267,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Professor Lee is great. Her class is fun.",
-     "Yes, biology is a science.",
-     "I recommend the cafeteria.",
-     "The professor has a hat."
+     "Yes, biology is a science of living things.",
+     "I recommend the cafeteria on the first floor.",
+     "The professor has a very big hat."
     ]
    }
   ],
@@ -7304,10 +7304,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I have three.",
-     "It's almost three o'clock.",
-     "The time was fun.",
-     "I'm going home now."
+     "Yes, I have three of them at home.",
+     "It's almost three o'clock now.",
+     "The time we had there was fun.",
+     "I'm going home right now, actually."
     ]
    }
   ],
@@ -7343,9 +7343,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "My bus broke down on the way here.",
-     "I have a late class.",
-     "Because I like buses.",
-     "Yes, I am late."
+     "I have another late class today.",
+     "Because I really like riding buses.",
+     "Yes, I am late again, as usual."
     ]
    }
   ],
@@ -7380,10 +7380,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "My major is in the morning.",
-     "Yes, I'm a big fan.",
+     "My major is in the morning, I think.",
+     "Yes, I'm a big fan of that team.",
      "I'm studying computer science.",
-     "The main road is closed."
+     "The main road is closed until noon."
     ]
    }
   ],
@@ -7533,9 +7533,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Not bad. I think I passed.",
-     "It was in room twelve.",
-     "Yes, I have an exam.",
-     "I'll take it on Friday."
+     "It was in room twelve, upstairs.",
+     "Yes, I have an exam this week.",
+     "I'll take it next Friday morning."
     ]
    }
   ],
@@ -7570,9 +7570,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, it's a big box.",
-     "I helped him yesterday.",
-     "No, the box is open.",
+     "Yes, it's a really big box, isn't it?",
+     "I helped him with his bags yesterday.",
+     "No, the box is already open, see?",
      "Thanks, it's heavier than it looks."
     ]
    }
@@ -7647,9 +7647,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Down the hall, on your right.",
-     "Yes, the food is good.",
-     "I ate there yesterday.",
-     "It opens at seven."
+     "Yes, the food there is really good.",
+     "I ate there with my friend yesterday.",
+     "It opens at seven in the morning."
     ]
    }
   ],
@@ -7684,9 +7684,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "The door is brown.",
-     "Yes, I opened it.",
-     "It's an open store.",
+     "The door is brown and very old.",
+     "Yes, I opened it an hour ago.",
+     "It's an open store on the corner.",
      "Sure, hold on a second."
     ]
    }
@@ -7798,10 +7798,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "It's near eleven o'clock.",
+     "It's near eleven o'clock, I believe.",
      "There's one next to the post office.",
-     "Yes, I need some cash.",
-     "The ATM is very heavy."
+     "Yes, I need some cash for today.",
+     "The ATM is very heavy to carry."
     ]
    }
   ],
@@ -7874,9 +7874,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, a pencil is wood.",
-     "I pencil it in tomorrow.",
-     "No, I like the movie.",
+     "Yes, a pencil is made of wood.",
+     "I'll pencil it in for tomorrow.",
+     "No, I like the movie we saw.",
      "I have a pen. Is that okay?"
     ]
    }
@@ -7912,10 +7912,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, it's a big lab.",
+     "Yes, it's a big lab, I think.",
      "The third floor, at the end of the hall.",
-     "The floor is quite dirty.",
-     "I was there at three."
+     "The floor is quite dirty today.",
+     "I was there at three yesterday."
     ]
    }
   ],
@@ -7950,9 +7950,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I do on weekends.",
-     "The weekend is two days.",
-     "I will do it next week.",
+     "Yes, I do that on the weekends.",
+     "The weekend is only two days long.",
+     "I will do it sometime next week.",
      "I went hiking with my cousins."
     ]
    }
@@ -7989,9 +7989,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Just a banana. I was in a hurry.",
-     "Yes, breakfast is a meal.",
-     "I'll eat lunch at noon.",
-     "The banana was in the lunch."
+     "Yes, breakfast is the first meal.",
+     "I'll eat my lunch at noon today.",
+     "The banana was in the lunch box."
     ]
    }
   ],
@@ -8140,10 +8140,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I lunch at noon.",
-     "Yes, it's for me.",
+     "I always lunch at noon, you know.",
+     "Yes, it's for me, not for you.",
      "Chicken sandwiches, I think.",
-     "The lunch is on the table."
+     "The lunch is on the table there."
     ]
    }
   ],
@@ -8179,9 +8179,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "I'd like to, but I have to work.",
-     "Yes, the party is coming.",
-     "I came to work late.",
-     "The party is at the park."
+     "Yes, the party is coming to you.",
+     "I came to work very late today.",
+     "The party is at the park downtown."
     ]
    }
   ],
@@ -8216,10 +8216,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I took a trip.",
-     "The trip is on Monday.",
+     "Yes, I took a trip last year.",
+     "The trip is on Monday morning.",
      "Great. We saw a lot of mountains.",
-     "My ship was very big."
+     "My ship was very big and white."
     ]
    }
   ],
@@ -8330,9 +8330,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I baked a cake last week.",
-     "The bakery is very hot.",
-     "Yes, I'm around here.",
+     "I baked a cake for my friend last week.",
+     "The bakery is very hot in summer.",
+     "Yes, I'm around here most days.",
      "Yes, there's a good one on Pine Street."
     ]
    }
@@ -8368,9 +8368,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "No, I am Monday.",
-     "The sandwich is hungry.",
-     "Yes, I was at lunch.",
+     "No, I am Monday, thank you.",
+     "The sandwich is very hungry today.",
+     "Yes, I was at lunch with her.",
      "A little. Let's get a sandwich."
     ]
    }
@@ -8407,9 +8407,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Yes, I'm visiting my cousin.",
-     "I weekend plan the park.",
-     "No, it was on Saturday.",
-     "Yes, my cousin is tall."
+     "I weekend plan the park a lot.",
+     "No, it was on Saturday afternoon.",
+     "Yes, my cousin is very tall."
     ]
    }
   ],
@@ -8444,9 +8444,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "For fifty dollars.",
-     "It was very cold.",
-     "Yes, it is a jacket.",
+     "For fifty dollars, on sale.",
+     "It was very cold in the shop.",
+     "Yes, it is a nice brown jacket.",
      "At a small shop downtown."
     ]
    }
@@ -8558,10 +8558,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I read them.",
-     "They are very heavy books.",
+     "Yes, I read them all last week.",
+     "They are very heavy books, aren't they?",
      "Of course. Where do they go?",
-     "No, I carried yesterday."
+     "No, I carried them yesterday."
     ]
    }
   ],
@@ -8634,10 +8634,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I'm not sure which chemistry book to buy.",
+     "I'm not sure which chemistry book to buy now.",
      "Not yet. The online system was down yesterday.",
-     "Yes, I'll register after the lab.",
-     "The lab report is due next week."
+     "Yes, I'll register for it after the lab today.",
+     "The lab report is due sometime next week."
     ]
    }
   ],
@@ -8672,10 +8672,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, my essay is about economics.",
-     "Sure, I read it yesterday.",
+     "Yes, my essay is about modern economics.",
+     "Sure, I read it all through yesterday.",
      "I'd like to, but I'm busy until six.",
-     "It's tonight at seven."
+     "It's tonight at seven, in the main hall."
     ]
    }
   ],
@@ -8748,9 +8748,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Because the exam is on Monday.",
-     "I'll have a coffee, please.",
-     "Yes, I got a library card last year.",
+     "Because the big exam is on Monday morning.",
+     "I'll have a coffee and a muffin, please.",
+     "Yes, I got a new library card last year.",
      "Good idea. It's too quiet in the library."
     ]
    }
@@ -8824,10 +8824,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the bus is usually late.",
-     "I showed you the schedule yesterday.",
+     "Yes, the bus is usually quite late.",
+     "I showed you the new schedule yesterday.",
      "No worries. We've only just started.",
-     "Thanks for the ride."
+     "Thanks for the ride to the station."
     ]
    }
   ],
@@ -8862,10 +8862,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I could register tomorrow.",
+     "Yes, I could register for it tomorrow.",
      "It's on the second floor, past the cafeteria.",
-     "I'm not an office worker.",
-     "It was open until five o'clock."
+     "I'm not really an office worker here.",
+     "It was open until five o'clock yesterday."
     ]
    }
   ],
@@ -8900,10 +8900,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "No, it's night now.",
-     "I worked there for a year.",
-     "I have. I'm hoping to finish it by morning.",
-     "Yes, you should have called me."
+     "No, it's night now, and it's very late.",
+     "I worked there for a whole year once.",
+     "I have. I'm hoping to finish by morning.",
+     "Yes, you should have called me earlier."
     ]
    }
   ],
@@ -8939,9 +8939,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Better than I expected, actually.",
-     "I interviewed him on Tuesday.",
-     "It went to the career center.",
-     "Yes, I will go tomorrow."
+     "I interviewed him last Tuesday morning.",
+     "It went to the career center, I think.",
+     "Yes, I will go there again tomorrow."
     ]
    }
   ],
@@ -8976,10 +8976,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I'll forget it by Monday.",
+     "I'll forget it by next Monday, I'm sure.",
      "Thanks for the reminder. I had the wrong date.",
-     "Friday is my favorite day.",
-     "Yes, the paper is very long."
+     "Friday is my favorite day of the week.",
+     "Yes, the paper is very long, isn't it?"
     ]
    }
   ],
@@ -9091,9 +9091,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Not at all. It's pretty warm in here.",
-     "Yes, please do.",
-     "I opened it yesterday.",
-     "I don't have a window seat."
+     "Yes, please do open it right now.",
+     "I opened it yesterday, in the evening.",
+     "I don't have a window seat on this bus."
     ]
    }
   ],
@@ -9128,10 +9128,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the group was big.",
-     "I came to the study group.",
+     "Yes, the group was quite big, I think.",
+     "I came to the study group on time.",
      "I had to work late. I should have called.",
-     "Because the group is on Tuesday."
+     "Because the group meets on Tuesday evenings."
     ]
    }
   ],
@@ -9166,10 +9166,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I grabbed it from the shelf.",
+     "I grabbed it from the shelf this morning.",
      "Sounds good. Where do you want to go?",
-     "Class is over at noon.",
-     "Lunch was too expensive."
+     "Class is over at noon on Thursdays.",
+     "Lunch was too expensive there last time."
     ]
    }
   ],
@@ -9205,9 +9205,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Better than I expected. The guide was great.",
-     "It's on the second floor.",
-     "I'm going to the museum next week.",
-     "The field is behind the building."
+     "It's on the second floor, near the shop.",
+     "I'm going to the museum again next week.",
+     "The field is behind the building, I think."
     ]
    }
   ],
@@ -9280,10 +9280,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I'll post it tomorrow.",
+     "Yes, I'll post it tomorrow, don't worry.",
      "I checked this morning, but not yet.",
-     "The semester starts in the fall.",
-     "No, I posted it yesterday."
+     "The semester starts in the fall, in September.",
+     "No, I posted it myself yesterday afternoon."
     ]
    }
   ],
@@ -9318,9 +9318,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I need one, too.",
-     "The apartment needs a new roof.",
-     "I'm the third student in my family.",
+     "Yes, I really need one, too, right now.",
+     "The apartment needs a new roof this year.",
+     "I'm the third student in my whole family.",
      "I might be interested. How much is the rent?"
     ]
    }
@@ -9394,10 +9394,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the class finishes at noon.",
+     "Yes, the class finishes at noon today.",
      "Only half of it. It was really long.",
-     "I read the sign on the door.",
-     "No, I'll be reading it, too."
+     "I read the sign on the door twice.",
+     "No, I'll be reading it later, too."
     ]
    }
   ],
@@ -9433,9 +9433,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Yes, chemistry is on the third floor.",
-     "I took it in the exam room.",
-     "That's great! You studied so hard for it.",
-     "The B is a letter."
+     "I took it in the big exam room.",
+     "That's great! You studied so hard.",
+     "The B is just a letter of the alphabet."
     ]
    }
   ],
@@ -9470,9 +9470,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the airport is far away.",
-     "I took a taxi yesterday.",
-     "No, I don't have a share.",
+     "Yes, the airport is really far away.",
+     "I took a taxi there yesterday morning.",
+     "No, I don't have a share in it.",
      "Sure, that'd save us both some money."
     ]
    }
@@ -9508,10 +9508,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I caught the bus.",
+     "Yes, I caught the bus this morning.",
      "It's Daniel. Nice to meet you.",
-     "My name is on the list.",
-     "I forgot to tell you."
+     "My name is on the list over there.",
+     "I forgot to tell you that earlier."
     ]
    }
   ],
@@ -9546,10 +9546,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I think it closes, but you should check the website.",
-     "Yes, I enjoy holiday trips.",
-     "The gym is on the left side.",
-     "I opened it for you earlier."
+     "I think it closes, but check the website.",
+     "Yes, I really enjoy my holiday trips.",
+     "The gym is on the left side, I think.",
+     "I opened it for you a while earlier."
     ]
    }
   ],
@@ -9584,10 +9584,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I turned it on.",
-     "I'm afraid it's already late, but I can take it today.",
-     "The paper is in my bag.",
-     "Tomorrow is Friday."
+     "Yes, I turned it on for you earlier.",
+     "I'm afraid it's late, but I can take it today.",
+     "The paper is in my bag, I believe.",
+     "Tomorrow is Friday, you know that."
     ]
    }
   ],
@@ -9622,10 +9622,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the bag is blue.",
-     "I can sit anywhere.",
-     "Oh, sorry. I didn't realize anyone was there.",
-     "Bags are allowed in here."
+     "Yes, the bag is blue and quite new.",
+     "I can sit anywhere in the room, really.",
+     "Oh, sorry. I didn't realize anyone was here.",
+     "Bags are allowed in here, I think."
     ]
    }
   ],
@@ -9660,10 +9660,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "The project is in the lab.",
-     "Yes, he started it late.",
-     "I soon finished it.",
-     "I agree. How about meeting tomorrow after class?"
+     "The project is in the lab downstairs.",
+     "Yes, he started it quite late last year.",
+     "I soon finished it, with some help.",
+     "I agree. How about meeting after class?"
     ]
    }
   ],
@@ -9698,10 +9698,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I applied for a house.",
+     "Yes, I applied for a house last year.",
      "The deadline was a long time ago.",
      "No, they extended it until next Friday.",
-     "Housing is very expensive."
+     "Housing is very expensive in this town."
     ]
    }
   ],
@@ -9736,10 +9736,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the format is fine.",
-     "Really? I'd better check the syllabus right away.",
-     "I turned in the exam.",
-     "The professor is turning around."
+     "Yes, the new format is fine with me.",
+     "Really? I'd better check the syllabus now.",
+     "I turned in the exam an hour ago.",
+     "The professor is turning around slowly."
     ]
    }
   ],
@@ -9812,9 +9812,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the concert is tonight.",
-     "I went there last night.",
-     "The paper isn't due.",
+     "Yes, the concert is tonight at eight.",
+     "I went there with my friends last night.",
+     "The paper isn't due until next week.",
      "I'd love to, but I have a paper due."
     ]
    }
@@ -9851,9 +9851,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "The café's too loud. Let's go to the library.",
-     "Yes, the library has a café.",
-     "I studied there last night.",
-     "We should be on time."
+     "Yes, the library has a small café inside.",
+     "I studied there with them last night.",
+     "We should be on time for the class."
     ]
    }
   ],
@@ -9888,10 +9888,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the major changes are great.",
+     "Yes, the major changes are really great.",
      "Really? What made you want to do that?",
-     "I thought about it yesterday.",
-     "My change is in my pocket."
+     "I thought about it all day yesterday.",
+     "My change is in my pocket right now."
     ]
    }
   ],
@@ -9926,9 +9926,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I found it under my bed.",
-     "Yes, the scholarship is large.",
-     "Out about nine o'clock.",
+     "I found it under my bed last week.",
+     "Yes, the scholarship is quite large.",
+     "Out about nine o'clock in the morning.",
      "My advisor mentioned it last month."
     ]
    }
@@ -9964,10 +9964,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the stapler is on sale.",
+     "Yes, the stapler is on sale today.",
      "Sure. Do you need any staples, too?",
-     "I passed the exam last week.",
-     "That's the last one in the box."
+     "I passed the exam last week, finally.",
+     "That's the last one in the box, sorry."
     ]
    }
   ],
@@ -10078,10 +10078,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the trouble is printed.",
-     "I print it every day.",
+     "Yes, the trouble is printed on the page.",
+     "I print it out every single day.",
      "Sure. Is it out of paper again?",
-     "The help is on the desk."
+     "The help is on the desk by the door."
     ]
    }
   ],
@@ -10117,9 +10117,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Eventually. I had to circle the lot twice.",
-     "Yes, the space is in the sky.",
-     "I parked a lot yesterday.",
-     "The managers found it."
+     "Yes, the space is up in the sky.",
+     "I parked there a lot yesterday, too.",
+     "The managers found it for me earlier."
     ]
    }
   ],
@@ -10193,9 +10193,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Thursday works for me. Same time?",
-     "Yes, the meeting moved.",
-     "I met him on Tuesday.",
-     "Thursday is after Wednesday."
+     "Yes, the meeting has already moved.",
+     "I met him last Tuesday afternoon.",
+     "Thursday is the day after Wednesday."
     ]
    }
   ],
@@ -10230,9 +10230,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the room is new.",
-     "I work out at the gym.",
-     "My mate is in the room.",
+     "Yes, the room is quite new and clean.",
+     "I work out at the gym every morning.",
+     "My mate is in the room right now.",
      "Pretty well. We have a lot in common."
     ]
    }
@@ -10268,10 +10268,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, science is very hard.",
-     "I got there yesterday.",
+     "Yes, science is very hard for me.",
+     "I got there by bus yesterday morning.",
      "Go straight and turn left at the fountain.",
-     "The building is made of brick."
+     "The building is made of old red brick."
     ]
    }
   ],
@@ -10306,10 +10306,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the office is in the back.",
-     "I heard it was loud last night.",
+     "Yes, the office is in the back room.",
+     "I heard it was really loud last night.",
      "Not yet. I'll call them again tomorrow.",
-     "The housing is quite cheap."
+     "The housing is quite cheap, I heard."
     ]
    }
   ],
@@ -10344,10 +10344,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I guessed the answer.",
-     "Yes, the lecture is at three.",
-     "It was interesting, but a little too long.",
-     "The guest left early."
+     "I guessed the answer on the last quiz.",
+     "Yes, the lecture is at three today.",
+     "It was interesting, but a bit too long.",
+     "The guest left early, I believe, too."
     ]
    }
   ],
@@ -10383,9 +10383,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "They're giving out free T-shirts.",
-     "Yes, it's a long line.",
-     "I wear a long shirt.",
-     "The shirts are blue."
+     "Yes, it's a really long line, isn't it?",
+     "I wear a long white shirt every day.",
+     "The shirts are blue and very large."
     ]
    }
   ],
@@ -10421,9 +10421,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "I saw her heading to the faculty lounge.",
-     "Yes, the morning is early.",
-     "I professed it yesterday.",
-     "No, the lounge is closed."
+     "Yes, the morning is early for classes.",
+     "I professed it to him yesterday evening.",
+     "No, the lounge is closed until noon."
     ]
    }
   ],
@@ -10458,9 +10458,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I took it.",
-     "The shuttle is blue.",
-     "Come tomorrow.",
+     "Yes, I took it with my roommate.",
+     "The shuttle is blue and very old.",
+     "Come back tomorrow, if you want to.",
      "I missed it by a minute."
     ]
    }
@@ -10496,10 +10496,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the café is closed.",
+     "Yes, the café is closed on Sundays.",
      "No way. Where will we study now?",
-     "I heard it last month.",
-     "The month is almost over."
+     "I heard it last month from a friend.",
+     "The month is almost over now, isn't it?"
     ]
    }
   ],
@@ -10534,10 +10534,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the lab is open.",
+     "Yes, the lab is open until late.",
      "Next Friday, but the draft is due Monday.",
-     "I reported it yesterday.",
-     "The line is long."
+     "I reported it to my teacher yesterday.",
+     "The line is long outside the building."
     ]
    }
   ],
@@ -10573,9 +10573,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Once. Her exams are tough but fair.",
-     "Yes, I took the gray one.",
-     "Professor is a class.",
-     "I graded it last year."
+     "Yes, I took the gray one from the shelf.",
+     "Professor is a kind of class, I think.",
+     "I graded it for her last year, actually."
     ]
    }
   ],
@@ -10610,10 +10610,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the room is big.",
+     "Yes, the room is big and very bright.",
      "I think so. Let me check the schedule.",
-     "We met in another meeting.",
-     "The schedule is a room."
+     "We met in another meeting last week.",
+     "The schedule is a room in the building."
     ]
    }
   ],
@@ -10649,8 +10649,8 @@
     "stem": "Choose the best response.",
     "opts": [
      "Definitely. You have nothing to lose.",
-     "Yes, I think about it.",
-     "I applied last year.",
+     "Yes, I think about it all the time.",
+     "I applied for it last year, I think.",
      "The scholarship office closes at five."
     ]
    }
@@ -10686,9 +10686,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I found them.",
-     "The key is in the lock.",
-     "Anywhere is a place.",
+     "Yes, I found them there last night.",
+     "The key is still in the front lock.",
+     "Anywhere is a place, isn't it?",
      "Did you check your jacket pockets?"
     ]
    }
@@ -10724,10 +10724,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I'd meet you.",
-     "The morning was cold.",
+     "Yes, I'd be happy to meet you.",
+     "The morning was cold and rainy today.",
      "Afternoon works better for me.",
-     "I meet them every week."
+     "I meet them every week on Mondays."
     ]
    }
   ],
@@ -10800,10 +10800,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Have you looked at the openings in the library?",
-     "I thought about it last year.",
-     "Yes, time is a good job.",
-     "The job is on a part."
+     "Have you looked at openings in the library?",
+     "I thought about it a lot last year.",
+     "Yes, time is a very good job to have.",
+     "The job is on a part of the form."
     ]
    }
   ],
@@ -10838,10 +10838,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I like the second floor.",
-     "The floor is very clean.",
-     "It was moved to the third floor this year.",
-     "No, the lab takes two hours."
+     "Yes, I really like the second floor.",
+     "The floor is very clean in there.",
+     "It was moved to the third floor.",
+     "No, the lab takes about two hours."
     ]
    }
   ],
@@ -10876,10 +10876,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "It arrived at the airport.",
-     "Yes, I know the shuttle driver.",
-     "It should be here in about ten minutes.",
-     "The next stop is the last."
+     "It arrived at the airport an hour ago.",
+     "Yes, I know the shuttle driver well.",
+     "It should be here in ten minutes.",
+     "The next stop is the last one."
     ]
    }
   ],
@@ -10914,9 +10914,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I registered up.",
+     "Yes, I registered up for it already.",
      "The website is on the second floor.",
-     "It went down the stairs.",
+     "It went down the stairs this morning.",
      "Maybe we should go to the office instead."
     ]
    }
@@ -10952,9 +10952,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I would, it's mine.",
-     "My seat is next week.",
-     "No, I sat there before lunch.",
+     "Yes, I would mind, because it's mine.",
+     "My seat is next week, I think.",
+     "No, I sat there before lunch today.",
      "Not at all. Where would you like to sit?"
     ]
    }
@@ -11028,10 +11028,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Both buildings are on the east side.",
-     "Yes, I decided yesterday.",
-     "I majored in biology last year.",
-     "Why not take an introductory course in each?"
+     "Both of the buildings are on the east side.",
+     "Yes, I decided that yesterday afternoon.",
+     "I majored in biology last year at school.",
+     "Why not take an intro course in each?"
     ]
    }
   ],
@@ -11142,9 +11142,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I'm sorry you were late to the library.",
-     "It stays on the second floor.",
-     "I wish you luck on your weekend.",
+     "I'm sorry you were so late to the library.",
+     "It stays on the second floor, as usual.",
+     "I wish you good luck this weekend, too.",
      "Me too. I always run out of time on Saturdays."
     ]
    }
@@ -11180,10 +11180,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I happened to know them.",
-     "I wouldn't leave without a coat.",
+     "Yes, I happened to know them well enough.",
+     "I wouldn't ever leave without my warm coat.",
      "Try the front desk. Someone may have turned them in.",
-     "They are not locked, I believe."
+     "They are not locked up, as far as I know."
     ]
    }
   ],
@@ -11218,9 +11218,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Quiet is the best kind of room.",
-     "The trek was shorter than I thought.",
-     "It costs five dollars to park.",
+     "Quiet is the best kind of room to have.",
+     "The trek was shorter than I thought it would be.",
+     "It costs about five dollars to park there.",
      "Honestly, it's the only place I can focus."
     ]
    }
@@ -11332,10 +11332,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Pushed back? Does your back hurt?",
-     "Yes, the week was pushed to the deadline.",
+     "Pushed back? Does your back hurt a lot?",
+     "Yes, the week was pushed up to the deadline.",
      "Really? That's a relief. I haven't started.",
-     "I apparently finished early."
+     "I apparently finished the whole thing early."
     ]
    }
   ],
@@ -11370,10 +11370,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I expect it to be easy.",
-     "The quiz is on Friday.",
-     "Yes, it's hard to find.",
-     "Neither did I. I barely finished the last question."
+     "I expect it to be easy for everyone.",
+     "The quiz is on Friday afternoon, I think.",
+     "Yes, it's hard to find a good one.",
+     "Neither did I. I barely finished it."
     ]
    }
   ],
@@ -11408,10 +11408,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I reached the top by noon.",
-     "Yes, the morning class was great.",
-     "Sorry, my phone died and I couldn't find a charger.",
-     "You should have tried harder."
+     "I reached the top of the hill by noon.",
+     "Yes, the morning class was really great.",
+     "Sorry, my phone died and I had no charger.",
+     "You should have tried a lot harder, then."
     ]
    }
   ],
@@ -11446,10 +11446,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I know. I always have to sit by the window to charge my laptop.",
-     "Yes, they think about the library.",
-     "The outlets are made of plastic.",
-     "I'd rather have a quiet room."
+     "I know. I always sit by the window to charge mine.",
+     "Yes, they think about this library a lot.",
+     "The outlets are made of cheap white plastic.",
+     "I'd rather have a quiet room to study in."
     ]
    }
   ],
@@ -11484,10 +11484,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Me neither. I'd rather get some work done tonight.",
-     "I skipped it last year, too.",
-     "The reception was in the hall.",
-     "Yes, I wouldn't mind it."
+     "Me neither. I'd rather get some work done.",
+     "I skipped it last year, too, I think.",
+     "The reception was held in the main hall.",
+     "Yes, I wouldn't mind it one bit at all."
     ]
    }
   ],
@@ -11522,10 +11522,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I realized it right away.",
-     "The internship is in town.",
-     "It's a lot, isn't it? I'm thinking of cutting back on classes.",
-     "Yes, it works well."
+     "I realized it right away, actually, last week.",
+     "The internship is in the town center.",
+     "It's a lot, isn't it? I might cut back on classes.",
+     "Yes, it works well for me, thank you."
     ]
    }
   ],
@@ -11560,10 +11560,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, anyone can show up.",
-     "I showed them the session.",
-     "Hardly is a long word.",
-     "That's a shame. Maybe the time wasn't convenient."
+     "Yes, anyone can show up to it, of course.",
+     "I showed them the whole session plan.",
+     "Hardly is a very long word, isn't it?",
+     "That's a shame. Maybe the time was bad."
     ]
    }
   ],
@@ -11598,10 +11598,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the prices are on the wall.",
-     "I keep going up the stairs.",
-     "The campus is near the park.",
-     "Tell me about it. My rent went up again this year."
+     "Yes, the prices are on the wall there.",
+     "I keep going up the stairs every day.",
+     "The campus is near the park, you know.",
+     "Tell me about it. My rent went up again."
     ]
    }
   ],
@@ -11637,9 +11637,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Oh, it wasn't announced until after class.",
-     "Yes, I went to the lecture.",
-     "It was required by the library.",
-     "I'd have known it was Monday."
+     "Yes, I went to the lecture last week.",
+     "It was required by the library staff.",
+     "I'd have known it was on Monday, too."
     ]
    }
   ],
@@ -11674,10 +11674,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I submitted them to the dorm.",
-     "Yes, they're citations from the library.",
-     "Good point. I'll go through them again tonight.",
-     "Checking is not what I doubt."
+     "I submitted them to the dorm office.",
+     "Yes, they're citations from the library shelf.",
+     "Good point. I'll go through them tonight.",
+     "Checking is not what I really doubt."
     ]
    }
   ],
@@ -11712,10 +11712,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I hope the interview is long.",
-     "Yes, I resumed my studies.",
-     "Sure, send it over and I'll go through it tonight.",
-     "The interviewer is in the lab."
+     "I hope the interview is long enough.",
+     "Yes, I resumed my studies last month.",
+     "Sure, send it over and I'll look tonight.",
+     "The interviewer is in the lab right now."
     ]
    }
   ],
@@ -11750,10 +11750,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the event was organized by planners.",
-     "Right? We've been waiting in line for half an hour.",
-     "I plan to clear the crowd.",
-     "It's an event for whoever."
+     "Yes, the event was organized by good planners.",
+     "Right? We've been in line for half an hour.",
+     "I plan to clear the whole crowd out.",
+     "It's an event for whoever wants to come."
     ]
    }
   ],
@@ -11788,10 +11788,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I shop for prints.",
-     "The shop closed at nine.",
-     "I know. Where will we get posters made now?",
-     "They print a lot of posters."
+     "Yes, I often shop for prints there.",
+     "The shop closed at nine last night.",
+     "I know. Where will we make posters now?",
+     "They print a lot of posters every week."
     ]
    }
   ],
@@ -11826,10 +11826,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "If I were you, I'd take the early one and free up the afternoon.",
-     "Yes, it's too early to be sure.",
-     "I'm not late for class.",
-     "The late class is a sure thing."
+     "If I were you, I'd take the early one.",
+     "Yes, it's much too early to be sure.",
+     "I'm not late for the class today.",
+     "The late class is a sure thing, I think."
     ]
    }
   ],
@@ -11865,9 +11865,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Probably because of the rush after the game.",
-     "Yes, I look like a café.",
-     "The run was five miles.",
-     "Everything is almost out."
+     "Yes, I really look like a café.",
+     "The run was five miles, in the rain.",
+     "Everything is almost out of stock there."
     ]
    }
   ],
@@ -11902,10 +11902,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, many people are free.",
-     "Really? That's good to know. I'll go this week.",
-     "I realized the museum yesterday.",
-     "Fridays are not many."
+     "Yes, many people are free on Fridays.",
+     "Really? That's good to know. I'll go.",
+     "I realized the museum was closed yesterday.",
+     "Fridays are not many days at all, are they?"
     ]
    }
   ],
@@ -11940,10 +11940,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the pool is happening.",
-     "I know a late swimmer.",
-     "The pool was a happy place.",
-     "I believe it closes at ten, so you've got time."
+     "Yes, the pool is happening right now.",
+     "I know a late swimmer from my class.",
+     "The pool was a happy place for us.",
+     "I believe it closes at ten, so go now."
     ]
    }
   ],
@@ -11978,10 +11978,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I thought about Monday.",
-     "The syllabus is next to the deadline.",
-     "This one is not next.",
-     "No, it moved up. Check the updated syllabus."
+     "Yes, I thought about Monday all week.",
+     "The syllabus is next to the deadline sheet.",
+     "This one is not the next one, is it?",
+     "No, it moved up. Check the new syllabus."
     ]
    }
   ],
@@ -12016,10 +12016,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, seats are taken by hall.",
+     "Yes, seats are taken by the hall staff.",
      "That's because the class got moved online.",
-     "I took a hall seat hardly.",
-     "The lecture hall is very hard."
+     "I took a hall seat hardly at all today.",
+     "The lecture hall is very hard to find."
     ]
    }
   ],
@@ -12054,10 +12054,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I caught a cold last week.",
-     "Yes, the shuttle is hurried.",
+     "I caught a bad cold last week at home.",
+     "Yes, the shuttle is hurried and rushed.",
      "Thanks for the warning. I'm on my way.",
-     "Better is what I want."
+     "Better is what I want from this place."
     ]
    }
   ],
@@ -12092,10 +12092,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "I'm afraid of the professors.",
-     "Then I'd better finish tonight, even if I'm exhausted.",
-     "Yes, I'll submit it lately.",
-     "The accept button is late."
+     "I'm afraid of some of the professors here.",
+     "Then I'd better finish tonight, even if tired.",
+     "Yes, I'll submit it a little lately.",
+     "The accept button is late on the page."
     ]
    }
   ],
@@ -12130,9 +12130,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, it's crowded in the back.",
-     "Later is when it was seen.",
-     "We might want a crowd.",
+     "Yes, it's quite crowded in the back there.",
+     "Later is when it was seen by the staff.",
+     "We might want a crowd for the party.",
      "Good idea. Let's try again after lunch."
     ]
    }
@@ -12168,10 +12168,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I swore at the table.",
-     "I left the desk at noon.",
+     "Yes, I swore at the table last night.",
+     "I left the desk at noon with her.",
      "Maybe someone turned it in at the front desk.",
-     "I could have been wrong."
+     "I could have been wrong about the table."
     ]
    }
   ],
@@ -12206,10 +12206,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I guessed chapter ten.",
-     "The cover was blue.",
+     "Yes, I guessed chapter ten right away.",
+     "The cover was blue, with a long title.",
      "Me neither. I only skimmed that chapter.",
-     "I would have covered it."
+     "I would have covered it myself, too."
     ]
    }
   ],
@@ -12244,10 +12244,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I started the paper.",
-     "Well, there's still time to make it better.",
-     "Earlier is not later.",
-     "The paper is only a start."
+     "Yes, I started the paper last week.",
+     "Well, there's still time to improve it.",
+     "Earlier is not the same as later.",
+     "The paper is only the start of it."
     ]
    }
   ],
@@ -12282,10 +12282,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Right? I've been waiting for a reply for a week.",
-     "Yes, they wouldn't die.",
-     "I answered them twice.",
-     "Mail is slower than e-mail."
+     "Right? I've waited for a reply for a week.",
+     "Yes, they wouldn't die from that at all.",
+     "I answered them twice already this month.",
+     "Mail is a lot slower than e-mail is."
     ]
    }
   ],
@@ -12320,9 +12320,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, few seem to be free.",
-     "The tutoring is writing.",
-     "I seem to know it.",
+     "Yes, a few seem to be free today.",
+     "The tutoring is writing, of course.",
+     "I seem to know it quite well.",
      "I only found out last week myself."
     ]
    }
@@ -12358,10 +12358,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, it sounded easy.",
-     "That's what I thought, too, until I saw question one.",
-     "The exam made a sound.",
-     "I thought of the professor."
+     "Yes, it sounded easy to me as well.",
+     "That's what I thought, until I saw question one.",
+     "The exam made a loud sound, too.",
+     "I thought of the professor right away."
     ]
    }
   ],
@@ -12396,10 +12396,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, the cards are happening.",
-     "I know a card game.",
-     "The cafeteria is accepted.",
-     "I'm pretty sure it does, but let me check."
+     "Yes, the cards are happening right now.",
+     "I know a card game, if you want.",
+     "The cafeteria is accepted by them.",
+     "I'm pretty sure it does, but I'll check."
     ]
    }
   ],
@@ -12434,10 +12434,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I loved it.",
-     "The concert was not coming.",
+     "Yes, I loved it when I was there.",
+     "The concert was not coming to town.",
      "I wish I had. Something came up at work.",
-     "I come from work."
+     "I come from work every day by bus."
     ]
    }
   ],
@@ -12472,9 +12472,9 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I mean to ask.",
-     "The guide is asked.",
-     "I've been to the study.",
+     "Yes, I really mean to ask you, too.",
+     "The guide is asked by the teacher.",
+     "I've been to the study room today.",
      "Go ahead. I have it right here."
     ]
    }
@@ -12510,10 +12510,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I decided on campus.",
-     "Next year is a long time.",
-     "Well, how important is having your own kitchen?",
-     "Campus is off the road."
+     "Yes, I decided on campus last week.",
+     "Next year is a long time from now.",
+     "Well, how important is your own kitchen?",
+     "Campus is off the main road, I think."
     ]
    }
   ],
@@ -12548,10 +12548,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I submitted it last night.",
+     "Yes, I submitted it late last night.",
      "It is a very good draft of a plane.",
-     "Surely, the planning was on time.",
-     "No, I'm still going to revise the conclusion."
+     "Surely, the planning was done on time.",
+     "No, I'm going to revise the conclusion."
     ]
    }
   ],
@@ -12624,10 +12624,10 @@
    {
     "stem": "Choose the best response.",
     "opts": [
-     "Yes, I think so late at night.",
-     "I know. The library closes just when I get going.",
+     "Yes, I think so late at night, too.",
+     "I know. The library closes when I get going.",
      "The university is offering a spaced night.",
-     "It would study the night."
+     "It would study the night before, too."
     ]
    }
   ],
@@ -12701,9 +12701,9 @@
     "stem": "Choose the best response.",
     "opts": [
      "Most people seem to eat earlier these days.",
-     "Yes, it's the busiest café in town.",
+     "Yes, it's the busiest café in the whole town.",
      "I thought it was noon, too, yesterday.",
-     "The café has busier noon."
+     "The café has a busier noon than before."
     ]
    }
   ],
@@ -12782,35 +12782,35 @@
     "opts": [
      "How clouds are used in weather reports",
      "How water moves around the Earth",
-     "Why oceans are salty",
-     "How plants grow"
+     "Why the oceans are salty and cold",
+     "How plants grow in different places"
     ]
    },
    {
     "stem": "What happens during condensation?",
     "opts": [
-     "Water falls as rain",
-     "The Sun heats the ocean",
-     "Water collects under the ground",
-     "Water vapor turns into tiny drops of water"
+     "Water falls from the clouds as rain",
+     "The Sun heats the water in the oceans",
+     "Water collects in lakes and underground",
+     "Water vapor turns into tiny water drops"
     ]
    },
    {
     "stem": "Why does the professor mention a dinosaur's lake?",
     "opts": [
-     "To show that water has been used again and again",
-     "To explain how dinosaurs lived",
-     "To describe a lake in her town",
-     "To show that lakes are dangerous"
+     "To show that water is used again and again",
+     "To explain how dinosaurs found their water",
+     "To describe a lake she visited as a child",
+     "To warn that lakes are dangerous for animals"
     ]
    },
    {
     "stem": "What will students probably do for homework?",
     "opts": [
-     "Write a story about rain",
+     "Write a short story about a drop of rain",
      "Draw and label the steps of the water cycle",
-     "Measure rainfall at home",
-     "Read about dinosaurs"
+     "Measure how much rainfall they get at home",
+     "Read a chapter about dinosaurs and lakes"
     ]
    }
   ],
@@ -12858,19 +12858,19 @@
    {
     "stem": "What is the main topic of the talk?",
     "opts": [
-     "How the Moon was formed",
+     "How the Moon was first formed long ago",
      "Why the Moon appears to change shape",
-     "How eclipses happen",
-     "Why the Sun gives light"
+     "How the eclipses of the Moon happen",
+     "Why the Sun gives light and warmth"
     ]
    },
    {
     "stem": "According to the professor, what is a new moon?",
     "opts": [
-     "The phase when the whole Moon is bright",
-     "The phase when we cannot see the lit side of the Moon",
+     "The phase when the whole Moon looks bright",
+     "The phase when the lit side cannot be seen",
      "The phase when the Moon makes its own light",
-     "The phase seen during an eclipse"
+     "The phase that is seen during an eclipse"
     ]
    },
    {
@@ -12885,9 +12885,9 @@
    {
     "stem": "What does the professor suggest students do tonight?",
     "opts": [
-     "Take photographs of the Moon",
-     "Look for an eclipse",
-     "Calculate the length of the cycle",
+     "Take photographs of the Moon at night",
+     "Look for an eclipse in the night sky",
+     "Calculate how long the cycle takes",
      "Observe the Moon and name its phase"
     ]
    }
@@ -12945,28 +12945,28 @@
    {
     "stem": "According to the professor, what is pulp?",
     "opts": [
-     "A kind of ink",
-     "A machine in the factory",
+     "A special kind of ink used for printing",
+     "A large machine in the paper factory",
      "A soft, wet mixture of paper and water",
-     "A plastic that is removed"
+     "A plastic that workers remove from paper"
     ]
    },
    {
     "stem": "Why does the professor say paper cannot be recycled forever?",
     "opts": [
-     "The factories are too few",
-     "The ink cannot be removed",
-     "The fibers become shorter and weaker each time",
-     "People throw away too much paper"
+     "The factories are too few in most countries",
+     "The ink cannot be removed from the fibers",
+     "The fibers get shorter and weaker each time",
+     "People throw away too much paper each year"
     ]
    },
    {
     "stem": "What can be inferred about the professor's attitude?",
     "opts": [
-     "She thinks recycling is useless",
-     "She prefers making paper from trees",
-     "She thinks using less paper is also important",
-     "She believes paper is always cheap"
+     "She thinks recycling is useless in general",
+     "She prefers making new paper from trees",
+     "She thinks using less paper is important too",
+     "She believes that paper will always be cheap"
     ]
    }
   ],
@@ -13024,27 +13024,27 @@
     "stem": "According to the professor, why did workers pour water on the sand?",
     "opts": [
      "To make it easier to pull the sleds",
-     "To keep the workers cool",
-     "To clean the stones",
-     "To make the stones heavier"
+     "To keep the workers cool in the heat",
+     "To clean the stones before moving them",
+     "To make the stones heavier to carry"
     ]
    },
    {
     "stem": "What did the discoveries near Giza show about the workers?",
     "opts": [
      "They were paid and lived in nearby towns",
-     "They were slaves from other countries",
-     "They worked for free",
-     "They lived inside the pyramid"
+     "They were slaves from foreign countries",
+     "They worked for free in exchange for land",
+     "They lived in tents inside the pyramid"
     ]
    },
    {
     "stem": "What can be inferred about the old belief that slaves built the pyramids?",
     "opts": [
-     "It was based on written records",
-     "It is still accepted by historians",
-     "It explains how the stones were moved",
-     "New evidence shows that it was probably wrong"
+     "It was based on ancient written records",
+     "It is still widely accepted by historians",
+     "It explains how the huge stones were moved",
+     "New evidence suggests it was probably wrong"
     ]
    }
   ],
@@ -13101,10 +13101,10 @@
    {
     "stem": "According to the professor, what is pollination?",
     "opts": [
-     "Bees drinking nectar",
+     "Bees drinking nectar from many flowers",
      "Pollen moving from one flower to another",
-     "Bees making wax cells",
-     "Plants growing without seeds"
+     "Bees making wax cells for their honey",
+     "Plants growing without seeds or flowers"
     ]
    },
    {
@@ -13170,10 +13170,10 @@
    {
     "stem": "What is the lecture mainly about?",
     "opts": [
-     "How magnets work and how a compass uses the Earth's magnetism",
-     "How sailors built their ships",
-     "How phones show maps",
-     "How animals travel long distances"
+     "How magnets work and why compasses work",
+     "How sailors built their ships long ago",
+     "How phones use maps to show directions",
+     "How animals travel long distances each year"
     ]
    },
    {
@@ -13189,18 +13189,18 @@
     "stem": "Why does the professor mention sailors?",
     "opts": [
      "To show how compasses were used in the past",
-     "To explain why the Earth is a magnet",
-     "To describe how needles are made",
-     "To say that sailors discovered magnets"
+     "To explain why the Earth is like a magnet",
+     "To describe how compass needles are made",
+     "To say that sailors first discovered magnets"
     ]
    },
    {
     "stem": "According to the professor, why does the needle of a compass point north?",
     "opts": [
      "It lines up with the Earth's magnetic field",
-     "It is pulled by the stars",
-     "It is attracted by the sea",
-     "It is controlled by hot metal inside the compass"
+     "It is pulled by the stars in the night sky",
+     "It is attracted by the water in the sea",
+     "It is moved by hot metal inside the compass"
     ]
    }
   ],
@@ -13248,10 +13248,10 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "How doctors treat serious diseases",
-     "Why sailors travel far",
-     "How vitamin pills are made",
-     "Why the body needs vitamins and where to get them"
+     "How doctors treat serious diseases in hospitals",
+     "Why sailors traveled so far from their homes",
+     "How vitamin pills are made in large factories",
+     "Why we need vitamins and where to find them"
     ]
    },
    {
@@ -13266,10 +13266,10 @@
    {
     "stem": "Why does the professor tell the story of the sailors?",
     "opts": [
-     "To explain how ships were built",
-     "To prove that fruit is expensive",
-     "To describe a new medicine",
-     "To show that missing a vitamin can cause illness"
+     "To explain how ships were built for long trips",
+     "To prove that fresh fruit is very expensive",
+     "To describe a new medicine for sea travelers",
+     "To show that a missing vitamin can cause illness"
     ]
    },
    {
@@ -13335,27 +13335,27 @@
    {
     "stem": "According to the professor, why does the snow turn into ice?",
     "opts": [
-     "The weight of new snow presses on the old snow",
-     "The Sun melts it every summer",
-     "Strong winds make it harder",
-     "It is covered by rocks"
+     "The weight of new snow presses on old snow",
+     "The summer Sun melts and refreezes the snow",
+     "Strong winds press the snow until it hardens",
+     "It is buried under heavy rocks and soil"
     ]
    },
    {
     "stem": "Why does the professor mention Switzerland and Norway?",
     "opts": [
-     "To show where glaciers are growing",
-     "To explain where most people live",
-     "To name countries with the most snow",
+     "To show where glaciers are growing fastest",
+     "To explain where most people live in Europe",
+     "To name the countries with the most snow",
      "To give examples of valleys cut by glaciers"
     ]
    },
    {
     "stem": "What will students probably do next week?",
     "opts": [
-     "Measure a glacier themselves",
-     "Visit a river in the mountains",
-     "Write about the climate",
+     "Measure the length of a glacier themselves",
+     "Visit a river valley in the high mountains",
+     "Write a short report on the world's climate",
      "Look at old and new photographs of a glacier"
     ]
    }
@@ -13404,10 +13404,10 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "The stages in a butterfly's life",
-     "How butterflies find flowers",
-     "Why caterpillars eat leaves",
-     "How wings become strong"
+     "The four stages of a butterfly's life",
+     "How butterflies find food in flowers",
+     "Why caterpillars eat so many leaves",
+     "How wings become strong enough to fly"
     ]
    },
    {
@@ -13482,37 +13482,37 @@
    {
     "stem": "What is the lecture mainly about?",
     "opts": [
-     "How radios work",
-     "How the brain learns words",
+     "How radios send and receive sound waves",
+     "How the brain learns new words quickly",
      "How sound is made and how it travels",
-     "Why walls are strong"
+     "Why walls are built with thick stone"
     ]
    },
    {
     "stem": "According to the professor, how does a sound wave move through air?",
     "opts": [
      "The vibrations push the air around them",
-     "The air moves in one direction",
-     "The wave stays in the throat",
-     "The air becomes warmer"
+     "The air moves in one direction like wind",
+     "The wave stays inside the person's throat",
+     "The air becomes warmer and then rises up"
     ]
    },
    {
     "stem": "Why does the professor mention astronauts?",
     "opts": [
-     "To explain how astronauts speak",
-     "To describe how fast radios are",
+     "To explain how astronauts speak to Earth",
+     "To describe how fast radio signals move",
      "To show that sound cannot travel in space",
-     "To show that metal carries sound"
+     "To show that metal carries sound very well"
     ]
    },
    {
     "stem": "What does the professor ask students to do at home?",
     "opts": [
-     "Listen to a radio",
-     "Record the sound of a wall",
+     "Listen to a radio in a quiet room",
+     "Record the sound of a wall at home",
      "Feel the vibration in their throat",
-     "Measure the speed of sound"
+     "Measure the speed of sound outdoors"
     ]
    }
   ],
@@ -13572,16 +13572,16 @@
      "To show that noise can damage birds' hearing",
      "To suggest that birds prefer music to traffic",
      "To describe where a study of robins took place",
-     "To explain how birds respond to noise by changing when they sing"
+     "To show how birds adjust their singing to noise"
     ]
    },
    {
     "stem": "According to the speaker, what did researchers find about robins in noisy neighborhoods?",
     "opts": [
-     "They sang at night more often, even where light levels were similar.",
-     "They stopped singing during the day altogether.",
+     "They sang at night more often, even in similar light.",
+     "They stopped singing during the day and sang only at night.",
      "They sang at a higher pitch than robins in quiet areas.",
-     "They were attracted to brightly lit streets."
+     "They were attracted to the brightly lit streets at night."
     ]
    },
    {
@@ -13638,19 +13638,19 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "How Roman roads were built and what they led to",
+     "How Roman roads were built and their effects",
      "Why modern roads are better than ancient ones",
-     "How Rome defeated rival empires",
-     "The cost of building the Roman army"
+     "How Rome defeated its rivals across Europe",
+     "The cost of building and training the army"
     ]
    },
    {
     "stem": "According to the professor, why were Roman roads built in layers?",
     "opts": [
-     "So that soldiers could march more quietly",
-     "So that the stones would be easier to repair",
-     "So that merchants could carry heavier goods",
-     "So that water could drain away and the road would last"
+     "So that the soldiers could march more quietly",
+     "So that the stones could be repaired more easily",
+     "So that merchants could carry much heavier goods",
+     "So that water could drain and the road would last"
     ]
    },
    {
@@ -13658,17 +13658,17 @@
     "opts": [
      "To argue that the army controlled the economy",
      "To show that soldiers also worked as merchants",
-     "To explain the original reason the roads were built",
-     "To describe how roads were repaired"
+     "To explain why the roads were first built",
+     "To describe how soldiers repaired the roads"
     ]
    },
    {
     "stem": "What does the professor imply about the Roman roads?",
     "opts": [
-     "They were never used for trade",
-     "They were too expensive to maintain",
+     "They were never used for trade by merchants",
+     "They were too expensive for Rome to maintain",
      "They were built mostly for ordinary travelers",
-     "They had effects their builders probably did not plan"
+     "They had effects their builders did not plan"
     ]
    }
   ],
@@ -13743,10 +13743,10 @@
    {
     "stem": "What is the professor's attitude toward octopus intelligence?",
     "opts": [
-     "She is interested but cautious about comparing it to human thinking",
-     "She is certain it equals human intelligence",
-     "She is skeptical about the research",
-     "She thinks it is not worth studying"
+     "She is interested but cautious about human comparisons",
+     "She is certain that it matches human intelligence fully",
+     "She is skeptical about the research behind the claims",
+     "She thinks it is not worth more scientific study"
     ]
    }
   ],
@@ -13794,10 +13794,10 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "Why people avoid busy sidewalks",
-     "How the presence of others affects helping behavior",
-     "How to design psychology experiments",
-     "Why emergencies are rare"
+     "Why people avoid walking on busy sidewalks",
+     "How the presence of others affects helping",
+     "How to design good psychology experiments",
+     "Why emergencies are so rare in public places"
     ]
    },
    {
@@ -13812,10 +13812,10 @@
    {
     "stem": "How did researchers study the bystander effect in the experiment?",
     "opts": [
-     "They placed students in a real emergency",
-     "They interviewed people on sidewalks",
-     "They compared students of different ages",
-     "They changed how many people participants believed were listening"
+     "They placed students in a real emergency on the street",
+     "They interviewed many people about it on sidewalks",
+     "They compared the reactions of different age groups",
+     "They varied the number of people believed to be listening"
     ]
    },
    {
@@ -13881,10 +13881,10 @@
    {
     "stem": "According to the professor, why do leaves look yellow or orange in autumn?",
     "opts": [
-     "The tree begins to make new yellow pigments",
-     "Chlorophyll turns into carotenoids",
-     "Carotenoids that were hidden by chlorophyll become visible",
-     "Cool nights damage the green pigment"
+     "The tree begins to make many new yellow pigments",
+     "Chlorophyll turns into carotenoids in cold weather",
+     "Hidden carotenoids become visible as chlorophyll fades",
+     "Cool nights damage the green pigment in the leaf"
     ]
    },
    {
@@ -13899,10 +13899,10 @@
    {
     "stem": "What can be inferred about the brightest red leaves?",
     "opts": [
-     "They appear only on very old trees",
-     "They are more likely after sunny days and cool nights",
-     "They are produced in summer",
-     "They fall earlier than yellow leaves"
+     "They appear only on very old trees in the forest",
+     "They are likelier after sunny days and cool nights",
+     "They are produced during the long summer months",
+     "They fall earlier than the yellow or orange leaves"
     ]
    }
   ],
@@ -13950,10 +13950,10 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "How businesses make a profit",
-     "Why people prefer to spend money",
+     "How small businesses make a profit each year",
+     "Why people prefer spending money to saving it",
      "The idea that every choice has a hidden cost",
-     "How to plan a budget"
+     "How to plan a monthly budget for students"
     ]
    },
    {
@@ -13968,19 +13968,19 @@
    {
     "stem": "Why does the professor mention sleep?",
     "opts": [
-     "To explain why students should study less",
-     "To compare work and rest",
-     "To describe a business decision",
-     "To show that opportunity cost is not always about money"
+     "To argue that students should study less at night",
+     "To compare how much work and rest are worth",
+     "To describe a business decision made by a firm",
+     "To show that costs are not always about money"
     ]
    },
    {
     "stem": "What will students probably do before the next class?",
     "opts": [
-     "Identify the opportunity cost of one of their choices",
-     "Write a report about a restaurant",
-     "Calculate the cost of a hiking trip",
-     "Compare two business plans"
+     "Find the opportunity cost of one of their choices",
+     "Write a report about a restaurant business plan",
+     "Calculate the total cost of a weekend hiking trip",
+     "Compare two business plans from a small shop"
     ]
    }
   ],
@@ -14037,28 +14037,28 @@
    {
     "stem": "According to the professor, why is there a second high tide on the opposite side of the Earth?",
     "opts": [
-     "The Sun pulls the water there",
-     "The water on the far side is pulled less than the Earth",
-     "The Moon's gravity is stronger there",
-     "The Earth's rotation stops the water"
+     "The Sun pulls the water on that side of the Earth",
+     "The far-side water is pulled less than the Earth",
+     "The Moon's gravity is much stronger on that side",
+     "The Earth's rotation stops the water from moving"
     ]
    },
    {
     "stem": "Why does the professor mention the Sun?",
     "opts": [
-     "To show it is the main cause of tides",
-     "To explain that it also influences the tides, though less than the Moon",
-     "To argue that tides are not related to gravity",
-     "To describe the seasons"
+     "To show that it is the main cause of tides on Earth",
+     "To show that it affects tides less than the Moon does",
+     "To argue that tides are not really related to gravity",
+     "To describe how the seasons change the sea level"
     ]
    },
    {
     "stem": "What can be inferred about spring tides?",
     "opts": [
-     "They occur only in the spring",
-     "They are weaker than neap tides",
+     "They occur only in the spring of every year",
+     "They are always weaker than the neap tides",
      "They occur when the Sun, Moon, and Earth line up",
-     "They occur once a year"
+     "They occur only once each year in every ocean"
     ]
    }
   ],
@@ -14116,27 +14116,27 @@
     "stem": "According to the professor, why did some leaders worry about printing?",
     "opts": [
      "Cheap books could spread dangerous ideas",
-     "Books were too expensive",
-     "Printers did not pay taxes",
-     "Readers could not understand the books"
+     "Books were too expensive for most people",
+     "Printers did not pay taxes to the rulers",
+     "Readers could not understand the new books"
     ]
    },
    {
     "stem": "Why does the professor compare the printing press to the internet?",
     "opts": [
-     "Both were invented in Germany",
-     "Both were controlled by governments",
+     "Both were invented by German scientists",
+     "Both were controlled by governments at first",
      "Both changed how fast information spreads",
-     "Both made books unnecessary"
+     "Both made printed books unnecessary soon"
     ]
    },
    {
     "stem": "What does the professor suggest students do?",
     "opts": [
-     "Memorize dates in the talk",
-     "Copy a page by hand",
+     "Memorize the main dates mentioned in the talk",
+     "Copy a page from a book by hand tonight",
      "Think about who benefits from new technology",
-     "Write about the church's role"
+     "Write a short essay about the church's role"
     ]
    }
   ],
@@ -14193,28 +14193,28 @@
    {
     "stem": "According to the professor, why is the sky not violet?",
     "opts": [
-     "The Sun emits less violet light and our eyes are less sensitive to it",
-     "Violet light is absorbed by the clouds",
-     "Violet light does not enter the atmosphere",
-     "Violet light is scattered less than red light"
+     "The Sun emits less violet, and our eyes see it poorly",
+     "Violet light is absorbed by clouds before it arrives",
+     "Violet light does not enter our atmosphere at all",
+     "Violet light is scattered less than red or orange light"
     ]
    },
    {
     "stem": "Why does the professor mention sunsets?",
     "opts": [
-     "To prove that violet light is the strongest",
-     "To explain how clouds form",
-     "To compare day and night temperatures",
-     "To show how the distance light travels affects its color"
+     "To prove that violet is the strongest color of light",
+     "To explain how red clouds form in the evening sky",
+     "To compare the day and night temperatures on Earth",
+     "To show how the distance light travels affects color"
     ]
    },
    {
     "stem": "What can be inferred about long wavelengths of light?",
     "opts": [
-     "They cannot be seen by humans",
-     "They are scattered less by the atmosphere than short wavelengths",
-     "They are produced only at sunset",
-     "They are stronger than blue light"
+     "They cannot be seen by people during the day",
+     "They scatter less in the atmosphere than short waves",
+     "They are produced only at sunset or sunrise",
+     "They are always much stronger than blue light"
     ]
    }
   ],
@@ -14262,28 +14262,28 @@
    {
     "stem": "What does the professor emphasize about the Silk Road?",
     "opts": [
-     "It was built by a single empire",
-     "It was used only for silk",
-     "It was a network of routes rather than a single road",
-     "It was mainly a military route"
+     "It was built and controlled by a single empire",
+     "It was used only for the trade of silk goods",
+     "It was a network of routes, not a single road",
+     "It was mainly a military route for the empire"
     ]
    },
    {
     "stem": "According to the professor, how did most goods travel along the Silk Road?",
     "opts": [
-     "By a single caravan",
+     "By a single large caravan",
      "From merchant to merchant",
-     "On large ships",
+     "On large ships and boats",
      "By government messengers"
     ]
    },
    {
     "stem": "Why does the professor mention papermaking?",
     "opts": [
-     "To show that China invented silk",
-     "To describe how books were produced",
-     "To give an example of a technology that spread along the routes",
-     "To explain why the plague spread"
+     "To show that China was the first to invent silk",
+     "To describe how books were first produced in Asia",
+     "To give an example of a technology that moved west",
+     "To explain why the plague spread across Europe"
     ]
    },
    {
@@ -14340,10 +14340,10 @@
    {
     "stem": "What is the lecture mainly about?",
     "opts": [
-     "How prices are determined in a market",
-     "Why concert tickets are expensive",
-     "How sellers advertise products",
-     "Why shortages are harmful"
+     "How prices are decided in a market",
+     "Why concert tickets are so expensive",
+     "How sellers advertise their products",
+     "Why shortages are harmful for markets"
     ]
    },
    {
@@ -14358,19 +14358,19 @@
    {
     "stem": "Why does the professor mention a new fashion?",
     "opts": [
-     "To prove that supply never changes",
-     "To explain why prices fall",
-     "To show how a change in demand can change a price",
-     "To describe a typical shortage"
+     "To prove that supply never changes over time",
+     "To explain why the price of a product falls",
+     "To show how changing demand can change a price",
+     "To describe a typical shortage in the market"
     ]
    },
    {
     "stem": "What will students probably do before the next class?",
     "opts": [
-     "Calculate an equilibrium price",
+     "Calculate an equilibrium price for a product",
      "Explain a recent change in the price of a product",
-     "Attend a concert",
-     "Write a report on shortages"
+     "Attend a concert and notice the ticket prices",
+     "Write a short report on shortages of goods"
     ]
    }
   ],
@@ -14427,18 +14427,18 @@
    {
     "stem": "According to the professor, how do coral reefs grow?",
     "opts": [
-     "Algae build limestone walls",
-     "Waves pile up sand and rocks",
-     "Coral seeds float to the surface",
+     "Algae build thick limestone walls around reefs",
+     "Waves pile up sand and rocks on the sea floor",
+     "Coral seeds float to the surface and settle",
      "New polyps grow on the skeletons of dead ones"
     ]
    },
    {
     "stem": "What does the professor imply about coral reefs in deep water?",
     "opts": [
-     "They are larger than shallow reefs",
-     "They are more protected from warming",
-     "They are home to more species",
+     "They are much larger than most shallow reefs",
+     "They are more protected from the ocean warming",
+     "They hold many more species than shallow reefs",
      "They are unlikely because algae need sunlight"
     ]
    },
@@ -14496,28 +14496,28 @@
    {
     "stem": "What was different about Bell's invention compared with the telegraph?",
     "opts": [
-     "It used no electricity",
-     "It was cheaper to build",
-     "It sent messages in code",
+     "It used no electricity or wires",
+     "It was much cheaper to build",
+     "It sent messages in a special code",
      "It could send the human voice"
     ]
    },
    {
     "stem": "According to the professor, what happens inside the telephone when a person speaks?",
     "opts": [
-     "A wire records the voice",
-     "Sound moves a metal plate, which changes an electric current",
-     "A code is sent through clicks",
-     "A battery turns sound into light"
+     "A wire records the voice and plays it back",
+     "Sound moves a metal plate and changes the current",
+     "A code is sent through clicks on the electric wire",
+     "A battery turns the sound into a beam of light"
     ]
    },
    {
     "stem": "Why does the professor mention Elisha Gray?",
     "opts": [
-     "To explain who invented the telegraph",
+     "To explain who first invented the telegraph system",
      "To show that another inventor filed a similar patent",
-     "To show that Bell worked alone",
-     "To describe a telephone company"
+     "To show that Bell worked alone on the invention",
+     "To describe a telephone company that Gray founded"
     ]
    },
    {
@@ -14583,28 +14583,28 @@
    {
     "stem": "According to the professor, what do memory cells do?",
     "opts": [
-     "Destroy the vaccine",
-     "Produce the virus",
-     "Make people sick",
+     "Destroy the vaccine soon after the shot is given",
+     "Produce more of the virus inside the body",
+     "Make people sick for a few days each year",
      "Remember a virus and react quickly if it returns"
     ]
    },
    {
     "stem": "Why does the professor say that a vaccine cannot make you seriously ill?",
     "opts": [
-     "It contains antibodies",
-     "It is taken only by healthy people",
-     "It is made from memory cells",
-     "It contains only a harmless or weakened part of a virus"
+     "It contains antibodies that destroy the virus",
+     "It is taken only by healthy people and children",
+     "It is made from memory cells taken from donors",
+     "It has only a harmless or weakened part of a virus"
     ]
    },
    {
     "stem": "What does the professor imply about vaccinating many people in a community?",
     "opts": [
      "It can protect people who are not vaccinated",
-     "It makes the vaccine stronger",
-     "It is unnecessary for most viruses",
-     "It prevents antibodies from forming"
+     "It makes the vaccine stronger for each person",
+     "It is unnecessary for most types of viruses",
+     "It prevents antibodies from forming in people"
     ]
    }
   ],
@@ -14653,9 +14653,9 @@
     "stem": "What is the main point of the lecture?",
     "opts": [
      "Habits form through a cue, a routine, and a reward",
-     "Habits can be stopped with willpower",
-     "Morning habits are the most important",
-     "Habits require many decisions"
+     "Habits can be stopped easily with willpower alone",
+     "Morning habits are the most important for health",
+     "Habits require us to make many decisions daily"
     ]
    },
    {
@@ -14670,9 +14670,9 @@
    {
     "stem": "Why does the professor mention a short walk?",
     "opts": [
-     "To show that exercise is a reward",
-     "To explain what a cue is",
-     "To describe how boredom starts",
+     "To show that exercise is always a reward",
+     "To explain what a cue is in a daily habit",
+     "To describe how boredom starts a bad habit",
      "To give an example of replacing a routine"
     ]
    },
@@ -14730,10 +14730,10 @@
    {
     "stem": "What is the lecture mainly about?",
     "opts": [
-     "How plants grow in sunlight",
-     "Why oceans are getting warmer",
-     "How carbon moves through nature and how people affect it",
-     "How coal and oil are formed"
+     "How plants grow in sunlight and use carbon dioxide",
+     "Why the oceans are getting warmer and rising",
+     "How carbon moves in nature and how people affect it",
+     "How coal and oil are formed over millions of years"
     ]
    },
    {
@@ -14748,19 +14748,19 @@
    {
     "stem": "Why does the professor mention millions of years and a few centuries?",
     "opts": [
-     "To describe how old the Earth is",
+     "To describe how old the Earth's rocks are",
      "To show how fast people release stored carbon",
-     "To compare plants and animals",
-     "To explain how rocks form"
+     "To compare how plants and animals use carbon",
+     "To explain how rocks form from dead animals"
     ]
    },
    {
     "stem": "What can be inferred about the extra carbon dioxide in the air?",
     "opts": [
-     "It is quickly absorbed by the oceans",
-     "Nature cannot remove it as quickly as it is produced",
-     "It is mostly produced by plants",
-     "It does not affect temperature"
+     "It is quickly absorbed by the oceans and plants",
+     "Nature cannot remove it as fast as it is made",
+     "It is mostly produced by plants in the summer",
+     "It does not affect the temperature of the air"
     ]
    }
   ],
@@ -14808,10 +14808,10 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "Why students forget what they read",
+     "Why many students forget what they read",
      "How practicing recall helps people remember",
-     "Why practice tests are stressful",
-     "How to read a passage more quickly"
+     "Why practice tests are stressful for students",
+     "How to read a passage more quickly each day"
     ]
    },
    {
@@ -14887,9 +14887,9 @@
     "stem": "What is the talk mainly about?",
     "opts": [
      "How honeybees communicate where food is",
-     "Why honeybees live in large groups",
-     "How honeybees build their hives",
-     "Which flowers honeybees prefer"
+     "Why honeybees live together in large groups",
+     "How honeybees build their hives from wax",
+     "Which kinds of flowers honeybees prefer"
     ]
    },
    {
@@ -14904,10 +14904,10 @@
    {
     "stem": "How did von Frisch test his idea?",
     "opts": [
-     "By recording the sounds the bees made",
-     "By comparing bees from different countries",
-     "By moving food sources and seeing if bees could find them",
-     "By removing the sun's light from the hive"
+     "By recording the buzzing sounds the bees made",
+     "By comparing bees from many different countries",
+     "By moving food sources to see if bees found them",
+     "By removing the sunlight from inside the hive"
     ]
    },
    {
@@ -14964,28 +14964,28 @@
    {
     "stem": "What is the main point of the talk?",
     "opts": [
-     "Concerts are a poor way to spend money",
+     "Concerts are a poor way to spend money on fun",
      "Managers should avoid developing new products",
-     "Most businesses fail because of poor sales",
-     "Money already spent should not drive future decisions"
+     "Most businesses fail because of very poor sales",
+     "Money already spent should not drive new decisions"
     ]
    },
    {
     "stem": "Why does the professor mention the concert ticket?",
     "opts": [
      "To show how expensive entertainment has become",
-     "To compare students with managers",
-     "To explain why bad weather affects business",
-     "To illustrate the sunk cost fallacy in an everyday situation"
+     "To compare how students and managers spend money",
+     "To explain why bad weather affects most businesses",
+     "To illustrate the sunk cost fallacy in daily life"
     ]
    },
    {
     "stem": "According to the professor, what should a decision be based on?",
     "opts": [
-     "The money already invested",
-     "The opinions of other managers",
-     "Whether future benefits will outweigh future costs",
-     "How much effort has been spent so far"
+     "The total amount of money already invested",
+     "The opinions of other managers in the company",
+     "Whether future benefits will outweigh the costs",
+     "How much time and effort has been spent so far"
     ]
    },
    {
@@ -15042,10 +15042,10 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "Why medieval artists avoided realism",
-     "How architects influenced science",
+     "Why medieval artists avoided realism in painting",
+     "How architects influenced the early sciences",
      "How linear perspective changed painting",
-     "The life of Brunelleschi"
+     "The life and many works of Brunelleschi"
     ]
    },
    {
@@ -15069,10 +15069,10 @@
    {
     "stem": "What is the professor's attitude toward the claim that perspective influenced early science?",
     "opts": [
-     "He considers it completely false",
-     "He agrees with it entirely",
-     "He finds it interesting but does not fully accept it",
-     "He thinks it has not been studied"
+     "He considers that claim to be completely false",
+     "He agrees with that claim without any doubt",
+     "He finds it interesting but not fully convincing",
+     "He thinks that it has not yet been studied"
     ]
    }
   ],
@@ -15129,27 +15129,27 @@
    {
     "stem": "Why does the professor describe the flashlight demonstration?",
     "opts": [
-     "To illustrate how angle affects the intensity of sunlight",
+     "To illustrate how angle changes sunlight intensity",
      "To prove the Earth is closer to the sun in winter",
-     "To show how to measure the Earth's tilt",
-     "To compare different kinds of lights"
+     "To show how scientists measure the Earth's tilt",
+     "To compare different kinds of lights and lamps"
     ]
    },
    {
     "stem": "According to the professor, when is the Earth closest to the sun?",
     "opts": [
-     "In late June",
-     "In the spring",
-     "In September",
-     "In early January"
+     "In late June, in the summer",
+     "In the spring, around April",
+     "In September, in the autumn",
+     "In early January, in winter"
     ]
    },
    {
     "stem": "Why does the professor think the misconception is so common?",
     "opts": [
-     "Textbooks often explain it incorrectly",
-     "Students do not study astronomy",
-     "Orbits are hard to measure",
+     "Textbooks often explain this idea incorrectly",
+     "Most students never study astronomy at school",
+     "Orbits are very hard to measure accurately",
      "It fits people's everyday experience with heat"
     ]
    }
@@ -15207,10 +15207,10 @@
    {
     "stem": "What does the professor say about the 1883 decision?",
     "opts": [
-     "It was ordered by the government",
-     "It was made by railroad companies rather than by law",
-     "It was welcomed by all cities",
-     "It created six time zones"
+     "It was ordered by the government as a law",
+     "It was made by railroad companies, not by law",
+     "It was welcomed by all the cities at once",
+     "It created six time zones across the country"
     ]
    },
    {
@@ -15276,18 +15276,18 @@
    {
     "stem": "What is the main purpose of the talk?",
     "opts": [
-     "To compare rivers and lakes",
-     "To describe how rocks are formed",
-     "To explain why the ocean is salty and stays at a stable level",
-     "To show why underwater volcanoes erupt"
+     "To compare the salt in rivers and in lakes",
+     "To describe how different rocks are formed",
+     "To explain why the ocean is salty but stable",
+     "To show why underwater volcanoes erupt often"
     ]
    },
    {
     "stem": "According to the professor, how does salt from rocks reach the ocean?",
     "opts": [
-     "Waves break rocks along the coast",
-     "Salt falls from the atmosphere",
-     "Fish carry minerals from rivers",
+     "Waves break rocks along the rocky coast",
+     "Salt falls from the atmosphere as dust",
+     "Fish carry minerals up from the rivers",
      "Rainwater carries minerals into rivers"
     ]
    },
@@ -15296,17 +15296,17 @@
     "opts": [
      "To argue that the ocean is getting smaller",
      "To explain why salt stays when water leaves",
-     "To show how rain forms",
-     "To describe how salt leaves the ocean"
+     "To show how rain forms over the oceans",
+     "To describe how salt leaves the ocean slowly"
     ]
    },
    {
     "stem": "What can be inferred about enclosed lakes that have no outlet?",
     "opts": [
-     "They receive less rainfall than oceans",
-     "They contain no minerals",
+     "They receive much less rainfall than oceans do",
+     "They contain no minerals from nearby rocks",
      "Salt builds up in them because it cannot leave",
-     "They are older than oceans"
+     "They are much older than most of the oceans"
     ]
    }
   ],
@@ -15354,28 +15354,28 @@
    {
     "stem": "What is the lecture mainly about?",
     "opts": [
-     "How air conditioners work",
-     "Why countryside areas are cooler in winter",
-     "How cities choose building materials",
-     "Why cities are warmer than surrounding areas and how to reduce this effect"
+     "How air conditioners work and why they use energy",
+     "Why countryside areas are always cooler in winter",
+     "How cities choose their building materials for roofs",
+     "Why cities are warmer and how to reduce the effect"
     ]
    },
    {
     "stem": "According to the professor, why does the difference in temperature often peak after sunset?",
     "opts": [
-     "Cars are used more in the evening",
-     "Trees stop releasing water vapor",
-     "Wind blows hardest after dark",
+     "Cars are used much more in the evening rush hour",
+     "Trees stop releasing water vapor after sunset",
+     "The wind blows hardest over the city after dark",
      "Materials release absorbed heat slowly at night"
     ]
    },
    {
     "stem": "Why does the professor mention white roofs?",
     "opts": [
-     "To show that roofs cause the heat island",
-     "To explain how plants cool the air",
-     "To describe a problem with green roofs",
-     "To give an example of a way cities respond to heat"
+     "To show that white roofs cause the heat island",
+     "To explain how plants and trees cool the air",
+     "To describe a problem with using green roofs",
+     "To give an example of how cities respond to heat"
     ]
    },
    {
@@ -15432,37 +15432,37 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "The placebo effect and how it affects medical research",
-     "How painkillers work in the brain",
-     "Why patients dislike doctors",
-     "How to design a medicine"
+     "The placebo effect and its role in medical research",
+     "How painkillers work in the brain and the body",
+     "Why many patients dislike visiting their doctors",
+     "How to design a new medicine for severe headaches"
     ]
    },
    {
     "stem": "According to the professor, what is one explanation for the placebo effect?",
     "opts": [
-     "Sugar pills contain weak medicine",
-     "Doctors choose healthier patients",
+     "Sugar pills contain a small amount of weak medicine",
+     "Doctors choose the healthier patients for the test",
      "Patients' expectations may trigger natural pain relief",
-     "Patients take larger doses"
+     "Patients take larger doses of the sugar pills"
     ]
    },
    {
     "stem": "Why does the professor mention a double-blind trial?",
     "opts": [
-     "To show that placebos are harmful",
-     "To explain how scientists reduce bias in testing medicines",
-     "To argue that medicines are unnecessary",
-     "To describe how patients are chosen"
+     "To show that placebos are harmful to some patients",
+     "To explain how scientists reduce bias in drug tests",
+     "To argue that most medicines are unnecessary today",
+     "To describe how patients are chosen for the trial"
     ]
    },
    {
     "stem": "What does the professor imply about the placebo effect?",
     "opts": [
-     "It is stronger than most medicines",
-     "It works only on headaches",
+     "It is stronger than most of the real medicines",
+     "It works only on headaches and minor pains",
      "It is a real experience, not just imagination",
-     "It cannot be studied"
+     "It cannot be studied with scientific methods"
     ]
    }
   ],
@@ -15510,10 +15510,10 @@
    {
     "stem": "What is the main point of the lecture?",
     "opts": [
-     "Dreams predict future events",
+     "Dreams help us predict future events",
      "Sleep plays an active role in memory",
-     "Students should study less",
-     "Memory is not affected by sleep"
+     "Students should study less during exams",
+     "Memory is not really affected by sleep"
     ]
    },
    {
@@ -15529,18 +15529,18 @@
     "stem": "Why does the professor describe the study with two groups?",
     "opts": [
      "To provide evidence that sleep improves memory",
-     "To show that word pairs are easy",
-     "To demonstrate the dangers of cramming",
-     "To compare morning and evening learning"
+     "To show that word pairs are easy to remember",
+     "To demonstrate the dangers of cramming at night",
+     "To compare morning and evening learning times"
     ]
    },
    {
     "stem": "What does the professor imply about staying up all night before an exam?",
     "opts": [
-     "It always leads to failure",
-     "It is useful only for facts",
+     "It always leads to a failing grade on the exam",
+     "It is useful only for memorizing simple facts",
      "It is usually not an efficient way to prepare",
-     "It is the best way to memorize"
+     "It is the best way to memorize new material"
     ]
    }
   ],
@@ -15588,10 +15588,10 @@
    {
     "stem": "What is the lecture mainly about?",
     "opts": [
-     "Why and how cities grew during the Industrial Revolution",
-     "How farming methods changed in England",
-     "Why cholera spread across Europe",
-     "How governments built sewers"
+     "Why cities grew during the Industrial Revolution",
+     "How farming methods changed across England",
+     "Why cholera spread so quickly across Europe",
+     "How governments built the first city sewers"
     ]
    },
    {
@@ -15606,10 +15606,10 @@
    {
     "stem": "Why does the professor mention life expectancy?",
     "opts": [
-     "To show that rural life was dangerous",
-     "To illustrate the poor living conditions in industrial cities",
-     "To argue that reforms were unnecessary",
-     "To explain why people left cities"
+     "To show that rural life was very dangerous",
+     "To illustrate poor conditions in industrial cities",
+     "To argue that city reforms were unnecessary",
+     "To explain why people decided to leave cities"
     ]
    },
    {
@@ -15666,37 +15666,37 @@
    {
     "stem": "What is the lecture mainly about?",
     "opts": [
-     "How immigrants find jobs",
-     "How grammar is taught in schools",
-     "Why accents are difficult to understand",
+     "How immigrants find jobs in a new country",
+     "How grammar is usually taught in schools",
+     "Why accents are difficult for people to understand",
      "Whether there is an ideal age for learning a language"
     ]
    },
    {
     "stem": "Why does the professor say the case of Genie is hard to interpret?",
     "opts": [
-     "She learned grammar too quickly",
+     "She learned the grammar far too quickly",
      "Her isolation involved other harmful factors",
-     "She was not given any help",
-     "She was too old to be studied"
+     "She was never given any help or training",
+     "She was too old to be studied properly"
     ]
    },
    {
     "stem": "How did the studies of immigrants support the idea of a critical period?",
     "opts": [
-     "Those who arrived as young children reached native-like grammar",
-     "Those who arrived later learned faster",
-     "All immigrants kept strong accents",
-     "The length of residence predicted success"
+     "Those who arrived young reached native-like grammar",
+     "Those who arrived later learned much faster",
+     "All of the immigrants kept very strong accents",
+     "The length of their residence predicted success"
     ]
    },
    {
     "stem": "What can be inferred about adult learners?",
     "opts": [
-     "They cannot learn grammar",
-     "They learn faster than children",
-     "They never lose their accents",
-     "They can become fluent, though they may use different strategies"
+     "They are unable to learn any new grammar",
+     "They learn a language faster than children do",
+     "They never lose the accent of their first language",
+     "They can become fluent, perhaps by other strategies"
     ]
    }
   ],
@@ -15744,19 +15744,19 @@
    {
     "stem": "What is the main point of the lecture?",
     "opts": [
-     "Criminals usually confess to the police",
-     "Rational self-interest can produce an outcome that is bad for everyone",
-     "Partners should always trust each other",
-     "Companies should avoid price wars"
+     "Criminals usually choose to confess to the police",
+     "Self-interest can produce a result bad for everyone",
+     "Partners should always trust each other completely",
+     "Companies should avoid starting any price wars"
     ]
    },
    {
     "stem": "According to the professor, why is confessing the better choice for each prisoner individually?",
     "opts": [
-     "It always means going free",
-     "It earns the trust of the police",
+     "It always means that the prisoner goes free",
+     "It earns the trust and respect of the police",
      "It gives a better result whatever the partner does",
-     "It is what the partner expects"
+     "It is exactly what the partner expects to happen"
     ]
    },
    {
@@ -15822,19 +15822,19 @@
    {
     "stem": "What is the main purpose of the lecture?",
     "opts": [
-     "To compare the economies of different countries",
-     "To show why interest rates should be low",
-     "To explain what inflation is, what causes it, and how it is handled",
+     "To compare the economies of several countries",
+     "To show why interest rates should always be low",
+     "To explain what inflation is, why it occurs, and how it is handled",
      "To describe how prices are recorded in shops"
     ]
    },
    {
     "stem": "According to the professor, what happens in demand-pull inflation?",
     "opts": [
-     "Energy prices rise sharply",
-     "Companies lower their production costs",
-     "People want to buy more than the economy can produce",
-     "The government prints less money"
+     "Energy prices rise sharply for most businesses",
+     "Companies manage to lower their production costs",
+     "People want to buy more than the economy can make",
+     "The government decides to print a lot less money"
     ]
    },
    {
@@ -15849,10 +15849,10 @@
    {
     "stem": "What does the professor imply about raising interest rates?",
     "opts": [
-     "It solves one problem but may create another",
-     "It always stops inflation immediately",
-     "It is rarely used by central banks",
-     "It increases spending in the economy"
+     "It solves one problem but may cause another",
+     "It always stops inflation almost immediately",
+     "It is rarely used by the central banks today",
+     "It increases the spending of people and firms"
     ]
    }
   ],
@@ -15900,10 +15900,10 @@
    {
     "stem": "What is the lecture mainly about?",
     "opts": [
-     "Why the Sun will become a black hole",
-     "How radio telescopes are built",
-     "Why stars move in unusual orbits",
-     "How black holes form and how scientists know they exist"
+     "Why the Sun will one day become a black hole",
+     "How radio telescopes are designed and built",
+     "Why many stars move in such unusual orbits",
+     "How black holes form and how we know they exist"
     ]
    },
    {
@@ -15927,10 +15927,10 @@
    {
     "stem": "According to the professor, how do astronomers detect black holes?",
     "opts": [
-     "By photographing the light they emit",
+     "By photographing the light that they give off",
      "By studying their effects on nearby gas and stars",
-     "By measuring their temperature directly",
-     "By watching them pull in planets"
+     "By measuring their temperature in a direct way",
+     "By watching them pull whole planets into them"
     ]
    }
   ],
@@ -15978,19 +15978,19 @@
    {
     "stem": "What is the lecture mainly about?",
     "opts": [
-     "Why people avoid reading articles",
+     "Why people choose to avoid reading articles",
      "A common pattern in how people handle information",
-     "How diets influence the mind",
-     "How scientists design experiments"
+     "How a person's diet can influence the mind",
+     "How scientists usually design their experiments"
     ]
    },
    {
     "stem": "What did most participants do in the classic experiment?",
     "opts": [
-     "They refused to test the rule",
+     "They refused to test the rule at all",
      "They tested examples that supported their own idea",
-     "They tried examples that could prove the rule wrong",
-     "They changed the rule during the test"
+     "They tried examples that might prove it wrong",
+     "They changed the rule in the middle of the test"
     ]
    },
    {
@@ -16005,10 +16005,10 @@
    {
     "stem": "What is the professor's attitude toward the suggestion of looking for arguments against your own position?",
     "opts": [
-     "She thinks it is unnecessary",
-     "She believes it is easy to do",
-     "She considers it effective despite being unpleasant",
-     "She doubts that it can work"
+     "She thinks that it is not really necessary",
+     "She believes that it is quite easy to do",
+     "She finds it effective, though unpleasant",
+     "She doubts that it can work in practice"
     ]
    }
   ],
@@ -16056,37 +16056,37 @@
    {
     "stem": "What is the main idea of the lecture?",
     "opts": [
-     "The oceans are warming faster than the land",
-     "Shellfish farms need less water",
+     "The oceans are warming faster than the land is",
+     "Shellfish farms will soon need much less water",
      "Fish are the most important animals in the sea",
-     "Carbon dioxide makes the ocean more acidic, which harms sea life"
+     "Carbon dioxide makes oceans more acidic and harms sea life"
     ]
    },
    {
     "stem": "According to the professor, why is acidic water a problem for oysters?",
     "opts": [
-     "It makes the water too warm",
-     "It kills the food they eat",
-     "It makes shells harder to form",
-     "It makes them grow too fast"
+     "It makes the water far too warm for them",
+     "It kills off all of the food that they eat",
+     "It makes it harder for shells to form",
+     "It makes them grow much too fast"
     ]
    },
    {
     "stem": "Why does the professor mention tiny drifting snails?",
     "opts": [
-     "To compare them with oysters",
-     "To show how the problem could affect other animals",
+     "To compare the snails with the oysters",
+     "To show how the problem may affect other animals",
      "To show that snails live on the Pacific coast",
-     "To explain how shells are built"
+     "To explain in detail how snail shells are built"
     ]
    },
    {
     "stem": "What does the professor imply about warming and acidification?",
     "opts": [
-     "They are the same process",
+     "They are really just the same process",
      "They share a cause and tend to occur together",
-     "They are unrelated problems",
-     "They are solved by different methods"
+     "They are completely unrelated problems",
+     "They are solved by two different methods"
     ]
    }
   ],
@@ -16134,10 +16134,10 @@
    {
     "stem": "What is the announcement mainly about?",
     "opts": [
-     "A new coffee shop on campus",
+     "A new coffee shop on the first floor",
      "Longer library hours during exam week",
-     "A change to the exam schedule",
-     "Rules for returning books"
+     "A change to the schedule of the exams",
+     "New rules for returning library books"
     ]
    },
    {
@@ -16197,10 +16197,10 @@
    {
     "stem": "What should volunteers bring?",
     "opts": [
-     "A water bottle",
-     "Gloves",
-     "A bag",
-     "Lunch"
+     "Their own water bottle",
+     "Their own work gloves",
+     "Their own trash bags",
+     "Their own lunch and snacks"
     ]
    }
   ],
@@ -16242,19 +16242,19 @@
    {
     "stem": "What must a student do to become a candidate?",
     "opts": [
-     "Give a speech on Wednesday",
-     "Send a link to the university",
-     "Vote online first",
+     "Give a speech to the student government",
+     "Send a voting link to the university office",
+     "Vote online before the speeches begin",
      "Return an application with fifty signatures"
     ]
    },
    {
     "stem": "What can be inferred about the speeches?",
     "opts": [
-     "They are required for voting online",
-     "They will be held after the election",
-     "They are meant to help students choose a candidate",
-     "They will be sent by email"
+     "They are required before students can vote",
+     "They will be held after the election results",
+     "They help students decide whom to vote for",
+     "They will be sent to all students by email"
     ]
    }
   ],
@@ -16296,19 +16296,19 @@
    {
     "stem": "Why was the housing deadline changed?",
     "opts": [
-     "Fewer students applied this year",
+     "Fewer students applied for housing this year",
      "The office needs more time to arrange rooms",
-     "Oak Hall will close for repairs",
-     "The application fee has increased"
+     "Oak Hall will be closed for repairs next year",
+     "The application fee has increased this year"
     ]
    },
    {
     "stem": "What will happen to students who miss the deadline?",
     "opts": [
-     "They will pay a higher fee",
+     "They will have to pay a higher late fee",
      "They will be placed on a waiting list",
      "They will lose their rooms in Oak Hall",
-     "They will apply in March"
+     "They will be allowed to apply in March"
     ]
    }
   ],
@@ -16359,10 +16359,10 @@
    {
     "stem": "Why does the speaker mention the previous policy?",
     "opts": [
-     "To criticize the instructors",
-     "To show how the process for accusations has changed",
-     "To explain how software works",
-     "To announce an information session"
+     "To criticize the instructors who decided cases",
+     "To show how the process for accusations changed",
+     "To explain how the detection software works",
+     "To announce the dates of information sessions"
     ]
    }
   ],
@@ -16404,19 +16404,19 @@
    {
     "stem": "What kind of projects does the Fenwick Grant support?",
     "opts": [
-     "Projects that need new equipment",
+     "Projects that need expensive new equipment",
      "Projects that combine different disciplines",
-     "Projects led by faculty advisers",
-     "Projects about travel"
+     "Projects that are led by faculty advisers",
+     "Projects about travel and cultural exchange"
     ]
    },
    {
     "stem": "What can be inferred about the competition this year?",
     "opts": [
      "It may be more selective than before",
-     "It will have fewer applicants",
-     "It is open only to faculty",
-     "It now pays salaries"
+     "It will have fewer applicants this year",
+     "It is open only to faculty and staff",
+     "It now pays the salaries of researchers"
     ]
    }
   ],
@@ -16475,17 +16475,17 @@
     "stem": "What does the man want to buy?",
     "opts": [
      "A bus pass for the semester",
-     "A student card",
-     "A weekend ticket",
-     "A bicycle"
+     "A new student card for the term",
+     "A weekend ticket for the bus",
+     "A bicycle to use on campus"
     ]
    },
    {
     "stem": "What does the woman say about weekends?",
     "opts": [
-     "The buses do not run",
-     "The pass costs more",
-     "He must buy another ticket",
+     "The buses do not run on weekends",
+     "The pass costs more on weekends",
+     "He must buy a second weekend ticket",
      "The pass can be used on those days"
     ]
    }
@@ -16553,10 +16553,10 @@
    {
     "stem": "What will the woman bring?",
     "opts": [
-     "The textbook",
-     "Her notes",
-     "A computer",
-     "Some food"
+     "The biology textbook",
+     "Her own class notes",
+     "A laptop computer",
+     "Some food and drinks"
     ]
    }
   ],
@@ -16622,19 +16622,19 @@
    {
     "stem": "What is the man worried about?",
     "opts": [
-     "Finding a company to work for",
+     "Finding a company to work for this summer",
      "How to answer a question at an interview",
-     "Missing a class",
-     "Choosing a major"
+     "Missing a class because of the interview",
+     "Choosing a major before the internship"
     ]
    },
    {
     "stem": "What does the woman suggest?",
     "opts": [
-     "Giving a short answer about his work and interests",
-     "Reading more about the company",
-     "Asking the interviewer questions first",
-     "Talking only about his major"
+     "Answering briefly about his major and project",
+     "Reading more about the company before tomorrow",
+     "Asking the interviewer some questions first",
+     "Talking only about his major and his grades"
     ]
    }
   ],
@@ -16696,18 +16696,18 @@
    {
     "stem": "Why does the man want to change his meal plan?",
     "opts": [
-     "He dislikes the food",
-     "He seldom eats dinner on campus",
-     "He is moving off campus",
-     "He wants a bigger plan"
+     "He dislikes the food at the dining hall",
+     "He rarely eats his dinner on campus",
+     "He is moving off campus next semester",
+     "He wants a bigger plan with more meals"
     ]
    },
    {
     "stem": "According to the woman, when is changing the plan free?",
     "opts": [
-     "Only on the first day",
-     "Until the end of the semester",
-     "Whenever he asks",
+     "Only on the first day of classes",
+     "Until the end of the whole semester",
+     "Whenever he comes to the office",
      "Until the end of the second week"
     ]
    }
@@ -16770,10 +16770,10 @@
    {
     "stem": "What concern does the professor raise about the student's plan?",
     "opts": [
-     "The topic is not interesting",
-     "People may not report their habits accurately",
-     "Sleep cannot be measured",
-     "There are no students to ask"
+     "The topic is not interesting to most people",
+     "People may not report their habits correctly",
+     "Sleep cannot be measured in a research study",
+     "There are no students willing to take part"
     ]
    },
    {
@@ -16857,10 +16857,10 @@
    {
     "stem": "What does the woman imply when she says, 'Safe for whom, though?'",
     "opts": [
-     "His parents know very little about engineering",
-     "Safe choices are not always the best for the student",
-     "Design is the safer subject",
-     "She is unsure about the idea"
+     "His parents know little about engineering",
+     "A safe choice is not always the best for him",
+     "Design is actually the safer subject for him",
+     "She is unsure about the idea of switching"
     ]
    }
   ],
@@ -16902,9 +16902,9 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "How farmers grow coffee",
-     "How islands are named",
-     "Why earthquakes are dangerous",
+     "How farmers in some regions grow coffee",
+     "How islands around the world are named",
+     "Why earthquakes can be so dangerous",
      "How volcanoes work and affect people"
     ]
    },
@@ -16921,9 +16921,9 @@
     "stem": "Why does the professor mention the islands of Hawaii?",
     "opts": [
      "To show that volcanoes can make new land",
-     "To describe a recent eruption",
-     "To explain how ash travels",
-     "To compare two kinds of lava"
+     "To describe one very recent eruption there",
+     "To explain how volcanic ash can travel far",
+     "To compare two different kinds of lava flow"
     ]
    },
    {
@@ -16989,19 +16989,19 @@
    {
     "stem": "According to the professor, what do the valves do?",
     "opts": [
-     "They keep blood moving in one direction",
-     "They push blood out of the heart",
-     "They carry oxygen to the brain",
-     "They make the heart bigger"
+     "They keep the blood moving one way",
+     "They push the blood out of the heart",
+     "They carry the oxygen up to the brain",
+     "They make the whole heart much bigger"
     ]
    },
    {
     "stem": "What does the professor imply about athletes?",
     "opts": [
-     "Their hearts are larger than a fist",
+     "Their hearts are larger than their fists",
      "Their hearts do not need to beat as often",
-     "They have more valves",
-     "They never feel tired"
+     "Their hearts have more valves than others",
+     "Their hearts never feel tired at all"
     ]
    },
    {
@@ -17058,10 +17058,10 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "How satellites use energy",
-     "How silicon is made",
+     "How satellites use and store their energy",
+     "How silicon is made for solar panels",
      "How solar power works and what limits it",
-     "Why electricity prices change every year"
+     "Why electricity prices change every single year"
     ]
    },
    {
@@ -17076,8 +17076,8 @@
    {
     "stem": "Why does the professor mention pumping water uphill?",
     "opts": [
-     "To explain how a panel is built",
-     "To show that solar farms need water",
+     "To explain how a solar panel is built",
+     "To show that solar farms need a lot of water",
      "To give an example of a way to store energy",
      "To compare solar with hydropower plants"
     ]
@@ -17085,10 +17085,10 @@
    {
     "stem": "What does the professor imply about the future of solar power?",
     "opts": [
-     "Solar will stay too expensive",
-     "Cloudy countries should stop using it",
-     "Storing energy is now the biggest challenge",
-     "Batteries will no longer be needed"
+     "Solar power will stay too expensive for most",
+     "Cloudy countries should stop using solar power",
+     "Storing the energy is now the biggest challenge",
+     "Batteries will no longer be needed in the future"
     ]
    }
   ],
@@ -17137,17 +17137,17 @@
     "stem": "What is the main point of the talk?",
     "opts": [
      "Short-term memory is stronger than long-term memory",
-     "Most people can remember only seven facts",
+     "Most people can remember only about seven facts",
      "Meaningful learning builds long-term memory better than repetition",
-     "Sleep is the key to every exam"
+     "Sleep is the most important thing for every exam"
     ]
    },
    {
     "stem": "How did the second group of students study the words?",
     "opts": [
-     "They repeated the words many times",
-     "They wrote the words on cards",
-     "They studied only the night before",
+     "They repeated the words over and over again",
+     "They wrote each of the words on small cards",
+     "They studied the words only the night before",
      "They connected each word to a personal experience"
     ]
    },
@@ -17163,9 +17163,9 @@
    {
     "stem": "What will the class probably discuss next time?",
     "opts": [
-     "The size of long-term memory",
-     "Famous experiments with words",
-     "How to remember phone numbers",
+     "The real size of our long-term memory",
+     "Some famous experiments using lists of words",
+     "The best ways to remember phone numbers",
      "The connection between sleep and memory"
     ]
    }
@@ -17214,19 +17214,19 @@
    {
     "stem": "What is the professor's main point?",
     "opts": [
-     "Psychology experiments should no longer be published",
-     "Replication is easy and common",
-     "Science has failed completely",
+     "Psychology experiments should no longer be published at all",
+     "Replication is both easy and very common",
+     "Science has failed in a complete way",
      "Scientific fields can improve by finding their own mistakes"
     ]
    },
    {
     "stem": "According to the professor, why is replication rare?",
     "opts": [
-     "Researchers are rewarded for new results",
-     "Journals refuse all old studies",
-     "Laboratories lack enough equipment",
-     "Scientists distrust one another"
+     "Researchers are rewarded mainly for new results",
+     "Journals refuse to print any of the old studies",
+     "Laboratories often lack enough modern equipment",
+     "Scientists do not really trust one another"
     ]
    },
    {
@@ -17301,28 +17301,28 @@
    {
     "stem": "According to the professor, why do languages usually become endangered?",
     "opts": [
-     "Governments forbid people to speak them",
-     "Schools stop teaching reading",
+     "Governments forbid people from speaking them",
+     "Schools stop teaching reading in those languages",
      "Families choose languages that offer more opportunity",
-     "Older speakers move abroad"
+     "Older speakers move abroad to find better work"
     ]
    },
    {
     "stem": "Why does the professor mention words for ocean currents?",
     "opts": [
-     "To show that a language can hold knowledge unknown to science",
-     "To prove that Pacific languages are simple",
-     "To explain how fish behave",
-     "To compare two language families"
+     "To show that a language can hold unknown knowledge",
+     "To prove that Pacific languages are quite simple",
+     "To explain how the fish in those seas behave",
+     "To compare two major families of languages"
     ]
    },
    {
     "stem": "What can be inferred about reviving the Maori language?",
     "opts": [
-     "It has been unsuccessful",
-     "It is taught only to adults",
-     "Classes alone are not enough to keep a language alive",
-     "It is now spoken by most New Zealanders"
+     "It has been unsuccessful so far in most places",
+     "It is taught only to adults who want to learn it",
+     "Classes alone are not enough to keep it alive",
+     "It is now spoken by most of the New Zealanders"
     ]
    }
   ],
@@ -17380,9 +17380,9 @@
     "stem": "What should students bring?",
     "opts": [
      "Their student card",
-     "A new part",
+     "A new part for the bike",
      "An appointment form",
-     "A helmet"
+     "A helmet from home"
     ]
    }
   ],
@@ -17425,9 +17425,9 @@
     "stem": "What is the announcement mainly about?",
     "opts": [
      "A festival with food from many countries",
-     "A cooking class for beginners",
-     "A new student restaurant",
-     "A concert in the main hall"
+     "A cooking class for international students",
+     "A new restaurant opening in the main hall",
+     "A concert with music from many countries"
     ]
    },
    {
@@ -17478,19 +17478,19 @@
    {
     "stem": "What is one advantage of registering before Monday?",
     "opts": [
-     "Students can skip the fair",
+     "Students can skip the fair and apply online",
      "Students can schedule an interview in advance",
-     "Companies will visit the dorms",
-     "Students will receive a résumé"
+     "Companies will visit the residence halls",
+     "Students will receive a free résumé review"
     ]
    },
    {
     "stem": "What can be inferred about the fair?",
     "opts": [
-     "It is held in the evening",
-     "It is only for technology students",
+     "It is held in the evening in the gym",
+     "It is meant only for technology students",
      "Students are expected to dress formally",
-     "It lasts the whole week"
+     "It continues throughout the whole week"
     ]
    }
   ],
@@ -17532,9 +17532,9 @@
    {
     "stem": "Why is the announcement being made?",
     "opts": [
-     "To announce a new membership fee",
-     "To describe a new pool",
-     "To invite students to a race",
+     "To announce a new membership fee for students",
+     "To describe the new pool in the east wing",
+     "To invite members to join a running race",
      "To inform members about a temporary closing"
     ]
    },
@@ -17586,10 +17586,10 @@
    {
     "stem": "What is the main purpose of the new policy?",
     "opts": [
-     "To punish students who miss classes",
-     "To make rules about late work consistent across courses",
-     "To remove deadlines",
-     "To increase tuition"
+     "To punish students who regularly miss classes",
+     "To make late-work rules consistent across courses",
+     "To remove deadlines for all written assignments",
+     "To raise tuition for students who submit late"
     ]
    },
    {
@@ -17640,19 +17640,19 @@
    {
     "stem": "Who must complete the new training?",
     "opts": [
-     "Students whose research involves human participants",
-     "All faculty members",
-     "Undergraduate students",
-     "Researchers who use only published data"
+     "Students who do research with human participants",
+     "All faculty members who supervise graduate students",
+     "Undergraduate students who take research classes",
+     "Researchers who work only with published data"
     ]
    },
    {
     "stem": "Why was the requirement introduced?",
     "opts": [
-     "The course is very popular",
-     "Certificates expired too soon",
-     "Some projects collected data without consent forms",
-     "Students asked for more training"
+     "The course was very popular among researchers",
+     "Certificates were expiring before projects ended",
+     "Some projects had collected data without consent",
+     "Students asked for more ethics training courses"
     ]
    }
   ],
@@ -17710,10 +17710,10 @@
    {
     "stem": "Why does the man want to return the book?",
     "opts": [
-     "The book is damaged",
+     "The book is damaged on the cover",
      "His teacher changed the textbook",
-     "It costs too much",
-     "He lost the receipt"
+     "It costs too much for his budget",
+     "He lost the receipt for the book"
     ]
    },
    {
@@ -17780,19 +17780,19 @@
    {
     "stem": "When will the students meet?",
     "opts": [
-     "At eight",
-     "At seven",
+     "At eight sharp",
+     "At seven sharp",
      "At seven forty",
-     "At four"
+     "At four sharp"
     ]
    },
    {
     "stem": "What will the woman bring?",
     "opts": [
-     "Her ticket",
-     "A book",
-     "Some snacks",
-     "A map"
+     "Her ticket for the trip",
+     "A good book for the trip",
+     "Some snacks for the trip",
+     "A road map for the trip"
     ]
    }
   ],
@@ -17854,10 +17854,10 @@
    {
     "stem": "Why does the student visit the professor?",
     "opts": [
-     "To ask for a higher grade",
-     "To change her class schedule",
+     "To ask for a higher grade on a quiz",
+     "To change her schedule for next term",
      "To get help with a topic she missed",
-     "To return a book"
+     "To return a library book she borrowed"
     ]
    },
    {
@@ -17928,19 +17928,19 @@
    {
     "stem": "What problem does the man describe?",
     "opts": [
-     "He dislikes his classes",
+     "He dislikes his three classes this term",
      "He does not have enough time for his tasks",
-     "He cannot find a job",
-     "He forgets his reading"
+     "He cannot find a better job near campus",
+     "He forgets to do his reading assignments"
     ]
    },
    {
     "stem": "What does the woman suggest?",
     "opts": [
-     "Planning fixed study times and starting with the hardest task",
-     "Dropping a class",
-     "Studying only on weekends",
-     "Working fewer hours"
+     "Setting fixed times and doing the hardest task first",
+     "Dropping a class to have more free time each week",
+     "Studying only on the weekends, in the library",
+     "Working fewer hours at his job to study more"
     ]
    }
   ],
@@ -18002,18 +18002,18 @@
    {
     "stem": "According to the professor, what was wrong with the student's paper?",
     "opts": [
-     "The argument was uninteresting",
-     "It was too short",
+     "The argument was not interesting enough",
+     "It was too short to cover the topic",
      "Some claims were not supported by sources",
-     "It was submitted late"
+     "It was submitted too late to be graded"
     ]
    },
    {
     "stem": "What does the professor imply about the student's assumption?",
     "opts": [
-     "It was correct",
-     "It is common among professors",
-     "It improved the argument",
+     "It was correct, but not well explained",
+     "It is a common habit among professors",
+     "It improved the argument in the paper",
      "It is not acceptable in academic writing"
     ]
    }
@@ -18076,17 +18076,17 @@
    {
     "stem": "Why is the woman hesitant to attend the lecture?",
     "opts": [
-     "She needs to prepare for an exam",
-     "She dislikes the topic",
-     "She has no transportation",
-     "She already heard the speaker"
+     "She needs to study for tomorrow's exam",
+     "She dislikes the topic of the talk",
+     "She has no way to get to the lecture",
+     "She already heard the speaker last year"
     ]
    },
    {
     "stem": "What is the woman's attitude at the end of the conversation?",
     "opts": [
-     "She firmly refuses to go",
-     "She is angry with the man",
+     "She firmly refuses to go to the lecture",
+     "She is angry with the man for asking",
      "She has already decided to skip her exam",
      "She is considering the man's suggestion"
     ]
@@ -18130,36 +18130,36 @@
    {
     "stem": "What is the talk mainly about?",
     "opts": [
-     "How farmers grow food",
-     "Where the equator is",
-     "Which animals are the biggest",
+     "How farmers in tropical areas grow their food",
+     "Where exactly the equator is on a map",
+     "Which animals in the world are the biggest",
      "Why rainforests are special and important"
     ]
    },
    {
     "stem": "According to the professor, why does little sunlight reach the ground?",
     "opts": [
-     "The air is too dry",
+     "The air in the forest is much too dry",
      "The canopy makes a roof of leaves",
-     "The trees are very short",
-     "The rain comes every hour"
+     "The trees in the forest are very short",
+     "The heavy rain comes down every hour"
     ]
    },
    {
     "stem": "Why does the professor mention a football field?",
     "opts": [
-     "To describe the size of the canopy",
-     "To compare two kinds of trees",
+     "To describe how large the canopy can be",
+     "To compare two different kinds of trees",
      "To show how fast the forest is disappearing",
-     "To explain how roads are built"
+     "To explain how new roads are built there"
     ]
    },
    {
     "stem": "What will students do at the end of class?",
     "opts": [
-     "Draw a map of the equator",
-     "Count trees in a picture",
-     "Read about medicine",
+     "Draw a map showing the equator line",
+     "Count all the trees in a large picture",
+     "Read a short text about forest medicine",
      "Write the name of a rainforest animal"
     ]
    }
@@ -18217,28 +18217,28 @@
    {
     "stem": "What does the professor say about air above the wing?",
     "opts": [
-     "It is heavier than air below",
-     "It stops at high speed",
-     "It pushes the wing up",
+     "It is heavier than the air below",
+     "It stops moving at high speed",
+     "It pushes the wing up from above",
      "It moves faster than air below"
     ]
    },
    {
     "stem": "What can be inferred about a plane whose engines stop?",
     "opts": [
-     "It must fall at once",
+     "It must fall down at once",
      "It can still glide for some time",
-     "It will fly faster",
-     "It loses its wings"
+     "It will begin to fly faster",
+     "It loses its wings in the air"
     ]
    },
    {
     "stem": "Why will students bring a sheet of paper next class?",
     "opts": [
-     "To write a test",
-     "To draw a pilot",
+     "To write a short test on flying",
+     "To draw a picture of a pilot",
      "To make a simple model of a wing",
-     "To measure air pressure"
+     "To measure the air pressure in class"
     ]
    }
   ],
@@ -18287,9 +18287,9 @@
     "stem": "What is the main idea of the talk?",
     "opts": [
      "Mountains are the oldest features on Earth",
-     "Earthquakes can be predicted exactly",
-     "The movement of plates explains many features of the Earth",
-     "Continents stay in the same place"
+     "Earthquakes can be predicted very exactly",
+     "The movement of plates explains many features",
+     "Continents have stayed in the same places"
     ]
    },
    {
@@ -18304,10 +18304,10 @@
    {
     "stem": "Why did most scientists reject Wegener's idea at first?",
     "opts": [
-     "He had not visited the ocean",
-     "He could not explain the force that moved continents",
-     "He said the plates move quickly",
-     "He studied only mountains"
+     "He had never visited the ocean himself",
+     "He could not explain the force moving continents",
+     "He said that the plates move very quickly",
+     "He studied only mountains in one region"
     ]
    },
    {
@@ -18365,36 +18365,36 @@
     "stem": "What is the talk mainly about?",
     "opts": [
      "How industrialization changed work and life",
-     "How cloth is woven by hand",
-     "How rivers produce power",
-     "Why Britain has many farms"
+     "How cloth was woven by hand at home",
+     "How rivers can be used to produce power",
+     "Why Britain had so many farms then"
     ]
    },
    {
     "stem": "According to the professor, why was the steam engine important?",
     "opts": [
-     "It gave power that did not depend on rivers or wind",
-     "It made children work shorter hours",
-     "It improved housing in towns",
-     "It replaced all workshops"
+     "It gave power not dependent on rivers or wind",
+     "It made children work for shorter hours",
+     "It greatly improved the housing in towns",
+     "It replaced all of the small workshops"
     ]
    },
    {
     "stem": "Why does the professor mention child workers?",
     "opts": [
-     "To prove that factories were new",
+     "To prove that the factories were quite new",
      "To show that the changes had negative sides",
-     "To explain how thread is made",
-     "To compare Britain with other countries"
+     "To explain how thread is made from cotton",
+     "To compare Britain with some other countries"
     ]
    },
    {
     "stem": "What does the professor imply about historians?",
     "opts": [
      "They agree that factory work was pleasant",
-     "They study only inventions",
-     "They believe reforms were unnecessary",
-     "They disagree about whether people's lives improved at first"
+     "They study only the inventions of the time",
+     "They believe that reforms were unnecessary",
+     "They disagree about whether life improved at first"
     ]
    }
   ],
@@ -18442,37 +18442,37 @@
    {
     "stem": "What is the main point of the talk?",
     "opts": [
-     "The brain is fixed after childhood",
-     "Strokes cannot be treated",
-     "Learning new skills is always easy",
-     "The adult brain can change, especially in response to effort"
+     "The brain stays fixed after the childhood years",
+     "Strokes cannot be treated by any methods",
+     "Learning new skills is always very easy",
+     "The adult brain can change, especially through effort"
     ]
    },
    {
     "stem": "Why does the professor mention blind individuals?",
     "opts": [
      "To explain why some people hear poorly",
-     "To show that vision is unimportant",
-     "To describe how juggling is learned",
-     "To give evidence that brain regions can take on new functions"
+     "To show that vision is not really important",
+     "To describe how the skill of juggling is learned",
+     "To show that brain regions can take new functions"
     ]
    },
    {
     "stem": "According to the professor, how can plasticity be harmful?",
     "opts": [
-     "It prevents recovery from strokes",
-     "It weakens attention",
-     "It slows learning of languages",
-     "It may strengthen the pathways involved in chronic pain"
+     "It prevents people from recovering after strokes",
+     "It weakens a person's ability to pay attention",
+     "It slows down the learning of new languages",
+     "It may strengthen pathways involved in chronic pain"
     ]
    },
    {
     "stem": "What does the professor imply about listening to a language in the background?",
     "opts": [
-     "It is probably not very effective for changing the brain",
-     "It strengthens pathways quickly",
-     "It is better than active practice",
-     "It harms attention"
+     "It is probably not very effective for the brain",
+     "It strengthens the pathways in the brain quickly",
+     "It is better for the brain than active practice",
+     "It harms a person's ability to pay attention"
     ]
    }
   ],
@@ -18522,35 +18522,35 @@
     "opts": [
      "People always make rational choices",
      "Small changes in presentation can strongly affect decisions",
-     "Organ donation should be forbidden",
-     "Expensive items sell best"
+     "Organ donation should be forbidden by law",
+     "Expensive items usually sell the best"
     ]
    },
    {
     "stem": "Why does the professor mention organ donation?",
     "opts": [
-     "To criticize doctors",
-     "To show that people dislike forms",
+     "To criticize the doctors who treat patients",
+     "To show that people dislike filling out forms",
      "To illustrate the effect of a default option",
-     "To compare two shopping habits"
+     "To compare two different shopping habits"
     ]
    },
    {
     "stem": "What concern do critics of nudging raise?",
     "opts": [
-     "Nudges are too expensive",
-     "Nudges forbid some choices",
-     "Nudges do not change behavior",
-     "It is unclear who should decide what is best for people"
+     "Nudges are too expensive for governments",
+     "Nudges forbid people from some choices",
+     "Nudges do not really change behavior",
+     "It is unclear who should decide what is best"
     ]
    },
    {
     "stem": "What is the defenders' attitude toward influence?",
     "opts": [
-     "It cannot be avoided, so it should be open and beneficial",
-     "It should always be hidden",
-     "It is acceptable only for shops",
-     "It is wrong in every case"
+     "It cannot be avoided, so it should be open",
+     "It should always be hidden from the public",
+     "It is acceptable only for shops and stores",
+     "It is wrong in every possible case"
     ]
    }
   ],
