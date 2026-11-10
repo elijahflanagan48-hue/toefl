@@ -44,7 +44,7 @@ async function load(task, mode, qtype, exclude, bank, mock = null) {
   const screens = [];
   for (const it of items) {
     const qs = it.body.qs.map((q, i) => ({ kind: 'q', it, q: { ...q, type: (it.qtypes || [])[i] || 'Question' }, i })).filter(s => !only || only[it.id]?.has(s.i));
-    if (qs.length) screens.push({ kind: 'a', it }, ...qs);
+    if (qs.length) screens.push(...(mode === 'timed' ? [{ kind: 'a', it }] : []), ...qs); // exam mode needs the one-time audio screen; training goes straight from question to question
   }
   return { items, screens };
 }
@@ -59,14 +59,14 @@ const secFor = s => TASK[s.it.task]?.sec || 30;
 /* ---------------- audio ---------------- */
 function stopAudio() { if (audio) { audio.onended = audio.onerror = audio.ontimeupdate = null; audio.pause(); audio = null; } }
 
-function playOnce(s) {
+function playOnce(s, auto) {
   stopAudio();
   const a = audio = new Audio(s.it.body.audio);
   P.playing = true; render();
   a.ontimeupdate = () => { const b = document.querySelector('.ls-prog i'); if (b && a.duration) b.style.width = (a.currentTime / a.duration * 100) + '%'; };
   a.onended = () => { P.played[s.it.id] = true; P.playing = false; audio = null; go(P.at + 1); };
   a.onerror = () => { P.playing = false; P.audioErr = true; audio = null; render(); };
-  a.play().catch(() => { P.playing = false; P.audioErr = true; audio = null; render(); });
+  a.play().catch(() => { P.playing = false; P.audioErr = !auto; audio = null; render(); }); // blocked autoplay → plain «Слушать» button instead of an error
 }
 
 /* ---------------- renderers ---------------- */
@@ -174,6 +174,7 @@ function go(i) {
   const s = P.screens[P.at];
   if (P.mode === 'timed' && isQ(s)) P.left = secFor(s);
   render(); window.scrollTo(0, 0);
+  if (P.mode === 'timed' && !isQ(s) && !P.played[s.it.id]) playOnce(s, true);
 }
 
 function responsesFor(s) { return [{ item_id: s.it.id, q: s.i, answer: P.ans[qid(s.it, s.i)] ?? null }]; }
@@ -260,6 +261,8 @@ async function start(task, mode, qtype, exclude = [], bank) {
     }
   } catch (e) { toast(e.message); }
   render();
+  const f = P?.screens[0];
+  if (f && P.mode === 'timed' && !isQ(f)) playOnce(f, true);
 }
 
 export default function listen(params) {

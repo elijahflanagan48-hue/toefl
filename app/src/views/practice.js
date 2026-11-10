@@ -59,6 +59,10 @@ const qcount = () => P.screens.reduce((a, s) => a + (s.kind === 'ctw' ? s.qs.len
 const basSlots = it => it.body.parts.filter(p => p === null).length;
 const basAns = s => P.ans[qid(s.it, 0)] || Array(basSlots(s.it)).fill(null);
 const answered = s => s.kind === 'bas' ? basAns(s).every(x => x != null) : s.kind === 'ctw' ? s.qs.every(i => (P.ans[qid(s.it, i)] || '').length === gapLen(s.it, i) && !/\s/.test(P.ans[qid(s.it, i)])) : P.ans[qid(s.it, s.i)] != null;
+const gapFull = (s, i) => (P.ans[qid(s.it, i)] || '').length === gapLen(s.it, i) && !/\s/.test(P.ans[qid(s.it, i)]);
+const gapsLeft = s => s.kind === 'ctw' ? s.qs.filter(i => !gapFull(s, i)).length : 0;
+/** «Проверить» is available for a text with unfilled gaps too — the student is warned first */
+const canCheck = s => s.kind === 'ctw' ? true : answered(s);
 const gapLen = (it, i) => it.body.parts.filter(p => p.n)[i].n;
 const checked = s => s.kind === 'ctw' ? s.qs.every(i => P.fb[qid(s.it, i)]) : !!P.fb[qid(s.it, s.i)];
 
@@ -246,7 +250,7 @@ function bar() {
   const learn = P.mode !== 'timed';
   const right = learn
     ? (checked(s) ? `<button class="xbtn pri" data-act="pr-next"><span>${P.at < total - 1 ? 'Дальше' : 'Итоги'}</span>${ic('right', 17)}</button>`
-      : `<button class="xbtn pri" data-act="pr-check" ${answered(s) ? '' : 'disabled'}><span>Проверить</span>${ic('check', 17)}</button>`)
+      : `<button class="xbtn pri" data-act="pr-check" ${canCheck(s) ? '' : 'disabled'}><span>Проверить</span>${ic('check', 17)}</button>`)
     : `<button class="xbtn" data-act="pr-review">${ic('list', 17)}<span>Review</span></button>
        <button class="xbtn" data-act="pr-back" ${P.at ? '' : 'disabled'}>${ic('left', 17)}<span>Back</span></button>
        <button class="xbtn pri" data-act="pr-next"><span>${P.at < total - 1 ? 'Next' : 'Finish'}</span>${ic('right', 17)}</button>`;
@@ -306,9 +310,14 @@ function responsesFor(s) {
   return [{ item_id: s.it.id, q: s.i, answer: P.ans[qid(s.it, s.i)] }];
 }
 
-async function check() {
+async function check(force) {
   const s = P.screens[P.at];
-  if (!answered(s) || checked(s) || P.busy) return;
+  if (!canCheck(s) || checked(s) || P.busy) return;
+  if (s.kind === 'ctw' && !force && !answered(s)) { // unfinished text: warn, then let the student decide
+    const n = gapsLeft(s), m = s.qs.length;
+    return modal(`<h2>Остались пропуски</h2><p class="mut" style="margin-bottom:14px">Не заполнено слов: ${n} из ${m}. Если отправить так, они будут засчитаны как неверные.</p>
+      <button class="btn pri block" data-act="pr-check-anyway">Отправить как есть</button><button class="btn ghost block" data-act="modal-close" style="margin-top:6px">Вернуться к тексту</button>`);
+  }
   P.busy = true;
   try {
     const r = await src.practiceAnswer(P.attemptId, responsesFor(s));
@@ -360,7 +369,8 @@ function rerenderKeepFocus() {
 on('pr-opt', el => { const s = P.screens[P.at]; if (checked(s)) return; P.ans[qid(s.it, s.i)] = +el.dataset.k; render(); });
 on('pr-sel', el => { const s = P.screens[P.at]; if (checked(s)) return; P.ans[qid(s.it, s.i)] = +el.dataset.k; render(); });
 on('pr-ins', el => { const s = P.screens[P.at]; if (checked(s)) return; P.ans[qid(s.it, s.i)] = +el.dataset.k; render(); });
-on('pr-check', check);
+on('pr-check', () => check());
+on('pr-check-anyway', () => { closeModal(); check(true); });
 on('pr-next', () => {
   if (P.mode !== 'timed') { if (P.at < P.screens.length - 1) go(P.at + 1); else finish(); return; }
   if (P.at < P.screens.length - 1) return go(P.at + 1);
@@ -388,7 +398,7 @@ function onInput(e) {
   P.ans[qid(s.it, q)] = boxes.map(b => b.value || ' ').join('').replace(/\s+$/, '');
   if (el.value) { const all = [...document.querySelectorAll('.lb:not([readonly])')]; all[all.indexOf(el) + 1]?.focus(); }
   const btn = document.querySelector('[data-act="pr-check"]');
-  if (btn) btn.disabled = !answered(s);
+  if (btn) btn.disabled = !canCheck(s);
 }
 
 function tick() {

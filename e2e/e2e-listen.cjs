@@ -27,9 +27,8 @@ const FAKE_AUDIO = () => { // deterministic: the "recording" lasts 400 ms
 
   // learn mode, conversation from the test bank
   await t.goto(APP + '#/listen/lco?mode=learn&bank=test'); await t.waitForTimeout(1500);
-  ok(!(await t.$('.ls-audio')), 'learn: the intro screen has no player (audio lives on the questions screen)');
+  ok(!(await t.$('[data-act="ls-next"]')) || !!(await t.$('.opts .opt')), 'learn: no intermediate screen — first question right away');
   await t.screenshot({ path: OUT + '/learn-audio.png' });
-  await t.click('[data-act="ls-next"]'); await t.waitForTimeout(300);
   ok(!!(await t.$('.opts .opt')) && !!(await t.$('.ls-replay .ls-audio')), 'learn: question with replay player');
   ok(await t.evaluate(() => /audio\/L\/CONV-\d+\.mp3/.test(document.querySelector('.ls-audio').getAttribute('src'))), 'learn: player points at the conversation mp3');
   ok(!!(await t.$('[data-act="ls-check"][disabled]')), 'learn: «Проверить» disabled until answered');
@@ -55,11 +54,9 @@ const FAKE_AUDIO = () => { // deterministic: the "recording" lasts 400 ms
 
   // timed mode, announcement from the bank: audio once, no back, no replay
   await t.goto(APP + '#/train/L'); await t.goto(APP + '#/listen/lan?mode=timed&bank=test'); await t.waitForTimeout(1500);
-  ok(!!(await t.$('[data-act="ls-play"]')) && !(await t.$('audio')), 'timed: «Слушать» button, no native player');
-  ok(!(await t.$('[data-act="ls-back"], [data-act="pr-back"]')), 'timed: no Back button');
-  await t.click('[data-act="ls-play"]'); await t.waitForTimeout(100);
-  ok(!!(await t.$('.ls-prog')) && !(await t.$('[data-act="ls-play"]')), 'timed: playing — no pause / second play');
-  await t.waitForTimeout(1200);
+  ok(!(await t.$('audio')) && !(await t.$('[data-act="ls-back"], [data-act="pr-back"]')), 'timed: no native player, no Back button');
+  ok(!(await t.$('[data-act="ls-play"]')), 'timed: recording starts by itself — no «Слушать» button, no second play');
+  await t.waitForTimeout(300);
   ok(!!(await t.$('.opts .opt')) && !(await t.$('.ls-replay')), 'timed: after the recording the first question appears without a replay player');
   ok(await t.evaluate(() => window.__plays.length === 1), 'timed: the recording was started exactly once');
   ok(!!(await t.$('.xtime')), 'timed: per-question countdown shown');
@@ -85,14 +82,14 @@ const FAKE_AUDIO = () => { // deterministic: the "recording" lasts 400 ms
   ok(!txt.includes('тест-банк'), 'student does not see the teacher test-bank row');
   ok(await s.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'no horizontal scroll at 390 on the L page');
   await s.goto(APP + '#/listen/lan?mode=learn&bank=test'); await s.waitForTimeout(1500);
-  await s.click('[data-act="ls-next"]').catch(() => {}); await s.waitForTimeout(300);
+  await s.waitForTimeout(300);
   const src1 = await s.evaluate(() => document.querySelector('.ls-audio')?.getAttribute('src') || '');
   const _it = JSON.parse(require('fs').readFileSync(__dirname + '/../content/listening/items.json', 'utf8')); const _pre = new Set(_it.filter(x => x.status === 'pretest').map(x => x.id.replace(/^L-(\w+)-[ABC]-(\d+)$/, '$1-$2')));
   const _sid = (src1.match(/([A-Z]+-\d+)\.mp3/) || [])[1];
   ok(_sid && !_pre.has(_sid), 'student with ?bank=test still only gets released items', src1);
   await s.screenshot({ path: OUT + '/student-390.png' });
   await s.goto(APP + '#/listen/lcr?mode=learn'); await s.waitForTimeout(1200);
-  await s.click('[data-act="ls-next"]').catch(() => {}); await s.waitForTimeout(300);
+  await s.waitForTimeout(300);
   ok(await s.evaluate(() => !!document.querySelector('.ls-audio') || /Заданий пока нет/.test(document.body.textContent)), 'student: LCR learn page shows an item or the friendly empty state');
 
   // assignments link
