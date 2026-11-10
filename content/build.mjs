@@ -174,6 +174,7 @@ for (const it of read('content/listening/items.json')) {
   if (ids.has(it.id)) err(it.id, 'duplicate id'); ids.add(it.id);
   if (it.qs.length !== NQ[it.task]) err(it.id, `needs ${NQ[it.task]} question(s)`);
   it.qs.forEach((q, k) => { if (!q.stem || q.opts.length !== 4 || q.opts.some(o => !o)) err(it.id, `q${k + 1}: stem + 4 options`); if (!(it.key[k] >= 0 && it.key[k] <= 3)) err(it.id, `q${k + 1}: key`); if (!it.explain[k] || it.explain[k].length < 15) err(it.id, `q${k + 1}: explanation`); });
+  it.qs.forEach((q, k) => { const L = q.opts.map(o => o.length), kk = it.key[k], oth = L.filter((_, i) => i !== kk); if (L[kk] > 1.25 * Math.max(...oth)) warn(it.id, `q${k + 1}: correct option is much longer than all distractors (length bias)`); });
   if (it.status !== 'draft' && !(it.audio && existsSync(join(ROOT, 'app/public', it.audio)))) err(it.id, 'audio file missing');
   lisItems.push({ id: it.id, section: 'L', task: it.task, level: it.level, b: B[it.level], status: it.status,
     body: { kind: it.type, audio: it.audio, test: it.test, qs: it.qs },
