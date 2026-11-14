@@ -514,5 +514,65 @@
    "Some linguists claim that speaking several languages makes people more open-minded. To what extent do you agree?",
    "If everyone in the world spoke the same language, how might culture be affected?"
   ]
+ },
+ {
+  "id": "S-INT-B-044",
+  "level": "B",
+  "title": "Museums and history",
+  "scenario": "A history department is collecting student opinions about learning outside the classroom. You will answer four questions about museums and history.",
+  "questions": [
+   "Do you enjoy visiting museums? Why or why not?",
+   "Tell me about a historical place or museum that you remember well.",
+   "Some people say that studying history helps us understand the present. Do you agree or disagree?",
+   "Would you prefer to learn about history from a book, a film, or a museum visit? Explain your choice."
+  ]
+ },
+ {
+  "id": "S-INT-B-045",
+  "level": "B",
+  "title": "Sports and competition",
+  "scenario": "A student magazine is writing about sports on campus. You will answer four questions from a reporter.",
+  "questions": [
+   "What sports do you play or like to watch?",
+   "Describe a time when you took part in a team activity or a competition.",
+   "Some people think that competition makes people try harder. What is your opinion?",
+   "Should universities spend more money on sports teams or on libraries? Give reasons for your answer."
+  ]
+ },
+ {
+  "id": "S-INT-B-046",
+  "level": "B",
+  "title": "Gifts and generosity",
+  "scenario": "A research group is studying how people choose and give gifts. You will answer four questions about the topic.",
+  "questions": [
+   "What was the best gift you have ever received?",
+   "How do you usually decide what to give a friend for a birthday?",
+   "Some people prefer to give experiences, such as concert tickets, instead of objects. What do you think about this idea?",
+   "Why do you think people feel happy when they give something to others?"
+  ]
+ },
+ {
+  "id": "S-INT-B-047",
+  "level": "B",
+  "title": "Time and deadlines",
+  "scenario": "A student support center is surveying how students manage their time. You will answer four questions from an adviser.",
+  "questions": [
+   "Do you usually finish your work early or close to the deadline?",
+   "Describe a time when you had too many tasks to do at once. What did you do?",
+   "Some students believe they work better under pressure. Do you agree? Why or why not?",
+   "What advice would you give to a new student who often feels short of time?"
+  ]
+ },
+ {
+  "id": "S-INT-B-048",
+  "level": "B",
+  "title": "Parks and nature",
+  "scenario": "A city council is asking young people about public parks. You will answer four questions about nature in the city.",
+  "questions": [
+   "Is there a park near your home or university? What is it like?",
+   "How often do you spend time outdoors, and what do you usually do there?",
+   "Some people say that cities need more green spaces, even if it means fewer buildings. What is your opinion?",
+   "How could a university encourage students to spend more time in nature?"
+  ]
  }
 ]

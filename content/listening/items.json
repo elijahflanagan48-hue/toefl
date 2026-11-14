@@ -18572,5 +18572,1229 @@
    "Factual",
    "Attitude"
   ]
+ },
+ {
+  "id": "L-ANN-A-062",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-062",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-062.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F2",
+  "words": 75,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Attention, students. If you have lost your student ID card, you can get a new one at the Student Services office in the main building. The office is open from nine to four, Monday to Friday. Please bring a photo ID and ten dollars for the new card. The process takes only five minutes, and you will receive your card right away. Remember, you need your ID card to enter the library and the gym."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the announcement mainly about?",
+    "opts": [
+     "How to enter the main library",
+     "How to replace a lost ID card",
+     "How to join the campus gym",
+     "How to change a student photo"
+    ]
+   },
+   {
+    "stem": "What must students bring to the office?",
+    "opts": [
+     "A library book and a signed form",
+     "A photo ID and ten dollars",
+     "A letter from a teacher",
+     "Two photos and a ticket"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1
+  ],
+  "explain": [
+   "*lost your student ID card... get a new one*. A — вход в библиотеку — лишь деталь; C — спортзал — лишь деталь; D — смена фото не упоминается",
+   "*bring a photo ID and ten dollars*. A — книга не нужна; C — письмо не нужно; D — фотографии не требуются"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-063",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-063",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-063.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M",
+  "words": 69,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Good morning, everyone. During final exam week, the library will stay open until two o'clock in the morning. This starts next Monday and continues for ten days. The second floor will be a silent area, and group study rooms can be reserved at the front desk. Coffee and snacks will be sold in the lobby from eight in the evening. Please remember to bring your student card after midnight."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What will change during exam week?",
+    "opts": [
+     "The library will be closed down",
+     "The library will move to a new building",
+     "The library will stay open later",
+     "The library will become larger"
+    ]
+   },
+   {
+    "stem": "What can students do at the front desk?",
+    "opts": [
+     "Buy coffee and snacks in the lobby",
+     "Borrow a student card",
+     "Reserve a group study room",
+     "Pay for late books"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   2
+  ],
+  "explain": [
+   "*will stay open until two o'clock in the morning*. A — библиотека не закрывается; B — переезд не упоминается; D — размер не меняется",
+   "*group study rooms can be reserved at the front desk*. A — кофе продают в холле; B — карточку не выдают; D — штрафы не упоминаются"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-064",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-064",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-064.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F2",
+  "words": 70,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Attention, drivers. Parking Lot B, behind the science building, will be closed all next week because workers are making new lines on the ground. During this time, please use Lot D near the sports field. A free shuttle bus will run between Lot D and the main campus every ten minutes, from seven in the morning until six in the evening. Lot B will open again on the following Monday."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why will Lot B be closed?",
+    "opts": [
+     "A building will be built",
+     "Workers will paint new lines",
+     "The ground will be cleaned",
+     "The lot will be a sports field"
+    ]
+   },
+   {
+    "stem": "What should drivers do next week?",
+    "opts": [
+     "Park in Lot D and take the shuttle",
+     "Park behind the science building",
+     "Take a bus to campus from home",
+     "Walk from the main gate to the campus"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   0
+  ],
+  "explain": [
+   "*making new lines on the ground*. A — здание не строят; C — уборка не упоминается; D — поле — другая парковка",
+   "*use Lot D... free shuttle bus*. B — Lot B закрыта; C — поездка из дома не предлагается; D — пешком идти не предлагают"
+  ],
+  "qtypes": [
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-ANN-B-065",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-065",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-065.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M",
+  "words": 75,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Students interested in studying abroad are invited to an information session on Tuesday at four o'clock in the Humanities Building. Representatives from partner universities in Spain, Korea, and Canada will describe their programs, and former exchange students will share their experiences. Financial aid is available, but the application deadline for next fall is March first, so it is wise to start early. Those who attend will receive a free guide with a checklist of required documents."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the purpose of the announcement?",
+    "opts": [
+     "To announce a new scholarship for students",
+     "To describe a new partner university",
+     "To explain how to get a visa",
+     "To invite students to an info session"
+    ]
+   },
+   {
+    "stem": "What does the speaker suggest students do?",
+    "opts": [
+     "Wait until the fall to apply",
+     "Choose a program in Spain first",
+     "Visit the partner universities",
+     "Begin the application process early"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   3
+  ],
+  "explain": [
+   "*invited to an information session*. A — стипендия — лишь деталь; B — новый университет не описывается; C — виза не упоминается",
+   "*it is wise to start early*. A — ждать до осени не советуют; B — Испания — лишь пример; C — поездки не упоминаются"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-ANN-B-066",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-066",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-066.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F2",
+  "words": 77,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Residents of Hartley Hall, please note that the building's water will be turned off next Thursday from nine in the morning until one in the afternoon. Maintenance workers need to replace an old pipe in the basement. We recommend that you fill a few bottles with water in advance and plan to shower before or after the work. The kitchen on the first floor will remain closed until the repairs are finished. We apologize for the inconvenience."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why will the water be turned off?",
+    "opts": [
+     "The building is being painted",
+     "The kitchen is being cleaned",
+     "The basement is flooded after the rain",
+     "Workers must replace an old pipe"
+    ]
+   },
+   {
+    "stem": "What does the speaker recommend that residents do?",
+    "opts": [
+     "Store some water ahead of time",
+     "Move to another building",
+     "Use the basement kitchen",
+     "Call the maintenance office right away"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0
+  ],
+  "explain": [
+   "*replace an old pipe in the basement*. A — покраска не упоминается; B — кухня — лишь следствие; C — затопления нет",
+   "*fill a few bottles with water in advance*. B — переезд не предлагают; C — кухня закрыта; D — звонок не нужен"
+  ],
+  "qtypes": [
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-ANN-C-067",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-067",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-067.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M",
+  "words": 79,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Starting next month, the dining halls will replace all plastic containers with compostable ones, as part of the university's plan to reduce waste. Students will find separate bins for compost, recycling, and trash at every exit. Although the new containers cost more, the university believes the long-term benefits justify the expense. Staff will be at the bins during the first two weeks to answer questions, and a short guide is posted on the dining services website. Feedback is welcome."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main purpose of the announcement?",
+    "opts": [
+     "To report a rise in food prices",
+     "To ask students to be volunteers",
+     "To explain a change to reduce waste",
+     "To describe a new dining hall"
+    ]
+   },
+   {
+    "stem": "What does the speaker imply about the new containers?",
+    "opts": [
+     "They are cheaper than the plastic ones",
+     "They will be tested for two weeks",
+     "They cost more, but are worthwhile",
+     "They are harder for students to use"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   2
+  ],
+  "explain": [
+   "*plan to reduce waste*. A — цены на еду не повышаются; B — волонтёров не просят; D — новый зал не открывается",
+   "*cost more... benefits justify the expense*. A — они дороже, а не дешевле; B — две недели — помощь персонала; D — сложность не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-CONV-A-068",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-068",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-068.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M2, Woman = TOEFL UK-F",
+  "words": 57,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a lost-and-found worker."
+   },
+   {
+    "who": "Man",
+    "text": "Hello. I think I left my umbrella in the library yesterday afternoon."
+   },
+   {
+    "who": "Woman",
+    "text": "What does it look like?"
+   },
+   {
+    "who": "Man",
+    "text": "It's blue, and it has a wooden handle."
+   },
+   {
+    "who": "Woman",
+    "text": "Let me check. Yes, we have one like that. Can you tell me your name, please?"
+   },
+   {
+    "who": "Man",
+    "text": "It's Kevin Park. Thank you so much."
+   },
+   {
+    "who": "Woman",
+    "text": "No problem. Here it is. Please sign this paper."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Where did the man leave his umbrella?",
+    "opts": [
+     "In the cafeteria",
+     "In the library",
+     "In a classroom",
+     "On the bus"
+    ]
+   },
+   {
+    "stem": "What does the woman ask the man to do?",
+    "opts": [
+     "Pay a small fee",
+     "Show his student card",
+     "Sign a paper",
+     "Come back on Friday"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2
+  ],
+  "explain": [
+   "*in the library yesterday afternoon*. A — кафетерий не упоминается; C — аудитория не упоминается; D — автобус не упоминается",
+   "*Please sign this paper*. A — оплата не упоминается; B — карточку не просят; D — пятница не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-069",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-069",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-069.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F, Man = TOEFL AU-M3",
+  "words": 59,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Woman",
+    "text": "Are you in any clubs this semester?"
+   },
+   {
+    "who": "Man",
+    "text": "No, but I want to join one. I like taking photos."
+   },
+   {
+    "who": "Woman",
+    "text": "Then you should try the Photo Club. They meet every Wednesday at five in Room twelve."
+   },
+   {
+    "who": "Man",
+    "text": "Do I need my own camera?"
+   },
+   {
+    "who": "Woman",
+    "text": "Not at first. The club has a few cameras that members can borrow."
+   },
+   {
+    "who": "Man",
+    "text": "That's great. I'll go this Wednesday."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What kind of club does the woman suggest?",
+    "opts": [
+     "A photography club",
+     "A music and singing club",
+     "A cooking and baking club",
+     "A film and movie club"
+    ]
+   },
+   {
+    "stem": "Why does the man ask about a camera?",
+    "opts": [
+     "He wants to sell his old camera soon",
+     "He lost his camera last week",
+     "He wants to know if he must buy one",
+     "He plans to take a photo class"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   2
+  ],
+  "explain": [
+   "*the Photo Club*. B — музыка не упоминается; C — кулинария не упоминается; D — кино не упоминается",
+   "*Do I need my own camera?* A — продавать не собирается; B — потери не было; D — курс не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-CONV-A-070",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-070",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-070.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M, Woman = TOEFL UK-F2",
+  "words": 58,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Man",
+    "text": "My sister's birthday is on Saturday. I want to take her to dinner, but I don't know where."
+   },
+   {
+    "who": "Woman",
+    "text": "Does she like Italian food?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes, she loves pasta."
+   },
+   {
+    "who": "Woman",
+    "text": "Try Luigi's on Main Street. The food is good, and it isn't expensive. But you should call first, because it gets busy on weekends."
+   },
+   {
+    "who": "Man",
+    "text": "Good idea. I'll call them this afternoon."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What does the man need help with?",
+    "opts": [
+     "Buying a birthday present",
+     "Planning a big party",
+     "Choosing a restaurant",
+     "Finding a pasta recipe"
+    ]
+   },
+   {
+    "stem": "Why does the woman suggest calling first?",
+    "opts": [
+     "The place may be closed then",
+     "The prices often change a lot",
+     "The street is hard to find",
+     "The place is busy on weekends"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   3
+  ],
+  "explain": [
+   "*I don't know where*. A — подарок не обсуждается; B — вечеринка не планируется; D — рецепт не упоминается",
+   "*it gets busy on weekends*. A — закрытие не упоминается; B — цены не обсуждаются; C — поиск улицы не обсуждается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-B-071",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-071",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-071.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F2, Man = TOEFL CA-M",
+  "words": 82,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Woman",
+    "text": "Our study group meets on Thursdays at six, but I just got a new work schedule. I can't make it anymore."
+   },
+   {
+    "who": "Man",
+    "text": "That's a problem. Most of us have classes until five on Tuesdays and Fridays, so those days don't work either."
+   },
+   {
+    "who": "Woman",
+    "text": "What about Monday evening? I'm free after five thirty."
+   },
+   {
+    "who": "Man",
+    "text": "Monday is possible for me, but Ahmed has basketball practice then. Let me ask him."
+   },
+   {
+    "who": "Woman",
+    "text": "Okay. If he can't come, we could also meet online on Sunday, which is easier for everyone."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What problem do the students discuss?",
+    "opts": [
+     "Choosing a topic to study",
+     "Finding a place for the group",
+     "Deciding who will lead it",
+     "Finding a new time to meet"
+    ]
+   },
+   {
+    "stem": "What does the woman suggest if Monday does not work?",
+    "opts": [
+     "Meeting online on Sunday",
+     "Meeting on Friday evening",
+     "Studying alone this week",
+     "Asking the professor for help"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0
+  ],
+  "explain": [
+   "Расписание группы. A — тема не обсуждается; B — место не обсуждается; C — руководитель не обсуждается",
+   "*we could also meet online on Sunday*. B — пятница занята занятиями; C — одной заниматься не предлагают; D — профессор не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-B-072",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-072",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-072.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F3, Man = TOEFL AU-M2",
+  "words": 88,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a professor."
+   },
+   {
+    "who": "Woman",
+    "text": "Professor Hill, may I speak with you for a moment about my research paper?"
+   },
+   {
+    "who": "Man",
+    "text": "Of course. It's due on Friday, isn't it?"
+   },
+   {
+    "who": "Woman",
+    "text": "Yes. The problem is that I have a job interview on Thursday in another city, and I will be traveling most of the day. I'm afraid I won't be able to finish the paper on time."
+   },
+   {
+    "who": "Man",
+    "text": "I appreciate that you told me early. I can give you until Monday, but I won't accept anything after that."
+   },
+   {
+    "who": "Woman",
+    "text": "That's very generous. Thank you. I'll send it Sunday night."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the student want to talk to the professor?",
+    "opts": [
+     "She needs more time for her paper",
+     "She wants to pick a new topic",
+     "She disagrees with her last grade",
+     "She missed an important class"
+    ]
+   },
+   {
+    "stem": "What can be inferred about the professor's decision?",
+    "opts": [
+     "He is angry about her request today",
+     "He will lower her final grade",
+     "He will help, but only to a point",
+     "He cannot change the due date"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   2
+  ],
+  "explain": [
+   "*I won't be able to finish the paper on time*. B — тема не обсуждается; C — оценка не обсуждается; D — пропуск занятия не упоминается",
+   "*until Monday, but nothing after that*. A — он не сердится; B — штраф за оценку не упоминается; D — он как раз переносит срок"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Attitude"
+  ]
+ },
+ {
+  "id": "L-CONV-C-073",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-073",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-073.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M2, Woman = TOEFL US-F",
+  "words": 89,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a professor."
+   },
+   {
+    "who": "Man",
+    "text": "Professor Reyes, I'd like to change my thesis topic."
+   },
+   {
+    "who": "Woman",
+    "text": "That's a big decision at this stage. What has led you to it?"
+   },
+   {
+    "who": "Man",
+    "text": "I started with urban housing, but I've become more interested in how public transportation shapes where people choose to live."
+   },
+   {
+    "who": "Woman",
+    "text": "I understand. However, you've already completed a literature review on housing, so you'd be starting over. Have you considered combining the two?"
+   },
+   {
+    "who": "Man",
+    "text": "I hadn't thought of that. It would let me keep most of my research."
+   },
+   {
+    "who": "Woman",
+    "text": "Exactly. Write a one-page proposal, and we'll discuss it next week."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the man want to change his topic?",
+    "opts": [
+     "His first topic had too little data",
+     "His professor told him to change",
+     "Another subject interests him more",
+     "He cannot finish his literature review"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about changing topics completely?",
+    "opts": [
+     "It would waste work he has done",
+     "It would be impossible this year",
+     "It would improve his grade chances",
+     "It would please the department"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0
+  ],
+  "explain": [
+   "*more interested in public transportation*. A — данные как раз богаче в новой теме; B — профессор не требовала смены; D — обзор литературы уже готов",
+   "*you'd be starting over*. B — невозможным она не называет; C — оценки не обсуждаются; D — кафедра не упоминается"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-A-056",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-056",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-056.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F",
+  "words": 192,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a biology class."
+   },
+   {
+    "who": "Woman",
+    "text": "Today we will talk about how plants make their own food. This process is called photosynthesis. Plants do not eat like animals. Instead, they use sunlight, water, and a gas from the air called carbon dioxide. The leaves have a green substance called chlorophyll, which catches the light from the sun. The roots take water from the soil, and tiny holes in the leaves let carbon dioxide in. Inside the leaf, the plant uses the energy from light to change water and carbon dioxide into sugar. The sugar is the plant's food, and it helps the plant grow. During this process, the plant also makes oxygen and sends it into the air. This is very important, because people and animals need oxygen to breathe. Think about what happens when a plant sits in a dark room for a long time. Without light, it cannot make sugar, so its leaves turn pale and weak. That is why plants usually grow toward windows. Next week, we will do a small experiment. Each of you will put one plant near a window and one in a closet, and we will compare them after seven days."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "Why leaves change their color in autumn",
+     "How plants use sunlight to make food",
+     "How roots grow under the ground",
+     "Why animals need oxygen to live"
+    ]
+   },
+   {
+    "stem": "According to the professor, what does chlorophyll do?",
+    "opts": [
+     "It takes water from the soil",
+     "It catches light from the sun",
+     "It lets carbon dioxide into the leaf",
+     "It turns sugar into oxygen"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention a plant in a dark room?",
+    "opts": [
+     "To show plants need light to make sugar",
+     "To explain why plant leaves are green",
+     "To describe how plants grow new roots",
+     "To compare plants with animals"
+    ]
+   },
+   {
+    "stem": "What will the students do next week?",
+    "opts": [
+     "Visit a garden near the university",
+     "Measure the oxygen in the classroom air",
+     "Plant seeds outside the building",
+     "Compare plants kept in different places"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1,
+   0,
+   3
+  ],
+  "explain": [
+   "Фотосинтез. A — осенняя окраска не обсуждается; C — корни — лишь деталь; D — кислород — лишь следствие",
+   "*catches the light from the sun*. A — воду берут корни; C — углекислый газ проходит через отверстия; D — сахар не превращается в кислород",
+   "*Without light, it cannot make sugar*. B — зелёный цвет — другое объяснение; C — корни не обсуждаются; D — сравнения с животными нет",
+   "*one plant near a window and one in a closet*. A — сад не упоминается; B — кислород не измеряют; C — посадка семян не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-TALK-A-057",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-057",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-057.mp3",
+  "voices": "Narrator, Man = TOEFL US-M",
+  "words": 198,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an earth science class."
+   },
+   {
+    "who": "Man",
+    "text": "Earthquakes are sudden shakings of the ground. They can be so small that we do not feel them, or strong enough to destroy buildings. Why do they happen? The surface of the Earth is made of large pieces of rock, called plates. These plates move very slowly, but sometimes they get stuck against each other. Over many years, pressure builds up. Then, suddenly, the rock breaks and moves, and energy travels through the ground as waves. This is the earthquake. The place where the rock breaks is called the focus, and the point on the surface above it is called the epicenter. Scientists measure the size of an earthquake with a number. An earthquake of magnitude three is very small, but one of magnitude seven can cause great damage. Unfortunately, no one can say exactly when an earthquake will happen. However, we can prepare. In countries like Japan, buildings are made to bend a little instead of breaking. People also practice what to do: drop to the floor, cover your head, and hold on to something strong. This simple habit has saved many lives. For our next class, please find out if earthquakes happen in your home region."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "Why earthquakes happen and how people prepare",
+     "How scientists predict the exact time of one",
+     "Why Japan has so many strong buildings",
+     "How plates move slowly across the ocean"
+    ]
+   },
+   {
+    "stem": "According to the professor, what is the epicenter?",
+    "opts": [
+     "The place where the rock breaks",
+     "The point on the surface above the break",
+     "The number that shows the size",
+     "The wave that travels through the rock"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention Japan?",
+    "opts": [
+     "To show where the strongest one happened",
+     "To give an example of earthquake-proof buildings",
+     "To explain why the plates get stuck",
+     "To explain why the plates get stuck often"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about the advice to drop, cover, and hold on?",
+    "opts": [
+     "It is a simple habit that protects people",
+     "It is useful only in the country of Japan",
+     "It works only for very small earthquakes",
+     "It is difficult for most people to learn"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   1,
+   1,
+   0
+  ],
+  "explain": [
+   "Причины землетрясений и подготовка. B — точное время предсказать нельзя; C — Япония — лишь пример; D — движение плит — лишь причина",
+   "*the point on the surface above it*. A — это очаг (focus); C — размер измеряют магнитудой; D — волны — энергия",
+   "*buildings are made to bend a little*. A — сильнейшее землетрясение не упоминается; C — причина застревания плит не связана; D — волны не сравниваются",
+   "*simple habit has saved many lives*. B — не только Япония; C — не только слабые; D — описана как простая"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-A-058",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-058",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-058.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F",
+  "words": 195,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an environmental science class."
+   },
+   {
+    "who": "Woman",
+    "text": "Look at the ground under a tree in the forest. You will see fallen leaves, small branches, and maybe a dead insect. But a few weeks later, many of these things are gone. Where do they go? The answer is decomposers. Decomposers are living things, such as fungi, bacteria, and worms, that break down dead plants and animals into very small pieces. Mushrooms are one kind of fungus. We usually see only the top, but under the ground, a fungus has thin threads that spread through the soil and take in food from dead material. When decomposers work, they return important substances, called nutrients, to the soil. Plants then take up these nutrients through their roots, so new plants can grow. In this way, nothing is wasted in nature. Without decomposers, dead leaves would build up in thick layers, and the soil would slowly lose its nutrients. Farmers know this well. Many of them put old plant material and food scraps into a pile called compost, and let decomposers turn it into rich soil. Some students in this class already have compost bins at home. If you do, please tell us about it on Monday."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How decomposers return nutrients to soil",
+     "Why mushrooms are good for people to eat",
+     "How trees lose their leaves in autumn",
+     "Why farmers use machines on their land"
+    ]
+   },
+   {
+    "stem": "According to the professor, what do we usually see of a fungus?",
+    "opts": [
+     "The thin threads in the soil",
+     "The food it takes from leaves",
+     "The nutrients it returns",
+     "The top part above the ground"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention compost?",
+    "opts": [
+     "To explain how fungi grow in the soil",
+     "To show how people use decomposers",
+     "To describe what farmers sell at markets",
+     "To compare soil in two different places"
+    ]
+   },
+   {
+    "stem": "What would happen without decomposers?",
+    "opts": [
+     "Dead material would pile up and soil would lose nutrients",
+     "Plants would grow much faster in the whole forest",
+     "Worms would start to eat the living trees",
+     "Fungi would take all of the water in the soil"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   3,
+   1,
+   0
+  ],
+  "explain": [
+   "Роль редуцентов. B — грибы — лишь пример; C — листопад не обсуждается; D — техника не упоминается",
+   "*We usually see only the top*. A — нити под землёй; B — питание не видно; C — питательные вещества не видны",
+   "*let decomposers turn it into rich soil*. A — рост грибов не объясняется; C — продажа не упоминается; D — почвы не сравниваются",
+   "*dead leaves would build up in thick layers*. B — рост не ускорится; C — черви не едят живые деревья; D — вода не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-B-059",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-059",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-059.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2",
+  "words": 206,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a microbiology class."
+   },
+   {
+    "who": "Man",
+    "text": "Antibiotics are among the most important medicines ever discovered. Before the nineteen-forties, even a small infection could be deadly. Today, antibiotics cure bacterial infections quickly. But there is a growing problem called antibiotic resistance. To understand it, remember that bacteria multiply very fast, sometimes every twenty minutes. In any large group of bacteria, a few may be slightly different, and some of these can survive a particular antibiotic. When we use the medicine, the sensitive bacteria die, but the resistant ones remain and multiply. Soon the whole population is resistant. Notice that the medicine does not create resistance. It only selects bacteria that already have it. This is natural selection in action. The risk increases when people take antibiotics they do not need, for example for a cold, which is caused by a virus, not bacteria. It also increases when patients stop taking the medicine too early, because the strongest bacteria may survive. Some doctors say we are moving toward a time when simple infections will be hard to treat again. To slow this process, hospitals are using antibiotics more carefully, and scientists are searching for new kinds of drugs. Still, the best defense may be something simple: using antibiotics only when they are really necessary."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main point of the talk?",
+    "opts": [
+     "Antibiotics are no longer useful to anybody today",
+     "Overuse of antibiotics helps resistant bacteria spread",
+     "Bacteria multiply much faster than viruses do",
+     "Doctors should stop treating every infection"
+    ]
+   },
+   {
+    "stem": "According to the professor, why do resistant bacteria become common?",
+    "opts": [
+     "The medicine changes them into resistant ones",
+     "They survive the medicine and then multiply",
+     "They grow only in hospitals",
+     "They are stronger than all viruses"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention a cold?",
+    "opts": [
+     "To show how fast bacteria can multiply",
+     "To explain how doctors find new kinds of drugs",
+     "To describe a very deadly infection",
+     "To give an example of unneeded antibiotic use"
+    ]
+   },
+   {
+    "stem": "What does the professor imply is the best defense against resistance?",
+    "opts": [
+     "Developing a brand new drug every single year",
+     "Treating every infection immediately",
+     "Using antibiotics only when necessary",
+     "Keeping patients in hospitals longer"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1,
+   3,
+   2
+  ],
+  "explain": [
+   "Резистентность и её причины. A — антибиотики пока полезны; C — сравнения с вирусами нет; D — лечение не отменяют",
+   "*the resistant ones remain and multiply*. A — лекарство не создаёт устойчивость; C — больницы не упоминаются как единственное место; D — вирусы не сравниваются",
+   "*a cold, which is caused by a virus*. A — размножение — другая мысль; B — новые лекарства не связаны; C — простуда не смертельна",
+   "*using antibiotics only when they are really necessary*. A — новые лекарства — не главное; B — немедленное лечение не рекомендуется; D — госпитализация не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Purpose",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-B-060",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-060",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-060.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F3",
+  "words": 194,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a zoology class."
+   },
+   {
+    "who": "Woman",
+    "text": "Every year, millions of birds travel thousands of kilometers between their summer and winter homes. This journey is called migration. Take the Arctic tern, which flies from the Arctic to Antarctica and back, nearly seventy thousand kilometers. Why do birds do this? The main reason is food. In summer, the north has long days and many insects, so it is a good place to raise young. But in winter, the insects disappear and the ground freezes, so birds fly south, where food is easier to find. How do they find their way? Scientists have discovered several methods. Birds use the position of the sun during the day and the stars at night. Many can also sense the Earth's magnetic field, almost like a built-in compass. Some even remember landmarks, such as rivers and mountains. Migration is dangerous, though. Storms, hunger, and tall buildings with bright lights cause many deaths. That is why some cities now turn off their lights at night during the migration season. Researchers say that this simple change has helped reduce collisions in several places. Next week, I'd like you to read about one migrating bird and share what you learn."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How the Arctic tern raises its young birds each year",
+     "Why birds migrate and how they find their way",
+     "Why some kinds of birds cannot fly far",
+     "How big cities build their tall buildings"
+    ]
+   },
+   {
+    "stem": "According to the professor, why do birds fly south in winter?",
+    "opts": [
+     "The days are too long in the north",
+     "They want to raise young in warm places",
+     "Storms stop them from staying",
+     "Food becomes hard to find in the north"
+    ]
+   },
+   {
+    "stem": "How do birds find their way, according to the professor?",
+    "opts": [
+     "By following other kinds of animals",
+     "By flying along the coast for most of the way",
+     "By listening to sounds from the ground",
+     "By using the sun, stars, and magnetic field"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention turning off city lights?",
+    "opts": [
+     "To explain how birds can see at night",
+     "To prove that cities attract a lot of insects",
+     "To describe a law about tall buildings",
+     "To show people can reduce one danger to birds"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   3,
+   3,
+   3
+  ],
+  "explain": [
+   "Причины и навигация миграции. A — крачка — лишь пример; C — дальность не обсуждается; D — здания — лишь опасность",
+   "*insects disappear and the ground freezes*. A — дни зимой короткие; B — птенцов выводят летом на севере; C — бури — опасность в пути",
+   "*sun... stars... magnetic field*. A — следование за животными не упоминается; B — берег не единственный ориентир; C — звуки земли не упоминаются",
+   "*helped reduce collisions*. A — зрение ночью не объясняется; B — насекомые не упоминаются; C — закон не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Method",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-TALK-C-061",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-061",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-061.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M2",
+  "words": 217,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an economics class."
+   },
+   {
+    "who": "Man",
+    "text": "In nineteen sixty-eight, the ecologist Garrett Hardin published an essay with a memorable title: the tragedy of the commons. His argument starts with a simple picture. Imagine a pasture that is open to every farmer in a village. Each farmer wants to earn as much as possible, so each adds one more cow. For an individual farmer, the logic seems perfect: he receives the full benefit of the extra cow, while the cost, a little less grass for everyone, is shared among all the farmers. But when every farmer follows the same logic, the pasture is overgrazed, the grass disappears, and everyone loses. Hardin used this story to explain problems such as overfishing and air pollution. Now, here is the interesting part. Hardin believed that the only solutions were private ownership or government control. Later, the political scientist Elinor Ostrom challenged this view. She studied communities around the world, from Swiss mountain villages to fishing groups, and found that many of them had managed shared resources successfully for generations, without privatizing them and without strong outside control. They did it through clear rules, local monitoring, and fair penalties. Her work earned her the Nobel Prize in economics in two thousand nine. So the tragedy is not inevitable. It depends on whether people can communicate and build trust."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main point of the lecture?",
+    "opts": [
+     "Private ownership is always the best way to protect any shared resource",
+     "Farmers should keep fewer animals on their shared land",
+     "Shared resources can be overused, but communities may manage them well",
+     "Governments should control all natural resources in a country"
+    ]
+   },
+   {
+    "stem": "Why does the professor describe the pasture and the farmers?",
+    "opts": [
+     "To show how individual choices can harm a group",
+     "To show that farmers share their profits fairly",
+     "To explain how cows are bred and raised",
+     "To prove that grass grows very slowly"
+    ]
+   },
+   {
+    "stem": "According to the professor, what did Ostrom find?",
+    "opts": [
+     "Private owners protect resources much better than groups do",
+     "Outside control always succeeds in every situation",
+     "Communities often managed shared resources with their own rules",
+     "Most communities fail within a few years"
+    ]
+   },
+   {
+    "stem": "What can be inferred about Hardin's two solutions?",
+    "opts": [
+     "They are never effective",
+     "They were rejected by all scientists",
+     "They are used only in villages",
+     "They are not the only possible ones"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0,
+   2,
+   3
+  ],
+  "explain": [
+   "Трагедия общин и возражение Остром. A — Остром оспаривает это; B — фермеры — лишь пример; D — госконтроль — не единственное решение",
+   "*the pasture is overgrazed... everyone loses*. B — справедливой прибыли в примере нет; C — разведение коров не обсуждается; D — рост травы не главный пункт",
+   "*clear rules, local monitoring, and fair penalties*. A — она не подтвердила частную собственность; B — внешний контроль не нужен; D — сообщества не терпели неудачу",
+   "*Ostrom challenged this view*. A — они иногда работают; B — не все учёные отвергли; C — не только деревни"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Purpose",
+   "Factual",
+   "Inference"
+  ]
  }
 ]

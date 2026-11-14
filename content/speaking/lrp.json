@@ -538,5 +538,65 @@
    "During the lecture, you should sit near the front in case she needs any assistance.",
    "Afterward, take her to the hotel and confirm her flight for tomorrow."
   ]
+ },
+ {
+  "id": "S-LRP-B-037",
+  "level": "B",
+  "title": "Greenhouse volunteer",
+  "scenario": "You are a volunteer at the university greenhouse. The coordinator is explaining the rules to new helpers on their first day.",
+  "sentences": [
+   "Wear gloves before you touch any plants.",
+   "Water the seedlings every morning.",
+   "Please keep the greenhouse door closed to protect the temperature.",
+   "Label each tray clearly so that visitors know what is growing.",
+   "Tell the manager at once if you notice insects on the leaves.",
+   "On Fridays, record the height of each plant in the notebook by the door.",
+   "Before you leave, clean the tools carefully and put them on the shelf."
+  ]
+ },
+ {
+  "id": "S-LRP-B-038",
+  "level": "B",
+  "title": "Theater box office",
+  "scenario": "You work at the campus theater box office. A supervisor is explaining how to help customers who want to buy tickets.",
+  "sentences": [
+   "Greet each customer with a smile.",
+   "Ask which show they would like to see.",
+   "Students receive a discount if they show a valid student card.",
+   "Please check the seating chart before you print any tickets.",
+   "Tickets for the evening show cannot be refunded after noon.",
+   "A customer who needs a wheelchair space must reserve it one day earlier.",
+   "When the line is long, apologize for the wait and thank everyone for waiting."
+  ]
+ },
+ {
+  "id": "S-LRP-B-039",
+  "level": "B",
+  "title": "Language exchange organizer",
+  "scenario": "You help organize a weekly language exchange at the student center. The program director is explaining your responsibilities.",
+  "sentences": [
+   "Arrive early to arrange the tables.",
+   "Welcome every new participant warmly.",
+   "Pair each student with a partner who speaks a different language.",
+   "Remind everyone to switch languages after twenty minutes.",
+   "Please keep a list of the names of all participants.",
+   "If a conversation becomes quiet, suggest a new topic for the pair.",
+   "After the meeting, send a short email to thank people and announce the next date."
+  ]
+ },
+ {
+  "id": "S-LRP-B-040",
+  "level": "B",
+  "title": "Campus safety escort",
+  "scenario": "You are a student volunteer in the campus safety escort program. A trainer is explaining how to walk with students at night.",
+  "sentences": [
+   "Always wear your bright yellow vest.",
+   "Carry a flashlight and a radio.",
+   "Ask the student where he or she needs to go before you leave.",
+   "Walk on the well-lit paths and avoid the empty parking lots.",
+   "Stay beside the student and talk calmly during the walk.",
+   "If you see anything unusual, call the security office and wait for help.",
+   "When you arrive, make sure the student enters the building safely before you leave."
+  ]
  }
 ]
