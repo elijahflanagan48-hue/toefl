@@ -20726,84 +20726,6 @@
   ]
  },
  {
-  "id": "L-TALK-A-064",
-  "type": "TALK",
-  "task": "lat",
-  "level": "A",
-  "short": "TALK-064",
-  "status": "active",
-  "test": null,
-  "audio": "audio/L/TALK-064.mp3",
-  "voices": "Narrator, Woman = TOEFL US-F",
-  "words": 187,
-  "transcript": [
-   {
-    "who": "Narrator",
-    "text": "Listen to a talk in a zoology class."
-   },
-   {
-    "who": "Woman",
-    "text": "Deserts are some of the hardest places to live. The days are very hot, the nights can be cold, and there is almost no water. Even so, many animals live there. Today we will see how they survive. The first problem is heat. Many small animals, like the desert mouse, hide in underground holes during the day and come out only at night, when the air is cooler. The second problem is water. The kangaroo rat is a famous example. It almost never drinks. It gets the water it needs from the seeds it eats, and its body wastes very little. The camel has a different strategy. It can drink more than a hundred liters at one time and then travel for many days without drinking again. The camel's hump does not store water. It stores fat, and the fat gives the camel energy. Finally, some animals have special body parts. The fennec fox has huge ears, and these help the fox lose heat from its body. So desert animals do not fight the desert. They use clever habits and body features to live with it."
-   }
-  ],
-  "qs": [
-   {
-    "stem": "What is the lecture mostly about?",
-    "opts": [
-     "Why deserts are growing larger each year",
-     "How people travel across dry land",
-     "Which animals are the fastest in the world",
-     "How animals manage to live in deserts"
-    ]
-   },
-   {
-    "stem": "How does the kangaroo rat get most of its water?",
-    "opts": [
-     "From small pools near the rocks",
-     "From the seeds that it eats",
-     "From the morning dew on plants",
-     "From the cold air at night"
-    ]
-   },
-   {
-    "stem": "What does the professor say about the camel's hump?",
-    "opts": [
-     "It stores water for the long trips",
-     "It protects the camel from the hot sun",
-     "It helps the camel run much faster",
-     "It stores fat that gives energy"
-    ]
-   },
-   {
-    "stem": "Why does the professor mention the fennec fox's ears?",
-    "opts": [
-     "To explain how foxes hear food at night",
-     "To show why foxes sleep underground",
-     "To compare foxes with desert mice",
-     "To show how a body part helps lose heat"
-    ]
-   }
-  ],
-  "key": [
-   3,
-   1,
-   3,
-   3
-  ],
-  "explain": [
-   "*Today we will look at how they survive*. A — рост пустынь не обсуждается; B — путешествия людей не обсуждаются; C — скорость животных не обсуждается",
-   "*It gets the water it needs from the seeds it eats*. A — лужи не упоминаются; C — роса не упоминается; D — холодный воздух не упоминается",
-   "*the camel's hump does not store water. It stores fat, which gives the camel energy*. A — воду горб не хранит; B — защита от солнца не упоминается; C — скорость не упоминается",
-   "*huge ears, and these help the fox lose heat from its body*. A — слух и поиск еды не упоминаются; B — сон под землёй не связан с ушами; C — сравнение с мышами не упоминается"
-  ],
-  "qtypes": [
-   "Main Idea",
-   "Factual",
-   "Factual",
-   "Purpose"
-  ]
- },
- {
   "id": "L-TALK-A-065",
   "type": "TALK",
   "task": "lat",
@@ -21035,6 +20957,84 @@
    "Factual",
    "Inference",
    "Factual"
+  ]
+ },
+ {
+  "id": "L-TALK-A-064",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-064",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-064.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F",
+  "words": 187,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a zoology class."
+   },
+   {
+    "who": "Woman",
+    "text": "Deserts are some of the hardest places to live. The days are very hot, the nights can be cold, and there is almost no water. Yet many animals do live there. Today we will see how they survive. The first problem is heat. Many small animals, like the desert mouse, hide in underground holes during the day and come out only at night, when the air is cooler. The second problem is water. The kangaroo rat is a famous example. It almost never drinks. It gets the water it needs from the seeds it eats, and its body wastes very little. The camel has a different strategy. It can drink more than a hundred liters at one time and then travel for many days without drinking again. The camel's hump does not store water. It stores fat, and the fat gives the camel energy. Finally, some animals have special body parts. The fennec fox has huge ears, and these help the fox lose heat from its body. So desert animals do not fight the desert. They use clever habits and body features to live with it."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the lecture mostly about?",
+    "opts": [
+     "Why deserts are growing larger each year",
+     "How people travel across dry land",
+     "Which animals are the fastest in the world",
+     "How animals manage to live in deserts"
+    ]
+   },
+   {
+    "stem": "How does the kangaroo rat get most of its water?",
+    "opts": [
+     "From small pools near the rocks",
+     "From the seeds that it eats",
+     "From the morning dew on plants",
+     "From the cold air at night"
+    ]
+   },
+   {
+    "stem": "What does the professor say about the camel's hump?",
+    "opts": [
+     "It stores water for the long trips",
+     "It protects the camel from the hot sun",
+     "It helps the camel run much faster",
+     "It stores fat that gives energy"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention the fennec fox's ears?",
+    "opts": [
+     "To explain how foxes hear food at night",
+     "To show why foxes sleep underground",
+     "To compare foxes with desert mice",
+     "To show how a body part helps lose heat"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1,
+   3,
+   3
+  ],
+  "explain": [
+   "*Today we will look at how they survive*. A — рост пустынь не обсуждается; B — путешествия людей не обсуждаются; C — скорость животных не обсуждается",
+   "*It gets the water it needs from the seeds it eats*. A — лужи не упоминаются; C — роса не упоминается; D — холодный воздух не упоминается",
+   "*the camel's hump does not store water. It stores fat, which gives the camel energy*. A — воду горб не хранит; B — защита от солнца не упоминается; C — скорость не упоминается",
+   "*huge ears, and these help the fox lose heat from its body*. A — слух и поиск еды не упоминаются; B — сон под землёй не связан с ушами; C — сравнение с мышами не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Purpose"
   ]
  }
 ]
