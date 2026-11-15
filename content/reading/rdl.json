@@ -8365,5 +8365,228 @@
     "ex": "2 p.m. — «approximately», а при новых повреждениях работы «may extend into the afternoon». Значит, они могут закончиться позже."
    }
   ]
+ },
+ {
+  "id": "R-RDL-A-229",
+  "level": "A",
+  "src": "claude",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "CAMPUS GYM — LOCKER RULES",
+   "paras": [
+    "Lockers are for use during your visit only. Please take your things with you when you leave. Locks left on lockers overnight will be cut off. Lost items are kept at the front desk for one week."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What will happen to a lock that is left on a locker overnight?",
+    "opts": [
+     "It will be removed by the staff.",
+     "It will be given to the front desk.",
+     "It will be kept for one week.",
+     "It will be returned the next morning."
+    ],
+    "a": 0,
+    "ex": "«Locks left on lockers overnight will be cut off» — замок срежут. Неделю хранят потерянные вещи, а не замки."
+   },
+   {
+    "type": "Inference",
+    "stem": "A student forgot her water bottle at the gym three days ago. Where should she look for it?",
+    "opts": [
+     "In her locker",
+     "At the front desk",
+     "In the lost-and-found box outside",
+     "At the campus police office"
+    ],
+    "a": 1,
+    "ex": "Потерянные вещи хранятся у стойки администратора одну неделю, а прошло только три дня. Шкафчики освобождают в конце каждого визита."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-230",
+  "level": "A",
+  "src": "claude",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "group": "",
+   "msgs": [
+    {
+     "who": "Tom",
+     "time": "4:10 PM",
+     "text": "Hey, are you still at the library?"
+    },
+    {
+     "who": "Ana",
+     "time": "4:11 PM",
+     "text": "Yes, room 2B. Why?"
+    },
+    {
+     "who": "Tom",
+     "time": "4:11 PM",
+     "text": "I left my phone charger there this morning. Can you check?"
+    },
+    {
+     "who": "Ana",
+     "time": "4:13 PM",
+     "text": "Found it! It was under the table. I'll bring it to dinner."
+    },
+    {
+     "who": "Tom",
+     "time": "4:13 PM",
+     "text": "You're the best. Thanks!"
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What did Tom leave in the library?",
+    "opts": [
+     "His library card",
+     "His library textbook",
+     "His phone charger",
+     "His phone"
+    ],
+    "a": 2,
+    "ex": "Том пишет: «I left my phone charger there» — он оставил зарядку, а не сам телефон."
+   },
+   {
+    "type": "Inference",
+    "stem": "When will Tom probably get his item back?",
+    "opts": [
+     "The next morning",
+     "In room 2B at 4:15",
+     "At the library front desk",
+     "Later that evening"
+    ],
+    "a": 3,
+    "ex": "Ана обещает: «I'll bring it to dinner» — она отдаст зарядку за ужином, то есть вечером того же дня."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-227",
+  "level": "B",
+  "src": "claude",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Campus Bookstore",
+   "to": "All students",
+   "subject": "Textbook buyback week",
+   "paras": [
+    "Dear students,",
+    "Our textbook buyback week runs from December 10 to 14. Bring your used textbooks to the bookstore, and we will pay up to 50% of the original price, depending on their condition. Books with missing pages or heavy writing cannot be accepted. Please note that we only buy titles that will be used again next semester; you can check the list on our website before you come."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much can students receive for a used textbook?",
+    "opts": [
+     "Up to half of what the book first cost",
+     "The full price of the book in good condition",
+     "Exactly 50 dollars for each book",
+     "A coupon for next semester's books"
+    ],
+    "a": 0,
+    "ex": "«We will pay up to 50% of the original price» — до половины первоначальной цены, в зависимости от состояния."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to the email, which of the following books will NOT be accepted?",
+    "opts": [
+     "A book in good condition with a clean cover",
+     "A book with several pages missing",
+     "A book on next semester's list",
+     "A book with a few small notes"
+    ],
+    "a": 1,
+    "ex": "Не принимают книги «with missing pages or heavy writing». Немного пометок — не «heavy writing», а книги из списка на следующий семестр как раз покупают."
+   },
+   {
+    "type": "Inference",
+    "stem": "Why does the bookstore suggest checking the website first?",
+    "opts": [
+     "To see the opening hours of the store",
+     "To reserve a time for the buyback",
+     "To find out whether it will buy a particular book",
+     "To learn the original price of each book they own"
+    ],
+    "a": 2,
+    "ex": "Магазин покупает только книги, которые будут использоваться в следующем семестре, а список выложен на сайте. Проверка показывает, возьмут ли конкретную книгу."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-228",
+  "level": "B",
+  "src": "claude",
+  "genre": "schedule",
+  "doc": {
+   "kind": "table",
+   "head": "Student Health Center — Walk-in Clinic",
+   "rows": [
+    [
+     "Monday–Wednesday",
+     "9 a.m. – 5 p.m."
+    ],
+    [
+     "Thursday",
+     "9 a.m. – 1 p.m."
+    ],
+    [
+     "Friday",
+     "12 p.m. – 6 p.m."
+    ],
+    [
+     "Saturday–Sunday",
+     "Closed (nurse phone line: 555-0170)"
+    ]
+   ],
+   "foot": "Please arrive at least 30 minutes before closing time to be seen. Bring your student card."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "When does the clinic open on Friday?",
+    "opts": [
+     "At 9 a.m.",
+     "At 1 p.m.",
+     "At 6 p.m.",
+     "At noon"
+    ],
+    "a": 3,
+    "ex": "В строке Friday: 12 p.m. – 6 p.m. — клиника открывается в полдень. 9 a.m. — начало работы в другие дни."
+   },
+   {
+    "type": "Inference",
+    "stem": "A student arrives at the clinic at 12:45 p.m. on Thursday. What will probably happen?",
+    "opts": [
+     "She will not be seen that day.",
+     "She will be seen right away.",
+     "She will wait until 1 p.m.",
+     "She will be sent to the nurse line."
+    ],
+    "a": 0,
+    "ex": "В четверг клиника закрывается в 1 p.m., а прийти нужно минимум за 30 минут до закрытия, то есть до 12:30. В 12:45 её уже не примут."
+   },
+   {
+    "type": "Factual",
+    "stem": "What can students do on the weekend?",
+    "opts": [
+     "Visit the clinic in the afternoon",
+     "Speak to a nurse by phone",
+     "Make an appointment online",
+     "See a doctor without a student card"
+    ],
+    "a": 1,
+    "ex": "По выходным клиника закрыта, но работает телефонная линия медсестры: «nurse phone line: 555-0170»."
+   }
+  ]
  }
 ]

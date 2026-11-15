@@ -8212,5 +8212,456 @@
   ],
   "extra": "though",
   "ex": "Устойчивая уступительная конструкция — Much as I enjoy… (= Хотя мне очень нравятся…). Сочетание Much though не употребляется."
+ },
+ {
+  "id": "W-BAS-A-121",
+  "level": "A",
+  "focus": "Наречие always в Present Simple",
+  "a": "How do you always get your coffee so fast?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "before class."
+  ],
+  "slots": [
+   "always",
+   "order",
+   "it",
+   "online"
+  ],
+  "extra": "orders",
+  "ex": "Always стоит перед смысловым глаголом, а после I глагол без -s: I always order it. Форма orders подходит только к he, she, it."
+ },
+ {
+  "id": "W-BAS-A-122",
+  "level": "A",
+  "focus": "Present Perfect с ever в вопросе",
+  "a": "I'm reading a great book about Japan.",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "Japan?"
+  ],
+  "slots": [
+   "Have",
+   "you",
+   "ever",
+   "visited"
+  ],
+  "extra": "Did",
+  "ex": "Вопрос об опыте — Present Perfect: Have you ever visited…? После Did нужна начальная форма (visit), а не visited."
+ },
+ {
+  "id": "W-BAS-A-123",
+  "level": "A",
+  "focus": "Косвенный вопрос с where",
+  "a": "I need to print my essay before class.",
+  "parts": [
+   "Do you know",
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "where",
+   "the printer",
+   "is"
+  ],
+  "extra": "does",
+  "ex": "В косвенном вопросе после Do you know прямой порядок слов: where the printer is. Does здесь лишний."
+ },
+ {
+  "id": "W-BAS-A-124",
+  "level": "A",
+  "focus": "Определительное придаточное с who",
+  "a": "Who is Mr. Lee?",
+  "parts": [
+   "He's the man",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "who",
+   "works",
+   "in",
+   "the library"
+  ],
+  "extra": "which",
+  "ex": "О человеке — who: the man who works in the library. Which используется для предметов."
+ },
+ {
+  "id": "W-BAS-A-125",
+  "level": "A",
+  "focus": "Условное 1-го типа с if",
+  "a": "Are you coming to the picnic on Saturday?",
+  "parts": [
+   "Yes,",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "if",
+   "it",
+   "doesn't",
+   "rain"
+  ],
+  "extra": "won't",
+  "ex": "В придаточном условия будущее выражается настоящим временем: if it doesn't rain. Won't после if неверно."
+ },
+ {
+  "id": "W-BAS-A-126",
+  "level": "A",
+  "focus": "Present Continuous для планов",
+  "a": "Do you have any plans for the weekend?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   "on Sunday."
+  ],
+  "slots": [
+   "am",
+   "visiting",
+   "my grandparents"
+  ],
+  "extra": "visit",
+  "ex": "Запланированное действие — Present Continuous: I am visiting. Начальная форма visit после am неверна."
+ },
+ {
+  "id": "W-BAS-B-121",
+  "level": "B",
+  "focus": "Косвенный вопрос с why",
+  "a": "The library closed early today.",
+  "parts": [
+   "Do you know",
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "why",
+   "it",
+   "closed",
+   "so early"
+  ],
+  "extra": "did",
+  "ex": "В косвенном вопросе прямой порядок слов и без вспомогательного глагола: why it closed so early. Did здесь лишний."
+ },
+ {
+  "id": "W-BAS-B-122",
+  "level": "B",
+  "focus": "Косвенный вопрос с whether",
+  "a": "Is the seminar going to be online?",
+  "parts": [
+   "I'll ask",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "the professor",
+   "whether",
+   "it",
+   "will be",
+   "online"
+  ],
+  "extra": "is it",
+  "ex": "После whether — прямой порядок слов: whether it will be online. Сочетание is it даёт порядок прямого вопроса."
+ },
+ {
+  "id": "W-BAS-B-123",
+  "level": "B",
+  "focus": "Whose в определительном придаточном",
+  "a": "Which student won the science prize?",
+  "parts": [
+   "The one",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "whose",
+   "project",
+   "was about",
+   "clean water"
+  ],
+  "extra": "who's",
+  "ex": "Принадлежность — whose + существительное: whose project. Who's = who is и с project не сочетается."
+ },
+ {
+  "id": "W-BAS-B-124",
+  "level": "B",
+  "focus": "Present Perfect с yet в вопросе",
+  "a": "The new exam schedule was posted this morning.",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "yet?"
+  ],
+  "slots": [
+   "Have",
+   "you",
+   "seen",
+   "it"
+  ],
+  "extra": "Did",
+  "ex": "С yet в вопросе — Present Perfect: Have you seen it yet? После Did нужна начальная форма see, а не seen."
+ },
+ {
+  "id": "W-BAS-B-125",
+  "level": "B",
+  "focus": "Условное 2-го типа",
+  "a": "Would you join the debate team?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "more time."
+  ],
+  "slots": [
+   "would",
+   "join",
+   "if",
+   "I",
+   "had"
+  ],
+  "extra": "will",
+  "ex": "Нереальное условие в настоящем: would join if I had. Will не сочетается с had в придаточном."
+ },
+ {
+  "id": "W-BAS-B-126",
+  "level": "B",
+  "focus": "Восклицание What a …",
+  "a": "I got the last ticket for the concert!",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "!"
+  ],
+  "slots": [
+   "What",
+   "a",
+   "lucky",
+   "break"
+  ],
+  "extra": "How",
+  "ex": "Восклицание с существительным: What a lucky break! How используется с прилагательным без существительного (How lucky!)."
+ },
+ {
+  "id": "W-BAS-B-127",
+  "level": "B",
+  "focus": "Present Perfect Passive",
+  "a": "Is the cafeteria open again?",
+  "parts": [
+   "Yes, it",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "has",
+   "been",
+   "reopened",
+   "after the repairs"
+  ],
+  "extra": "have",
+  "ex": "Пассив в Present Perfect: it has been reopened. Have не согласуется с подлежащим it."
+ },
+ {
+  "id": "W-BAS-B-128",
+  "level": "B",
+  "focus": "Who's = who has",
+  "a": "Who should I ask about the lab equipment?",
+  "parts": [
+   "Ask Dr. Patel. She's the one",
+   null,
+   null,
+   null,
+   "the longest."
+  ],
+  "slots": [
+   "who's",
+   "worked",
+   "in this lab"
+  ],
+  "extra": "whose",
+  "ex": "Who's = who has: who's worked in this lab the longest. Whose — «чей» и требует существительного."
+ },
+ {
+  "id": "W-BAS-C-121",
+  "level": "C",
+  "focus": "Инверсия: Scarcely … when",
+  "a": "Did the meeting start on time?",
+  "parts": [
+   "Scarcely",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "went off."
+  ],
+  "slots": [
+   "had",
+   "the chair",
+   "begun",
+   "her introduction",
+   "when",
+   "the fire alarm"
+  ],
+  "extra": "did",
+  "ex": "После Scarcely в начале — инверсия с Past Perfect: had the chair begun … when. Did не сочетается с причастием begun."
+ },
+ {
+  "id": "W-BAS-C-122",
+  "level": "C",
+  "focus": "Косвенный вопрос с whether + модальный",
+  "a": "What is the committee still debating?",
+  "parts": [
+   "They have not decided",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "as well."
+  ],
+  "slots": [
+   "whether",
+   "the new policy",
+   "should",
+   "apply",
+   "to current students"
+  ],
+  "extra": "applies",
+  "ex": "В косвенном вопросе прямой порядок слов: whether the new policy should apply. После should глагол без окончания, поэтому applies неверно."
+ },
+ {
+  "id": "W-BAS-C-123",
+  "level": "C",
+  "focus": "Предлог + whom",
+  "a": "Who should I send my appeal to?",
+  "parts": [
+   "The person",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "is the dean."
+  ],
+  "slots": [
+   "to",
+   "whom",
+   "you",
+   "should address",
+   "your appeal"
+  ],
+  "extra": "who",
+  "ex": "После предлога в относительном придаточном — whom: to whom you should address your appeal. Who после to не употребляется."
+ },
+ {
+  "id": "W-BAS-C-124",
+  "level": "C",
+  "focus": "Would rather + Past Perfect",
+  "a": "I didn't tell you about the change because I didn't want to worry you.",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "would rather",
+   "you",
+   "had told",
+   "me",
+   "earlier"
+  ],
+  "extra": "have told",
+  "ex": "Сожаление о чужом действии в прошлом: would rather + подлежащее + Past Perfect (you had told me). Have told в этой конструкции неверно."
+ },
+ {
+  "id": "W-BAS-C-125",
+  "level": "C",
+  "focus": "Перфектное пассивное причастие",
+  "a": "Why was the old bridge closed for so long?",
+  "parts": [
+   null,
+   null,
+   null,
+   ", it",
+   null,
+   null,
+   null,
+   "before reopening."
+  ],
+  "slots": [
+   "Having been",
+   "damaged",
+   "in the storm",
+   "had to",
+   "be",
+   "repaired"
+  ],
+  "extra": "Have been",
+  "ex": "Предшествующее пассивное действие — Having been + третья форма: Having been damaged…. Have been не может начинать причастный оборот."
+ },
+ {
+  "id": "W-BAS-C-126",
+  "level": "C",
+  "focus": "Инверсия: No longer",
+  "a": "Does the library still lend laptops to new students?",
+  "parts": [
+   "No longer",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "does",
+   "the library",
+   "lend",
+   "laptops",
+   "to first-year students"
+  ],
+  "extra": "lends",
+  "ex": "После No longer в начале — инверсия с does: does the library lend. После does глагол стоит в начальной форме, поэтому lends неверно."
  }
 ]

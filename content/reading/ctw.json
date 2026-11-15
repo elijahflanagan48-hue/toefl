@@ -532,5 +532,61 @@
   "topic": "Business and economics",
   "text": "Brand loyalty is frequently interpreted as evidence that consumers prefer a product, yet it can also arise from habit and convenience. A shopper who repeatedly buys the same brand may simply have stopped comparing alternatives. Companies sometimes exploit this tendency by making small changes that are difficult to notice, such as adjusting package sizes. Analysts therefore distinguish genuine attachment from inertia, because only the former is likely to persist when a competitor introduces a better offer.",
   "src": "claude"
+ },
+ {
+  "id": "R-CTW-A-124",
+  "level": "A",
+  "topic": "Life sciences",
+  "src": "claude",
+  "text": "Plants need light to make their own food. They take in water through their roots and carbon dioxide from the air. With the energy of sunlight, they turn these simple materials into sugar. This process is called photosynthesis, and it also releases oxygen into the air. Animals, including people, depend on this oxygen to breathe. Without plants, life on Earth would be very different. For this reason, scientists study how changes in climate affect the growth of plants around the world."
+ },
+ {
+  "id": "R-CTW-A-125",
+  "level": "A",
+  "topic": "History",
+  "src": "claude",
+  "text": "The first bicycles appeared in Europe in the early nineteenth century. They had no pedals, so riders pushed the ground with their feet to move forward. Later models added pedals to the front wheel, which was often very large. These bicycles were fast but dangerous, because riders sat high above the road and could fall easily. Eventually, a safer design with two wheels of the same size became popular. This design is still the basis of most bicycles today."
+ },
+ {
+  "id": "R-CTW-A-126",
+  "level": "A",
+  "topic": "Social sciences",
+  "src": "claude",
+  "text": "Many students find it hard to manage their time at university. In school, teachers often plan the day for them, but at university they must make many decisions alone. Some students make a weekly plan and write down every class and deadline. Others use phone apps to remind them of important tasks. Experts suggest breaking large projects into small steps. This makes the work feel easier and helps students avoid leaving everything until the last day."
+ },
+ {
+  "id": "R-CTW-A-127",
+  "level": "A",
+  "topic": "Physical sciences",
+  "src": "claude",
+  "text": "Sound travels as waves through the air. When a person speaks, the voice makes the air move back and forth very quickly. These movements travel to the ear of the listener, where they are changed into signals for the brain. Sound can also travel through water and solid objects, and it often moves faster in them than in air. In space, however, there is no air, so sound cannot travel at all. This is why astronauts use radios to talk to each other outside their spacecraft."
+ },
+ {
+  "id": "R-CTW-B-124",
+  "level": "B",
+  "topic": "Business and economics",
+  "src": "claude",
+  "text": "Many companies now allow employees to work from home for part of the week. Supporters of this arrangement argue that it saves time and money that would otherwise be spent on travel. Workers also report that they can concentrate better without the interruptions of a busy office. However, managers sometimes worry that teams lose contact with each other and that new employees learn more slowly. As a result, many organizations ask staff to come to the office on fixed days so that colleagues can still meet in person."
+ },
+ {
+  "id": "R-CTW-B-125",
+  "level": "B",
+  "topic": "Earth science",
+  "src": "claude",
+  "text": "Earthquakes occur when large sections of the Earth's crust suddenly move. Pressure builds up slowly along cracks in the rock, which are known as faults, until the rock finally breaks. The energy released travels outward in waves, shaking the ground. Scientists measure the strength of these waves with instruments called seismometers. Although they cannot yet predict exactly when an earthquake will happen, they can identify regions where the risk is high. Engineers use this information to design buildings that can survive strong shaking."
+ },
+ {
+  "id": "R-CTW-C-124",
+  "level": "C",
+  "topic": "Social sciences",
+  "src": "claude",
+  "text": "Confirmation bias describes the tendency to seek out and favor information that supports what one already believes. Individuals exposed to mixed evidence frequently interpret ambiguous findings as consistent with their initial position, while dismissing contradictory data as flawed. This pattern is not limited to casual reasoning; researchers themselves may unintentionally design experiments that are more likely to confirm their hypotheses. To counter the effect, many journals now encourage scientists to register their methods in advance, which makes it harder to adjust an analysis after the results are known."
+ },
+ {
+  "id": "R-CTW-C-125",
+  "level": "C",
+  "topic": "Art and music",
+  "src": "claude",
+  "text": "The invention of photography in the nineteenth century forced painters to reconsider the purpose of their work. Because a camera could record a scene with remarkable accuracy, artists no longer needed to justify their craft solely through realistic representation. Some responded by exploring effects that photographs could not easily capture, such as the changing quality of light or the subjective experience of a moment. Others embraced the new technology, using photographs as references for their compositions. In this sense, photography did not replace painting but encouraged it to develop in new directions."
  }
 ]

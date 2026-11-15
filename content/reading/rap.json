@@ -9249,5 +9249,795 @@
     "ex": "Последнее предложение абзаца: каждый вариант отражает свой взгляд на то, для чего нужно общественное пространство. Автор не выбирает лучший вариант."
    }
   ]
+ },
+ {
+  "id": "R-RAP-A-211",
+  "level": "A",
+  "src": "claude",
+  "topic": "History",
+  "title": "How Tea Became Popular in Britain",
+  "paras": [
+   [
+    "Today, tea is one of the most popular drinks in Britain, but this was not always true.",
+    "Tea first arrived in Europe in the early 1600s, when Dutch traders brought it from Asia.",
+    "At first, it was very expensive, so only rich families could buy it.",
+    "They kept their tea in small wooden boxes with locks to protect it from servants."
+   ],
+   [
+    "Tea became fashionable in Britain after 1662, when a Portuguese princess named Catherine married the English king.",
+    "Catherine loved tea, and other members of the royal court began to copy her habit.",
+    "Soon, coffee houses in London started to serve tea, and people met there to drink it and talk.",
+    "However, the government placed a very high tax on tea, and many people bought it illegally from smugglers."
+   ],
+   [
+    "In 1784, the government greatly reduced the tax, and the price of tea fell.",
+    "Ordinary workers could now afford it, and tea became a daily drink for almost everyone.",
+    "Factory workers drank it during short breaks because it was warm and gave them energy.",
+    "Later, British companies started growing tea in India, which made it even cheaper.",
+    "By the end of the 1800s, tea had become an important part of British culture."
+   ]
+  ],
+  "insert": {
+   "p": 2,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "As a result, smuggling quickly became much less common."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, why did rich families keep tea in boxes with locks?",
+    "opts": [
+     "Tea stayed fresh only in dark wooden boxes.",
+     "Tea was valuable, and they wanted to protect it.",
+     "The law required families to lock tea away.",
+     "They wanted to hide it from the government."
+    ],
+    "a": 1,
+    "ex": "Чай был очень дорогим, и его запирали, чтобы защитить от слуг («to protect it from servants»). Про закон и правительство в первом абзаце ничего нет."
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the author mention Catherine in paragraph 2?",
+    "opts": [
+     "To show that tea first came to Europe from Portugal",
+     "To describe the first coffee house in London",
+     "To explain how tea became fashionable in Britain",
+     "To explain why the tax on tea was so high"
+    ],
+    "a": 2,
+    "ex": "Королева Екатерина любила чай, и двор стал ей подражать — так чай вошёл в моду. В Европу его привезли голландцы, а не португальцы."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"afford\" in the passage is closest in meaning to",
+    "opts": [
+     "learn how to prepare",
+     "find easily in shops and markets",
+     "enjoy the taste of",
+     "have enough money to buy"
+    ],
+    "a": 3,
+    "ex": "После снижения налога цена упала, и рабочим стало по карману покупать чай. Afford = иметь достаточно денег, чтобы купить.",
+    "hl": {
+     "p": 2,
+     "s": 1,
+     "w": "afford"
+    }
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 3 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 0,
+    "ex": "Вставка «As a result, smuggling … less common» — следствие снижения налога, поэтому стоит сразу после предложения о 1784 годе. В других местах абзаца налог и цена уже не обсуждаются."
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about smugglers before 1784?",
+    "opts": [
+     "They sold tea for less than the official price.",
+     "They worked for the British government.",
+     "They were the first to grow tea in India.",
+     "They opened the first coffee houses in London."
+    ],
+    "a": 0,
+    "ex": "Из-за высокого налога люди покупали чай нелегально у контрабандистов. Значит, у них чай был дешевле официального. Остальные варианты в тексте не подтверждаются."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-A-212",
+  "level": "A",
+  "src": "claude",
+  "topic": "Life sciences",
+  "title": "Why We Yawn",
+  "paras": [
+   [
+    "Everyone yawns, but scientists still do not fully agree on why we do it.",
+    "A yawn is a long, deep breath with the mouth wide open, and it usually lasts about six seconds.",
+    "People yawn most often when they are tired or bored, but they also yawn in the morning after waking up.",
+    "Even babies yawn before they are born."
+   ],
+   [
+    "For many years, people believed that yawning brought more oxygen into the body.",
+    "However, experiments did not support this idea.",
+    "When people breathed air with extra oxygen, they did not yawn less often.",
+    "Today, many researchers think that yawning helps to cool the brain.",
+    "A deep breath of air may lower the temperature of the blood that flows to the head, and a cooler brain may work more efficiently."
+   ],
+   [
+    "Yawning is also contagious, which means that seeing another person yawn can make you yawn too.",
+    "This effect is stronger between family members and close friends than between strangers.",
+    "For this reason, some scientists believe that contagious yawning is connected to empathy, the ability to understand how other people feel.",
+    "Interestingly, very young children rarely catch yawns from others."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, when do people yawn most often?",
+    "opts": [
+     "When they are hungry or thirsty",
+     "When they feel tired or bored",
+     "When they have just exercised",
+     "When they are talking with friends"
+    ],
+    "a": 1,
+    "ex": "Во втором предложении абзаца: «People yawn most often when they are tired or bored». Про голод и спорт ничего не сказано."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 2, which of the following is NOT true?",
+    "opts": [
+     "People once believed that yawning added oxygen to the body.",
+     "Experiments did not support the oxygen explanation.",
+     "Extra oxygen made people yawn less often.",
+     "Some researchers think yawning cools the brain."
+    ],
+    "a": 2,
+    "ex": "С дополнительным кислородом люди «did not yawn less often» — зевали не реже. Три других утверждения прямо есть в абзаце."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "A cool brain makes people take deep breaths more often during the day, especially when tired.",
+     "Blood that flows to the head becomes warmer after a deep breath.",
+     "The brain works better when people breathe in less air than usual.",
+     "Breathing in deeply may cool the blood going to the brain, which may help it work better."
+    ],
+    "a": 3,
+    "ex": "Суть: глубокий вдох может охладить кровь, идущую к голове, и мозгу будет легче работать. В неверных вариантах перепутаны причина и следствие или сказано обратное.",
+    "simp": {
+     "p": 1,
+     "s": 4
+    }
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"contagious\" in the passage is closest in meaning to",
+    "opts": [
+     "able to spread from person to person",
+     "very common in the morning",
+     "difficult to stop once it has started",
+     "harmful to a person's health"
+    ],
+    "a": 0,
+    "ex": "Пояснение прямо в тексте: если видишь, как зевает другой, можешь зевнуть и сам. Contagious = передающийся от человека к человеку.",
+    "hl": {
+     "p": 2,
+     "s": 0,
+     "w": "contagious"
+    }
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 3 that gives the evidence for a connection between yawning and empathy.",
+    "sel": {
+     "p": 2
+    },
+    "a": 1,
+    "ex": "Доказательство связи с эмпатией: зевота сильнее передаётся между близкими людьми, чем между незнакомыми. Следующее предложение уже делает вывод («For this reason…»)."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-214",
+  "level": "B",
+  "src": "claude",
+  "topic": "Business and economics",
+  "title": "The First Paper Money",
+  "paras": [
+   [
+    "For most of history, people paid for goods with coins made of valuable metals such as gold, silver, or copper.",
+    "Coins were useful, but they had a serious disadvantage: large amounts were heavy and difficult to carry.",
+    "This problem was especially serious for merchants in China, who often traveled long distances to buy and sell goods."
+   ],
+   [
+    "In the ninth century, Chinese merchants began leaving their heavy coins with trusted traders and receiving paper notes in return.",
+    "These notes showed how much money had been deposited, and they could later be exchanged for coins.",
+    "Because the notes were light and easy to transport, they soon passed from person to person as a form of payment.",
+    "In the early eleventh century, the government of the Song dynasty took control of the system and began printing official paper money."
+   ],
+   [
+    "The new money brought clear benefits, but it also created a new danger.",
+    "Since paper cost far less than metal, governments were tempted to print more notes whenever they needed funds.",
+    "When too many notes were in circulation, each one could buy less, and prices rose rapidly.",
+    "Later Chinese rulers faced exactly this problem, and by the fifteenth century paper money had largely disappeared from use in China.",
+    "Europe did not adopt paper money widely until several hundred years later."
+   ]
+  ],
+  "insert": {
+   "p": 2,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "This general rise in prices is now known as inflation."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, what was the main disadvantage of coins?",
+    "opts": [
+     "They were easy for criminals to copy.",
+     "Large amounts of them were hard to transport.",
+     "Their value changed from year to year.",
+     "They were accepted only in large cities."
+    ],
+    "a": 1,
+    "ex": "Во втором предложении: «large amounts were heavy and difficult to carry». Подделка и изменение стоимости в тексте не упоминаются."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"they\" in paragraph 2 refers to",
+    "opts": [
+     "the heavy coins",
+     "the trusted traders",
+     "the paper notes",
+     "the Chinese merchants"
+    ],
+    "a": 2,
+    "ex": "«These notes showed…, and they could later be exchanged for coins» — обменивать на монеты можно было сами расписки. Монеты — то, на что их меняли.",
+    "hl": {
+     "p": 1,
+     "s": 1,
+     "w": "they"
+    }
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the author mention the Song dynasty in paragraph 2?",
+    "opts": [
+     "To explain why coins were so heavy",
+     "To give an example of a government that refused to use paper money",
+     "To describe where merchants left their coins",
+     "To show when the government took over the paper money system"
+    ],
+    "a": 3,
+    "ex": "Династия Сун упоминается как момент, когда государство взяло систему под контроль и начало печатать официальные деньги."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 3 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 2,
+    "ex": "Вставка «This general rise in prices…» опирается на «prices rose rapidly», поэтому стоит сразу после этого предложения. До него рост цен ещё не упомянут, а после него речь уже об исчезновении бумажных денег."
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred from paragraph 3 about why paper money disappeared in China?",
+    "opts": [
+     "People lost confidence in it after too many notes were printed.",
+     "European traders asked Chinese rulers to stop printing paper notes.",
+     "Paper became more expensive to produce than metal.",
+     "The Song dynasty banned it in the ninth century."
+    ],
+    "a": 0,
+    "ex": "Правители печатали слишком много купюр, цены росли, и именно с этой проблемой столкнулись поздние правители — после этого бумажные деньги вышли из употребления. Вывод: доверие к ним упало."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-215",
+  "level": "B",
+  "src": "claude",
+  "topic": "Life sciences",
+  "title": "Why Some Animals Hibernate",
+  "paras": [
+   [
+    "Winter is a difficult season for many animals.",
+    "Food becomes hard to find, and staying warm requires a great deal of energy.",
+    "Some birds solve this problem by flying to warmer regions, but many small mammals cannot travel such long distances.",
+    "Instead, they survive the winter by hibernating, entering a state of deep inactivity that can last for several months."
+   ],
+   [
+    "During hibernation, an animal's body changes dramatically.",
+    "Its heart rate drops, its breathing slows, and its body temperature falls, sometimes to just a few degrees above freezing.",
+    "A ground squirrel's heart, for example, may beat only five times per minute instead of more than two hundred.",
+    "These changes reduce the animal's energy needs so much that it can live on the fat it stored during the summer and autumn."
+   ],
+   [
+    "Hibernation is not one long, uninterrupted sleep, however.",
+    "Every few weeks, most hibernating animals briefly warm up to their normal temperature for a day or less before cooling down again.",
+    "Scientists are still unsure why these periods of arousal occur, especially because they use a large share of the animal's stored energy.",
+    "One possibility is that the body needs to return to normal temperature to repair cells or strengthen the immune system.",
+    "Understanding these processes may one day help doctors protect human organs during surgery."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, why do many small mammals hibernate instead of migrating?",
+    "opts": [
+     "They do not need much food in winter.",
+     "They cannot travel long distances.",
+     "They prefer cold weather to warm weather.",
+     "They are afraid of birds in warmer regions."
+    ],
+    "a": 1,
+    "ex": "Третье предложение: птицы улетают в тёплые края, «but many small mammals cannot travel such long distances» — мелкие млекопитающие не могут проделать такой путь."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"dramatically\" in the passage is closest in meaning to",
+    "opts": [
+     "quickly",
+     "dangerously",
+     "greatly",
+     "silently"
+    ],
+    "a": 2,
+    "ex": "Далее перечислены сильные изменения: пульс падает с 200 до 5 ударов, температура почти до нуля. Dramatically = очень сильно, значительно.",
+    "hl": {
+     "p": 1,
+     "s": 0,
+     "w": "dramatically"
+    }
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the author mention a ground squirrel's heart in paragraph 2?",
+    "opts": [
+     "To show that squirrels hibernate longer than other animals",
+     "To explain why squirrels store fat in autumn",
+     "To compare squirrels with birds that migrate",
+     "To give an example of how much the body slows down"
+    ],
+    "a": 3,
+    "ex": "Пример с белкой (пять ударов в минуту вместо двухсот) показывает масштаб замедления организма. Стоит после общего утверждения и вводится словами «for example»."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "Because the animal needs much less energy, the fat it stored earlier is enough to keep it alive.",
+     "The animal stores fat in summer so that its heart rate will drop in winter.",
+     "The animal uses more energy in winter than in summer, so it must eat all of the food it stored earlier.",
+     "The animal's stored fat slows its heart and breathing during the summer."
+    ],
+    "a": 0,
+    "ex": "Суть: потребность в энергии падает настолько, что запасённого жира хватает на зиму. Неверные варианты меняют причину и следствие или время года.",
+    "simp": {
+     "p": 1,
+     "s": 3
+    }
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, all of the following are true of the periods of arousal EXCEPT:",
+    "opts": [
+     "They happen every few weeks.",
+     "They allow the animal to search for food.",
+     "They use a large share of stored energy.",
+     "They may help the body repair cells."
+    ],
+    "a": 1,
+    "ex": "Периодичность, большой расход энергии и возможный ремонт клеток названы в абзаце. О поиске пищи во время пробуждений ничего не сказано."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-216",
+  "level": "B",
+  "src": "claude",
+  "topic": "Social sciences",
+  "title": "How Noise Affects Learning",
+  "paras": [
+   [
+    "Many schools are located near busy roads, railways, or airports, and their students are exposed to noise throughout the day.",
+    "For a long time, this was considered a minor inconvenience.",
+    "Over the past few decades, however, researchers have found that constant background noise can have a measurable effect on how well children learn."
+   ],
+   [
+    "One well-known study compared children at schools near a major airport with children at quieter schools.",
+    "The children exposed to aircraft noise scored lower on reading tests, even after researchers accounted for differences in family income.",
+    "Noise seems to affect learning in several ways.",
+    "It interrupts the teacher's speech, so students miss parts of the lesson.",
+    "It also forces the brain to work harder to filter out unwanted sounds, which leaves less attention for the task at hand."
+   ],
+   [
+    "Interestingly, children may adapt to noise in a way that causes new problems.",
+    "To protect themselves, some learn to ignore sounds in general, including speech that they should be listening to.",
+    "Schools have tried various solutions, such as installing double windows and placing soft materials on walls and ceilings to absorb sound.",
+    "These changes can be expensive, but studies suggest that they often lead to better concentration and improved results."
+   ]
+  ],
+  "insert": {
+   "p": 1,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "In other words, the lower scores could not be explained simply by poverty."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, how was school noise viewed for a long time?",
+    "opts": [
+     "As a serious danger to health",
+     "As a benefit for active students",
+     "As a small problem",
+     "As a problem only near airports"
+    ],
+    "a": 2,
+    "ex": "Второе предложение: «this was considered a minor inconvenience» — небольшое неудобство. Серьёзным его стали считать позже, после исследований."
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 2 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 1,
+    "ex": "Вставка «In other words… poverty» поясняет фразу «even after researchers accounted for differences in family income», поэтому стоит сразу после неё. В других местах доход семьи не обсуждается."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that explains how noise reduces the attention available for learning.",
+    "sel": {
+     "p": 1
+    },
+    "a": 4,
+    "ex": "Именно здесь сказано, что мозг тратит силы на отсеивание лишних звуков и на задание остаётся меньше внимания. Предложение о речи учителя объясняет другой механизм — пропуск частей урока."
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about children who learn to ignore sounds in general?",
+    "opts": [
+     "They become better readers than other children.",
+     "They no longer hear aircraft noise at all.",
+     "They prefer to study in noisy places.",
+     "They may miss important information in class."
+    ],
+    "a": 3,
+    "ex": "Такие дети перестают слышать и речь, которую должны слушать, — значит, могут пропускать важное на уроке. Это и есть «new problems»."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"absorb\" in the passage is closest in meaning to",
+    "opts": [
+     "take in",
+     "reflect",
+     "produce",
+     "measure"
+    ],
+    "a": 0,
+    "ex": "Мягкие материалы на стенах поглощают звук, чтобы он не отражался. Absorb = take in; reflect — противоположное действие.",
+    "hl": {
+     "p": 2,
+     "s": 2,
+     "w": "absorb"
+    }
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-B-217",
+  "level": "B",
+  "src": "claude",
+  "topic": "History",
+  "title": "Why Ancient Builders Used Arches",
+  "paras": [
+   [
+    "Before the arch became common, builders usually created openings in walls by placing a long horizontal stone, called a lintel, across two upright supports.",
+    "This method was simple, but it had a clear limit.",
+    "Stone breaks easily when it is bent, so a lintel that was too long would crack under the weight of the wall above it.",
+    "As a result, buildings made this way needed many columns placed close together."
+   ],
+   [
+    "The arch solved this problem.",
+    "An arch is made of wedge-shaped stones arranged in a curve, with a central stone at the top called the keystone.",
+    "Instead of bending, each stone presses against its neighbors, and the weight of the structure is pushed outward and downward into the supports.",
+    "Because stone is extremely strong when it is pressed together, an arch can cover a much wider space than a lintel."
+   ],
+   [
+    "The Romans did not invent the arch, but they used it on a scale never seen before.",
+    "They built bridges, aqueducts that carried water to cities, and huge public buildings with domes, which are essentially arches rotated in a circle.",
+    "Many of these structures are still standing almost two thousand years later.",
+    "Their durability depended partly on Roman concrete, a strong material that allowed builders to create shapes that would have been difficult with cut stone alone."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, why did buildings with lintels need many columns?",
+    "opts": [
+     "Columns made the buildings look more impressive.",
+     "Long stone beams would crack under heavy weight.",
+     "Lintels could only be placed on round supports.",
+     "Builders did not know how to cut long stones."
+    ],
+    "a": 1,
+    "ex": "Камень легко ломается на изгиб, и слишком длинная перемычка трескалась под весом стены. Поэтому колонны ставили часто."
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "The stones bend slightly under the load so that the supports do not need to carry any weight at all.",
+     "The supports push the stones upward, which keeps the arch from bending.",
+     "The stones push against each other rather than bending, and the weight moves into the supports.",
+     "Each stone carries its own weight, so the supports carry very little."
+    ],
+    "a": 2,
+    "ex": "Суть: камни не изгибаются, а давят друг на друга, и вес уходит в опоры. Неверные варианты утверждают, что опоры ничего не несут, или переворачивают направление силы.",
+    "simp": {
+     "p": 1,
+     "s": 2
+    }
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"which\" in paragraph 3 refers to",
+    "opts": [
+     "aqueducts",
+     "public buildings",
+     "bridges",
+     "domes"
+    ],
+    "a": 3,
+    "ex": "«domes, which are essentially arches rotated in a circle» — which относится к куполам. Купол — это арка, повёрнутая по кругу.",
+    "hl": {
+     "p": 2,
+     "s": 1,
+     "w": "which"
+    }
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"essentially\" in the passage is closest in meaning to",
+    "opts": [
+     "basically",
+     "rarely",
+     "officially",
+     "gradually"
+    ],
+    "a": 0,
+    "ex": "Купол по сути — та же арка, только повёрнутая по кругу. Essentially = basically, «в сущности».",
+    "hl": {
+     "p": 2,
+     "s": 1,
+     "w": "essentially"
+    }
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the author mention Roman concrete in paragraph 3?",
+    "opts": [
+     "To show that the Romans invented the arch",
+     "To give one reason why many Roman structures have lasted",
+     "To explain why lintels cracked under weight",
+     "To argue that concrete is weaker than the cut stone used for arches"
+    ],
+    "a": 1,
+    "ex": "Бетон назван одной из причин долговечности римских сооружений («Their durability depended partly on Roman concrete»). Арку, как сказано в абзаце, римляне не изобрели."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-221",
+  "level": "C",
+  "src": "claude",
+  "topic": "Life sciences",
+  "title": "The Placebo Effect",
+  "paras": [
+   [
+    "A placebo is a treatment that contains no active ingredient, such as a sugar pill given in place of a real medicine.",
+    "Remarkably, patients who receive placebos often report genuine improvements, particularly in symptoms such as pain, nausea, and fatigue.",
+    "This phenomenon, known as the placebo effect, has long been regarded as a nuisance in medical research, because it makes the true benefit of a drug harder to measure."
+   ],
+   [
+    "To separate the effect of a drug from the effect of expectation, researchers use randomized controlled trials.",
+    "Participants are randomly assigned to receive either the real treatment or a placebo, and ideally neither they nor the researchers know which group they are in.",
+    "A drug is considered effective only if it produces significantly better results than the placebo.",
+    "This design, called double-blind, prevents expectations on either side from influencing the outcome."
+   ],
+   [
+    "More recently, scientists have begun to study the placebo effect as a phenomenon in its own right.",
+    "Brain-imaging studies suggest that expecting relief can trigger the release of the body's natural painkillers, indicating that the effect is not merely imaginary.",
+    "Even more surprisingly, some patients improve when they are told openly that they are taking a placebo.",
+    "Such findings have led some researchers to argue that the context of treatment, including a doctor's attention and reassurance, deserves greater consideration in medical practice."
+   ]
+  ],
+  "insert": {
+   "p": 2,
+   "slots": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sentence": "This result challenges the common assumption that a placebo can work only if the patient is deceived."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, why was the placebo effect long regarded as a problem in research?",
+    "opts": [
+     "It caused harmful side effects in many patients.",
+     "It made sugar pills more expensive than medicines.",
+     "It made the real benefit of a drug harder to measure.",
+     "It prevented patients from reporting their symptoms."
+    ],
+    "a": 2,
+    "ex": "Эффект плацебо считался помехой, «because it makes the true benefit of a drug harder to measure». Побочные эффекты и цена таблеток не упоминаются."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"genuine\" in the passage is closest in meaning to",
+    "opts": [
+     "temporary",
+     "expected",
+     "slight",
+     "real"
+    ],
+    "a": 3,
+    "ex": "Пациенты сообщают о настоящем, а не мнимом улучшении. Genuine = real; expected — ловушка: ожидание связано с темой, но не синоним.",
+    "hl": {
+     "p": 0,
+     "s": 1,
+     "w": "genuine"
+    }
+   },
+   {
+    "type": "Sentence Simplification",
+    "stem": "Which of the sentences below best expresses the essential information in the highlighted sentence in paragraph 2? Incorrect choices change the meaning in important ways or leave out essential information.",
+    "opts": [
+     "Participants are put into groups by chance, and ideally no one involved knows who receives the real treatment.",
+     "Participants choose their own group, but researchers do not tell them which treatment that group will actually receive.",
+     "Researchers decide which participants receive the drug and inform them in advance.",
+     "Participants know which group they are in, but the researchers are kept unaware."
+    ],
+    "a": 0,
+    "ex": "Суть: распределение случайное, и в идеале не знают ни участники, ни исследователи. Каждый неверный вариант искажает одну из двух частей.",
+    "simp": {
+     "p": 1,
+     "s": 1
+    }
+   },
+   {
+    "type": "Insert Text",
+    "stem": "Look at the four squares [■] in paragraph 3 that indicate where the following sentence could be added to the passage. Where would the sentence best fit?",
+    "insert": true,
+    "a": 2,
+    "ex": "Вставка «This result challenges… only if the patient is deceived» отвечает на предложение об открытом плацебо («told openly»), поэтому стоит сразу после него. Находка про обезболивающие вещества касается не обмана, а того, что эффект не воображаемый."
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred from paragraph 3 about the placebo effect?",
+    "opts": [
+     "It works only when patients are deceived.",
+     "It may involve real physical changes in the body.",
+     "It has no value in medical practice.",
+     "It is caused mainly by the sugar contained in the pills."
+    ],
+    "a": 1,
+    "ex": "Исследования мозга показывают выброс естественных обезболивающих — то есть происходят реальные физиологические изменения. Пункт про обман опровергается открытым плацебо."
+   }
+  ]
+ },
+ {
+  "id": "R-RAP-C-222",
+  "level": "C",
+  "src": "claude",
+  "topic": "Business and economics",
+  "title": "Comparative Advantage",
+  "paras": [
+   [
+    "In the early nineteenth century, the economist David Ricardo developed an idea that remains central to the study of international trade.",
+    "He argued that two countries can both benefit from trade even if one of them is better at producing everything.",
+    "What matters, according to Ricardo, is not absolute advantage, the ability to produce more of a good with the same resources, but comparative advantage."
+   ],
+   [
+    "A country has a comparative advantage in a good when it can produce that good at a lower opportunity cost, that is, by giving up less of other goods.",
+    "Ricardo illustrated the idea with England and Portugal, both of which produced cloth and wine.",
+    "Portugal could produce both goods more efficiently, yet its advantage was far greater in wine.",
+    "If Portugal concentrated on wine and England on cloth, and the two then traded, the total amount of both goods would increase."
+   ],
+   [
+    "The theory has been enormously influential, but critics point out that it rests on simplifying assumptions.",
+    "It assumes, for example, that workers can move easily from one industry to another, whereas in reality those who lose their jobs to foreign competition may struggle for years to find comparable work.",
+    "Moreover, a country that specializes too narrowly may become vulnerable if prices for its main export suddenly collapse.",
+    "Such objections do not necessarily invalidate the theory, but they suggest that the gains from trade are rarely distributed evenly."
+   ]
+  ],
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to paragraph 1, what did Ricardo argue?",
+    "opts": [
+     "Only the more productive country gains when two countries trade.",
+     "Countries should produce everything they need without trading.",
+     "Trade can benefit both countries even when one is more productive in every good.",
+     "Absolute advantage, not comparative advantage, is the main reason that countries trade."
+    ],
+    "a": 2,
+    "ex": "Рикардо утверждал, что обе страны выигрывают, даже если одна лучше производит всё. Главное — сравнительное, а не абсолютное преимущество."
+   },
+   {
+    "type": "Select the Sentence",
+    "stem": "Select the sentence in paragraph 2 that defines comparative advantage.",
+    "sel": {
+     "p": 1
+    },
+    "a": 0,
+    "ex": "Определение дано в первом предложении абзаца: товар производится с меньшими альтернативными издержками. Остальные предложения — пример с Англией и Португалией."
+   },
+   {
+    "type": "Reference",
+    "stem": "The word \"which\" in paragraph 2 refers to",
+    "opts": [
+     "cloth and wine",
+     "goods in general",
+     "Ricardo's ideas about trade",
+     "England and Portugal"
+    ],
+    "a": 3,
+    "ex": "«England and Portugal, both of which produced cloth and wine» — which относится к двум странам. Сукно и вино — то, что они производили.",
+    "hl": {
+     "p": 1,
+     "s": 1,
+     "w": "which"
+    }
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "The word \"invalidate\" in the passage is closest in meaning to",
+    "opts": [
+     "prove wrong",
+     "strengthen",
+     "explain",
+     "simplify"
+    ],
+    "a": 0,
+    "ex": "Возражения не обязательно опровергают теорию, но показывают её ограничения. Invalidate = prove wrong.",
+    "hl": {
+     "p": 2,
+     "s": 3,
+     "w": "invalidate"
+    }
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "According to paragraph 3, critics raise all of the following concerns EXCEPT:",
+    "opts": [
+     "Workers cannot always move easily between industries.",
+     "Trade reduces the total amount of goods produced.",
+     "Narrow specialization can make a country vulnerable.",
+     "The benefits of trade may not be shared equally."
+    ],
+    "a": 1,
+    "ex": "Критики говорят о трудности смены отрасли, уязвимости при узкой специализации и неравном распределении выгод. Что торговля уменьшает общее производство, они не утверждают — теория говорит обратное."
+   }
+  ]
  }
 ]

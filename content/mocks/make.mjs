@@ -1,5 +1,6 @@
 // One-off generator for content/mocks/mocks.json (reviewed and edited by hand afterwards; build.mjs only validates it).
 // Usage: node content/mocks/make.mjs  — overwrites mocks.json
+// WARNING: do not re-run as is — T4 and T5 (draft, Reading/Writing written specially in content/import/mock-T4T5-*.mjs) were added to mocks.json by hand and would be lost.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';

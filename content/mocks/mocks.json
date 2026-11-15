@@ -259,5 +259,81 @@
    "lrp": "S-LRP-B-007",
    "int": "S-INT-B-008"
   }
+ },
+ "T4": {
+  "title": "Пробник 4",
+  "draft": true,
+  "R": {
+   "M1": [
+    "R-CTW-A-124",
+    "R-CTW-B-124",
+    "R-RDL-A-229",
+    "R-RDL-B-227",
+    "R-RAP-B-214",
+    "R-RAP-B-215"
+   ],
+   "lower": [
+    "R-CTW-A-125",
+    "R-RAP-A-211"
+   ],
+   "upper": [
+    "R-CTW-C-124",
+    "R-RAP-C-221"
+   ]
+  },
+  "W": {
+   "bas": [
+    "W-BAS-A-121",
+    "W-BAS-B-121",
+    "W-BAS-A-122",
+    "W-BAS-C-121",
+    "W-BAS-B-122",
+    "W-BAS-A-123",
+    "W-BAS-B-123",
+    "W-BAS-C-122",
+    "W-BAS-B-124",
+    "W-BAS-C-123"
+   ],
+   "eml": "W-EML-C-021",
+   "dsc": "W-DSC-B-023"
+  }
+ },
+ "T5": {
+  "title": "Пробник 5",
+  "draft": true,
+  "R": {
+   "M1": [
+    "R-CTW-A-126",
+    "R-CTW-B-125",
+    "R-RDL-A-230",
+    "R-RDL-B-228",
+    "R-RAP-B-216",
+    "R-RAP-B-217"
+   ],
+   "lower": [
+    "R-CTW-A-127",
+    "R-RAP-A-212"
+   ],
+   "upper": [
+    "R-CTW-C-125",
+    "R-RAP-C-222"
+   ]
+  },
+  "W": {
+   "bas": [
+    "W-BAS-B-125",
+    "W-BAS-A-124",
+    "W-BAS-C-124",
+    "W-BAS-B-126",
+    "W-BAS-A-125",
+    "W-BAS-B-127",
+    "W-BAS-C-125",
+    "W-BAS-A-126",
+    "W-BAS-B-128",
+    "W-BAS-C-126"
+   ],
+   "eml": "W-EML-B-021",
+   "dsc": "W-DSC-C-021"
+  }
  }
 }
