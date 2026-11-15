@@ -6710,5 +6710,1660 @@
     "ex": "«People allergic to eggs should speak with a nurse first» — сначала поговорить с медсестрой. Запрета на прививку и требования справки в тексте нет."
    }
   ]
+ },
+ {
+  "id": "R-RDL-A-219",
+  "level": "A",
+  "src": "claude",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "LOST AND FOUND",
+   "paras": [
+    "Found in Room 204 on Tuesday: a black umbrella, a blue water bottle, and a math textbook. Ask at the main office. Items not collected by Friday will be given to charity."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Where can the owners get their things back?",
+    "opts": [
+     "At the main office",
+     "In Room 204",
+     "At a charity shop",
+     "At the library desk"
+    ],
+    "a": 0,
+    "ex": "«Ask at the main office» — вещи забирают в главном офисе. Room 204 — место, где их нашли, а не где их выдают."
+   },
+   {
+    "type": "Inference",
+    "stem": "What will probably happen to an umbrella that nobody collects by Friday?",
+    "opts": [
+     "It will be thrown away with the trash.",
+     "Someone else will receive it for free.",
+     "It will stay in Room 204 until summer.",
+     "It will be sold at the main office."
+    ],
+    "a": 1,
+    "ex": "Несобранные к пятнице вещи «will be given to charity» — их бесплатно отдадут другим людям. Про продажу и выбрасывание в тексте нет."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-220",
+  "level": "A",
+  "src": "claude",
+  "genre": "schedule",
+  "doc": {
+   "kind": "table",
+   "head": "University Gym — Opening Hours",
+   "rows": [
+    [
+     "Monday–Friday",
+     "6 a.m. – 10 p.m."
+    ],
+    [
+     "Saturday",
+     "8 a.m. – 8 p.m."
+    ],
+    [
+     "Sunday",
+     "10 a.m. – 6 p.m."
+    ]
+   ],
+   "foot": "The pool closes one hour before the gym."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "When does the gym open on Sunday?",
+    "opts": [
+     "At 6 a.m.",
+     "At 8 a.m.",
+     "At 10 a.m.",
+     "At 6 p.m."
+    ],
+    "a": 2,
+    "ex": "В строке Sunday: 10 a.m. – 6 p.m. 6 p.m. — время закрытия, а 6 и 8 a.m. — открытие в другие дни."
+   },
+   {
+    "type": "Inference",
+    "stem": "What time does the pool close on Saturday?",
+    "opts": [
+     "At 8 p.m.",
+     "At 9 p.m.",
+     "At 6 p.m.",
+     "At 7 p.m."
+    ],
+    "a": 3,
+    "ex": "В субботу зал работает до 8 p.m., а бассейн закрывается на час раньше — в 7 p.m. 8 p.m. — время закрытия самого зала."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-221",
+  "level": "A",
+  "src": "claude",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "group": "",
+   "msgs": [
+    {
+     "who": "Leo",
+     "time": "9:15 AM",
+     "text": "I'm at the bus stop. Where are you?"
+    },
+    {
+     "who": "Maya",
+     "time": "9:16 AM",
+     "text": "Sorry, I'm still at home. I can't find my keys!"
+    },
+    {
+     "who": "Leo",
+     "time": "9:16 AM",
+     "text": "The bus comes in five minutes."
+    },
+    {
+     "who": "Maya",
+     "time": "9:17 AM",
+     "text": "Go without me. I'll take the next one."
+    },
+    {
+     "who": "Leo",
+     "time": "9:17 AM",
+     "text": "OK. I'll save you a seat in class."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why is Maya still at home?",
+    "opts": [
+     "She cannot find her keys.",
+     "She did not hear her alarm clock.",
+     "She is waiting for Leo to call.",
+     "She took the wrong bus this morning."
+    ],
+    "a": 0,
+    "ex": "Мая пишет: «I can't find my keys!» — она не может найти ключи. Про будильник и другой автобус речи нет."
+   },
+   {
+    "type": "Inference",
+    "stem": "How will Maya probably get to class?",
+    "opts": [
+     "With Leo on the same bus",
+     "On a later bus",
+     "In her own car",
+     "On foot with a friend"
+    ],
+    "a": 1,
+    "ex": "Мая отвечает: «Go without me. I'll take the next one» — она поедет следующим автобусом, то есть позже Лео."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does Leo mean by \"save you a seat\"?",
+    "opts": [
+     "He will buy Maya a bus ticket.",
+     "He will sit in Maya's usual seat.",
+     "He will keep a seat free for Maya.",
+     "He will fix a broken seat for her."
+    ],
+    "a": 2,
+    "ex": "Save someone a seat — занять место для кого-то, чтобы оно осталось свободным. Лео придержит место для Маи на занятии.",
+    "hlw": "save you a seat"
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-222",
+  "level": "A",
+  "src": "claude",
+  "genre": "receipt",
+  "doc": {
+   "kind": "receipt",
+   "head": "Campus Copy Center — Receipt",
+   "meta": "",
+   "rows": [
+    [
+     "Black-and-white copies × 40",
+     "$4.00"
+    ],
+    [
+     "Color copies × 5",
+     "$2.50"
+    ],
+    [
+     "Binding",
+     "$3.00"
+    ],
+    [
+     "Total",
+     "$9.50"
+    ]
+   ],
+   "foot": "Pay with your student card and get 10% off your next visit."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How much did the color copies cost?",
+    "opts": [
+     "$0.50",
+     "$4.00",
+     "$3.00",
+     "$2.50"
+    ],
+    "a": 3,
+    "ex": "Строка «Color copies × 5» — $2.50. $4.00 — чёрно-белые копии, $3.00 — переплёт."
+   },
+   {
+    "type": "Factual",
+    "stem": "What do customers get if they pay with a student card?",
+    "opts": [
+     "A discount on their next visit",
+     "Free binding on the same day",
+     "Five free color copies today",
+     "Ten percent off this receipt"
+    ],
+    "a": 0,
+    "ex": "«Get 10% off your next visit» — скидка действует на следующий визит, а не на текущий чек."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-223",
+  "level": "A",
+  "src": "claude",
+  "genre": "ad",
+  "doc": {
+   "kind": "notice",
+   "head": "BIKE FOR SALE",
+   "paras": [
+    "Blue city bike, two years old, good condition. New tires. $80 or best offer. Lock included. Text Ana at 555-0198 after 5 p.m."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What comes with the bike?",
+    "opts": [
+     "A helmet",
+     "A lock",
+     "A basket",
+     "A new seat"
+    ],
+    "a": 1,
+    "ex": "«Lock included» — замок входит в цену. Новые в объявлении только шины, а шлем и корзина не упоминаются."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"or best offer\" mean in the ad?",
+    "opts": [
+     "Ana wants more than $80.",
+     "This is the best bike for sale.",
+     "Ana may accept a lower price.",
+     "Ana will give the bike away."
+    ],
+    "a": 2,
+    "ex": "Or best offer означает, что продавец готов рассмотреть предложения и, возможно, уступит в цене. Это не значит, что велосипед лучший или бесплатный.",
+    "hlw": "or best offer"
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-224",
+  "level": "A",
+  "src": "claude",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Kim (RA)",
+   "to": "Building C residents",
+   "subject": "No water on Thursday",
+   "paras": [
+    "Hi everyone,",
+    "The water in our building will be turned off on Thursday from 9 a.m. to noon for repairs. Please fill a bottle the night before. Sorry for the trouble!"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why will the water be turned off?",
+    "opts": [
+     "For cleaning",
+     "Because of a storm",
+     "To save money",
+     "For repairs"
+    ],
+    "a": 3,
+    "ex": "В письме: «for repairs» — из-за ремонта. Другие причины не названы."
+   },
+   {
+    "type": "Inference",
+    "stem": "When does Kim suggest filling a bottle?",
+    "opts": [
+     "On Wednesday night",
+     "On Thursday at noon",
+     "On Thursday morning",
+     "On Friday night"
+    ],
+    "a": 0,
+    "ex": "Воду отключат в четверг, а бутылку советуют наполнить «the night before» — то есть в среду вечером."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-225",
+  "level": "A",
+  "src": "claude",
+  "genre": "menu",
+  "doc": {
+   "kind": "table",
+   "head": "Food Truck — Today's Menu",
+   "rows": [
+    [
+     "Veggie wrap",
+     "$5"
+    ],
+    [
+     "Chicken rice bowl",
+     "$7"
+    ],
+    [
+     "Soup of the day (tomato)",
+     "$4"
+    ],
+    [
+     "Lemonade",
+     "$2"
+    ]
+   ],
+   "foot": "Cash only. We close when the food runs out."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What kind of soup is sold today?",
+    "opts": [
+     "Chicken",
+     "Tomato",
+     "Vegetable",
+     "Onion"
+    ],
+    "a": 1,
+    "ex": "В меню: «Soup of the day (tomato)». Курица есть только в rice bowl, а не в супе."
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about the food truck?",
+    "opts": [
+     "It accepts payment by credit card.",
+     "It sells only drinks in the afternoon.",
+     "It may close early on a busy day.",
+     "It stays open late every night."
+    ],
+    "a": 2,
+    "ex": "«We close when the food runs out» — если еду быстро раскупят, грузовик закроется раньше. Карты не принимают: «Cash only»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-226",
+  "level": "A",
+  "src": "claude",
+  "genre": "social",
+  "doc": {
+   "kind": "post",
+   "who": "Green Club",
+   "handle": "@greenU",
+   "paras": [
+    "Thanks to everyone who came to our park cleanup on Saturday! 45 volunteers collected 30 bags of trash. Next cleanup: the river path, May 10. Gloves provided!"
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How many volunteers came to the cleanup?",
+    "opts": [
+     "30",
+     "10",
+     "50",
+     "45"
+    ],
+    "a": 3,
+    "ex": "«45 volunteers collected 30 bags of trash» — пришли 45 человек, а 30 — это число мешков с мусором."
+   },
+   {
+    "type": "Factual",
+    "stem": "What will the club give volunteers on May 10?",
+    "opts": [
+     "Gloves",
+     "Trash bags",
+     "T-shirts",
+     "Lunch"
+    ],
+    "a": 0,
+    "ex": "«Gloves provided!» — клуб выдаст перчатки. Мешки упоминаются только в рассказе о прошлой уборке."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-227",
+  "level": "A",
+  "src": "claude",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "ELEVATOR OUT OF ORDER",
+   "paras": [
+    "The elevator in Hall B is out of order until Monday. Please use the stairs or the elevator in Hall A. If you need help, call the front desk at ext. 220."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What should people in Hall B use until Monday?",
+    "opts": [
+     "The Hall B elevator after 2 p.m.",
+     "The stairs or the Hall A elevator",
+     "The front desk elevator",
+     "The stairs in Hall C only"
+    ],
+    "a": 1,
+    "ex": "«Please use the stairs or the elevator in Hall A». Лифт в Hall B как раз не работает."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"out of order\" mean in the notice?",
+    "opts": [
+     "Very busy",
+     "Being cleaned",
+     "Not working",
+     "In the wrong place"
+    ],
+    "a": 2,
+    "ex": "Out of order — сломан, не работает. Поэтому лифтом в Hall B пользоваться нельзя до понедельника.",
+    "hlw": "out of order"
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-A-228",
+  "level": "A",
+  "src": "claude",
+  "genre": "schedule",
+  "doc": {
+   "kind": "table",
+   "head": "Student Clubs — Meeting Times",
+   "rows": [
+    [
+     "Chess Club",
+     "Tuesday, 5 p.m."
+    ],
+    [
+     "Film Club",
+     "Friday, 7 p.m."
+    ],
+    [
+     "Hiking Club",
+     "Saturday, 8 a.m."
+    ],
+    [
+     "Book Club",
+     "Wednesday, 6 p.m."
+    ]
+   ],
+   "foot": "All clubs are free to join."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which club meets on the weekend?",
+    "opts": [
+     "Chess Club",
+     "Film Club",
+     "Book Club",
+     "Hiking Club"
+    ],
+    "a": 3,
+    "ex": "Суббота — выходной, а по субботам встречается Hiking Club. Film Club — в пятницу вечером, это ещё будний день."
+   },
+   {
+    "type": "Inference",
+    "stem": "A student works on Tuesday and Wednesday evenings. Which evening club can she join?",
+    "opts": [
+     "Film Club",
+     "Chess Club",
+     "Book Club",
+     "Hiking Club"
+    ],
+    "a": 0,
+    "ex": "Chess Club (вторник) и Book Club (среда) не подходят. Hiking Club встречается утром. Из вечерних остаётся Film Club в пятницу."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-217",
+  "level": "B",
+  "src": "claude",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Housing Office",
+   "to": "All residents",
+   "subject": "Room safety inspections next week",
+   "paras": [
+    "Dear residents,",
+    "Room safety inspections will take place next week, Monday to Wednesday, between 10 a.m. and 4 p.m. You do not need to be present, but please make sure that candles, heaters, and extension cords are not in your room, as these are not allowed. Staff will knock before entering. If one of these items is found, you will receive a written warning."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is true about the inspections?",
+    "opts": [
+     "Students must stay in their rooms all day.",
+     "Students do not have to be in their rooms.",
+     "Inspections will take place in the evening.",
+     "Staff will enter rooms without knocking."
+    ],
+    "a": 1,
+    "ex": "«You do not need to be present» — присутствовать не обязательно. Время 10–16, а сотрудники стучат перед входом."
+   },
+   {
+    "type": "Reference",
+    "stem": "What does \"these\" refer to in \"as these are not allowed\"?",
+    "opts": [
+     "The residents who live in the building",
+     "The inspection days",
+     "Candles, heaters, and extension cords",
+     "The staff members"
+    ],
+    "a": 2,
+    "ex": "«These» заменяет только что перечисленные предметы: candles, heaters, and extension cords. Именно они запрещены.",
+    "hlw": "these"
+   },
+   {
+    "type": "Inference",
+    "stem": "What will probably happen to a student who keeps a heater in the room?",
+    "opts": [
+     "The student will have to move out of the building.",
+     "The student will pay a fine at the office.",
+     "The student will be asked to attend a class.",
+     "The student will get a written warning."
+    ],
+    "a": 3,
+    "ex": "Если найдут запрещённый предмет, «you will receive a written warning». Выселение и штраф в письме не упоминаются."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-218",
+  "level": "B",
+  "src": "claude",
+  "genre": "schedule",
+  "doc": {
+   "kind": "table",
+   "head": "Writing Center — Fall Hours",
+   "rows": [
+    [
+     "Monday–Thursday",
+     "10 a.m. – 8 p.m. (walk-ins welcome after 5 p.m.)"
+    ],
+    [
+     "Friday",
+     "10 a.m. – 2 p.m. (appointments only)"
+    ],
+    [
+     "Saturday",
+     "Closed"
+    ],
+    [
+     "Sunday",
+     "1 p.m. – 6 p.m. (online sessions only)"
+    ]
+   ],
+   "foot": "Appointments can be booked up to one week in advance. Each session lasts 45 minutes."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "When can a student get help without an appointment?",
+    "opts": [
+     "On a Monday evening after 5 p.m.",
+     "On Friday morning at 10 a.m.",
+     "On Saturday afternoon",
+     "On Sunday afternoon in the center itself"
+    ],
+    "a": 0,
+    "ex": "Walk-ins (без записи) принимают с понедельника по четверг после 17:00. В пятницу — только по записи, в субботу закрыто."
+   },
+   {
+    "type": "Inference",
+    "stem": "A student wants to meet a tutor in person on Sunday. What is true?",
+    "opts": [
+     "She must book a week ahead.",
+     "This is not possible.",
+     "She can come after 1 p.m.",
+     "She can walk in after 5 p.m."
+    ],
+    "a": 1,
+    "ex": "В воскресенье — «online sessions only», то есть только онлайн. Очная встреча в этот день невозможна."
+   },
+   {
+    "type": "Factual",
+    "stem": "How long is one session?",
+    "opts": [
+     "30 minutes",
+     "60 minutes",
+     "45 minutes",
+     "90 minutes"
+    ],
+    "a": 2,
+    "ex": "В примечании: «Each session lasts 45 minutes»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-219",
+  "level": "B",
+  "src": "claude",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "group": "Study Group — CHEM 101",
+   "msgs": [
+    {
+     "who": "Priya",
+     "time": "7:40 PM",
+     "text": "Is anyone else confused by question 4 on the problem set?"
+    },
+    {
+     "who": "Marcus",
+     "time": "7:42 PM",
+     "text": "Totally. I think we need the formula from Chapter 6, not Chapter 5."
+    },
+    {
+     "who": "Priya",
+     "time": "7:43 PM",
+     "text": "Oh, that makes sense. Want to go over it tomorrow before class?"
+    },
+    {
+     "who": "Elena",
+     "time": "7:45 PM",
+     "text": "I'm in. I have a free period from 10 to 11."
+    },
+    {
+     "who": "Marcus",
+     "time": "7:46 PM",
+     "text": "Same here. Library, second floor?"
+    },
+    {
+     "who": "Priya",
+     "time": "7:46 PM",
+     "text": "Works for me. I'll bring my notes."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What is Priya's problem?",
+    "opts": [
+     "She lost her notes for Chapter 6.",
+     "She cannot come to class tomorrow.",
+     "She does not have the problem set.",
+     "She does not understand one question."
+    ],
+    "a": 3,
+    "ex": "Прия спрашивает, не путает ли кого-то ещё вопрос 4 — ей непонятен один вопрос. Конспекты она как раз принесёт."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does Elena mean by \"I'm in\"?",
+    "opts": [
+     "She will join the meeting.",
+     "She is already in the library.",
+     "She is inside the classroom.",
+     "She is interested in chemistry."
+    ],
+    "a": 0,
+    "ex": "I'm in — разговорное «я в деле», то есть «я присоединяюсь». К тому же она сразу называет удобное время.",
+    "hlw": "I'm in"
+   },
+   {
+    "type": "Factual",
+    "stem": "Where will the group meet?",
+    "opts": [
+     "In the chemistry classroom",
+     "On the second floor of the library",
+     "In Marcus's room",
+     "In the café next to the library entrance"
+    ],
+    "a": 1,
+    "ex": "Маркус предлагает «Library, second floor?», Прия соглашается: «Works for me»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-220",
+  "level": "B",
+  "src": "claude",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "PARKING LOT C CLOSURE",
+   "paras": [
+    "Lot C will be closed from June 3 to June 14 while it is repaved. During this time, drivers with a Lot C permit may park in Lot E at no extra cost. A free shuttle will run from Lot E to the main campus every 15 minutes from 7 a.m. to 7 p.m. Vehicles left in Lot C after June 2 will be towed."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"repaved\" mean in the notice?",
+    "opts": [
+     "Painted with new parking lines",
+     "Made larger for more cars",
+     "Given a new road surface",
+     "Cleaned with water"
+    ],
+    "a": 2,
+    "ex": "Repave — заново покрыть асфальтом. Поэтому стоянку закрывают почти на две недели.",
+    "hlw": "repaved"
+   },
+   {
+    "type": "Factual",
+    "stem": "Where can Lot C permit holders park during the closure?",
+    "opts": [
+     "In Lot E, for a small fee",
+     "On the main campus",
+     "In Lot C until June 14",
+     "In Lot E, for free"
+    ],
+    "a": 3,
+    "ex": "«May park in Lot E at no extra cost» — в Lot E и без доплаты. Lot C в это время закрыт."
+   },
+   {
+    "type": "Inference",
+    "stem": "What will happen to a car left in Lot C on June 3?",
+    "opts": [
+     "It will be taken away.",
+     "It will be moved to Lot E free of charge.",
+     "Its owner will receive a free permit.",
+     "It will be allowed to stay until June 14."
+    ],
+    "a": 0,
+    "ex": "«Vehicles left in Lot C after June 2 will be towed» — машину эвакуируют. Про перемещение в Lot E ничего не сказано."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-221",
+  "level": "B",
+  "src": "claude",
+  "genre": "receipt",
+  "doc": {
+   "kind": "receipt",
+   "head": "Campus Dining — Monthly Statement",
+   "meta": "Meal plan: Silver (100 meals per month)",
+   "rows": [
+    [
+     "Meals used",
+     "78"
+    ],
+    [
+     "Meals remaining",
+     "22"
+    ],
+    [
+     "Dining dollars spent",
+     "$45.20"
+    ],
+    [
+     "Dining dollars left",
+     "$54.80"
+    ]
+   ],
+   "foot": "Unused meals do not carry over to next month. Dining dollars expire at the end of the semester."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How many meals can the student still use this month?",
+    "opts": [
+     "78",
+     "22",
+     "100",
+     "54"
+    ],
+    "a": 1,
+    "ex": "Строка «Meals remaining» — 22. 78 — уже использованные, 100 — весь план на месяц."
+   },
+   {
+    "type": "Inference",
+    "stem": "What should the student do to avoid losing meals?",
+    "opts": [
+     "Spend all dining dollars this week.",
+     "Change to a smaller meal plan today.",
+     "Use the remaining meals before the month ends.",
+     "Save the extra meals to use next month instead."
+    ],
+    "a": 2,
+    "ex": "«Unused meals do not carry over» — неиспользованные обеды сгорают в конце месяца, поэтому их выгоднее потратить до конца месяца."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-222",
+  "level": "B",
+  "src": "claude",
+  "genre": "social",
+  "doc": {
+   "kind": "post",
+   "who": "Campus Theater Club",
+   "handle": "@UTheater",
+   "paras": [
+    "Auditions for our spring musical are next Tuesday and Wednesday, 6–9 p.m., in the Arts Building. No experience needed! Prepare 30 seconds of any song. Can't sing? We also need people for lights, sound, and costumes. DM us to sign up for a time slot."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What should people prepare for the audition?",
+    "opts": [
+     "A scene from the musical",
+     "A dance routine",
+     "A letter about their experience",
+     "A short part of a song"
+    ],
+    "a": 3,
+    "ex": "«Prepare 30 seconds of any song» — нужно подготовить 30 секунд любой песни. Опыт не требуется."
+   },
+   {
+    "type": "Inference",
+    "stem": "Who could join the club without singing?",
+    "opts": [
+     "Someone who wants to make costumes",
+     "Someone who can only come on Friday",
+     "Someone with no free evenings",
+     "Someone who wants to direct the show"
+    ],
+    "a": 0,
+    "ex": "«Can't sing? We also need people for lights, sound, and costumes» — можно работать над костюмами, светом или звуком. Про режиссёра не сказано."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"DM us\" mean in the post?",
+    "opts": [
+     "Visit our office",
+     "Send us a private message",
+     "Call us by phone",
+     "Leave a public comment"
+    ],
+    "a": 1,
+    "ex": "DM — direct message, личное сообщение в соцсети. Через него записываются на время прослушивания.",
+    "hlw": "DM us"
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-223",
+  "level": "B",
+  "src": "claude",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Prof. Adeyemi",
+   "to": "ECON 201 students",
+   "subject": "Change to the final exam",
+   "paras": [
+    "Dear class,",
+    "After several of you asked for more time, I have decided to make the final a take-home exam. It will be posted online on May 2 at 9 a.m. and is due on May 4 at 9 a.m. You may use your notes and the textbook, but you must work alone. Late submissions will not be accepted under any circumstances."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why did the professor change the exam?",
+    "opts": [
+     "The classroom was not available.",
+     "The textbook was changed this term.",
+     "Students asked for more time.",
+     "Many students failed the midterm."
+    ],
+    "a": 2,
+    "ex": "Первая фраза: «After several of you asked for more time» — студенты попросили больше времени."
+   },
+   {
+    "type": "Inference",
+    "stem": "How much time will students have to complete the exam?",
+    "opts": [
+     "One day",
+     "Nine hours",
+     "One week",
+     "Two days"
+    ],
+    "a": 3,
+    "ex": "Экзамен выкладывают 2 мая в 9:00 и сдают 4 мая в 9:00 — это ровно 48 часов, два дня."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "Which of the following is NOT allowed?",
+    "opts": [
+     "Working with a classmate",
+     "Using class notes",
+     "Using the textbook",
+     "Doing the exam at home"
+    ],
+    "a": 0,
+    "ex": "Конспекты и учебник разрешены, экзамен выполняется дома (take-home). Но «you must work alone» — работать с одногруппниками нельзя."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-224",
+  "level": "B",
+  "src": "claude",
+  "genre": "instructions",
+  "doc": {
+   "kind": "notice",
+   "head": "HOW TO RESERVE A STUDY ROOM",
+   "paras": [
+    "1. Log in to the library website with your student ID.",
+    "2. Choose a date and a room size (2, 4, or 8 people).",
+    "3. Select up to two hours per day.",
+    "4. Check in at the front desk within 15 minutes of your start time, or the room will be given to other students."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "How long can a student reserve a room each day?",
+    "opts": [
+     "Up to four hours",
+     "Up to two hours",
+     "Up to 15 minutes",
+     "For a full day"
+    ],
+    "a": 1,
+    "ex": "Пункт 3: «Select up to two hours per day» — не больше двух часов в день. 15 минут — срок, чтобы отметиться."
+   },
+   {
+    "type": "Inference",
+    "stem": "A group arrives 30 minutes after its start time. What will probably happen?",
+    "opts": [
+     "The group will get extra time.",
+     "The group must pay a late fee.",
+     "The group may lose the room.",
+     "The group can book a bigger room."
+    ],
+    "a": 2,
+    "ex": "Отметиться нужно в течение 15 минут, иначе комнату отдают другим. Опоздание на 30 минут — комнату, скорее всего, потеряют."
+   },
+   {
+    "type": "Factual",
+    "stem": "What do students need in order to log in?",
+    "opts": [
+     "A library card number",
+     "A password from the front desk",
+     "An email from the library staff",
+     "Their student ID"
+    ],
+    "a": 3,
+    "ex": "Пункт 1: «Log in to the library website with your student ID»."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-225",
+  "level": "B",
+  "src": "claude",
+  "genre": "review",
+  "doc": {
+   "kind": "notice",
+   "head": "Review: Maple Street Laundromat ★★★☆☆ — Lena K.",
+   "paras": [
+    "The machines are new and clean, and it's only a five-minute walk from campus. However, half of the dryers were out of order when I visited, so I waited almost an hour. The staff were friendly but couldn't say when the dryers would be fixed. It's a good place if you go early in the morning."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What does Lena like about the laundromat?",
+    "opts": [
+     "It is close to campus.",
+     "The dryers work very quickly.",
+     "It is open all night long.",
+     "The prices are the lowest in town."
+    ],
+    "a": 0,
+    "ex": "Лене нравятся новые чистые машины и то, что до кампуса пять минут пешком. Про цены и ночные часы ничего нет."
+   },
+   {
+    "type": "Factual",
+    "stem": "Why did Lena wait for almost an hour?",
+    "opts": [
+     "The staff were not friendly to her.",
+     "Many dryers were not working.",
+     "The washing machines were too old.",
+     "She arrived before the laundromat opened."
+    ],
+    "a": 1,
+    "ex": "«Half of the dryers were out of order... so I waited almost an hour» — половина сушилок не работала."
+   },
+   {
+    "type": "Inference",
+    "stem": "Why does Lena probably recommend going early in the morning?",
+    "opts": [
+     "The dryers are repaired every morning.",
+     "The staff give discounts in the morning.",
+     "Fewer people use the machines then.",
+     "The laundromat closes at noon."
+    ],
+    "a": 2,
+    "ex": "Из-за нехватки сушилок пришлось ждать. Утром, вероятно, меньше посетителей и очередь короче. Про ремонт и скидки по утрам в отзыве нет."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-B-226",
+  "level": "B",
+  "src": "claude",
+  "genre": "news",
+  "doc": {
+   "kind": "notice",
+   "head": "CAMPUS NEWS — Six New Bike-Share Stations",
+   "paras": [
+    "The university has added six bike-share stations across campus, bringing the total to ten. Students can ride for free for the first 30 minutes; after that, the cost is $1 per hour. Bikes must be returned to any station by midnight. According to the transportation office, the program is meant to reduce car traffic near the main gate."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "How many bike-share stations were there before?",
+    "opts": [
+     "Six",
+     "Ten",
+     "Sixteen",
+     "Four"
+    ],
+    "a": 3,
+    "ex": "Добавили шесть станций, и всего стало десять — значит, раньше было четыре. Шесть — это число новых станций."
+   },
+   {
+    "type": "Inference",
+    "stem": "How much does a 90-minute ride cost?",
+    "opts": [
+     "$1",
+     "$1.50",
+     "$2",
+     "Nothing"
+    ],
+    "a": 0,
+    "ex": "Первые 30 минут бесплатно, остаётся 60 минут по $1 в час — итого $1."
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the article mention the transportation office?",
+    "opts": [
+     "To tell readers where to rent bikes",
+     "To explain the purpose of the program",
+     "To show who pays for the bikes",
+     "To announce a new parking rule"
+    ],
+    "a": 1,
+    "ex": "Ссылка на транспортный отдел объясняет цель программы — уменьшить поток машин у главных ворот."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-218",
+  "level": "C",
+  "src": "claude",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Office of the Dean of Students",
+   "to": "All students",
+   "subject": "Update on the Fulton Dining Hall renovation",
+   "paras": [
+    "Dear students,",
+    "As many of you know, the renovation of Fulton Dining Hall was scheduled to finish before the start of the spring term. Unfortunately, the discovery of outdated wiring during demolition has pushed the completion date back by roughly six weeks. In the meantime, the temporary dining tent on the north lawn will remain open, and its weekday hours will be extended until 10 p.m. We recognize that the tent is not an ideal substitute, particularly in cold weather, and we have therefore arranged for additional heaters. Students with meal plans will also receive five bonus meal swipes, which can be used at any campus café. We appreciate your patience and will share further updates as the work progresses."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What caused the delay?",
+    "opts": [
+     "The tent on the north lawn was damaged.",
+     "Workers were unable to start on time.",
+     "Old electrical wiring was found.",
+     "Cold weather stopped the construction."
+    ],
+    "a": 2,
+    "ex": "«The discovery of outdated wiring during demolition has pushed the completion date back» — при сносе нашли устаревшую проводку."
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the dean mention cold weather?",
+    "opts": [
+     "To explain why the renovation is taking longer",
+     "To suggest that students eat at cafés instead",
+     "To announce that the tent will close in winter",
+     "To explain why extra heaters have been arranged"
+    ],
+    "a": 3,
+    "ex": "Декан признаёт, что шатёр — не лучшая замена, особенно в холод, «and we have therefore arranged for additional heaters». Холод объясняет обогреватели, а не задержку ремонта."
+   },
+   {
+    "type": "Inference",
+    "stem": "What can be inferred about the bonus meal swipes?",
+    "opts": [
+     "They are offered to make up for the inconvenience.",
+     "They can only be used in the tent.",
+     "They replace the students' regular meal plans.",
+     "They will be given only to students in the dorms."
+    ],
+    "a": 0,
+    "ex": "Бонусные обеды идут вместе с извинениями за неудобства («not an ideal substitute», «appreciate your patience») — это компенсация. Использовать их можно в любом кафе кампуса."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-219",
+  "level": "C",
+  "src": "claude",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "LIBRARY POLICY UPDATE — Laptop Loans",
+   "paras": [
+    "Effective January 15, the laptop loan period will be reduced from seven days to 72 hours. The change responds to a sharp rise in demand: last semester, the waiting list frequently exceeded forty names, and some students waited more than two weeks for a device. Laptops may be renewed once, provided no one else has placed a hold. Overdue laptops will incur a fine of $5 per day, and borrowing privileges will be suspended for any account with a laptop more than five days late. Students who need a laptop for longer because of a documented need should contact Accessibility Services."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Why is the loan period being shortened?",
+    "opts": [
+     "Many laptops were returned damaged.",
+     "More students want to borrow laptops.",
+     "The library has bought fewer laptops.",
+     "Students rarely used the full seven days."
+    ],
+    "a": 1,
+    "ex": "«The change responds to a sharp rise in demand» — спрос резко вырос: очередь превышала 40 человек."
+   },
+   {
+    "type": "Inference",
+    "stem": "A student wants to keep a laptop for six days without paying a fine. What must be true?",
+    "opts": [
+     "The student must pay $5 for each extra day.",
+     "The student must contact Accessibility Services.",
+     "No other student has requested that laptop.",
+     "The student must borrow it before January 15."
+    ],
+    "a": 2,
+    "ex": "72 часа плюс одно продление по 72 часа — как раз шесть дней. Продлить можно только «provided no one else has placed a hold», то есть если никто не встал в очередь."
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "Which of the following is NOT mentioned in the notice?",
+    "opts": [
+     "Laptops may be renewed one time.",
+     "Late laptops are fined $5 a day.",
+     "Accounts may be suspended for late returns.",
+     "Laptops can be reserved online in advance."
+    ],
+    "a": 3,
+    "ex": "Продление один раз, штраф $5 в день и блокировка аккаунта названы в тексте. Про онлайн-бронирование ничего не сказано."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-220",
+  "level": "C",
+  "src": "claude",
+  "genre": "syllabus",
+  "doc": {
+   "kind": "table",
+   "head": "PSY 305 — Grading",
+   "rows": [
+    [
+     "Weekly reading responses",
+     "20% (the two lowest scores are dropped)"
+    ],
+    [
+     "Midterm exam",
+     "25%"
+    ],
+    [
+     "Research proposal",
+     "30% (a draft is required for full credit)"
+    ],
+    [
+     "Participation",
+     "25% (includes the online discussion board)"
+    ]
+   ],
+   "foot": "Late reading responses are not accepted. Extensions on the research proposal must be requested at least 48 hours before the deadline."
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Which part of the course counts the most toward the final grade?",
+    "opts": [
+     "The research proposal",
+     "The midterm exam",
+     "Participation",
+     "The reading responses"
+    ],
+    "a": 0,
+    "ex": "Research proposal — 30%, это самая большая доля. Экзамен и участие — по 25%, отклики на чтение — 20%."
+   },
+   {
+    "type": "Inference",
+    "stem": "A student misses two reading responses because of illness. What is the likely effect on her grade?",
+    "opts": [
+     "She will lose 20% of her final grade.",
+     "It may not affect her grade at all.",
+     "She can submit both responses late.",
+     "She will fail the midterm exam."
+    ],
+    "a": 1,
+    "ex": "Две самые низкие оценки за отклики не учитываются («the two lowest scores are dropped»), поэтому два пропуска могут вообще не повлиять на оценку. Сдать их позже нельзя: «Late reading responses are not accepted»."
+   },
+   {
+    "type": "Factual",
+    "stem": "How can a student get more time for the research proposal?",
+    "opts": [
+     "By submitting a draft after the deadline",
+     "By posting on the discussion board",
+     "By asking at least two days before it is due",
+     "By asking the instructor on the day of the deadline"
+    ],
+    "a": 2,
+    "ex": "«Extensions... must be requested at least 48 hours before the deadline» — минимум за двое суток."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-221",
+  "level": "C",
+  "src": "claude",
+  "genre": "chat",
+  "doc": {
+   "kind": "chat",
+   "group": "Lab Partners",
+   "msgs": [
+    {
+     "who": "Jordan",
+     "time": "10:12 PM",
+     "text": "Bad news — the spectrometer is booked solid until Friday."
+    },
+    {
+     "who": "Aisha",
+     "time": "10:13 PM",
+     "text": "Seriously? Our report is due Thursday."
+    },
+    {
+     "who": "Jordan",
+     "time": "10:14 PM",
+     "text": "I know. I emailed Dr. Chen to ask whether we could use last year's data instead."
+    },
+    {
+     "who": "Aisha",
+     "time": "10:16 PM",
+     "text": "Good call. If she says no, maybe the physics department has one we could borrow?"
+    },
+    {
+     "who": "Jordan",
+     "time": "10:17 PM",
+     "text": "Worth a shot. I'll ask around tomorrow morning."
+    },
+    {
+     "who": "Aisha",
+     "time": "10:18 PM",
+     "text": "Thanks. I'll start drafting the introduction and methods so we're not starting from scratch."
+    }
+   ]
+  },
+  "qs": [
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"booked solid\" mean in the chat?",
+    "opts": [
+     "Broken and being repaired",
+     "Too difficult to use",
+     "Moved to another room",
+     "Completely reserved"
+    ],
+    "a": 3,
+    "ex": "Booked solid — полностью забронирован, свободного времени нет. Поэтому до пятницы прибором не воспользоваться.",
+    "hlw": "booked solid"
+   },
+   {
+    "type": "Factual",
+    "stem": "Why did Jordan email Dr. Chen?",
+    "opts": [
+     "To ask whether they can use older data",
+     "To ask for a later due date for the report",
+     "To complain about the physics department",
+     "To reserve the spectrometer for Friday"
+    ],
+    "a": 0,
+    "ex": "«I emailed Dr. Chen to ask whether we could use last year's data instead» — спросить разрешения использовать прошлогодние данные."
+   },
+   {
+    "type": "Inference",
+    "stem": "Why does Aisha decide to write the introduction and methods now?",
+    "opts": [
+     "Dr. Chen asked her to finish them first.",
+     "Those parts do not depend on new measurements.",
+     "Jordan has already finished writing the results section.",
+     "She wants to submit the report early."
+    ],
+    "a": 1,
+    "ex": "Без прибора нельзя получить новые данные, но введение и методы можно писать уже сейчас, чтобы не начинать с нуля («not starting from scratch»)."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-222",
+  "level": "C",
+  "src": "claude",
+  "genre": "news",
+  "doc": {
+   "kind": "notice",
+   "head": "CAMPUS NEWS — Student Senate Rejects Fee Increase",
+   "paras": [
+    "In a 14–9 vote on Tuesday, the Student Senate rejected a proposed $40 increase to the student activities fee. Supporters argued that the additional money would allow clubs to host larger events and cover rising travel costs for competitions. Opponents pointed out that the fee has already risen twice in the past five years and that many students are struggling with housing costs. The vote is advisory, meaning that the university's board of trustees will make the final decision in March. Senate president Lucas Moreno said he hoped the board would \"take the students' voice seriously.\""
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "According to supporters, how would the increase help?",
+    "opts": [
+     "Students could pay less for housing.",
+     "The board could make its decision earlier.",
+     "Clubs could pay for bigger events and travel.",
+     "The Senate could hire more staff members."
+    ],
+    "a": 2,
+    "ex": "Сторонники говорили, что деньги позволят клубам проводить более крупные мероприятия и оплачивать поездки на соревнования."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"advisory\" mean in the article?",
+    "opts": [
+     "Open to all members of the university",
+     "Taken in secret by all the members of the Senate",
+     "Required by university law",
+     "Giving a recommendation, not a final decision"
+    ],
+    "a": 3,
+    "ex": "Advisory vote — рекомендательное голосование: окончательное решение примет совет попечителей в марте.",
+    "hlw": "advisory"
+   },
+   {
+    "type": "Inference",
+    "stem": "What does Lucas Moreno's statement suggest?",
+    "opts": [
+     "He wants the board to follow the Senate's vote.",
+     "He supported the fee increase.",
+     "He thinks the vote was unfair to the clubs on campus.",
+     "He plans to join the board in March."
+    ],
+    "a": 0,
+    "ex": "Моро надеется, что совет «take the students' voice seriously», то есть учтёт мнение студентов и не станет повышать сбор."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-223",
+  "level": "C",
+  "src": "claude",
+  "genre": "email",
+  "doc": {
+   "kind": "email",
+   "from": "Daniel Reyes, Property Manager",
+   "to": "Maria Ortiz",
+   "subject": "Your lease renewal",
+   "paras": [
+    "Dear Ms. Ortiz,",
+    "Your current lease at 18 Elm Court ends on July 31. If you wish to renew, please sign and return the enclosed agreement by June 15. Please note that the monthly rent for renewing tenants will rise from $950 to $990, which is still below the rate offered to new tenants ($1,050). If we do not hear from you by the deadline, we will assume that you plan to move out and will begin showing the apartment to prospective tenants. Should you have any questions, I am available Monday through Friday, 9 a.m. to 5 p.m."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "What will happen if Ms. Ortiz does not reply by June 15?",
+    "opts": [
+     "Her rent will rise to $1,050 a month.",
+     "The manager will show the apartment to others.",
+     "Her lease will be renewed automatically for a year.",
+     "She will have to move out on June 15."
+    ],
+    "a": 1,
+    "ex": "«We will assume that you plan to move out and will begin showing the apartment» — начнут показывать квартиру другим. Договор продлится только при подписи."
+   },
+   {
+    "type": "Rhetorical Purpose",
+    "stem": "Why does the manager mention the rent for new tenants?",
+    "opts": [
+     "To warn her that the rent will rise again",
+     "To explain why the lease is ending",
+     "To show that the renewal price is a good deal",
+     "To ask her to recommend new tenants"
+    ],
+    "a": 2,
+    "ex": "Новые жильцы платят $1,050, а Ортис предлагают $990 — упоминание показывает, что продление выгодно."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"prospective\" mean in the email?",
+    "opts": [
+     "Living there at present",
+     "Former",
+     "Wealthy",
+     "Possible future"
+    ],
+    "a": 3,
+    "ex": "Prospective tenants — потенциальные, будущие жильцы, которым будут показывать квартиру.",
+    "hlw": "prospective"
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-224",
+  "level": "C",
+  "src": "claude",
+  "genre": "review",
+  "doc": {
+   "kind": "notice",
+   "head": "Course review — HIST 220: Modern Europe ★★★★☆ — Tomás R.",
+   "paras": [
+    "Dr. Whitfield's lectures are dense but rewarding; she has a gift for connecting individual events to larger patterns. That said, the reading load is heavy — roughly 150 pages a week — and the weekly quizzes leave little room to fall behind. Discussion sections were hit or miss, depending largely on the teaching assistant. If you're willing to keep up, it's one of the most valuable courses in the department; if you're looking for an easy elective, look elsewhere."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "Which student would Tomás most likely recommend the course to?",
+    "opts": [
+     "One who is ready to do a lot of reading",
+     "One who wants an easy elective",
+     "One who prefers small discussion groups",
+     "One who dislikes weekly quizzes"
+    ],
+    "a": 0,
+    "ex": "Курс ценный «if you're willing to keep up» — для тех, кто готов к большому объёму чтения. Тем, кому нужен лёгкий курс, советуют искать другой."
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What does \"hit or miss\" mean in the review?",
+    "opts": [
+     "Always too difficult for most students",
+     "Sometimes good and sometimes not",
+     "Usually cancelled",
+     "Mostly about history"
+    ],
+    "a": 1,
+    "ex": "Hit or miss — нестабильный по качеству: где-то хорошо, где-то нет. В отзыве это зависит от ассистента.",
+    "hlw": "hit or miss"
+   },
+   {
+    "type": "Negative Factual",
+    "stem": "Which of the following does Tomás NOT criticize?",
+    "opts": [
+     "The amount of reading",
+     "The pressure of weekly quizzes",
+     "The professor's lectures",
+     "The quality of discussion sections"
+    ],
+    "a": 2,
+    "ex": "Лекции он хвалит («dense but rewarding»). Критикует объём чтения, еженедельные тесты и неровные семинары."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-225",
+  "level": "C",
+  "src": "claude",
+  "genre": "instructions",
+  "doc": {
+   "kind": "notice",
+   "head": "Submitting Your Thesis Electronically",
+   "paras": [
+    "All graduate theses must be submitted through the online repository by the posted deadline. Before uploading, convert your document to PDF/A format, which ensures that fonts and images display correctly over time; standard PDFs are not accepted. Embargo requests, which delay public access for up to two years, typically to protect pending patents or publications, must be approved by your advisor before submission. Once a thesis has been accepted, changes can be made only through a formal correction request, which may take up to four weeks to process."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Reference",
+    "stem": "What does \"which\" refer to in \"which ensures that fonts and images display correctly\"?",
+    "opts": [
+     "The online repository",
+     "The posted deadline",
+     "A standard PDF",
+     "PDF/A format"
+    ],
+    "a": 3,
+    "ex": "«PDF/A format, which ensures that fonts and images display correctly» — which относится к формату PDF/A. Обычные PDF как раз не принимают.",
+    "hlw": "which"
+   },
+   {
+    "type": "Vocabulary",
+    "stem": "What is an \"embargo\" in the instructions?",
+    "opts": [
+     "A delay before a thesis becomes public",
+     "A ban on using certain sources in the thesis",
+     "A fine for a late submission",
+     "A request for a new advisor"
+    ],
+    "a": 0,
+    "ex": "Embargo здесь — отсрочка публичного доступа к диссертации на срок до двух лет, например ради патента.",
+    "hlw": "Embargo"
+   },
+   {
+    "type": "Inference",
+    "stem": "What should a student who finds a mistake after acceptance expect?",
+    "opts": [
+     "An automatic two-year embargo",
+     "A wait of up to a month for the correction",
+     "A new deadline from the advisor",
+     "A request to upload the thesis again as a standard PDF"
+    ],
+    "a": 1,
+    "ex": "После принятия изменения возможны только через «formal correction request», который рассматривают до четырёх недель, то есть около месяца."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-226",
+  "level": "C",
+  "src": "claude",
+  "genre": "form",
+  "doc": {
+   "kind": "table",
+   "head": "Study Abroad — Application Checklist",
+   "rows": [
+    [
+     "Online application",
+     "Due February 1"
+    ],
+    [
+     "Two faculty recommendations",
+     "Due February 1 (sent directly by the recommenders)"
+    ],
+    [
+     "Official transcript",
+     "Due February 1 (request from the Registrar; allow 5 business days)"
+    ],
+    [
+     "Passport copy",
+     "Due March 15 (must be valid for 6 months after your return)"
+    ],
+    [
+     "$300 deposit",
+     "Due within 2 weeks of acceptance (non-refundable)"
+    ]
+   ],
+   "foot": "Incomplete applications will not be reviewed."
+  },
+  "qs": [
+   {
+    "type": "Inference",
+    "stem": "When should a student request the transcript at the latest?",
+    "opts": [
+     "On February 1",
+     "By March 15",
+     "At least five business days before February 1",
+     "Within two weeks after the program accepts the application"
+    ],
+    "a": 2,
+    "ex": "Выписка нужна к 1 февраля, а Registrar готовит её 5 рабочих дней, значит, запрос нужно подать заранее, хотя бы за пять рабочих дней."
+   },
+   {
+    "type": "Factual",
+    "stem": "Who sends the faculty recommendations?",
+    "opts": [
+     "The student applying for the program",
+     "The Registrar's office",
+     "The study abroad office",
+     "The faculty members themselves"
+    ],
+    "a": 3,
+    "ex": "«Sent directly by the recommenders» — рекомендации отправляют сами преподаватели."
+   },
+   {
+    "type": "Inference",
+    "stem": "What would happen to a student who pays the deposit and then decides not to go?",
+    "opts": [
+     "The student would not get the $300 back.",
+     "The student would receive a full refund.",
+     "The deposit would be used for the passport.",
+     "The application would be reviewed again."
+    ],
+    "a": 0,
+    "ex": "Депозит «non-refundable» — невозвратный. Если студент передумает, деньги не вернут."
+   }
+  ]
+ },
+ {
+  "id": "R-RDL-C-227",
+  "level": "C",
+  "src": "claude",
+  "genre": "notice",
+  "doc": {
+   "kind": "notice",
+   "head": "CAMPUS ADVISORY — Water Main Repair",
+   "paras": [
+    "Because of an emergency repair to a water main beneath Oak Avenue, water service to the science quadrangle will be interrupted on Saturday from 6 a.m. until approximately 2 p.m. Laboratories that rely on running water to cool equipment should arrange alternative cooling or shut down affected instruments by Friday evening. Restrooms in the quadrangle will be unavailable; portable facilities will be placed near the Chemistry Building. Although crews expect to finish on schedule, the work may extend into the afternoon if additional damage is found."
+   ]
+  },
+  "qs": [
+   {
+    "type": "Factual",
+    "stem": "Who must take action before Saturday?",
+    "opts": [
+     "All students who live in the dorms near Oak Avenue",
+     "Labs that use water to cool their equipment",
+     "Crews working on the water main",
+     "Staff in the Chemistry Building only"
+    ],
+    "a": 1,
+    "ex": "Лабораториям, где оборудование охлаждается водой, нужно до вечера пятницы обеспечить другое охлаждение или выключить приборы."
+   },
+   {
+    "type": "Factual",
+    "stem": "Where can people find restrooms on Saturday?",
+    "opts": [
+     "Inside the science buildings",
+     "On Oak Avenue",
+     "Near the Chemistry Building",
+     "In the library"
+    ],
+    "a": 2,
+    "ex": "Туалеты в квадрангле не работают, временные поставят «near the Chemistry Building»."
+   },
+   {
+    "type": "Inference",
+    "stem": "What does the notice suggest about the end of the repair?",
+    "opts": [
+     "It will definitely end at 6 a.m.",
+     "It has already been completed.",
+     "It will continue until Friday evening.",
+     "It might finish later than 2 p.m."
+    ],
+    "a": 3,
+    "ex": "2 p.m. — «approximately», а при новых повреждениях работы «may extend into the afternoon». Значит, они могут закончиться позже."
+   }
+  ]
  }
 ]
