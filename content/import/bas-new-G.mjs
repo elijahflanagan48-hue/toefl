@@ -2,7 +2,7 @@
 // Entry: [focus, speaker line (campus dialogue), template, extra chunk (trap), Russian explanation]. {a|b|c} = consecutive slots; text outside braces is pre-filled.
 import { readFileSync, writeFileSync } from 'node:fs';
 const A = [
-  ['Present Perfect с never', 'Have you ever been to the campus gym?', 'No, I {have never|been|there}.', 'went', 'Present Perfect: have never been. Форма went — Past Simple, с have она не сочетается.'],
+  ['Present Perfect с never', 'Have you ever tried the Thai restaurant near campus?', 'No, I {have never|eaten|there}.', 'ate', 'Present Perfect: have never eaten. Форма ate — Past Simple, с have она не сочетается.'],
   ['There are + число', 'How many students are in your class?', 'There {are|twenty|students|in my class}.', 'is', 'Students — множественное число, поэтому there are. There is стоит только перед единственным числом.'],
   ['Предлоги места', 'I can\'t find the library.', 'It {is|next to|the main gate}.', 'next of', 'Расположение рядом выражаем оборотом next to. Форма next of так не употребляется.'],
   ['Like + герундий', 'What do you do after class?', 'I {like|playing|chess|with my friends}.', 'play', 'После like, когда речь об увлечении, ставим -ing: like playing. Форма play после like не подходит.'],

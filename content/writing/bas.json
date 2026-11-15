@@ -3724,23 +3724,23 @@
   "id": "W-BAS-B-051",
   "level": "B",
   "focus": "Used to",
-  "a": "Did you always live in the city?",
+  "a": "Did you always enjoy reading?",
   "parts": [
    "No, I",
    null,
    null,
    null,
    null,
-   "."
+   "at all."
   ],
   "slots": [
-   "used to",
-   "live",
-   "in",
-   "a small village"
+   "didn't",
+   "use to",
+   "like",
+   "it"
   ],
-  "extra": "use to",
-  "ex": "Привычка или состояние в прошлом: used to + глагол. В утвердительном предложении форма use to без -d неверна."
+  "extra": "liked",
+  "ex": "В отрицании прошлой привычки после didn't стоит use to без -d, а за ним инфинитив: didn't use to like. Форма liked после to невозможна."
  },
  {
   "id": "W-BAS-B-052",
@@ -3838,24 +3838,22 @@
  {
   "id": "W-BAS-B-056",
   "level": "B",
-  "focus": "Герундий после enjoy",
-  "a": "What do you like about your job?",
+  "focus": "Avoid + герундий",
+  "a": "How do you stay calm before an exam?",
   "parts": [
-   "I enjoy",
+   "I",
    null,
    null,
    null,
-   null,
-   "."
+   "the night before."
   ],
   "slots": [
-   "working",
-   "with",
-   "young",
-   "people"
+   "avoid",
+   "drinking",
+   "coffee"
   ],
-  "extra": "to work",
-  "ex": "После глагола enjoy используется герундий: enjoy working. Инфинитив to work не подходит."
+  "extra": "to drink",
+  "ex": "После avoid используется герундий: avoid drinking. Инфинитив to drink после avoid невозможен."
  },
  {
   "id": "W-BAS-B-057",
@@ -4002,7 +4000,7 @@
   "id": "W-BAS-C-053",
   "level": "C",
   "focus": "Сослагательное после suggest",
-  "a": "What did the consultant recommend?",
+  "a": "What did the consultant say about the product launch?",
   "parts": [
    "She suggested",
    null,
@@ -4199,7 +4197,7 @@
   "id": "W-BAS-A-061",
   "level": "A",
   "focus": "Present Perfect с never",
-  "a": "Have you ever been to the campus gym?",
+  "a": "Have you ever tried the Thai restaurant near campus?",
   "parts": [
    "No, I",
    null,
@@ -4209,11 +4207,11 @@
   ],
   "slots": [
    "have never",
-   "been",
+   "eaten",
    "there"
   ],
-  "extra": "went",
-  "ex": "Present Perfect: have never been. Форма went — Past Simple, с have она не сочетается."
+  "extra": "ate",
+  "ex": "Present Perfect: have never eaten. Форма ate — Past Simple, с have она не сочетается."
  },
  {
   "id": "W-BAS-A-062",
@@ -7016,22 +7014,26 @@
  {
   "id": "W-BAS-A-109",
   "level": "A",
-  "focus": "Вопрос Where … from?",
-  "a": "Our new classmate has an interesting accent.",
+  "focus": "Вопрос с how many",
+  "a": "I have so many exams this week.",
   "parts": [
-   "Where",
+   "How",
    null,
    null,
    null,
-   "?"
+   null,
+   null,
+   "this week?"
   ],
   "slots": [
-   "is",
-   "he",
-   "from"
+   "many",
+   "exams",
+   "do",
+   "you",
+   "have"
   ],
-  "extra": "does",
-  "ex": "Вопрос о происхождении строится с глаголом be: Where is he from? Does без смыслового глагола здесь невозможен."
+  "extra": "much",
+  "ex": "Exams — исчисляемое существительное, поэтому how many exams. How much используется с неисчисляемыми."
  },
  {
   "id": "W-BAS-A-110",

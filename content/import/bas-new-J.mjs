@@ -10,7 +10,7 @@ const A = [
   ["Отрицательный повелительный", "Can I eat in the computer lab?", "No, please {don't|bring|any food} into the lab.", "not", "Запрет выражается don't + глагол: please don't bring. Одного not перед глаголом в повелительном наклонении недостаточно."],
   ["Сравнительная степень с more", "Should I take the morning or the evening class?", "The morning class {is|more|convenient} for you.", "much", "Длинные прилагательные сравниваются через more: more convenient. Much может только усиливать сравнение (much more), но не заменять more."],
   ["Will для предложения помощи", "This box is really heavy.", "Wait, I {will|help|you|carry} it.", "helping", "Спонтанное предложение помощи — will + глагол: I will help you carry it. После will форма helping неверна."],
-  ["Вопрос Where … from?", "Our new classmate has an interesting accent.", "Where {is|he|from}?", "does", "Вопрос о происхождении строится с глаголом be: Where is he from? Does без смыслового глагола здесь невозможен."],
+  ["Вопрос с how many", "I have so many exams this week.", "How {many|exams|do|you|have} this week?", "much", "Exams — исчисляемое существительное, поэтому how many exams. How much используется с неисчисляемыми."],
   ["Interested in", "Why did you join the photography club?", "I'm {very|interested|in|photography}.", "on", "Прилагательное interested требует предлога in: interested in photography. Предлог on с ним не употребляется."],
 ];
 const B = [
