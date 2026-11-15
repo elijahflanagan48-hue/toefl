@@ -6845,5 +6845,688 @@
   ],
   "extra": "did",
   "ex": "В косвенном вопросе прямой порядок слов: why the results have not been released. Did не сочетается ни с explained, ни с released."
+ },
+ {
+  "id": "W-BAS-A-101",
+  "level": "A",
+  "focus": "Вопрос с whose",
+  "a": "This umbrella was left in the classroom.",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "Whose",
+   "umbrella",
+   "is",
+   "it"
+  ],
+  "extra": "Who's",
+  "ex": "Чей? — whose + существительное: Whose umbrella is it? Who's = who is, и в этой позиции неверно."
+ },
+ {
+  "id": "W-BAS-A-102",
+  "level": "A",
+  "focus": "Вопрос с which в Present Continuous",
+  "a": "There are two sections of the history course.",
+  "parts": [
+   "Which",
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "one",
+   "are",
+   "you",
+   "taking"
+  ],
+  "extra": "do",
+  "ex": "Действие в текущем семестре — Present Continuous: Which one are you taking? Do не сочетается с формой taking."
+ },
+ {
+  "id": "W-BAS-A-103",
+  "level": "A",
+  "focus": "Предлоги: in the middle of",
+  "a": "When is the final exam?",
+  "parts": [
+   "It's",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "in",
+   "the middle",
+   "of",
+   "December"
+  ],
+  "extra": "on",
+  "ex": "In the middle of + месяц: in the middle of December. On используется с датами и днями, а не с серединой месяца."
+ },
+ {
+  "id": "W-BAS-A-104",
+  "level": "A",
+  "focus": "Вопрос What … like?",
+  "a": "I just met our new neighbor.",
+  "parts": [
+   "What",
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "is",
+   "she",
+   "like"
+  ],
+  "extra": "how",
+  "ex": "О характере спрашивают What is she like? Сочетание how … like неверно: либо How is she?, либо What is she like?"
+ },
+ {
+  "id": "W-BAS-A-105",
+  "level": "A",
+  "focus": "There were + множественное",
+  "a": "Was the party fun?",
+  "parts": [
+   "Yes, there",
+   null,
+   null,
+   null,
+   "from my class."
+  ],
+  "slots": [
+   "were",
+   "lots of",
+   "students"
+  ],
+  "extra": "much",
+  "ex": "Students — исчисляемое во множественном числе: there were lots of students. Much с исчисляемыми не употребляется."
+ },
+ {
+  "id": "W-BAS-A-106",
+  "level": "A",
+  "focus": "Отрицательный повелительный",
+  "a": "Can I eat in the computer lab?",
+  "parts": [
+   "No, please",
+   null,
+   null,
+   null,
+   "into the lab."
+  ],
+  "slots": [
+   "don't",
+   "bring",
+   "any food"
+  ],
+  "extra": "not",
+  "ex": "Запрет выражается don't + глагол: please don't bring. Одного not перед глаголом в повелительном наклонении недостаточно."
+ },
+ {
+  "id": "W-BAS-A-107",
+  "level": "A",
+  "focus": "Сравнительная степень с more",
+  "a": "Should I take the morning or the evening class?",
+  "parts": [
+   "The morning class",
+   null,
+   null,
+   null,
+   "for you."
+  ],
+  "slots": [
+   "is",
+   "more",
+   "convenient"
+  ],
+  "extra": "much",
+  "ex": "Длинные прилагательные сравниваются через more: more convenient. Much может только усиливать сравнение (much more), но не заменять more."
+ },
+ {
+  "id": "W-BAS-A-108",
+  "level": "A",
+  "focus": "Will для предложения помощи",
+  "a": "This box is really heavy.",
+  "parts": [
+   "Wait, I",
+   null,
+   null,
+   null,
+   null,
+   "it."
+  ],
+  "slots": [
+   "will",
+   "help",
+   "you",
+   "carry"
+  ],
+  "extra": "helping",
+  "ex": "Спонтанное предложение помощи — will + глагол: I will help you carry it. После will форма helping неверна."
+ },
+ {
+  "id": "W-BAS-A-109",
+  "level": "A",
+  "focus": "Вопрос Where … from?",
+  "a": "Our new classmate has an interesting accent.",
+  "parts": [
+   "Where",
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "is",
+   "he",
+   "from"
+  ],
+  "extra": "does",
+  "ex": "Вопрос о происхождении строится с глаголом be: Where is he from? Does без смыслового глагола здесь невозможен."
+ },
+ {
+  "id": "W-BAS-A-110",
+  "level": "A",
+  "focus": "Interested in",
+  "a": "Why did you join the photography club?",
+  "parts": [
+   "I'm",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "very",
+   "interested",
+   "in",
+   "photography"
+  ],
+  "extra": "on",
+  "ex": "Прилагательное interested требует предлога in: interested in photography. Предлог on с ним не употребляется."
+ },
+ {
+  "id": "W-BAS-B-101",
+  "level": "B",
+  "focus": "Косвенный вопрос с what time",
+  "a": "When does the career fair start?",
+  "parts": [
+   "I'll ask",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "the organizers",
+   "what time",
+   "the fair",
+   "starts"
+  ],
+  "extra": "does",
+  "ex": "В косвенном вопросе прямой порядок слов: what time the fair starts. Вспомогательный does здесь не нужен."
+ },
+ {
+  "id": "W-BAS-B-102",
+  "level": "B",
+  "focus": "Пассив в Present Simple",
+  "a": "Do students have to pay for printing?",
+  "parts": [
+   "No, printing",
+   null,
+   null,
+   null,
+   null,
+   "free of charge."
+  ],
+  "slots": [
+   "is",
+   "provided",
+   "by",
+   "the library"
+  ],
+  "extra": "provides",
+  "ex": "Печать предоставляется библиотекой — пассив: is provided by. Активная форма provides после printing даёт неверный смысл и неграмматична рядом с is и by."
+ },
+ {
+  "id": "W-BAS-B-103",
+  "level": "B",
+  "focus": "Present Perfect с just",
+  "a": "Is the professor in her office?",
+  "parts": [
+   "No, she",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "has just",
+   "left",
+   "for",
+   "a meeting"
+  ],
+  "extra": "leave",
+  "ex": "Только что завершившееся действие — has just + третья форма: has just left. Начальная форма leave после has неверна."
+ },
+ {
+  "id": "W-BAS-B-104",
+  "level": "B",
+  "focus": "Определительное придаточное с who",
+  "a": "Who is that man by the door?",
+  "parts": [
+   "He's the professor",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "who",
+   "teaches",
+   "our",
+   "statistics class"
+  ],
+  "extra": "which",
+  "ex": "О человеке — who: the professor who teaches. Which относится к предметам и животным."
+ },
+ {
+  "id": "W-BAS-B-105",
+  "level": "B",
+  "focus": "Условное 1-го типа в вопросе",
+  "a": "The forecast says it might snow tomorrow.",
+  "parts": [
+   "Will the campus",
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "close",
+   "if",
+   "it",
+   "snows"
+  ],
+  "extra": "will snow",
+  "ex": "В придаточном условия после if будущее выражается настоящим временем: if it snows. Will snow после if неверно."
+ },
+ {
+  "id": "W-BAS-B-106",
+  "level": "B",
+  "focus": "Would you mind + герундий",
+  "a": "It's really cold in here.",
+  "parts": [
+   "Would you",
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "mind",
+   "closing",
+   "the window",
+   "near you"
+  ],
+  "extra": "to close",
+  "ex": "После mind используется герундий: Would you mind closing…? Инфинитив to close после mind невозможен."
+ },
+ {
+  "id": "W-BAS-B-107",
+  "level": "B",
+  "focus": "Neither do I",
+  "a": "I don't like studying late at night.",
+  "parts": [
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "Neither",
+   "do",
+   "I"
+  ],
+  "extra": "don't",
+  "ex": "Согласие с отрицанием — Neither + вспомогательный + подлежащее: Neither do I. Neither уже отрицательное, поэтому don't — двойное отрицание."
+ },
+ {
+  "id": "W-BAS-B-108",
+  "level": "B",
+  "focus": "Either … or",
+  "a": "How can I contact the advisor?",
+  "parts": [
+   "You can",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "an email."
+  ],
+  "slots": [
+   "either",
+   "call",
+   "her",
+   "or",
+   "send"
+  ],
+  "extra": "nor",
+  "ex": "Either сочетается с or: either call her or send an email. Nor пишется в паре с neither."
+ },
+ {
+  "id": "W-BAS-B-109",
+  "level": "B",
+  "focus": "Past Perfect",
+  "a": "Did you see the start of the movie?",
+  "parts": [
+   "No, it",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "had",
+   "started",
+   "before",
+   "we",
+   "arrived"
+  ],
+  "extra": "has",
+  "ex": "Действие, завершившееся раньше другого в прошлом, — Past Perfect: it had started before we arrived. Has started не сочетается с прошедшим arrived."
+ },
+ {
+  "id": "W-BAS-B-110",
+  "level": "B",
+  "focus": "Told + объект + to-инфинитив",
+  "a": "What did the librarian say about your overdue book?",
+  "parts": [
+   "She",
+   null,
+   null,
+   null,
+   null,
+   "by Friday."
+  ],
+  "slots": [
+   "told",
+   "me",
+   "to return",
+   "it"
+  ],
+  "extra": "said",
+  "ex": "Глагол told берёт объект без предлога: told me to return it. Said me невозможно (только said to me)."
+ },
+ {
+  "id": "W-BAS-C-101",
+  "level": "C",
+  "focus": "Инверсия: Nowhere else",
+  "a": "Is this attendance policy common at other universities?",
+  "parts": [
+   "Nowhere else",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is",
+   "such",
+   "a strict",
+   "policy",
+   "enforced"
+  ],
+  "extra": "does",
+  "ex": "После Nowhere else в начале — инверсия, а пассив образуется с be: is such a strict policy enforced. Does не сочетается с причастием enforced."
+ },
+ {
+  "id": "W-BAS-C-102",
+  "level": "C",
+  "focus": "Условие с Were … to",
+  "a": "What would happen if the funding were cut?",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   ", the project",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "Were",
+   "the funding",
+   "to be",
+   "cut",
+   "would",
+   "come",
+   "to a halt"
+  ],
+  "extra": "If",
+  "ex": "Условие без if: Were the funding to be cut = If the funding were to be cut. Если поставить If вместо Were, пропадёт сказуемое придаточного."
+ },
+ {
+  "id": "W-BAS-C-103",
+  "level": "C",
+  "focus": "It is high time + Past Simple",
+  "a": "The lab equipment is twenty years old.",
+  "parts": [
+   "It is high time",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "the university",
+   "replaced",
+   "it",
+   "with",
+   "newer models"
+  ],
+  "extra": "replace",
+  "ex": "После It is high time действие выражается прошедшим временем: the university replaced it. Начальная форма replace после единственного числа неверна."
+ },
+ {
+  "id": "W-BAS-C-104",
+  "level": "C",
+  "focus": "Противопоставление с whereas",
+  "a": "How do the two theories differ?",
+  "parts": [
+   "The first theory focuses on individuals, whereas the second",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "emphasizes",
+   "the role",
+   "of",
+   "society",
+   "as a whole"
+  ],
+  "extra": "emphasize",
+  "ex": "Подлежащее the second — третье лицо единственного числа, поэтому emphasizes. Форма emphasize без -s не согласуется с ним."
+ },
+ {
+  "id": "W-BAS-C-105",
+  "level": "C",
+  "focus": "Причастный оборот с третьей формой",
+  "a": "Why is the novel still so popular?",
+  "parts": [
+   null,
+   null,
+   null,
+   ", the novel",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "Written",
+   "in",
+   "plain language",
+   "remains",
+   "accessible",
+   "to",
+   "modern readers"
+  ],
+  "extra": "Wrote",
+  "ex": "Пассивный причастный оборот начинается с третьей формы: Written in plain language (= Because it was written…). Wrote — прошедшее время, а не причастие."
+ },
+ {
+  "id": "W-BAS-C-106",
+  "level": "C",
+  "focus": "Provided that",
+  "a": "Can I submit the essay a few days late?",
+  "parts": [
+   "You can,",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "provided that",
+   "you",
+   "inform",
+   "your instructor",
+   "in advance"
+  ],
+  "extra": "provide",
+  "ex": "Условие «при условии что» — provided that + придаточное. Форма provide that так не употребляется."
+ },
+ {
+  "id": "W-BAS-C-107",
+  "level": "C",
+  "focus": "Most of whom",
+  "a": "How many students applied for the internship?",
+  "parts": [
+   "Over two hundred,",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "most",
+   "of",
+   "whom",
+   "had",
+   "no experience"
+  ],
+  "extra": "who",
+  "ex": "После предлога в относительном придаточном — whom: most of whom. Who после of не употребляется."
+ },
+ {
+  "id": "W-BAS-C-108",
+  "level": "C",
+  "focus": "Whatever + существительное",
+  "a": "Should I follow the template exactly?",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   ", make sure",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "Whatever",
+   "format",
+   "you",
+   "choose",
+   "it",
+   "is",
+   "consistent"
+  ],
+  "extra": "However",
+  "ex": "«Какой бы ни» с существительным — whatever format you choose. However соединяется с прилагательным или наречием (however hard), а не с существительным."
+ },
+ {
+  "id": "W-BAS-C-109",
+  "level": "C",
+  "focus": "Be supposed to have been + причастие",
+  "a": "Why is the professor upset with our group?",
+  "parts": [
+   "The report",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "was",
+   "supposed",
+   "to have been",
+   "submitted",
+   "last week"
+  ],
+  "extra": "be",
+  "ex": "Ожидавшееся, но несостоявшееся действие в пассиве: was supposed to have been submitted. Be без to и без was ломает конструкцию."
+ },
+ {
+  "id": "W-BAS-C-110",
+  "level": "C",
+  "focus": "Эмфатическое do",
+  "a": "You didn't seem to enjoy the concert.",
+  "parts": [
+   "Actually, I",
+   null,
+   null,
+   null,
+   ", but I",
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "did",
+   "enjoy",
+   "it",
+   "was",
+   "exhausted"
+  ],
+  "extra": "enjoyed",
+  "ex": "Эмфатическое did усиливает утверждение, после него глагол в начальной форме: I did enjoy it. Did enjoyed неверно."
  }
 ]
