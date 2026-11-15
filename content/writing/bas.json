@@ -6149,5 +6149,701 @@
   ],
   "extra": "whatever",
   "ex": "No matter how many — «сколько бы ни». Форма whatever many неверна."
+ },
+ {
+  "id": "W-BAS-A-091",
+  "level": "A",
+  "focus": "Вопрос с where в Past Simple",
+  "a": "I lost my student card.",
+  "parts": [
+   "Where",
+   null,
+   null,
+   null,
+   null,
+   "it?"
+  ],
+  "slots": [
+   "did",
+   "you",
+   "last",
+   "see"
+  ],
+  "extra": "saw",
+  "ex": "В вопросе в Past Simple после did глагол стоит в начальной форме: did you last see. Форма saw после did неверна."
+ },
+ {
+  "id": "W-BAS-A-092",
+  "level": "A",
+  "focus": "Past Continuous",
+  "a": "Why didn't you answer my call?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   "at the time."
+  ],
+  "slots": [
+   "was",
+   "taking",
+   "a shower"
+  ],
+  "extra": "were",
+  "ex": "Длительное действие в прошлом: I was taking. С подлежащим I используется was, а не were."
+ },
+ {
+  "id": "W-BAS-A-093",
+  "level": "A",
+  "focus": "Вопрос с how much",
+  "a": "I bought a new backpack today.",
+  "parts": [
+   "How",
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "much",
+   "did",
+   "it",
+   "cost"
+  ],
+  "extra": "costed",
+  "ex": "О цене спрашиваем how much did it cost. После did глагол стоит в начальной форме; к тому же cost — неправильный глагол (cost – cost – cost), формы costed нет."
+ },
+ {
+  "id": "W-BAS-A-094",
+  "level": "A",
+  "focus": "Вопрос к подлежащему",
+  "a": "Somebody left a note on your desk.",
+  "parts": [
+   "Really? Who",
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "left",
+   "it",
+   "there"
+  ],
+  "extra": "leave",
+  "ex": "Who здесь подлежащее, поэтому did не нужен, а глагол стоит в Past Simple: Who left it there? Форма leave без прошедшего времени неверна."
+ },
+ {
+  "id": "W-BAS-A-095",
+  "level": "A",
+  "focus": "Good at + герундий",
+  "a": "You always win our chess games.",
+  "parts": [
+   "I'm",
+   null,
+   null,
+   null,
+   null,
+   "ahead."
+  ],
+  "slots": [
+   "good",
+   "at",
+   "planning",
+   "my moves"
+  ],
+  "extra": "plan",
+  "ex": "После предлога at глагол принимает форму -ing: good at planning. Начальная форма plan после предлога невозможна."
+ },
+ {
+  "id": "W-BAS-A-096",
+  "level": "A",
+  "focus": "Present Perfect с yet",
+  "a": "Is your essay ready to submit?",
+  "parts": [
+   "No, I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "haven't",
+   "finished",
+   "it",
+   "yet"
+  ],
+  "extra": "didn't",
+  "ex": "Незавершённое к настоящему моменту действие с yet — Present Perfect: haven't finished it yet. После didn't нужна начальная форма, а не finished."
+ },
+ {
+  "id": "W-BAS-A-097",
+  "level": "A",
+  "focus": "By + вид транспорта",
+  "a": "How do you get to campus?",
+  "parts": [
+   "I usually",
+   null,
+   null,
+   null,
+   "because it's faster."
+  ],
+  "slots": [
+   "go",
+   "by",
+   "bike"
+  ],
+  "extra": "with",
+  "ex": "Способ передвижения — by + существительное без артикля: go by bike. With bike в этом значении не говорят."
+ },
+ {
+  "id": "W-BAS-A-098",
+  "level": "A",
+  "focus": "Too many + исчисляемое",
+  "a": "Is the cafeteria busy right now?",
+  "parts": [
+   "Yes, there",
+   null,
+   null,
+   null,
+   null,
+   "in line."
+  ],
+  "slots": [
+   "are",
+   "too",
+   "many",
+   "people"
+  ],
+  "extra": "much",
+  "ex": "People — исчисляемое существительное во множественном числе, поэтому too many people. Much используется с неисчисляемыми."
+ },
+ {
+  "id": "W-BAS-A-099",
+  "level": "A",
+  "focus": "Вопрос с what time",
+  "a": "I want to go to the gym tomorrow morning.",
+  "parts": [
+   "What time",
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "does",
+   "the gym",
+   "open"
+  ],
+  "extra": "opens",
+  "ex": "В вопросе с does глагол стоит в начальной форме: does the gym open. Окончание -s уже выражено в does, поэтому opens неверно."
+ },
+ {
+  "id": "W-BAS-A-100",
+  "level": "A",
+  "focus": "Let's + инфинитив",
+  "a": "I'm so tired of studying.",
+  "parts": [
+   "Let's",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "take",
+   "a break",
+   "for",
+   "ten minutes"
+  ],
+  "extra": "taking",
+  "ex": "После let's идёт инфинитив без to: Let's take a break. Форма taking после let's неверна."
+ },
+ {
+  "id": "W-BAS-B-091",
+  "level": "B",
+  "focus": "Косвенный вопрос с how long",
+  "a": "I'm taking the bus to the city tomorrow.",
+  "parts": [
+   "Do you know",
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "how long",
+   "the trip",
+   "will",
+   "take"
+  ],
+  "extra": "does",
+  "ex": "В косвенном вопросе прямой порядок слов: how long the trip will take. Вспомогательный does здесь не нужен."
+ },
+ {
+  "id": "W-BAS-B-092",
+  "level": "B",
+  "focus": "Be supposed to",
+  "a": "Why are you running?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "at noon."
+  ],
+  "slots": [
+   "was",
+   "supposed",
+   "to",
+   "meet",
+   "my tutor"
+  ],
+  "extra": "suppose",
+  "ex": "Устойчивая конструкция be supposed to + инфинитив: I was supposed to meet. Форма suppose без -d неверна."
+ },
+ {
+  "id": "W-BAS-B-093",
+  "level": "B",
+  "focus": "Had better",
+  "a": "It looks like it's going to rain.",
+  "parts": [
+   "We",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "had better",
+   "leave",
+   "before",
+   "it starts"
+  ],
+  "extra": "to leave",
+  "ex": "После had better инфинитив идёт без to: had better leave. Форма to leave после had better неверна."
+ },
+ {
+  "id": "W-BAS-B-094",
+  "level": "B",
+  "focus": "Which, относящееся ко всему предложению",
+  "a": "Did you enjoy the guest lecture on Friday?",
+  "parts": [
+   "Not really. It was very long,",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "which",
+   "made",
+   "it",
+   "hard",
+   "to concentrate"
+  ],
+  "extra": "what",
+  "ex": "Which после запятой относится ко всей предыдущей мысли: which made it hard to concentrate. What в такой позиции не употребляется."
+ },
+ {
+  "id": "W-BAS-B-095",
+  "level": "B",
+  "focus": "It takes + время + to",
+  "a": "Is the campus far from the station?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   null,
+   "there."
+  ],
+  "slots": [
+   "takes",
+   "about",
+   "twenty minutes",
+   "to walk"
+  ],
+  "extra": "spends",
+  "ex": "Сколько времени нужно — it takes + время + to-инфинитив. Глагол spend требует подлежащего-человека: I spend…, а не it spends."
+ },
+ {
+  "id": "W-BAS-B-096",
+  "level": "B",
+  "focus": "Present Perfect Continuous с since",
+  "a": "You look exhausted.",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "early morning."
+  ],
+  "slots": [
+   "have been",
+   "working",
+   "on this project",
+   "since"
+  ],
+  "extra": "for",
+  "ex": "Since указывает на момент начала: since early morning. For используется с периодом (for five hours), а не с моментом."
+ },
+ {
+  "id": "W-BAS-B-097",
+  "level": "B",
+  "focus": "Второй тип условных в вопросе",
+  "a": "I might get the scholarship this year.",
+  "parts": [
+   "What",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "it?"
+  ],
+  "slots": [
+   "would",
+   "you",
+   "do",
+   "if you",
+   "got"
+  ],
+  "extra": "will",
+  "ex": "Гипотетическая ситуация — второй тип: What would you do if you got it? Will в главной части не сочетается с got в придаточном."
+ },
+ {
+  "id": "W-BAS-B-098",
+  "level": "B",
+  "focus": "Определительное придаточное без that",
+  "a": "Did you enjoy the novel?",
+  "parts": [
+   "It's the best book",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "I",
+   "have",
+   "ever",
+   "read"
+  ],
+  "extra": "it",
+  "ex": "Объектное придаточное можно присоединить без that: the best book I have ever read. Лишнее it повторяет дополнение — в английском так нельзя."
+ },
+ {
+  "id": "W-BAS-B-099",
+  "level": "B",
+  "focus": "Каузатив have something done",
+  "a": "Why aren't you using your laptop?",
+  "parts": [
+   "I'm",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "having",
+   "the screen",
+   "repaired",
+   "this week"
+  ],
+  "extra": "repair",
+  "ex": "Действие выполняет мастер: have + объект + третья форма (having the screen repaired). Начальная форма repair в этой конструкции неверна."
+ },
+ {
+  "id": "W-BAS-B-100",
+  "level": "B",
+  "focus": "Stop + герундий",
+  "a": "Why don't you drink coffee anymore?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "stopped",
+   "drinking",
+   "it",
+   "because",
+   "it kept me awake"
+  ],
+  "extra": "drink",
+  "ex": "Перестать что-то делать — stop + -ing: stopped drinking it. Начальная форма drink после stopped неверна."
+ },
+ {
+  "id": "W-BAS-C-091",
+  "level": "C",
+  "focus": "Инверсия: Seldom",
+  "a": "Does the committee usually approve late applications?",
+  "parts": [
+   "Seldom",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "does",
+   "the committee",
+   "make",
+   "an exception",
+   "to",
+   "this rule"
+  ],
+  "extra": "makes",
+  "ex": "После отрицательного наречия Seldom в начале — инверсия: does the committee make. После does глагол в начальной форме, поэтому makes неверно."
+ },
+ {
+  "id": "W-BAS-C-092",
+  "level": "C",
+  "focus": "Инверсия: Had it not been for",
+  "a": "How did the team finish the project on time?",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   "for Maria's help, we",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "Had",
+   "it",
+   "not",
+   "been",
+   "would have",
+   "missed",
+   "the deadline"
+  ],
+  "extra": "If",
+  "ex": "Условие третьего типа без if: Had it not been for … = If it had not been for …. Если поставить If, пропадёт had, и предложение станет неграмматичным."
+ },
+ {
+  "id": "W-BAS-C-093",
+  "level": "C",
+  "focus": "Псевдорасщеплённое предложение с what",
+  "a": "What worries you most about the exam?",
+  "parts": [
+   "What",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "worries",
+   "me",
+   "most",
+   "is",
+   "the listening section"
+  ],
+  "extra": "are",
+  "ex": "Придаточное What worries me most — подлежащее в единственном числе, поэтому is. Форма are не согласуется с ним."
+ },
+ {
+  "id": "W-BAS-C-094",
+  "level": "C",
+  "focus": "Сослагательное после it is essential that",
+  "a": "Can the application forms be sent by email?",
+  "parts": [
+   "No, it is essential that",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "in person."
+  ],
+  "slots": [
+   "each",
+   "applicant",
+   "submit",
+   "the original",
+   "documents"
+  ],
+  "extra": "to submit",
+  "ex": "После it is essential that — сослагательное наклонение: глагол в начальной форме без to (each applicant submit). To submit после подлежащего неверно."
+ },
+ {
+  "id": "W-BAS-C-095",
+  "level": "C",
+  "focus": "Such … that",
+  "a": "Why did so many students sign up for the course?",
+  "parts": [
+   "It was",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "it."
+  ],
+  "slots": [
+   "such",
+   "an engaging",
+   "course",
+   "that",
+   "nobody",
+   "wanted to miss"
+  ],
+  "extra": "very",
+  "ex": "Such + a/an + прилагательное + существительное + that: such an engaging course that…. Very не ставится перед артиклем."
+ },
+ {
+  "id": "W-BAS-C-096",
+  "level": "C",
+  "focus": "Перфектный причастный оборот",
+  "a": "Why did the professor seem so confident?",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   ", she",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "Having",
+   "taught",
+   "the course",
+   "for ten years",
+   "knew",
+   "exactly what",
+   "to expect"
+  ],
+  "extra": "Have",
+  "ex": "Предшествующее действие выражено перфектным причастием: Having taught the course…. Форма Have без -ing не может начинать причастный оборот."
+ },
+ {
+  "id": "W-BAS-C-097",
+  "level": "C",
+  "focus": "Инверсия: Only by",
+  "a": "How can the university reduce its energy costs?",
+  "parts": [
+   "Only by",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "costs significantly."
+  ],
+  "slots": [
+   "investing",
+   "in",
+   "solar power",
+   "can",
+   "it",
+   "cut"
+  ],
+  "extra": "invest",
+  "ex": "После Only by — герундий (investing), а в главной части инверсия: can it cut. Начальная форма invest после предлога by невозможна."
+ },
+ {
+  "id": "W-BAS-C-098",
+  "level": "C",
+  "focus": "As if + Past Perfect",
+  "a": "Did the new student already know everyone?",
+  "parts": [
+   "She talked",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "as if",
+   "she",
+   "had known",
+   "us",
+   "for years"
+  ],
+  "extra": "knowing",
+  "ex": "Нереальное сравнение о предшествующем периоде: as if she had known us for years. Форма knowing не может быть сказуемым придаточного."
+ },
+ {
+  "id": "W-BAS-C-099",
+  "level": "C",
+  "focus": "Инверсия: Not once",
+  "a": "Did the speaker mention the budget cuts?",
+  "parts": [
+   "Not once",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "did",
+   "he",
+   "refer",
+   "to",
+   "the cuts"
+  ],
+  "extra": "referred",
+  "ex": "После Not once в начале — инверсия с did: did he refer. После did глагол в начальной форме, поэтому referred неверно."
+ },
+ {
+  "id": "W-BAS-C-100",
+  "level": "C",
+  "focus": "Косвенный вопрос с why + пассив",
+  "a": "Has anyone explained the delay?",
+  "parts": [
+   "Nobody",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "has",
+   "explained",
+   "why",
+   "the results",
+   "have not been",
+   "released"
+  ],
+  "extra": "did",
+  "ex": "В косвенном вопросе прямой порядок слов: why the results have not been released. Did не сочетается ни с explained, ни с released."
  }
 ]
