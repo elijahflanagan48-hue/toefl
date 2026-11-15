@@ -7530,5 +7530,687 @@
   ],
   "extra": "enjoyed",
   "ex": "Эмфатическое did усиливает утверждение, после него глагол в начальной форме: I did enjoy it. Did enjoyed неверно."
+ },
+ {
+  "id": "W-BAS-A-111",
+  "level": "A",
+  "focus": "Вопрос с how long в Past Simple",
+  "a": "I just got back from my trip to Spain.",
+  "parts": [
+   "How long",
+   null,
+   null,
+   null,
+   "there?"
+  ],
+  "slots": [
+   "did",
+   "you",
+   "stay"
+  ],
+  "extra": "stayed",
+  "ex": "После did в вопросе глагол стоит в начальной форме: did you stay. Форма stayed после did неверна."
+ },
+ {
+  "id": "W-BAS-A-112",
+  "level": "A",
+  "focus": "Вопрос с who + предлог в конце",
+  "a": "I moved into a new apartment last week.",
+  "parts": [
+   "Who",
+   null,
+   null,
+   null,
+   "with?"
+  ],
+  "slots": [
+   "do",
+   "you",
+   "live"
+  ],
+  "extra": "does",
+  "ex": "С подлежащим you вспомогательный глагол — do: Who do you live with? Does используется только с he, she, it."
+ },
+ {
+  "id": "W-BAS-A-113",
+  "level": "A",
+  "focus": "Наречие never в Present Simple",
+  "a": "Does your roommate cook a lot?",
+  "parts": [
+   "No, she",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "never",
+   "cooks",
+   "at home"
+  ],
+  "extra": "cook",
+  "ex": "Never стоит перед смысловым глаголом, а после she у глагола окончание -s: she never cooks. Форма cook без -s неверна."
+ },
+ {
+  "id": "W-BAS-A-114",
+  "level": "A",
+  "focus": "Lend и borrow",
+  "a": "I left my calculator at home.",
+  "parts": [
+   "Could",
+   null,
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "you",
+   "lend",
+   "me",
+   "yours"
+  ],
+  "extra": "borrow",
+  "ex": "Дать на время — lend: Could you lend me yours? Borrow значит «взять на время» и не употребляется с дополнением me в таком значении."
+ },
+ {
+  "id": "W-BAS-A-115",
+  "level": "A",
+  "focus": "Past Simple глагола be",
+  "a": "I called you yesterday, but you didn't answer.",
+  "parts": [
+   "Sorry, I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "was",
+   "at",
+   "the dentist"
+  ],
+  "extra": "were",
+  "ex": "С подлежащим I в прошедшем времени используется was. Were — для you, we, they."
+ },
+ {
+  "id": "W-BAS-A-116",
+  "level": "A",
+  "focus": "Притяжательное местоимение mine",
+  "a": "Someone left a phone on the table.",
+  "parts": [
+   "Oh, that",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "phone",
+   "is",
+   "mine"
+  ],
+  "extra": "my",
+  "ex": "В конце предложения без существительного нужно местоимение mine: that phone is mine. My требует существительного после себя."
+ },
+ {
+  "id": "W-BAS-A-117",
+  "level": "A",
+  "focus": "Going to: прогноз по признакам",
+  "a": "Look at those dark clouds.",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   null,
+   "soon."
+  ],
+  "slots": [
+   "is",
+   "going",
+   "to",
+   "rain"
+  ],
+  "extra": "will",
+  "ex": "Прогноз по видимым признакам — be going to: It is going to rain. Will не сочетается с going to."
+ },
+ {
+  "id": "W-BAS-A-118",
+  "level": "A",
+  "focus": "Any с неисчисляемым в вопросе",
+  "a": "I'm making coffee for everyone.",
+  "parts": [
+   "Do we",
+   null,
+   null,
+   null,
+   "left?"
+  ],
+  "slots": [
+   "have",
+   "any",
+   "milk"
+  ],
+  "extra": "many",
+  "ex": "Milk — неисчисляемое существительное: any milk. Many используют только с исчисляемыми во множественном числе."
+ },
+ {
+  "id": "W-BAS-A-119",
+  "level": "A",
+  "focus": "Предлог at night",
+  "a": "When do you usually study?",
+  "parts": [
+   "I usually",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "study",
+   "at",
+   "night"
+  ],
+  "extra": "in",
+  "ex": "Устойчивое сочетание — at night. In the night в таком значении не говорят, а in night вообще неверно."
+ },
+ {
+  "id": "W-BAS-A-120",
+  "level": "A",
+  "focus": "Вопрос к подлежащему с what",
+  "a": "Why is there water all over the floor?",
+  "parts": [
+   "What",
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "happened",
+   "in",
+   "the kitchen"
+  ],
+  "extra": "happen",
+  "ex": "What здесь подлежащее, поэтому вспомогательный did не нужен, а глагол стоит в Past Simple: What happened? Форма happen неверна."
+ },
+ {
+  "id": "W-BAS-B-111",
+  "level": "B",
+  "focus": "Косвенный вопрос с who-подлежащим",
+  "a": "Who is giving the keynote speech tomorrow?",
+  "parts": [
+   "I'm not sure",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "who",
+   "is",
+   "giving",
+   "the speech"
+  ],
+  "extra": "does",
+  "ex": "Когда who — подлежащее, порядок в косвенном вопросе не меняется: who is giving the speech. Does здесь лишний."
+ },
+ {
+  "id": "W-BAS-B-112",
+  "level": "B",
+  "focus": "Пассив в будущем времени",
+  "a": "Have the grades come out yet?",
+  "parts": [
+   "Not yet. They",
+   null,
+   null,
+   null,
+   "by Friday."
+  ],
+  "slots": [
+   "will",
+   "be",
+   "posted"
+  ],
+  "extra": "post",
+  "ex": "Пассив в будущем: will be + третья форма (will be posted). Начальная форма post после be неверна."
+ },
+ {
+  "id": "W-BAS-B-113",
+  "level": "B",
+  "focus": "Without + герундий",
+  "a": "How did you finish the essay so quickly?",
+  "parts": [
+   "I wrote it",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "without",
+   "taking",
+   "a single",
+   "break"
+  ],
+  "extra": "take",
+  "ex": "После предлога without глагол принимает форму -ing: without taking. Начальная форма take после предлога невозможна."
+ },
+ {
+  "id": "W-BAS-B-114",
+  "level": "B",
+  "focus": "The same as",
+  "a": "Is the new edition of the textbook different?",
+  "parts": [
+   "No, it's",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "almost",
+   "the same",
+   "as",
+   "last year's"
+  ],
+  "extra": "like",
+  "ex": "Устойчивая конструкция — the same as. Сочетание the same like неверно."
+ },
+ {
+  "id": "W-BAS-B-115",
+  "level": "B",
+  "focus": "Can't be: уверенный вывод",
+  "a": "Is that Professor Kim at the door?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   ". She is in Seoul this week."
+  ],
+  "slots": [
+   "can't",
+   "be",
+   "her"
+  ],
+  "extra": "to",
+  "ex": "Уверенное отрицание — can't + инфинитив без to: It can't be her. После модального глагола to не ставится."
+ },
+ {
+  "id": "W-BAS-B-116",
+  "level": "B",
+  "focus": "Косвенная речь: said that",
+  "a": "What did the coach say about practice?",
+  "parts": [
+   "He said",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "that",
+   "practice",
+   "was",
+   "canceled"
+  ],
+  "extra": "were",
+  "ex": "Practice — неисчисляемое, единственное число, поэтому was canceled. Were не согласуется с этим подлежащим."
+ },
+ {
+  "id": "W-BAS-B-117",
+  "level": "B",
+  "focus": "Present Perfect с since",
+  "a": "You and Sara seem like good friends.",
+  "parts": [
+   "Yes, we",
+   null,
+   null,
+   null,
+   null,
+   "high school."
+  ],
+  "slots": [
+   "have",
+   "known",
+   "each other",
+   "since"
+  ],
+  "extra": "knew",
+  "ex": "Состояние с прошлого до настоящего — Present Perfect: have known since. Форма knew после have неверна."
+ },
+ {
+  "id": "W-BAS-B-118",
+  "level": "B",
+  "focus": "Who's = who is в придаточном",
+  "a": "Who is the student in the red jacket?",
+  "parts": [
+   "That's the girl",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "who's",
+   "always",
+   "asking",
+   "questions"
+  ],
+  "extra": "whose",
+  "ex": "Who's = who is: who's always asking questions. Whose означает «чей» и требует существительного после себя."
+ },
+ {
+  "id": "W-BAS-B-119",
+  "level": "B",
+  "focus": "If I were you",
+  "a": "Should I take the job offer?",
+  "parts": [
+   "If I were you, I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "would",
+   "accept",
+   "it",
+   "right away"
+  ],
+  "extra": "will",
+  "ex": "Совет через нереальное условие: If I were you, I would…. Will не сочетается с were в условии."
+ },
+ {
+  "id": "W-BAS-B-120",
+  "level": "B",
+  "focus": "Get used to + -ing",
+  "a": "How are you finding the early classes?",
+  "parts": [
+   "I'm",
+   null,
+   null,
+   null,
+   null,
+   "early."
+  ],
+  "slots": [
+   "getting",
+   "used",
+   "to",
+   "waking up"
+  ],
+  "extra": "wake up",
+  "ex": "В конструкции get used to частица to — предлог, после неё нужна форма -ing: getting used to waking up. Начальная форма wake up неверна."
+ },
+ {
+  "id": "W-BAS-C-111",
+  "level": "C",
+  "focus": "Инверсия: Only then",
+  "a": "When did the team realize the data was wrong?",
+  "parts": [
+   "After the second test. Only then",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "did",
+   "they",
+   "realize",
+   "that",
+   "the data",
+   "were flawed"
+  ],
+  "extra": "realized",
+  "ex": "После Only then в начале — инверсия: did they realize. После did глагол стоит в начальной форме, поэтому realized неверно."
+ },
+ {
+  "id": "W-BAS-C-112",
+  "level": "C",
+  "focus": "The reason … is that",
+  "a": "Why did the experiment fail?",
+  "parts": [
+   "The reason",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "it",
+   "failed",
+   "is that",
+   "the samples",
+   "were",
+   "contaminated"
+  ],
+  "extra": "because",
+  "ex": "Конструкция The reason (why) … is that …. Слово because не может заменить is that: без глагола is предложение остаётся без сказуемого."
+ },
+ {
+  "id": "W-BAS-C-113",
+  "level": "C",
+  "focus": "Отрицательный причастный оборот",
+  "a": "Why didn't the new student ask for help?",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   ", she",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "Not",
+   "knowing",
+   "anyone",
+   "in the class",
+   "was",
+   "too shy",
+   "to speak up"
+  ],
+  "extra": "Don't",
+  "ex": "Отрицательный причастный оборот строится через Not + -ing: Not knowing anyone…. Don't с формой -ing не сочетается."
+ },
+ {
+  "id": "W-BAS-C-114",
+  "level": "C",
+  "focus": "Wish + could",
+  "a": "Are you going to the conference in Berlin?",
+  "parts": [
+   "No, but I wish",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "I",
+   "could",
+   "attend",
+   "it",
+   "this year"
+  ],
+  "extra": "can",
+  "ex": "Сожаление о невозможности в настоящем — wish + could: I wish I could attend. Can после wish не употребляется."
+ },
+ {
+  "id": "W-BAS-C-115",
+  "level": "C",
+  "focus": "All I need is",
+  "a": "What are you looking for in a study space?",
+  "parts": [
+   "All",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "to work."
+  ],
+  "slots": [
+   "that",
+   "I",
+   "need",
+   "is",
+   "a quiet place"
+  ],
+  "extra": "are",
+  "ex": "Придаточное All that I need — подлежащее в единственном числе, поэтому is. Are не согласуется с ним."
+ },
+ {
+  "id": "W-BAS-C-116",
+  "level": "C",
+  "focus": "Личный пассив: is said to have",
+  "a": "What do we know about the architect of the library?",
+  "parts": [
+   "He",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is",
+   "said",
+   "to have",
+   "designed",
+   "over fifty",
+   "buildings"
+  ],
+  "extra": "says",
+  "ex": "Личная пассивная конструкция: He is said to have designed… (= говорят, что он спроектировал). Форма says после is невозможна."
+ },
+ {
+  "id": "W-BAS-C-117",
+  "level": "C",
+  "focus": "Инверсия: On no account",
+  "a": "Can we leave the lab door open overnight?",
+  "parts": [
+   "On no account",
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "should",
+   "the door",
+   "be",
+   "left",
+   "open"
+  ],
+  "extra": "being",
+  "ex": "После On no account в начале — инверсия с модальным глаголом: should the door be left open. Being не может заменить ни should, ни be."
+ },
+ {
+  "id": "W-BAS-C-118",
+  "level": "C",
+  "focus": "However + прилагательное",
+  "a": "Is the final problem set really hard?",
+  "parts": [
+   "However",
+   null,
+   null,
+   null,
+   null,
+   ", you",
+   null,
+   null,
+   null,
+   "tonight."
+  ],
+  "slots": [
+   "hard",
+   "it",
+   "may",
+   "seem",
+   "can",
+   "finish",
+   "it"
+  ],
+  "extra": "Whatever",
+  "ex": "«Каким бы трудным ни» — However + прилагательное: However hard it may seem. Whatever сочетается с существительным, а не с прилагательным."
+ },
+ {
+  "id": "W-BAS-C-119",
+  "level": "C",
+  "focus": "Инверсия: Such was … that",
+  "a": "Why did the concert tickets sell out so fast?",
+  "parts": [
+   "Such",
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "was",
+   "the demand",
+   "that",
+   "the tickets",
+   "sold out",
+   "in an hour"
+  ],
+  "extra": "were",
+  "ex": "Такая инверсия согласуется с the demand (единственное число): Such was the demand. Were не согласуется с подлежащим."
+ },
+ {
+  "id": "W-BAS-C-120",
+  "level": "C",
+  "focus": "Much as = although",
+  "a": "Will you take another course with Dr. Hale?",
+  "parts": [
+   "Much",
+   null,
+   null,
+   null,
+   null,
+   ", I",
+   null,
+   null,
+   null,
+   "into my schedule."
+  ],
+  "slots": [
+   "as",
+   "I",
+   "enjoy",
+   "her lectures",
+   "cannot",
+   "fit",
+   "another course"
+  ],
+  "extra": "though",
+  "ex": "Устойчивая уступительная конструкция — Much as I enjoy… (= Хотя мне очень нравятся…). Сочетание Much though не употребляется."
  }
 ]
