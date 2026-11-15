@@ -5,7 +5,7 @@ import { isLive, audioUrl } from '../lib/api.js';
 import { ic } from '../lib/icons.js';
 import { band, esc } from '../lib/util.js';
 import { hdr } from '../lib/ui.js';
-import { RUBRIC, CRIT, critLabel, markedHtml, notesHtml, promptBlock, countWords } from '../lib/writing.js';
+import { RUBRIC, CRIT, critLabel, markedHtml, legendHtml, notesHtml, promptBlock, countWords } from '../lib/writing.js';
 
 /** criteria the teacher ticked, grouped as on the review form; old ratings (text keys) are listed flat */
 function critBlock(kind, cr) {
@@ -29,8 +29,9 @@ export default async function work(params) {
 
   const paper = s.section === 'W' ? `<div class="card pad paper">
       ${s.task === 'eml' && p ? `<div class="mailhd"><span>To:</span> ${esc(p.to || '')}<br><span>Subject:</span> ${esc(p.subject || '')}</div>` : ''}
+      ${legendHtml(marks)}
       <div class="mailbody pre">${markedHtml(s.text || '', marks)}</div>
-      ${notesHtml(marks)}
+      ${notesHtml(marks, { text: s.text || '' })}
       <div class="paper-ft fade">${words} слов${s.task === 'dsc' && words < 100 ? ' · <span class="badtx">меньше 100</span>' : ''}</div></div>`
     : `<div class="card rows audios">${Array.from({ length: Math.max(s.parts, r.audio.length) }, (_, i) => {
       const has = r.audio.some(a => a.part === i), sc = rate?.parts?.[i];

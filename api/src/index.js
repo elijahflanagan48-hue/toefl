@@ -957,6 +957,7 @@ on('GET', '/teacher/queue', async ({ env, user, url }) => {
   return { queue: rows.map(r => ({ ...r, prompt: parse(r.prompt), late: !!(r.due_at && r.submitted_at > r.due_at) })) };
 });
 
+const MARK_TYPES = new Set(['hl-y', 'hl-g', 'hl-p', 'u', 'wav', 'x', 'ins', 'cm']);
 on('POST', '/teacher/submissions/:id/rating', async ({ req, env, user, params }) => {
   requireTeacher(user);
   const s = await one(env, 'SELECT * FROM submissions WHERE id = ?', Number(params.id));
@@ -971,11 +972,22 @@ on('POST', '/teacher/submissions/:id/rating', async ({ req, env, user, params })
   const score = b.score != null ? num(b, 'score', { min: 0, max: 5 }) : parts && parts.length ? Math.round((parts.reduce((x, y) => x + y, 0) / parts.length) * 10) / 10 : null;
   if (score == null) throw bad('missing_score', 'Поставьте балл');
   const comment = b.comment != null ? str(b, 'comment', { max: 4000, required: false }) : null;
+  // teacher marks on the text: whitelisted kinds, offsets inside the student's text (the text itself is never changed)
+  let marks = null;
+  if (Array.isArray(b.marks)) {
+    const L = String(s.text || '').length;
+    marks = b.marks.slice(0, 500).map(m => {
+      const t = MARK_TYPES.has(m?.t) ? m.t : 'cm', o = { s: Math.trunc(Number(m?.s)), e: Math.trunc(Number(m?.e)), t };
+      if (m?.note) o.note = String(m.note).slice(0, 600);
+      if (m?.q) o.q = String(m.q).slice(0, 120);
+      return o;
+    }).filter(m => Number.isFinite(m.s) && Number.isFinite(m.e) && m.s >= 0 && m.e <= L && (m.e > m.s || (m.t === 'ins' && m.e === m.s)) && (m.t !== 'cm' || m.note));
+  }
   await run(env, 'UPDATE ratings SET is_final = 0 WHERE submission_id = ?', s.id);
   const r = await run(env, `INSERT INTO ratings (submission_id, source, rater_id, score, parts, criteria, comment, marks, is_final, created_at)
     VALUES (?, 'teacher', ?, ?, ?, ?, ?, ?, 1, ?)`, s.id, user.id, score,
   parts ? JSON.stringify(parts) : null, b.criteria ? JSON.stringify(b.criteria).slice(0, 8000) : null, comment,
-  Array.isArray(b.marks) ? JSON.stringify(b.marks).slice(0, 8000) : null, now());
+  marks ? JSON.stringify(marks) : null, now());
   await run(env, `UPDATE submissions SET status = 'graded' WHERE id = ?`, s.id);
   return { id: r.meta.last_row_id, score };
 });

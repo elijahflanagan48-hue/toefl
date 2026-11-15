@@ -1,4 +1,4 @@
-import { RUBRIC, CRIT, PHRASES, critFlat, critHint, markedHtml, notesHtml, selectionOffsets, promptBlock } from '../lib/writing.js';
+import { RUBRIC, CRIT, PHRASES, critFlat, critHint, markedHtml, notesHtml, selectionOffsets, promptBlock, MK, mkType, applyMark, eraseMarks, trimRange, markQuote } from '../lib/writing.js';
 import { bank, emailWork } from '../data/mock.js';
 import * as src from '../data/source.js';
 import { isLive, audioUrl } from '../lib/api.js';
@@ -143,14 +143,15 @@ export async function reviewItem(params) {
   const autoAvg = auto && nParts && rated === nParts ? Math.round(partNow.reduce((a, b) => a + b, 0) / nParts * 10) / 10 : null;
   const demoMarks = [{ s: (text || '').indexOf('enough academic'), e: (text || '').indexOf('enough academic') + 15, q: 'enough academic', note: 'Порядок слов: academic enough — «enough» ставится после прилагательного.' }].filter(m => m.s >= 0);
   const marks = pref.get('marks.' + q.id, null) ?? (live ? prev?.marks || [] : demoMarks);
+  if (RV?.id !== q.id) TOOL = null;
   RV = { id: q.id, text: text || '', sel: null, marks };
 
   const work = isW ? `${promptHtml(task, prompt)}
     <div class="card pad paper">
       ${task === 'eml' && prompt ? `<div class="mailhd"><span>To:</span> ${esc(prompt.to || '')}<br><span>Subject:</span> ${esc(prompt.subject || '')}</div>` : ''}
-      <div class="mailbody pre" id="mbody">${markedHtml(text || '', marks)}</div>
-      ${notesHtml(marks, { edit: true })}
-      <div class="markbar"><button class="btn sm" data-act="mark-add">${ic('plus', 15)} Комментарий к фрагменту</button><span class="fade small">Выделите слово или фразу в тексте и нажмите кнопку</span></div>
+      ${toolbarHtml()}
+      <div class="mailbody pre ${TOOL ? 'tool-on tool-' + TOOL : ''}" id="mbody">${markedHtml(text || '', marks)}</div>
+      <div id="mnotes">${notesHtml(marks, { edit: true, text: text || '' })}</div>
       <div class="paper-ft fade">${q.words || 0} слов${task === 'dsc' && q.words < 100 ? ' · <span class="badtx">меньше 100</span>' : ''}</div>
     </div>`
     : `${promptHtml(task, prompt) || `<div class="card pad prompt"><div class="pr-k">${ic('mic', 16)} ${esc(q.task)}</div></div>`}
@@ -200,7 +201,7 @@ export async function reviewItem(params) {
       root.querySelectorAll('input[name=crit]').forEach(c => c.addEventListener('change', () => pref.set('crit.' + q.id, sync())));
       root.querySelector('#rcomment')?.addEventListener('input', e => pref.set('cmt.' + q.id, e.target.value));
       const mb = root.querySelector('#mbody');
-      if (mb) document.onselectionchange = () => { const o = selectionOffsets(mb); if (o) RV.sel = o; };
+      if (mb) bindPaper(root, mb);
       if (!live) return;
       root.querySelectorAll('audio[data-sub]').forEach(a => {
         a.addEventListener('play', async function load() {
@@ -212,6 +213,7 @@ export async function reviewItem(params) {
     },
     keys(e) {
       if (e.target.closest('textarea,input')) { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) document.querySelector('[data-act="save-score"]').click(); return; }
+      if (isW && markKeys(e)) return;
       if (/^[0-5]$/.test(e.key)) {
         if (auto) { const i = partNow.findIndex((x, k) => pref.get('sc.' + q.id + '.' + k, null) == null && partScores[k] == null); if (i >= 0) { pref.set('sc.' + q.id + '.' + i, Number(e.key)); rerender(); } }
         else { pref.set('score.' + q.id, Number(e.key)); rerender(); }
@@ -228,25 +230,134 @@ on('phrase', el => {
   ta.value = (ta.value.trim() ? ta.value.trim() + ' ' : '') + el.dataset.t;
   ta.dispatchEvent(new Event('input')); ta.focus();
 });
-on('mark-add', () => {
-  const o = RV?.sel;
-  if (!o) { toast('Сначала выделите фрагмент текста'); return; }
-  modal(`<h2>Комментарий</h2><p class="mut" style="margin-bottom:10px">«${esc(RV.text.slice(o.s, o.e).slice(0, 120))}»</p>
-    <textarea class="inp" id="mnote" rows="3" placeholder="Что не так и как правильно"></textarea>
-    <div class="row-btns" style="margin-top:12px"><button class="btn" data-act="modal-close">Отмена</button><button class="btn pri" data-act="mark-save">Добавить</button></div>`);
-  RV.pending = { o };
-});
+/* ---- marks on the student's text: marker, underline, wavy, strike, caret, comment, eraser, undo ---- */
+let TOOL = null;            // sticky tool: every new selection gets it (stays across works until switched off)
+const UNDO = new Map();     // work id → previous marks arrays
+let lastApply = 0;
+const TOOLS = [['hl-y'], ['hl-g'], ['hl-p'], ['u'], ['wav'], ['x'], ['ins'], ['cm']];
+const TOOL_IC = {
+  u: '<span class="tg tg-u">U</span>', wav: '<span class="tg tg-wav">abc</span>', x: '<span class="tg tg-x">S</span>',
+  ins: '<span class="tg tg-ins">∧</span>', cm: ic('edit', 15), erase: '<span class="tg tg-er">⌫</span>'
+};
+function toolbarHtml() {
+  const undo = (UNDO.get(RV?.id) || []).length;
+  const btn = (t, label, key, inner) => `<button type="button" class="mtool ${TOOL === t ? 'on' : ''}" data-act="tool" data-t="${t}" title="${esc(label)} (${key})" aria-pressed="${TOOL === t}">${inner}</button>`;
+  return `<div class="mtools" id="mtools">
+    <div class="mt-grp">${['hl-y', 'hl-g', 'hl-p'].map(t => btn(t, MK[t].l + ' — ' + MK[t].m, MK[t].key, `<i class="dot mk-${t}"></i>`)).join('')}</div>
+    <div class="mt-grp">${['u', 'wav', 'x', 'ins'].map(t => btn(t, MK[t].l + ' — ' + MK[t].m, MK[t].key, TOOL_IC[t])).join('')}</div>
+    <div class="mt-grp">${btn('cm', 'Комментарий к фрагменту', 'C', TOOL_IC.cm + '<span class="hide-sm">Комментарий</span>')}</div>
+    <div class="mt-grp">${btn('erase', 'Ластик — убрать пометки с фрагмента', 'E', TOOL_IC.erase)}
+      <button type="button" class="mtool" data-act="mark-undo" title="Отменить (Ctrl+Z)" ${undo ? '' : 'disabled'}>↶</button></div>
+    <span class="mt-hint fade small">${TOOL ? `<b>${esc(TOOL === 'erase' ? 'Ластик' : MK[TOOL].l)}</b> включён: ${TOOL === 'ins' ? 'кликайте в место пропуска' : TOOL === 'erase' ? 'выделяйте или кликайте по пометкам' : 'выделяйте фрагменты подряд'} · <kbd>Esc</kbd> выключить` : 'Выделите фрагмент и выберите инструмент, или включите инструмент и выделяйте подряд. Клик по пометке — добавить пояснение'}</span>
+  </div>`;
+}
+const curMarks = () => pref.get('marks.' + RV.id, null) ?? RV.marks;
+function setMarks(next) {
+  const st = UNDO.get(RV.id) || []; st.push(curMarks()); if (st.length > 100) st.shift(); UNDO.set(RV.id, st);
+  pref.set('marks.' + RV.id, next); redrawPaper();
+}
+/** redraw only the paper (no refetch, no scroll jump) */
+function redrawPaper() {
+  const mb = document.getElementById('mbody'); if (!mb || !RV) return;
+  const marks = curMarks();
+  mb.innerHTML = markedHtml(RV.text, marks);
+  mb.className = `mailbody pre ${TOOL ? 'tool-on tool-' + TOOL : ''}`;
+  document.getElementById('mnotes').innerHTML = notesHtml(marks, { edit: true, text: RV.text });
+  document.getElementById('mtools').outerHTML = toolbarHtml();
+  RV.sel = null; window.getSelection()?.removeAllRanges();
+}
+/** the teacher's current selection inside the text (live; on touch devices the last one seen) */
+function liveSel() {
+  const mb = document.getElementById('mbody'); if (!mb) return null;
+  return selectionOffsets(mb) || (RV.sel && RV.sel.e > RV.sel.s ? RV.sel : null);
+}
+function applyTool(t, o) {
+  if (!o) return;
+  if (t === 'erase') { setMarks(eraseMarks(curMarks(), o)); return; }
+  if (t === 'ins') { setMarks(applyMark(curMarks(), 'ins', { s: o.e, e: o.e })); return; }
+  const r = trimRange(RV.text, o);
+  if (r.e <= r.s) return;
+  if (t === 'cm') { editMark(null, r); return; }
+  setMarks(applyMark(curMarks(), t, r));
+}
+/** modal: note for a mark (new comment when i == null and range given) */
+function editMark(i, range) {
+  const marks = curMarks(), m = i != null ? marks[i] : { ...range, t: 'cm' };
+  if (!m) return;
+  const t = mkType(m);
+  modal(`<h2>${i == null ? 'Комментарий' : esc(MK[t].l)}</h2>
+    <p class="mut" style="margin-bottom:10px">${t !== 'cm' ? `<span class="mtag mk-${t}">${esc(MK[t].m)}</span> ` : ''}${esc(markQuote(m, RV.text))}</p>
+    <textarea class="inp" id="mnote" rows="3" placeholder="${t === 'ins' ? 'Что пропущено' : 'Что не так и как правильно'}${t === 'cm' ? '' : ' (необязательно)'}">${esc(m.note || '')}</textarea>
+    <div class="row-btns" style="margin-top:12px">${i != null ? `<button class="btn ghost" data-act="mark-del" data-i="${i}">Убрать пометку</button>` : ''}<button class="btn" data-act="modal-close">Отмена</button><button class="btn pri" data-act="mark-save">${i == null ? 'Добавить' : 'Сохранить'}</button></div>`);
+  RV.pending = { i, range };
+  setTimeout(() => document.getElementById('mnote')?.focus(), 30);
+}
+function bindPaper(root, mb) {
+  document.onselectionchange = () => {
+    const o = selectionOffsets(mb, { collapsed: true });
+    if (o) RV.sel = o;
+  };
+  // keep the selection when a tool button is pressed (otherwise the browser clears it first)
+  root.querySelector('.paper')?.addEventListener('pointerdown', e => { if (e.target.closest('.mtool')) e.preventDefault(); });
+  // sticky tool: apply as soon as the mouse selection is finished
+  mb.addEventListener('mouseup', () => setTimeout(() => {
+    if (!TOOL || TOOL === 'ins') return;
+    const o = selectionOffsets(mb); if (o) { lastApply = Date.now(); applyTool(TOOL, o); }
+  }, 0));
+  mb.addEventListener('click', e => {
+    if (Date.now() - lastApply < 350) return;
+    const sl = window.getSelection(); if (sl && !sl.isCollapsed) return;
+    if (TOOL === 'ins') { const o = selectionOffsets(mb, { collapsed: true }); if (o) applyTool('ins', { s: o.s, e: o.s }); return; }
+    const el = e.target.closest('[data-mi]'); if (!el || !mb.contains(el)) return;
+    const i = Number(el.dataset.mi);
+    if (TOOL === 'erase') { const next = [...curMarks()]; next.splice(i, 1); setMarks(next); return; }
+    editMark(i);
+  });
+}
+/** hotkeys on the review screen; returns true when handled */
+function markKeys(e) {
+  if (document.querySelector('.scrim')) return false;
+  if ((e.ctrlKey || e.metaKey) && !e.shiftKey && e.key.toLowerCase() === 'z') { e.preventDefault(); undoMark(); return true; }
+  if (e.ctrlKey || e.metaKey || e.altKey) return false;
+  if (e.key === 'Escape' && TOOL) { TOOL = null; redrawPaper(); return true; }
+  const k = e.key.toUpperCase();
+  const t = k === 'E' ? 'erase' : Object.keys(MK).find(x => MK[x].key === k);
+  if (!t) return false;
+  e.preventDefault(); pickTool(t); return true;
+}
+function pickTool(t) {
+  const o = t === 'ins' ? null : liveSel();
+  if (o) { applyTool(t, o); return; }                 // one-off: selection first, then the tool
+  TOOL = TOOL === t ? null : t; redrawPaper();       // no selection: toggle sticky mode
+}
+function undoMark() {
+  const st = UNDO.get(RV?.id) || []; if (!st.length) return;
+  pref.set('marks.' + RV.id, st.pop()); redrawPaper();
+}
+on('tool', el => pickTool(el.dataset.t));
+on('mark-undo', () => undoMark());
+on('mark-edit', el => editMark(Number(el.dataset.i)));
 on('mark-save', () => {
-  const note = document.getElementById('mnote')?.value.trim();
-  if (!note) { toast('Напишите комментарий'); return; }
-  const { o } = RV.pending;
-  const cur = (pref.get('marks.' + RV.id, null) ?? RV.marks).filter(m => m.e <= o.s || m.s >= o.e);
-  cur.push({ s: o.s, e: o.e, q: RV.text.slice(o.s, o.e).slice(0, 120), note: note.slice(0, 600) });
-  cur.sort((a, b) => a.s - b.s);
-  pref.set('marks.' + RV.id, cur); RV.sel = null; window.getSelection()?.removeAllRanges();
-  document.getElementById('layer').innerHTML = ''; rerender();
+  const note = (document.getElementById('mnote')?.value || '').trim().slice(0, 600);
+  const { i, range } = RV.pending || {};
+  if (i == null) {
+    if (!note) { toast('Напишите комментарий'); return; }
+    document.getElementById('layer').innerHTML = '';
+    setMarks(applyMark(curMarks(), 'cm', range, { note, q: RV.text.slice(range.s, range.e).slice(0, 120) }));
+    return;
+  }
+  const cur = curMarks().map(m => ({ ...m }));
+  const m = cur[i]; if (!m) return;
+  if (mkType(m) === 'cm' && !note) { toast('Напишите комментарий или уберите пометку'); return; }
+  if (note) { m.note = note; if (m.e > m.s) m.q = RV.text.slice(m.s, m.e).slice(0, 120); } else { delete m.note; delete m.q; }
+  document.getElementById('layer').innerHTML = '';
+  setMarks(cur);
 });
-on('mark-del', el => { const cur = [...(pref.get('marks.' + RV.id, null) ?? RV.marks)]; cur.splice(Number(el.dataset.i), 1); pref.set('marks.' + RV.id, cur); rerender(); });
+on('mark-del', el => {
+  const cur = [...curMarks()]; cur.splice(Number(el.dataset.i), 1);
+  document.getElementById('layer').innerHTML = '';
+  setMarks(cur);
+});
 on('score', el => { pref.set('score.' + el.dataset.q, Number(el.dataset.n)); rerender(); });
 on('mini', el => { pref.set('sc.' + el.dataset.q + '.' + el.dataset.i, Number(el.dataset.n)); rerender(); });
 on('save-score', async el => {
@@ -258,14 +369,14 @@ on('save-score', async el => {
   const comment = document.getElementById('rcomment')?.value || '';
   if (!isLive()) { toast('Оценка сохранена (демо)'); setTimeout(() => { location.hash = '#/t/review'; }, 500); return; }
   const payload = { criteria, comment };
-  const marks = pref.get('marks.' + id, null);
+  const marks = pref.get('marks.' + id, null) ?? (RV && String(RV.id) === String(id) ? RV.marks : null);
   if (marks) payload.marks = marks;
   if (score != null) payload.score = score;
   if (nParts && parts.every(x => x != null)) payload.parts = parts;
   if (payload.score == null && !payload.parts) { toast(lrp ? 'Оцените каждый ответ: итог посчитается сам' : nParts ? 'Поставьте итоговый балл или баллы за каждый ответ' : 'Поставьте балл'); return; }
   try {
     await src.rate(id, payload);
-    pref.set('score.' + id, null); pref.set('marks.' + id, null); pref.set('crit.' + id, null); pref.set('cmt.' + id, null); parts.forEach((_, i) => pref.set('sc.' + id + '.' + i, null));
+    pref.set('score.' + id, null); pref.set('marks.' + id, null); UNDO.delete(Number(id)); UNDO.delete(id); pref.set('crit.' + id, null); pref.set('cmt.' + id, null); parts.forEach((_, i) => pref.set('sc.' + id + '.' + i, null));
     toast('Оценка сохранена'); location.hash = '#/t/review';
   } catch (e) { toast(e.message); }
 });

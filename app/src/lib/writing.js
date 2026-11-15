@@ -24,33 +24,127 @@ export function promptBlock(task, p, { compact = false } = {}) {
     ${(p.students || []).map(s => `<div class="post"><span class="pav s">${esc(s.name[0])}</span><div><b>${esc(s.name)}</b><p>${esc(s.text)}</p></div></div>`).join('')}</div>`;
 }
 
-/** text with teacher marks as <mark data-n>; marks = [{s,e,note}] by character offset, non-overlapping */
-export function markedHtml(text, marks = []) {
-  const ms = [...(marks || [])].map((m, i) => ({ ...m, n: i + 1 })).filter(m => m.e > m.s).sort((a, b) => a.s - b.s);
-  let out = '', at = 0;
-  for (const m of ms) {
-    if (m.s < at) continue;
-    out += esc(text.slice(at, m.s)) + `<mark class="cm" data-n="${m.n}">${esc(text.slice(m.s, m.e))}</mark>`;
-    at = m.e;
-  }
-  return out + esc(text.slice(at));
+/* ---------- Teacher marks on the student's text ----------
+ * mark = {s, e, t, note?, q?} by character offset into the raw text; the text itself is never changed.
+ * t: hl-y / hl-g / hl-p (marker colours), u (underline), wav (wavy: error), x (strike: extra),
+ *    ins (caret at s === e: something missing), cm (comment, note required). Old marks without t are comments.
+ * Marks may overlap (e.g. underline + comment); within one family a new mark replaces the old one on that range. */
+export const MK = {
+  'hl-y': { l: 'Жёлтый маркер', m: 'обратить внимание', key: 'H' },
+  'hl-g': { l: 'Зелёный маркер', m: 'удачно', key: 'G' },
+  'hl-p': { l: 'Розовый маркер', m: 'ошибка', key: 'R' },
+  u: { l: 'Подчеркнуть', m: 'подчёркнуто', key: 'U' },
+  wav: { l: 'Волнистая линия', m: 'ошибка', key: 'W' },
+  x: { l: 'Зачеркнуть', m: 'лишнее', key: 'X' },
+  ins: { l: 'Пропуск ∧', m: 'здесь что-то пропущено', key: 'I' },
+  cm: { l: 'Комментарий', m: 'комментарий', key: 'C' }
+};
+export const mkType = m => (m && MK[m.t] ? m.t : 'cm');
+export const mkFamily = t => (t.startsWith('hl') ? 'hl' : t);
+
+/** number (1, 2, …) for every mark that carries a note, in text order: Map(index → n) */
+export function noteNumbers(marks = []) {
+  const idx = (marks || []).map((m, i) => i).filter(i => (marks[i].note || '').trim()).sort((a, b) => marks[a].s - marks[b].s || marks[a].e - marks[b].e || a - b);
+  return new Map(idx.map((i, k) => [i, k + 1]));
 }
 
-export function notesHtml(marks = [], { edit = false } = {}) {
-  if (!marks?.length) return '';
-  return `<div class="cmts">${marks.map((m, i) => `<div class="cmt"><b>${i + 1}</b><span class="cq">«${esc(m.q || '')}»</span> ${esc(m.note)}${edit ? ` <button class="lnk sm" data-act="mark-del" data-i="${i}">удалить</button>` : ''}</div>`).join('')}</div>`;
+/** text with marks. Only empty spans and CSS pseudo-content are added, so root.textContent === text (selection offsets stay exact) */
+export function markedHtml(text, marks = []) {
+  text = String(text || '');
+  const L = text.length, num = noteNumbers(marks);
+  const list = (marks || []).map((m, i) => ({ s: m.s, e: m.e, t: mkType(m), i }))
+    .filter(m => Number.isFinite(m.s) && Number.isFinite(m.e) && m.s >= 0 && m.e <= L && (m.e > m.s || (m.t === 'ins' && m.e === m.s)));
+  const range = list.filter(m => m.e > m.s), ins = list.filter(m => m.e === m.s);
+  const pts = [...new Set([0, L, ...list.flatMap(m => [m.s, m.e])])].sort((a, b) => a - b);
+  const badge = m => num.has(m.i) ? `<span class="mn" data-mi="${m.i}" data-n="${num.get(m.i)}"></span>` : '';
+  let out = '';
+  for (let k = 0; k < pts.length; k++) {
+    const a = pts[k];
+    for (const m of ins) if (m.s === a) out += `<span class="mk mk-ins" data-mi="${m.i}" title="${MK.ins.m}"></span>${badge(m)}`;
+    if (k === pts.length - 1) break;
+    const b = pts[k + 1];
+    const cov = range.filter(m => m.s <= a && m.e >= b).sort((x, y) => (y.e - y.s) - (x.e - x.s) || x.i - y.i);
+    let h = esc(text.slice(a, b));
+    for (let j = cov.length - 1; j >= 0; j--) h = `<span class="mk mk-${cov[j].t}" data-mi="${cov[j].i}">${h}</span>`;
+    out += h;
+    for (const m of range) if (m.e === b) out += badge(m);
+  }
+  return out;
+}
+
+/** what a mark points at, for the list of notes */
+export function markQuote(m, text = '') {
+  if (mkType(m) === 'ins') {
+    const before = String(text).slice(Math.max(0, m.s - 40), m.s).match(/([A-Za-z0-9'’-]+)\W*$/);
+    return before ? `пропуск после «${before[1]}»` : 'пропуск в начале';
+  }
+  return `«${(m.q || String(text).slice(m.s, m.e)).slice(0, 120)}»`;
+}
+
+export function notesHtml(marks = [], { edit = false, text = '' } = {}) {
+  const num = noteNumbers(marks);
+  if (!num.size) return '';
+  const rows = [...num.entries()].sort((a, b) => a[1] - b[1]).map(([i, n]) => {
+    const m = marks[i], t = mkType(m);
+    return `<div class="cmt"><b>${n}</b>${t !== 'cm' ? `<span class="mtag mk-${t}">${esc(MK[t].m)}</span>` : ''}<span class="cq">${esc(markQuote(m, text))}</span> ${esc(m.note)}${edit ? ` <button class="lnk sm" data-act="mark-edit" data-i="${i}">изменить</button><button class="lnk sm" data-act="mark-del" data-i="${i}">удалить</button>` : ''}</div>`;
+  });
+  return `<div class="cmts">${rows.join('')}</div>`;
+}
+
+/** legend for the student: only the kinds of marks that occur in this text */
+export function legendHtml(marks = []) {
+  const used = [...new Set((marks || []).map(mkType))].filter(t => t !== 'cm');
+  if (!used.length) return '';
+  return `<div class="mlegend">${Object.keys(MK).filter(t => used.includes(t)).map(t => `<span><i class="mk mk-${t}">${t === 'ins' ? '' : 'abc'}</i> ${esc(MK[t].m)}</span>`).join('')}</div>`;
+}
+
+/** apply a tool to a range: same family is cut out of the range; if the range was already fully covered by this
+ * exact type, the call toggles it off. Returns the new array (input is not changed). */
+export function applyMark(marks, t, o, extra = {}) {
+  let cur = (marks || []).map(m => ({ ...m, t: mkType(m) }));
+  if (t === 'ins') {
+    cur = cur.filter(m => !(m.t === 'ins' && m.s === o.s));
+    cur.push({ s: o.s, e: o.s, t: 'ins', ...extra });
+    return cur;
+  }
+  if (o.e <= o.s) return cur;
+  const fam = mkFamily(t);
+  const same = cur.filter(m => m.t === t && m.e > m.s && m.s < o.e && m.e > o.s).sort((a, b) => a.s - b.s);
+  let at = o.s; for (const m of same) { if (m.s > at) break; at = Math.max(at, m.e); }
+  const toggleOff = !extra.note && at >= o.e;
+  const next = [];
+  for (const m of cur) {
+    if (m.t === 'ins' || mkFamily(m.t) !== fam || m.e <= o.s || m.s >= o.e) { next.push(m); continue; }
+    if (m.s < o.s) next.push({ ...m, e: o.s });
+    if (m.e > o.e) next.push({ ...m, s: o.e, ...(m.s < o.s ? { note: undefined, q: undefined } : {}) });
+  }
+  if (!toggleOff) next.push({ s: o.s, e: o.e, t, ...extra });
+  return next.map(m => { const c = { ...m }; if (!c.note) { delete c.note; delete c.q; } return c; }).sort((a, b) => a.s - b.s || a.e - b.e);
+}
+
+/** remove every mark touching the range (or the caret position) */
+export function eraseMarks(marks, o) {
+  return (marks || []).filter(m => m.e === m.s ? !(m.s >= o.s && m.s <= o.e) : !(m.s < Math.max(o.e, o.s + 1) && m.e > o.s));
+}
+
+/** shrink a selection so it doesn't start or end on spaces / line breaks (double-click often grabs a trailing space) */
+export function trimRange(text, o) {
+  let { s, e } = o;
+  while (s < e && /\s/.test(text[s])) s++;
+  while (e > s && /\s/.test(text[e - 1])) e--;
+  return { s, e };
 }
 
 /** character offsets of the current selection inside `root` (whose text equals the raw string) */
-export function selectionOffsets(root) {
+export function selectionOffsets(root, { collapsed = false } = {}) {
   const sel = window.getSelection();
-  if (!sel || sel.rangeCount === 0 || sel.isCollapsed) return null;
+  if (!sel || sel.rangeCount === 0 || (sel.isCollapsed && !collapsed)) return null;
   const r = sel.getRangeAt(0);
   if (!root.contains(r.startContainer) || !root.contains(r.endContainer)) return null;
   const pre = document.createRange();
   pre.selectNodeContents(root); pre.setEnd(r.startContainer, r.startOffset);
   const s = pre.toString().length, e = s + r.toString().length;
-  return e > s ? { s, e } : null;
+  return e > s || collapsed ? { s, e } : null;
 }
 
 /* ETS-style 0–5 scale descriptions and teacher checklist (shared by review and the student's view) */
