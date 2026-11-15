@@ -4194,5 +4194,640 @@
   ],
   "extra": "believing",
   "ex": "Безличный пассив: It is believed that … Форма believing не образует пассив."
+ },
+ {
+  "id": "W-BAS-A-061",
+  "level": "A",
+  "focus": "Present Perfect с never",
+  "a": "Have you ever been to London?",
+  "parts": [
+   "No, I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "have never",
+   "been",
+   "there"
+  ],
+  "extra": "went",
+  "ex": "Present Perfect: have never been. Форма went — Past Simple, с have она не сочетается."
+ },
+ {
+  "id": "W-BAS-A-062",
+  "level": "A",
+  "focus": "There are + число",
+  "a": "How many students are in your class?",
+  "parts": [
+   "There",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "are",
+   "twenty",
+   "students",
+   "in my class"
+  ],
+  "extra": "is",
+  "ex": "Students — множественное число, поэтому there are. There is стоит только перед единственным числом."
+ },
+ {
+  "id": "W-BAS-A-063",
+  "level": "A",
+  "focus": "Вопрос с where",
+  "a": "Excuse me, I need to find a bus stop.",
+  "parts": [
+   "Where",
+   null,
+   null,
+   null,
+   "?"
+  ],
+  "slots": [
+   "is",
+   "the nearest",
+   "bus stop"
+  ],
+  "extra": "are",
+  "ex": "Bus stop — единственное число, поэтому is. Порядок в вопросе: where + глагол + подлежащее."
+ },
+ {
+  "id": "W-BAS-A-064",
+  "level": "A",
+  "focus": "Like + герундий",
+  "a": "What do you do in your free time?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "like",
+   "playing",
+   "chess",
+   "with my brother"
+  ],
+  "extra": "play",
+  "ex": "После like для обозначения увлечения ставим -ing: like playing. Форма play после like не подходит."
+ },
+ {
+  "id": "W-BAS-A-065",
+  "level": "A",
+  "focus": "Объектные местоимения",
+  "a": "Do you know Anna and Tom?",
+  "parts": [
+   "Yes, I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "know",
+   "them",
+   "very well"
+  ],
+  "extra": "they",
+  "ex": "После глагола нужна объектная форма: know them. Форма they — подлежащее, на месте дополнения она невозможна."
+ },
+ {
+  "id": "W-BAS-A-066",
+  "level": "A",
+  "focus": "Could для прошлой способности",
+  "a": "Could you swim when you were a child?",
+  "parts": [
+   "Yes, I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "could",
+   "swim",
+   "when I was five"
+  ],
+  "extra": "can",
+  "ex": "Способность в прошлом выражаем через could. Can относится к настоящему и не сочетается с when I was five."
+ },
+ {
+  "id": "W-BAS-A-067",
+  "level": "A",
+  "focus": "Too + прилагательное",
+  "a": "Why didn't you buy the jacket?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "was",
+   "too",
+   "expensive",
+   "for me"
+  ],
+  "extra": "enough",
+  "ex": "Too + прилагательное = «слишком»: too expensive. Enough ставится после прилагательного и означает «достаточно»."
+ },
+ {
+  "id": "W-BAS-A-068",
+  "level": "A",
+  "focus": "Условное 1-го типа",
+  "a": "What will you do if it rains?",
+  "parts": [
+   "If it rains,",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "I",
+   "will stay",
+   "at home"
+  ],
+  "extra": "would",
+  "ex": "В главной части условного 1-го типа — will: I will stay. Would относится ко 2-му типу."
+ },
+ {
+  "id": "W-BAS-A-069",
+  "level": "A",
+  "focus": "Some в утверждении",
+  "a": "Do you need anything from the shop?",
+  "parts": [
+   "Yes, we",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "need",
+   "some",
+   "milk"
+  ],
+  "extra": "any",
+  "ex": "В утвердительном предложении используем some: need some milk. Any характерно для вопросов и отрицаний."
+ },
+ {
+  "id": "W-BAS-A-070",
+  "level": "A",
+  "focus": "Даты и предлог on",
+  "a": "When is your birthday?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is",
+   "on",
+   "the third",
+   "of May"
+  ],
+  "extra": "in",
+  "ex": "С конкретным числом ставим on: on the third of May. In используется с месяцами и годами без числа."
+ },
+ {
+  "id": "W-BAS-B-061",
+  "level": "B",
+  "focus": "Косвенная просьба",
+  "a": "What did the teacher ask you?",
+  "parts": [
+   "She asked",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "me",
+   "to open",
+   "the window"
+  ],
+  "extra": "opening",
+  "ex": "Ask + кому + to + инфинитив: asked me to open. После ask герундий не используется."
+ },
+ {
+  "id": "W-BAS-B-062",
+  "level": "B",
+  "focus": "Present Perfect с since",
+  "a": "How long have you lived here?",
+  "parts": [
+   "I",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "have lived",
+   "here",
+   "since 2019"
+  ],
+  "extra": "for 2019",
+  "ex": "Since + момент начала: since 2019. For используется с периодом (for five years)."
+ },
+ {
+  "id": "W-BAS-B-063",
+  "level": "B",
+  "focus": "Be used to + -ing",
+  "a": "Is the noise bothering you?",
+  "parts": [
+   "No, I",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "am",
+   "used to",
+   "living",
+   "near a road"
+  ],
+  "extra": "use to",
+  "ex": "Be used to + -ing означает «привык»: am used to living. Форма use to (без -d) — это used to для прошлых привычек и без be не подходит."
+ },
+ {
+  "id": "W-BAS-B-064",
+  "level": "B",
+  "focus": "Enough + инфинитив",
+  "a": "Can your brother drive?",
+  "parts": [
+   "No, he",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "is not",
+   "old enough",
+   "to drive"
+  ],
+  "extra": "enough old",
+  "ex": "Enough стоит после прилагательного: old enough. Порядок enough old неверен."
+ },
+ {
+  "id": "W-BAS-B-065",
+  "level": "B",
+  "focus": "Относительное придаточное с that",
+  "a": "Which laptop did you buy?",
+  "parts": [
+   "I bought the one",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "that",
+   "was",
+   "on sale"
+  ],
+  "extra": "what",
+  "ex": "Определяем существительное (the one) словом that. What не вводит определительное придаточное."
+ },
+ {
+  "id": "W-BAS-B-066",
+  "level": "B",
+  "focus": "Условное 2-го типа",
+  "a": "Would you move abroad?",
+  "parts": [
+   "I would",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "move",
+   "abroad",
+   "if I had",
+   "a job there"
+  ],
+  "extra": "have",
+  "ex": "Условное 2-го типа: would + инфинитив … if + Past Simple (had). Форма have после if не подходит."
+ },
+ {
+  "id": "W-BAS-B-067",
+  "level": "B",
+  "focus": "Пассив с by",
+  "a": "Who painted this picture?",
+  "parts": [
+   "It",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "was",
+   "painted",
+   "by",
+   "a local artist"
+  ],
+  "extra": "painting",
+  "ex": "Пассив в Past Simple: was painted by. Причастие painting действие над картиной не выражает."
+ },
+ {
+  "id": "W-BAS-B-068",
+  "level": "B",
+  "focus": "So that",
+  "a": "Why did you write it down?",
+  "parts": [
+   "I wrote it down",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "so that",
+   "I",
+   "would not",
+   "forget it"
+  ],
+  "extra": "so as to",
+  "ex": "So that вводит придаточное цели с собственным подлежащим: so that I would not forget. So as to требует инфинитива без подлежащего."
+ },
+ {
+  "id": "W-BAS-B-069",
+  "level": "B",
+  "focus": "Little / few",
+  "a": "Is there enough time?",
+  "parts": [
+   "No, we",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "have",
+   "very little",
+   "time",
+   "left"
+  ],
+  "extra": "very few",
+  "ex": "Time неисчисляемое, поэтому little. Few используется с исчисляемыми существительными."
+ },
+ {
+  "id": "W-BAS-B-070",
+  "level": "B",
+  "focus": "Look forward to + -ing",
+  "a": "Are you ready for the trip?",
+  "parts": [
+   "Yes, I'm",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "looking forward",
+   "to",
+   "seeing",
+   "the mountains"
+  ],
+  "extra": "see",
+  "ex": "В look forward to частица to — предлог, поэтому дальше идёт -ing: to seeing. Инфинитив see неверен."
+ },
+ {
+  "id": "W-BAS-C-061",
+  "level": "C",
+  "focus": "Инверсия: Hardly … when",
+  "a": "Did you leave before the storm?",
+  "parts": [
+   "Hardly",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "had we",
+   "left",
+   "when",
+   "the rain started"
+  ],
+  "extra": "did we",
+  "ex": "После Hardly подлежащее и вспомогательный меняются местами в Past Perfect: Hardly had we left. Форма did we для этой конструкции не подходит."
+ },
+ {
+  "id": "W-BAS-C-062",
+  "level": "C",
+  "focus": "Wish + Past Perfect",
+  "a": "Do you regret skipping the lecture?",
+  "parts": [
+   "Yes, I wish",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "I had",
+   "attended",
+   "the whole lecture"
+  ],
+  "extra": "I would have",
+  "ex": "Сожаление о прошлом: wish + Past Perfect (I had attended). I would have после wish не используется."
+ },
+ {
+  "id": "W-BAS-C-063",
+  "level": "C",
+  "focus": "Причастный оборот",
+  "a": "What did the committee do?",
+  "parts": [
+   null,
+   null,
+   ",",
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "Having reviewed",
+   "the proposal",
+   "the committee",
+   "approved it"
+  ],
+  "extra": "Having review",
+  "ex": "Причастие совершенного вида: having + третья форма (having reviewed). Форма having review неверна."
+ },
+ {
+  "id": "W-BAS-C-064",
+  "level": "C",
+  "focus": "Whom после предлога",
+  "a": "Who did you collaborate with?",
+  "parts": [
+   "She is the researcher",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "with whom",
+   "I",
+   "co-authored",
+   "the paper"
+  ],
+  "extra": "who",
+  "ex": "После предлога относительное местоимение — whom: with whom. Who после предлога не ставится."
+ },
+ {
+  "id": "W-BAS-C-065",
+  "level": "C",
+  "focus": "Сокращённое определение (причастие)",
+  "a": "Which proposals were approved?",
+  "parts": [
+   "The proposals",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "submitted",
+   "before the deadline",
+   "were",
+   "accepted"
+  ],
+  "extra": "submitting",
+  "ex": "Proposals — то, что подавали, поэтому причастие страдательное: submitted. Форма submitting означала бы, что предложения сами подают."
+ },
+ {
+  "id": "W-BAS-C-066",
+  "level": "C",
+  "focus": "Инверсия: Only when",
+  "a": "When do you plan to publish?",
+  "parts": [
+   "Only when",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "the data are verified",
+   "will",
+   "we",
+   "publish"
+  ],
+  "extra": "did",
+  "ex": "После Only when в главной части инверсия: will we publish. Did относится к прошлому и не сочетается с are verified."
+ },
+ {
+  "id": "W-BAS-C-067",
+  "level": "C",
+  "focus": "Согласование: the number of",
+  "a": "How many participants dropped out?",
+  "parts": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "The number of",
+   "participants",
+   "who withdrew",
+   "was",
+   "small"
+  ],
+  "extra": "were",
+  "ex": "The number of … — единственное число: the number was small. Форма were относилась бы к a number of."
+ },
+ {
+  "id": "W-BAS-C-068",
+  "level": "C",
+  "focus": "Инверсия: Under no circumstances",
+  "a": "May employees share the passwords?",
+  "parts": [
+   "Under no circumstances",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "should",
+   "passwords",
+   "be shared"
+  ],
+  "extra": "sharing",
+  "ex": "После Under no circumstances инверсия: should passwords be shared. Форма sharing пассив не образует."
+ },
+ {
+  "id": "W-BAS-C-069",
+  "level": "C",
+  "focus": "The more … the more",
+  "a": "Does practice really help?",
+  "parts": [
+   "Yes,",
+   null,
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "the more",
+   "you practice",
+   "the better",
+   "you become"
+  ],
+  "extra": "more better",
+  "ex": "Парное сравнение: the more … the better. Форма more better неверна, потому что better уже сравнительная степень."
+ },
+ {
+  "id": "W-BAS-C-070",
+  "level": "C",
+  "focus": "Regret + перфектный герундий",
+  "a": "Do you regret your decision?",
+  "parts": [
+   "Yes, I regret",
+   null,
+   null,
+   null,
+   "."
+  ],
+  "slots": [
+   "not",
+   "having accepted",
+   "the offer"
+  ],
+  "extra": "to accept",
+  "ex": "Сожаление о прошлом: regret + (not) having + третья форма. Regret to accept означает «с сожалением принимаю»."
  }
 ]
