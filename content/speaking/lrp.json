@@ -598,5 +598,65 @@
    "If you see anything unusual, call the security office and wait for help.",
    "When you arrive, make sure the student enters the building safely before you leave."
   ]
+ },
+ {
+  "id": "S-LRP-A-041",
+  "level": "A",
+  "title": "Campus shuttle helper",
+  "scenario": "You are a student helper on the campus shuttle bus. The driver is explaining your tasks.",
+  "sentences": [
+   "Please greet every student at the door.",
+   "Ask each rider to show an ID card.",
+   "Help passengers with heavy bags to find a safe seat.",
+   "Tell riders that the shuttle leaves every fifteen minutes.",
+   "If the bus is full, ask students to wait for the next one.",
+   "The last bus leaves at eleven, so please remind late students about it.",
+   "At the end of the day, clean the seats and put any lost items in the box."
+  ]
+ },
+ {
+  "id": "S-LRP-A-042",
+  "level": "A",
+  "title": "Student ID office assistant",
+  "scenario": "You are a student assistant at the campus ID office. The supervisor is explaining your daily duties.",
+  "sentences": [
+   "Please ask each student for a photo ID.",
+   "Take a new photo for every card.",
+   "Print the card and write the student's number on the back.",
+   "A replacement card costs ten dollars, but the first card is free.",
+   "Students can pick up the card the next day after two o'clock.",
+   "If the printer stops, please tell the supervisor and ask students to wait.",
+   "Lost cards must be reported at once, so that no one can use the old card."
+  ]
+ },
+ {
+  "id": "S-LRP-C-043",
+  "level": "C",
+  "title": "Student election volunteer",
+  "scenario": "You are a volunteer for the student government elections. The election committee chair is explaining the voting rules to the volunteers.",
+  "sentences": [
+   "Verify every voter's student card.",
+   "Every student may vote only one time.",
+   "Keep the ballot boxes in sight during the voting hours.",
+   "Never discuss the candidates with voters near the booths.",
+   "Please remain neutral, even if a friend is running for office.",
+   "When the polls close, count the ballots carefully in pairs and record the totals.",
+   "Do not share the results with anyone until the official announcement."
+  ]
+ },
+ {
+  "id": "S-LRP-C-044",
+  "level": "C",
+  "title": "Scholarship committee assistant",
+  "scenario": "You are a student assistant for the university scholarship committee. The committee secretary is explaining how to prepare for the interviews.",
+  "sentences": [
+   "Greet each candidate at the office.",
+   "Offer the candidates a glass of water.",
+   "Check that each application folder has all the documents.",
+   "Give each member a schedule with the names of the candidates.",
+   "Interviews last twenty minutes, so please keep the waiting room quiet.",
+   "If a candidate arrives late, ask the chair before you send the person in.",
+   "Please remind everyone that all discussions must stay strictly confidential."
+  ]
  }
 ]

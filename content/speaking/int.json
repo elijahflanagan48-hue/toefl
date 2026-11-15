@@ -574,5 +574,77 @@
    "Some people say that cities need more green spaces, even if it means fewer buildings. What is your opinion?",
    "How could a university encourage students to spend more time in nature?"
   ]
+ },
+ {
+  "id": "S-INT-A-049",
+  "level": "A",
+  "title": "Clothes and fashion",
+  "scenario": "A campus clothing shop is asking students about their style. You will answer four questions from a store employee.",
+  "questions": [
+   "What kind of clothes do you usually wear to class?",
+   "Where do you usually buy your clothes?",
+   "Do you think it is important to wear fashionable clothes? Why or why not?",
+   "If you could receive a gift card for a clothing store, what would you buy?"
+  ]
+ },
+ {
+  "id": "S-INT-A-050",
+  "level": "A",
+  "title": "Restaurants and eating out",
+  "scenario": "A student newspaper is writing about restaurants near campus. You will answer four questions from a reporter.",
+  "questions": [
+   "How often do you eat in a restaurant?",
+   "What kind of restaurant do you like best?",
+   "Do you prefer to eat at a restaurant or cook at home? Why?",
+   "If you could open a restaurant near the university, what kind of food would you serve?"
+  ]
+ },
+ {
+  "id": "S-INT-A-051",
+  "level": "A",
+  "title": "Phones and devices",
+  "scenario": "A local electronics store is surveying students about their devices. You will answer four questions from an employee.",
+  "questions": [
+   "Which device do you use most often during the day?",
+   "What do you usually do on your phone when you are not studying?",
+   "Do you think children should have their own phones? Why or why not?",
+   "If you could buy any new device today, what would you choose and why?"
+  ]
+ },
+ {
+  "id": "S-INT-C-052",
+  "level": "C",
+  "title": "Advertising and persuasion",
+  "scenario": "A media research group is studying advertising. You will answer four questions from a researcher.",
+  "questions": [
+   "How much attention do you pay to advertisements in your daily life?",
+   "To what extent do advertisements influence the products that people buy?",
+   "Some people believe that advertising to children should be banned. Do you agree or disagree?",
+   "How might personalized online advertising change the way people make decisions in the future?"
+  ]
+ },
+ {
+  "id": "S-INT-C-053",
+  "level": "C",
+  "title": "Honesty and ethics",
+  "scenario": "A university ethics center is surveying student opinions. You will answer four questions from a researcher.",
+  "questions": [
+   "Is it ever acceptable to tell a lie? Explain your view.",
+   "How should a university respond when a student is caught cheating on an exam?",
+   "Some people argue that companies have a moral duty to be honest about product risks, even when it reduces profit. What is your opinion?",
+   "In what ways can a person's sense of right and wrong change over time?"
+  ]
+ },
+ {
+  "id": "S-INT-C-054",
+  "level": "C",
+  "title": "Aging and society",
+  "scenario": "A government agency is studying population change. You will answer four questions from a researcher.",
+  "questions": [
+   "How do older people contribute to their communities?",
+   "What challenges might a country face if its population becomes much older?",
+   "Some experts say that people should retire later because they live longer. To what extent do you agree?",
+   "How could young people and older people learn more from each other?"
+  ]
  }
 ]

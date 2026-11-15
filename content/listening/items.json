@@ -19796,5 +19796,1245 @@
    "Factual",
    "Inference"
   ]
+ },
+ {
+  "id": "L-ANN-A-068",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-068",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-068.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F2",
+  "words": 62,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Hello, everyone. The International Center is holding a language exchange night this Thursday at seven o'clock in the student lounge. Students who speak different languages can meet in pairs and practice together for free. There will be snacks and tea. If you want to join, please sign up at the front desk of the International Center by Wednesday afternoon. Everyone is welcome."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the announcement mainly about?",
+    "opts": [
+     "A new class for learning English",
+     "A trip to another country next month",
+     "A contest for the best student speaker",
+     "A free event for practicing languages"
+    ]
+   },
+   {
+    "stem": "What should students do if they want to join?",
+    "opts": [
+     "Sign up at the front desk by Wednesday",
+     "Pay a small fee at the lounge door on Thursday",
+     "Send an email to the language teacher soon",
+     "Bring a snack for the other students there"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0
+  ],
+  "explain": [
+   "*language exchange night*. A — это не новый курс; B — поездка не упоминается; C — конкурс не упоминается",
+   "*please sign up at the front desk of the International Center by Wednesday afternoon*. B — участие бесплатное; C — письмо учителю не упоминается; D — угощение предоставляют организаторы"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-069",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-069",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-069.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2",
+  "words": 68,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Attention, students and staff. The elevator in Science Hall will be closed for repairs from Monday to Wednesday next week. Please use the stairs, or use the elevator in the library next door. If you cannot use the stairs, call the Facilities Office at extension forty-four ten, and a worker will help you. We are sorry for the trouble. The elevator should be working again on Thursday morning."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What will happen next week in Science Hall?",
+    "opts": [
+     "The library will move into the building",
+     "The stairs will close for cleaning",
+     "The elevator will be out of service",
+     "A new classroom will open on the top floor"
+    ]
+   },
+   {
+    "stem": "What should a student do who cannot use the stairs?",
+    "opts": [
+     "Wait in the library until Thursday",
+     "Ask a teacher to change the room",
+     "Send an email to the dean's office",
+     "Call the Facilities Office for help"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   3
+  ],
+  "explain": [
+   "*The elevator in Science Hall will be closed for repairs*. A — библиотека не переезжает; B — закрывается лифт, а не лестница; D — новая аудитория не упоминается",
+   "*call the Facilities Office*. A — ждать до четверга не предлагают; B — смена аудитории не упоминается; C — письмо декану не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-070",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-070",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-070.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F",
+  "words": 68,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Good morning, everyone. The Student Health Club is organizing a blood drive on Tuesday and Wednesday of next week. It will take place in the gym from ten in the morning until four in the afternoon. Donating blood takes about thirty minutes, and it can help save lives. Please eat breakfast and drink water before you come. Every donor will get a free T-shirt and a cold drink."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the purpose of the announcement?",
+    "opts": [
+     "To invite students to give blood",
+     "To announce a new health class",
+     "To sell T-shirts for a student club",
+     "To ask students to join a sports team"
+    ]
+   },
+   {
+    "stem": "What should donors do before they come?",
+    "opts": [
+     "Eat breakfast and drink some water",
+     "Visit the health center for a check",
+     "Ask a friend to come with them",
+     "Wear a club T-shirt to the gym"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   0
+  ],
+  "explain": [
+   "*organizing a blood drive*. B — новый курс не упоминается; C — футболки дарят, а не продают; D — спортивная команда не упоминается",
+   "*Please eat breakfast and drink water before you come*. B — осмотр заранее не упоминается; C — друга приводить не нужно; D — футболку дают после сдачи крови"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-071",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-071",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-071.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M2",
+  "words": 70,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Hello, students. Winter is coming, and the Community Service Club is collecting warm coats for people who need them. You can leave old coats, hats, and gloves in the blue boxes near the library entrance and the cafeteria. The boxes will be there until the end of November. All the clothes should be clean. The club will give everything to a local shelter in December. Thank you for your help."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Where can students leave the clothes?",
+    "opts": [
+     "In boxes near the library and cafeteria",
+     "At the front desk of the dormitory building",
+     "In the club's small office on Friday",
+     "At the local shelter in the city center"
+    ]
+   },
+   {
+    "stem": "What will the club do with the clothes?",
+    "opts": [
+     "Sell them at the campus bookstore",
+     "Send them to students abroad",
+     "Give them to a local shelter",
+     "Use them in a school play"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   2
+  ],
+  "explain": [
+   "*in the blue boxes near the library entrance and the cafeteria*. B — общежитие не упоминается; C — офис клуба не упоминается; D — приют получает вещи позже, от клуба",
+   "*The club will give everything to a local shelter in December*. A — продажа не упоминается; B — отправка за границу не упоминается; D — театр не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-072",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-072",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-072.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F2",
+  "words": 66,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Good news for sports fans! The new climbing wall in the Recreation Center opens this Monday. It will be open every day from noon until nine at night. Beginners are welcome, and the staff will show you how to climb safely. Shoes and ropes are free, but you must bring your student ID. On the first day, the first fifty visitors will receive a water bottle."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the announcement about?",
+    "opts": [
+     "A change in the gym's weekend hours",
+     "The opening of a new sports activity",
+     "A contest for the best swimmer",
+     "A new class about first aid"
+    ]
+   },
+   {
+    "stem": "What do visitors need to bring?",
+    "opts": [
+     "Their own climbing shoes",
+     "A bottle of water",
+     "Their student ID card",
+     "A form from a doctor"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   2
+  ],
+  "explain": [
+   "*The new climbing wall in the Recreation Center opens this Monday*. A — часы спортзала не меняются; C — конкурс не упоминается; D — курс первой помощи не упоминается",
+   "*you must bring your student ID*. A — обувь выдают бесплатно; B — бутылку дарят первым посетителям; D — справка не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-A-073",
+  "type": "ANN",
+  "task": "lan",
+  "level": "A",
+  "short": "ANN-073",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-073.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M",
+  "words": 66,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Attention, students. The Photography Club is having a photo contest. The theme this year is life on campus. Each student can send in up to three photos. The deadline is Friday, March fifth, at five o'clock. Please send your photos by email to the club. The winner will receive a gift card for the campus bookstore, and the best photos will be shown in the library."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the theme of the contest?",
+    "opts": [
+     "Animals in the city park",
+     "Foods from around the world",
+     "Famous places in the country",
+     "Life on campus"
+    ]
+   },
+   {
+    "stem": "What will the winner receive?",
+    "opts": [
+     "A new camera from the club",
+     "Free tickets to a museum",
+     "A gift card for the bookstore",
+     "A photo book of the campus"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   2
+  ],
+  "explain": [
+   "*The theme this year is life on campus*. A — животные не упоминаются; B — еда не упоминается; C — достопримечательности не упоминаются",
+   "*The winner will receive a gift card for the campus bookstore*. A — камера не упоминается; B — билеты в музей не упоминаются; D — фотокнига не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-074",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-074",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-074.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M3, Woman = TOEFL UK-F2",
+  "words": 66,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a mailroom worker."
+   },
+   {
+    "who": "Man",
+    "text": "Hi. I need to send this box to my parents in Canada."
+   },
+   {
+    "who": "Woman",
+    "text": "Okay. Let me put it on the scale. It's two kilograms. Do you want regular mail or express?"
+   },
+   {
+    "who": "Man",
+    "text": "How long does regular mail take?"
+   },
+   {
+    "who": "Woman",
+    "text": "About two weeks. Express takes four days, but it costs more."
+   },
+   {
+    "who": "Man",
+    "text": "My mother's birthday is next Monday, so I'll take express."
+   },
+   {
+    "who": "Woman",
+    "text": "Good choice. Please write the address on this form."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the man choose express mail?",
+    "opts": [
+     "The box is too heavy for regular mail",
+     "Express mail costs less than regular mail",
+     "He wants to follow the box online",
+     "His mother's birthday is next week"
+    ]
+   },
+   {
+    "stem": "What does the woman ask the man to do?",
+    "opts": [
+     "Show a photo ID at the desk",
+     "Write the address on a form",
+     "Open the box for a quick check",
+     "Choose a smaller box next time"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1
+  ],
+  "explain": [
+   "*my mother's birthday is next Monday*. A — вес коробки не проблема; B — экспресс дороже, а не дешевле; C — отслеживание не упоминается",
+   "*Please write the address on this form*. A — удостоверение не просят; C — открывать коробку не просят; D — другая коробка не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-075",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-075",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-075.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F2, Man = TOEFL US-M2",
+  "words": 76,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a help desk worker."
+   },
+   {
+    "who": "Woman",
+    "text": "IT help desk. How can I help you?"
+   },
+   {
+    "who": "Man",
+    "text": "Hi. My laptop can't connect to the campus Wi-Fi in my dorm."
+   },
+   {
+    "who": "Woman",
+    "text": "Are you using your student email and password?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes, but it says the password is wrong."
+   },
+   {
+    "who": "Woman",
+    "text": "Passwords change every six months. You can make a new one on the help desk website, or I can do it for you now."
+   },
+   {
+    "who": "Man",
+    "text": "Please do it now. I have an online test tonight."
+   },
+   {
+    "who": "Woman",
+    "text": "Okay. Give me your student number."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the man visit the help desk?",
+    "opts": [
+     "His laptop will not join the Wi-Fi",
+     "He lost his laptop in the dorm",
+     "He needs a new student email account",
+     "His online test was moved to tomorrow"
+    ]
+   },
+   {
+    "stem": "What will the woman do next?",
+    "opts": [
+     "Give him a new laptop to borrow",
+     "Make a new password for the man",
+     "Ask his teacher to move the test",
+     "Send him a form to fill out later"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   1
+  ],
+  "explain": [
+   "*My laptop can't connect to the campus Wi-Fi*. B — ноутбук не потерян; C — новый адрес почты не нужен; D — перенос теста не упоминается",
+   "*I can do it for you now*. A — ноутбук не выдают; C — учителя не просят; D — форму не присылают"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-076",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-076",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-076.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F, Man = TOEFL CA-M",
+  "words": 52,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two roommates."
+   },
+   {
+    "who": "Woman",
+    "text": "Mark, it's your turn to clean the kitchen this week."
+   },
+   {
+    "who": "Man",
+    "text": "I know, but I have two exams on Thursday. Can we change weeks?"
+   },
+   {
+    "who": "Woman",
+    "text": "Sure. I can clean it this week, and you can clean it next week."
+   },
+   {
+    "who": "Man",
+    "text": "That's fair. Thanks. I'll take out the trash tonight, too."
+   },
+   {
+    "who": "Woman",
+    "text": "Great. Don't forget the recycling."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the man's problem?",
+    "opts": [
+     "He forgot where the cleaning supplies are",
+     "He wants a different roommate next term",
+     "He is too busy with exams this week",
+     "He broke a plate while washing dishes"
+    ]
+   },
+   {
+    "stem": "What will the man do tonight?",
+    "opts": [
+     "Clean the whole kitchen floor",
+     "Buy new bags for the recycling",
+     "Study together with the woman",
+     "Carry the trash outside"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   3
+  ],
+  "explain": [
+   "*I have two exams on Thursday*. A — средства для уборки не упоминаются; B — смена соседа не упоминается; D — разбитая тарелка не упоминается",
+   "*I'll take out the trash tonight*. A — кухню он будет убирать на следующей неделе; B — пакеты покупать не собирается; C — совместная учёба не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-077",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-077",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-077.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M2, Woman = TOEFL UK-F3",
+  "words": 67,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a health center receptionist."
+   },
+   {
+    "who": "Man",
+    "text": "Hello. I'd like to make an appointment with a doctor. I have a bad cough."
+   },
+   {
+    "who": "Woman",
+    "text": "Of course. Is it an emergency?"
+   },
+   {
+    "who": "Man",
+    "text": "No, I've had it for about a week."
+   },
+   {
+    "who": "Woman",
+    "text": "Dr. Lopez has a free time tomorrow at ten, or Dr. Kim can see you this afternoon at three."
+   },
+   {
+    "who": "Man",
+    "text": "I have a class tomorrow morning. I'll take the three o'clock appointment."
+   },
+   {
+    "who": "Woman",
+    "text": "Okay. Please bring your student ID card."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the man not choose the time with Dr. Lopez?",
+    "opts": [
+     "He has a class tomorrow morning",
+     "He is feeling much better today",
+     "Dr. Lopez works only on weekends",
+     "He must go to the airport then"
+    ]
+   },
+   {
+    "stem": "What should the man bring to the appointment?",
+    "opts": [
+     "A note from his teacher",
+     "A list of old medicines",
+     "His student ID card",
+     "His health insurance form"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   2
+  ],
+  "explain": [
+   "*I have a class tomorrow morning*. B — он по-прежнему болен; C — врач в выходные не упоминается; D — аэропорт не упоминается",
+   "*Please bring your student ID card*. A — записка от преподавателя не нужна; B — список лекарств не упоминается; D — страховая форма не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-078",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-078",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-078.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F3, Man = TOEFL UK-M",
+  "words": 64,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Woman",
+    "text": "Are you doing anything this Saturday?"
+   },
+   {
+    "who": "Man",
+    "text": "Not really. Why?"
+   },
+   {
+    "who": "Woman",
+    "text": "A few of us are going hiking at Pine Lake. We leave at eight in the morning."
+   },
+   {
+    "who": "Man",
+    "text": "That sounds fun. How long is the trail?"
+   },
+   {
+    "who": "Woman",
+    "text": "About five kilometers. It takes around two hours, and there's a nice view at the top."
+   },
+   {
+    "who": "Man",
+    "text": "Okay, I'm in. Should I bring lunch?"
+   },
+   {
+    "who": "Woman",
+    "text": "Yes, please bring some food and water."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the woman talk to the man?",
+    "opts": [
+     "To ask him for a map of the lake",
+     "To tell him about a class trip",
+     "To ask for help with her homework",
+     "To invite him on a hike"
+    ]
+   },
+   {
+    "stem": "What does the woman tell the man to bring?",
+    "opts": [
+     "A camera and a small map",
+     "A tent and a sleeping bag",
+     "Some food and water to drink",
+     "Money for the bus ticket"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   2
+  ],
+  "explain": [
+   "*A few of us are going hiking at Pine Lake*. A — карта не упоминается; B — это не школьная поездка; C — домашнее задание не упоминается",
+   "*please bring some food and water*. A — камера и карта не упоминаются; B — палатка не нужна — поход на один день; D — деньги на автобус не упоминаются"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-A-079",
+  "type": "CONV",
+  "task": "lco",
+  "level": "A",
+  "short": "CONV-079",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-079.mp3",
+  "voices": "Narrator, Man = TOEFL US-M, Woman = TOEFL CA-F",
+  "words": 57,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a professor."
+   },
+   {
+    "who": "Man",
+    "text": "Professor Adams, do you have a minute? I'm confused about the due date for the report."
+   },
+   {
+    "who": "Woman",
+    "text": "Of course. The report is due next Friday, not this Friday."
+   },
+   {
+    "who": "Man",
+    "text": "Oh, good. And how long should it be?"
+   },
+   {
+    "who": "Woman",
+    "text": "Five pages. Please use at least three sources."
+   },
+   {
+    "who": "Man",
+    "text": "Can I send it by email?"
+   },
+   {
+    "who": "Woman",
+    "text": "No, please bring a printed copy to class."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the man confused about?",
+    "opts": [
+     "Which topic he should choose",
+     "How many students are in the class",
+     "When the report is due",
+     "Where the professor's office is"
+    ]
+   },
+   {
+    "stem": "How should the man give the report to the professor?",
+    "opts": [
+     "He should send it by email on Friday",
+     "He should leave it at the library desk",
+     "He should bring a paper copy to class",
+     "He should upload it to a class website"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   2
+  ],
+  "explain": [
+   "*I'm confused about the due date for the report*. A — тема не обсуждается; B — число студентов не обсуждается; D — кабинет не обсуждается",
+   "*please bring a printed copy to class*. A — по почте нельзя; B — в библиотеке не оставляют; D — загрузка на сайт не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-TALK-A-062",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-062",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-062.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F",
+  "words": 205,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a botany class."
+   },
+   {
+    "who": "Woman",
+    "text": "Today we will talk about how plants spread their seeds. A plant cannot walk to a new place, so it needs help to send its seeds away. Why is this important? If all the seeds fall under the parent plant, they will have to share the same light, water, and soil, and many of them will not grow. Plants have several clever solutions. Some seeds, like those of the dandelion, are very light, and tiny hairs help them fly, so the wind carries them over long distances. Other seeds, like those of the coconut, can float, so the ocean takes them to new beaches. Some plants use animals. Burdock seeds have small hooks, and they stick to the fur of a passing dog or deer. Berries work differently. A bird eats the fruit and flies away. Later, the bird drops the seeds in a new place. Finally, some plants, such as peas, use a small explosion. When the pod gets dry, it opens suddenly and shoots the seeds out. Next time you walk through tall grass, look at your socks afterward. You may find some travelers there. It is a free ride for the plant, and it helps the next generation to grow in a better place."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "The reasons some plants grow faster than others",
+     "The different ways plants send out their seeds",
+     "The animals that live in forests and parks",
+     "The best kind of soil for growing food"
+    ]
+   },
+   {
+    "stem": "How do coconut seeds travel to new places?",
+    "opts": [
+     "They are carried by the wind over mountains",
+     "They float on the ocean to new beaches",
+     "They stick to the fur of passing animals",
+     "They are shot out of a dry pod"
+    ]
+   },
+   {
+    "stem": "Why would seeds that fall under the parent plant have problems?",
+    "opts": [
+     "They are eaten by insects and birds",
+     "They must share light, water, and soil",
+     "They are too heavy to grow roots",
+     "They need a lot of cold weather"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention socks at the end?",
+    "opts": [
+     "To warn students about walking in tall grass",
+     "To suggest that socks help plants to grow",
+     "To give students a simple example they can find",
+     "To explain where the burdock plant lives"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1,
+   1,
+   2
+  ],
+  "explain": [
+   "*how plants spread their seeds*. A — скорость роста не обсуждается; C — животные упоминаются лишь как переносчики; D — почвы для урожая не обсуждаются",
+   "*the coconut, can float, so the ocean takes them to new beaches*. A — ветром переносятся семена одуванчика; C — цепляются за шерсть семена лопуха; D — из сухого стручка вылетают семена гороха",
+   "*they will have to share the same light, water, and soil*. A — насекомые и птицы не упоминаются; C — вес семян не обсуждается; D — холод не упоминается",
+   "*look at your socks afterward. You may find some travelers there*. A — предупреждения нет; B — носки растениям не помогают; D — место обитания лопуха не обсуждается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Inference",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-TALK-A-063",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-063",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-063.mp3",
+  "voices": "Narrator, Man = TOEFL US-M2",
+  "words": 198,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a physics class."
+   },
+   {
+    "who": "Man",
+    "text": "Today we will learn about electric circuits. Every time you turn on a light or charge your phone, electricity travels through a circuit. A circuit is a complete path that electricity can follow. To make a simple circuit, you need three things: a source of energy, like a battery, wires, and something that uses the energy, like a small light bulb. The electricity goes out of the battery, through one wire, through the bulb, and back to the battery through another wire. If the path is complete, the bulb lights up. If there is a break anywhere, the electricity stops, and the light goes out. A switch is simply a way to make this break on purpose. When you turn the switch off, you open the path, and when you turn it on, you close the path again. Some materials let electricity move easily. Metals, such as copper, are good examples, so wires are made of copper. Other materials, like plastic and rubber, stop electricity, so we cover wires with them for safety. In the lab today, you will build your own circuit, and you will try to find which objects on the table let the light shine."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main topic of the talk?",
+    "opts": [
+     "How batteries are made in factories",
+     "Why metals are expensive to buy",
+     "How to repair a broken phone",
+     "How a simple electric circuit works"
+    ]
+   },
+   {
+    "stem": "What happens if there is a break in the circuit?",
+    "opts": [
+     "The electricity stops moving",
+     "The wire becomes much hotter",
+     "The bulb gets much brighter",
+     "The battery grows stronger"
+    ]
+   },
+   {
+    "stem": "Why are wires covered with plastic or rubber?",
+    "opts": [
+     "They make the electricity move much faster",
+     "They stop electricity, so wires are safe",
+     "They help the battery to stay cold longer",
+     "They make the wire easier to see in the dark"
+    ]
+   },
+   {
+    "stem": "What will students probably do in the lab?",
+    "opts": [
+     "Take apart an old computer in pairs",
+     "Test which objects let the light shine",
+     "Watch a short video about copper mines",
+     "Write a report about electric cars at home"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0,
+   1,
+   1
+  ],
+  "explain": [
+   "*Today we will learn about electric circuits*. A — производство батареек не обсуждается; B — цена металлов не обсуждается; C — ремонт телефонов не обсуждается",
+   "*If there is a break anywhere, the electricity stops*. B — нагрев не упоминается; C — лампа гаснет, а не светит ярче; D — батарея не усиливается",
+   "*Other materials, like plastic and rubber, stop electricity, so we cover wires with them for safety*. A — пластик не ускоряет ток; C — охлаждение батареи не упоминается; D — заметность провода не упоминается",
+   "*you will build your own circuit, and you will try to find which objects on the table let the light shine*. A — разбирать компьютер не будут; C — видео про шахты не упоминается; D — отчёт об электромобилях не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-A-064",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-064",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-064.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F",
+  "words": 187,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a zoology class."
+   },
+   {
+    "who": "Woman",
+    "text": "Deserts are some of the hardest places to live. The days are very hot, the nights can be cold, and there is almost no water. Even so, many animals live there. Today we will see how they survive. The first problem is heat. Many small animals, like the desert mouse, hide in underground holes during the day and come out only at night, when the air is cooler. The second problem is water. The kangaroo rat is a famous example. It almost never drinks. It gets the water it needs from the seeds it eats, and its body wastes very little. The camel has a different strategy. It can drink more than a hundred liters at one time and then travel for many days without drinking again. The camel's hump does not store water. It stores fat, and the fat gives the camel energy. Finally, some animals have special body parts. The fennec fox has huge ears, and these help the fox lose heat from its body. So desert animals do not fight the desert. They use clever habits and body features to live with it."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the lecture mostly about?",
+    "opts": [
+     "Why deserts are growing larger each year",
+     "How people travel across dry land",
+     "Which animals are the fastest in the world",
+     "How animals manage to live in deserts"
+    ]
+   },
+   {
+    "stem": "How does the kangaroo rat get most of its water?",
+    "opts": [
+     "From small pools near the rocks",
+     "From the seeds that it eats",
+     "From the morning dew on plants",
+     "From the cold air at night"
+    ]
+   },
+   {
+    "stem": "What does the professor say about the camel's hump?",
+    "opts": [
+     "It stores water for the long trips",
+     "It protects the camel from the hot sun",
+     "It helps the camel run much faster",
+     "It stores fat that gives energy"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention the fennec fox's ears?",
+    "opts": [
+     "To explain how foxes hear food at night",
+     "To show why foxes sleep underground",
+     "To compare foxes with desert mice",
+     "To show how a body part helps lose heat"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1,
+   3,
+   3
+  ],
+  "explain": [
+   "*Today we will look at how they survive*. A — рост пустынь не обсуждается; B — путешествия людей не обсуждаются; C — скорость животных не обсуждается",
+   "*It gets the water it needs from the seeds it eats*. A — лужи не упоминаются; C — роса не упоминается; D — холодный воздух не упоминается",
+   "*the camel's hump does not store water. It stores fat, which gives the camel energy*. A — воду горб не хранит; B — защита от солнца не упоминается; C — скорость не упоминается",
+   "*huge ears, and these help the fox lose heat from its body*. A — слух и поиск еды не упоминаются; B — сон под землёй не связан с ушами; C — сравнение с мышами не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-TALK-A-065",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-065",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-065.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M3",
+  "words": 188,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a health science class."
+   },
+   {
+    "who": "Man",
+    "text": "Today we will talk about your muscles. You have more than six hundred muscles in your body, and they do many jobs. Some muscles, like the ones in your arms and legs, move when you decide to move them. We call them voluntary muscles. Others work all the time without your control. Your heart is a muscle, and so are the muscles that help you breathe. Muscles can only do one thing: they pull. They cannot push. So muscles usually work in pairs. For example, when you lift your hand toward your shoulder, the muscle on the front of your arm gets shorter, and the one on the back gets longer. When you straighten your arm, they switch roles. Exercise makes muscles stronger. When you lift something heavy, tiny tears appear in the muscle, and during rest, the body repairs them and makes the muscle a little bigger. That is why rest days are as important as exercise days. Also, muscles need protein from foods like beans, eggs, and fish to repair themselves. So a healthy plan for strong muscles has three parts: exercise, rest, and good food."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the professor mainly talking about?",
+    "opts": [
+     "How muscles work and become stronger",
+     "How doctors treat injuries to the body",
+     "Why people need to eat less sugar",
+     "How the heart sends blood through the body"
+    ]
+   },
+   {
+    "stem": "Which muscle works without a person's control?",
+    "opts": [
+     "The heart muscle",
+     "The arm muscles",
+     "The leg muscles",
+     "The hand muscles"
+    ]
+   },
+   {
+    "stem": "Why do muscles usually work in pairs?",
+    "opts": [
+     "Because one muscle is always too weak",
+     "Because muscles can only pull, not push",
+     "Because the body has only two kinds of muscle",
+     "Because pairs need less protein to grow"
+    ]
+   },
+   {
+    "stem": "Why does the professor say rest days are important?",
+    "opts": [
+     "Muscles become longer when people sleep",
+     "The body repairs the muscle during rest",
+     "The heart needs a break from exercise",
+     "Rest removes extra protein from the body"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   0,
+   1,
+   1
+  ],
+  "explain": [
+   "*Today we will talk about your muscles*. B — лечение травм не обсуждается; C — сахар не обсуждается; D — работа сердца как насоса не обсуждается",
+   "*Your heart is a muscle*. B — мышцами рук управляют; C — мышцами ног управляют; D — мышцами кисти управляют",
+   "*Muscles can only do one thing: they pull. They cannot push*. A — слабость одной мышцы не упоминается; C — типов мышц больше двух; D — белок в этой связи не упоминается",
+   "*during rest, the body repairs them and makes the muscle a little bigger*. A — длина мышц при сне не обсуждается; C — отдых сердца не упоминается; D — удаление белка не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-TALK-A-066",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-066",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-066.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F",
+  "words": 201,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a history class."
+   },
+   {
+    "who": "Woman",
+    "text": "Imagine you want a pair of shoes, but you have only chickens. The shoemaker may not want chickens! Thousands of years ago, people solved this problem by trading goods directly, a system we call barter. But barter has a big problem: both people must want what the other person has. So people started to use things that everyone accepted as valuable, such as shells, salt, or pieces of metal. In China, people made small metal coins in the shape of tools and knives. In Lydia, a kingdom in what is now Turkey, people made the first coins that look like the ones we use today, around the year six hundred before Christ. They were round, made of gold and silver, and had a picture on them. Later, the Chinese invented paper money, because carrying many heavy coins was difficult. Today, most money is not paper or metal at all. It is just numbers on a computer screen, and we move it with a card or a phone. But the idea is the same: money is something that people trust. Think about it: when you pay for lunch with a card, you are using an idea that is thousands of years old."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main idea of the talk?",
+    "opts": [
+     "Why gold is worth more than silver today",
+     "How banks keep money safe for people",
+     "Which countries make the most coins today",
+     "How ways of paying for things changed"
+    ]
+   },
+   {
+    "stem": "What was the main problem with barter?",
+    "opts": [
+     "Both people had to want what the other had",
+     "The goods were too heavy to carry",
+     "The shoemakers refused to work for money",
+     "People did not have enough animals to trade"
+    ]
+   },
+   {
+    "stem": "Why did the Chinese invent paper money?",
+    "opts": [
+     "Many heavy coins were hard to carry",
+     "Gold became too hard to find",
+     "The king wanted pictures on the money",
+     "Paper was cheaper than shells and salt"
+    ]
+   },
+   {
+    "stem": "What does the professor say about money today?",
+    "opts": [
+     "It is made from a new kind of metal",
+     "It is mostly kept as shells and salt",
+     "Most of it exists only as numbers",
+     "It is now collected from old tools"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0,
+   0,
+   2
+  ],
+  "explain": [
+   "*Thousands of years ago... Later... Today*. A — золото и серебро не сравниваются; B — банки не обсуждаются; C — страны-производители монет не обсуждаются",
+   "*both people must want what the other person has*. B — тяжесть товаров не упоминается; C — сапожники не отказывались от денег; D — число животных не упоминается",
+   "*because carrying many heavy coins was difficult*. B — нехватка золота не упоминается; C — изображения были на монетах Лидии; D — цена бумаги не упоминается",
+   "*most money is not paper or metal at all. It is just numbers on a computer screen*. A — новый металл не упоминается; B — ракушки и соль были раньше; D — лёгкость обмена не сравнивается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-TALK-A-067",
+  "type": "TALK",
+  "task": "lat",
+  "level": "A",
+  "short": "TALK-067",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-067.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M",
+  "words": 196,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an earth science class."
+   },
+   {
+    "who": "Man",
+    "text": "How do weather forecasters know if it will rain tomorrow? Today we will look at the basic tools and ideas behind a weather forecast. First, forecasters need information about the air right now. Thousands of weather stations around the world measure temperature, wind, and the amount of water in the air. Weather balloons carry instruments high into the sky, and satellites take pictures of clouds from space. All this information goes into powerful computers. The computers use mathematical rules about how air moves to predict what will happen in the next hours and days. A forecast for tomorrow is usually quite good, but a forecast for ten days from now is much less reliable. Why? Because the air is a very complicated system, and a tiny change today can make a big difference later. When you hear \"seventy percent chance of rain,\" it does not mean that it will rain for seventy percent of the day. Roughly, it means that in seventy out of one hundred similar situations in the past, it rained. So bring an umbrella when the chance is high. Forecasters are not perfect, but they save many lives by warning people about storms."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "Why some places get more rain",
+     "How weather forecasts are made",
+     "How to build a weather station",
+     "What causes strong winds in storms"
+    ]
+   },
+   {
+    "stem": "What do weather balloons do?",
+    "opts": [
+     "Carry instruments high into the sky",
+     "Take pictures of clouds from space",
+     "Measure the wind on the ground",
+     "Make rain fall from the clouds"
+    ]
+   },
+   {
+    "stem": "Why are ten-day forecasts less reliable?",
+    "opts": [
+     "Computers cannot work for so many days",
+     "Satellites stop taking pictures at night",
+     "A tiny change today can matter later",
+     "Weather stations are far from big cities"
+    ]
+   },
+   {
+    "stem": "What does a \"seventy percent chance of rain\" roughly mean?",
+    "opts": [
+     "It will rain during most of the whole day",
+     "It will rain in seventy different places",
+     "The rain will last for seventy minutes",
+     "It rained in about seventy of a hundred cases"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   0,
+   2,
+   3
+  ],
+  "explain": [
+   "*the basic tools and ideas behind a weather forecast*. A — причины дождей не обсуждаются; C — постройка станции не обсуждается; D — причины штормов не обсуждаются",
+   "*Weather balloons carry instruments high into the sky*. B — снимки из космоса делают спутники; C — метеостанции измеряют на земле; D — воздействия на дождь нет",
+   "*a tiny change today can make a big difference later*. A — компьютеры работают без перерыва; B — про ночь спутников не говорится; D — расположение станций не упоминается",
+   "*in seventy out of one hundred similar situations in the past, it rained*. A — профессор отрицает «70% дня»; B — про места не говорится; C — про минуты не говорится"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Inference",
+   "Factual"
+  ]
  }
 ]
