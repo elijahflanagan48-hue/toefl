@@ -84,7 +84,7 @@ export default async function train(params) {
         ${c.soon ? '' : `<p class="modehint fade">${ic('spark', 15)} ${hintOf(k, mode)}</p>`}
         ${mistNote}
         <div class="tgrid n${c.tasks.length}">${c.tasks.map(t => taskCard(k, t, st, mode, mistByTask[t.id] || 0)).join('')}</div>
-        ${k === 'L' && isLive() && session.user && session.user.role !== 'student' ? `<div class="lbl">Для учителя <b>тест-банк T1–T3</b></div>
+        ${k === 'L' && isLive() && session.user && session.user.role !== 'student' ? `<div class="lbl">Для учителя <b>тест-банк T1–T5</b></div>
           <div class="note info">${ic('lock', 22)}<div class="t"><div class="nm">Задания из тестов недоступны ученикам в тренировке</div><div class="mt">Попробуйте их сами: ${[['lcr', 'Choose a Response'], ['lco', 'Conversation'], ['lan', 'Announcement'], ['lat', 'Academic Talk']].map(([id, n]) => `<a href="#/listen/${id}?mode=${mode === 'timed' ? 'timed' : 'learn'}&bank=test"><b>${n}</b></a>`).join(' · ')}. Чтобы открыть задание ученикам, смените его статус в банке заданий.</div></div></div>` : ''}
         ${types}
         ${k === 'R' ? `<div class="lbl">Модуль целиком</div><a class="note" href="#/exam/reading">${ic('timer', 22)}<div class="t"><div class="nm">Модуль Reading в экзаменационной оболочке</div><div class="mt">Complete the Words → Daily Life → Academic Passage · 12 мин</div></div>${ic('right', 20)}</a>` : ''}

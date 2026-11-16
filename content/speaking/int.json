@@ -646,5 +646,29 @@
    "Some experts say that people should retire later because they live longer. To what extent do you agree?",
    "How could young people and older people learn more from each other?"
   ]
+ },
+ {
+  "id": "S-INT-B-055",
+  "level": "B",
+  "title": "Friends and social life",
+  "scenario": "A student magazine is writing about friendship at university. You will answer four questions from a reporter.",
+  "questions": [
+   "How do you usually meet new people at your university?",
+   "What do you enjoy doing with your friends in your free time?",
+   "Some people say that it is better to have a few close friends than many casual friends. What is your opinion?",
+   "How could a university help new students make friends during their first month?"
+  ]
+ },
+ {
+  "id": "S-INT-B-056",
+  "level": "B",
+  "title": "Getting around the city",
+  "scenario": "A city transportation department is surveying residents. You will answer four questions from an interviewer.",
+  "questions": [
+   "How do you usually travel to your university or workplace?",
+   "What are the good and bad points of public transportation in your city?",
+   "Some people believe that cities should ban cars from the center. Do you agree or disagree?",
+   "What change would make traveling around your city easier for students?"
+  ]
  }
 ]

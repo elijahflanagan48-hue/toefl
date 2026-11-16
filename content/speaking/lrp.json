@@ -658,5 +658,35 @@
    "If a candidate arrives late, ask the chair before you send the person in.",
    "Please remind everyone that all discussions must stay strictly confidential."
   ]
+ },
+ {
+  "id": "S-LRP-B-045",
+  "level": "B",
+  "title": "Art gallery attendant",
+  "scenario": "You are a student attendant at the campus art gallery. The gallery manager is explaining your duties before an opening.",
+  "sentences": [
+   "Please greet each visitor at the door.",
+   "Offer everyone a map of the gallery.",
+   "Visitors may take photos, but they should not use a flash.",
+   "Please remind guests to keep a safe distance from the paintings.",
+   "If someone touches a painting, politely ask them to step back.",
+   "The gallery closes at six, so please tell the last visitors about the time.",
+   "After closing, check that every room is empty and lock the main door."
+  ]
+ },
+ {
+  "id": "S-LRP-B-046",
+  "level": "B",
+  "title": "Health fair volunteer",
+  "scenario": "You are a volunteer at the campus health fair. The organizer is explaining how to help the visitors.",
+  "sentences": [
+   "Please wear your name tag and a blue shirt.",
+   "Welcome each visitor to the fair.",
+   "Give every visitor a bag with the free health brochures.",
+   "The blood pressure test takes about five minutes and is free.",
+   "Please direct people with questions about food to the nutrition booth.",
+   "Remind all visitors to drink water, because the tents get very warm today.",
+   "At the end of the day, please help us collect the chairs and clean the tables."
+  ]
  }
 ]

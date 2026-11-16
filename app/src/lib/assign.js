@@ -17,7 +17,9 @@ export const ASSIGN_TASKS = [
   { v: 'S:int', core: true, section: 'S', task: 'int', nm: 'Speaking · Take an Interview' },
   { v: 'M:T1', section: 'M', task: 'T1', nm: 'Полный пробник 1', mock: true },
   { v: 'M:T2', section: 'M', task: 'T2', nm: 'Полный пробник 2', mock: true },
-  { v: 'M:T3', section: 'M', task: 'T3', nm: 'Полный пробник 3', mock: true }
+  { v: 'M:T3', section: 'M', task: 'T3', nm: 'Полный пробник 3', mock: true },
+  { v: 'M:T4', section: 'M', task: 'T4', nm: 'Полный пробник 4', mock: true },
+  { v: 'M:T5', section: 'M', task: 'T5', nm: 'Полный пробник 5', mock: true }
 ];
 export const SECTION_NAMES = { R: 'Reading', L: 'Listening', W: 'Writing', S: 'Speaking', M: 'Полные пробники' };
 export const MODE_NAMES = { learn: 'учебный режим', timed: 'на время / как на экзамене' };
