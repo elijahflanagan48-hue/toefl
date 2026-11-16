@@ -12,19 +12,23 @@
   unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 
 :root{
-  /* surfaces & text */
+  /* surfaces & text — day theme «Светлая» (default): cool light grey + white cards */
   --bg:#f3f5fa; --surf:#ffffff; --surf2:#f0f3f9; --surf3:#e8ecf5;
   --tx:#0f1a2e; --mut:#56637f; --fade:#7d8aa5;
   --line:#e3e8f2; --line2:#d1d9e8;
 
-  /* brand: ink + gold */
+  /* brand: ink for text and main buttons, coral for what matters (logo «Tf», goal, today's step).
+     The --gold* names are kept for compatibility: they now carry the coral accent. */
   --pri:#16213f; --pri-2:#24325c; --on-pri:#ffffff; --pri-soft:#e7eaf3;
-  --gold:#a86f08; --gold-2:#f0b84a; --gold-soft:#fbf1dc; --on-gold:#1a1405;
-  --hero:#16213f; --hero-2:#1e2b52; --hero-tx:#f6f2e8; --hero-mut:#b4bcd2; --hero-line:rgba(255,255,255,.12);
+  --gold:#c23c2b; --gold-2:#e0503f; --gold-soft:#fde9e4; --on-gold:#ffffff;
+  /* hero cards («Сегодня», mock, rail CTA): soft coral haze */
+  --hero:#fde8e2; --hero-2:#fbd9cf; --hero-tx:#16213f; --hero-mut:#6b5d63; --hero-line:rgba(22,33,63,.10);
+  --hero-glass:rgba(255,255,255,.65); --hero-hatch:rgba(22,33,63,.10);
+  --logo-bg:#f6f2e8; --logo-line:#e7dfcf; --logo-tx:#16213f; --logo-num:#e0503f;
 
-  /* sections */
-  --sR:#2f6fed; --sL:#0e9384; --sW:#c97a06; --sS:#e0503f;
-  --sR-ink:#1f56c8; --sL-ink:#0b766a; --sW-ink:#9a5d04; --sS-ink:#b8382a;
+  /* sections (Speaking is violet: coral belongs to the brand now) */
+  --sR:#2f6fed; --sL:#0e9384; --sW:#c97a06; --sS:#8a5cf6;
+  --sR-ink:#1f56c8; --sL-ink:#0b766a; --sW-ink:#9a5d04; --sS-ink:#6a3fd6;
 
   /* states */
   --ok:#1b7a4d; --ok-soft:#e3f2e9; --bad:#c03a28; --bad-soft:#fbe8e4; --warn:#a25d00; --warn-soft:#fff1dc;
@@ -47,18 +51,26 @@
   /* layout */
   --col:680px; --rail:248px;
 }
+/* day options (Профиль → Оформление) */
+:root[data-day="white"]{--bg:#ffffff; --surf2:#f4f5f8; --surf3:#eceef3; --line:#e7e9ef; --line2:#d8dbe4}
+:root[data-day="paper"]{--bg:#f6f1e7; --surf:#fffdf8; --surf2:#f1ebdf; --surf3:#e9e1d1; --line:#e7dfcf; --line2:#d9cfbb; --mut:#5d6680}
+:root[data-day="ink"]{--hero:#16213f; --hero-2:#1e2b52; --hero-tx:#f6f2e8; --hero-mut:#b4bcd2; --hero-line:rgba(255,255,255,.12);
+  --hero-glass:rgba(255,255,255,.09); --hero-hatch:rgba(255,255,255,.14); --gold-2:#f0705e}
 
+/* night theme «Чёрная» (OLED, default) */
 :root[data-theme="dark"]{
-  --bg:#070b16; --surf:#0f1626; --surf2:#151e33; --surf3:#1c2741;
-  --tx:#e9eefb; --mut:#9aa7c3; --fade:#71809f;
-  --line:#1b2539; --line2:#29364e;
+  --bg:#000000; --surf:#0f0f11; --surf2:#19191c; --surf3:#232327;
+  --tx:#f2f2f2; --mut:#a0a0a8; --fade:#70707a;
+  --line:#222226; --line2:#303035;
 
-  --pri:#f0b84a; --pri-2:#f6cd78; --on-pri:#1a1405; --pri-soft:#2a2414;
-  --gold:#f0b84a; --gold-2:#f0b84a; --gold-soft:#2a2414; --on-gold:#1a1405;
-  --hero:#111a33; --hero-2:#17223f; --hero-mut:#a7b0c9;
+  --pri:#ff6b57; --pri-2:#ff8573; --on-pri:#1d0905; --pri-soft:#2e120d;
+  --gold:#ff8473; --gold-2:#ff6b57; --gold-soft:#2e120d; --on-gold:#1d0905;
+  --hero:#1c1011; --hero-2:#261617; --hero-tx:#f6ece9; --hero-mut:#c2a7a1; --hero-line:rgba(255,255,255,.10);
+  --hero-glass:rgba(255,255,255,.07); --hero-hatch:rgba(255,255,255,.12);
+  --logo-bg:#19191c; --logo-line:#2a2a2e; --logo-tx:#f2f2f2; --logo-num:#ff6b57;
 
-  --sR:#7aa7ff; --sL:#4fd1bf; --sW:#f2b443; --sS:#ff8a7a;
-  --sR-ink:#9dbdff; --sL-ink:#74dccd; --sW-ink:#f6c86e; --sS-ink:#ffa598;
+  --sR:#7aa7ff; --sL:#4fd1bf; --sW:#f2b443; --sS:#b49bff;
+  --sR-ink:#9dbdff; --sL-ink:#74dccd; --sW-ink:#f6c86e; --sS-ink:#c9b8ff;
 
   --ok:#4ed39a; --ok-soft:#0d2a20; --bad:#ef8a76; --bad-soft:#2d1512; --warn:#f6c46b; --warn-soft:#3a2a0e;
   --focus:#7aa7ff;
@@ -67,6 +79,11 @@
   --sh:0 14px 34px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.35);
   --sh-lg:0 22px 50px rgba(0,0,0,.6);
 }
+/* night options */
+:root[data-theme="dark"][data-night="blue"]{--bg:#0b1020; --surf:#131a2e; --surf2:#1b2340; --surf3:#222c4d; --line:#232d4a; --line2:#2f3a5c;
+  --tx:#eef1f8; --mut:#a3abc2; --fade:#727d99; --hero:#1e2440; --hero-mut:#b4bcd2; --logo-bg:#1b2340; --logo-line:#2a355a}
+:root[data-theme="dark"][data-night="graphite"]{--bg:#121316; --surf:#1b1d22; --surf2:#24272e; --surf3:#2c3038; --line:#2d3038; --line2:#3a3e48;
+  --tx:#ecebe7; --mut:#a6a6a0; --fade:#7a7a80; --hero:#2a1d1c; --logo-bg:#24272e; --logo-line:#33363f}
 
 /* section helpers: put .cR/.cL/.cW/.cS on any element to get --sc / --sc-ink */
 .cR{--sc:var(--sR);--sc-ink:var(--sR-ink)}

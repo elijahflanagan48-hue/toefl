@@ -6,10 +6,17 @@ export const pref = {
   set(key, val) { try { localStorage.setItem(K + key, JSON.stringify(val)); } catch (e) { /* private mode etc. */ } }
 };
 
+/* day themes: grey (default «Светлая»), white, ink (dark hero card), paper; night: oled (default «Чёрная»), blue, graphite */
+export const DAY_THEMES = [['grey', 'Светлая', '#f3f5fa', '#fde8e2'], ['white', 'Белая', '#ffffff', '#fde8e2'], ['ink', 'Чернильная', '#f3f5fa', '#16213f'], ['paper', 'Бумага', '#f6f1e7', '#fde8e2']];
+export const NIGHT_THEMES = [['oled', 'Чёрная', '#000000', '#19191c'], ['blue', 'Синяя', '#0b1020', '#1b2340'], ['graphite', 'Графит', '#121316', '#24272e']];
 export function applyTheme(mode = pref.get('themeMode', 'auto')) {
   const dark = mode === 'dark' || (mode === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
-  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  const day = pref.get('themeDay', 'grey'), night = pref.get('themeNight', 'oled');
+  const h = document.documentElement;
+  h.dataset.theme = dark ? 'dark' : 'light';
+  if (day === 'grey') delete h.dataset.day; else h.dataset.day = day;
+  if (night === 'oled') delete h.dataset.night; else h.dataset.night = night;
   try { localStorage.setItem('nt.theme', mode); } catch (e) {}
   const m = document.querySelector('meta[name="theme-color"]');
-  if (m) m.content = dark ? '#070b16' : '#16213f';
+  if (m) m.content = dark ? (NIGHT_THEMES.find(t => t[0] === night) || NIGHT_THEMES[0])[2] : (DAY_THEMES.find(t => t[0] === day) || DAY_THEMES[0])[2];
 }

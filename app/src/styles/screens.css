@@ -18,7 +18,7 @@
 .today-hero .goalbox{text-align:right}
 .today-hero .goalbox b{display:block;font-size:28px;color:var(--hero-tx);line-height:1.1}
 .hfoot{display:flex;align-items:center;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--hero-line);font-size:13.5px;color:var(--hero-mut)}
-.hfoot .pillv{display:inline-flex;align-items:baseline;gap:6px;white-space:nowrap;flex:none;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.09);color:var(--hero-tx);font-weight:650}
+.hfoot .pillv{display:inline-flex;align-items:baseline;gap:6px;white-space:nowrap;flex:none;padding:5px 12px;border-radius:999px;background:var(--hero-glass);color:var(--hero-tx);font-weight:650}
 .hfoot .pillv b{font-size:18px;color:var(--gold-2)}
 .hfoot .gap{margin-left:auto}.hfoot .gap b{color:var(--hero-tx)}
 .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
@@ -111,7 +111,7 @@
 .mock-hero h2{font-size:22px;letter-spacing:-.02em;margin:4px 0 16px;line-height:1.2}
 .flow{display:flex;flex-direction:column;gap:6px}
 .flow .arr{display:none;color:var(--hero-mut)}
-.fstep{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--hero-line)}
+.fstep{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:var(--hero-glass);border:1px solid var(--hero-line)}
 .fstep b{font-size:15px}
 .fstep span{margin-left:auto;font-size:12.5px;color:var(--hero-mut);font-weight:600}
 .fstep.off{opacity:.5;border-style:dashed}
@@ -169,7 +169,7 @@
 .qb .qn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .qb b{text-align:right;font-family:var(--ffd)}
 .errbook{display:flex;align-items:center;gap:14px;color:var(--tx)!important}
-.errbook .eb-n{font-size:40px;font-weight:700;color:var(--sS);line-height:1}
+.errbook .eb-n{font-size:40px;font-weight:700;color:var(--bad);line-height:1}
 .errbook .t{flex:1}
 @media (min-width:960px){
   .g-prog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;align-items:start}
@@ -299,7 +299,7 @@ body.authing .app{max-width:none;padding:0;margin:0}
 .auth{min-height:100vh;display:grid;grid-template-columns:1fr}
 .auth-card{width:100%;max-width:440px;margin:0 auto;padding:calc(36px + env(safe-area-inset-top)) 20px 40px;display:flex;flex-direction:column}
 .auth-brand{display:flex;align-items:center;gap:11px;margin-bottom:34px}
-.auth-brand .mk{width:42px;height:42px;border-radius:12px;background:var(--hero);display:flex;align-items:center;justify-content:center}
+.auth-brand .mk{width:46px;height:46px;border-radius:12px;background:var(--logo-bg);border:1px solid var(--logo-line);box-sizing:border-box;display:flex;align-items:center;justify-content:center}
 .auth-brand b{display:block;font-family:var(--ffd);font-size:18px}
 .auth-brand span{display:block;font-size:11.5px;color:var(--fade);font-weight:650;letter-spacing:.04em;text-transform:uppercase}
 .auth h1{font-size:30px;letter-spacing:-.025em;margin-bottom:6px}
@@ -318,7 +318,7 @@ body.authing .app{max-width:none;padding:0;margin:0}
   .as-k{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-2)}
   .auth-side p{font-size:30px;line-height:1.2;letter-spacing:-.02em;margin:14px 0 30px}
   .as-scale{display:flex;align-items:flex-end;gap:10px;height:100px}
-  .as-scale i{width:34px;border-radius:8px 8px 3px 3px;background:rgba(255,255,255,.16)}
+  .as-scale i{width:34px;border-radius:8px 8px 3px 3px;background:var(--hero-hatch)}
   .as-scale i.g{background:var(--gold-2)}
 }
 .skel{height:120px;border-radius:var(--r);background:linear-gradient(90deg,var(--surf2),var(--surf3),var(--surf2));background-size:200% 100%;animation:sk 1.2s linear infinite;margin-top:12px}
@@ -436,3 +436,15 @@ a.qb{color:inherit!important}
 .hm4 .sc i{font-style:normal;opacity:.6;margin-right:4px;font-weight:700}
 .pv-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
 .hm4 .sc{height:24px;min-width:0}
+
+/* theme pickers (Профиль → Оформление) */
+.thsw{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.thsw button{display:flex;flex-direction:column;gap:7px;padding:7px 7px 9px;border-radius:14px;border:2px solid var(--line);background:var(--surf);color:var(--tx);font:650 13px var(--ff);cursor:pointer;text-align:left}
+.thsw button.on{border-color:var(--tx)}
+.thsw i{display:flex;flex-direction:column;gap:5px;height:52px;border-radius:9px;padding:8px;box-sizing:border-box;border:1px solid rgba(127,127,127,.18)}
+.thsw i b{height:18px;border-radius:5px}
+.thsw i s{width:22px;height:6px;border-radius:3px;background:var(--gold-2)}
+/* «TOEFL / by NOEON» lock-up */
+.brand div span,.auth-brand div span{letter-spacing:.18em;font-size:10.5px}
+.brand .mk,.auth-brand .mk{text-transform:none;letter-spacing:0}
+.brand .mk{width:42px;height:42px}

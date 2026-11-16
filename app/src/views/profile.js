@@ -4,7 +4,7 @@ import { isLive, isDemo, hasApi, session, loadMe } from '../lib/api.js';
 import { ic } from '../lib/icons.js';
 import { band, cefr, esc } from '../lib/util.js';
 import { hdr, on, toast, role, modal, closeModal } from '../lib/ui.js';
-import { pref, applyTheme } from '../lib/store.js';
+import { pref, applyTheme, DAY_THEMES, NIGHT_THEMES } from '../lib/store.js';
 
 const rerender = () => window.dispatchEvent(new Event('hashchange'));
 const inviteLink = code => location.href.split('#')[0] + '#/join?code=' + encodeURIComponent(code);
@@ -19,6 +19,8 @@ function installBlock() {
 }
 on('install', async () => { const e = window.__installEvt; if (!e) return; window.__installEvt = null; e.prompt(); try { await e.userChoice; } catch (x) {} rerender(); });
 on('theme-mode', el => { pref.set('themeMode', el.dataset.v); applyTheme(el.dataset.v); rerender(); });
+on('theme-day', el => { pref.set('themeDay', el.dataset.v); if (pref.get('themeMode', 'auto') === 'dark') pref.set('themeMode', 'light'); applyTheme(); rerender(); });
+on('theme-night', el => { pref.set('themeNight', el.dataset.v); if (pref.get('themeMode', 'auto') === 'light') pref.set('themeMode', 'dark'); applyTheme(); rerender(); });
 on('role', el => { pref.set('role', el.dataset.v); location.hash = el.dataset.v === 'teacher' ? '#/t/home' : '#/today'; });
 on('target', async el => {
   const cur = isLive() ? session.user.target ?? 4.5 : pref.get('target', demoMe.target);
@@ -96,7 +98,11 @@ export default async function profile() {
       <div class="lbl">Оформление</div>
       <div class="seg" role="radiogroup">${[['auto', 'Авто', 'auto'], ['light', 'Светлая', 'sun'], ['dark', 'Тёмная', 'moon']].map(([v, l, i]) =>
         `<button class="${mode === v ? 'on' : ''}" data-act="theme-mode" data-v="${v}" role="radio" aria-checked="${mode === v}">${ic(i, 17)}${l}</button>`).join('')}</div>
-      <p class="fade small" style="margin:8px 2px 0">«Авто» следует за настройкой системы: днём светлая, ночью тёмная.</p>
+      <p class="fade small" style="margin:8px 2px 0">«Авто» следует за настройкой системы: днём дневная тема, вечером ночная.</p>
+      <div class="lbl">Дневная тема</div>
+      <div class="thsw" role="radiogroup" aria-label="Дневная тема">${DAY_THEMES.map(([v, l, bg, hero]) => `<button class="${pref.get('themeDay', 'grey') === v ? 'on' : ''}" data-act="theme-day" data-v="${v}" role="radio" aria-checked="${pref.get('themeDay', 'grey') === v}"><i style="background:${bg}"><b style="background:${hero}"></b><s></s></i>${l}</button>`).join('')}</div>
+      <div class="lbl">Ночная тема</div>
+      <div class="thsw" role="radiogroup" aria-label="Ночная тема">${NIGHT_THEMES.map(([v, l, bg, card]) => `<button class="${pref.get('themeNight', 'oled') === v ? 'on' : ''}" data-act="theme-night" data-v="${v}" role="radio" aria-checked="${pref.get('themeNight', 'oled') === v}"><i style="background:${bg}"><b style="background:${card}"></b><s></s></i>${l}</button>`).join('')}</div>
       ${installBlock()}
       ${isDemo() ? `<div class="lbl">Демо-режим</div>
       <div class="seg" role="radiogroup">${[['student', 'Ученик'], ['teacher', 'Учитель']].map(([v, l]) =>

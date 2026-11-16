@@ -84,7 +84,7 @@ function renderNav(path) {
     if (a.dataset.p === 't/review') { let b = a.querySelector('.pcnt'); if (reviewCnt) { if (!b) { b = document.createElement('span'); b.className = 'pcnt'; a.appendChild(b); } b.textContent = reviewCnt > 99 ? '99+' : reviewCnt; } else b?.remove(); }
   });
   document.getElementById('rail').innerHTML = `
-    <div class="brand"><span class="mk">${mark(24)}</span><b>NOEON TOEFL</b></div>
+    <div class="brand"><span class="mk">${mark(32)}</span><div><b>TOEFL</b><span>by NOEON</span></div></div>
     <nav class="nav">${items.map(([p, i, l]) => `<a class="tab ${p === active ? 'on' : ''}" href="#/${p}">${ic(i, 21)}${l}${p === 't/review' && reviewCnt ? `<span class="cnt">${reviewCnt}</span>` : ''}</a>`).join('')}</nav>
     <div class="foot">
       ${isDemo() && hasApi() ? `<a class="railcta" href="#/login">${ic('user', 19)}<div><b>Демо-режим</b><span>войти в аккаунт</span></div></a>`

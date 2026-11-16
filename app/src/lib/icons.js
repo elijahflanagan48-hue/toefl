@@ -46,11 +46,7 @@ const P = {
 export const ic = (name, size = 22, w = 1.9) =>
   `<svg class="i" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${P[name] || P.help}"/></svg>`;
 
-// NOEON TOEFL mark: a 1–6 ladder of six rising bars, top bar in gold.
-export const mark = (s = 22) => {
-  const bars = [0, 1, 2, 3, 4, 5].map(i => {
-    const h = 4 + i * 2.6, x = 2 + i * 3.4;
-    return `<rect x="${x.toFixed(1)}" y="${(20 - h).toFixed(1)}" width="2.3" height="${h.toFixed(1)}" rx="1.1" fill="${i === 5 ? '#f0b84a' : 'rgba(246,242,232,.82)'}"/>`;
-  }).join('');
-  return `<svg width="${s}" height="${s}" viewBox="0 0 24 24" aria-hidden="true">${bars}</svg>`;
-};
+// NOEON TOEFL mark «Tf»: like a periodic-table cell — symbol Tf and «atomic number» 6.0, the top band of the 2026 scale.
+// The tile around it (cream / dark) comes from CSS (--logo-bg); colours follow the theme via --logo-tx / --logo-num.
+export const mark = (s = 22) =>
+  `<svg width="${s}" height="${s}" viewBox="0 0 48 48" aria-hidden="true"><text x="6" y="15" font-family="MadeforD, sans-serif" font-weight="700" font-size="10" style="fill:var(--logo-num)">6.0</text><text x="24" y="39" text-anchor="middle" font-family="MadeforD, sans-serif" font-weight="800" font-size="27" letter-spacing="-0.5" style="fill:var(--logo-tx)">Tf</text></svg>`;

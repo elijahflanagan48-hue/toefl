@@ -5,7 +5,7 @@ body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--ff);font-si
 button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0}
 input,textarea,select{font:inherit;font-size:16px;color:inherit}
 a{color:var(--pri);text-decoration:none}
-:root[data-theme="dark"] a:where(:not(.btn)){color:var(--gold)}
+:root[data-theme="dark"] a:where(:not(.btn)){color:var(--tx)}
 a.btn{color:var(--tx)}
 ::selection{background:rgba(240,184,74,.35)}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:6px}
@@ -31,7 +31,7 @@ p{margin:0}
   transition:transform .3s var(--ease),background-color .18s ease,color .18s ease;position:relative}
 .ic:hover{color:var(--tx);background:var(--surf2)}
 .ic:active{transform:scale(.94)}
-.ic .badge{position:absolute;top:7px;right:7px;width:8px;height:8px;border-radius:50%;background:var(--sS);box-shadow:0 0 0 2px var(--bg)}
+.ic .badge{position:absolute;top:7px;right:7px;width:8px;height:8px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 0 2px var(--bg)}
 
 /* section label */
 .lbl{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:22px 2px 9px;
@@ -51,7 +51,7 @@ p{margin:0}
 .pill .tab.on{background:var(--pri);color:var(--on-pri);padding:0 16px 0 13px}
 .pill .tab.on .tl{display:inline}
 .pill .tab:not(.on):active{background:var(--surf2)}
-.pill .tab .dotb{width:7px;height:7px;border-radius:50%;background:var(--sS);margin-left:-6px;margin-top:-16px}
+.pill .tab .dotb{width:7px;height:7px;border-radius:50%;background:var(--gold-2);margin-left:-6px;margin-top:-16px}
 @media (max-width:370px){.pill .tab{padding:0 11px}.pill .tab.on{padding:0 13px 0 11px}}
 
 /* ---------- desktop: left rail ---------- */
@@ -64,7 +64,7 @@ p{margin:0}
   .hdr{padding-top:26px}
 }
 .brand{display:flex;align-items:center;gap:11px;padding:2px 8px 22px}
-.brand .mk{width:38px;height:38px;border-radius:11px;background:var(--hero);display:flex;align-items:center;justify-content:center;flex:none}
+.brand .mk{width:40px;height:40px;border-radius:10px;background:var(--logo-bg);border:1px solid var(--logo-line);box-sizing:border-box;display:flex;align-items:center;justify-content:center;flex:none}
 .brand .mk svg{display:block}
 .brand b{display:block;font-family:var(--ffd);font-size:17px;letter-spacing:-.01em;line-height:1.1}
 .brand span{display:block;font-size:11.5px;color:var(--fade);font-weight:650;letter-spacing:.04em;text-transform:uppercase}
@@ -75,7 +75,7 @@ p{margin:0}
 .rail .tab.on{background:var(--pri-soft);color:var(--tx)}
 .rail .tab.on .i{color:var(--pri)}
 :root[data-theme="dark"] .rail .tab.on .i{color:var(--gold)}
-.rail .tab .cnt{margin-left:auto;font-size:12px;font-weight:700;background:var(--sS);color:#fff;border-radius:999px;padding:1px 7px}
+.rail .tab .cnt{margin-left:auto;font-size:12px;font-weight:700;background:var(--gold-2);color:#fff;border-radius:999px;padding:1px 7px}
 .rail .foot{margin-top:auto;display:flex;flex-direction:column;gap:10px}
 .rail .who{display:flex;align-items:center;gap:10px;padding:10px;border-radius:14px;background:var(--surf2)}
 .rail .who .av{width:34px;height:34px;font-size:14px}
@@ -106,7 +106,7 @@ p{margin:0}
 
 /* review counter on the phone menu; profile button in the header for teachers on phones (no profile tab) */
 .pill .tab{position:relative}
-.pill .tab .pcnt{position:absolute;top:3px;right:2px;min-width:17px;height:17px;padding:0 4px;box-sizing:border-box;border-radius:9px;background:var(--sS);color:#fff;font:700 10.5px/17px var(--ff);text-align:center;box-shadow:0 0 0 2px var(--surf)}
+.pill .tab .pcnt{position:absolute;top:3px;right:2px;min-width:17px;height:17px;padding:0 4px;box-sizing:border-box;border-radius:9px;background:var(--gold-2);color:#fff;font:700 10.5px/17px var(--ff);text-align:center;box-shadow:0 0 0 2px var(--surf)}
 .pill .tab.on .pcnt{position:static;margin-left:2px;box-shadow:none}
 .rail a.who{color:var(--tx)}
 .rail a.who:hover,.rail a.who.on{background:var(--pri-soft)}

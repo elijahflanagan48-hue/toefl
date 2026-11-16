@@ -1,6 +1,6 @@
 /* NOEON TOEFL service worker: the app shell works offline; data and audio always come from the network.
    Bump VERSION to drop old caches. Only same-origin GET requests are touched; API calls (other origin) never are. */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL = 'shell-' + VERSION, ASSETS = 'assets-' + VERSION;
 
 self.addEventListener('install', e => {
