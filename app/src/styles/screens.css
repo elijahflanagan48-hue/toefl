@@ -448,3 +448,62 @@ a.qb{color:inherit!important}
 .brand div span,.auth-brand div span{letter-spacing:.18em;font-size:10.5px}
 .brand .mk,.auth-brand .mk{text-transform:none;letter-spacing:0}
 .brand .mk{width:42px;height:42px}
+
+/* ---- «Сегодня»: readiness ring (four sections on the 1–6 scale, days to the exam inside) ---- */
+.today-hero .rd{display:flex;align-items:center;gap:22px}
+.rring{position:relative;width:168px;height:168px;flex:none}
+.rring svg{width:100%;height:100%;display:block}
+.rring circle{fill:none;stroke-width:15;stroke-linecap:round}
+.rring .trk{stroke:var(--hero-hatch)}
+.rring .arc{stroke:var(--sc);animation:arcin .9s var(--ease) both}
+@keyframes arcin{from{stroke-dasharray:0 999}}
+.rring .mid{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 30px}
+.rring .mid b{font-size:44px;line-height:1;color:var(--gold-2);letter-spacing:-.03em}
+.rring .mid span{font-size:12.5px;line-height:1.25;color:var(--hero-mut);font-weight:600;margin-top:3px}
+.rring .nodate2{display:flex;flex-direction:column;align-items:center;color:inherit!important}
+.today-hero .rtx{display:flex;flex-direction:column;gap:6px;min-width:0}
+.today-hero .rtx .rt{font-family:var(--ffd);font-size:21px;line-height:1.2;color:var(--hero-tx)}
+.today-hero .rtx .rt .serif{color:var(--gold-2)}
+.today-hero .rtx .rs{font-size:14px;line-height:1.45;color:var(--hero-mut)}
+.today-hero .rtx .rs b{color:var(--hero-tx)}
+.rchips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:18px;padding-top:14px;border-top:1px solid var(--hero-line)}
+.rchips>div{display:flex;flex-direction:column;align-items:center;gap:3px}
+.rchips span{display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;color:var(--hero-mut)}
+.rchips .dot{width:7px;height:7px;border-radius:50%;background:var(--sc)}
+.rchips b{font-size:21px;color:var(--hero-tx)}.rchips b.na{color:var(--hero-mut)}
+@media (max-width:520px){
+  .rring{width:132px;height:132px}.rring .mid b{font-size:34px}.rring .mid{padding:0 22px}.rring .mid span{font-size:11.5px}
+  .today-hero .rd{gap:16px}.today-hero .rtx .rt{font-size:18px}.today-hero .rtx .rs{font-size:13px}
+  .rchips span{font-size:10.5px}.rchips b{font-size:19px}
+}
+
+/* ---- Тренировка: tinted section header with the forecast; mode switch sits on its edge ---- */
+.sechead{background:color-mix(in srgb,var(--sc) 12%,var(--surf));border-radius:var(--r-xl);padding:22px 22px 0;margin-bottom:34px;display:flex;flex-direction:column}
+.sechead .sh-top{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding-bottom:20px}
+.sechead h2{font-size:34px;letter-spacing:-.03em;line-height:1;color:var(--sc-ink)}
+.sechead p{font-size:14px;margin-top:8px;color:var(--mut);max-width:520px}
+.sechead .sh-f{text-align:right;flex:none}
+.sechead .sh-f b{display:block;font-size:34px;line-height:1;color:var(--tx)}.sechead .sh-f b.na{color:var(--fade)}
+.sechead .sh-f span{display:block;font-size:12.5px;font-weight:650;color:var(--gold);margin-top:6px}
+.sechead .modeseg{margin-bottom:-22px;width:auto;align-self:stretch;background:var(--surf);box-shadow:var(--sh);border:1px solid var(--line)}
+.sechead+.modehint{margin-top:0}
+@media (min-width:960px){.sechead .modeseg{align-self:flex-start;width:420px}}
+@media (max-width:520px){.sechead{padding:18px 16px 0}.sechead h2{font-size:28px}.sechead .sh-f b{font-size:28px}}
+
+/* ---- итог тренировки: score + section forecast on the 1–6 scale ---- */
+.rs-hero .rs-top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.rs-hero .rs-top>div:first-child{flex:1 1 280px;min-width:0}
+.rs-hero .xr-n small{font-size:26px}
+.rs-hero p{margin-top:8px;font-size:14.5px;line-height:1.5}
+.rs-scale{display:flex;align-items:flex-end;gap:8px;flex:none}
+.rs-b{display:flex;flex-direction:column;align-items:center;gap:5px;width:30px}
+.rs-col{width:100%;border-radius:7px;background:var(--x-line,#e3e8f2);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;position:relative}
+.rs-col i{display:block;background:var(--sc)}
+.rs-b span{font-size:12px;font-weight:700;color:var(--x-mut,#56637f)}
+.rs-b.goal .rs-col{outline:2px dashed #e0503f;outline-offset:2px}
+.rs-b.goal span{color:#c23c2b}
+.rs-rep{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:16px;padding-top:14px;border-top:1px solid var(--x-line,#e3e8f2)}
+.rs-rep b{font-size:14px;margin-right:4px}
+.xr-ft .btn.pri .i{margin-left:2px}
+.sechead .sh-f span.na{color:var(--fade)}
+.rring .mid span{max-width:92px}

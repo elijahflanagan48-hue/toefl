@@ -65,7 +65,7 @@ async function placeAll(p, slots, { wrong = false, dragFirst = false } = {}) {
     if (n === 1) await p.screenshot({ path: OUT + '/4-wrong.png' });
     await p.click('[data-act="pr-next"]'); await p.waitForTimeout(400);
   }
-  ok((await p.textContent('.xr-n')).replace(/\s/g, '') === '9/10', 'learn results 9/10');
+  ok((await p.textContent('.xr-n')).replace(/\s/g, '').replace('из', '/') === '9/10', 'learn results 9/10');
   await p.screenshot({ path: OUT + '/5-results.png', fullPage: true });
 
   // mistakes on Writing
@@ -92,7 +92,7 @@ async function placeAll(p, slots, { wrong = false, dragFirst = false } = {}) {
     await p.click('[data-act="pr-next"]'); await p.waitForTimeout(200);
   }
   await p.click('[data-act="pr-finish"]'); await p.waitForTimeout(1500);
-  ok((await p.textContent('.xr-n')).replace(/\s/g, '') === `${t.length}/${t.length}`, 'timed all correct');
+  ok((await p.textContent('.xr-n')).replace(/\s/g, '').replace('из', '/') === `${t.length}/${t.length}`, 'timed all correct');
 
   // mobile
   const m = await mk(390, 844);

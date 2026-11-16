@@ -3,6 +3,7 @@
 // mistakes (repeat questions whose latest answer was wrong). Also question-type trainers (#/practice/types?type=Inference).
 import * as src from '../data/source.js';
 import { ic } from '../lib/icons.js';
+import { resultHero } from '../lib/scale.js';
 import { esc, mmss } from '../lib/util.js';
 import { on, modal, closeModal, toast } from '../lib/ui.js';
 import { activeFlow } from '../lib/mockstate.js';
@@ -293,13 +294,12 @@ function renderResults(root) {
   const wrong = R.filter(r => !r.correct);
   root.innerHTML = `<div class="exam xres practice-res"><div class="xbar"><div class="xb-l"><a class="xexit" href="#/train/${P.section}" aria-label="Закрыть">${ic('x', 18)}</a><span class="xsec">${esc(P.title)}<span> · итоги</span></span></div></div>
     <div class="xres-in">
-      <div class="xres-hero"><div class="k">${MODE[P.mode] || ''}</div><div class="xr-n serif">${got}<small>/${R.length}</small></div>
-        <p class="mut">${got === R.length ? 'Без ошибок.' : `Ошибок: ${wrong.length}. Они попадут в «Мои ошибки» — вернёмся к ним позже.`}</p></div>
+      ${resultHero({ k: P.section, mode: MODE[P.mode], got, total: R.length, fc: P.fc, byType })}
       <div class="xr-grid">
         <div class="card pad"><div class="nm">По типам вопросов</div>${Object.entries(byType).map(([t, [a, b]]) => `<div class="qb cR"><span class="qn">${esc(t)}</span><div class="bar"><i style="width:${a / b * 100}%;${a / b < .6 ? 'background:var(--sS)' : ''}"></i></div><b>${a}/${b}</b></div>`).join('')}</div>
         <div class="card pad"><div class="nm">Разбор ошибок</div>${wrong.length ? wrong.slice(0, 12).map(r => `<div class="wr"><span class="chip">${esc(r.qtype || 'Complete the Words')}</span>${r.label ? `<b>${esc(r.label)}</b>` : ''}<p>${esc(r.explain || '')}</p></div>`).join('') : '<p class="mut">Ошибок нет — отличный результат.</p>'}</div>
       </div>
-      <div class="xr-ft"><a class="btn" href="#/train/${P.section}">К тренировке</a>${wrong.length ? `<a class="btn" href="#/practice/mistakes?mode=mistakes&sec=${P.section}">Мои ошибки</a>` : ''}<button class="btn pri" data-act="pr-again">${ic('repeat', 17)} Ещё подход</button></div>
+      <div class="xr-ft">${wrong.length ? `<a class="btn" href="#/practice/mistakes?mode=mistakes&sec=${P.section}">Разобрать ошибки</a>` : ''}<button class="btn" data-act="pr-again">${ic('repeat', 17)} Ещё подход</button><a class="btn pri" href="#/today">Дальше по маршруту ${ic('right', 17)}</a></div>
     </div></div>`;
 }
 
@@ -355,6 +355,7 @@ async function finish() {
       P.results = P.log;
     }
   } catch (e) { toast('Не сохранилось: ' + e.message); P.results = P.log; }
+  try { P.fc = await src.forecastNow(); } catch (e) { P.fc = null; }
   P.busy = false;
   render(); window.scrollTo(0, 0);
 }

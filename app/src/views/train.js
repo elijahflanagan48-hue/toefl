@@ -49,9 +49,11 @@ export default async function train(params) {
   const c = catalog[k], mode = MODES.some(m => m[0] === pref.get('trainMode', 'learn')) ? pref.get('trainMode', 'learn') : 'learn';
   let st = null, mist = null;
   const banked = true;
+  let fc = null;
   if (banked && isLive()) {
-    try { [st, mist] = await Promise.all([src.stats(k), src.mistakes(k)]); } catch (e) { /* show the page without stats */ }
-  }
+    try { [st, mist, fc] = await Promise.all([src.stats(k), src.mistakes(k), src.forecastNow().catch(() => null)]); } catch (e) { /* show the page without stats */ }
+  } else fc = await src.forecastNow();
+  const fv = fc?.forecast?.[k] ?? null, tgt = fc?.target ?? 4.5;
   const mistByTask = {};
   (mist?.items || []).forEach(x => { mistByTask[x.task] = (mistByTask[x.task] || 0) + x.qs.length; });
 
@@ -79,8 +81,10 @@ export default async function train(params) {
     <div class="g-train">
       <nav class="secrail" aria-label="Секции">${secList}</nav>
       <div class="trainmain c${k}">
-        <div class="trainhead"><div><h2 class="serif">${SEC[k].name}</h2><p class="mut">${c.blurb}</p></div>
-          ${c.soon ? '' : `<div class="seg modeseg" role="tablist">${MODES.map(([v, l]) => `<button class="${mode === v ? 'on' : ''}" data-act="train-mode" data-v="${v}" role="tab" aria-selected="${mode === v}">${l}</button>`).join('')}</div>`}</div>
+        <div class="sechead">
+          <div class="sh-top"><div><h2 class="serif">${SEC[k].name}</h2><p>${c.blurb}</p></div>
+            <div class="sh-f">${fv != null ? `<b class="serif">${band(fv)}</b><span>${fv >= tgt ? 'прогноз · цель есть' : `прогноз · до цели +${band(tgt - fv)}`}</span>` : `<b class="serif na">—</b><span class="na">прогноза пока нет</span>`}</div></div>
+          ${c.soon ? '' : `<div class="seg modeseg" role="tablist">${MODES.map(([v, l]) => `<button class="${mode === v ? 'on' : ''}" data-act="train-mode" data-v="${v}" role="tab" aria-selected="${mode === v}">${l}${v === 'mistakes' && mist?.count ? ` · ${mist.count}` : ''}</button>`).join('')}</div>`}</div>
         ${c.soon ? '' : `<p class="modehint fade">${ic('spark', 15)} ${hintOf(k, mode)}</p>`}
         ${mistNote}
         <div class="tgrid n${c.tasks.length}">${c.tasks.map(t => taskCard(k, t, st, mode, mistByTask[t.id] || 0)).join('')}</div>

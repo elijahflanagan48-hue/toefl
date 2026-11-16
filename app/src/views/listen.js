@@ -5,6 +5,7 @@
 // Also question-type trainers (#/listen/types?type=Inference) and «Мои ошибки» (#/listen/mistakes).
 import * as src from '../data/source.js';
 import { ic } from '../lib/icons.js';
+import { resultHero } from '../lib/scale.js';
 import { esc } from '../lib/util.js';
 import { on, modal, closeModal, toast } from '../lib/ui.js';
 import { activeFlow } from '../lib/mockstate.js';
@@ -156,13 +157,12 @@ function renderResults(root) {
   };
   root.innerHTML = `<div class="exam xres practice-res"><div class="xbar"><div class="xb-l"><a class="xexit" href="#/train/L" aria-label="Закрыть">${ic('x', 18)}</a><span class="xsec">${esc(P.title)}<span> · итоги</span></span></div></div>
     <div class="xres-in">
-      <div class="xres-hero"><div class="k">${MODE[P.mode] || ''}</div><div class="xr-n serif">${got}<small>/${R.length}</small></div>
-        <p class="mut">${got === R.length ? 'Без ошибок.' : `Ошибок: ${wrong.length}. Они попадут в «Мои ошибки» — вернёмся к ним позже.`}</p></div>
+      ${resultHero({ k: 'L', mode: MODE[P.mode], got, total: R.length, fc: P.fc, byType })}
       <div class="xr-grid">
         <div class="card pad"><div class="nm">По типам вопросов</div>${Object.entries(byType).map(([t, [a, b]]) => `<div class="qb cL"><span class="qn">${esc(t)}</span><div class="bar"><i style="width:${a / b * 100}%;${a / b < .6 ? 'background:var(--sS)' : ''}"></i></div><b>${a}/${b}</b></div>`).join('')}</div>
         <div class="card pad"><div class="nm">Разбор вопросов</div>${R.map(row).join('')}</div>
       </div>
-      <div class="xr-ft"><a class="btn" href="#/train/L">К тренировке</a>${wrong.length ? `<a class="btn" href="#/listen/mistakes?mode=mistakes">Мои ошибки</a>` : ''}<button class="btn pri" data-act="ls-again">${ic('repeat', 17)} Ещё подход</button></div>
+      <div class="xr-ft">${wrong.length ? `<a class="btn" href="#/listen/mistakes?mode=mistakes">Разобрать ошибки</a>` : ''}<button class="btn" data-act="ls-again">${ic('repeat', 17)} Ещё подход</button><a class="btn pri" href="#/today">Дальше по маршруту ${ic('right', 17)}</a></div>
     </div></div>`;
 }
 
@@ -219,6 +219,7 @@ async function finish() {
       P.results = P.log;
     }
   } catch (e) { toast('Не сохранилось: ' + e.message); P.results = P.log; }
+  try { P.fc = await src.forecastNow(); } catch (e) { P.fc = null; }
   P.busy = false;
   render(); window.scrollTo(0, 0);
 }

@@ -4,6 +4,19 @@ import { band, cefr, fullBand, secCount, plural, SEC, esc } from '../lib/util.js
 import { hdr } from '../lib/ui.js';
 import { pref } from '../lib/store.js';
 
+/** readiness ring: four arcs (R L W S) filled by each section's forecast on the 1–6 scale; days to the exam in the centre */
+function ring(f, days) {
+  const r = 64, c = 2 * Math.PI * r, seg = c / 4, gap = 11, full = seg - gap;
+  const arcs = ['R', 'L', 'W', 'S'].map((k, i) => {
+    const off = (-i * seg).toFixed(1), v = f[k];
+    return `<circle class="trk" cx="80" cy="80" r="${r}" stroke-dasharray="${full.toFixed(1)} ${c.toFixed(1)}" stroke-dashoffset="${off}"/>`
+      + (v ? `<circle class="arc c${k}" cx="80" cy="80" r="${r}" stroke-dasharray="${(full * Math.min(1, v / 6)).toFixed(1)} ${c.toFixed(1)}" stroke-dashoffset="${off}"/>` : '');
+  }).join('');
+  const mid = days != null ? `<b class="serif">${days}</b><span>${plural(days, 'день', 'дня', 'дней')} до экзамена</span>`
+    : `<a href="#/profile" class="nodate2"><b class="serif">?</b><span>указать дату экзамена</span></a>`;
+  return `<div class="rring"><svg viewBox="0 0 160 160" aria-hidden="true"><g transform="rotate(-86 80 80)">${arcs}</g></svg><div class="mid">${mid}</div></div>`;
+}
+
 export function ladder(f, target) {
   const fr = v => ((v - 1) / 5).toFixed(4);
   return `<div class="ladder">
@@ -41,18 +54,14 @@ export default async function today() {
   const days = me.examDate ? Math.max(0, Math.ceil((new Date(me.examDate) - new Date(new Date().toDateString())) / 864e5)) : null;
   const left = me.plan.reduce((a, p) => a + (p.done ? 0 : p.min), 0);
 
+  const missing = ['R', 'L', 'W', 'S'].filter(k => f[k] == null).map(k => SEC[k].name);
+  const status = ov != null
+    ? `<b class="rt">Общий прогноз <span class="serif">${band(ov)}</span> · ${cefr(ov)}</b><span class="rs">${ov >= me.target ? `Цель <b>${band(me.target)}</b> достигнута — держим уровень.` : `До цели <b>${band(me.target)}</b> осталось <b>+${band(me.target - ov)}</b>.`}</span>`
+    : nSec ? `<b class="rt">${nSec} из 4 секций</b><span class="rs">Нет прогноза: ${missing.join(', ')} — пройдите ${missing.length > 1 ? 'их' : 'её'}, и появится общий балл. Цель <b>${band(me.target)}</b></span>`
+    : `<b class="rt">Пока без прогноза</b><span class="rs">Он появится после первого модуля или проверенной работы. Цель <b>${band(me.target)}</b></span>`;
   const hero = `<section class="hero today-hero on-hero">
-    <div class="th-top">
-      ${days != null ? `<div><div class="k">До экзамена</div>
-        <div class="days"><span class="serif">${days}</span><small>${plural(days, 'день', 'дня', 'дней')} · ${me.examLabel}</small></div></div>`
-        : `<a href="#/profile" class="nodate"><div class="k">Дата экзамена</div><b class="serif">Указать</b></a>`}
-      <div class="goalbox"><div class="k">Цель</div><b class="serif">${band(me.target)}</b></div>
-    </div>
-    ${ladder(f, me.target)}
-    <div class="hfoot">${ov != null ? `<span class="pillv">прогноз <b class="serif">${band(ov)}</b> ${cefr(ov)}</span>
-      <span class="gap">${ov >= me.target ? '<b>цель достигнута</b>' : `до цели <b>+${band(me.target - ov)}</b>`}</span>`
-      : nSec ? `<span class="pillv">прогноз <b class="serif">${nSec}</b> из 4 секций</span><span class="gap">общий балл — когда будут все четыре</span>`
-      : '<span>Прогноз появится после первого модуля или проверенной работы</span>'}</div>
+    <div class="rd">${ring(f, days)}<div class="rtx"><div class="k">Готовность${days != null && me.examLabel ? ` · экзамен ${me.examLabel}` : ''}</div>${status}</div></div>
+    <div class="rchips">${['R', 'L', 'W', 'S'].map(k => `<div class="c${k}"><span><i class="dot"></i>${SEC[k].name}</span><b class="serif ${f[k] == null ? 'na' : ''}">${f[k] == null ? '—' : band(f[k])}</b></div>`).join('')}</div>
   </section>`;
 
   const route = `<div class="lbl">Маршрут на сегодня <b>${me.plan.length} шага · осталось ${left} мин</b></div>

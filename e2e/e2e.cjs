@@ -34,7 +34,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   await s.click('button[type=submit]'); await s.waitForTimeout(1200);
   ok(s.url().includes('#/today'), 'student lands on Today', s.url());
   await s.screenshot({ path: OUT + '/5-student-today-empty.png', fullPage: true });
-  ok((await s.textContent('.hfoot')).includes('Прогноз появится'), 'empty forecast message');
+  ok((await s.textContent('.today-hero .rtx')).includes('Пока без прогноза'), 'empty forecast message');
 
   // student sets target + exam date
   await s.goto(APP + '#/profile'); await s.waitForTimeout(800);
@@ -65,8 +65,8 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   ok(r.ok, 'student writing submitted');
 
   await s.goto(APP + '#/today'); await s.waitForTimeout(1000);
-  const hf = await s.textContent('.hfoot');
-  ok(hf.includes('1 из 4 секций') && !hf.includes('прогноз 6,0'), 'Today: one section is not an overall score (1 of 4)', hf);
+  const hf = await s.textContent('.today-hero');
+  ok(hf.includes('1 из 4 секций') && !hf.includes('Общий прогноз') && (await s.textContent('.rchips')).includes('6,0'), 'Today: ring shows Reading 6,0, one section is not an overall score (1 of 4)', hf);
   await s.screenshot({ path: OUT + '/7-student-today.png', fullPage: true });
 
   // teacher sees student + queue, grades

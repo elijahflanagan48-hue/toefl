@@ -38,6 +38,13 @@ function planFor(f) {
 
 /* small cache for the menu: review count (teacher) and open assignments (student); refreshed at most every 30 s */
 export let lastForecast = null;
+/** current section forecasts and the student's goal (for the section header and the result scale) */
+export async function forecastNow() {
+  if (!isLive()) return { forecast: M.me.forecast, target: M.me.target };
+  const [u, s] = await Promise.all([loadMe(), get('/me/summary')]);
+  lastForecast = s.forecast;
+  return { forecast: s.forecast, target: u.target ?? 4.5 };
+}
 export const navCache = { at: 0, queue: null, tasks: null };
 const taskOf = x => ({ nm: x.title, mock: x.spec?.section === 'M', dueAt: x.due_at || null, due: dueLabel(x.due_at), to: assignLink(x.spec, x.id),
   mt: 'от учителя · ' + (x.spec?.mode === 'timed' || x.spec?.mode === 'exam' || x.spec?.section === 'M' ? 'как на экзамене' : 'учебный режим') });

@@ -53,7 +53,7 @@ const rdl = Object.fromEntries(JSON.parse(fs.readFileSync(C + 'rdl.json')).map(i
     if (scr === 0) await s.screenshot({ path: OUT + '/3-ctw-feedback.png' });
     await s.click('[data-act="pr-next"]'); await s.waitForTimeout(800);
   }
-  ok((await s.textContent('.xr-n')).replace(/\s/g, '') === '19/20', 'CtW results 19/20', await s.textContent('.xr-n'));
+  ok((await s.textContent('.xr-n')).replace(/\s/g, '').replace('из', '/') === '19/20', 'CtW results 19/20', await s.textContent('.xr-n'));
   await s.screenshot({ path: OUT + '/4-ctw-results.png', fullPage: true });
 
   // ---- learn: Academic Passage (one item = 5 questions incl. select / insert)
@@ -77,7 +77,7 @@ const rdl = Object.fromEntries(JSON.parse(fs.readFileSync(C + 'rdl.json')).map(i
     if (Q.insert && !shotIns) { await s.screenshot({ path: OUT + '/6-ap-insert.png' }); shotIns = true; }
     await s.click('[data-act="pr-next"]'); await s.waitForTimeout(600);
   }
-  ok((await s.textContent('.xr-n')).replace(/\s/g, '') === '4/5', 'AP results 4/5');
+  ok((await s.textContent('.xr-n')).replace(/\s/g, '').replace('из', '/') === '4/5', 'AP results 4/5');
 
   // ---- timed: Daily Life (3 items), all correct
   const r3 = s.waitForResponse(r => r.url().includes('/items?') && r.url().includes('task=rdl'));
@@ -93,7 +93,7 @@ const rdl = Object.fromEntries(JSON.parse(fs.readFileSync(C + 'rdl.json')).map(i
     await s.click('[data-act="pr-next"]'); await s.waitForTimeout(250);
   }
   await s.click('[data-act="pr-finish"]'); await s.waitForTimeout(1500);
-  const res = (await s.textContent('.xr-n')).replace(/\s/g, '');
+  const res = (await s.textContent('.xr-n')).replace(/\s/g, '').replace('из', '/');
   ok(res === `${screens.length}/${screens.length}`, 'timed results all correct', res);
 
   // ---- mistakes
