@@ -5,6 +5,7 @@ import { isLive, audioUrl } from '../lib/api.js';
 import { ic } from '../lib/icons.js';
 import { band, esc } from '../lib/util.js';
 import { hdr } from '../lib/ui.js';
+import { pref } from '../lib/store.js';
 import { RUBRIC, CRIT, critLabel, markedHtml, legendHtml, notesHtml, promptBlock, countWords } from '../lib/writing.js';
 
 /** criteria the teacher ticked, grouped as on the review form; old ratings (text keys) are listed flat */
@@ -25,6 +26,7 @@ export default async function work(params) {
   const kind = s.task === 'eml' ? 'email' : s.task === 'dsc' ? 'dsc' : s.task === 'int' ? 'interview' : 'lrp';
   const name = src.TASK_NAMES[s.task] || s.task;
   const marks = rate?.marks || [];
+  if (rate) { const seen = pref.get('seenGraded', []) || []; if (!seen.includes(s.id)) pref.set('seenGraded', [...seen, s.id].slice(-500)); }
   const words = s.words ?? countWords(s.text);
 
   const paper = s.section === 'W' ? `<div class="card pad paper">

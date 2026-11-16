@@ -1,7 +1,8 @@
 import * as src from '../data/source.js';
 import { ic } from '../lib/icons.js';
-import { band, cefr, overallBand, plural, SEC } from '../lib/util.js';
+import { band, cefr, fullBand, secCount, plural, SEC, esc } from '../lib/util.js';
 import { hdr } from '../lib/ui.js';
+import { pref } from '../lib/store.js';
 
 export function ladder(f, target) {
   const fr = v => ((v - 1) / 5).toFixed(4);
@@ -30,13 +31,13 @@ export function weekCard(w, streak, mins) {
       <div class="mt">${streakNote(w, streak)}</div></div></div>
     <div class="days7">${w.map(([d, m, t]) => `<div class="d7 ${t === 'today' ? 'today' : ''} ${m === null ? 'fut' : ''}">
       <div class="col">${m ? Object.entries(m).map(([k, v]) => `<i class="c${k}" style="height:${Math.min(100, v / max * 100)}%"></i>`).join('') : ''}</div>${d}</div>`).join('')}</div>
-    <div class="legend">${['R', 'W', 'S'].map(k => `<span class="c${k}"><i class="dot"></i>${SEC[k].name}</span>`).join('')}</div>
+    <div class="legend">${['R', 'L', 'W', 'S'].map(k => `<span class="c${k}"><i class="dot"></i>${SEC[k].name}</span>`).join('')}</div>
   </div>`;
 }
 
 export default async function today() {
   const me = await src.today();
-  const f = me.forecast, ov = overallBand(Object.values(f));
+  const f = me.forecast, ov = fullBand(f), nSec = secCount(f);
   const days = me.examDate ? Math.max(0, Math.ceil((new Date(me.examDate) - new Date(new Date().toDateString())) / 864e5)) : null;
   const left = me.plan.reduce((a, p) => a + (p.done ? 0 : p.min), 0);
 
@@ -50,6 +51,7 @@ export default async function today() {
     ${ladder(f, me.target)}
     <div class="hfoot">${ov != null ? `<span class="pillv">прогноз <b class="serif">${band(ov)}</b> ${cefr(ov)}</span>
       <span class="gap">${ov >= me.target ? '<b>цель достигнута</b>' : `до цели <b>+${band(me.target - ov)}</b>`}</span>`
+      : nSec ? `<span class="pillv">прогноз <b class="serif">${nSec}</b> из 4 секций</span><span class="gap">общий балл — когда будут все четыре</span>`
       : '<span>Прогноз появится после первого модуля или проверенной работы</span>'}</div>
   </section>`;
 
@@ -59,17 +61,26 @@ export default async function today() {
       <div class="t"><div class="nm">${p.nm}</div><div class="mt">${p.mt} · ${p.min} мин</div></div>
       <span class="go">${p.done ? 'готово' : 'Начать'}</span></a>`).join('')}</div>`;
 
-  const tasks = !me.tasks.length ? '' : `<div class="lbl">От учителя <b>${me.tasks.length}</b></div>
-    ${me.tasks.map((t, i) => `<a class="note" href="${t.to}" style="margin-bottom:8px">${ic('clip', 22)}<div class="t"><div class="nm">${t.nm}</div><div class="mt">${t.mt} · ${t.due}</div></div>${ic('right', 20)}</a>`).join('')}`;
+  const mocksDue = me.tasks.filter(t => t.mock), other = me.tasks.filter(t => !t.mock);
+  const mockCard = mocksDue.map(t => `<a class="mockdue on-hero" href="${t.to}">${ic('timer', 24)}<div class="t"><div class="k">Учитель назначил пробник</div><div class="nm">${esc(t.nm)}</div><div class="mt">Reading → Listening → Writing → Speaking · ${t.due}</div></div><span class="btn gold sm">${ic('play', 16)} Открыть</span></a>`).join('');
+  const tasks = !other.length ? '' : `<div class="lbl">От учителя <b>${other.length}</b></div>
+    ${other.map(t => `<a class="note" href="${t.to}" style="margin-bottom:8px">${ic('clip', 22)}<div class="t"><div class="nm">${esc(t.nm)}</div><div class="mt">${t.mt} · ${t.due}</div></div>${ic('right', 20)}</a>`).join('')}`;
+
+  // bell: dot only when the teacher has checked a work the student has not opened yet; tap opens that work
+  const graded = me.graded || [];
+  let seen = pref.get('seenGraded', null);
+  if (seen == null) { seen = graded.map(g => g.id); pref.set('seenGraded', seen); }
+  const fresh = graded.filter(g => !seen.includes(g.id));
+  const bell = `<a class="ic" href="${fresh.length ? '#/work/' + fresh[0].id : '#/progress'}" aria-label="${fresh.length ? 'Новая оценка учителя' : 'Мои работы'}" title="${fresh.length ? `Учитель проверил: ${esc(fresh[0].nm)}` : 'Мои работы'}">${ic('bell', 21)}${fresh.length ? '<span class="badge"></span>' : ''}</a>`;
 
   return {
     title: 'Сегодня', wide: true,
-    html: `${hdr('Привет, ' + me.name, { right: `<button class="ic" data-act="notif" aria-label="Уведомления">${ic('bell', 21)}<span class="badge"></span></button>` })}
+    html: `${hdr('Привет, ' + me.name, { right: bell })}
       <div class="g-today">
-        <div class="col-a">${hero}<div class="lbl">Эта неделя <b>${me.weekMin} мин</b></div>${weekCard(me.week, me.streak, me.weekMin)}</div>
-        <div class="col-b">${route}${tasks}
-          <div class="lbl">Быстрый старт</div>
-          <div class="quick">${Object.values(SEC).map(s => `<a class="qk c${s.k}" href="#/train/${s.k}"><span class="sq">${ic(s.ic, 19)}</span><span>${s.name}</span></a>`).join('')}</div>
+        <div class="col-a"><div class="tb tb-hero">${hero}</div><div class="tb tb-week"><div class="lbl">Эта неделя <b>${me.weekMin} мин</b></div>${weekCard(me.week, me.streak, me.weekMin)}</div></div>
+        <div class="col-b">${mockCard ? `<div class="tb tb-mock">${mockCard}</div>` : ''}<div class="tb tb-route">${route}</div>${tasks ? `<div class="tb tb-tasks">${tasks}</div>` : ''}
+          <div class="tb tb-quick"><div class="lbl">Быстрый старт</div>
+          <div class="quick">${Object.values(SEC).map(s => `<a class="qk c${s.k}" href="#/train/${s.k}"><span class="sq">${ic(s.ic, 19)}</span><span>${s.name}</span></a>`).join('')}</div></div>
         </div>
       </div>`
   };

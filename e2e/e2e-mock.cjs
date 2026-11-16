@@ -37,7 +37,7 @@ const hash = p => p.evaluate(() => location.hash);
   await fetch(API + '/teacher/assignments', { method: 'POST', headers: { Authorization: 'Bearer ' + ttok, 'Content-Type': 'application/json' }, body: JSON.stringify({ title: 'Полный пробник 1', student_id: sid, spec: { section: 'M', task: 'T1' } }) });
 
   // start
-  await s.goto(APP + '#/progress'); await s.waitForTimeout(500); await s.goto(APP + '#/mock'); await s.waitForTimeout(1000);
+  await s.goto(APP + '#/progress'); await s.waitForTimeout(3200); await s.goto(APP + '#/mock'); await s.waitForTimeout(1000);
   ok((await s.textContent('#app')).includes('Listening') && !(await s.textContent('#app')).includes('после озвучки'), 'mock page: Listening is no longer «after voicing»');
   await s.click('[data-act="mock-start"]'); await s.waitForTimeout(600);
   ok((await s.$$('[data-act="mock-go"]')).length === 1, 'only the assigned test is offered');

@@ -178,6 +178,8 @@ on('PATCH', '/me', async ({ req, env, user }) => {
   return { user: publicUser({ ...user, name, target, exam_date: exam }) };
 });
 
+/** minutes a sent Writing / Speaking work counts in the week chart (exam timing) */
+const TASK_MIN = { eml: 7, dsc: 10, int: 4, lrp: 3 };
 /** forecast per section = latest band per section from finished attempts (R/L) and graded work (W/S) */
 async function summaryFor(env, uid) {
   const atts = await all(env, `SELECT id, kind, section, bands, route, started_at, finished_at FROM attempts
@@ -193,24 +195,26 @@ async function summaryFor(env, uid) {
       WHERE s.user_id = ? AND s.section = ? AND r.is_final = 1 ORDER BY r.created_at DESC LIMIT 3`, uid, sec);
     if (rs.length) forecast[sec] = bandWS(rs.reduce((a, r) => a + r.score, 0) / rs.length, 5);
   }
-  // week activity: minutes per day per section from attempts (capped at 90 min each)
+  // week activity: minutes per day per section from attempts (capped at 90 min each) and sent Writing/Speaking works
   const since = now() - 7 * 864e5;
   const recent = await all(env, `SELECT section, started_at, COALESCE(finished_at, started_at) AS f FROM attempts WHERE user_id = ? AND started_at > ?`, uid, since);
   const days = {};
-  for (const a of recent) {
-    const d = new Date(a.started_at).toISOString().slice(0, 10);
-    const min = Math.min(90, Math.max(1, Math.round((a.f - a.started_at) / 6e4)));
-    const k = a.section || 'R';
-    (days[d] ||= {})[k] = (days[d][k] || 0) + min;
-  }
-  // streak: consecutive days with any attempt, ending today or yesterday
-  const actDays = new Set((await all(env, `SELECT DISTINCT date(started_at / 1000, 'unixepoch') AS d FROM attempts WHERE user_id = ? AND started_at > ?`, uid, now() - 400 * 864e5)).map(r => r.d));
+  const add = (ms, k, min) => { const d = new Date(ms).toISOString().slice(0, 10); (days[d] ||= {})[k] = (days[d][k] || 0) + min; };
+  for (const a of recent) add(a.started_at, a.section || 'R', Math.min(90, Math.max(1, Math.round((a.f - a.started_at) / 6e4))));
+  const sent = await all(env, `SELECT section, task, submitted_at FROM submissions WHERE user_id = ? AND submitted_at > ? AND status != 'draft'`, uid, since);
+  for (const x of sent) add(x.submitted_at, x.section, TASK_MIN[x.task] || 5);
+  // streak: consecutive days with any attempt or sent work, ending today or yesterday
+  const from = now() - 400 * 864e5;
+  const actDays = new Set((await all(env, `SELECT DISTINCT date(started_at / 1000, 'unixepoch') AS d FROM attempts WHERE user_id = ? AND started_at > ?
+    UNION SELECT DISTINCT date(submitted_at / 1000, 'unixepoch') FROM submissions WHERE user_id = ? AND submitted_at > ? AND status != 'draft'`, uid, from, uid, from)).map(r => r.d));
   let streak = 0;
   const cur = new Date();
   if (!actDays.has(cur.toISOString().slice(0, 10))) cur.setUTCDate(cur.getUTCDate() - 1);
   while (actDays.has(cur.toISOString().slice(0, 10))) { streak++; cur.setUTCDate(cur.getUTCDate() - 1); }
-  const ov = overall(Object.values(forecast));
-  return { forecast, overall: ov, cefr: cefr(ov), week: days, streak };
+  // overall score only when all four sections have a forecast (one section is not a TOEFL score)
+  const vals = Object.values(forecast), sections = vals.filter(v => v != null).length;
+  const ov = sections === 4 ? overall(vals) : null;
+  return { forecast, overall: ov, cefr: cefr(ov), sections, week: days, streak };
 }
 
 on('GET', '/me/summary', async ({ env, user }) => { requireUser(user); return summaryFor(env, user.id); });

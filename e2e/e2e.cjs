@@ -66,7 +66,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
 
   await s.goto(APP + '#/today'); await s.waitForTimeout(1000);
   const hf = await s.textContent('.hfoot');
-  ok(hf.includes('прогноз 6,0'), 'Today shows forecast from the saved module', hf);
+  ok(hf.includes('1 из 4 секций') && !hf.includes('прогноз 6,0'), 'Today: one section is not an overall score (1 of 4)', hf);
   await s.screenshot({ path: OUT + '/7-student-today.png', fullPage: true });
 
   // teacher sees student + queue, grades

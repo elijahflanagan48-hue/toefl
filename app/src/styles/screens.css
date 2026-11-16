@@ -18,7 +18,7 @@
 .today-hero .goalbox{text-align:right}
 .today-hero .goalbox b{display:block;font-size:28px;color:var(--hero-tx);line-height:1.1}
 .hfoot{display:flex;align-items:center;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--hero-line);font-size:13.5px;color:var(--hero-mut)}
-.hfoot .pillv{display:inline-flex;align-items:baseline;gap:6px;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.09);color:var(--hero-tx);font-weight:650}
+.hfoot .pillv{display:inline-flex;align-items:baseline;gap:6px;white-space:nowrap;flex:none;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.09);color:var(--hero-tx);font-weight:650}
 .hfoot .pillv b{font-size:18px;color:var(--gold-2)}
 .hfoot .gap{margin-left:auto}.hfoot .gap b{color:var(--hero-tx)}
 .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
@@ -30,11 +30,29 @@
 
 @media (min-width:960px){
   .g-today{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:28px;align-items:start}
-  .g-today .col-b>.lbl:first-child{margin-top:0}
+  .g-today .col-b>.tb:first-child>.lbl:first-child{margin-top:0}
+  .g-today .tb-mock{margin-bottom:6px}
   .today-hero{padding:24px 26px}
   .today-hero .ladder{--lh:200px}
   .today-hero .days .serif{font-size:64px}
 }
+
+/* phone: what to do today comes first, then the forecast (compact) and the week */
+@media (max-width:959px){
+  .g-today{display:flex;flex-direction:column}
+  .g-today .col-a,.g-today .col-b{display:contents}
+  .tb-mock{order:1}.tb-route{order:2}.tb-tasks{order:3}.tb-hero{order:4}.tb-week{order:5}.tb-quick{order:6}
+  .tb-route>.lbl:first-child{margin-top:4px}
+  .tb-hero{margin-top:22px}
+  .today-hero .ladder{--lh:118px;margin-top:14px}
+}
+.mockdue{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:var(--r);background:var(--hero);color:var(--hero-tx)!important}
+.mockdue>.i{color:var(--gold-2);flex:none}
+.mockdue .t{flex:1;min-width:0}
+.mockdue .k{font-size:12px;font-weight:700;color:var(--gold-2);text-transform:uppercase;letter-spacing:.04em}
+.mockdue .nm{font-size:17px;font-weight:700;margin:2px 0}
+.mockdue .mt{font-size:13px;color:var(--hero-mut)}
+@media (max-width:480px){.mockdue{flex-wrap:wrap}.mockdue .btn{width:100%}}
 
 /* =========================================================
    TRAIN
@@ -84,6 +102,7 @@
   .trainhead{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:20px}
   .modeseg{flex:none;width:380px}
   .tgrid{grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+  .tgrid.n4{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
 /* =========================================================
@@ -166,6 +185,9 @@
 .av.lg{width:52px;height:52px;font-size:20px}
 .acct .nm{font-size:18px;font-weight:750;letter-spacing:-.02em}
 .dateinp{border:0;background:none;color:var(--mut);font:inherit;font-size:14px;text-align:right}
+.datewrap{cursor:pointer}.datewrap em{position:relative}
+.datewrap .dateinp{position:absolute;right:0;bottom:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.datev{color:var(--mut);font-size:14px;font-style:normal;font-weight:600}
 .rowlink .stepper{gap:4px}
 .rowlink .stepper button{width:30px;height:30px;font-size:17px}
 .rowlink .stepper b{min-width:36px;font-size:16px;color:var(--tx)}
@@ -396,3 +418,21 @@ a.qb{color:inherit!important}
 .mlegend .mk{font-style:normal;color:var(--tx);font-family:Georgia,serif;padding:0 2px}
 .mlegend .mk-ins{width:10px;height:1em}.mlegend .mk-ins:before{left:1px;bottom:-.2em}
 @media (max-width:600px){.mt-grp{padding-right:4px}.mtool{min-width:38px;height:38px}}
+
+/* teacher: student card — five tiles in one row; overview on phones — list instead of the wide table */
+.skpi{gap:4px}
+.skpi .sk-n{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--tx)}
+.skpi .sk-n .dot{width:8px;height:8px;border-radius:50%;background:var(--sc)}
+.skpi b{font-size:26px}
+.skpi em{font-style:normal}
+.oktx{color:var(--ok)}
+@media (min-width:700px){.kpis.k5{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media (max-width:699px){.kpis.k5 .kpi.hot{grid-column:1/-1}}
+.hmlist{display:none}
+@media (max-width:640px){.g-thome .tblwrap:has(.heatmap){display:none}.hmlist{display:block}}
+.hmlist .row{align-items:center}
+.hm4{display:flex;gap:5px;margin:5px 0 3px;flex-wrap:wrap}
+.hm4 .sc{font-size:12.5px;padding:2px 7px}
+.hm4 .sc i{font-style:normal;opacity:.6;margin-right:4px;font-weight:700}
+.pv-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.hm4 .sc{height:24px;min-width:0}

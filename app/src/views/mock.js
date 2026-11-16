@@ -105,11 +105,6 @@ export default async function mock() {
     <p class="mut small">Точность в первом модуле определяет потолок балла. ${last.route ? `Твой последний маршрут: <b>${last.route === 'upper' ? 'трудный модуль' : 'лёгкий модуль'}</b>.` : 'Пройди модуль Reading, чтобы увидеть свой маршрут.'}</p>
   </div>`;
 
-  const single = `<div class="lbl">Одна секция</div><div class="secgrid">${FLOW.map(f => `<a class="sgc c${f.k} ${f.off ? 'off' : ''}" href="#/train/${f.k}">
-      <span class="sq">${ic(SEC[f.k].ic, 19)}</span><b>${SEC[f.k].name}</b><span>${f.q} вопросов · ${f.min} мин</span></a>`).join('')}</div>`;
-
-  const diag = `<a class="note info" href="#/exam/reading">${ic('spark', 22)}<div class="t"><div class="nm">Диагностика уровня · 25 мин</div><div class="mt">Короткий тест для нового ученика: стартовый прогноз и план</div></div>${ic('right', 20)}</a>`;
-
   const hist = !mocks.length ? `<div class="lbl">История</div><div class="card empty"><b>Пока пусто</b>Здесь появятся результаты пробников и модулей</div>` : `<div class="lbl">История <b>${mocks.length}</b></div><div class="card rows hist">${[...mocks].reverse().map(m => {
     const ov = overallBand([m.R, m.W, m.S]);
     return `<${m.isMock ? `a href="#/mock/result/${m.id}"` : 'div'} class="row"><div class="hdate"><b>${m.date.split(' ')[0]}</b><span>${m.date.split(' ')[1]}</span></div>
@@ -121,6 +116,6 @@ export default async function mock() {
   return {
     title: 'Пробник', wide: true,
     html: `${hdr('Пробник')}
-      <div class="g-mock"><div class="col-a">${hero}${single}${diag}</div><div class="col-b">${mst}${hist}</div></div>`
+      <div class="g-mock"><div class="col-a">${hero}</div><div class="col-b">${mst}${hist}</div></div>`
   };
 }

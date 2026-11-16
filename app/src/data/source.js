@@ -36,9 +36,27 @@ function planFor(f) {
   return ['R', 'W', 'S'].sort((a, b) => (f[a] ?? 0) - (f[b] ?? 0)).map(k => blocks[k]);
 }
 
+/* small cache for the menu: review count (teacher) and open assignments (student); refreshed at most every 30 s */
+export let lastForecast = null;
+export const navCache = { at: 0, queue: null, tasks: null };
+const taskOf = x => ({ nm: x.title, mock: x.spec?.section === 'M', dueAt: x.due_at || null, due: dueLabel(x.due_at), to: assignLink(x.spec, x.id),
+  mt: 'от учителя · ' + (x.spec?.mode === 'timed' || x.spec?.mode === 'exam' || x.spec?.section === 'M' ? 'как на экзамене' : 'учебный режим') });
+const openTasks = list => list.filter(x => !x.done).map(taskOf).sort((a, b) => (a.dueAt ?? 9e15) - (b.dueAt ?? 9e15));
+export async function navData(teacher, force = false) {
+  if (!isLive()) return null;
+  if (!force && Date.now() - navCache.at < 30000) return null;
+  navCache.at = Date.now();
+  try {
+    if (teacher) navCache.queue = (await get('/teacher/queue')).queue.length;
+    else navCache.tasks = openTasks((await get('/me/assignments')).assignments);
+    return navCache;
+  } catch (e) { return null; }
+}
+
 export async function today() {
   if (!isLive()) return M.me;
-  const [u, s, a] = await Promise.all([loadMe(), get('/me/summary'), get('/me/assignments')]);
+  const [u, s, a, w] = await Promise.all([loadMe(), get('/me/summary'), get('/me/assignments'), get('/me/submissions')]);
+  lastForecast = s.forecast;
   // current week Mon..Sun
   const now = new Date(), mon = new Date(now); mon.setDate(now.getDate() - ((now.getDay() + 6) % 7));
   const names = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
@@ -56,8 +74,8 @@ export async function today() {
     name: u.name.split(' ')[0], full: u.name, teacher: u.teacher?.name || '', target: u.target ?? 4.5,
     examDate: u.exam_date, examLabel: u.exam_date ? dayLabel(u.exam_date) : '',
     forecast: s.forecast, streak: s.streak, weekMin, week, plan: planFor(s.forecast),
-    tasks: a.assignments.filter(x => !x.done).map(x => ({ nm: x.title, mt: 'от учителя · ' + (x.spec?.mode === 'timed' || x.spec?.mode === 'exam' ? 'как на экзамене' : 'учебный режим'), due: dueLabel(x.due_at),
-      to: assignLink(x.spec, x.id) }))
+    tasks: (navCache.tasks = openTasks(a.assignments)),
+    graded: w.submissions.filter(x => x.status === 'graded').map(x => ({ id: x.id, nm: TASK_NAMES[x.task] || x.task }))
   };
 }
 
@@ -92,6 +110,7 @@ export async function students() {
 export async function queue(section) {
   if (!isLive()) return M.queue;
   const r = await get('/teacher/queue' + (section ? '?section=' + section : ''));
+  if (!section) navCache.queue = r.queue.length;
   return r.queue.map(q => ({
     id: q.id, student: q.student, k: q.section, task: TASK_NAMES[q.task] || q.task, taskCode: q.task,
     title: q.prompt?.title || q.prompt?.subject || '', when: ago(q.submitted_at), words: q.words, dur: q.parts ? q.parts + ' отв.' : null, late: q.late

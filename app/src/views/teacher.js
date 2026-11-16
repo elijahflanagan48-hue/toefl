@@ -3,36 +3,40 @@ import { bank, emailWork } from '../data/mock.js';
 import * as src from '../data/source.js';
 import { isLive, audioUrl } from '../lib/api.js';
 import { ic } from '../lib/icons.js';
-import { band, cefr, overallBand, heat, SEC, esc, plural } from '../lib/util.js';
+import { band, cefr, overallBand, fullBand, heat, SEC, esc, plural } from '../lib/util.js';
 import { hdr, on, toast, modal } from '../lib/ui.js';
 import { pref } from '../lib/store.js';
 import { contentLive } from './tcab.js';
 
-const ovOf = s => overallBand([s.R, s.L, s.W, s.S]);
+const ovOf = s => fullBand(s);
 const initials = n => String(n || '?').split(' ').map(x => x[0]).join('').slice(0, 2);
 const rerender = () => window.dispatchEvent(new Event('hashchange'));
 
 /* ---------------- Обзор ---------------- */
 export async function home() {
   const [students, queue] = await Promise.all([src.students(), src.queue()]);
-  const avg = overallBand(students.map(ovOf));
+  const full = students.map(ovOf).filter(v => v != null);
+  const avg = full.length ? Math.round(full.reduce((a, b) => a + b, 0) / full.length * 2) / 2 : null;
   const overdue = students.filter(s => s.overdue).length;
   const kpi = [
     ['users', students.length, plural(students.length, 'ученик', 'ученика', 'учеников'), '#/t/students'],
     ['inbox', queue.length, plural(queue.length, 'работа ждёт', 'работы ждут', 'работ ждут'), '#/t/review'],
     ['alert', overdue, 'просрочено', '#/t/students'],
-    ['trend', avg == null ? '—' : band(avg), 'средний прогноз', '#/t/students']
+    ['trend', avg == null ? '—' : band(avg), avg == null ? 'средний прогноз: нужны все 4 секции' : `средний прогноз · ${full.length} из ${students.length}`, '#/t/students']
   ];
   const table = students.length ? `<div class="card tblwrap"><table class="tbl heatmap">
       <thead><tr><th>Ученик</th>${Object.values(SEC).map(s => `<th class="c${s.k}"><i class="dot"></i> ${s.k}</th>`).join('')}<th>Общий</th><th>Цель</th></tr></thead>
       <tbody>${students.map(s => `<tr data-act="open-student" data-id="${s.id}"><td><div class="who-s"><span class="av sm">${esc(initials(s.name))}</span><div><b>${esc(s.name)}</b><span>${s.last}${s.overdue ? ' · <em class="badtx">просрочка</em>' : ''}</span></div></div></td>
         ${['R', 'L', 'W', 'S'].map(k => `<td class="num"><span class="sc ${heat(s[k], s.target)}">${s[k] == null ? 'нет' : band(s[k])}</span></td>`).join('')}
-        <td class="num"><b class="serif">${ovOf(s) == null ? '—' : band(ovOf(s))}</b></td><td class="num fade">${band(s.target)}</td></tr>`).join('')}</tbody></table></div>`
+        <td class="num"><b class="serif">${ovOf(s) == null ? '—' : band(ovOf(s))}</b></td><td class="num fade">${band(s.target)}</td></tr>`).join('')}</tbody></table></div>
+    <div class="card rows hmlist">${students.map(s => `<a class="row" href="#/t/student/${s.id}"><span class="av sm">${esc(initials(s.name))}</span>
+      <div class="t"><div class="nm">${esc(s.name)}</div><div class="hm4">${['R', 'L', 'W', 'S'].map(k => `<span class="sc ${heat(s[k], s.target)}"><i>${k}</i>${s[k] == null ? '—' : band(s[k])}</span>`).join('')}</div>
+        <div class="mt">${s.last}${s.overdue ? ' · <em class="badtx">просрочка</em>' : ''} · цель ${band(s.target)}${ovOf(s) != null ? ` · общий <b>${band(ovOf(s))}</b>` : ''}</div></div>${ic('right', 18)}</a>`).join('')}</div>`
     : `<div class="card empty"><b>Учеников пока нет</b>Отправьте код приглашения из профиля — ученик появится здесь сразу после регистрации.<br><br><a class="btn sm" href="#/profile">${ic('link', 16)} Коды приглашения</a></div>`;
 
   return {
     title: 'Обзор', wide: true,
-    html: `${hdr('Обзор', { sub: 'Кабинет учителя', right: isLive() ? `<a class="btn sm" href="#/t/assign" aria-label="Назначения">${ic('cal', 16)}<span class="bl"> Назначения</span></a><button class="btn sm pri" data-act="assign" aria-label="Назначить">${ic('plus', 16)}<span class="bl"> Назначить</span></button>` : '' })}
+    html: `${hdr('Обзор', { sub: 'Кабинет учителя', right: isLive() ? `<button class="btn sm pri" data-act="assign" aria-label="Назначить">${ic('plus', 16)}<span class="bl"> Назначить</span></button>` : '' })}
     <div class="kpis">${kpi.map(([i, v, l, h], n) => `<a class="kpi ${n === 1 && queue.length ? 'hot' : ''}" href="${h}">${ic(i, 20)}<b class="serif">${v}</b><span>${l}</span></a>`).join('')}</div>
     <div class="g-thome">
       <section>
@@ -71,8 +75,7 @@ export async function studentsView() {
           <div class="sc-ov"><b class="serif">${ov == null ? '—' : band(ov)}</b>${ov == null ? '' : `<span class="cefr">${cefr(ov)}</span>`}</div></div>
         <div class="sc-secs">${['R', 'L', 'W', 'S'].map(k => `<div class="c${k}"><span>${k}</span><b class="serif">${s[k] == null ? '—' : band(s[k])}</b><div class="pips">${[1, 2, 3, 4, 5, 6].map(n => `<i class="${s[k] >= n ? 'on' : s[k] >= n - .5 ? 'half' : ''}"></i>`).join('')}</div></div>`).join('')}</div>
         <div class="sc-ft"><span>${ic('flag', 15)} цель ${band(s.target)}</span><span>${ic('cal', 15)} ${s.exam}</span><span>${ic('flame', 15)} ${s.streak}</span>
-          ${s.overdue ? '<span class="chip bad">просрочка</span>' : `<span class="fade">${s.last}</span>`}
-          ${isLive() ? `<button class="btn sm ghost" data-act="reset-pw" data-id="${s.id}" data-name="${esc(s.name)}" style="margin-left:0">${ic('lock', 14)} Сбросить пароль</button>` : ''}</div>
+          ${s.overdue ? '<span class="chip bad">просрочка</span>' : `<span class="fade">${s.last}</span>`}</div>
       </article>`;
     }).join('')}</div>` : `<div class="card empty"><b>Учеников пока нет</b>Скопируйте ссылку-приглашение в профиле и отправьте ученику.</div>`}`
   };

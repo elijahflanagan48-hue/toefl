@@ -53,6 +53,9 @@ on('threshold', async el => {
   try { await src.saveSettings({ route_threshold: v }); toast('Порог сохранён'); rerender(); } catch (e) { toast(e.message); }
 });
 
+const MONTHS = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+const ruDate = v => { if (!v) return 'указать'; const [y, m, d] = String(v).split('-').map(Number); return `${d} ${MONTHS[m - 1]} ${y}`; };
+
 export default async function profile() {
   const live = isLive();
   if (live) await loadMe();
@@ -87,7 +90,7 @@ export default async function profile() {
       ${isT ? teacherBlock : `
       <div class="lbl">Экзамен</div>
       <div class="rowlink">${ic('flag', 20)}Цель<em class="stepper"><button data-act="target" data-d="-0.5" aria-label="Меньше">−</button><b>${band(t)}</b><button data-act="target" data-d="0.5" aria-label="Больше">+</button></em><span class="cefr">${cefr(t)}</span></div>
-      <label class="rowlink">${ic('cal', 20)}Дата экзамена<em><input type="date" class="dateinp" id="examdate" value="${live ? u.exam_date || '' : demoMe.examDate}" aria-label="Дата экзамена"></em></label>
+      <label class="rowlink datewrap">${ic('cal', 20)}Дата экзамена<em><span class="datev" id="datev">${ruDate(live ? u.exam_date : demoMe.examDate)}</span><input type="date" class="dateinp" id="examdate" value="${live ? u.exam_date || '' : demoMe.examDate}" aria-label="Дата экзамена"></em></label>
       <button class="rowlink" data-act="mic">${ic('mic', 20)}Проверка микрофона<em>для Speaking</em>${ic('right', 18)}</button>`}
       </div><div class="pb">
       <div class="lbl">Оформление</div>
@@ -106,7 +109,10 @@ export default async function profile() {
     </div></div>`,
     mount(root) {
       const d = root.querySelector('#examdate');
+      // the native field shows the date in the browser's locale (mm/dd/yyyy on an English system); show it the Russian way on top
+      if (d) d.closest('.datewrap').addEventListener('click', e => { e.preventDefault(); try { d.showPicker(); } catch (x) { d.focus(); } });
       if (d) d.addEventListener('change', async () => {
+        root.querySelector('#datev').textContent = ruDate(d.value);
         if (!isLive()) return;
         try { await src.saveMe({ exam_date: d.value || null }); toast('Дата сохранена'); } catch (e) { toast(e.message); }
       });

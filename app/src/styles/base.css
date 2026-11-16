@@ -94,7 +94,7 @@ p{margin:0}
   /* several actions don't fit next to the title: title + theme button stay on the first row, the actions wrap below */
   .hdr{flex-wrap:wrap;row-gap:8px}
   .hdr h1{flex:1 1 130px;min-width:130px;order:1}
-  .hdr>[data-act="theme-toggle"]{order:2}
+  .hdr>[data-act="theme-toggle"],.hdr>.me-mob{order:2}
   .hdr>.btn,.hdr>.lnk{order:3}
   .hdr .btn .bl{display:none}.hdr .btn.sm:has(.bl){padding:0;width:40px;height:40px;border-radius:11px}
 }
@@ -103,3 +103,11 @@ p{margin:0}
 .brand>b{font-family:var(--ffd);font-size:18px;letter-spacing:-.01em}
 /* six tabs (teacher): on narrow phones keep the active tab icon-only so the pill fits */
 @media (max-width:440px){.pill.many .tab.on .tl{display:none}.pill.many .tab.on{padding:0 13px}.pill.many .tab{padding:0 11px}}
+
+/* review counter on the phone menu; profile button in the header for teachers on phones (no profile tab) */
+.pill .tab{position:relative}
+.pill .tab .pcnt{position:absolute;top:3px;right:2px;min-width:17px;height:17px;padding:0 4px;box-sizing:border-box;border-radius:9px;background:var(--sS);color:#fff;font:700 10.5px/17px var(--ff);text-align:center;box-shadow:0 0 0 2px var(--surf)}
+.pill .tab.on .pcnt{position:static;margin-left:2px;box-shadow:none}
+.rail a.who{color:var(--tx)}
+.rail a.who:hover,.rail a.who.on{background:var(--pri-soft)}
+@media (min-width:960px){.me-mob{display:none!important}}

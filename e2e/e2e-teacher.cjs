@@ -22,9 +22,11 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   await s.fill('#name', sname); await s.fill('#email', 'v' + Date.now() + '@example.com'); await s.fill('#password', 'student-pass-1');
   await s.click('button[type=submit]'); await s.waitForTimeout(1200);
 
-  // nav has the mock-test entry for the teacher
+  // teacher menu: Обзор · Проверка · Ученики · Назначения · Контент; the mock page is reached from «Контент» (student's view)
   await t.goto(APP + '#/t/home'); await t.waitForTimeout(900);
-  ok(!!(await t.$('.rail a[href="#/mock"], nav a[href="#/mock"]')), 'teacher navigation has «Пробник»');
+  ok((await t.$$eval('.rail .nav .tab', a => a.map(x => x.getAttribute('href')).join(' '))) === '#/t/home #/t/review #/t/students #/t/assign #/t/content', 'teacher menu: five sections');
+  await t.goto(APP + '#/t/content'); await t.waitForTimeout(1200);
+  ok(!!(await t.$('.pv-row a[href="#/mock"]')), 'content page links to the mock page (student view)');
   await t.goto(APP + '#/mock'); await t.waitForTimeout(2000);
   ok(!(await t.textContent('#app')).includes('Cannot') && (await t.textContent('#app')).length > 50, 'teacher opens the mock page');
 
@@ -33,6 +35,7 @@ const ok = (c, n, x = '') => { c ? pass++ : fail++; console.log(c ? '  ✓' : ' 
   await t.click('.scard:has-text("' + sname + '")'); await t.waitForTimeout(1200);
   ok(t.url().includes('#/t/student/'), 'student card opens from the list');
   ok((await t.textContent('#app')).includes(sname), 'card shows the name');
+  ok((await t.getAttribute('.rail .tab.on', 'href')) === '#/t/students', 'student card highlights «Ученики» in the menu');
   await t.screenshot({ path: OUT + '/card.png' });
   await t.click('.hdr [data-act="assign"]'); await t.waitForSelector('#a-to', { timeout: 8000 }).catch(() => {});
   ok(await t.evaluate(() => document.getElementById('a-to').selectedOptions[0].textContent.includes('Вера')), 'assign dialog preselects this student');

@@ -12,6 +12,7 @@ export function hdr(title, { back, sub, right = '' } = {}) {
     ${back ? `<a class="ic back" href="${back}" aria-label="Назад">${ic('left', 23)}</a>` : ''}
     <h1>${esc(title)}${sub ? `<span class="sub">${esc(sub)}</span>` : ''}</h1>
     ${right}
+    ${document.body.dataset.role === 'teacher' ? `<a class="ic me-mob" href="#/profile" aria-label="Профиль">${ic('user', 21)}</a>` : ''}
     <button class="ic" data-act="theme-toggle" aria-label="${dark ? 'Светлая тема' : 'Тёмная тема'}">${ic(dark ? 'sun' : 'moon', 21)}</button>
   </header>`;
 }

@@ -7,6 +7,12 @@ import { pref } from '../lib/store.js';
 import { isLive, session } from '../lib/api.js';
 
 const MODES = [['learn', 'Учиться', 'Ответ проверяется сразу, с разбором на русском'], ['timed', 'На время', 'Таймер и правила экзамена, разбор в конце'], ['mistakes', 'Мои ошибки', 'Повтор вопросов, в которых была ошибка, пока не ответишь верно']];
+/* Writing / Speaking: Email, Discussion and Speaking are checked by the teacher, so the generic hints would be wrong */
+const HINTS = {
+  W: { learn: 'Без таймера, с подсказками. Build a Sentence проверяется сразу, письмо и Discussion — учителем', timed: 'Таймер и правила экзамена. Письмо и Discussion проверяет учитель', mistakes: 'Повтор ошибок есть только в Build a Sentence: тексты проверяет учитель' },
+  S: { learn: 'Без жёсткого таймера, запись можно переслушать. Проверяет учитель', timed: 'Таймер и правила экзамена. Записи проверяет учитель', mistakes: 'Записи проверяет учитель, повтора ошибок здесь нет' }
+};
+const hintOf = (k, mode) => HINTS[k]?.[mode] || MODES.find(m => m[0] === mode)[2];
 const READY = { ctw: true, rdl: true, rap: true, bas: true, eml: true, dsc: true, lrp: true, int: true, lcr: true, lco: true, lan: true, lat: true }; // tasks with a working trainer
 const WRITE = { eml: true, dsc: true, lrp: true, int: true }; // teacher-graded writing: own editor, no mistakes mode
 
@@ -21,7 +27,6 @@ function taskCard(k, t, st, mode, mist) {
   if (WRITE[t.id] && isLive()) stat = `<div class="tc-stat"><span>Оценка</span><b class="fade" style="font-size:14px">ставит учитель, 0–5</b></div>`;
   else if (t.scripts != null) stat = `<div class="tc-stat"><span>Скрипты для озвучки</span><b class="serif">${t.scripts}</b></div>`;
   else if (isLive() && s) stat = `<div class="tc-stat"><span>Точность</span><b class="serif">${s.acc}%</b></div><div class="bar c${k}"><i style="width:${s.acc}%"></i></div>`;
-  else if (isLive()) stat = `<div class="tc-stat"><span>Точность</span><b class="fade" style="font-size:14px">после первых ответов</b></div>`;
   else if (t.acc != null) stat = `<div class="tc-stat"><span>Точность</span><b class="serif">${t.acc}%</b></div><div class="bar c${k}"><i style="width:${t.acc}%"></i></div>`;
   else if (t.score != null) stat = `<div class="tc-stat"><span>Средний балл учителя</span><b class="serif">${band(t.score)}<small> / 5</small></b></div><div class="bar c${k}"><i style="width:${t.score / 5 * 100}%"></i></div>`;
   const meta = WRITE[t.id] && isLive() ? `${inBank ? inBank + ' заданий · ' : ''}${t.time}` : t.scripts != null ? 'ждёт озвучки' : isLive() && inBank != null ? `${done} из ${inBank} · ${t.time}` : isLive() ? t.time : `${t.done} из ${t.n} · ${t.time}`;
@@ -51,11 +56,11 @@ export default async function train(params) {
   (mist?.items || []).forEach(x => { mistByTask[x.task] = (mistByTask[x.task] || 0) + x.qs.length; });
 
   const secList = Object.values(SEC).map(s => {
-    const v = isLive() ? null : me.forecast[s.k], n = catalog[s.k].tasks.length;
+    const v = isLive() ? (src.lastForecast?.[s.k] ?? null) : me.forecast[s.k], n = catalog[s.k].tasks.length;
     return `<a class="secpick c${s.k} ${s.k === k ? 'on' : ''}" href="#/train/${s.k}" aria-current="${s.k === k ? 'page' : 'false'}">
       <span class="sq">${ic(s.ic, 19)}</span>
       <span class="t"><b>${s.name}</b><span>${catalog[s.k].soon ? 'скоро' : n + ' задания'}</span></span>
-      <span class="v serif">${v ? band(v) : '—'}</span></a>`;
+      ${v ? `<span class="v serif" title="Прогноз по секции">${band(v)}</span>` : ''}</a>`;
   }).join('');
 
   const typeAcc = n => isLive() ? st?.types?.[n]?.acc ?? null : (c.types.find(t => t[0] === n) || [])[1];
@@ -76,9 +81,9 @@ export default async function train(params) {
       <div class="trainmain c${k}">
         <div class="trainhead"><div><h2 class="serif">${SEC[k].name}</h2><p class="mut">${c.blurb}</p></div>
           ${c.soon ? '' : `<div class="seg modeseg" role="tablist">${MODES.map(([v, l]) => `<button class="${mode === v ? 'on' : ''}" data-act="train-mode" data-v="${v}" role="tab" aria-selected="${mode === v}">${l}</button>`).join('')}</div>`}</div>
-        ${c.soon ? '' : `<p class="modehint fade">${ic('spark', 15)} ${MODES.find(m => m[0] === mode)[2]}</p>`}
+        ${c.soon ? '' : `<p class="modehint fade">${ic('spark', 15)} ${hintOf(k, mode)}</p>`}
         ${mistNote}
-        <div class="tgrid">${c.tasks.map(t => taskCard(k, t, st, mode, mistByTask[t.id] || 0)).join('')}</div>
+        <div class="tgrid n${c.tasks.length}">${c.tasks.map(t => taskCard(k, t, st, mode, mistByTask[t.id] || 0)).join('')}</div>
         ${k === 'L' && isLive() && session.user && session.user.role !== 'student' ? `<div class="lbl">Для учителя <b>тест-банк T1–T3</b></div>
           <div class="note info">${ic('lock', 22)}<div class="t"><div class="nm">Задания из тестов недоступны ученикам в тренировке</div><div class="mt">Попробуйте их сами: ${[['lcr', 'Choose a Response'], ['lco', 'Conversation'], ['lan', 'Announcement'], ['lat', 'Academic Talk']].map(([id, n]) => `<a href="#/listen/${id}?mode=${mode === 'timed' ? 'timed' : 'learn'}&bank=test"><b>${n}</b></a>`).join(' · ')}. Чтобы открыть задание ученикам, смените его статус в банке заданий.</div></div></div>` : ''}
         ${types}

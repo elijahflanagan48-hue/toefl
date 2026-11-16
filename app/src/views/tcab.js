@@ -2,7 +2,7 @@
 import * as src from '../data/source.js';
 import { isLive } from '../lib/api.js';
 import { ic } from '../lib/icons.js';
-import { band, cefr, overallBand, heat, SEC, esc, plural } from '../lib/util.js';
+import { band, cefr, fullBand, secCount, heat, SEC, esc, plural } from '../lib/util.js';
 import { hdr, on, toast, modal, closeModal } from '../lib/ui.js';
 import { ASSIGN_TASKS, MODE_NAMES, SECTION_NAMES, buildAssignments } from '../lib/assign.js';
 
@@ -28,7 +28,7 @@ function assignedBlock(list, sid) {
 export async function studentCard(params) {
   if (!isLive()) return { title: 'Ученик', html: needLive('В демо-режиме карточки учеников недоступны.') };
   const d = await src.studentDetail(params[0]);
-  const st = d.student, f = d.summary.forecast, ov = overallBand([f.R, f.L, f.W, f.S]);
+  const st = d.student, f = d.summary.forecast, ov = fullBand(f), tgt = st.target ?? 4.5;
   const weak = sec => Object.entries(d.stats[sec]?.types || {}).filter(([, v]) => v.n >= 3).sort((a, b) => a[1].acc - b[1].acc).slice(0, 5);
   const weakR = weak('R'), weakW = weak('W');
   const wrows = (list, k) => list.map(([n, v]) => `<a class="qb c${k}" href="#/t/student/${st.id}/log/${k}/${encodeURIComponent(n)}" title="Показать ответы ученика"><span class="qn">${esc(n)}</span><div class="bar"><i style="width:${v.acc}%;background:${v.acc < 60 ? 'var(--sS)' : 'var(--ok)'}"></i></div><b>${v.acc}%</b>${ic('right', 16)}</a>`).join('');
@@ -39,8 +39,9 @@ export async function studentCard(params) {
   return {
     title: st.name, wide: true,
     html: `${hdr(st.name, { back: '#/t/students', sub: [st.group_name, st.email].filter(Boolean).join(' · '), right: `<button class="btn sm pri" data-act="assign" data-sid="${st.id}" aria-label="Назначить">${ic('plus', 16)}<span class="bl"> Назначить</span></button>` })}
-    <div class="kpis">${['R', 'L', 'W', 'S'].map(k => `<div class="kpi"><span class="sc ${heat(f[k], st.target ?? 4.5)}">${f[k] == null ? 'нет' : band(f[k])}</span><b class="serif" style="font-size:15px">${SEC[k].name}</b><span>прогноз</span></div>`).join('')}
-      <div class="kpi hot">${ic('trend', 20)}<b class="serif">${ov == null ? '—' : band(ov)}</b><span>общий${ov == null ? '' : ' · ' + cefr(ov)} · цель ${band(st.target ?? 4.5)}</span></div></div>
+    <div class="kpis k5">${['R', 'L', 'W', 'S'].map(k => `<div class="kpi skpi c${k}"><span class="sk-n"><i class="dot"></i>${SEC[k].name}</span><b class="serif ${f[k] == null ? 'fade' : ''}">${band(f[k])}</b>
+        <span>${f[k] == null ? 'нет данных' : f[k] >= tgt ? '<em class="oktx">цель есть</em>' : `до цели +${band(tgt - f[k])}`}</span></div>`).join('')}
+      <div class="kpi hot skpi">${ic('trend', 18)}<b class="serif">${band(ov)}</b><span>${ov == null ? `общий: ${secCount(f)} из 4 секций` : `общий · ${cefr(ov)} · цель ${band(tgt)}`}</span></div></div>
     ${assignedBlock(d.assignments || [], st.id)}
     <div class="g-two">
       <section><div class="lbl">Слабые типы вопросов</div>
@@ -72,7 +73,7 @@ export async function assignView() {
   const now = Date.now();
   return {
     title: 'Назначения', wide: true,
-    html: `${hdr('Назначения', { back: '#/t/home', sub: 'Задания с дедлайнами', right: `<button class="btn sm pri" data-act="assign">${ic('plus', 16)} Новое</button>` })}
+    html: `${hdr('Назначения', { sub: 'Задания с дедлайнами', right: `<button class="btn sm pri" data-act="assign">${ic('plus', 16)} Новое</button>` })}
     ${list.length ? `<div class="card tblwrap"><table class="tbl"><thead><tr><th>Задание</th><th>Кому</th><th>Срок</th><th>Выполнили</th><th></th></tr></thead><tbody>${groupAssignments(list).map(g => {
       const a = g.parts[0], late = a.due_at && a.due_at < now && g.parts.some(p => p.done < p.targets);
       const bar = p => { const pct = p.targets ? Math.round(p.done / p.targets * 100) : 0; return `<div class="calc"><div class="bar"><i style="width:${pct}%"></i></div><span>${p.done} из ${p.targets}</span></div>`; };
@@ -253,6 +254,7 @@ export async function contentLive() {
   return {
     title: 'Контент', wide: true,
     html: `${hdr('Контент', { sub: `Банк заданий · ${list.reduce((a, b) => a + b.n, 0)} единиц`, right: `<a class="btn sm" href="#/t/bank">${ic('list', 16)} Все задания</a> <button class="btn sm" data-act="imp">${ic('upload', 16)} Импорт JSON</button>` })}
+    <div class="pv-row"><span class="fade small">Глазами ученика:</span><a class="btn sm" href="#/train">${ic('layers', 16)} Тренировка</a><a class="btn sm" href="#/mock">${ic('timer', 16)} Пробник</a><a class="btn sm" href="#/exam/reading">${ic('book', 16)} Модуль Reading</a></div>
     <a class="note info" href="#/t/calibration" style="margin-bottom:12px">${ic('trend', 22)}<div class="t"><div class="nm">Калибровка заданий</div><div class="mt">Сложность и качество заданий по ответам учеников: какие перевести на другой уровень, где проверить ключ</div></div></a>
     <div class="card tblwrap"><table class="tbl bank"><thead><tr><th>Задание</th><th>Всего</th><th>A · B · C</th><th>Откалибровано</th><th></th></tr></thead>
       <tbody>${list.map(b => `<tr data-act="go" data-go="#/t/bank?section=${b.section}&task=${b.task}"><td><div class="who-s c${b.section}"><span class="sq sm">${ic(SEC[b.section].ic, 16)}</span><b>${TNAME[b.task] || b.task}</b></div></td>

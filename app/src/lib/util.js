@@ -17,6 +17,10 @@ export const overallBand = vals => {
   return Math.floor(m * 2 + 0.5 + 1e-9) / 2;
 };
 
+/** overall TOEFL score only when all four sections have a forecast; one or two sections are not an overall score */
+export const fullBand = f => (f && ['R', 'L', 'W', 'S'].every(k => f[k] != null) ? overallBand([f.R, f.L, f.W, f.S]) : null);
+export const secCount = f => (f ? ['R', 'L', 'W', 'S'].filter(k => f[k] != null).length : 0);
+
 export const plural = (n, one, few, many) => {
   const a = Math.abs(n) % 100, b = a % 10;
   if (a > 10 && a < 20) return many;

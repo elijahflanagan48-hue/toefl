@@ -3,6 +3,8 @@ import { actions, role, closeModal, toast } from './lib/ui.js';
 import { pref, applyTheme } from './lib/store.js';
 import { hasApi, isDemo, isLive, session, loadMe, post } from './lib/api.js';
 import { me as demoMe, teacher as demoTeacher, queue as demoQueue } from './data/mock.js';
+import { navCache, navData } from './data/source.js';
+import { esc } from './lib/util.js';
 
 import today from './views/today.js';
 import train from './views/train.js';
@@ -31,9 +33,24 @@ const PUBLIC = new Set(['login', 'join', 'setup']);
 const PARAM_ROUTES = [['mock/result/', mockResult], ['train/', train], ['t/review/', reviewItem], ['practice/', practice], ['write/', write], ['speak/', speak], ['listen/', listen], ['t/student/', params => (params[1] === 'log' || params[1] === 'attempt' ? studentLog(params) : studentCard(params))], ['t/assign/', assignResults], ['work/', work]];
 
 const NAV = {
-  student: [['today', 'today', 'Сегодня'], ['train', 'layers', 'Тренировка'], ['mock', 'timer', 'Пробник'], ['progress', 'trend', 'Прогресс'], ['profile', 'user', 'Профиль']],
-  teacher: [['t/home', 'grid', 'Обзор'], ['t/students', 'users', 'Ученики'], ['t/review', 'inbox', 'Проверка'], ['train', 'layers', 'Тренировка'], ['mock', 'timer', 'Пробник'], ['t/content', 'db', 'Контент'], ['profile', 'user', 'Профиль']]
+  // mock tests open only when the teacher assigns one: they come up on «Сегодня», not as a tab
+  student: [['today', 'today', 'Сегодня'], ['train', 'layers', 'Тренировка'], ['progress', 'trend', 'Прогресс'], ['profile', 'user', 'Профиль']],
+  // the teacher's own practice / mock pages live inside «Контент» (seen through the student's eyes); profile = avatar
+  teacher: [['t/home', 'grid', 'Обзор'], ['t/review', 'inbox', 'Проверка'], ['t/students', 'users', 'Ученики'], ['t/assign', 'cal', 'Назначения'], ['t/content', 'db', 'Контент']]
 };
+/** which tab a screen belongs to */
+function activeTab(path, r) {
+  const T = r === 'teacher';
+  const rules = [
+    [/^t\/student\//, 't/students'], [/^t\/(bank|calibration)/, 't/content'], [/^t\/assign/, 't/assign'], [/^t\/review/, 't/review'],
+    [/^(train|practice|write|speak|listen|exam)/, T ? 't/content' : 'train'], [/^mock/, T ? 't/content' : 'today'],
+    [/^work\//, 'progress'], [/^profile/, T ? '' : 'profile']
+  ];
+  const own = NAV[r].find(([p]) => path === p || path.startsWith(p + '/'));
+  if (own) return own[0];
+  for (const [re, tab] of rules) if (re.test(path)) return tab;
+  return NAV[r][0][0];
+}
 
 function resolve(path) {
   if (ROUTES[path]) return [ROUTES[path], []];
@@ -49,24 +66,30 @@ let current = null, seq = 0, lastPath = null;
 
 function renderNav(path) {
   const r = navRole(), items = NAV[r];
-  const active = items.find(([p]) => path === p || path.startsWith(p + '/'))?.[0] || (path.startsWith('practice') || path.startsWith('write') || path.startsWith('speak') || path.startsWith('listen') ? 'train' : path.startsWith('work') ? 'progress' : items[0][0]);
+  const active = activeTab(path, r);
   const u = isLive() ? session.user : null;
   const name = u ? u.name : r === 'teacher' ? demoTeacher.name : demoMe.full;
-  const reviewCnt = r === 'teacher' && !u ? demoQueue.length : 0;
+  const reviewCnt = r === 'teacher' ? (u ? navCache.queue || 0 : demoQueue.length) : 0;
+  // refresh the counters in the background (at most every 30 s), then redraw the menu once
+  if (u) navData(r === 'teacher').then(c => { if (c && lastPath === path) renderNav(path); });
+  const next = r === 'student' ? (u ? navCache.tasks?.[0] : demoMe.tasks?.[0]) : null;
   document.getElementById('pill').classList.toggle('many', items.length > 5);
   const pill = document.getElementById('pill'), key = r + ':' + items.length;
   if (pill.dataset.key !== key) { // build the tabs once per role; afterwards only switch the active one so the pill animates instead of flashing
     pill.dataset.key = key;
     pill.innerHTML = items.map(([p, i, l]) => `<a class="tab" href="#/${p}" data-p="${p}" aria-label="${l}">${ic(i, 22)}<span class="tl">${l}</span></a>`).join('');
   }
-  pill.querySelectorAll('.tab').forEach(a => { const on = a.dataset.p === active; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+  pill.querySelectorAll('.tab').forEach(a => {
+    const on = a.dataset.p === active; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    if (a.dataset.p === 't/review') { let b = a.querySelector('.pcnt'); if (reviewCnt) { if (!b) { b = document.createElement('span'); b.className = 'pcnt'; a.appendChild(b); } b.textContent = reviewCnt > 99 ? '99+' : reviewCnt; } else b?.remove(); }
+  });
   document.getElementById('rail').innerHTML = `
     <div class="brand"><span class="mk">${mark(24)}</span><b>NOEON TOEFL</b></div>
     <nav class="nav">${items.map(([p, i, l]) => `<a class="tab ${p === active ? 'on' : ''}" href="#/${p}">${ic(i, 21)}${l}${p === 't/review' && reviewCnt ? `<span class="cnt">${reviewCnt}</span>` : ''}</a>`).join('')}</nav>
     <div class="foot">
       ${isDemo() && hasApi() ? `<a class="railcta" href="#/login">${ic('user', 19)}<div><b>Демо-режим</b><span>войти в аккаунт</span></div></a>`
-        : r === 'student' ? `<a class="railcta" href="#/exam/reading">${ic('timer', 19)}<div><b>Модуль Reading</b><span>экзаменационная оболочка</span></div></a>` : ''}
-      <div class="who"><span class="av">${(name || '?')[0]}</span><div><b>${name}</b><span>${r === 'teacher' ? 'учитель' : 'ученик'}</span></div></div>
+        : next ? `<a class="railcta" href="${next.to}">${ic(next.mock ? 'timer' : 'clip', 19)}<div><b>${esc(next.nm)}</b><span>от учителя · ${esc(next.due)}</span></div></a>` : ''}
+      ${r === 'teacher' ? `<a class="who ${path === 'profile' ? 'on' : ''}" href="#/profile" title="Профиль и настройки">` : '<div class="who">'}<span class="av">${esc((name || '?')[0])}</span><div><b>${esc(name)}</b><span>${r === 'teacher' ? 'учитель · профиль' : 'ученик'}</span></div>${r === 'teacher' ? '</a>' : '</div>'}
     </div>`;
 }
 
@@ -82,6 +105,7 @@ async function route() {
     if (isLive() && PUBLIC.has(path)) { location.replace('#/' + home()); return; }
   }
   if (!path) path = home();
+  document.body.dataset.role = navRole();
   const hit = resolve(path);
   if (!hit) { location.replace('#/' + home()); return; }
   const [fn, params] = hit;
