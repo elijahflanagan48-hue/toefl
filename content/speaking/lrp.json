@@ -688,5 +688,50 @@
    "Remind all visitors to drink water, because the tents get very warm today.",
    "At the end of the day, please help us collect the chairs and clean the tables."
   ]
+ },
+ {
+  "id": "S-LRP-B-047",
+  "level": "B",
+  "title": "Dormitory welcome desk",
+  "scenario": "You are a student worker at a dormitory welcome desk. The residence manager is explaining your duties on move-in day.",
+  "sentences": [
+   "Please greet every new resident with a smile.",
+   "Ask each student for a name and a room number.",
+   "Give every resident a key and a copy of the house rules.",
+   "Tell families that parking is allowed for only thirty minutes.",
+   "If a student has a heavy box, call a volunteer to help carry it.",
+   "Remind everyone that the laundry room is open all day and all night.",
+   "At the end of the shift, write down any problems in the logbook."
+  ]
+ },
+ {
+  "id": "S-LRP-B-048",
+  "level": "B",
+  "title": "Farmers market volunteer",
+  "scenario": "You are a volunteer at the weekend farmers market on campus. The market coordinator is explaining how to help.",
+  "sentences": [
+   "Please arrive at the market by seven thirty.",
+   "First, help the farmers set up their tables.",
+   "Put the price signs where customers can see them easily.",
+   "Customers may taste the fruit, but they must use a clean spoon.",
+   "Please show visitors where to find the recycling bins.",
+   "If it starts to rain, move the boxes under the tents.",
+   "When the market closes, sweep the area and return the tables to the storage room."
+  ]
+ },
+ {
+  "id": "S-LRP-B-049",
+  "level": "B",
+  "title": "Pet adoption event helper",
+  "scenario": "You are helping at a pet adoption day organized by a student club. The club president is giving you instructions.",
+  "sentences": [
+   "Welcome to our adoption day, and thank you for helping today.",
+   "Please keep the dogs and the cats in separate areas.",
+   "Visitors should wash their hands before they touch any animal.",
+   "Each family needs to fill out a short form before adopting a pet.",
+   "Please explain that all of the animals have already seen a veterinarian.",
+   "If a dog seems nervous, give it some water and a quiet place to rest.",
+   "At the end of the day, help us clean the cages and count the forms."
+  ]
  }
 ]

@@ -670,5 +670,41 @@
    "Some people believe that cities should ban cars from the center. Do you agree or disagree?",
    "What change would make traveling around your city easier for students?"
   ]
+ },
+ {
+  "id": "S-INT-B-057",
+  "level": "B",
+  "title": "Hobbies and free time",
+  "scenario": "A student newspaper is writing about hobbies. You will answer four questions from a reporter.",
+  "questions": [
+   "What do you like to do in your free time?",
+   "How did you first become interested in your favorite hobby?",
+   "Some people say that hobbies are a waste of time for busy students. Do you agree or disagree?",
+   "What hobby would you recommend to a new student, and why?"
+  ]
+ },
+ {
+  "id": "S-INT-B-058",
+  "level": "B",
+  "title": "Cooking and eating",
+  "scenario": "A campus dining service is surveying students about food. You will answer four questions from an interviewer.",
+  "questions": [
+   "How often do you cook for yourself, and what do you usually make?",
+   "What do you like and dislike about the food at your university?",
+   "Some people believe that students should learn to cook before they start college. What is your opinion?",
+   "What could the dining hall do to help students eat more healthy meals?"
+  ]
+ },
+ {
+  "id": "S-INT-B-059",
+  "level": "B",
+  "title": "Weather and seasons",
+  "scenario": "A local radio program is talking to students about the weather. You will answer four questions from a host.",
+  "questions": [
+   "What is the weather usually like in your hometown?",
+   "Which season do you enjoy the most, and why?",
+   "Some people say that weather affects how people feel and work. Do you agree or disagree?",
+   "How should a university prepare students for very hot or very cold days?"
+  ]
  }
 ]

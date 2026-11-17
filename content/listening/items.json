@@ -24944,5 +24944,1265 @@
    "Inference",
    "Purpose"
   ]
+ },
+ {
+  "id": "L-ANN-B-084",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-084",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-084.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F2",
+  "words": 67,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Attention residents of Hartwell and Briggs Halls. Beginning Monday, quiet hours for finals week will start at eight p.m. instead of ten. Residents may study in the first-floor lounge until two a.m., and free coffee will be available there after midnight. Please remember that guests are not allowed in the building after ten p.m. during this week. If you have a noise problem, contact your resident advisor."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the announcement mainly about?",
+    "opts": [
+     "Changed quiet hours during finals week",
+     "A new rule for overnight guests in the halls",
+     "A coffee shop in the lounge",
+     "A noise complaint from a resident"
+    ]
+   },
+   {
+    "stem": "What will be available in the lounge after midnight?",
+    "opts": [
+     "Free coffee",
+     "Snacks and juice",
+     "A tutoring service",
+     "Extra computers"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   0
+  ],
+  "explain": [
+   "*quiet hours for finals week will start at eight p.m. instead of ten*. B — гости — деталь, не главное; C — кофе — деталь; D — жалоба не упоминается",
+   "*free coffee will be available there after midnight*. B — закуски не упоминаются; C — репетиторы не упоминаются; D — компьютеры не упоминаются"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-B-085",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-085",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-085.mp3",
+  "voices": "Narrator, Man = TOEFL US-M",
+  "words": 66,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "Good afternoon. The Campus Bike Cooperative will hold a free repair workshop this Saturday from ten to two behind the student union. Volunteers will show you how to fix flat tires and adjust brakes. You do not need to bring tools, but please bring your bike. Anyone who finishes the workshop can borrow a helmet for the whole semester. To sign up, visit the cooperative's website."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the purpose of the workshop?",
+    "opts": [
+     "To sell used bicycles to new students",
+     "To collect old helmets",
+     "To plan a new bike path",
+     "To teach students basic bike repair"
+    ]
+   },
+   {
+    "stem": "What can participants get after finishing the workshop?",
+    "opts": [
+     "A set of free tools to take home",
+     "A helmet to use for a semester",
+     "A discount at a bike shop",
+     "A certificate for volunteers"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   1
+  ],
+  "explain": [
+   "*show you how to fix flat tires and adjust brakes*. A — продажа не упоминается; B — сбор шлемов не упоминается; C — маршрут не обсуждается",
+   "*borrow a helmet for the whole semester*. A — инструменты приносить не нужно, но их не дарят; C — скидка не упоминается; D — сертификат не упоминается"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-B-086",
+  "type": "ANN",
+  "task": "lan",
+  "level": "B",
+  "short": "ANN-086",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-086.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F3",
+  "words": 66,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "Students planning to attend next month's Career Fair can get a free resume review at the Career Center. Reviews are offered on Tuesdays and Thursdays between one and four. Each appointment lasts twenty minutes, and walk-ins are welcome if there is space. Please bring a printed copy of your resume. Students who have their resumes reviewed early will receive a priority entry ticket to the fair."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What service does the Career Center offer?",
+    "opts": [
+     "Help finding a summer apartment",
+     "Practice job interviews",
+     "Free feedback on resumes",
+     "Printing of business cards"
+    ]
+   },
+   {
+    "stem": "What benefit do students get if they come early?",
+    "opts": [
+     "A longer appointment with a reviewer",
+     "Priority entry to the fair",
+     "A free printed resume",
+     "A reserved parking spot"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   1
+  ],
+  "explain": [
+   "*a free resume review*. A — жильё не упоминается; B — собеседования не упоминаются; D — визитки не упоминаются",
+   "*a priority entry ticket to the fair*. A — длительность одинакова — twenty minutes; C — печать резюме нужно принести самим; D — парковка не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-C-087",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-087",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-087.mp3",
+  "voices": "Narrator, Man = TOEFL UK-M3",
+  "words": 80,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "This is an update for students in Professor Hall's Introduction to Sociology course. Because of construction in Marlow Building, Wednesday's lecture will not be held in room 204. Instead, the class will meet in the Science Center, room 110, at the usual time. The professor also wants to remind everyone that the essay deadline has not changed, even though the move may be inconvenient. If you cannot attend because of the new location, please email the teaching assistant before class."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why is the class being moved?",
+    "opts": [
+     "The room is too small for all the students",
+     "A building is under construction",
+     "The professor is traveling",
+     "A guest speaker is visiting"
+    ]
+   },
+   {
+    "stem": "What does the professor remind students about?",
+    "opts": [
+     "The class will start later",
+     "The essay due date is the same",
+     "Attendance will not be required",
+     "The final exam is moved"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1
+  ],
+  "explain": [
+   "*Because of construction in Marlow Building*. A — размер аудитории не упоминается; C — профессор не уезжает; D — приглашённый лектор не упоминается",
+   "*the essay deadline has not changed*. A — время занятия обычное — usual time; C — про обязательность не сказано; D — экзамен не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-ANN-C-088",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-088",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-088.mp3",
+  "voices": "Narrator, Woman = TOEFL AU-F",
+  "words": 67,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Woman",
+    "text": "The Registrar's Office reminds students that the deadline to change a course to pass/fail is this Friday at five p.m. Students can make the change online, but they must first get approval from their academic advisor. Please note that courses taken pass/fail cannot count toward your major, and the change cannot be undone after the deadline. Advisors will hold extra office hours on Thursday to answer questions."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What must students do before changing a course to pass/fail?",
+    "opts": [
+     "Pay a fee at the Registrar's Office",
+     "Get permission from their advisor",
+     "Finish all the course homework",
+     "Attend an online meeting"
+    ]
+   },
+   {
+    "stem": "Why will advisors hold extra office hours?",
+    "opts": [
+     "To approve every request without a meeting",
+     "To teach the pass/fail courses",
+     "To plan next semester's schedule",
+     "To help students with questions about the change"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   3
+  ],
+  "explain": [
+   "*they must first get approval from their academic advisor*. A — оплата не упоминается; C — домашка не упоминается; D — онлайн-встреча не упоминается",
+   "*extra office hours on Thursday to answer questions*. A — одобрение не автоматическое; B — они не преподают эти курсы; C — расписание не обсуждается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-ANN-C-089",
+  "type": "ANN",
+  "task": "lan",
+  "level": "C",
+  "short": "ANN-089",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/ANN-089.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M",
+  "words": 75,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to an announcement at a university."
+   },
+   {
+    "who": "Man",
+    "text": "The Student Health Center will offer a flu shot clinic in the Student Union ballroom next Wednesday and Thursday from nine to four. Shots are free for students who show a valid student ID, and nurses will also accept most insurance plans for faculty and staff. The vaccine takes about two weeks to become fully effective, so health officials recommend getting it early. No appointment is needed, but lines are usually shortest in the morning."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Who can get a flu shot at no cost?",
+    "opts": [
+     "All faculty and staff",
+     "Anyone who has medical insurance",
+     "Students with a valid ID",
+     "Students who made an appointment"
+    ]
+   },
+   {
+    "stem": "Why do health officials recommend getting the shot early?",
+    "opts": [
+     "The clinic is open only for a few days",
+     "Lines get longer later in the year",
+     "Insurance plans change soon",
+     "The vaccine takes time to work fully"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   3
+  ],
+  "explain": [
+   "*free for students who show a valid student ID*. A — сотрудники — по страховке; B — страховка — для сотрудников; D — запись не нужна",
+   "*takes about two weeks to become fully effective*. A — клиника работает два дня, но это не причина; B — про очереди позже не сказано; C — страховка не упоминается"
+  ],
+  "qtypes": [
+   "Factual",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-B-094",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-094",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-094.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F3, Man = TOEFL CA-M2",
+  "words": 70,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a librarian."
+   },
+   {
+    "who": "Woman",
+    "text": "Library help desk. Can I help you?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes. I need a book for my history paper, but our library doesn't have it."
+   },
+   {
+    "who": "Woman",
+    "text": "We can borrow it from another university. It's called interlibrary loan."
+   },
+   {
+    "who": "Man",
+    "text": "How long does that take?"
+   },
+   {
+    "who": "Woman",
+    "text": "Usually about one week. You'll get an email when the book arrives."
+   },
+   {
+    "who": "Man",
+    "text": "My paper is due in ten days. Is that enough time?"
+   },
+   {
+    "who": "Woman",
+    "text": "It should be, but please make the request today."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the man talk to the librarian?",
+    "opts": [
+     "He needs a book that the library does not own",
+     "He wants to print his history paper for class",
+     "He would like to extend a due date",
+     "He lost a book from the library"
+    ]
+   },
+   {
+    "stem": "What does the woman advise the man to do?",
+    "opts": [
+     "Wait until the paper is finished",
+     "Buy the book at a local store",
+     "Make the request right away",
+     "Ask the professor for more time"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   2
+  ],
+  "explain": [
+   "*our library doesn't have it* и *interlibrary loan*. B — печать не обсуждается; C — продление срока не обсуждается; D — он ничего не терял",
+   "*please make the request today*. A — ждать не нужно, просить надо сегодня; B — покупка не упоминается; D — отсрочка не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-B-095",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-095",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-095.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M, Woman = TOEFL US-F2",
+  "words": 76,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Man",
+    "text": "Are you going to the study abroad meeting tonight?"
+   },
+   {
+    "who": "Woman",
+    "text": "I want to, but I have a lab until six."
+   },
+   {
+    "who": "Man",
+    "text": "The meeting starts at six thirty in the Global Center, so you can still make it."
+   },
+   {
+    "who": "Woman",
+    "text": "Do they talk about costs?"
+   },
+   {
+    "who": "Man",
+    "text": "Yes. Some programs cost less than a regular semester here, and there are scholarships too."
+   },
+   {
+    "who": "Woman",
+    "text": "That's good to hear. I'd love to study in Spain."
+   },
+   {
+    "who": "Man",
+    "text": "Then ask about the Madrid program. I'll save you a seat."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the woman hesitate to go to the meeting?",
+    "opts": [
+     "She cannot afford any program",
+     "Her lab ends shortly before it starts",
+     "She is not interested in studying in Spain",
+     "She does not know where it is"
+    ]
+   },
+   {
+    "stem": "What does the man say about the cost of study abroad?",
+    "opts": [
+     "Some programs are cheaper than a semester at school",
+     "All programs cost the same amount",
+     "Scholarships are not available",
+     "Students pay only for the airplane ticket to Spain"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   0
+  ],
+  "explain": [
+   "*I have a lab until six*; встреча в *six thirty*. A — деньги — не причина колебаний; C — Испания её как раз интересует; D — место не вызывает вопросов",
+   "*Some programs cost less than a regular semester here*. B — цены разные; C — стипендии есть; D — про один только билет не говорится"
+  ],
+  "qtypes": [
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-B-096",
+  "type": "CONV",
+  "task": "lco",
+  "level": "B",
+  "short": "CONV-096",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-096.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F, Man = TOEFL UK-M",
+  "words": 84,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a bike shop worker."
+   },
+   {
+    "who": "Woman",
+    "text": "Thanks for calling Campus Bike Shop. How can I help?"
+   },
+   {
+    "who": "Man",
+    "text": "Hi. The back tire on my bike keeps losing air."
+   },
+   {
+    "who": "Woman",
+    "text": "It's probably a small hole. We can fix it in about an hour. It costs six dollars, plus a new tube if you need one."
+   },
+   {
+    "who": "Man",
+    "text": "I have a class in thirty minutes. Can I pick the bike up later today?"
+   },
+   {
+    "who": "Woman",
+    "text": "That should be fine. The shop closes at five."
+   },
+   {
+    "who": "Man",
+    "text": "Great. I'll come back at four."
+   },
+   {
+    "who": "Woman",
+    "text": "Okay. Just ask for the repair under your name."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What problem does the man have?",
+    "opts": [
+     "The tire on his bike loses air",
+     "His bike was stolen",
+     "The brakes on his bike do not work well",
+     "The chain is broken"
+    ]
+   },
+   {
+    "stem": "When will the man return to the shop?",
+    "opts": [
+     "In about an hour",
+     "At four o'clock",
+     "Right after he finishes class",
+     "Tomorrow morning"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   1
+  ],
+  "explain": [
+   "*The back tire on my bike keeps losing air*. B — кражи нет; C — про тормоза нет речи; D — про цепь нет речи",
+   "*I'll come back at four*. A — час — время ремонта, не возвращения; C — после занятий он не говорит; D — возвращается сегодня"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-C-097",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-097",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-097.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M, Woman = TOEFL AU-F2",
+  "words": 94,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and an academic advisor."
+   },
+   {
+    "who": "Man",
+    "text": "Dr. Alvarez, thanks for seeing me. I'm thinking about leaving mechanical engineering for industrial design."
+   },
+   {
+    "who": "Woman",
+    "text": "That's a big change. What's behind it?"
+   },
+   {
+    "who": "Man",
+    "text": "I enjoy the creative side of my projects more than the calculations. But I'm worried about losing credits."
+   },
+   {
+    "who": "Woman",
+    "text": "Most of your engineering courses would still count, so you'd lose only about two classes. The bigger issue is the portfolio. Design applicants have to submit one."
+   },
+   {
+    "who": "Man",
+    "text": "I haven't made one yet."
+   },
+   {
+    "who": "Woman",
+    "text": "Then take the introductory studio next term as a trial before you officially switch."
+   },
+   {
+    "who": "Man",
+    "text": "That makes sense. I'd rather test it first."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "Why does the man visit his advisor?",
+    "opts": [
+     "To ask about a missing grade in his course",
+     "To get help with a calculation",
+     "To apply for a design job",
+     "To talk about changing his major"
+    ]
+   },
+   {
+    "stem": "What does the woman recommend?",
+    "opts": [
+     "Submitting a portfolio immediately",
+     "Finishing his engineering degree first",
+     "Taking an introductory course before deciding",
+     "Dropping two classes this term"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   2
+  ],
+  "explain": [
+   "*thinking about leaving mechanical engineering for industrial design*. A — оценка не обсуждается; B — вычисления лишь упомянуты как то, что ему менее интересно; C — работа не обсуждается",
+   "*take the introductory studio next term as a trial before you officially switch*. A — портфолио у него ещё нет; B — закончить инженерию она не советует; D — потеря двух курсов — следствие, а не совет"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Inference"
+  ]
+ },
+ {
+  "id": "L-CONV-C-098",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-098",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-098.mp3",
+  "voices": "Narrator, Man = TOEFL CA-M2, Woman = TOEFL AU-F",
+  "words": 90,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between a student and a professor."
+   },
+   {
+    "who": "Man",
+    "text": "Professor Kim, I'm applying for a research fellowship, and I was hoping you could write a recommendation letter."
+   },
+   {
+    "who": "Woman",
+    "text": "I'd be glad to. When is the deadline?"
+   },
+   {
+    "who": "Man",
+    "text": "The twentieth, but the online system needs your email address two weeks earlier."
+   },
+   {
+    "who": "Woman",
+    "text": "Then send me the details this week. Also, remind me which project you want me to mention."
+   },
+   {
+    "who": "Man",
+    "text": "The soil study from last spring. I analyzed the data and wrote the final section."
+   },
+   {
+    "who": "Woman",
+    "text": "Good. Send me your resume as well, so I can include specific details."
+   },
+   {
+    "who": "Man",
+    "text": "Of course. Thank you so much."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What does the man ask the professor to do?",
+    "opts": [
+     "Write a letter that supports his application",
+     "Review the data from his research project",
+     "Recommend a fellowship to him",
+     "Lend him a laptop for the soil study"
+    ]
+   },
+   {
+    "stem": "What will the woman need from the man?",
+    "opts": [
+     "A finished research proposal",
+     "A copy of an older letter",
+     "The fellowship payment schedule",
+     "Information about his past work"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   3
+  ],
+  "explain": [
+   "*write a recommendation letter*. B — данные она не проверяет; C — стипендию он уже выбрал; D — ноутбук не упоминается",
+   "*Send me the details* и *Send me your resume*. A — предложение она не просит; B — старое письмо не упоминается; C — график выплат не упоминается"
+  ],
+  "qtypes": [
+   "Purpose",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-CONV-C-099",
+  "type": "CONV",
+  "task": "lco",
+  "level": "C",
+  "short": "CONV-099",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/CONV-099.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F2, Man = TOEFL US-M2",
+  "words": 74,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a conversation between two students."
+   },
+   {
+    "who": "Woman",
+    "text": "Have you heard from Jordan? He hasn't answered any messages about our presentation."
+   },
+   {
+    "who": "Man",
+    "text": "No. And he skipped our last meeting."
+   },
+   {
+    "who": "Woman",
+    "text": "We're running out of time. His part is the data analysis, and it's the hardest section."
+   },
+   {
+    "who": "Man",
+    "text": "Should we tell the professor?"
+   },
+   {
+    "who": "Woman",
+    "text": "Not yet. Let's give him one more chance. If he doesn't reply by tomorrow, we'll divide his section between us."
+   },
+   {
+    "who": "Man",
+    "text": "Okay. I can take the charts, and you can write the summary."
+   },
+   {
+    "who": "Woman",
+    "text": "Deal."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What problem are the speakers discussing?",
+    "opts": [
+     "A presentation that was canceled",
+     "A professor who changed the topic",
+     "A teammate who is not responding",
+     "A chart that contains errors"
+    ]
+   },
+   {
+    "stem": "What will the speakers do if Jordan stays silent?",
+    "opts": [
+     "Tell the professor right away",
+     "Share his work between themselves",
+     "Replace him with another student",
+     "Move the presentation to a later date"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   1
+  ],
+  "explain": [
+   "*He hasn't answered any messages*. A — презентацию не отменяли; B — тему никто не менял; D — ошибок в графиках не упоминается",
+   "*we'll divide his section between us*. A — профессору — «not yet»; C — замена не упоминается; D — перенос не упоминается"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-TALK-B-076",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-076",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-076.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F2",
+  "words": 196,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a biology class."
+   },
+   {
+    "who": "Woman",
+    "text": "Today I want to talk about a living thing that many people walk past every day: lichen. Lichens are the flat, colorful patches you see on rocks and tree trunks. What many people don't realize is that a lichen is not one organism but two. It is a partnership between a fungus and an alga. The fungus provides the structure. It holds water and protects the alga from strong sunlight. The alga, in return, makes food from sunlight through photosynthesis and shares it with the fungus. Scientists call this kind of relationship symbiosis, because both partners benefit. Because of this teamwork, lichens can grow where almost nothing else can, such as bare rock in the mountains or the cold ground near the Arctic. They grow very slowly, sometimes less than a millimeter a year, so a large patch may be hundreds of years old. Lichens also absorb substances directly from the air, so they are very sensitive to pollution. If lichens disappear from a city's trees, researchers often take it as a warning that the air quality is getting worse. For this reason, some scientists use lichens as a simple, cheap way to monitor the environment."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "How fungi are used in medicine",
+     "How lichens are formed and why they are useful",
+     "Why algae grow quickly on trees",
+     "A method for removing pollution from the air"
+    ]
+   },
+   {
+    "stem": "What does the alga provide to the fungus?",
+    "opts": [
+     "Protection from strong light",
+     "Food made from sunlight",
+     "Water stored for dry periods",
+     "A hard outer structure"
+    ]
+   },
+   {
+    "stem": "Why are lichens sensitive to pollution?",
+    "opts": [
+     "They grow too slowly to recover from damage quickly",
+     "They need very clean water to survive at all",
+     "They have no fungus to protect them from the weather",
+     "They take in substances directly from the air"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention lichens disappearing from city trees?",
+    "opts": [
+     "To show how they can signal poor air quality",
+     "To explain why lichens grow slowly",
+     "To argue that cities should plant more trees",
+     "To compare lichens with algae"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   1,
+   3,
+   0
+  ],
+  "explain": [
+   "*a lichen is not one organism but two*, и *a simple, cheap way to monitor the environment*. A — медицина не упоминается; C — про быстрый рост водорослей не сказано, лишения растут медленно; D — удаление загрязнения не обсуждается",
+   "*The alga, in return, makes food from sunlight*. A — защиту даёт гриб; C — воду держит гриб; D — структуру даёт гриб",
+   "*Lichens also absorb substances directly from the air*. A — медленный рост — другой факт; B — вода не упоминается; C — у лишайника гриб есть",
+   "*researchers often take it as a warning that the air quality is getting worse*. B — медленный рост упомянут отдельно; C — посадка деревьев не обсуждается; D — сравнения с водорослями нет"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-TALK-B-077",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-077",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-077.mp3",
+  "voices": "Narrator, Man = TOEFL US-M",
+  "words": 211,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an archaeology class."
+   },
+   {
+    "who": "Man",
+    "text": "In today's class, I'd like to explain how archaeologists can give a precise date to a piece of wood using only its rings. This method is called dendrochronology. As you know, a tree adds one ring every year. In a wet year the ring is wide, and in a dry year it is narrow. So over time a tree records a pattern of good and bad years, a bit like a barcode. Now, a single tree lives only a few hundred years. But researchers noticed that the patterns from trees of different ages overlap. By matching the inner rings of a young tree with the outer rings of an older one, they can build a continuous chart that goes back thousands of years. When archaeologists find a wooden beam in an old building, they compare its ring pattern to this chart. If the pattern matches a certain stretch of years, they know when the tree was cut down. One famous use of this method was in dating the roofs of medieval churches in Europe. It showed that some roofs were built decades later than historians had thought. Of course, the method has limits. It works best in regions with clear seasons, and it can only date wood, not stone or metal."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main topic of the talk?",
+    "opts": [
+     "Why some trees live for thousands of years in forests",
+     "How tree rings can be used to date wooden objects",
+     "How medieval churches were built",
+     "How archaeologists protect old buildings"
+    ]
+   },
+   {
+    "stem": "What does a narrow ring usually show?",
+    "opts": [
+     "A very old tree",
+     "A wet year",
+     "A tree that was cut early",
+     "A dry year"
+    ]
+   },
+   {
+    "stem": "How do researchers build a chart that covers thousands of years?",
+    "opts": [
+     "By counting the rings of the oldest living tree in the world",
+     "By measuring the thickness of old beams",
+     "By combining tree rings with samples of stone",
+     "By matching overlapping patterns from trees of different ages"
+    ]
+   },
+   {
+    "stem": "What is one limit of dendrochronology?",
+    "opts": [
+     "It can only be used on wood",
+     "It requires trees that are thousands of years old",
+     "It only works in places with no seasons",
+     "It cannot be used on buildings"
+    ]
+   }
+  ],
+  "key": [
+   1,
+   3,
+   3,
+   0
+  ],
+  "explain": [
+   "*give a precise date to a piece of wood using only its rings*. A — долгожительство деревьев не обсуждается; C — церкви — лишь пример; D — защита зданий не обсуждается",
+   "*in a dry year it is narrow*. A — возраст не по ширине; B — мокрый год даёт широкое кольцо; C — время рубки не по ширине",
+   "*matching the inner rings of a young tree with the outer rings of an older one*. A — одно дерево живёт лишь несколько сотен лет; B — толщина балок не используется; C — камень датировать этим методом нельзя",
+   "*it can only date wood, not stone or metal*. B — древние деревья не нужны; C — нужны чёткие сезоны; D — здания как раз датируют"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Method",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-TALK-B-078",
+  "type": "TALK",
+  "task": "lat",
+  "level": "B",
+  "short": "TALK-078",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-078.mp3",
+  "voices": "Narrator, Woman = TOEFL UK-F3",
+  "words": 192,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an earth science class."
+   },
+   {
+    "who": "Woman",
+    "text": "Let's turn to permafrost, which is ground that stays frozen for at least two years in a row. In places such as Siberia, Alaska, and northern Canada, permafrost can extend hundreds of meters below the surface. In summer, only the top layer, called the active layer, thaws. Plants grow in that layer, but their roots cannot go deeper because of the ice. For a long time, people considered permafrost a stable foundation, and they built houses, roads, and pipelines on it. Today, though, that is changing. As the climate warms, the frozen ground is beginning to thaw. When the ice inside the soil melts, the ground sinks and becomes uneven, and buildings can crack or lean. In some villages, residents have had to move their homes. There is another concern as well. Permafrost contains large amounts of plant material that froze before it could decay. When it thaws, microbes begin to break this material down and release gases such as carbon dioxide and methane into the atmosphere. These gases trap heat, which can speed up warming even more. Because of this, scientists are paying close attention to how fast permafrost is thawing."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "Why plants cannot grow in very cold places at all",
+     "How people build houses in the Arctic",
+     "Why some regions have no winter",
+     "How thawing permafrost affects buildings and the climate"
+    ]
+   },
+   {
+    "stem": "What is the active layer?",
+    "opts": [
+     "The top layer that thaws in summer",
+     "The deepest layer of frozen ground below the surface",
+     "A layer of ice that lies under city buildings",
+     "The layer that holds the most gas"
+    ]
+   },
+   {
+    "stem": "Why do buildings on permafrost sometimes crack?",
+    "opts": [
+     "The ground sinks when ice in the soil melts",
+     "The soil becomes too dry and hard to support them",
+     "Plant roots grow under the walls",
+     "Strong winds move the ice"
+    ]
+   },
+   {
+    "stem": "What happens when microbes break down thawed plant material?",
+    "opts": [
+     "The soil becomes frozen again",
+     "Plants grow faster in the active layer",
+     "Permafrost spreads to new regions",
+     "Gases that trap heat are released"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   0,
+   0,
+   3
+  ],
+  "explain": [
+   "*the frozen ground is beginning to thaw*, затем здания и газы. A — растения — деталь; B — строительство — лишь фон; C — про отсутствие зимы не сказано",
+   "*only the top layer, called the active layer, thaws*. B — глубокий слой остаётся мёрзлым; C — лёд под зданиями — не определение; D — газ не определяет слой",
+   "*the ground sinks and becomes uneven, and buildings can crack*. B — сухость не упоминается; C — корни не доходят вглубь; D — ветер не упоминается",
+   "*release gases such as carbon dioxide and methane*. A — почва не замерзает; B — про рост растений не сказано; C — мерзлота не расширяется"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-TALK-C-079",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-079",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-079.mp3",
+  "voices": "Narrator, Man = TOEFL AU-M3",
+  "words": 214,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in an ecology class."
+   },
+   {
+    "who": "Man",
+    "text": "Let's discuss mangrove forests, which grow along tropical coastlines where fresh river water meets the sea. Few trees can handle that environment, because the soil is muddy, low in oxygen, and salty. Mangroves have solved these problems in several ways. Many species have roots that rise above the mud and act like snorkels, taking in air at low tide. Others filter out salt at the roots, and some release extra salt through their leaves, which sometimes look white and crusty. The benefits to the coast are considerable. The tangled roots slow waves and trap sediment, so they reduce erosion and protect villages from storms. After a major cyclone in one region, researchers found that villages behind wide mangrove belts suffered much less damage than those with none. Underwater, the roots also provide shelter for young fish and crabs, which is why many commercial fisheries depend on healthy mangroves, even though the fish are caught far away. Despite this, about a third of the world's mangroves have disappeared in recent decades, largely because they were cleared for shrimp farms. Ironically, many of those farms were abandoned after a few years, when the soil became too polluted to use. Conservation groups now argue that restoring mangroves is cheaper and more effective than building concrete sea walls."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main idea of the talk?",
+    "opts": [
+     "Mangroves grow best in fresh water",
+     "Shrimp farms improve coastal soil",
+     "Concrete sea walls are better than natural forests",
+     "Mangroves are valuable to coasts and to people"
+    ]
+   },
+   {
+    "stem": "According to the professor, how do some mangroves deal with salt?",
+    "opts": [
+     "They store it in their roots",
+     "They absorb it from the mud",
+     "They release it through their leaves",
+     "They wash it away at low tide"
+    ]
+   },
+   {
+    "stem": "What can be inferred about fisheries far from the coast?",
+    "opts": [
+     "They never catch crabs or small fish",
+     "They are protected by sea walls",
+     "Their catches can depend on mangrove habitats",
+     "They are not affected by coastal changes"
+    ]
+   },
+   {
+    "stem": "Why does the professor mention shrimp farms?",
+    "opts": [
+     "To show how mangroves protect fish",
+     "To describe a successful business",
+     "To explain a major cause of mangrove loss",
+     "To compare farms with sea walls"
+    ]
+   }
+  ],
+  "key": [
+   3,
+   2,
+   2,
+   2
+  ],
+  "explain": [
+   "Лекция о приспособлениях, пользе и исчезновении мангров. A — они растут там, где пресная вода встречается с морем; B — фермы разрушают почву; C — лектор приводит доводы за леса, а не стены",
+   "*some release extra salt through their leaves*. A — корни фильтруют, а не накапливают; B — ил не поглощает соль; D — отлив не упомянут в этой связи",
+   "*many commercial fisheries depend on healthy mangroves, even though the fish are caught far away*. A — крабы как раз упомянуты; B — стены не упоминаются; D — вывод противоположный",
+   "*cleared for shrimp farms*. A — защита рыбы — другой пункт; B — бизнес оказался неудачным; D — сравнения с стенами о фермах нет"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Method",
+   "Inference",
+   "Purpose"
+  ]
+ },
+ {
+  "id": "L-TALK-C-080",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-080",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-080.mp3",
+  "voices": "Narrator, Woman = TOEFL US-F2",
+  "words": 190,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a business class."
+   },
+   {
+    "who": "Woman",
+    "text": "Today I want to examine a business practice that many consumers find frustrating: planned obsolescence. This means designing a product so that it becomes outdated or stops working after a limited time, which encourages customers to replace it. The idea gained attention in the 1920s, when a group of light bulb manufacturers reportedly agreed to limit the life of their bulbs to one thousand hours, although the bulbs had previously lasted much longer. Critics say such strategies waste resources and create unnecessary electronic waste. Defenders, however, offer another view. They argue that newer designs bring real improvements, and that customers often want a new model long before the old one breaks. In that sense, products become obsolete because of fashion or technology, not poor quality. Lately, the debate has shifted toward repair. Some governments now require companies to provide spare parts and repair manuals, so devices can be fixed instead of thrown away. Companies resist these rules, claiming that open repair can damage safety and the quality of their products. As a result, one question remains unsettled: should a company decide how long a product lasts, or should the customer?"
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the talk mainly about?",
+    "opts": [
+     "Different views on products designed to have a limited life",
+     "How light bulbs are made and sold to customers",
+     "Why customers usually prefer old products to new ones",
+     "How to repair electronic devices at home and save money"
+    ]
+   },
+   {
+    "stem": "What happened with light bulbs in the 1920s, according to the professor?",
+    "opts": [
+     "Manufacturers made them cheaper to produce for stores",
+     "Customers asked for brighter bulbs in their homes",
+     "Manufacturers agreed to shorten their lifespan",
+     "Governments limited their sale across the whole country"
+    ]
+   },
+   {
+    "stem": "What do defenders of planned obsolescence say?",
+    "opts": [
+     "Products are designed to break down on purpose",
+     "Repair is always cheaper than buying a new one",
+     "Old products are safer than new ones",
+     "Customers often want new models before old ones fail"
+    ]
+   },
+   {
+    "stem": "Why do some companies oppose the repair rules?",
+    "opts": [
+     "They do not want to produce spare parts",
+     "They think customers dislike repairing",
+     "They believe open repair can reduce safety and quality",
+     "They want to raise the prices of their new models"
+    ]
+   }
+  ],
+  "key": [
+   0,
+   2,
+   3,
+   2
+  ],
+  "explain": [
+   "*planned obsolescence* и спор критиков и защитников. B — лампы — лишь пример; C — клиенты хотят новые модели; D — ремонт — лишь часть дебатов",
+   "*agreed to limit the life of their bulbs to one thousand hours*. A — цена не упоминается; B — яркость не упоминается; D — государство не упоминается",
+   "*customers often want a new model long before the old one breaks*. A — это позиция критиков; B — ремонт — другая тема; C — безопасность — довод компаний против ремонта",
+   "*open repair can damage safety and the quality of their products*. A — про нежелание делать запчасти не сказано; B — мнение клиентов не упоминается; D — цены не упоминаются"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Factual"
+  ]
+ },
+ {
+  "id": "L-TALK-C-081",
+  "type": "TALK",
+  "task": "lat",
+  "level": "C",
+  "short": "TALK-081",
+  "status": "active",
+  "test": null,
+  "audio": "audio/L/TALK-081.mp3",
+  "voices": "Narrator, Woman = TOEFL CA-F",
+  "words": 198,
+  "transcript": [
+   {
+    "who": "Narrator",
+    "text": "Listen to a talk in a geography class."
+   },
+   {
+    "who": "Woman",
+    "text": "When you look at a flat map of the world, you are looking at a compromise. The Earth is a sphere, and it is impossible to flatten a sphere without distorting something. Cartographers call the different ways of flattening it projections, and each one preserves some qualities while sacrificing others. The most famous is the Mercator projection, created in 1569 for sailors. Its great advantage is that a straight line on the map keeps a constant compass direction, so navigators could draw a course and follow it. But Mercator maps pay a price: areas near the poles look much larger than they really are. Greenland, for example, appears about as big as Africa, even though Africa is roughly fourteen times larger. Mercator maps were used in classrooms for centuries, so many people have a distorted idea of how large countries really are. Other projections try to fix this. Some keep the sizes of continents accurate but stretch their shapes, while others cut the globe into separate sections, like peeling an orange. No map is perfect, so mapmakers choose the projection that fits their purpose. A sailor wants correct directions, while a teacher comparing countries may want correct areas."
+   }
+  ],
+  "qs": [
+   {
+    "stem": "What is the main point of the talk?",
+    "opts": [
+     "The Mercator projection is the most accurate and useful map ever made",
+     "Sailors no longer use paper maps",
+     "Flat maps always distort the Earth, so mapmakers choose carefully",
+     "Greenland is larger than Africa"
+    ]
+   },
+   {
+    "stem": "What was the main advantage of the Mercator projection?",
+    "opts": [
+     "A straight line shows a constant direction",
+     "It shows all countries at their correct size",
+     "It divides the globe into sections",
+     "It is easy to print in classrooms"
+    ]
+   },
+   {
+    "stem": "Why does Greenland look so large on Mercator maps?",
+    "opts": [
+     "The island is close to Africa",
+     "Cartographers measured the island incorrectly",
+     "Areas near the poles are stretched",
+     "Its shape was changed to fit the sea"
+    ]
+   },
+   {
+    "stem": "What does the professor imply about choosing a projection?",
+    "opts": [
+     "Teachers should avoid all projections",
+     "The best choice depends on the map's purpose",
+     "Only sailors need accurate maps",
+     "Newer projections are always better"
+    ]
+   }
+  ],
+  "key": [
+   2,
+   0,
+   2,
+   1
+  ],
+  "explain": [
+   "*it is impossible to flatten a sphere without distorting something*. A — Меркатор искажает размеры; B — про современных моряков не сказано; D — Африка намного больше",
+   "*a straight line on the map keeps a constant compass direction*. B — размеры искажены; C — разрезание — другие проекции; D — печать не упоминается",
+   "*areas near the poles look much larger than they really are*. A — близость к Африке не причина; B — это не ошибка измерения, а свойство проекции; D — форма не меняется ради моря",
+   "*mapmakers choose the one that fits their purpose*. A — избегать проекций невозможно; C — точные карты нужны и учителям; D — идеальной проекции нет"
+  ],
+  "qtypes": [
+   "Main Idea",
+   "Factual",
+   "Factual",
+   "Inference"
+  ]
  }
 ]
