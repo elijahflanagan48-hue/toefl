@@ -2,6 +2,9 @@ name = "noeon-toefl-api"
 main = "src/index.js"
 compatibility_date = "2026-09-01"
 
+# Own address for the API: *.workers.dev is cut by some Russian providers, a custom domain is not.
+routes = [{ pattern = "toefl-api.noeon.org", custom_domain = true }]
+
 [vars]
 # Comma-separated list of origins allowed to call the API (GitHub Pages site + local dev).
 # Audio recordings: R2 bucket noeon-toefl-audio (created 2026-10-30).
