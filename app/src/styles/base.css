@@ -40,25 +40,34 @@ p{margin:0}
 .lbl .lnk{font-size:13.5px;font-weight:650;color:var(--pri)}
 :root[data-theme="dark"] .lbl .lnk{color:var(--gold)}
 
-/* ---------- mobile nav: floating pill ---------- */
-.pill{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:40;
-  display:flex;gap:4px;padding:6px;background:var(--surf);border:1px solid var(--line);border-radius:999px;box-shadow:var(--sh);
-  transition:transform .38s var(--ease),opacity .3s ease;touch-action:manipulation;contain:layout style}
-.pill.hide{transform:translate(-50%,140%);opacity:0;pointer-events:none}
-.pill .tab{display:flex;align-items:center;gap:7px;height:44px;padding:0 13px;border-radius:999px;color:var(--fade);
-  font-size:14px;font-weight:650;white-space:nowrap;transition:background-color .16s ease,color .16s ease;touch-action:manipulation;-webkit-user-select:none;user-select:none}
-.pill .tab .tl{display:none}
-.pill .tab.on{background:var(--pri);color:var(--on-pri);padding:0 16px 0 13px}
-.pill .tab.on .tl{display:inline}
-.pill .tab:not(.on):active{background:var(--surf2)}
-.pill .tab .dotb{width:7px;height:7px;border-radius:50%;background:var(--gold-2);margin-left:-6px;margin-top:-16px}
-@media (max-width:370px){.pill .tab{padding:0 11px}.pill .tab.on{padding:0 13px 0 11px}}
+/* ---------- mobile nav: glass bar, a capsule slides under the active tab (lib/navglass.js) ---------- */
+.pill{position:fixed;left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));bottom:calc(10px + env(safe-area-inset-bottom));max-width:520px;margin:0 auto;z-index:40;
+  display:flex;gap:2px;padding:5px;border-radius:30px;background:color-mix(in srgb,var(--surf) 78%,transparent);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);backdrop-filter:blur(18px) saturate(180%);
+  border:1px solid color-mix(in srgb,var(--line) 70%,transparent);box-shadow:var(--sh);
+  touch-action:none;-webkit-user-select:none;user-select:none;transform-origin:50% 100%;transition:transform .38s var(--ease),opacity .3s ease}
+.pill.hide{transform:translateY(140%);opacity:0;pointer-events:none}
+.pill .tab{position:relative;z-index:1;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;padding:0 2px;border-radius:24px;color:var(--fade);
+  font-size:10.5px;font-weight:650;white-space:nowrap;background:transparent;-webkit-touch-callout:none;-webkit-user-drag:none;transition:color .22s ease,transform .35s cubic-bezier(.3,1.5,.5,1)}
+.pill .tab .tl{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;line-height:1}
+.pill .tab.on{color:var(--tx)}
+.pill .tab.on svg{stroke-width:2.2}
+.pill .tab.nav-under{transform:scale(1.1)}
+.pill .tab .dotb{display:none}
+.nav-pill{position:absolute;left:0;top:5px;bottom:5px;width:64px;z-index:0;pointer-events:none;opacity:0;will-change:transform}
+.nps,.np{position:absolute;inset:0;will-change:transform}
+.np i{position:absolute;inset:0;border-radius:24px}
+.np-rest{background:var(--pri-soft);box-shadow:inset 0 1px 0 rgba(255,255,255,.55)}
+.np-lens{opacity:0;background:rgba(255,255,255,.12);box-shadow:inset 0 1.5px 1px rgba(255,255,255,.95),inset 0 -1.5px 2px rgba(255,255,255,.55),0 10px 24px rgba(15,32,48,.18)}
+:root[data-theme="dark"] .np-rest{background:rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.14)}
+:root[data-theme="dark"] .np-lens{background:rgba(255,255,255,.05);box-shadow:inset 0 1.5px 1px rgba(255,255,255,.35),inset 0 -1px 2px rgba(255,255,255,.15),0 10px 24px rgba(0,0,0,.45)}
+.nav-haptic{position:fixed;left:-200px;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
 
 /* ---------- desktop: left rail ---------- */
 @media (min-width:960px){
   .shell{display:grid;grid-template-columns:var(--rail) minmax(0,1fr)}
   .rail{display:flex;flex-direction:column;position:sticky;top:0;height:100vh;padding:22px 16px 18px;border-right:1px solid var(--line);background:var(--surf)}
-  .pill{display:none}
+  .pill,.nav-haptic{display:none}
   .app{padding:0 36px 60px;width:100%;max-width:1220px;margin:0}
   .app.wide{max-width:1220px}
   .hdr{padding-top:26px}
@@ -99,12 +108,9 @@ p{margin:0}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .brand>b{font-family:var(--ffd);font-size:18px;letter-spacing:-.01em}
 /* six tabs (teacher): on narrow phones keep the active tab icon-only so the pill fits */
-@media (max-width:440px){.pill.many .tab.on .tl{display:none}.pill.many .tab.on{padding:0 13px}.pill.many .tab{padding:0 11px}}
 
 /* review counter on the phone menu; profile button in the header for teachers on phones (no profile tab) */
-.pill .tab{position:relative}
-.pill .tab .pcnt{position:absolute;top:3px;right:2px;min-width:17px;height:17px;padding:0 4px;box-sizing:border-box;border-radius:9px;background:var(--gold-2);color:#fff;font:700 10.5px/17px var(--ff);text-align:center;box-shadow:0 0 0 2px var(--surf)}
-.pill .tab.on .pcnt{position:static;margin-left:2px;box-shadow:none}
+.pill .tab .pcnt{position:absolute;top:2px;left:calc(50% + 4px);min-width:17px;height:17px;padding:0 4px;box-sizing:border-box;border-radius:9px;background:var(--gold-2);color:#fff;font:700 10.5px/17px var(--ff);text-align:center;box-shadow:0 0 0 2px var(--surf)}
 .rail a.who{color:var(--tx)}
 .rail a.who:hover,.rail a.who.on{background:var(--pri-soft)}
 @media (min-width:960px){.me-mob{display:none!important}}

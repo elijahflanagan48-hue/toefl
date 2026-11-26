@@ -5,6 +5,7 @@ import { hasApi, isDemo, isLive, session, loadMe, post } from './lib/api.js';
 import { me as demoMe, teacher as demoTeacher, queue as demoQueue } from './data/mock.js';
 import { navCache, navData } from './data/source.js';
 import { esc } from './lib/util.js';
+import { initNavGlass } from './lib/navglass.js';
 
 import today from './views/today.js';
 import train from './views/train.js';
@@ -73,11 +74,11 @@ function renderNav(path) {
   // refresh the counters in the background (at most every 30 s), then redraw the menu once
   if (u) navData(r === 'teacher').then(c => { if (c && lastPath === path) renderNav(path); });
   const next = r === 'student' ? (u ? navCache.tasks?.[0] : demoMe.tasks?.[0]) : null;
-  document.getElementById('pill').classList.toggle('many', items.length > 5);
   const pill = document.getElementById('pill'), key = r + ':' + items.length;
   if (pill.dataset.key !== key) { // build the tabs once per role; afterwards only switch the active one so the pill animates instead of flashing
     pill.dataset.key = key;
-    pill.innerHTML = items.map(([p, i, l]) => `<a class="tab" href="#/${p}" data-p="${p}" aria-label="${l}">${ic(i, 22)}<span class="tl">${l}</span></a>`).join('');
+    pill.querySelectorAll('a.tab').forEach(a => a.remove());
+    pill.insertAdjacentHTML('beforeend', items.map(([p, i, l]) => `<a class="tab" href="#/${p}" data-p="${p}" aria-label="${l}">${ic(i, 22)}<span class="tl">${l}</span></a>`).join(''));
   }
   pill.querySelectorAll('.tab').forEach(a => {
     const on = a.dataset.p === active; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
@@ -184,7 +185,6 @@ async function route() {
 const warm = e => {
   const a = e.target.closest && e.target.closest('#pill .tab, #rail .tab'); if (!a) return;
   const path = (a.getAttribute('href') || '').replace(/^#\/?/, '');
-  if (a.closest('#pill')) document.querySelectorAll('#pill .tab').forEach(t => t.classList.toggle('on', t === a)); // instant response
   const hit = path && resolve(path); if (!hit) return;
   try { const v = hit[0](hit[1]); if (v && v.then) v.catch(() => {}); } catch (e) {}
 };
@@ -243,6 +243,7 @@ matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
 window.addEventListener('nt-toast', e => toast(e.detail));
 
 applyTheme(pref.get('themeMode', 'auto'));
+initNavGlass();
 route();
 
 /* installable app: offline shell via the service worker; the install prompt is kept for the profile page */
