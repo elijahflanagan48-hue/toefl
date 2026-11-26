@@ -30,8 +30,11 @@ export async function api(method, path, data, { raw, type, headers = {} } = {}) 
   if (raw !== undefined) { h['Content-Type'] = type; body = raw; }
   else if (data !== undefined) { h['Content-Type'] = 'application/json'; body = JSON.stringify(data); }
   let r;
-  try { r = await fetch(API_URL + path, { method, headers: h, body }); }
-  catch (e) { throw new ApiError(0, 'offline', 'Нет связи с сервером'); }
+  // a blocked or dead connection must not spin forever: give up after 15 s (60 s for audio uploads)
+  const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), raw !== undefined ? 60000 : 15000);
+  try { r = await fetch(API_URL + path, { method, headers: h, body, signal: ctl.signal }); }
+  catch (e) { throw new ApiError(0, 'offline', e && e.name === 'AbortError' ? 'Сервер не отвечает. Проверьте интернет или попробуйте через минуту' : 'Нет связи с сервером'); }
+  finally { clearTimeout(timer); }
   const ct = r.headers.get('Content-Type') || '';
   const out = ct.includes('json') ? await r.json().catch(() => ({})) : r;
   if (!r.ok) {
