@@ -93,6 +93,13 @@ function renderNav(path) {
     </div>`;
 }
 
+/* Screens of the main tabs are remembered: tapping a tab paints the last version at once, fresh data replaces it in the background.
+   Scroll position is remembered per screen as well, so switching tabs feels like switching apps. */
+const TAB_PATHS = new Set([...NAV.student, ...NAV.teacher].map(x => x[0]));
+const vcache = new Map(), scrollMem = new Map();
+const vkey = path => (session.user?.id || 'demo') + ':' + path;
+const busy = () => { const a = document.activeElement; return !!(a && a !== document.body && a.matches && a.matches('input,textarea,select,[contenteditable]') && a.closest('#app')); };
+
 async function route() {
   const my = ++seq;
   let path = (location.hash.replace(/^#\/?/, '').split('?')[0] || '').replace(/\/$/, '');
@@ -110,45 +117,65 @@ async function route() {
   if (!hit) { location.replace('#/' + home()); return; }
   const [fn, params] = hit;
 
+  const soft = !!route.soft;
+  if (!soft && lastPath !== null && TAB_PATHS.has(lastPath)) scrollMem.set(vkey(lastPath), window.scrollY);
   if (current && current.unmount) current.unmount();
+  current = null;
   closeModal();
   const app = document.getElementById('app');
+
+  // the menu answers the touch immediately, before any data is loaded
+  if (!soft && !document.body.classList.contains('examing')) renderNav(path);
+
+  const paint = (view, { keep, restore } = {}) => {
+    current = view;
+    document.body.classList.toggle('examing', !!view.exam);
+    document.body.classList.toggle('authing', !!view.auth);
+    document.getElementById('pill').classList.toggle('hide', !!view.exam || !!view.auth);
+    if (!view.exam && !view.auth) renderNav(path);
+    app.className = 'app' + (view.wide ? ' wide' : '');
+    if (view.html != null) app.innerHTML = view.html;
+    if (view.mount) view.mount(app);
+    document.title = (view.title ? view.title + ' · ' : '') + 'NOEON TOEFL';
+    if (!keep) window.scrollTo(0, restore || 0);
+  };
+
+  const key = vkey(path), canCache = TAB_PATHS.has(path);
+  const stale = canCache && !soft ? vcache.get(key) : null;
+  if (stale) paint(stale, { restore: scrollMem.get(key) || 0 });
+
   let view, skelT = 0;
   try {
     view = fn(params);
     if (view && typeof view.then === 'function') {
-      // keep the old screen until the data arrives; show the skeleton only if it takes noticeably long
-      if (!route.soft) skelT = setTimeout(() => { if (my === seq) app.innerHTML = '<div class="skel"></div><div class="skel"></div>'; }, 260);
+      // nothing cached yet: show the skeleton only if the data takes noticeably long
+      if (!soft && !stale) skelT = setTimeout(() => { if (my === seq) app.innerHTML = '<div class="skel"></div><div class="skel"></div>'; }, 140);
       view = await view;
     }
     clearTimeout(skelT);
   } catch (e) {
     clearTimeout(skelT);
     if (e.status === 401) { location.replace('#/login'); return; }
+    if (stale) return; // keep showing the last good screen when the refresh fails
     view = { title: 'Ошибка', html: `<div class="empty"><b>Не получилось загрузить</b>${e.message || ''}<br><br><button class="btn" data-act="retry">Повторить</button></div>` };
   }
   if (my !== seq) return; // a newer navigation won
-  current = view;
 
-  const commit = () => {
-    document.body.classList.toggle('examing', !!view.exam);
-    document.body.classList.toggle('authing', !!view.auth);
-    document.getElementById('pill').classList.toggle('hide', !!view.exam || !!view.auth);
-    if (!view.exam && !view.auth) renderNav(path);
+  if (canCache && view.html != null && !view.exam && !view.auth) vcache.set(key, view);
+  if (stale) {
+    if (view.html === stale.html) return; // nothing changed: leave the screen alone
+    if (busy()) return; // do not wipe what the person is typing; the fresh version shows on the next visit
+    const y = window.scrollY;
+    if (stale.unmount) stale.unmount();
+    paint(view, { keep: true });
+    window.scrollTo(0, y);
+    lastPath = path;
+    return;
+  }
 
-    app.className = 'app' + (view.wide ? ' wide' : '');
-    if (view.html != null) app.innerHTML = view.html;
-    if (view.mount) view.mount(app);
-    document.title = (view.title ? view.title + ' · ' : '') + 'NOEON TOEFL';
-    if (!route.soft) window.scrollTo(0, 0);
-  };
-  const calm = matchMedia('(prefers-reduced-motion:reduce)').matches;
-  if (!route.soft && !calm && document.startViewTransition && lastPath !== null) {
-    // the browser cross-fades old and new screens on the compositor: no layout flash, no dropped frames
-    try { document.startViewTransition(commit); } catch (e) { commit(); }
-  } else {
-    commit();
-    if (!route.soft && !calm) { app.classList.remove('viewin'); void app.offsetWidth; app.classList.add('viewin'); setTimeout(() => app.classList.remove('viewin'), 320); }
+  paint(view, { keep: soft });
+  if (!soft && !matchMedia('(prefers-reduced-motion:reduce)').matches) {
+    app.classList.remove('viewin'); void app.offsetWidth; app.classList.add('viewin'); setTimeout(() => app.classList.remove('viewin'), 200);
   }
   lastPath = path;
 }
@@ -157,6 +184,7 @@ async function route() {
 const warm = e => {
   const a = e.target.closest && e.target.closest('#pill .tab, #rail .tab'); if (!a) return;
   const path = (a.getAttribute('href') || '').replace(/^#\/?/, '');
+  if (a.closest('#pill')) document.querySelectorAll('#pill .tab').forEach(t => t.classList.toggle('on', t === a)); // instant response
   const hit = path && resolve(path); if (!hit) return;
   try { const v = hit[0](hit[1]); if (v && v.then) v.catch(() => {}); } catch (e) {}
 };

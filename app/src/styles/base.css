@@ -43,10 +43,10 @@ p{margin:0}
 /* ---------- mobile nav: floating pill ---------- */
 .pill{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:40;
   display:flex;gap:4px;padding:6px;background:var(--surf);border:1px solid var(--line);border-radius:999px;box-shadow:var(--sh);
-  transition:transform .38s var(--ease),opacity .3s ease}
+  transition:transform .38s var(--ease),opacity .3s ease;touch-action:manipulation;contain:layout style}
 .pill.hide{transform:translate(-50%,140%);opacity:0;pointer-events:none}
 .pill .tab{display:flex;align-items:center;gap:7px;height:44px;padding:0 13px;border-radius:999px;color:var(--fade);
-  font-size:14px;font-weight:650;white-space:nowrap;transition:background-color .25s var(--ease),color .2s ease,padding .25s var(--ease)}
+  font-size:14px;font-weight:650;white-space:nowrap;transition:background-color .16s ease,color .16s ease;touch-action:manipulation;-webkit-user-select:none;user-select:none}
 .pill .tab .tl{display:none}
 .pill .tab.on{background:var(--pri);color:var(--on-pri);padding:0 16px 0 13px}
 .pill .tab.on .tl{display:inline}
@@ -83,12 +83,9 @@ p{margin:0}
 .rail .who>div span{display:block;font-size:12.5px;color:var(--fade);font-weight:600}
 
 /* cross-fade between screens (View Transitions API); the nav pill and rail stay put */
-.pill{view-transition-name:pill}.rail{view-transition-name:rail}
-::view-transition-old(root),::view-transition-new(root){animation-duration:.22s;animation-timing-function:cubic-bezier(.33,1,.68,1)}
-::view-transition-group(pill),::view-transition-group(rail){animation-duration:0s}
 /* view transition: opacity + a few px of GPU-composited movement only, so it never stutters */
-.viewin{animation:viewin .26s var(--ease) both;will-change:opacity,transform}
-@keyframes viewin{from{opacity:0;transform:translate3d(0,5px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+.viewin{animation:viewin .18s ease-out both}
+@keyframes viewin{from{opacity:.4}to{opacity:1}}
 .hdr .btn{flex:none}
 @media (max-width:620px){
   /* several actions don't fit next to the title: title + theme button stay on the first row, the actions wrap below */
