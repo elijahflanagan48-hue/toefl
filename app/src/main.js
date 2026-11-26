@@ -201,6 +201,8 @@ window.addEventListener('hashchange', async () => {
   route.soft = false;
 });
 export const rerender = () => window.dispatchEvent(new Event('hashchange'));
+/* a screen opened from saved data: swap in the fresh data when it arrives (only on the main tabs, never while typing) */
+window.addEventListener('nt-fresh', () => { const p = (location.hash.replace(/^#\/?/, '').split('?')[0] || '').replace(/\/$/, ''); if (TAB_PATHS.has(p) && !busy()) rerender(); });
 
 /* ---------- event delegation ---------- */
 document.addEventListener('click', e => {
