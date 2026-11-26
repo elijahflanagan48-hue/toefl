@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "public",
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "https://noeon-toefl-api.grammar-noeon.workers.dev/$1" }
+  ]
+}
