@@ -28,7 +28,7 @@ jobs:
         run: npm run build
         env:
           # API address; can be overridden with a repository variable API_URL
-          VITE_API_URL: ${{ vars.API_URL || 'https://noeon-toefl-api.grammar-noeon.workers.dev' }}
+          VITE_API_URL: ${{ vars.API_URL || 'https://toefl-api.noeon.org' }}
       - uses: actions/upload-pages-artifact@v3
         with: { path: app/dist }
 

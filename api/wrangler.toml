@@ -3,6 +3,8 @@ main = "src/index.js"
 compatibility_date = "2026-09-01"
 
 # Own address for the API: *.workers.dev is cut by some Russian providers, a custom domain is not.
+workers_dev = true
+preview_urls = false
 routes = [{ pattern = "toefl-api.noeon.org", custom_domain = true }]
 
 [vars]
