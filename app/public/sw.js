@@ -1,6 +1,6 @@
 /* NOEON TOEFL service worker: the app shell works offline; data and audio always come from the network.
    Bump VERSION to drop old caches. Only same-origin GET requests are touched; API calls (other origin) never are. */
-const VERSION = 'v2';
+const VERSION = 'v3';
 const SHELL = 'shell-' + VERSION, ASSETS = 'assets-' + VERSION;
 
 self.addEventListener('install', e => {
@@ -14,7 +14,7 @@ self.addEventListener('fetch', e => {
   if (r.method !== 'GET' || u.origin !== self.location.origin) return;
   if (r.headers.has('range') || /\/audio\//.test(u.pathname)) return;      // audio: leave Range requests to the browser
   if (r.mode === 'navigate') {                                              // page: network first, cached shell offline
-    e.respondWith(fetch(r).then(res => { const cp = res.clone(); caches.open(SHELL).then(c => c.put('./', cp)); return res; }).catch(() => caches.match('./')));
+    e.respondWith(fetch(r).then(res => { if (res.ok && !res.redirected && res.type === 'basic') { const cp = res.clone(); caches.open(SHELL).then(c => c.put('./', cp)); } return res; }).catch(() => caches.match('./').then(hit => hit || Response.error())));
     return;
   }
   if (/\/assets\//.test(u.pathname) || /\/icons\//.test(u.pathname)) {      // hashed build files: cache first

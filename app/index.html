@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#f3f5fa">
   <meta name="description" content="NOEON TOEFL: подготовка к TOEFL iBT 2026">
-  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" type="image/png" sizes="64x64" href="./icons/favicon-64.png">
   <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
-  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="TOEFL">
@@ -30,6 +30,20 @@
       h.dataset.theme = dark ? 'dark' : 'light';
       if (d !== 'grey') h.dataset.day = d;
       if (n !== 'oled') h.dataset.night = n;
+    })();
+  </script>
+  <script>
+    /* if the app has not drawn anything after 7 s, say so (and why) instead of a silent white screen */
+    (function () {
+      var errs = [];
+      window.addEventListener('error', function (e) { errs.push((e && e.message) || 'error'); });
+      window.addEventListener('unhandledrejection', function (e) { errs.push(String(e && e.reason && e.reason.message || e && e.reason || 'rejection')); });
+      setTimeout(function () {
+        var a = document.getElementById('app');
+        if (a && !a.children.length) {
+          a.innerHTML = '<div style="padding:40px 22px;font:16px/1.5 -apple-system,system-ui,sans-serif;color:#1b2234;text-align:center"><b style="font-size:20px">Приложение не запустилось</b><p>Закройте его и откройте заново. Если не помогает, откройте toefl.noeon.org в браузере.</p><p style="color:#8a93a8;font-size:13px">' + (errs[0] || 'нет ответа от сервера') + '</p><p><button onclick="try{caches.keys().then(function(k){return Promise.all(k.map(function(x){return caches.delete(x)}))}).then(function(){return navigator.serviceWorker.getRegistrations()}).then(function(r){return Promise.all(r.map(function(x){return x.unregister()}))}).then(function(){location.reload()})}catch(e){location.reload()}" style="padding:12px 20px;border-radius:12px;border:0;background:#1b2234;color:#fff;font-size:16px">Сбросить и перезапустить</button></p></div>';
+        }
+      }, 7000);
     })();
   </script>
 </head>
